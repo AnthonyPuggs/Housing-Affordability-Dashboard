@@ -541,7 +541,7 @@ ui <- page_navbar(
         fill = FALSE,
         card(
           fill = FALSE,
-          card_header("Cash Rate & Mortgage Rates"),
+          card_header("Interest Rates on Residential Mortgages"),
           card_body(plotlyOutput("context_rates", height = "380px"))
         ),
         card(
@@ -1049,9 +1049,11 @@ server <- function(input, output, session) {
   # --- Charts ---
   output$context_rates <- renderPlotly({
     d <- bind_rows(
-      rba_cash_rate %>% mutate(series = "Cash Rate Target"),
-      rba_mortgage_var %>% mutate(series = "Discounted Variable"),
-      rba_mortgage_fixed %>% mutate(series = "3yr Fixed")
+      rba_cash_rate %>% mutate(series = "RBA Cash Rate"),
+      rba_mortgage_var %>% mutate(series = "Owner-occ Variable (Discounted)"),
+      rba_mortgage_fixed %>% mutate(series = "Owner-occ 3yr Fixed"),
+      rba_investor_var %>% mutate(series = "Investor Variable (Discounted)"),
+      rba_investor_fixed %>% mutate(series = "Investor 3yr Fixed")
     ) %>%
       distinct(date, series, .keep_all = TRUE) %>%
       filter(date >= input$context_dates[1],
@@ -1059,7 +1061,22 @@ server <- function(input, output, session) {
 
     validate(need(nrow(d) > 0, "No rate data available."))
 
-    p <- plot_ts(d, dark = is_dark(), y_label = "%")
+    rate_colours <- c(
+      "RBA Cash Rate" = "#1B5E20",
+      "Owner-occ Variable (Discounted)" = "#2196F3",
+      "Owner-occ 3yr Fixed" = "#1565C0",
+      "Investor Variable (Discounted)" = "#FF9800",
+      "Investor 3yr Fixed" = "#E65100"
+    )
+
+    p <- ggplot(d, aes(x = date, y = value, color = series)) +
+      geom_line(linewidth = 1, alpha = 0.9) +
+      scale_color_manual(values = rate_colours) +
+      scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
+      scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
+      labs(x = NULL, y = "%", color = NULL) +
+      theme_afford(is_dark())
+
     ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
   })
 
@@ -1068,22 +1085,25 @@ server <- function(input, output, session) {
       filter(series %in% c("Unemployment Rate", "Underemployment Rate",
                             "Labour Underutilisation Rate"),
              date >= input$context_dates[1],
-             date <= input$context_dates[2])
+             date <= input$context_dates[2]) %>%
+      mutate(series = factor(series,
+        levels = c("Labour Underutilisation Rate", "Underemployment Rate",
+                   "Unemployment Rate")))
     validate(need(nrow(d) > 0, "No labour market data available."))
 
-    labour_colours <- c("Unemployment Rate" = "#2196F3",
-                        "Underemployment Rate" = "#AB47BC",
-                        "Labour Underutilisation Rate" = "#78909C")
+    labour_fills <- c("Unemployment Rate" = "#2196F3",
+                      "Underemployment Rate" = "#AB47BC",
+                      "Labour Underutilisation Rate" = "#78909C")
 
-    p <- ggplot(d, aes(x = date, y = value, color = series)) +
-      geom_line(linewidth = 1, alpha = 0.9) +
-      scale_color_manual(values = labour_colours) +
+    p <- ggplot(d, aes(x = date, y = value, fill = series)) +
+      geom_area(alpha = 0.6, linewidth = 0.5, colour = "white") +
+      scale_fill_manual(values = labour_fills) +
       scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
       scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
-      labs(x = NULL, y = NULL, color = NULL) +
+      labs(x = NULL, y = NULL, fill = NULL) +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
+    ggplotly(p, tooltip = c("x", "y", "fill")) %>% plotly_layout(is_dark())
   })
 
   output$context_pop <- renderPlotly({

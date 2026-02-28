@@ -316,3 +316,9 @@ rba_mortgage_fixed <- rba_rates %>%
 
 rba_mortgage_std <- rba_rates %>%
   filter(str_detect(series, "Variable; Standard; Owner-occupier"))
+
+rba_investor_var <- rba_rates %>%
+  filter(str_detect(series, "Variable; Discounted; Investor"))
+
+rba_investor_fixed <- rba_rates %>%
+  filter(str_detect(series, "3-year fixed; Investor"))

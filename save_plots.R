@@ -210,16 +210,32 @@ if (nrow(d) > 0) {
 # 9. Market Context: Cash Rate & Mortgage Rates
 # --------------------------------------------------------------------------
 d <- bind_rows(
-  rba_cash_rate %>% mutate(series = "Cash Rate Target"),
-  rba_mortgage_var %>% mutate(series = "Discounted Variable"),
-  rba_mortgage_fixed %>% mutate(series = "3yr Fixed")
+  rba_cash_rate %>% mutate(series = "RBA Cash Rate"),
+  rba_mortgage_var %>% mutate(series = "Owner-occ Variable (Discounted)"),
+  rba_mortgage_fixed %>% mutate(series = "Owner-occ 3yr Fixed"),
+  rba_investor_var %>% mutate(series = "Investor Variable (Discounted)"),
+  rba_investor_fixed %>% mutate(series = "Investor 3yr Fixed")
 ) %>%
   distinct(date, series, .keep_all = TRUE) %>%
   filter(date >= as.Date("2000-01-01"))
 
+rate_colours <- c(
+  "RBA Cash Rate" = "#1B5E20",
+  "Owner-occ Variable (Discounted)" = "#2196F3",
+  "Owner-occ 3yr Fixed" = "#1565C0",
+  "Investor Variable (Discounted)" = "#FF9800",
+  "Investor 3yr Fixed" = "#E65100"
+)
+
 if (nrow(d) > 0) {
-  plots$context_rates <- plot_ts(d, dark = FALSE, y_label = "%") +
-    ggtitle("Cash Rate & Mortgage Rates")
+  plots$context_rates <- ggplot(d, aes(x = date, y = value, color = series)) +
+    geom_line(linewidth = 1, alpha = 0.9) +
+    scale_color_manual(values = rate_colours) +
+    scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
+    scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
+    labs(title = "Cash Rate & Mortgage Rates",
+         x = NULL, y = "%", color = NULL) +
+    theme_afford(FALSE)
 }
 
 # --------------------------------------------------------------------------
@@ -230,18 +246,23 @@ d <- abs_ts %>%
                         "Labour Underutilisation Rate"),
          date >= as.Date("2000-01-01"))
 
-labour_colours <- c("Unemployment Rate" = "#2196F3",
-                    "Underemployment Rate" = "#AB47BC",
-                    "Labour Underutilisation Rate" = "#78909C")
+labour_fills <- c("Unemployment Rate" = "#2196F3",
+                  "Underemployment Rate" = "#AB47BC",
+                  "Labour Underutilisation Rate" = "#78909C")
+
+d <- d %>%
+  mutate(series = factor(series,
+    levels = c("Labour Underutilisation Rate", "Underemployment Rate",
+               "Unemployment Rate")))
 
 if (nrow(d) > 0) {
-  plots$context_labour <- ggplot(d, aes(x = date, y = value, color = series)) +
-    geom_line(linewidth = 1, alpha = 0.9) +
-    scale_color_manual(values = labour_colours) +
+  plots$context_labour <- ggplot(d, aes(x = date, y = value, fill = series)) +
+    geom_area(alpha = 0.6, linewidth = 0.5, colour = "white") +
+    scale_fill_manual(values = labour_fills) +
     scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
     scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
     labs(title = "Labour Market Spare Capacity",
-         x = NULL, y = NULL, color = NULL) +
+         x = NULL, y = NULL, fill = NULL) +
     theme_afford(FALSE)
 }
 
