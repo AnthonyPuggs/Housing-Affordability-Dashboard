@@ -106,6 +106,31 @@ label_tenure <- function(x) {
   ifelse(x %in% names(tenure_labels), tenure_labels[x], x)
 }
 
+# Repel overlapping label positions vertically
+# Takes a numeric vector of y positions and a minimum gap, returns adjusted positions
+repel_labels <- function(y, min_gap) {
+  ord <- order(y)
+  pos <- y[ord]
+  for (i in seq_along(pos)[-1]) {
+    if (pos[i] - pos[i - 1] < min_gap) {
+      pos[i] <- pos[i - 1] + min_gap
+    }
+  }
+  # Centre the spread back around original midpoint
+  shift <- mean(y[ord]) - mean(pos)
+  pos <- pos + shift
+  # Second pass to fix any remaining overlaps after centering
+
+  for (i in seq_along(pos)[-1]) {
+    if (pos[i] - pos[i - 1] < min_gap) {
+      pos[i] <- pos[i - 1] + min_gap
+    }
+  }
+  out <- numeric(length(y))
+  out[ord] <- pos
+  out
+}
+
 # Extract city name from RPPI series string
 extract_city <- function(s) {
   str_trim(str_extract(s, ";\\s*([^;]+)\\s*;?$") %>%

@@ -282,26 +282,18 @@ ui <- page_navbar(
       )
     ),
     layout_column_wrap(
-      width = 1/2,
+      width = 1,
       fill = FALSE,
       card(
         fill = FALSE,
         card_header("Capital City Median House Prices"),
         tags$p("Nominal values (in thousands AUD)", class = "px-3",
                style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
-        card_body(plotlyOutput("overview_median_prices", height = "380px"))
-      ),
-      card(
-        fill = FALSE,
-        card_header("Housing Serviceability"),
-        tags$p("Proportion of median income required to service a new mortgage (80% LVR, 30yr)",
-               class = "px-3",
-               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
-        card_body(plotlyOutput("overview_serviceability", height = "380px"))
+        card_body(plotlyOutput("overview_median_prices", height = "480px"))
       )
     ),
     layout_column_wrap(
-      width = 1,
+      width = 1/2,
       fill = FALSE,
       card(
         fill = FALSE,
@@ -310,6 +302,14 @@ ui <- page_navbar(
                class = "px-3",
                style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
         card_body(plotlyOutput("overview_afford_change", height = "380px"))
+      ),
+      card(
+        fill = FALSE,
+        card_header("Housing Serviceability"),
+        tags$p("Proportion of median income required to service a new mortgage (80% LVR, 30yr)",
+               class = "px-3",
+               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
+        card_body(plotlyOutput("overview_serviceability", height = "380px"))
       )
     )
   ),
@@ -703,7 +703,8 @@ server <- function(input, output, session) {
 
   # Overview chart 1: Capital City Median House Prices
   output$overview_median_prices <- renderPlotly({
-    show_cities <- c("Sydney", "Melbourne", "Brisbane", "National Avg")
+    show_cities <- c("Sydney", "Melbourne", "Brisbane", "Adelaide",
+                     "Perth", "Hobart", "Darwin", "Canberra", "National Avg")
     d <- median_prices_combined %>%
       filter(city %in% show_cities,
              date >= as.Date("2010-01-01")) %>%
@@ -711,22 +712,60 @@ server <- function(input, output, session) {
 
     validate(need(nrow(d) > 0, "No median house price data available."))
 
-    price_colours <- c("Sydney" = "#2196F3", "Melbourne" = "#7B1FA2",
-                       "Brisbane" = "#FF5722", "National Avg" = "#4CAF50")
+    price_colours <- c(
+      "Sydney" = "#2196F3", "Melbourne" = "#7B1FA2", "Brisbane" = "#FF5722",
+      "Adelaide" = "#984ea3", "Perth" = "#ff7f00", "Hobart" = "#a65628",
+      "Darwin" = "#f781bf", "Canberra" = "#999999", "National Avg" = "#4CAF50"
+    )
 
     p <- ggplot(d, aes(x = date, y = value_dollars, color = city)) +
       geom_line(aes(linetype = city), linewidth = 1.1, alpha = 0.9) +
       scale_color_manual(values = price_colours) +
-      scale_linetype_manual(values = c("Sydney" = "solid", "Melbourne" = "solid",
-                                       "Brisbane" = "solid", "National Avg" = "dashed")) +
+      scale_linetype_manual(
+        values = setNames(
+          ifelse(show_cities == "National Avg", "dashed", "solid"),
+          show_cities
+        )
+      ) +
       scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
       scale_y_continuous(labels = label_dollar(prefix = "$", suffix = "k",
                                                scale = 1/1000, big.mark = ",")) +
       labs(x = NULL, y = NULL, color = NULL, linetype = NULL) +
       theme_afford(is_dark()) +
-      guides(linetype = "none")
+      theme(legend.position = "none")
 
-    ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
+    # Build plotly, then add annotations outside the grid on the right
+    label_data <- d %>%
+      group_by(city) %>%
+      filter(date == max(date)) %>%
+      ungroup()
+
+    # Repel label positions so they don't overlap (min gap ~$40k in data units)
+    y_range <- range(d$value_dollars, na.rm = TRUE)
+    min_gap <- diff(y_range) * 0.045
+    label_data$y_repelled <- repel_labels(label_data$value_dollars, min_gap)
+
+    fig <- ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
+
+    # Add right-side annotations: xref="paper" x=1.01 places text just outside grid
+    annotations <- lapply(seq_len(nrow(label_data)), function(i) {
+      list(
+        x = 1.01, xref = "paper", xanchor = "left",
+        y = label_data$y_repelled[i], yref = "y",
+        text = label_data$city[i],
+        font = list(
+          size = 13,
+          color = price_colours[label_data$city[i]]
+        ),
+        showarrow = FALSE
+      )
+    })
+
+    fig %>%
+      plotly::layout(
+        annotations = annotations,
+        margin = list(r = 100)
+      )
   })
 
   # Overview chart 2: Housing Serviceability with 30% threshold

@@ -22,27 +22,51 @@ plots <- list()
 # --------------------------------------------------------------------------
 # 1. Overview: Capital City Median House Prices
 # --------------------------------------------------------------------------
-show_cities <- c("Sydney", "Melbourne", "Brisbane", "National Avg")
+show_cities <- c("Sydney", "Melbourne", "Brisbane", "Adelaide",
+                 "Perth", "Hobart", "Darwin", "Canberra", "National Avg")
 d <- median_prices_combined %>%
   filter(city %in% show_cities, date >= as.Date("2010-01-01")) %>%
   mutate(value_dollars = value * 1000)
 
-price_colours <- c("Sydney" = "#2196F3", "Melbourne" = "#7B1FA2",
-                   "Brisbane" = "#FF5722", "National Avg" = "#4CAF50")
+price_colours <- c(
+  "Sydney" = "#2196F3", "Melbourne" = "#7B1FA2", "Brisbane" = "#FF5722",
+  "Adelaide" = "#984ea3", "Perth" = "#ff7f00", "Hobart" = "#a65628",
+  "Darwin" = "#f781bf", "Canberra" = "#999999", "National Avg" = "#4CAF50"
+)
 
 if (nrow(d) > 0) {
+  label_data <- d %>%
+    group_by(city) %>%
+    filter(date == max(date)) %>%
+    ungroup()
+
+  # Repel label positions so they don't overlap
+  y_range <- range(d$value_dollars, na.rm = TRUE)
+  min_gap <- diff(y_range) * 0.045
+  label_data$y_repelled <- repel_labels(label_data$value_dollars, min_gap)
+
   plots$overview_median_prices <- ggplot(d, aes(x = date, y = value_dollars, color = city)) +
     geom_line(aes(linetype = city), linewidth = 1.1, alpha = 0.9) +
+    geom_text(data = label_data,
+              aes(label = city, x = date, y = y_repelled),
+              hjust = 0, nudge_x = 40, size = 3.2, show.legend = FALSE) +
     scale_color_manual(values = price_colours) +
-    scale_linetype_manual(values = c("Sydney" = "solid", "Melbourne" = "solid",
-                                     "Brisbane" = "solid", "National Avg" = "dashed")) +
-    scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
+    scale_linetype_manual(
+      values = setNames(
+        ifelse(show_cities == "National Avg", "dashed", "solid"),
+        show_cities
+      )
+    ) +
+    scale_x_date(date_labels = "%Y", date_breaks = "3 years",
+                 expand = expansion(mult = c(0.02, 0.15))) +
     scale_y_continuous(labels = label_dollar(prefix = "$", suffix = "k",
                                              scale = 1/1000, big.mark = ",")) +
+    coord_cartesian(clip = "off") +
     labs(title = "Capital City Median House Prices",
          x = NULL, y = NULL, color = NULL, linetype = NULL) +
     theme_afford(FALSE) +
-    guides(linetype = "none")
+    theme(legend.position = "none",
+          plot.margin = margin(5.5, 80, 5.5, 5.5))
 }
 
 # --------------------------------------------------------------------------
