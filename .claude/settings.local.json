@@ -15,7 +15,9 @@
       "WebFetch(domain:www.abs.gov.au)",
       "Bash(cd \"C:/Anthony/Coding/Shiny Macro Dashboard/Household-Affordability-Dashboard\" && \"/c/Program Files/R/R-4.5.2/bin/Rscript.exe\" -e \"library\\(readabs\\); t2 <- read_abs\\(cat_no='6432.0', tables='2'\\); cat\\(paste\\(sort\\(unique\\(t2[['series']]\\)\\), collapse='\\\\n'\\), '\\\\n'\\)\" 2>&1)",
       "Bash(cd \"C:/Anthony/Coding/Shiny Macro Dashboard/Household-Affordability-Dashboard\" && \"/c/Program Files/R/R-4.5.2/bin/Rscript.exe\" pipeline/05_driver.R 2>&1)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(where Rscript:*)",
+      "Bash(\"C:/Program Files/R/R-4.5.2/bin/Rscript.exe\":*)"
     ]
   }
 }

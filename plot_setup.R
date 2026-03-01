@@ -170,7 +170,8 @@ theme_afford <- function(dark = FALSE) {
 }
 
 # Apply plotly dark/light layout (handles faceted charts with multiple axes)
-plotly_layout <- function(p, dark = FALSE) {
+plotly_layout <- function(p, dark = FALSE, hovermode = "x",
+                          force_markers = TRUE, disable_hovertemplate = TRUE) {
   bg    <- if (dark) "#0F172A" else "#FFFFFF"
   fg    <- if (dark) "#D7E0EA" else "#3B3F4A"
   grid  <- if (dark) "#334155" else "#D9DDE3"
@@ -194,6 +195,14 @@ plotly_layout <- function(p, dark = FALSE) {
   }
 
   result <- do.call(plotly::layout, layout_args)
+
+  # Optionally remove Plotly Express hovertemplate to get compact default hover labels
+  if (disable_hovertemplate && !is.null(result$x$data) && length(result$x$data) > 0) {
+    for (i in seq_along(result$x$data)) {
+      result$x$data[[i]]$hovertemplate <- NULL
+    }
+  }
+
   result %>% plotly::config(responsive = TRUE)
 }
 
@@ -327,6 +336,17 @@ rppi_cities <- sort(unique(rppi_all$city))
 rppi_cities <- c(
   rppi_cities[rppi_cities == "Weighted average of eight capital cities"],
   rppi_cities[rppi_cities != "Weighted average of eight capital cities"]
+)
+
+# --- Pre-compute CPI Rents by capital city ---
+rent_cpi_combined <- abs_ts %>%
+  filter(str_detect(series, "^CPI Rents ;")) %>%
+  mutate(city = extract_city(series))
+
+rent_cpi_cities <- sort(unique(rent_cpi_combined$city))
+rent_cpi_cities <- c(
+  rent_cpi_cities[rent_cpi_cities == "Weighted average of eight capital cities"],
+  rent_cpi_cities[rent_cpi_cities != "Weighted average of eight capital cities"]
 )
 
 # --- Pre-compute RBA key series ---

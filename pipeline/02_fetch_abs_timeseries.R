@@ -112,6 +112,131 @@ if (nrow(cpi_groups) > 0) {
       "New Dwelling:", nrow(cpi_new_dwelling), "obs\n")
 }
 
+# CPI Rents by capital city — Two sources:
+#   1. ABS SDMX API (CPI dataflow, INDEX=115522): quarterly national (1972–present)
+#   2. ABS 6401.0 Table 10 (readabs): monthly by city (Sep 2017–present)
+# Monthly data is converted to quarterly by averaging all 3 months per quarter
+# (ABS-recommended approach) and both are combined into a unified series set.
+
+# Region code → city name mapping for the SDMX API
+api_region_to_city <- c(
+  "50" = "Weighted average of eight capital cities",
+  "1"  = "Sydney",  "2" = "Melbourne", "3" = "Brisbane",
+  "4"  = "Adelaide", "5" = "Perth",     "6" = "Hobart",
+  "7"  = "Darwin",   "8" = "Canberra"
+)
+
+# --- Source 1: Quarterly national via ABS SDMX API ---
+cat("  Fetching quarterly CPI Rents via ABS data API...\n")
+cpi_rents_qtr <- safe_read({
+  resp <- httr::GET(
+    "https://data.api.abs.gov.au/rest/data/CPI/1.115522.10.50.Q",
+    httr::add_headers(Accept = "text/csv"))
+  if (httr::status_code(resp) != 200) stop("ABS API returned ", httr::status_code(resp))
+  d <- readr::read_csv(I(httr::content(resp, as = "text", encoding = "UTF-8")),
+                        show_col_types = FALSE)
+  # Convert TIME_PERIOD "2024-Q3" → Date (first day of quarter)
+  d %>%
+    transmute(
+      date = as.Date(paste0(
+        substr(TIME_PERIOD, 1, 4), "-",
+        sprintf("%02d", as.integer(substr(TIME_PERIOD, 7, 7)) * 3 - 2), "-01")),
+      value = OBS_VALUE,
+      series = paste0("CPI Rents ; ",
+                      api_region_to_city[as.character(REGION)], " ;")
+    )
+}, "CPI Rents quarterly (API)")
+
+if (nrow(cpi_rents_qtr) > 0) {
+  cpi_rents_qtr <- cpi_rents_qtr %>%
+    normalize_abs(category = "Rental Prices", units = "Index",
+                  freq_hint = "Quarter")
+  all_series$cpi_rents_qtr <- cpi_rents_qtr
+  cat("    Quarterly national CPI Rents:", nrow(cpi_rents_qtr), "obs (",
+      as.character(min(cpi_rents_qtr$date)), "to",
+      as.character(max(cpi_rents_qtr$date)), ")\n")
+}
+
+# --- Source 2: Monthly city-level via readabs ---
+cat("  Fetching monthly CPI Rents by city (6401.0 Table 10)...\n")
+cpi_city_raw <- safe_read(
+  read_abs(cat_no = "6401.0", tables = "10"),
+  "CPI by City 6401.0 Table 10"
+)
+
+if (nrow(cpi_city_raw) > 0) {
+  # Filter for "Index Numbers ;  Rents ;  <city> ;" and convert monthly to quarterly
+  # by averaging all 3 months in each quarter (ABS-recommended seasonal adjustment).
+  # NOTE: ABS re-based the CPI index; city-level data only has non-NA values from
+  # ~Jul 2022 onward in Table 10. Earlier rows exist but are NA.
+  cpi_rents_cities <- cpi_city_raw %>%
+    filter(str_detect(series, regex("^Index Numbers ;\\s*Rents ;", ignore_case = TRUE))) %>%
+    filter(!is.na(value)) %>%               # drop NA rows (pre-rebase periods)
+    mutate(
+      city = str_trim(str_extract(series, ";\\s*([^;]+)\\s*;?$") %>%
+               str_remove_all(";") %>% str_trim()),
+      series = paste0("CPI Rents ; ", city, " ;")
+    ) %>%
+    filter(!is.na(city), city != "") %>%
+    # Deduplicate: keep one series_id per city (both IDs have identical values)
+    group_by(city, date) %>%
+    slice(1) %>%
+    ungroup() %>%
+    # Convert monthly to quarterly by averaging 3 months per quarter
+    mutate(quarter = lubridate::floor_date(date, "quarter")) %>%
+    group_by(city, series, quarter) %>%
+    filter(n() == 3) %>%                    # only complete quarters
+    summarise(value = mean(value), .groups = "drop") %>%
+    rename(date = quarter) %>%
+    select(-city) %>%
+    normalize_abs(category = "Rental Prices", units = "Index",
+                  freq_hint = "Quarter")
+
+  # Remove city dates that overlap with quarterly national (avoid duplicates)
+  if (nrow(cpi_rents_qtr) > 0) {
+    national_series <- "CPI Rents ; Weighted average of eight capital cities ;"
+    national_dates <- cpi_rents_qtr %>%
+      filter(series == national_series) %>% pull(date)
+    cpi_rents_cities <- cpi_rents_cities %>%
+      filter(!(series == national_series & date %in% national_dates))
+  }
+
+  all_series$cpi_rents_cities <- cpi_rents_cities
+  cat("    Monthly→quarterly CPI Rents by city:", nrow(cpi_rents_cities), "obs,",
+      length(unique(cpi_rents_cities$series)), "cities\n")
+}
+
+# Also add national from Table 7 (monthly, converted to quarterly) for city-format
+if (nrow(cpi_groups) > 0) {
+  cpi_rents_national_monthly <- cpi_groups %>%
+    filter(str_detect(series, regex("^Index Numbers ;\\s*Rents ;\\s*Australia",
+                                    ignore_case = TRUE))) %>%
+    filter(!is.na(value)) %>%               # drop NA rows (pre-rebase periods)
+    mutate(series = "CPI Rents ; Weighted average of eight capital cities ;") %>%
+    # Convert monthly to quarterly by averaging 3 months per quarter
+    mutate(quarter = lubridate::floor_date(date, "quarter")) %>%
+    group_by(series, quarter) %>%
+    filter(n() == 3) %>%                    # only complete quarters
+    summarise(value = mean(value), .groups = "drop") %>%
+    rename(date = quarter) %>%
+    select(-any_of("unit")) %>%
+    normalize_abs(category = "Rental Prices", units = "Index",
+                  freq_hint = "Quarter")
+
+  # Remove overlap with API quarterly data
+  if (nrow(cpi_rents_qtr) > 0) {
+    existing_dates <- cpi_rents_qtr$date
+    cpi_rents_national_monthly <- cpi_rents_national_monthly %>%
+      filter(!date %in% existing_dates)
+  }
+
+  if (nrow(cpi_rents_national_monthly) > 0) {
+    all_series$cpi_rents_national_monthly <- cpi_rents_national_monthly
+    cat("    CPI Rents national (monthly→quarterly supplement):",
+        nrow(cpi_rents_national_monthly), "obs\n")
+  }
+}
+
 # CPI All Groups via readabs helper
 cat("  Fetching CPI All Groups...\n")
 cpi_all <- safe_read(read_cpi(), "CPI All Groups") %>%
