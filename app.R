@@ -2,7 +2,7 @@
 # Australian Housing Affordability Dashboard
 # ==============================================================================
 # Single-file Shiny app — reads pre-processed CSVs from data/ pipeline
-# 5 pages: Overview, Price Trends, Affordability, Market Context, Rental Market
+# 6 pages: Overview, Price Trends, Affordability, Market Context, Housing Supply, Rental Market
 # ==============================================================================
 
 library(shiny)
@@ -242,11 +242,6 @@ ui <- page_navbar(
                 style = "font-weight: 700;"),
         tags$p("Analysing the state of the Australian market",
                style = "color: var(--app-muted); margin-bottom: 0;")
-      ),
-      tags$span(
-        class = "badge rounded-pill",
-        style = "background-color: #e8f5e9; color: #2e7d32; font-size: 0.85rem; padding: 6px 14px;",
-        HTML("&#9679; Live Data")
       )
     ),
     layout_column_wrap(
@@ -287,29 +282,32 @@ ui <- page_navbar(
       card(
         fill = FALSE,
         card_header("Capital City Median House Prices"),
-        tags$p("Nominal values (in thousands AUD)", class = "px-3",
-               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
-        card_body(plotlyOutput("overview_median_prices", height = "480px"))
+        uiOutput("overview_price_subtitle"),
+        card_body(plotlyOutput("overview_median_prices", height = "480px")),
+        card_footer(
+          sliderInput("overview_price_dates", "Date Range",
+                      min = min(median_prices_combined$date, na.rm = TRUE),
+                      max = max(median_prices_combined$date, na.rm = TRUE),
+                      value = c(as.Date("2010-01-01"),
+                                max(median_prices_combined$date, na.rm = TRUE)),
+                      width = "100%", timeFormat = "%b %Y"),
+          radioButtons("overview_price_transform", NULL,
+                       choices = c("Nominal ($)" = "nominal",
+                                   "Index (start = 100)" = "index"),
+                       selected = "nominal", inline = TRUE)
+        )
       )
     ),
     layout_column_wrap(
-      width = 1/2,
+      width = 1,
       fill = FALSE,
       card(
         fill = FALSE,
-        card_header("Change in Affordability Indices Since Base Period"),
-        tags$p("Higher values = worsening affordability (costs rising faster than wages). Indices: Rent (CPI Rents/WPI), Mortgage (Price\u00d7Rate/WPI), Deposit (Price/Income).",
+        card_header("Affordability Indices"),
+        tags$p("Higher values = worsening affordability. Rent (CPI Rents/WPI), Mortgage (Price\u00d7Rate/WPI), Deposit (Price/Income), Price-to-Income Ratio.",
                class = "px-3",
                style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
         card_body(plotlyOutput("overview_afford_change", height = "380px"))
-      ),
-      card(
-        fill = FALSE,
-        card_header("Housing Serviceability"),
-        tags$p("Proportion of median income required to service a new mortgage (80% LVR, 30yr)",
-               class = "px-3",
-               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
-        card_body(plotlyOutput("overview_serviceability", height = "380px"))
       )
     )
   ),
@@ -347,10 +345,6 @@ ui <- page_navbar(
           card(
             card_header("Dwelling Price Index by Capital City"),
             card_body(div(class = "chart-wide", plotlyOutput("price_chart", height = "100%", width = "100%")))
-          ),
-          card(
-            card_header("CPI New Dwelling Purchase (Construction Cost)"),
-            card_body(div(class = "chart-wide", plotlyOutput("price_cpi_construction", height = "100%", width = "100%")))
           )
         )
       ),
@@ -407,16 +401,32 @@ ui <- page_navbar(
                                            "Mortgage Serviceability Index",
                                            "Rental Affordability Index",
                                            "Deposit Gap (Years)",
-                                           "Real Mortgage Rate"),
+                                           "Housing Serviceability"),
                                selected = c("Price-to-Income Ratio",
-                                             "Mortgage Serviceability Index")),
-            dateRangeInput("afford_dates", "Date Range",
-                           start = as.Date("2003-01-01"),
-                           end = Sys.Date())
+                                           "Mortgage Serviceability Index",
+                                           "Rental Affordability Index",
+                                           "Deposit Gap (Years)",
+                                           "Housing Serviceability")),
+            sliderInput("afford_dates", "Date Range",
+                        min = min(afford_idx$date, na.rm = TRUE),
+                        max = max(afford_idx$date, na.rm = TRUE),
+                        value = c(as.Date("2003-01-01"),
+                                  max(afford_idx$date, na.rm = TRUE)),
+                        width = "100%", timeFormat = "%b %Y")
           ),
           card(
             card_header("Affordability Indicators"),
             card_body(div(class = "chart-wide", plotlyOutput("afford_indices_chart", height = "100%", width = "100%")))
+          ),
+          conditionalPanel(
+            condition = "input.afford_indices.indexOf('Housing Serviceability') >= 0",
+            card(
+              card_header("Housing Serviceability"),
+              tags$p("Proportion of median income required to service a new mortgage (80% LVR, 30yr)",
+                     class = "px-3",
+                     style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
+              card_body(plotlyOutput("afford_serviceability", height = "380px"))
+            )
           )
         )
       ),
@@ -534,11 +544,6 @@ ui <- page_navbar(
                 style = "font-weight: 700;"),
         tags$p("Analysing the state of the Australian market",
                style = "color: var(--app-muted); margin-bottom: 0;")
-      ),
-      tags$span(
-        class = "badge rounded-pill",
-        style = "background-color: #e8f5e9; color: #2e7d32; font-size: 0.85rem; padding: 6px 14px;",
-        HTML("&#9679; Live Data")
       )
     ),
     layout_column_wrap(
@@ -566,49 +571,109 @@ ui <- page_navbar(
         theme = value_box_theme(bg = "#17415F", fg = "#fff")
       )
     ),
-    layout_sidebar(
-      sidebar = sidebar(
-        width = 280, open = "desktop",
-        dateRangeInput("context_dates", "Date Range",
-                       start = as.Date("2000-01-01"),
-                       end = Sys.Date(),
-                       min = as.Date("1990-01-01"))
-      ),
-      layout_column_wrap(
-        width = 1/2,
+    sliderInput("context_dates", "Date Range",
+                min = as.Date("1990-01-01"),
+                max = Sys.Date(),
+                value = c(as.Date("2000-01-01"), Sys.Date()),
+                width = "100%", timeFormat = "%b %Y"),
+    layout_column_wrap(
+      width = 1,
+      fill = FALSE,
+      card(
         fill = FALSE,
-        card(
-          fill = FALSE,
-          card_header("Interest Rates on Residential Mortgages"),
-          card_body(plotlyOutput("context_rates", height = "380px"))
-        ),
-        card(
-          fill = FALSE,
-          card_header("Labour Market Spare Capacity"),
-          tags$p("Unemployment, Underemployment & Underutilisation Rates (%)",
-                 class = "px-3",
-                 style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
-          card_body(plotlyOutput("context_labour", height = "380px"))
-        ),
-        card(
-          fill = FALSE,
-          card_header("Population Demand"),
-          tags$p("Net Overseas Migration (NOM) per annum (thousands)",
-                 class = "px-3",
-                 style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
-          card_body(plotlyOutput("context_pop", height = "380px"))
-        ),
-        card(
-          fill = FALSE,
-          card_header("Building Approvals"),
-          card_body(plotlyOutput("context_approvals", height = "380px"))
-        )
+        card_header("Interest Rates on Residential Mortgages"),
+        card_body(plotlyOutput("context_rates", height = "380px"))
+      )
+    ),
+    layout_column_wrap(
+      width = 1/2,
+      card(
+        fill = FALSE,
+        card_header("Labour Market Spare Capacity"),
+        tags$p("Unemployment, Underemployment & Underutilisation Rates (%)",
+               class = "px-3",
+               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
+        card_body(plotlyOutput("context_labour", height = "380px"))
+      ),
+      card(
+        fill = FALSE,
+        card_header("Population Demand"),
+        tags$p("Net Overseas Migration (NOM) per annum (thousands)",
+               class = "px-3",
+               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
+        card_body(plotlyOutput("context_pop", height = "380px"))
       )
     )
   ),
 
   # ============================================================================
-  # PAGE 5: RENTAL MARKET
+  # PAGE 5: HOUSING SUPPLY
+  # ============================================================================
+  nav_panel(
+    "Housing Supply",
+    div(
+      class = "d-flex justify-content-between align-items-start mb-3 px-2",
+      div(
+        tags$h3("Housing Supply", class = "mb-1",
+                style = "font-weight: 700;"),
+        tags$p("Building activity and construction costs",
+               style = "color: var(--app-muted); margin-bottom: 0;")
+      )
+    ),
+    layout_column_wrap(
+      width = 1/4,
+      fill = FALSE,
+      value_box(
+        title = "NSW Approvals",
+        value = textOutput("vb_approvals_nsw"),
+        p(class = "kpi-subtitle", "Monthly dwelling units"),
+        uiOutput("vb_approvals_nsw_change"),
+        theme = value_box_theme(bg = "#0E5A8A", fg = "#fff")
+      ),
+      value_box(
+        title = "VIC Approvals",
+        value = textOutput("vb_approvals_vic"),
+        p(class = "kpi-subtitle", "Monthly dwelling units"),
+        uiOutput("vb_approvals_vic_change"),
+        theme = value_box_theme(bg = "#3B4C7A", fg = "#fff")
+      ),
+      value_box(
+        title = "Construction Costs",
+        value = textOutput("vb_construction"),
+        p(class = "kpi-subtitle", "CPI New Dwelling Index"),
+        uiOutput("vb_construction_change"),
+        theme = value_box_theme(bg = "#17415F", fg = "#fff")
+      ),
+      value_box(
+        title = "Houses Share",
+        value = textOutput("vb_houses_share"),
+        p(class = "kpi-subtitle", "% of total approvals"),
+        uiOutput("vb_houses_share_change"),
+        theme = value_box_theme(bg = "#984ea3", fg = "#fff")
+      )
+    ),
+    sliderInput("supply_dates", "Date Range",
+                min = as.Date("1990-01-01"),
+                max = Sys.Date(),
+                value = c(as.Date("2000-01-01"), Sys.Date()),
+                width = "100%", timeFormat = "%b %Y"),
+    layout_column_wrap(
+      width = 1,
+      fill = FALSE,
+      card(
+        fill = FALSE,
+        card_header("Building Approvals"),
+        card_body(plotlyOutput("supply_approvals", height = "420px"))
+      ),
+      card(
+        card_header("CPI New Dwelling Purchase (Construction Cost)"),
+        card_body(div(class = "chart-wide", plotlyOutput("supply_cpi_construction", height = "100%", width = "100%")))
+      )
+    )
+  ),
+
+  # ============================================================================
+  # PAGE 6: RENTAL MARKET
   # ============================================================================
   nav_panel(
     "Rental Market",
@@ -739,16 +804,39 @@ server <- function(input, output, session) {
     tags$p(class = paste("kpi-subtitle", css_class), ch$label)
   })
 
+  # Overview: dynamic subtitle for median price chart
+  output$overview_price_subtitle <- renderUI({
+    txt <- if (identical(input$overview_price_transform, "index")) {
+      "Indexed to 100 at start of selected date range"
+    } else {
+      "Nominal values (in thousands AUD)"
+    }
+    tags$p(txt, class = "px-3",
+           style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;")
+  })
+
   # Overview chart 1: Capital City Median House Prices
   output$overview_median_prices <- renderPlotly({
     show_cities <- c("Sydney", "Melbourne", "Brisbane", "Adelaide",
                      "Perth", "Hobart", "Darwin", "Canberra", "National Avg")
     d <- median_prices_combined %>%
       filter(city %in% show_cities,
-             date >= as.Date("2010-01-01")) %>%
-      mutate(value_dollars = value * 1000)
+             date >= input$overview_price_dates[1],
+             date <= input$overview_price_dates[2])
 
     validate(need(nrow(d) > 0, "No median house price data available."))
+
+    is_index <- identical(input$overview_price_transform, "index")
+
+    if (is_index) {
+      d <- d %>%
+        group_by(city) %>%
+        arrange(date) %>%
+        mutate(plot_value = 100 * value / first(value)) %>%
+        ungroup()
+    } else {
+      d <- d %>% mutate(plot_value = value * 1000)
+    }
 
     price_colours <- c(
       "Sydney" = "#2196F3", "Melbourne" = "#7B1FA2", "Brisbane" = "#FF5722",
@@ -756,7 +844,14 @@ server <- function(input, output, session) {
       "Darwin" = "#f781bf", "Canberra" = "#999999", "National Avg" = "#4CAF50"
     )
 
-    p <- ggplot(d, aes(x = date, y = value_dollars, color = city)) +
+    y_scale <- if (is_index) {
+      scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1))
+    } else {
+      scale_y_continuous(labels = label_dollar(prefix = "$", suffix = "k",
+                                               scale = 1/1000, big.mark = ","))
+    }
+
+    p <- ggplot(d, aes(x = date, y = plot_value, color = city)) +
       geom_line(aes(linetype = city), linewidth = 1.1, alpha = 0.9) +
       scale_color_manual(values = price_colours) +
       scale_linetype_manual(
@@ -766,8 +861,7 @@ server <- function(input, output, session) {
         )
       ) +
       scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
-      scale_y_continuous(labels = label_dollar(prefix = "$", suffix = "k",
-                                               scale = 1/1000, big.mark = ",")) +
+      y_scale +
       labs(x = NULL, y = NULL, color = NULL, linetype = NULL) +
       theme_afford(is_dark()) +
       theme(legend.position = "none")
@@ -778,10 +872,10 @@ server <- function(input, output, session) {
       filter(date == max(date)) %>%
       ungroup()
 
-    # Repel label positions so they don't overlap (min gap ~$40k in data units)
-    y_range <- range(d$value_dollars, na.rm = TRUE)
+    # Repel label positions so they don't overlap
+    y_range <- range(d$plot_value, na.rm = TRUE)
     min_gap <- diff(y_range) * 0.045
-    label_data$y_repelled <- repel_labels(label_data$value_dollars, min_gap)
+    label_data$y_repelled <- repel_labels(label_data$plot_value, min_gap)
 
     fig <- ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
 
@@ -806,47 +900,32 @@ server <- function(input, output, session) {
       )
   })
 
-  # Overview chart 2: Housing Serviceability with 30% threshold
-  output$overview_serviceability <- renderPlotly({
-    d <- serviceability_ts %>%
-      filter(!is.na(serviceability_pct),
-             date >= as.Date("2010-01-01"))
+  # (Housing Serviceability chart moved to Affordability page)
 
-    validate(need(nrow(d) > 0, "No serviceability data available."))
-
-    p <- ggplot(d, aes(x = date, y = serviceability_pct)) +
-      geom_ribbon(aes(ymin = 30, ymax = pmax(serviceability_pct, 30)),
-                  fill = "#ffcdd2", alpha = 0.4) +
-      geom_line(linewidth = 1.2, color = "#e53935") +
-      geom_hline(yintercept = 30, linetype = "dashed", color = "#FF9800",
-                 linewidth = 0.8) +
-      annotate("text", x = as.Date("2018-04-01"), y = 31,
-               label = "Housing Stress Threshold (30%)",
-               color = "#FF9800", size = 3.5, hjust = 0, vjust = 0) +
-      scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
-      scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
-      labs(x = NULL, y = NULL) +
-      theme_afford(is_dark())
-
-    ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
-  })
-
-  # Overview chart 3: Affordability Index Changes
+  # Overview chart 3: Affordability Indices (level values)
   output$overview_afford_change <- renderPlotly({
-    d <- afford_change
+    d <- afford_idx %>%
+      filter(indicator %in% c("Rental Affordability Index",
+                              "Mortgage Serviceability Index",
+                              "Price-to-Income Ratio")) %>%
+      mutate(indicator_label = case_when(
+        indicator == "Rental Affordability Index"  ~ "Rent Affordability",
+        indicator == "Mortgage Serviceability Index" ~ "Mortgage Affordability",
+        indicator == "Price-to-Income Ratio" ~ "Price-to-Income Ratio"
+      ))
+
     validate(need(nrow(d) > 0, "No affordability index data available."))
 
-    change_colours <- c("Rent Affordability" = "#009688",
-                        "Mortgage Affordability" = "#FF9800",
-                        "Deposit Affordability" = "#1565C0")
+    idx_colours <- c("Rent Affordability" = "#009688",
+                     "Mortgage Affordability" = "#FF9800",
+                     "Price-to-Income Ratio" = "#1565C0")
 
-    p <- ggplot(d, aes(x = date, y = pct_change, color = indicator_label)) +
-      geom_hline(yintercept = 0, color = "grey60", linewidth = 0.5) +
+    p <- ggplot(d, aes(x = date, y = value, color = indicator_label)) +
       geom_line(linewidth = 1.1, alpha = 0.9) +
-      scale_color_manual(values = change_colours) +
-      scale_x_date(date_labels = "%b %Y", date_breaks = "3 years") +
-      scale_y_continuous(labels = label_percent(scale = 1, accuracy = 1)) +
-      labs(x = NULL, y = "Change from base period", color = NULL) +
+      scale_color_manual(values = idx_colours) +
+      scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
+      scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
+      labs(x = NULL, y = "Index value", color = NULL) +
       theme_afford(is_dark())
 
     # Add latest value annotations
@@ -991,11 +1070,15 @@ server <- function(input, output, session) {
   # Tab 3a: Indices
   output$afford_indices_chart <- renderPlotly({
     req(input$afford_indices)
+    # Filter out the special "Housing Serviceability" — it has its own chart
+    idx_selected <- setdiff(input$afford_indices, "Housing Serviceability")
+    validate(need(length(idx_selected) > 0,
+                  "Select at least one index indicator (or Housing Serviceability)."))
     d <- afford_idx %>%
-      filter(indicator %in% input$afford_indices,
+      filter(indicator %in% idx_selected,
              date >= input$afford_dates[1],
              date <= input$afford_dates[2])
-    validate(need(nrow(d) > 0, "No data for selected indicators."))
+    validate(need(nrow(d) > 0, "No data for selected indicators in this date range."))
 
     p <- ggplot(d, aes(x = date, y = value, color = indicator)) +
       geom_line(linewidth = 1) +
@@ -1004,6 +1087,33 @@ server <- function(input, output, session) {
       labs(x = NULL, y = NULL, color = NULL) +
       theme_afford(is_dark()) +
       theme(legend.position = "none")
+
+    ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
+  })
+
+  # Tab 3a: Housing Serviceability chart (shown when selected)
+  output$afford_serviceability <- renderPlotly({
+    req("Housing Serviceability" %in% input$afford_indices)
+    d <- serviceability_ts %>%
+      filter(!is.na(serviceability_pct),
+             date >= input$afford_dates[1],
+             date <= input$afford_dates[2])
+
+    validate(need(nrow(d) > 0, "No serviceability data in this date range."))
+
+    p <- ggplot(d, aes(x = date, y = serviceability_pct)) +
+      geom_ribbon(aes(ymin = pmin(serviceability_pct, 30), ymax = pmax(serviceability_pct, 30)),
+                  fill = "#ffcdd2", alpha = 0.4) +
+      geom_line(linewidth = 1.2, color = "#e53935") +
+      geom_hline(yintercept = 30, linetype = "dashed", color = "#FF9800",
+                 linewidth = 0.8) +
+      annotate("text", x = max(d$date) - 2500, y = 31,
+               label = "Housing Stress Threshold (30%)",
+               color = "#FF9800", size = 3.5, hjust = 0, vjust = 0) +
+      scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
+      scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
+      labs(x = NULL, y = NULL) +
+      theme_afford(is_dark())
 
     ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
   })
@@ -1250,7 +1360,7 @@ server <- function(input, output, session) {
 
     p <- ggplot(d, aes(x = date, y = value)) +
       geom_col(fill = "#29B6F6", alpha = 0.85, width = 60) +
-      scale_x_date(date_labels = "%Y", date_breaks = "2 years") +
+      scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
       scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 1)) +
       labs(x = NULL, y = "Thousands") +
       theme_afford(is_dark())
@@ -1258,11 +1368,149 @@ server <- function(input, output, session) {
     ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
   })
 
-  output$context_approvals <- renderPlotly({
+  # ============================================================================
+  # PAGE 5: HOUSING SUPPLY
+  # ============================================================================
+
+  # --- Value boxes ---
+
+  # Helper: get latest total approvals for a state
+  approvals_latest <- function(state_name) {
+    supply_demand %>%
+      filter(category == "Building Approvals",
+             str_detect(series, state_name),
+             str_detect(series, "Total \\(Type of Building\\)"),
+             str_detect(series, "Total Sectors")) %>%
+      filter(!is.na(value)) %>%
+      arrange(desc(date)) %>%
+      slice(1)
+  }
+
+  output$vb_approvals_nsw <- renderText({
+    d <- approvals_latest("New South Wales")
+    if (nrow(d) == 0) return("N/A")
+    fmt_number(d$value[1])
+  })
+  output$vb_approvals_nsw_change <- renderUI({
     d <- supply_demand %>%
       filter(category == "Building Approvals",
-             date >= input$context_dates[1],
-             date <= input$context_dates[2]) %>%
+             str_detect(series, "New South Wales"),
+             str_detect(series, "Total \\(Type of Building\\)"),
+             str_detect(series, "Total Sectors"),
+             !is.na(value)) %>%
+      arrange(desc(date))
+    if (nrow(d) < 13) return(tags$p(class = "kpi-subtitle", ""))
+    current <- d$value[1]; previous <- d$value[13]
+    if (is.na(previous) || previous == 0) return(tags$p(class = "kpi-subtitle", ""))
+    pct <- (current / previous - 1) * 100
+    direction <- if (pct >= 0) "\u2191" else "\u2193"
+    label <- paste0(direction, " ", sprintf("%+.1f%%", pct), " YoY")
+    css_class <- if (pct >= 0) "kpi-change-up" else "kpi-change-down"
+    tags$p(class = paste("kpi-subtitle", css_class), label)
+  })
+
+  output$vb_approvals_vic <- renderText({
+    d <- approvals_latest("Victoria")
+    if (nrow(d) == 0) return("N/A")
+    fmt_number(d$value[1])
+  })
+  output$vb_approvals_vic_change <- renderUI({
+    d <- supply_demand %>%
+      filter(category == "Building Approvals",
+             str_detect(series, "Victoria"),
+             str_detect(series, "Total \\(Type of Building\\)"),
+             str_detect(series, "Total Sectors"),
+             !is.na(value)) %>%
+      arrange(desc(date))
+    if (nrow(d) < 13) return(tags$p(class = "kpi-subtitle", ""))
+    current <- d$value[1]; previous <- d$value[13]
+    if (is.na(previous) || previous == 0) return(tags$p(class = "kpi-subtitle", ""))
+    pct <- (current / previous - 1) * 100
+    direction <- if (pct >= 0) "\u2191" else "\u2193"
+    label <- paste0(direction, " ", sprintf("%+.1f%%", pct), " YoY")
+    css_class <- if (pct >= 0) "kpi-change-up" else "kpi-change-down"
+    tags$p(class = paste("kpi-subtitle", css_class), label)
+  })
+
+  output$vb_construction <- renderText({
+    v <- latest_val(abs_ts, "series", "CPI New Dwelling Purchase")
+    fmt_index(v)
+  })
+  output$vb_construction_change <- renderUI({
+    ch <- latest_change(abs_ts, "series", "CPI New Dwelling Purchase", periods_back = 12)
+    diff_val <- ch$change
+    css_class <- if (!is.na(diff_val) && diff_val >= 0) "kpi-change-up" else "kpi-change-down"
+    lbl <- if (is.na(diff_val)) "" else ch$label
+    tags$p(class = paste("kpi-subtitle", css_class), lbl)
+  })
+
+  output$vb_houses_share <- renderText({
+    # Houses as % of total approvals (NSW + VIC combined), latest month
+    d_total <- supply_demand %>%
+      filter(category == "Building Approvals",
+             str_detect(series, "Total \\(Type of Building\\)"),
+             str_detect(series, "Total Sectors"),
+             !is.na(value)) %>%
+      arrange(desc(date))
+    if (nrow(d_total) == 0) return("N/A")
+    latest_month <- d_total$date[1]
+
+    total_val <- d_total %>% filter(date == latest_month) %>% summarise(s = sum(value)) %>% pull(s)
+    houses_val <- supply_demand %>%
+      filter(category == "Building Approvals",
+             str_detect(series, "Houses"),
+             str_detect(series, "Total Sectors"),
+             !is.na(value),
+             date == latest_month) %>%
+      summarise(s = sum(value)) %>% pull(s)
+
+    if (total_val == 0) return("N/A")
+    fmt_pct(houses_val / total_val * 100, 0.1)
+  })
+  output$vb_houses_share_change <- renderUI({
+    # Compare houses share: latest month vs 12 months prior
+    calc_share <- function(target_date) {
+      total_val <- supply_demand %>%
+        filter(category == "Building Approvals",
+               str_detect(series, "Total \\(Type of Building\\)"),
+               str_detect(series, "Total Sectors"),
+               !is.na(value), date == target_date) %>%
+        summarise(s = sum(value)) %>% pull(s)
+      houses_val <- supply_demand %>%
+        filter(category == "Building Approvals",
+               str_detect(series, "Houses"),
+               str_detect(series, "Total Sectors"),
+               !is.na(value), date == target_date) %>%
+        summarise(s = sum(value)) %>% pull(s)
+      if (total_val == 0) return(NA_real_)
+      houses_val / total_val * 100
+    }
+
+    dates <- supply_demand %>%
+      filter(category == "Building Approvals",
+             str_detect(series, "Total \\(Type of Building\\)"),
+             str_detect(series, "Total Sectors"),
+             !is.na(value)) %>%
+      distinct(date) %>% arrange(desc(date)) %>% pull(date)
+
+    if (length(dates) < 13) return(tags$p(class = "kpi-subtitle", ""))
+    current_share <- calc_share(dates[1])
+    previous_share <- calc_share(dates[13])
+    if (is.na(current_share) || is.na(previous_share)) return(tags$p(class = "kpi-subtitle", ""))
+
+    diff_pp <- current_share - previous_share
+    direction <- if (diff_pp >= 0) "\u2191" else "\u2193"
+    label <- paste0(direction, " ", sprintf("%+.1f pp", diff_pp), " YoY")
+    css_class <- if (diff_pp >= 0) "kpi-change-up" else "kpi-change-down"
+    tags$p(class = paste("kpi-subtitle", css_class), label)
+  })
+
+  # --- Chart ---
+  output$supply_approvals <- renderPlotly({
+    d <- supply_demand %>%
+      filter(category == "Building Approvals",
+             date >= input$supply_dates[1],
+             date <= input$supply_dates[2]) %>%
       # Shorten long series names for readable legends
       mutate(series_short = series %>%
         str_remove("Total number of dwelling units ;\\s*") %>%
@@ -1285,7 +1533,7 @@ server <- function(input, output, session) {
   })
 
   # ============================================================================
-  # PAGE 5: RENTAL MARKET
+  # PAGE 6: RENTAL MARKET
   # ============================================================================
 
   # Rental stress by state (bar chart for selected year)
@@ -1331,18 +1579,41 @@ server <- function(input, output, session) {
     d <- sih_nhha %>%
       filter(metric == "pct_rental_stress_over_30",
              geography %in% states) %>%
-      mutate(year_num = as.numeric(str_extract(survey_year, "^\\d{4}")))
+      mutate(
+        # Order: Aust. first, then states alphabetically
+        geography = factor(geography,
+          levels = rev(c("Aust.", sort(setdiff(unique(geography), "Aust.")))))
+      )
 
     validate(need(nrow(d) > 0, "No NHHA trend data."))
 
-    p <- ggplot(d, aes(x = year_num, y = value, color = geography)) +
-      geom_line(linewidth = 1) +
-      geom_point(size = 2) +
-      scale_x_continuous(breaks = unique(d$year_num)) +
-      labs(x = NULL, y = "% in Rental Stress", color = NULL) +
-      theme_afford(is_dark())
+    dark <- is_dark()
+    text_col <- if (dark) "#E3EBF4" else "#1F2D3D"
 
-    ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
+    p <- ggplot(d, aes(x = survey_year, y = geography, fill = value)) +
+      geom_tile(color = if (dark) "#1B2A44" else "#FFFFFF", linewidth = 1.5) +
+      geom_text(aes(label = sprintf("%.0f%%", value)),
+                size = 3.2, color = text_col, show.legend = FALSE) +
+      scale_fill_gradient2(
+        low = "#2196F3", mid = "#FFB74D", high = "#e74c3c",
+        midpoint = 40, limits = c(10, 60),
+        name = "% in Stress"
+      ) +
+      labs(x = NULL, y = NULL) +
+      theme_afford(dark) +
+      theme(
+        panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1)
+      )
+
+    pl <- ggplotly(p, tooltip = "fill") %>% plotly_layout(dark)
+    # Remove hover from the text trace to avoid doubling
+    for (i in seq_along(pl$x$data)) {
+      if (!is.null(pl$x$data[[i]]$mode) && grepl("text", pl$x$data[[i]]$mode)) {
+        pl$x$data[[i]]$hoverinfo <- "skip"
+      }
+    }
+    pl
   })
 
   # Rental affordability index

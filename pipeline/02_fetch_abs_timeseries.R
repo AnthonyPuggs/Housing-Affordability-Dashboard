@@ -379,23 +379,33 @@ if (nrow(labour) > 0) {
   )
   all_series$participation <- participation
 
+  cat("    Unemployment:", nrow(unemployment), "obs |",
+      "Participation:", nrow(participation), "obs\n")
+}
+
+# Table 22: Underemployment and underutilisation rates
+cat("  Fetching Labour Force Supplementary (6202.0 Table 22)...\n")
+labour_t22 <- safe_read(
+  read_abs(cat_no = "6202.0", tables = "22"),
+  "Labour Force 6202.0 Table 22"
+)
+
+if (nrow(labour_t22) > 0) {
   underemployment <- select_series(
-    labour,
-    "Underemployment rate.*Persons",
+    labour_t22,
+    "Underemployment rate \\(proportion of labour force\\) ;\\s+Persons ;$",
     "Underemployment Rate", "Labour Market", units = "Per cent"
   )
   all_series$underemployment <- underemployment
 
   underutilisation <- select_series(
-    labour,
-    "Underutilisation rate.*Persons",
+    labour_t22,
+    "Underutilisation rate ;\\s+Persons ;$",
     "Labour Underutilisation Rate", "Labour Market", units = "Per cent"
   )
   all_series$underutilisation <- underutilisation
 
-  cat("    Unemployment:", nrow(unemployment), "obs |",
-      "Participation:", nrow(participation), "obs |",
-      "Underemployment:", nrow(underemployment), "obs |",
+  cat("    Underemployment:", nrow(underemployment), "obs |",
       "Underutilisation:", nrow(underutilisation), "obs\n")
 }
 
