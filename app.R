@@ -670,7 +670,14 @@ ui <- page_navbar(
       card(
         fill = FALSE,
         card_header("Building Approvals"),
-        card_body(plotlyOutput("supply_approvals", height = "420px"))
+        card_body(
+          radioButtons("approvals_sector", NULL,
+                       choices = c("All Sectors" = "all",
+                                   "Private Sector" = "private",
+                                   "Public Sector" = "public"),
+                       selected = "all", inline = TRUE),
+          plotlyOutput("supply_approvals", height = "420px")
+        )
       ),
       card(
         card_header("CPI New Dwelling Purchase (Construction Cost)"),
@@ -1537,16 +1544,28 @@ server <- function(input, output, session) {
 
   # --- Chart ---
   output$supply_approvals <- renderPlotly({
-    d <- supply_demand %>%
+    houses <- supply_demand %>%
       filter(category == "Building Approvals",
+             str_detect(series, "Houses"),
              date >= input$supply_dates[1],
              date <= input$supply_dates[2]) %>%
-      # Shorten long series names for readable legends
-      mutate(series_short = series %>%
-        str_remove("Total number of dwelling units ;\\s*") %>%
-        str_remove("\\s*;\\s*$") %>%
-        str_replace(";\\s*", " - ") %>%
-        str_replace(";\\s*", " - "))
+      mutate(state = str_extract(series, "New South Wales|Victoria|Queensland"),
+             sector = str_extract(series, "Total Sectors|Private Sector"))
+
+    if (input$approvals_sector == "public") {
+      # Derive public = Total Sectors - Private Sector
+      wide <- houses %>%
+        select(date, state, sector, value) %>%
+        pivot_wider(names_from = sector, values_from = value) %>%
+        mutate(value = `Total Sectors` - `Private Sector`) %>%
+        filter(!is.na(value))
+      d <- wide %>% rename(series_short = state)
+    } else {
+      sector_regex <- if (input$approvals_sector == "all") "Total Sectors" else "Private Sector"
+      d <- houses %>%
+        filter(sector == sector_regex) %>%
+        rename(series_short = state)
+    }
 
     validate(need(nrow(d) > 0,
       "Run pipeline/05_driver.R to fetch building approvals data (ABS 8731.0)"))
