@@ -1,0 +1,915 @@
+survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
+2019-20,1.6,cost_income_ratio,owner_outright,family_type,Couple family with dependent children,National,mean
+2019-20,15.2,cost_income_ratio,owner_mortgage,family_type,Couple family with dependent children,National,mean
+2019-20,13.1,cost_income_ratio,owner_total,family_type,Couple family with dependent children,National,mean
+2019-20,16.6,cost_income_ratio,renter_social,family_type,Couple family with dependent children,National,mean
+2019-20,18.5,cost_income_ratio,renter_private,family_type,Couple family with dependent children,National,mean
+2019-20,17.4,cost_income_ratio,renter_total,family_type,Couple family with dependent children,National,mean
+2019-20,13.8,cost_income_ratio,all,family_type,Couple family with dependent children,National,mean
+2019-20,3.1,cost_income_ratio,owner_outright,family_type,One parent family with dependent children,National,mean
+2019-20,17.6,cost_income_ratio,owner_mortgage,family_type,One parent family with dependent children,National,mean
+2019-20,15.4,cost_income_ratio,owner_total,family_type,One parent family with dependent children,National,mean
+2019-20,19.4,cost_income_ratio,renter_social,family_type,One parent family with dependent children,National,mean
+2019-20,26.8,cost_income_ratio,renter_private,family_type,One parent family with dependent children,National,mean
+2019-20,25.6,cost_income_ratio,renter_total,family_type,One parent family with dependent children,National,mean
+2019-20,20.1,cost_income_ratio,all,family_type,One parent family with dependent children,National,mean
+2019-20,3.3,cost_income_ratio,owner_outright,family_type,Couple only,National,mean
+2019-20,15.4,cost_income_ratio,owner_mortgage,family_type,Couple only,National,mean
+2019-20,9.9,cost_income_ratio,owner_total,family_type,Couple only,National,mean
+2019-20,20.6,cost_income_ratio,renter_social,family_type,Couple only,National,mean
+2019-20,17.5,cost_income_ratio,renter_private,family_type,Couple only,National,mean
+2019-20,17.6,cost_income_ratio,renter_total,family_type,Couple only,National,mean
+2019-20,11.7,cost_income_ratio,all,family_type,Couple only,National,mean
+2019-20,2.3,cost_income_ratio,owner_outright,family_type,Other one family households,National,mean
+2019-20,12.3,cost_income_ratio,owner_mortgage,family_type,Other one family households,National,mean
+2019-20,8.2,cost_income_ratio,owner_total,family_type,Other one family households,National,mean
+2019-20,18,cost_income_ratio,renter_social,family_type,Other one family households,National,mean
+2019-20,18.3,cost_income_ratio,renter_private,family_type,Other one family households,National,mean
+2019-20,18.2,cost_income_ratio,renter_total,family_type,Other one family households,National,mean
+2019-20,10.2,cost_income_ratio,all,family_type,Other one family households,National,mean
+2019-20,1.9,cost_income_ratio,owner_outright,family_type,Multiple family households,National,mean
+2019-20,12.5,cost_income_ratio,owner_mortgage,family_type,Multiple family households,National,mean
+2019-20,9.6,cost_income_ratio,owner_total,family_type,Multiple family households,National,mean
+2019-20,0,cost_income_ratio,renter_social,family_type,Multiple family households,National,mean
+2019-20,15.1,cost_income_ratio,renter_private,family_type,Multiple family households,National,mean
+2019-20,15.2,cost_income_ratio,renter_total,family_type,Multiple family households,National,mean
+2019-20,10.8,cost_income_ratio,all,family_type,Multiple family households,National,mean
+2019-20,5.2,cost_income_ratio,owner_outright,family_type,Lone person households,National,mean
+2019-20,24.4,cost_income_ratio,owner_mortgage,family_type,Lone person households,National,mean
+2019-20,14.5,cost_income_ratio,owner_total,family_type,Lone person households,National,mean
+2019-20,22.3,cost_income_ratio,renter_social,family_type,Lone person households,National,mean
+2019-20,26.3,cost_income_ratio,renter_private,family_type,Lone person households,National,mean
+2019-20,26,cost_income_ratio,renter_total,family_type,Lone person households,National,mean
+2019-20,18.5,cost_income_ratio,all,family_type,Lone person households,National,mean
+2019-20,4.1,cost_income_ratio,owner_outright,family_type,Group households,National,mean
+2019-20,14.7,cost_income_ratio,owner_mortgage,family_type,Group households,National,mean
+2019-20,11.6,cost_income_ratio,owner_total,family_type,Group households,National,mean
+2019-20,17.6,cost_income_ratio,renter_social,family_type,Group households,National,mean
+2019-20,21,cost_income_ratio,renter_private,family_type,Group households,National,mean
+2019-20,20.9,cost_income_ratio,renter_total,family_type,Group households,National,mean
+2019-20,18,cost_income_ratio,all,family_type,Group households,National,mean
+2019-20,3,cost_income_ratio,owner_outright,family_type,Total,National,mean
+2019-20,15.5,cost_income_ratio,owner_mortgage,family_type,Total,National,mean
+2019-20,11.7,cost_income_ratio,owner_total,family_type,Total,National,mean
+2019-20,19.5,cost_income_ratio,renter_social,family_type,Total,National,mean
+2019-20,20.2,cost_income_ratio,renter_private,family_type,Total,National,mean
+2019-20,19.9,cost_income_ratio,renter_total,family_type,Total,National,mean
+2019-20,13.6,cost_income_ratio,all,family_type,Total,National,mean
+2019-20,2.8,cost_income_ratio,owner_outright,age_group,15 to 24,National,mean
+2019-20,22.5,cost_income_ratio,owner_mortgage,age_group,15 to 24,National,mean
+2019-20,22,cost_income_ratio,owner_total,age_group,15 to 24,National,mean
+2019-20,10.6,cost_income_ratio,renter_social,age_group,15 to 24,National,mean
+2019-20,23.6,cost_income_ratio,renter_private,age_group,15 to 24,National,mean
+2019-20,23.3,cost_income_ratio,renter_total,age_group,15 to 24,National,mean
+2019-20,22.7,cost_income_ratio,all,age_group,15 to 24,National,mean
+2019-20,2.4,cost_income_ratio,owner_outright,age_group,25 to 34,National,mean
+2019-20,17.4,cost_income_ratio,owner_mortgage,age_group,25 to 34,National,mean
+2019-20,16.6,cost_income_ratio,owner_total,age_group,25 to 34,National,mean
+2019-20,17.3,cost_income_ratio,renter_social,age_group,25 to 34,National,mean
+2019-20,18.8,cost_income_ratio,renter_private,age_group,25 to 34,National,mean
+2019-20,18.5,cost_income_ratio,renter_total,age_group,25 to 34,National,mean
+2019-20,17.2,cost_income_ratio,all,age_group,25 to 34,National,mean
+2019-20,2,cost_income_ratio,owner_outright,age_group,35 to 44,National,mean
+2019-20,17,cost_income_ratio,owner_mortgage,age_group,35 to 44,National,mean
+2019-20,15.8,cost_income_ratio,owner_total,age_group,35 to 44,National,mean
+2019-20,18.8,cost_income_ratio,renter_social,age_group,35 to 44,National,mean
+2019-20,18.6,cost_income_ratio,renter_private,age_group,35 to 44,National,mean
+2019-20,18.2,cost_income_ratio,renter_total,age_group,35 to 44,National,mean
+2019-20,16.4,cost_income_ratio,all,age_group,35 to 44,National,mean
+2019-20,2,cost_income_ratio,owner_outright,age_group,45 to 54,National,mean
+2019-20,14.9,cost_income_ratio,owner_mortgage,age_group,45 to 54,National,mean
+2019-20,12.6,cost_income_ratio,owner_total,age_group,45 to 54,National,mean
+2019-20,21.5,cost_income_ratio,renter_social,age_group,45 to 54,National,mean
+2019-20,20.6,cost_income_ratio,renter_private,age_group,45 to 54,National,mean
+2019-20,19.9,cost_income_ratio,renter_total,age_group,45 to 54,National,mean
+2019-20,13.7,cost_income_ratio,all,age_group,45 to 54,National,mean
+2019-20,2.4,cost_income_ratio,owner_outright,age_group,55 to 64,National,mean
+2019-20,13.2,cost_income_ratio,owner_mortgage,age_group,55 to 64,National,mean
+2019-20,8.9,cost_income_ratio,owner_total,age_group,55 to 64,National,mean
+2019-20,20.6,cost_income_ratio,renter_social,age_group,55 to 64,National,mean
+2019-20,22.7,cost_income_ratio,renter_private,age_group,55 to 64,National,mean
+2019-20,22.9,cost_income_ratio,renter_total,age_group,55 to 64,National,mean
+2019-20,10.4,cost_income_ratio,all,age_group,55 to 64,National,mean
+2019-20,3.8,cost_income_ratio,owner_outright,age_group,65 to 74,National,mean
+2019-20,13.3,cost_income_ratio,owner_mortgage,age_group,65 to 74,National,mean
+2019-20,6.1,cost_income_ratio,owner_total,age_group,65 to 74,National,mean
+2019-20,22,cost_income_ratio,renter_social,age_group,65 to 74,National,mean
+2019-20,29,cost_income_ratio,renter_private,age_group,65 to 74,National,mean
+2019-20,27.4,cost_income_ratio,renter_total,age_group,65 to 74,National,mean
+2019-20,8.2,cost_income_ratio,all,age_group,65 to 74,National,mean
+2019-20,4.4,cost_income_ratio,owner_outright,age_group,75 and over,National,mean
+2019-20,10.3,cost_income_ratio,owner_mortgage,age_group,75 and over,National,mean
+2019-20,4.8,cost_income_ratio,owner_total,age_group,75 and over,National,mean
+2019-20,21.3,cost_income_ratio,renter_social,age_group,75 and over,National,mean
+2019-20,39,cost_income_ratio,renter_private,age_group,75 and over,National,mean
+2019-20,31.1,cost_income_ratio,renter_total,age_group,75 and over,National,mean
+2019-20,7,cost_income_ratio,all,age_group,75 and over,National,mean
+2019-20,3,cost_income_ratio,owner_outright,age_group,Total,National,mean
+2019-20,15.5,cost_income_ratio,owner_mortgage,age_group,Total,National,mean
+2019-20,11.7,cost_income_ratio,owner_total,age_group,Total,National,mean
+2019-20,19.5,cost_income_ratio,renter_social,age_group,Total,National,mean
+2019-20,20.2,cost_income_ratio,renter_private,age_group,Total,National,mean
+2019-20,19.9,cost_income_ratio,renter_total,age_group,Total,National,mean
+2019-20,13.6,cost_income_ratio,all,age_group,Total,National,mean
+2019-20,4,cost_income_ratio,owner_outright,age_group,65 and over,National,mean
+2019-20,12.8,cost_income_ratio,owner_mortgage,age_group,65 and over,National,mean
+2019-20,5.6,cost_income_ratio,owner_total,age_group,65 and over,National,mean
+2019-20,21.7,cost_income_ratio,renter_social,age_group,65 and over,National,mean
+2019-20,31.6,cost_income_ratio,renter_private,age_group,65 and over,National,mean
+2019-20,28.6,cost_income_ratio,renter_total,age_group,65 and over,National,mean
+2019-20,7.8,cost_income_ratio,all,age_group,65 and over,National,mean
+2019-20,3.1,cost_income_ratio,owner_outright,dwelling_structure,Separate house,National,mean
+2019-20,15.1,cost_income_ratio,owner_mortgage,dwelling_structure,Separate house,National,mean
+2019-20,11.4,cost_income_ratio,owner_total,dwelling_structure,Separate house,National,mean
+2019-20,18.7,cost_income_ratio,renter_social,dwelling_structure,Separate house,National,mean
+2019-20,19.5,cost_income_ratio,renter_private,dwelling_structure,Separate house,National,mean
+2019-20,18.7,cost_income_ratio,renter_total,dwelling_structure,Separate house,National,mean
+2019-20,12.5,cost_income_ratio,all,dwelling_structure,Separate house,National,mean
+2019-20,3.1,cost_income_ratio,owner_outright,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,17.1,cost_income_ratio,owner_mortgage,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,12.9,cost_income_ratio,owner_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,21.4,cost_income_ratio,renter_social,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,20,cost_income_ratio,renter_private,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,20.2,cost_income_ratio,renter_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,15.3,cost_income_ratio,all,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,2.5,cost_income_ratio,owner_outright,dwelling_structure,Flat or apartment,National,mean
+2019-20,17.5,cost_income_ratio,owner_mortgage,dwelling_structure,Flat or apartment,National,mean
+2019-20,13.2,cost_income_ratio,owner_total,dwelling_structure,Flat or apartment,National,mean
+2019-20,20,cost_income_ratio,renter_social,dwelling_structure,Flat or apartment,National,mean
+2019-20,21.5,cost_income_ratio,renter_private,dwelling_structure,Flat or apartment,National,mean
+2019-20,21.6,cost_income_ratio,renter_total,dwelling_structure,Flat or apartment,National,mean
+2019-20,18.1,cost_income_ratio,all,dwelling_structure,Flat or apartment,National,mean
+2019-20,3,cost_income_ratio,owner_outright,dwelling_structure,Total,National,mean
+2019-20,15.5,cost_income_ratio,owner_mortgage,dwelling_structure,Total,National,mean
+2019-20,11.7,cost_income_ratio,owner_total,dwelling_structure,Total,National,mean
+2019-20,19.5,cost_income_ratio,renter_social,dwelling_structure,Total,National,mean
+2019-20,20.2,cost_income_ratio,renter_private,dwelling_structure,Total,National,mean
+2019-20,19.9,cost_income_ratio,renter_total,dwelling_structure,Total,National,mean
+2019-20,13.6,cost_income_ratio,all,dwelling_structure,Total,National,mean
+2019-20,8.3,cost_income_ratio,owner_outright,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,47.9,cost_income_ratio,owner_mortgage,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,22.1,cost_income_ratio,owner_total,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,22.6,cost_income_ratio,renter_social,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,50.5,cost_income_ratio,renter_private,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,42.6,cost_income_ratio,renter_total,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,29.1,cost_income_ratio,all,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,4.4,cost_income_ratio,owner_outright,equiv_income_quintile,Second quintile,National,mean
+2019-20,23.2,cost_income_ratio,owner_mortgage,equiv_income_quintile,Second quintile,National,mean
+2019-20,14.7,cost_income_ratio,owner_total,equiv_income_quintile,Second quintile,National,mean
+2019-20,17.6,cost_income_ratio,renter_social,equiv_income_quintile,Second quintile,National,mean
+2019-20,26.6,cost_income_ratio,renter_private,equiv_income_quintile,Second quintile,National,mean
+2019-20,26.1,cost_income_ratio,renter_total,equiv_income_quintile,Second quintile,National,mean
+2019-20,18.2,cost_income_ratio,all,equiv_income_quintile,Second quintile,National,mean
+2019-20,3.5,cost_income_ratio,owner_outright,equiv_income_quintile,Third quintile,National,mean
+2019-20,18.3,cost_income_ratio,owner_mortgage,equiv_income_quintile,Third quintile,National,mean
+2019-20,13.7,cost_income_ratio,owner_total,equiv_income_quintile,Third quintile,National,mean
+2019-20,16.7,cost_income_ratio,renter_social,equiv_income_quintile,Third quintile,National,mean
+2019-20,21.7,cost_income_ratio,renter_private,equiv_income_quintile,Third quintile,National,mean
+2019-20,21.5,cost_income_ratio,renter_total,equiv_income_quintile,Third quintile,National,mean
+2019-20,15.9,cost_income_ratio,all,equiv_income_quintile,Third quintile,National,mean
+2019-20,2.3,cost_income_ratio,owner_outright,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,16.1,cost_income_ratio,owner_mortgage,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,12.8,cost_income_ratio,owner_total,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,10.8,cost_income_ratio,renter_social,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,18,cost_income_ratio,renter_private,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,17.5,cost_income_ratio,renter_total,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,13.9,cost_income_ratio,all,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,1.3,cost_income_ratio,owner_outright,equiv_income_quintile,Highest quintile,National,mean
+2019-20,11.4,cost_income_ratio,owner_mortgage,equiv_income_quintile,Highest quintile,National,mean
+2019-20,8.7,cost_income_ratio,owner_total,equiv_income_quintile,Highest quintile,National,mean
+2019-20,6.1,cost_income_ratio,renter_social,equiv_income_quintile,Highest quintile,National,mean
+2019-20,12.5,cost_income_ratio,renter_private,equiv_income_quintile,Highest quintile,National,mean
+2019-20,12,cost_income_ratio,renter_total,equiv_income_quintile,Highest quintile,National,mean
+2019-20,9.3,cost_income_ratio,all,equiv_income_quintile,Highest quintile,National,mean
+2019-20,3,cost_income_ratio,owner_outright,equiv_income_quintile,Total,National,mean
+2019-20,15.5,cost_income_ratio,owner_mortgage,equiv_income_quintile,Total,National,mean
+2019-20,11.7,cost_income_ratio,owner_total,equiv_income_quintile,Total,National,mean
+2019-20,19.5,cost_income_ratio,renter_social,equiv_income_quintile,Total,National,mean
+2019-20,20.2,cost_income_ratio,renter_private,equiv_income_quintile,Total,National,mean
+2019-20,19.9,cost_income_ratio,renter_total,equiv_income_quintile,Total,National,mean
+2019-20,13.6,cost_income_ratio,all,equiv_income_quintile,Total,National,mean
+2019-20,5.7,cost_income_ratio,owner_outright,equiv_income_quintile,Lower Income households,National,mean
+2019-20,27,cost_income_ratio,owner_mortgage,equiv_income_quintile,Lower Income households,National,mean
+2019-20,15.8,cost_income_ratio,owner_total,equiv_income_quintile,Lower Income households,National,mean
+2019-20,20.8,cost_income_ratio,renter_social,equiv_income_quintile,Lower Income households,National,mean
+2019-20,31.8,cost_income_ratio,renter_private,equiv_income_quintile,Lower Income households,National,mean
+2019-20,30.2,cost_income_ratio,renter_total,equiv_income_quintile,Lower Income households,National,mean
+2019-20,20.5,cost_income_ratio,all,equiv_income_quintile,Lower Income households,National,mean
+2019-20,4.9,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,None,National,mean
+2019-20,24.2,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,None,National,mean
+2019-20,7.4,cost_income_ratio,owner_total,number_of_employed_persons_in_household,None,National,mean
+2019-20,21.1,cost_income_ratio,renter_social,number_of_employed_persons_in_household,None,National,mean
+2019-20,42.3,cost_income_ratio,renter_private,number_of_employed_persons_in_household,None,National,mean
+2019-20,35.8,cost_income_ratio,renter_total,number_of_employed_persons_in_household,None,National,mean
+2019-20,13.6,cost_income_ratio,all,number_of_employed_persons_in_household,None,National,mean
+2019-20,2.9,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,One,National,mean
+2019-20,20.5,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,One,National,mean
+2019-20,14.6,cost_income_ratio,owner_total,number_of_employed_persons_in_household,One,National,mean
+2019-20,16.4,cost_income_ratio,renter_social,number_of_employed_persons_in_household,One,National,mean
+2019-20,22.9,cost_income_ratio,renter_private,number_of_employed_persons_in_household,One,National,mean
+2019-20,22.5,cost_income_ratio,renter_total,number_of_employed_persons_in_household,One,National,mean
+2019-20,17.1,cost_income_ratio,all,number_of_employed_persons_in_household,One,National,mean
+2019-20,2.1,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Two,National,mean
+2019-20,15.2,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Two,National,mean
+2019-20,12.8,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Two,National,mean
+2019-20,19.8,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Two,National,mean
+2019-20,16.7,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Two,National,mean
+2019-20,16.4,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Two,National,mean
+2019-20,13.5,cost_income_ratio,all,number_of_employed_persons_in_household,Two,National,mean
+2019-20,1.4,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,11.1,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,8.7,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,13.8,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,15.4,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,14.7,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,9.7,cost_income_ratio,all,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,3,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Total,National,mean
+2019-20,15.5,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Total,National,mean
+2019-20,11.7,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Total,National,mean
+2019-20,19.5,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Total,National,mean
+2019-20,20.2,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Total,National,mean
+2019-20,19.9,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Total,National,mean
+2019-20,13.6,cost_income_ratio,all,number_of_employed_persons_in_household,Total,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,family_type,Couple family with dependent children,National,mean
+2019-20,1.2,cost_income_ratio,owner_mortgage,family_type,Couple family with dependent children,National,mean
+2019-20,0.3,cost_income_ratio,owner_total,family_type,Couple family with dependent children,National,mean
+2019-20,1.3,cost_income_ratio,renter_social,family_type,Couple family with dependent children,National,mean
+2019-20,2.4,cost_income_ratio,renter_private,family_type,Couple family with dependent children,National,mean
+2019-20,2.1,cost_income_ratio,renter_total,family_type,Couple family with dependent children,National,mean
+2019-20,0,cost_income_ratio,all,family_type,Couple family with dependent children,National,mean
+2019-20,1.6,cost_income_ratio,owner_outright,family_type,One parent family with dependent children,National,mean
+2019-20,5.8,cost_income_ratio,owner_mortgage,family_type,One parent family with dependent children,National,mean
+2019-20,4.5,cost_income_ratio,owner_total,family_type,One parent family with dependent children,National,mean
+2019-20,8.7,cost_income_ratio,renter_social,family_type,One parent family with dependent children,National,mean
+2019-20,4,cost_income_ratio,renter_private,family_type,One parent family with dependent children,National,mean
+2019-20,3.4,cost_income_ratio,renter_total,family_type,One parent family with dependent children,National,mean
+2019-20,2.6,cost_income_ratio,all,family_type,One parent family with dependent children,National,mean
+2019-20,0.3,cost_income_ratio,owner_outright,family_type,Couple only,National,mean
+2019-20,1.8,cost_income_ratio,owner_mortgage,family_type,Couple only,National,mean
+2019-20,0.3,cost_income_ratio,owner_total,family_type,Couple only,National,mean
+2019-20,1.5,cost_income_ratio,renter_social,family_type,Couple only,National,mean
+2019-20,2,cost_income_ratio,renter_private,family_type,Couple only,National,mean
+2019-20,2,cost_income_ratio,renter_total,family_type,Couple only,National,mean
+2019-20,0.6,cost_income_ratio,all,family_type,Couple only,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,family_type,Other one family households,National,mean
+2019-20,0.5,cost_income_ratio,owner_mortgage,family_type,Other one family households,National,mean
+2019-20,0.7,cost_income_ratio,owner_total,family_type,Other one family households,National,mean
+2019-20,8.9,cost_income_ratio,renter_social,family_type,Other one family households,National,mean
+2019-20,4.3,cost_income_ratio,renter_private,family_type,Other one family households,National,mean
+2019-20,3.9,cost_income_ratio,renter_total,family_type,Other one family households,National,mean
+2019-20,0.5,cost_income_ratio,all,family_type,Other one family households,National,mean
+2019-20,1,cost_income_ratio,owner_outright,family_type,Multiple family households,National,mean
+2019-20,1.3,cost_income_ratio,owner_mortgage,family_type,Multiple family households,National,mean
+2019-20,1.5,cost_income_ratio,owner_total,family_type,Multiple family households,National,mean
+2019-20,2.1,cost_income_ratio,renter_private,family_type,Multiple family households,National,mean
+2019-20,2.1,cost_income_ratio,renter_total,family_type,Multiple family households,National,mean
+2019-20,1.2,cost_income_ratio,all,family_type,Multiple family households,National,mean
+2019-20,0.5,cost_income_ratio,owner_outright,family_type,Lone person households,National,mean
+2019-20,3,cost_income_ratio,owner_mortgage,family_type,Lone person households,National,mean
+2019-20,0.9,cost_income_ratio,owner_total,family_type,Lone person households,National,mean
+2019-20,0,cost_income_ratio,renter_social,family_type,Lone person households,National,mean
+2019-20,2.7,cost_income_ratio,renter_private,family_type,Lone person households,National,mean
+2019-20,2.4,cost_income_ratio,renter_total,family_type,Lone person households,National,mean
+2019-20,0.3,cost_income_ratio,all,family_type,Lone person households,National,mean
+2019-20,1.3,cost_income_ratio,owner_outright,family_type,Group households,National,mean
+2019-20,8.7,cost_income_ratio,owner_mortgage,family_type,Group households,National,mean
+2019-20,5.9,cost_income_ratio,owner_total,family_type,Group households,National,mean
+2019-20,5,cost_income_ratio,renter_social,family_type,Group households,National,mean
+2019-20,5.1,cost_income_ratio,renter_private,family_type,Group households,National,mean
+2019-20,4.9,cost_income_ratio,renter_total,family_type,Group households,National,mean
+2019-20,3.7,cost_income_ratio,all,family_type,Group households,National,mean
+2019-20,0.2,cost_income_ratio,owner_outright,family_type,Total,National,mean
+2019-20,0.8,cost_income_ratio,owner_mortgage,family_type,Total,National,mean
+2019-20,0.2,cost_income_ratio,owner_total,family_type,Total,National,mean
+2019-20,0,cost_income_ratio,renter_social,family_type,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_private,family_type,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_total,family_type,Total,National,mean
+2019-20,0,cost_income_ratio,all,family_type,Total,National,mean
+2019-20,2.8,cost_income_ratio,owner_mortgage,age_group,15 to 24,National,mean
+2019-20,2.8,cost_income_ratio,owner_total,age_group,15 to 24,National,mean
+2019-20,7.7,cost_income_ratio,renter_social,age_group,15 to 24,National,mean
+2019-20,4.6,cost_income_ratio,renter_private,age_group,15 to 24,National,mean
+2019-20,4.3,cost_income_ratio,renter_total,age_group,15 to 24,National,mean
+2019-20,3.9,cost_income_ratio,all,age_group,15 to 24,National,mean
+2019-20,1.6,cost_income_ratio,owner_outright,age_group,25 to 34,National,mean
+2019-20,2.4,cost_income_ratio,owner_mortgage,age_group,25 to 34,National,mean
+2019-20,2.2,cost_income_ratio,owner_total,age_group,25 to 34,National,mean
+2019-20,3.5,cost_income_ratio,renter_social,age_group,25 to 34,National,mean
+2019-20,2,cost_income_ratio,renter_private,age_group,25 to 34,National,mean
+2019-20,1.8,cost_income_ratio,renter_total,age_group,25 to 34,National,mean
+2019-20,1.1,cost_income_ratio,all,age_group,25 to 34,National,mean
+2019-20,0.7,cost_income_ratio,owner_outright,age_group,35 to 44,National,mean
+2019-20,1.8,cost_income_ratio,owner_mortgage,age_group,35 to 44,National,mean
+2019-20,0,cost_income_ratio,owner_total,age_group,35 to 44,National,mean
+2019-20,9.6,cost_income_ratio,renter_social,age_group,35 to 44,National,mean
+2019-20,2.2,cost_income_ratio,renter_private,age_group,35 to 44,National,mean
+2019-20,2,cost_income_ratio,renter_total,age_group,35 to 44,National,mean
+2019-20,1,cost_income_ratio,all,age_group,35 to 44,National,mean
+2019-20,0.5,cost_income_ratio,owner_outright,age_group,45 to 54,National,mean
+2019-20,0,cost_income_ratio,owner_mortgage,age_group,45 to 54,National,mean
+2019-20,0.3,cost_income_ratio,owner_total,age_group,45 to 54,National,mean
+2019-20,8.3,cost_income_ratio,renter_social,age_group,45 to 54,National,mean
+2019-20,3.1,cost_income_ratio,renter_private,age_group,45 to 54,National,mean
+2019-20,2.8,cost_income_ratio,renter_total,age_group,45 to 54,National,mean
+2019-20,0.2,cost_income_ratio,all,age_group,45 to 54,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,age_group,55 to 64,National,mean
+2019-20,1.7,cost_income_ratio,owner_mortgage,age_group,55 to 64,National,mean
+2019-20,0,cost_income_ratio,owner_total,age_group,55 to 64,National,mean
+2019-20,6.6,cost_income_ratio,renter_social,age_group,55 to 64,National,mean
+2019-20,4.9,cost_income_ratio,renter_private,age_group,55 to 64,National,mean
+2019-20,4.4,cost_income_ratio,renter_total,age_group,55 to 64,National,mean
+2019-20,0.9,cost_income_ratio,all,age_group,55 to 64,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,age_group,65 to 74,National,mean
+2019-20,2.8,cost_income_ratio,owner_mortgage,age_group,65 to 74,National,mean
+2019-20,0.8,cost_income_ratio,owner_total,age_group,65 to 74,National,mean
+2019-20,2.5,cost_income_ratio,renter_social,age_group,65 to 74,National,mean
+2019-20,6.8,cost_income_ratio,renter_private,age_group,65 to 74,National,mean
+2019-20,5.1,cost_income_ratio,renter_total,age_group,65 to 74,National,mean
+2019-20,0.7,cost_income_ratio,all,age_group,65 to 74,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,age_group,75 and over,National,mean
+2019-20,2.5,cost_income_ratio,owner_mortgage,age_group,75 and over,National,mean
+2019-20,0.2,cost_income_ratio,owner_total,age_group,75 and over,National,mean
+2019-20,7.7,cost_income_ratio,renter_social,age_group,75 and over,National,mean
+2019-20,1.4,cost_income_ratio,renter_private,age_group,75 and over,National,mean
+2019-20,2.4,cost_income_ratio,renter_total,age_group,75 and over,National,mean
+2019-20,0.4,cost_income_ratio,all,age_group,75 and over,National,mean
+2019-20,0.2,cost_income_ratio,owner_outright,age_group,Total,National,mean
+2019-20,0.8,cost_income_ratio,owner_mortgage,age_group,Total,National,mean
+2019-20,0.2,cost_income_ratio,owner_total,age_group,Total,National,mean
+2019-20,0,cost_income_ratio,renter_social,age_group,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_private,age_group,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_total,age_group,Total,National,mean
+2019-20,0,cost_income_ratio,all,age_group,Total,National,mean
+2019-20,0.3,cost_income_ratio,owner_outright,age_group,65 and over,National,mean
+2019-20,2.4,cost_income_ratio,owner_mortgage,age_group,65 and over,National,mean
+2019-20,0.5,cost_income_ratio,owner_total,age_group,65 and over,National,mean
+2019-20,1.4,cost_income_ratio,renter_social,age_group,65 and over,National,mean
+2019-20,6.1,cost_income_ratio,renter_private,age_group,65 and over,National,mean
+2019-20,4.4,cost_income_ratio,renter_total,age_group,65 and over,National,mean
+2019-20,0.4,cost_income_ratio,all,age_group,65 and over,National,mean
+2019-20,0.3,cost_income_ratio,owner_outright,dwelling_structure,Separate house,National,mean
+2019-20,0.9,cost_income_ratio,owner_mortgage,dwelling_structure,Separate house,National,mean
+2019-20,0.2,cost_income_ratio,owner_total,dwelling_structure,Separate house,National,mean
+2019-20,5.1,cost_income_ratio,renter_social,dwelling_structure,Separate house,National,mean
+2019-20,1.8,cost_income_ratio,renter_private,dwelling_structure,Separate house,National,mean
+2019-20,1.5,cost_income_ratio,renter_total,dwelling_structure,Separate house,National,mean
+2019-20,0.1,cost_income_ratio,all,dwelling_structure,Separate house,National,mean
+2019-20,0.7,cost_income_ratio,owner_outright,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,3.4,cost_income_ratio,owner_mortgage,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,2.2,cost_income_ratio,owner_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,0,cost_income_ratio,renter_social,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,3.8,cost_income_ratio,renter_private,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,3.2,cost_income_ratio,renter_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,1.9,cost_income_ratio,all,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,0.7,cost_income_ratio,owner_outright,dwelling_structure,Flat or apartment,National,mean
+2019-20,3.8,cost_income_ratio,owner_mortgage,dwelling_structure,Flat or apartment,National,mean
+2019-20,0.9,cost_income_ratio,owner_total,dwelling_structure,Flat or apartment,National,mean
+2019-20,5.9,cost_income_ratio,renter_social,dwelling_structure,Flat or apartment,National,mean
+2019-20,2.4,cost_income_ratio,renter_private,dwelling_structure,Flat or apartment,National,mean
+2019-20,2.3,cost_income_ratio,renter_total,dwelling_structure,Flat or apartment,National,mean
+2019-20,1.7,cost_income_ratio,all,dwelling_structure,Flat or apartment,National,mean
+2019-20,0.2,cost_income_ratio,owner_outright,dwelling_structure,Total,National,mean
+2019-20,0.8,cost_income_ratio,owner_mortgage,dwelling_structure,Total,National,mean
+2019-20,0.2,cost_income_ratio,owner_total,dwelling_structure,Total,National,mean
+2019-20,0,cost_income_ratio,renter_social,dwelling_structure,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_private,dwelling_structure,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_total,dwelling_structure,Total,National,mean
+2019-20,0,cost_income_ratio,all,dwelling_structure,Total,National,mean
+2019-20,0,cost_income_ratio,owner_outright,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,1.7,cost_income_ratio,owner_mortgage,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,2.3,cost_income_ratio,owner_total,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,0.5,cost_income_ratio,renter_social,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,5.1,cost_income_ratio,renter_private,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,3.8,cost_income_ratio,renter_total,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,1.3,cost_income_ratio,all,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,0.1,cost_income_ratio,owner_outright,equiv_income_quintile,Second quintile,National,mean
+2019-20,1,cost_income_ratio,owner_mortgage,equiv_income_quintile,Second quintile,National,mean
+2019-20,0.8,cost_income_ratio,owner_total,equiv_income_quintile,Second quintile,National,mean
+2019-20,2,cost_income_ratio,renter_social,equiv_income_quintile,Second quintile,National,mean
+2019-20,3.5,cost_income_ratio,renter_private,equiv_income_quintile,Second quintile,National,mean
+2019-20,0,cost_income_ratio,renter_total,equiv_income_quintile,Second quintile,National,mean
+2019-20,0.7,cost_income_ratio,all,equiv_income_quintile,Second quintile,National,mean
+2019-20,0.1,cost_income_ratio,owner_outright,equiv_income_quintile,Third quintile,National,mean
+2019-20,0.9,cost_income_ratio,owner_mortgage,equiv_income_quintile,Third quintile,National,mean
+2019-20,0.9,cost_income_ratio,owner_total,equiv_income_quintile,Third quintile,National,mean
+2019-20,11.2,cost_income_ratio,renter_social,equiv_income_quintile,Third quintile,National,mean
+2019-20,0.4,cost_income_ratio,renter_private,equiv_income_quintile,Third quintile,National,mean
+2019-20,0,cost_income_ratio,renter_total,equiv_income_quintile,Third quintile,National,mean
+2019-20,0.6,cost_income_ratio,all,equiv_income_quintile,Third quintile,National,mean
+2019-20,0,cost_income_ratio,owner_outright,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,0.6,cost_income_ratio,owner_mortgage,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,0.7,cost_income_ratio,owner_total,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,7.6,cost_income_ratio,renter_social,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,0,cost_income_ratio,renter_private,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,0.4,cost_income_ratio,renter_total,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,0.5,cost_income_ratio,all,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,0.2,cost_income_ratio,owner_outright,equiv_income_quintile,Highest quintile,National,mean
+2019-20,0.4,cost_income_ratio,owner_mortgage,equiv_income_quintile,Highest quintile,National,mean
+2019-20,0.5,cost_income_ratio,owner_total,equiv_income_quintile,Highest quintile,National,mean
+2019-20,1.8,cost_income_ratio,renter_private,equiv_income_quintile,Highest quintile,National,mean
+2019-20,0.3,cost_income_ratio,renter_total,equiv_income_quintile,Highest quintile,National,mean
+2019-20,0.4,cost_income_ratio,all,equiv_income_quintile,Highest quintile,National,mean
+2019-20,0.2,cost_income_ratio,owner_outright,equiv_income_quintile,Total,National,mean
+2019-20,0.8,cost_income_ratio,owner_mortgage,equiv_income_quintile,Total,National,mean
+2019-20,0.2,cost_income_ratio,owner_total,equiv_income_quintile,Total,National,mean
+2019-20,0,cost_income_ratio,renter_social,equiv_income_quintile,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_private,equiv_income_quintile,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_total,equiv_income_quintile,Total,National,mean
+2019-20,0,cost_income_ratio,all,equiv_income_quintile,Total,National,mean
+2019-20,0.1,cost_income_ratio,owner_outright,equiv_income_quintile,Lower Income households,National,mean
+2019-20,1.6,cost_income_ratio,owner_mortgage,equiv_income_quintile,Lower Income households,National,mean
+2019-20,1.1,cost_income_ratio,owner_total,equiv_income_quintile,Lower Income households,National,mean
+2019-20,3.7,cost_income_ratio,renter_social,equiv_income_quintile,Lower Income households,National,mean
+2019-20,2.9,cost_income_ratio,renter_private,equiv_income_quintile,Lower Income households,National,mean
+2019-20,0,cost_income_ratio,renter_total,equiv_income_quintile,Lower Income households,National,mean
+2019-20,0.7,cost_income_ratio,all,equiv_income_quintile,Lower Income households,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,None,National,mean
+2019-20,6.2,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,None,National,mean
+2019-20,0.4,cost_income_ratio,owner_total,number_of_employed_persons_in_household,None,National,mean
+2019-20,3.6,cost_income_ratio,renter_social,number_of_employed_persons_in_household,None,National,mean
+2019-20,4.6,cost_income_ratio,renter_private,number_of_employed_persons_in_household,None,National,mean
+2019-20,3.5,cost_income_ratio,renter_total,number_of_employed_persons_in_household,None,National,mean
+2019-20,0.3,cost_income_ratio,all,number_of_employed_persons_in_household,None,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,One,National,mean
+2019-20,2.4,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,One,National,mean
+2019-20,0.7,cost_income_ratio,owner_total,number_of_employed_persons_in_household,One,National,mean
+2019-20,7.9,cost_income_ratio,renter_social,number_of_employed_persons_in_household,One,National,mean
+2019-20,2,cost_income_ratio,renter_private,number_of_employed_persons_in_household,One,National,mean
+2019-20,1.9,cost_income_ratio,renter_total,number_of_employed_persons_in_household,One,National,mean
+2019-20,0.3,cost_income_ratio,all,number_of_employed_persons_in_household,One,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Two,National,mean
+2019-20,1.1,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Two,National,mean
+2019-20,0.2,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Two,National,mean
+2019-20,4,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Two,National,mean
+2019-20,1.7,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Two,National,mean
+2019-20,1.7,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Two,National,mean
+2019-20,0,cost_income_ratio,all,number_of_employed_persons_in_household,Two,National,mean
+2019-20,0.4,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,0.2,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,0.5,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,8.2,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,3.7,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,3.5,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,0.2,cost_income_ratio,all,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,0.2,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Total,National,mean
+2019-20,0.8,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Total,National,mean
+2019-20,0.2,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Total,National,mean
+2019-20,0,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Total,National,mean
+2019-20,1.1,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Total,National,mean
+2019-20,0,cost_income_ratio,all,number_of_employed_persons_in_household,Total,National,mean
+2019-20,2,cost_income_ratio,owner_outright,family_type,Couple family with dependent children,National,median
+2019-20,15.9,cost_income_ratio,owner_mortgage,family_type,Couple family with dependent children,National,median
+2019-20,14,cost_income_ratio,owner_total,family_type,Couple family with dependent children,National,median
+2019-20,20.7,cost_income_ratio,renter_social,family_type,Couple family with dependent children,National,median
+2019-20,19.4,cost_income_ratio,renter_private,family_type,Couple family with dependent children,National,median
+2019-20,19.2,cost_income_ratio,renter_total,family_type,Couple family with dependent children,National,median
+2019-20,15.5,cost_income_ratio,all,family_type,Couple family with dependent children,National,median
+2019-20,3.9,cost_income_ratio,owner_outright,family_type,One parent family with dependent children,National,median
+2019-20,21.4,cost_income_ratio,owner_mortgage,family_type,One parent family with dependent children,National,median
+2019-20,17.2,cost_income_ratio,owner_total,family_type,One parent family with dependent children,National,median
+2019-20,21.7,cost_income_ratio,renter_social,family_type,One parent family with dependent children,National,median
+2019-20,27.4,cost_income_ratio,renter_private,family_type,One parent family with dependent children,National,median
+2019-20,25.7,cost_income_ratio,renter_total,family_type,One parent family with dependent children,National,median
+2019-20,22.8,cost_income_ratio,all,family_type,One parent family with dependent children,National,median
+2019-20,4,cost_income_ratio,owner_outright,family_type,Couple only,National,median
+2019-20,15.5,cost_income_ratio,owner_mortgage,family_type,Couple only,National,median
+2019-20,5.5,cost_income_ratio,owner_total,family_type,Couple only,National,median
+2019-20,20.2,cost_income_ratio,renter_social,family_type,Couple only,National,median
+2019-20,18.8,cost_income_ratio,renter_private,family_type,Couple only,National,median
+2019-20,19,cost_income_ratio,renter_total,family_type,Couple only,National,median
+2019-20,8.5,cost_income_ratio,all,family_type,Couple only,National,median
+2019-20,2.7,cost_income_ratio,owner_outright,family_type,Other one family households,National,median
+2019-20,13,cost_income_ratio,owner_mortgage,family_type,Other one family households,National,median
+2019-20,5,cost_income_ratio,owner_total,family_type,Other one family households,National,median
+2019-20,18.1,cost_income_ratio,renter_social,family_type,Other one family households,National,median
+2019-20,18.7,cost_income_ratio,renter_private,family_type,Other one family households,National,median
+2019-20,18.7,cost_income_ratio,renter_total,family_type,Other one family households,National,median
+2019-20,9.3,cost_income_ratio,all,family_type,Other one family households,National,median
+2019-20,2.2,cost_income_ratio,owner_outright,family_type,Multiple family households,National,median
+2019-20,12.1,cost_income_ratio,owner_mortgage,family_type,Multiple family households,National,median
+2019-20,8.1,cost_income_ratio,owner_total,family_type,Multiple family households,National,median
+2019-20,0,cost_income_ratio,renter_social,family_type,Multiple family households,National,median
+2019-20,14.9,cost_income_ratio,renter_private,family_type,Multiple family households,National,median
+2019-20,14.8,cost_income_ratio,renter_total,family_type,Multiple family households,National,median
+2019-20,10.4,cost_income_ratio,all,family_type,Multiple family households,National,median
+2019-20,5.9,cost_income_ratio,owner_outright,family_type,Lone person households,National,median
+2019-20,23.8,cost_income_ratio,owner_mortgage,family_type,Lone person households,National,median
+2019-20,8.2,cost_income_ratio,owner_total,family_type,Lone person households,National,median
+2019-20,23.3,cost_income_ratio,renter_social,family_type,Lone person households,National,median
+2019-20,28.7,cost_income_ratio,renter_private,family_type,Lone person households,National,median
+2019-20,26.3,cost_income_ratio,renter_total,family_type,Lone person households,National,median
+2019-20,16.4,cost_income_ratio,all,family_type,Lone person households,National,median
+2019-20,3.3,cost_income_ratio,owner_outright,family_type,Group households,National,median
+2019-20,13.7,cost_income_ratio,owner_mortgage,family_type,Group households,National,median
+2019-20,8.2,cost_income_ratio,owner_total,family_type,Group households,National,median
+2019-20,17.9,cost_income_ratio,renter_social,family_type,Group households,National,median
+2019-20,21.9,cost_income_ratio,renter_private,family_type,Group households,National,median
+2019-20,22.1,cost_income_ratio,renter_total,family_type,Group households,National,median
+2019-20,19.2,cost_income_ratio,all,family_type,Group households,National,median
+2019-20,4,cost_income_ratio,owner_outright,family_type,Total,National,median
+2019-20,16.4,cost_income_ratio,owner_mortgage,family_type,Total,National,median
+2019-20,8.4,cost_income_ratio,owner_total,family_type,Total,National,median
+2019-20,22.4,cost_income_ratio,renter_social,family_type,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_private,family_type,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_total,family_type,Total,National,median
+2019-20,13.7,cost_income_ratio,all,family_type,Total,National,median
+2019-20,0,cost_income_ratio,owner_outright,age_group,15 to 24,National,median
+2019-20,19.3,cost_income_ratio,owner_mortgage,age_group,15 to 24,National,median
+2019-20,19.3,cost_income_ratio,owner_total,age_group,15 to 24,National,median
+2019-20,18.5,cost_income_ratio,renter_social,age_group,15 to 24,National,median
+2019-20,26.1,cost_income_ratio,renter_private,age_group,15 to 24,National,median
+2019-20,26,cost_income_ratio,renter_total,age_group,15 to 24,National,median
+2019-20,23.6,cost_income_ratio,all,age_group,15 to 24,National,median
+2019-20,3.1,cost_income_ratio,owner_outright,age_group,25 to 34,National,median
+2019-20,18.2,cost_income_ratio,owner_mortgage,age_group,25 to 34,National,median
+2019-20,17.5,cost_income_ratio,owner_total,age_group,25 to 34,National,median
+2019-20,20.4,cost_income_ratio,renter_social,age_group,25 to 34,National,median
+2019-20,20.1,cost_income_ratio,renter_private,age_group,25 to 34,National,median
+2019-20,20.3,cost_income_ratio,renter_total,age_group,25 to 34,National,median
+2019-20,18.6,cost_income_ratio,all,age_group,25 to 34,National,median
+2019-20,2.2,cost_income_ratio,owner_outright,age_group,35 to 44,National,median
+2019-20,18.3,cost_income_ratio,owner_mortgage,age_group,35 to 44,National,median
+2019-20,17.1,cost_income_ratio,owner_total,age_group,35 to 44,National,median
+2019-20,21.6,cost_income_ratio,renter_social,age_group,35 to 44,National,median
+2019-20,20.4,cost_income_ratio,renter_private,age_group,35 to 44,National,median
+2019-20,20.2,cost_income_ratio,renter_total,age_group,35 to 44,National,median
+2019-20,18.3,cost_income_ratio,all,age_group,35 to 44,National,median
+2019-20,2.5,cost_income_ratio,owner_outright,age_group,45 to 54,National,median
+2019-20,15.8,cost_income_ratio,owner_mortgage,age_group,45 to 54,National,median
+2019-20,12.8,cost_income_ratio,owner_total,age_group,45 to 54,National,median
+2019-20,22.1,cost_income_ratio,renter_social,age_group,45 to 54,National,median
+2019-20,23.2,cost_income_ratio,renter_private,age_group,45 to 54,National,median
+2019-20,22.8,cost_income_ratio,renter_total,age_group,45 to 54,National,median
+2019-20,15.6,cost_income_ratio,all,age_group,45 to 54,National,median
+2019-20,3,cost_income_ratio,owner_outright,age_group,55 to 64,National,median
+2019-20,13.4,cost_income_ratio,owner_mortgage,age_group,55 to 64,National,median
+2019-20,6.2,cost_income_ratio,owner_total,age_group,55 to 64,National,median
+2019-20,23,cost_income_ratio,renter_social,age_group,55 to 64,National,median
+2019-20,25.6,cost_income_ratio,renter_private,age_group,55 to 64,National,median
+2019-20,24.3,cost_income_ratio,renter_total,age_group,55 to 64,National,median
+2019-20,9.3,cost_income_ratio,all,age_group,55 to 64,National,median
+2019-20,4.4,cost_income_ratio,owner_outright,age_group,65 to 74,National,median
+2019-20,9.2,cost_income_ratio,owner_mortgage,age_group,65 to 74,National,median
+2019-20,4.8,cost_income_ratio,owner_total,age_group,65 to 74,National,median
+2019-20,22.6,cost_income_ratio,renter_social,age_group,65 to 74,National,median
+2019-20,34.4,cost_income_ratio,renter_private,age_group,65 to 74,National,median
+2019-20,26.8,cost_income_ratio,renter_total,age_group,65 to 74,National,median
+2019-20,5.7,cost_income_ratio,all,age_group,65 to 74,National,median
+2019-20,5,cost_income_ratio,owner_outright,age_group,75 and over,National,median
+2019-20,7.2,cost_income_ratio,owner_mortgage,age_group,75 and over,National,median
+2019-20,5.1,cost_income_ratio,owner_total,age_group,75 and over,National,median
+2019-20,23.1,cost_income_ratio,renter_social,age_group,75 and over,National,median
+2019-20,40.2,cost_income_ratio,renter_private,age_group,75 and over,National,median
+2019-20,29.5,cost_income_ratio,renter_total,age_group,75 and over,National,median
+2019-20,5.5,cost_income_ratio,all,age_group,75 and over,National,median
+2019-20,4,cost_income_ratio,owner_outright,age_group,Total,National,median
+2019-20,16.4,cost_income_ratio,owner_mortgage,age_group,Total,National,median
+2019-20,8.4,cost_income_ratio,owner_total,age_group,Total,National,median
+2019-20,22.4,cost_income_ratio,renter_social,age_group,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_private,age_group,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_total,age_group,Total,National,median
+2019-20,13.7,cost_income_ratio,all,age_group,Total,National,median
+2019-20,4.6,cost_income_ratio,owner_outright,age_group,65 and over,National,median
+2019-20,9.3,cost_income_ratio,owner_mortgage,age_group,65 and over,National,median
+2019-20,4.9,cost_income_ratio,owner_total,age_group,65 and over,National,median
+2019-20,22.8,cost_income_ratio,renter_social,age_group,65 and over,National,median
+2019-20,37.4,cost_income_ratio,renter_private,age_group,65 and over,National,median
+2019-20,27.4,cost_income_ratio,renter_total,age_group,65 and over,National,median
+2019-20,5.6,cost_income_ratio,all,age_group,65 and over,National,median
+2019-20,4.1,cost_income_ratio,owner_outright,dwelling_structure,Separate house,National,median
+2019-20,16,cost_income_ratio,owner_mortgage,dwelling_structure,Separate house,National,median
+2019-20,8.2,cost_income_ratio,owner_total,dwelling_structure,Separate house,National,median
+2019-20,21.5,cost_income_ratio,renter_social,dwelling_structure,Separate house,National,median
+2019-20,21,cost_income_ratio,renter_private,dwelling_structure,Separate house,National,median
+2019-20,20.9,cost_income_ratio,renter_total,dwelling_structure,Separate house,National,median
+2019-20,11.4,cost_income_ratio,all,dwelling_structure,Separate house,National,median
+2019-20,3.7,cost_income_ratio,owner_outright,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,18.4,cost_income_ratio,owner_mortgage,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,8.7,cost_income_ratio,owner_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,22.8,cost_income_ratio,renter_social,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,22.2,cost_income_ratio,renter_private,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,22.8,cost_income_ratio,renter_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,15.7,cost_income_ratio,all,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,2.6,cost_income_ratio,owner_outright,dwelling_structure,Flat or apartment,National,median
+2019-20,19.5,cost_income_ratio,owner_mortgage,dwelling_structure,Flat or apartment,National,median
+2019-20,9.4,cost_income_ratio,owner_total,dwelling_structure,Flat or apartment,National,median
+2019-20,22.9,cost_income_ratio,renter_social,dwelling_structure,Flat or apartment,National,median
+2019-20,24.2,cost_income_ratio,renter_private,dwelling_structure,Flat or apartment,National,median
+2019-20,24,cost_income_ratio,renter_total,dwelling_structure,Flat or apartment,National,median
+2019-20,20.5,cost_income_ratio,all,dwelling_structure,Flat or apartment,National,median
+2019-20,4,cost_income_ratio,owner_outright,dwelling_structure,Total,National,median
+2019-20,16.4,cost_income_ratio,owner_mortgage,dwelling_structure,Total,National,median
+2019-20,8.4,cost_income_ratio,owner_total,dwelling_structure,Total,National,median
+2019-20,22.4,cost_income_ratio,renter_social,dwelling_structure,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_private,dwelling_structure,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_total,dwelling_structure,Total,National,median
+2019-20,13.7,cost_income_ratio,all,dwelling_structure,Total,National,median
+2019-20,7.2,cost_income_ratio,owner_outright,equiv_income_quintile,Lowest quintile,National,median
+2019-20,35.1,cost_income_ratio,owner_mortgage,equiv_income_quintile,Lowest quintile,National,median
+2019-20,8.8,cost_income_ratio,owner_total,equiv_income_quintile,Lowest quintile,National,median
+2019-20,23,cost_income_ratio,renter_social,equiv_income_quintile,Lowest quintile,National,median
+2019-20,44.2,cost_income_ratio,renter_private,equiv_income_quintile,Lowest quintile,National,median
+2019-20,34.6,cost_income_ratio,renter_total,equiv_income_quintile,Lowest quintile,National,median
+2019-20,18.5,cost_income_ratio,all,equiv_income_quintile,Lowest quintile,National,median
+2019-20,4.3,cost_income_ratio,owner_outright,equiv_income_quintile,Second quintile,National,median
+2019-20,22.5,cost_income_ratio,owner_mortgage,equiv_income_quintile,Second quintile,National,median
+2019-20,6.2,cost_income_ratio,owner_total,equiv_income_quintile,Second quintile,National,median
+2019-20,18.6,cost_income_ratio,renter_social,equiv_income_quintile,Second quintile,National,median
+2019-20,27.2,cost_income_ratio,renter_private,equiv_income_quintile,Second quintile,National,median
+2019-20,26.6,cost_income_ratio,renter_total,equiv_income_quintile,Second quintile,National,median
+2019-20,15.6,cost_income_ratio,all,equiv_income_quintile,Second quintile,National,median
+2019-20,3.3,cost_income_ratio,owner_outright,equiv_income_quintile,Third quintile,National,median
+2019-20,18.3,cost_income_ratio,owner_mortgage,equiv_income_quintile,Third quintile,National,median
+2019-20,8.4,cost_income_ratio,owner_total,equiv_income_quintile,Third quintile,National,median
+2019-20,13.4,cost_income_ratio,renter_social,equiv_income_quintile,Third quintile,National,median
+2019-20,21.2,cost_income_ratio,renter_private,equiv_income_quintile,Third quintile,National,median
+2019-20,20.9,cost_income_ratio,renter_total,equiv_income_quintile,Third quintile,National,median
+2019-20,16.1,cost_income_ratio,all,equiv_income_quintile,Third quintile,National,median
+2019-20,2.4,cost_income_ratio,owner_outright,equiv_income_quintile,Fourth quintile,National,median
+2019-20,16.4,cost_income_ratio,owner_mortgage,equiv_income_quintile,Fourth quintile,National,median
+2019-20,11.9,cost_income_ratio,owner_total,equiv_income_quintile,Fourth quintile,National,median
+2019-20,17.7,cost_income_ratio,renter_social,equiv_income_quintile,Fourth quintile,National,median
+2019-20,18,cost_income_ratio,renter_private,equiv_income_quintile,Fourth quintile,National,median
+2019-20,17.5,cost_income_ratio,renter_total,equiv_income_quintile,Fourth quintile,National,median
+2019-20,14.4,cost_income_ratio,all,equiv_income_quintile,Fourth quintile,National,median
+2019-20,1.5,cost_income_ratio,owner_outright,equiv_income_quintile,Highest quintile,National,median
+2019-20,12.1,cost_income_ratio,owner_mortgage,equiv_income_quintile,Highest quintile,National,median
+2019-20,7.8,cost_income_ratio,owner_total,equiv_income_quintile,Highest quintile,National,median
+2019-20,4.5,cost_income_ratio,renter_social,equiv_income_quintile,Highest quintile,National,median
+2019-20,12.9,cost_income_ratio,renter_private,equiv_income_quintile,Highest quintile,National,median
+2019-20,12.6,cost_income_ratio,renter_total,equiv_income_quintile,Highest quintile,National,median
+2019-20,9.8,cost_income_ratio,all,equiv_income_quintile,Highest quintile,National,median
+2019-20,4,cost_income_ratio,owner_outright,equiv_income_quintile,Total,National,median
+2019-20,16.4,cost_income_ratio,owner_mortgage,equiv_income_quintile,Total,National,median
+2019-20,8.4,cost_income_ratio,owner_total,equiv_income_quintile,Total,National,median
+2019-20,22.4,cost_income_ratio,renter_social,equiv_income_quintile,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_private,equiv_income_quintile,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_total,equiv_income_quintile,Total,National,median
+2019-20,13.7,cost_income_ratio,all,equiv_income_quintile,Total,National,median
+2019-20,5.7,cost_income_ratio,owner_outright,equiv_income_quintile,Lower Income households,National,median
+2019-20,24.1,cost_income_ratio,owner_mortgage,equiv_income_quintile,Lower Income households,National,median
+2019-20,7.4,cost_income_ratio,owner_total,equiv_income_quintile,Lower Income households,National,median
+2019-20,22.7,cost_income_ratio,renter_social,equiv_income_quintile,Lower Income households,National,median
+2019-20,33.3,cost_income_ratio,renter_private,equiv_income_quintile,Lower Income households,National,median
+2019-20,28.7,cost_income_ratio,renter_total,equiv_income_quintile,Lower Income households,National,median
+2019-20,15.7,cost_income_ratio,all,equiv_income_quintile,Lower Income households,National,median
+2019-20,5.3,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,None,National,median
+2019-20,20.6,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,None,National,median
+2019-20,5.6,cost_income_ratio,owner_total,number_of_employed_persons_in_household,None,National,median
+2019-20,22.7,cost_income_ratio,renter_social,number_of_employed_persons_in_household,None,National,median
+2019-20,41.1,cost_income_ratio,renter_private,number_of_employed_persons_in_household,None,National,median
+2019-20,30.7,cost_income_ratio,renter_total,number_of_employed_persons_in_household,None,National,median
+2019-20,7.9,cost_income_ratio,all,number_of_employed_persons_in_household,None,National,median
+2019-20,3.2,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,One,National,median
+2019-20,21.8,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,One,National,median
+2019-20,12.4,cost_income_ratio,owner_total,number_of_employed_persons_in_household,One,National,median
+2019-20,19.9,cost_income_ratio,renter_social,number_of_employed_persons_in_household,One,National,median
+2019-20,24.6,cost_income_ratio,renter_private,number_of_employed_persons_in_household,One,National,median
+2019-20,24.3,cost_income_ratio,renter_total,number_of_employed_persons_in_household,One,National,median
+2019-20,19.2,cost_income_ratio,all,number_of_employed_persons_in_household,One,National,median
+2019-20,2.3,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Two,National,median
+2019-20,15.9,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Two,National,median
+2019-20,13.1,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Two,National,median
+2019-20,20.6,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Two,National,median
+2019-20,17,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Two,National,median
+2019-20,16.8,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Two,National,median
+2019-20,14.4,cost_income_ratio,all,number_of_employed_persons_in_household,Two,National,median
+2019-20,1.6,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,11.5,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,8.5,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,7,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,15.9,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,16,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,10.3,cost_income_ratio,all,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,4,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Total,National,median
+2019-20,16.4,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Total,National,median
+2019-20,8.4,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Total,National,median
+2019-20,22.4,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Total,National,median
+2019-20,22.3,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Total,National,median
+2019-20,13.7,cost_income_ratio,all,number_of_employed_persons_in_household,Total,National,median
+2019-20,0.3,cost_income_ratio,owner_outright,family_type,Couple family with dependent children,National,median
+2019-20,0.6,cost_income_ratio,owner_mortgage,family_type,Couple family with dependent children,National,median
+2019-20,0.7,cost_income_ratio,owner_total,family_type,Couple family with dependent children,National,median
+2019-20,5.6,cost_income_ratio,renter_social,family_type,Couple family with dependent children,National,median
+2019-20,0.8,cost_income_ratio,renter_private,family_type,Couple family with dependent children,National,median
+2019-20,1,cost_income_ratio,renter_total,family_type,Couple family with dependent children,National,median
+2019-20,0.5,cost_income_ratio,all,family_type,Couple family with dependent children,National,median
+2019-20,1.8,cost_income_ratio,owner_outright,family_type,One parent family with dependent children,National,median
+2019-20,3.6,cost_income_ratio,owner_mortgage,family_type,One parent family with dependent children,National,median
+2019-20,3.3,cost_income_ratio,owner_total,family_type,One parent family with dependent children,National,median
+2019-20,1.8,cost_income_ratio,renter_social,family_type,One parent family with dependent children,National,median
+2019-20,2.6,cost_income_ratio,renter_private,family_type,One parent family with dependent children,National,median
+2019-20,1.7,cost_income_ratio,renter_total,family_type,One parent family with dependent children,National,median
+2019-20,1.3,cost_income_ratio,all,family_type,One parent family with dependent children,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,family_type,Couple only,National,median
+2019-20,1.1,cost_income_ratio,owner_mortgage,family_type,Couple only,National,median
+2019-20,0.3,cost_income_ratio,owner_total,family_type,Couple only,National,median
+2019-20,1.8,cost_income_ratio,renter_social,family_type,Couple only,National,median
+2019-20,1.3,cost_income_ratio,renter_private,family_type,Couple only,National,median
+2019-20,1.3,cost_income_ratio,renter_total,family_type,Couple only,National,median
+2019-20,0.8,cost_income_ratio,all,family_type,Couple only,National,median
+2019-20,0.3,cost_income_ratio,owner_outright,family_type,Other one family households,National,median
+2019-20,1.7,cost_income_ratio,owner_mortgage,family_type,Other one family households,National,median
+2019-20,0.8,cost_income_ratio,owner_total,family_type,Other one family households,National,median
+2019-20,4.4,cost_income_ratio,renter_social,family_type,Other one family households,National,median
+2019-20,1.6,cost_income_ratio,renter_private,family_type,Other one family households,National,median
+2019-20,1.4,cost_income_ratio,renter_total,family_type,Other one family households,National,median
+2019-20,1.1,cost_income_ratio,all,family_type,Other one family households,National,median
+2019-20,0.4,cost_income_ratio,owner_outright,family_type,Multiple family households,National,median
+2019-20,3.7,cost_income_ratio,owner_mortgage,family_type,Multiple family households,National,median
+2019-20,3.3,cost_income_ratio,owner_total,family_type,Multiple family households,National,median
+2019-20,0,cost_income_ratio,renter_social,family_type,Multiple family households,National,median
+2019-20,5.2,cost_income_ratio,renter_private,family_type,Multiple family households,National,median
+2019-20,4,cost_income_ratio,renter_total,family_type,Multiple family households,National,median
+2019-20,3,cost_income_ratio,all,family_type,Multiple family households,National,median
+2019-20,0.5,cost_income_ratio,owner_outright,family_type,Lone person households,National,median
+2019-20,1.8,cost_income_ratio,owner_mortgage,family_type,Lone person households,National,median
+2019-20,0.6,cost_income_ratio,owner_total,family_type,Lone person households,National,median
+2019-20,0.4,cost_income_ratio,renter_social,family_type,Lone person households,National,median
+2019-20,2.3,cost_income_ratio,renter_private,family_type,Lone person households,National,median
+2019-20,0.8,cost_income_ratio,renter_total,family_type,Lone person households,National,median
+2019-20,1.7,cost_income_ratio,all,family_type,Lone person households,National,median
+2019-20,1.5,cost_income_ratio,owner_outright,family_type,Group households,National,median
+2019-20,6.7,cost_income_ratio,owner_mortgage,family_type,Group households,National,median
+2019-20,4.5,cost_income_ratio,owner_total,family_type,Group households,National,median
+2019-20,3.4,cost_income_ratio,renter_private,family_type,Group households,National,median
+2019-20,3.1,cost_income_ratio,renter_total,family_type,Group households,National,median
+2019-20,2.3,cost_income_ratio,all,family_type,Group households,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,family_type,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_mortgage,family_type,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_total,family_type,Total,National,median
+2019-20,0.4,cost_income_ratio,renter_social,family_type,Total,National,median
+2019-20,0.6,cost_income_ratio,renter_private,family_type,Total,National,median
+2019-20,0.5,cost_income_ratio,renter_total,family_type,Total,National,median
+2019-20,0.5,cost_income_ratio,all,family_type,Total,National,median
+2019-20,5.1,cost_income_ratio,owner_mortgage,age_group,15 to 24,National,median
+2019-20,6,cost_income_ratio,owner_total,age_group,15 to 24,National,median
+2019-20,3.2,cost_income_ratio,renter_private,age_group,15 to 24,National,median
+2019-20,3.1,cost_income_ratio,renter_total,age_group,15 to 24,National,median
+2019-20,2.8,cost_income_ratio,all,age_group,15 to 24,National,median
+2019-20,1.3,cost_income_ratio,owner_outright,age_group,25 to 34,National,median
+2019-20,1.1,cost_income_ratio,owner_mortgage,age_group,25 to 34,National,median
+2019-20,1.2,cost_income_ratio,owner_total,age_group,25 to 34,National,median
+2019-20,4.3,cost_income_ratio,renter_social,age_group,25 to 34,National,median
+2019-20,1.1,cost_income_ratio,renter_private,age_group,25 to 34,National,median
+2019-20,1.1,cost_income_ratio,renter_total,age_group,25 to 34,National,median
+2019-20,0.8,cost_income_ratio,all,age_group,25 to 34,National,median
+2019-20,0.3,cost_income_ratio,owner_outright,age_group,35 to 44,National,median
+2019-20,0.5,cost_income_ratio,owner_mortgage,age_group,35 to 44,National,median
+2019-20,0.9,cost_income_ratio,owner_total,age_group,35 to 44,National,median
+2019-20,1.5,cost_income_ratio,renter_social,age_group,35 to 44,National,median
+2019-20,1.2,cost_income_ratio,renter_private,age_group,35 to 44,National,median
+2019-20,1,cost_income_ratio,renter_total,age_group,35 to 44,National,median
+2019-20,0.6,cost_income_ratio,all,age_group,35 to 44,National,median
+2019-20,0.3,cost_income_ratio,owner_outright,age_group,45 to 54,National,median
+2019-20,0.7,cost_income_ratio,owner_mortgage,age_group,45 to 54,National,median
+2019-20,1,cost_income_ratio,owner_total,age_group,45 to 54,National,median
+2019-20,1.7,cost_income_ratio,renter_social,age_group,45 to 54,National,median
+2019-20,2.3,cost_income_ratio,renter_private,age_group,45 to 54,National,median
+2019-20,1.7,cost_income_ratio,renter_total,age_group,45 to 54,National,median
+2019-20,0.7,cost_income_ratio,all,age_group,45 to 54,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,age_group,55 to 64,National,median
+2019-20,1.5,cost_income_ratio,owner_mortgage,age_group,55 to 64,National,median
+2019-20,0.7,cost_income_ratio,owner_total,age_group,55 to 64,National,median
+2019-20,0.7,cost_income_ratio,renter_social,age_group,55 to 64,National,median
+2019-20,2.2,cost_income_ratio,renter_private,age_group,55 to 64,National,median
+2019-20,1.5,cost_income_ratio,renter_total,age_group,55 to 64,National,median
+2019-20,1.2,cost_income_ratio,all,age_group,55 to 64,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,age_group,65 to 74,National,median
+2019-20,2.5,cost_income_ratio,owner_mortgage,age_group,65 to 74,National,median
+2019-20,0.2,cost_income_ratio,owner_total,age_group,65 to 74,National,median
+2019-20,0.7,cost_income_ratio,renter_social,age_group,65 to 74,National,median
+2019-20,4.9,cost_income_ratio,renter_private,age_group,65 to 74,National,median
+2019-20,2.2,cost_income_ratio,renter_total,age_group,65 to 74,National,median
+2019-20,0.3,cost_income_ratio,all,age_group,65 to 74,National,median
+2019-20,0.4,cost_income_ratio,owner_outright,age_group,75 and over,National,median
+2019-20,5,cost_income_ratio,owner_mortgage,age_group,75 and over,National,median
+2019-20,0.4,cost_income_ratio,owner_total,age_group,75 and over,National,median
+2019-20,0.8,cost_income_ratio,renter_social,age_group,75 and over,National,median
+2019-20,4.5,cost_income_ratio,renter_private,age_group,75 and over,National,median
+2019-20,3.7,cost_income_ratio,renter_total,age_group,75 and over,National,median
+2019-20,0.3,cost_income_ratio,all,age_group,75 and over,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,age_group,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_mortgage,age_group,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_total,age_group,Total,National,median
+2019-20,0.4,cost_income_ratio,renter_social,age_group,Total,National,median
+2019-20,0.6,cost_income_ratio,renter_private,age_group,Total,National,median
+2019-20,0.5,cost_income_ratio,renter_total,age_group,Total,National,median
+2019-20,0.5,cost_income_ratio,all,age_group,Total,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,age_group,65 and over,National,median
+2019-20,2.3,cost_income_ratio,owner_mortgage,age_group,65 and over,National,median
+2019-20,0.2,cost_income_ratio,owner_total,age_group,65 and over,National,median
+2019-20,0.5,cost_income_ratio,renter_social,age_group,65 and over,National,median
+2019-20,3.6,cost_income_ratio,renter_private,age_group,65 and over,National,median
+2019-20,2.3,cost_income_ratio,renter_total,age_group,65 and over,National,median
+2019-20,0.2,cost_income_ratio,all,age_group,65 and over,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,dwelling_structure,Separate house,National,median
+2019-20,0.6,cost_income_ratio,owner_mortgage,dwelling_structure,Separate house,National,median
+2019-20,0.5,cost_income_ratio,owner_total,dwelling_structure,Separate house,National,median
+2019-20,1.3,cost_income_ratio,renter_social,dwelling_structure,Separate house,National,median
+2019-20,0.9,cost_income_ratio,renter_private,dwelling_structure,Separate house,National,median
+2019-20,0.9,cost_income_ratio,renter_total,dwelling_structure,Separate house,National,median
+2019-20,0.6,cost_income_ratio,all,dwelling_structure,Separate house,National,median
+2019-20,0.4,cost_income_ratio,owner_outright,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,1.5,cost_income_ratio,owner_mortgage,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,1.1,cost_income_ratio,owner_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,0.7,cost_income_ratio,renter_social,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,1.8,cost_income_ratio,renter_private,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,1,cost_income_ratio,renter_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,1.4,cost_income_ratio,all,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,0.6,cost_income_ratio,owner_outright,dwelling_structure,Flat or apartment,National,median
+2019-20,2.1,cost_income_ratio,owner_mortgage,dwelling_structure,Flat or apartment,National,median
+2019-20,2.3,cost_income_ratio,owner_total,dwelling_structure,Flat or apartment,National,median
+2019-20,0.7,cost_income_ratio,renter_social,dwelling_structure,Flat or apartment,National,median
+2019-20,1.1,cost_income_ratio,renter_private,dwelling_structure,Flat or apartment,National,median
+2019-20,0.9,cost_income_ratio,renter_total,dwelling_structure,Flat or apartment,National,median
+2019-20,1.1,cost_income_ratio,all,dwelling_structure,Flat or apartment,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,dwelling_structure,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_mortgage,dwelling_structure,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_total,dwelling_structure,Total,National,median
+2019-20,0.4,cost_income_ratio,renter_social,dwelling_structure,Total,National,median
+2019-20,0.6,cost_income_ratio,renter_private,dwelling_structure,Total,National,median
+2019-20,0.5,cost_income_ratio,renter_total,dwelling_structure,Total,National,median
+2019-20,0.5,cost_income_ratio,all,dwelling_structure,Total,National,median
+2019-20,0.4,cost_income_ratio,owner_outright,equiv_income_quintile,Lowest quintile,National,median
+2019-20,5.2,cost_income_ratio,owner_mortgage,equiv_income_quintile,Lowest quintile,National,median
+2019-20,0.7,cost_income_ratio,owner_total,equiv_income_quintile,Lowest quintile,National,median
+2019-20,0.4,cost_income_ratio,renter_social,equiv_income_quintile,Lowest quintile,National,median
+2019-20,2,cost_income_ratio,renter_private,equiv_income_quintile,Lowest quintile,National,median
+2019-20,2.4,cost_income_ratio,renter_total,equiv_income_quintile,Lowest quintile,National,median
+2019-20,1.7,cost_income_ratio,all,equiv_income_quintile,Lowest quintile,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,equiv_income_quintile,Second quintile,National,median
+2019-20,1.6,cost_income_ratio,owner_mortgage,equiv_income_quintile,Second quintile,National,median
+2019-20,0.4,cost_income_ratio,owner_total,equiv_income_quintile,Second quintile,National,median
+2019-20,2.7,cost_income_ratio,renter_social,equiv_income_quintile,Second quintile,National,median
+2019-20,0.7,cost_income_ratio,renter_private,equiv_income_quintile,Second quintile,National,median
+2019-20,0.8,cost_income_ratio,renter_total,equiv_income_quintile,Second quintile,National,median
+2019-20,1.3,cost_income_ratio,all,equiv_income_quintile,Second quintile,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,equiv_income_quintile,Third quintile,National,median
+2019-20,1.1,cost_income_ratio,owner_mortgage,equiv_income_quintile,Third quintile,National,median
+2019-20,1.5,cost_income_ratio,owner_total,equiv_income_quintile,Third quintile,National,median
+2019-20,5.1,cost_income_ratio,renter_social,equiv_income_quintile,Third quintile,National,median
+2019-20,0.8,cost_income_ratio,renter_private,equiv_income_quintile,Third quintile,National,median
+2019-20,0.7,cost_income_ratio,renter_total,equiv_income_quintile,Third quintile,National,median
+2019-20,0.9,cost_income_ratio,all,equiv_income_quintile,Third quintile,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,equiv_income_quintile,Fourth quintile,National,median
+2019-20,0.9,cost_income_ratio,owner_mortgage,equiv_income_quintile,Fourth quintile,National,median
+2019-20,1.3,cost_income_ratio,owner_total,equiv_income_quintile,Fourth quintile,National,median
+2019-20,1.1,cost_income_ratio,renter_private,equiv_income_quintile,Fourth quintile,National,median
+2019-20,1.1,cost_income_ratio,renter_total,equiv_income_quintile,Fourth quintile,National,median
+2019-20,0.7,cost_income_ratio,all,equiv_income_quintile,Fourth quintile,National,median
+2019-20,0.1,cost_income_ratio,owner_outright,equiv_income_quintile,Highest quintile,National,median
+2019-20,0.9,cost_income_ratio,owner_mortgage,equiv_income_quintile,Highest quintile,National,median
+2019-20,1.2,cost_income_ratio,owner_total,equiv_income_quintile,Highest quintile,National,median
+2019-20,0.7,cost_income_ratio,renter_private,equiv_income_quintile,Highest quintile,National,median
+2019-20,0.8,cost_income_ratio,renter_total,equiv_income_quintile,Highest quintile,National,median
+2019-20,0.5,cost_income_ratio,all,equiv_income_quintile,Highest quintile,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,equiv_income_quintile,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_mortgage,equiv_income_quintile,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_total,equiv_income_quintile,Total,National,median
+2019-20,0.4,cost_income_ratio,renter_social,equiv_income_quintile,Total,National,median
+2019-20,0.6,cost_income_ratio,renter_private,equiv_income_quintile,Total,National,median
+2019-20,0.5,cost_income_ratio,renter_total,equiv_income_quintile,Total,National,median
+2019-20,0.5,cost_income_ratio,all,equiv_income_quintile,Total,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,equiv_income_quintile,Lower Income households,National,median
+2019-20,1.9,cost_income_ratio,owner_mortgage,equiv_income_quintile,Lower Income households,National,median
+2019-20,0.4,cost_income_ratio,owner_total,equiv_income_quintile,Lower Income households,National,median
+2019-20,0.4,cost_income_ratio,renter_social,equiv_income_quintile,Lower Income households,National,median
+2019-20,1.3,cost_income_ratio,renter_private,equiv_income_quintile,Lower Income households,National,median
+2019-20,1,cost_income_ratio,renter_total,equiv_income_quintile,Lower Income households,National,median
+2019-20,1.1,cost_income_ratio,all,equiv_income_quintile,Lower Income households,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,None,National,median
+2019-20,4.5,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,None,National,median
+2019-20,0.2,cost_income_ratio,owner_total,number_of_employed_persons_in_household,None,National,median
+2019-20,0.4,cost_income_ratio,renter_social,number_of_employed_persons_in_household,None,National,median
+2019-20,2,cost_income_ratio,renter_private,number_of_employed_persons_in_household,None,National,median
+2019-20,2.1,cost_income_ratio,renter_total,number_of_employed_persons_in_household,None,National,median
+2019-20,0.6,cost_income_ratio,all,number_of_employed_persons_in_household,None,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,One,National,median
+2019-20,1.4,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,One,National,median
+2019-20,1.9,cost_income_ratio,owner_total,number_of_employed_persons_in_household,One,National,median
+2019-20,3.3,cost_income_ratio,renter_social,number_of_employed_persons_in_household,One,National,median
+2019-20,0.9,cost_income_ratio,renter_private,number_of_employed_persons_in_household,One,National,median
+2019-20,0.8,cost_income_ratio,renter_total,number_of_employed_persons_in_household,One,National,median
+2019-20,0.8,cost_income_ratio,all,number_of_employed_persons_in_household,One,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Two,National,median
+2019-20,0.5,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Two,National,median
+2019-20,0.7,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Two,National,median
+2019-20,0.8,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Two,National,median
+2019-20,0.8,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Two,National,median
+2019-20,0.4,cost_income_ratio,all,number_of_employed_persons_in_household,Two,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,1.3,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,1.3,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,1.3,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,1.4,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,1,cost_income_ratio,all,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,0.2,cost_income_ratio,owner_outright,number_of_employed_persons_in_household,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_mortgage,number_of_employed_persons_in_household,Total,National,median
+2019-20,0.5,cost_income_ratio,owner_total,number_of_employed_persons_in_household,Total,National,median
+2019-20,0.4,cost_income_ratio,renter_social,number_of_employed_persons_in_household,Total,National,median
+2019-20,0.6,cost_income_ratio,renter_private,number_of_employed_persons_in_household,Total,National,median
+2019-20,0.5,cost_income_ratio,renter_total,number_of_employed_persons_in_household,Total,National,median
+2019-20,0.5,cost_income_ratio,all,number_of_employed_persons_in_household,Total,National,median

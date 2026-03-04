@@ -1,0 +1,935 @@
+survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
+2019-20,67,weekly_housing_cost,owner_outright,family_type,Couple family with dependent children,National,mean
+2019-20,554,weekly_housing_cost,owner_mortgage,family_type,Couple family with dependent children,National,mean
+2019-20,483,weekly_housing_cost,owner_total,family_type,Couple family with dependent children,National,mean
+2019-20,233,weekly_housing_cost,renter_social,family_type,Couple family with dependent children,National,mean
+2019-20,458,weekly_housing_cost,renter_private,family_type,Couple family with dependent children,National,mean
+2019-20,441,weekly_housing_cost,renter_total,family_type,Couple family with dependent children,National,mean
+2019-20,467,weekly_housing_cost,all,family_type,Couple family with dependent children,National,mean
+2019-20,55,weekly_housing_cost,owner_outright,family_type,One parent family with dependent children,National,mean
+2019-20,409,weekly_housing_cost,owner_mortgage,family_type,One parent family with dependent children,National,mean
+2019-20,330,weekly_housing_cost,owner_total,family_type,One parent family with dependent children,National,mean
+2019-20,189,weekly_housing_cost,renter_social,family_type,One parent family with dependent children,National,mean
+2019-20,388,weekly_housing_cost,renter_private,family_type,One parent family with dependent children,National,mean
+2019-20,356,weekly_housing_cost,renter_total,family_type,One parent family with dependent children,National,mean
+2019-20,336,weekly_housing_cost,all,family_type,One parent family with dependent children,National,mean
+2019-20,56,weekly_housing_cost,owner_outright,family_type,Couple only,National,mean
+2019-20,471,weekly_housing_cost,owner_mortgage,family_type,Couple only,National,mean
+2019-20,223,weekly_housing_cost,owner_total,family_type,Couple only,National,mean
+2019-20,177,weekly_housing_cost,renter_social,family_type,Couple only,National,mean
+2019-20,430,weekly_housing_cost,renter_private,family_type,Couple only,National,mean
+2019-20,414,weekly_housing_cost,renter_total,family_type,Couple only,National,mean
+2019-20,264,weekly_housing_cost,all,family_type,Couple only,National,mean
+2019-20,59,weekly_housing_cost,owner_outright,family_type,Other one family households,National,mean
+2019-20,436,weekly_housing_cost,owner_mortgage,family_type,Other one family households,National,mean
+2019-20,250,weekly_housing_cost,owner_total,family_type,Other one family households,National,mean
+2019-20,200,weekly_housing_cost,renter_social,family_type,Other one family households,National,mean
+2019-20,446,weekly_housing_cost,renter_private,family_type,Other one family households,National,mean
+2019-20,415,weekly_housing_cost,renter_total,family_type,Other one family households,National,mean
+2019-20,291,weekly_housing_cost,all,family_type,Other one family households,National,mean
+2019-20,60,weekly_housing_cost,owner_outright,family_type,Multiple family households,National,mean
+2019-20,498,weekly_housing_cost,owner_mortgage,family_type,Multiple family households,National,mean
+2019-20,364,weekly_housing_cost,owner_total,family_type,Multiple family households,National,mean
+2019-20,0,weekly_housing_cost,renter_social,family_type,Multiple family households,National,mean
+2019-20,436,weekly_housing_cost,renter_private,family_type,Multiple family households,National,mean
+2019-20,439,weekly_housing_cost,renter_total,family_type,Multiple family households,National,mean
+2019-20,385,weekly_housing_cost,all,family_type,Multiple family households,National,mean
+2019-20,45,weekly_housing_cost,owner_outright,family_type,Lone person households,National,mean
+2019-20,405,weekly_housing_cost,owner_mortgage,family_type,Lone person households,National,mean
+2019-20,164,weekly_housing_cost,owner_total,family_type,Lone person households,National,mean
+2019-20,113,weekly_housing_cost,renter_social,family_type,Lone person households,National,mean
+2019-20,337,weekly_housing_cost,renter_private,family_type,Lone person households,National,mean
+2019-20,284,weekly_housing_cost,renter_total,family_type,Lone person households,National,mean
+2019-20,206,weekly_housing_cost,all,family_type,Lone person households,National,mean
+2019-20,65,weekly_housing_cost,owner_outright,family_type,Group households,National,mean
+2019-20,423,weekly_housing_cost,owner_mortgage,family_type,Group households,National,mean
+2019-20,276,weekly_housing_cost,owner_total,family_type,Group households,National,mean
+2019-20,203,weekly_housing_cost,renter_social,family_type,Group households,National,mean
+2019-20,498,weekly_housing_cost,renter_private,family_type,Group households,National,mean
+2019-20,485,weekly_housing_cost,renter_total,family_type,Group households,National,mean
+2019-20,422,weekly_housing_cost,all,family_type,Group households,National,mean
+2019-20,54,weekly_housing_cost,owner_outright,family_type,Total,National,mean
+2019-20,493,weekly_housing_cost,owner_mortgage,family_type,Total,National,mean
+2019-20,297,weekly_housing_cost,owner_total,family_type,Total,National,mean
+2019-20,150,weekly_housing_cost,renter_social,family_type,Total,National,mean
+2019-20,415,weekly_housing_cost,renter_private,family_type,Total,National,mean
+2019-20,379,weekly_housing_cost,renter_total,family_type,Total,National,mean
+2019-20,317,weekly_housing_cost,all,family_type,Total,National,mean
+2019-20,20,weekly_housing_cost,owner_outright,age_group,15 to 24,National,mean
+2019-20,484,weekly_housing_cost,owner_mortgage,age_group,15 to 24,National,mean
+2019-20,431,weekly_housing_cost,owner_total,age_group,15 to 24,National,mean
+2019-20,234,weekly_housing_cost,renter_social,age_group,15 to 24,National,mean
+2019-20,404,weekly_housing_cost,renter_private,age_group,15 to 24,National,mean
+2019-20,397,weekly_housing_cost,renter_total,age_group,15 to 24,National,mean
+2019-20,386,weekly_housing_cost,all,age_group,15 to 24,National,mean
+2019-20,54,weekly_housing_cost,owner_outright,age_group,25 to 34,National,mean
+2019-20,510,weekly_housing_cost,owner_mortgage,age_group,25 to 34,National,mean
+2019-20,477,weekly_housing_cost,owner_total,age_group,25 to 34,National,mean
+2019-20,158,weekly_housing_cost,renter_social,age_group,25 to 34,National,mean
+2019-20,418,weekly_housing_cost,renter_private,age_group,25 to 34,National,mean
+2019-20,404,weekly_housing_cost,renter_total,age_group,25 to 34,National,mean
+2019-20,423,weekly_housing_cost,all,age_group,25 to 34,National,mean
+2019-20,61,weekly_housing_cost,owner_outright,age_group,35 to 44,National,mean
+2019-20,556,weekly_housing_cost,owner_mortgage,age_group,35 to 44,National,mean
+2019-20,510,weekly_housing_cost,owner_total,age_group,35 to 44,National,mean
+2019-20,184,weekly_housing_cost,renter_social,age_group,35 to 44,National,mean
+2019-20,437,weekly_housing_cost,renter_private,age_group,35 to 44,National,mean
+2019-20,421,weekly_housing_cost,renter_total,age_group,35 to 44,National,mean
+2019-20,465,weekly_housing_cost,all,age_group,35 to 44,National,mean
+2019-20,58,weekly_housing_cost,owner_outright,age_group,45 to 54,National,mean
+2019-20,537,weekly_housing_cost,owner_mortgage,age_group,45 to 54,National,mean
+2019-20,435,weekly_housing_cost,owner_total,age_group,45 to 54,National,mean
+2019-20,146,weekly_housing_cost,renter_social,age_group,45 to 54,National,mean
+2019-20,423,weekly_housing_cost,renter_private,age_group,45 to 54,National,mean
+2019-20,380,weekly_housing_cost,renter_total,age_group,45 to 54,National,mean
+2019-20,416,weekly_housing_cost,all,age_group,45 to 54,National,mean
+2019-20,61,weekly_housing_cost,owner_outright,age_group,55 to 64,National,mean
+2019-20,405,weekly_housing_cost,owner_mortgage,age_group,55 to 64,National,mean
+2019-20,248,weekly_housing_cost,owner_total,age_group,55 to 64,National,mean
+2019-20,148,weekly_housing_cost,renter_social,age_group,55 to 64,National,mean
+2019-20,400,weekly_housing_cost,renter_private,age_group,55 to 64,National,mean
+2019-20,344,weekly_housing_cost,renter_total,age_group,55 to 64,National,mean
+2019-20,263,weekly_housing_cost,all,age_group,55 to 64,National,mean
+2019-20,53,weekly_housing_cost,owner_outright,age_group,65 to 74,National,mean
+2019-20,303,weekly_housing_cost,owner_mortgage,age_group,65 to 74,National,mean
+2019-20,94,weekly_housing_cost,owner_total,age_group,65 to 74,National,mean
+2019-20,143,weekly_housing_cost,renter_social,age_group,65 to 74,National,mean
+2019-20,327,weekly_housing_cost,renter_private,age_group,65 to 74,National,mean
+2019-20,260,weekly_housing_cost,renter_total,age_group,65 to 74,National,mean
+2019-20,119,weekly_housing_cost,all,age_group,65 to 74,National,mean
+2019-20,47,weekly_housing_cost,owner_outright,age_group,75 and over,National,mean
+2019-20,177,weekly_housing_cost,owner_mortgage,age_group,75 and over,National,mean
+2019-20,53,weekly_housing_cost,owner_total,age_group,75 and over,National,mean
+2019-20,135,weekly_housing_cost,renter_social,age_group,75 and over,National,mean
+2019-20,296,weekly_housing_cost,renter_private,age_group,75 and over,National,mean
+2019-20,219,weekly_housing_cost,renter_total,age_group,75 and over,National,mean
+2019-20,73,weekly_housing_cost,all,age_group,75 and over,National,mean
+2019-20,54,weekly_housing_cost,owner_outright,age_group,Total,National,mean
+2019-20,493,weekly_housing_cost,owner_mortgage,age_group,Total,National,mean
+2019-20,297,weekly_housing_cost,owner_total,age_group,Total,National,mean
+2019-20,150,weekly_housing_cost,renter_social,age_group,Total,National,mean
+2019-20,415,weekly_housing_cost,renter_private,age_group,Total,National,mean
+2019-20,379,weekly_housing_cost,renter_total,age_group,Total,National,mean
+2019-20,317,weekly_housing_cost,all,age_group,Total,National,mean
+2019-20,50,weekly_housing_cost,owner_outright,age_group,65 and over,National,mean
+2019-20,279,weekly_housing_cost,owner_mortgage,age_group,65 and over,National,mean
+2019-20,76,weekly_housing_cost,owner_total,age_group,65 and over,National,mean
+2019-20,138,weekly_housing_cost,renter_social,age_group,65 and over,National,mean
+2019-20,320,weekly_housing_cost,renter_private,age_group,65 and over,National,mean
+2019-20,246,weekly_housing_cost,renter_total,age_group,65 and over,National,mean
+2019-20,99,weekly_housing_cost,all,age_group,65 and over,National,mean
+2019-20,56,weekly_housing_cost,owner_outright,dwelling_structure,Separate house,National,mean
+2019-20,487,weekly_housing_cost,owner_mortgage,dwelling_structure,Separate house,National,mean
+2019-20,297,weekly_housing_cost,owner_total,dwelling_structure,Separate house,National,mean
+2019-20,176,weekly_housing_cost,renter_social,dwelling_structure,Separate house,National,mean
+2019-20,399,weekly_housing_cost,renter_private,dwelling_structure,Separate house,National,mean
+2019-20,375,weekly_housing_cost,renter_total,dwelling_structure,Separate house,National,mean
+2019-20,308,weekly_housing_cost,all,dwelling_structure,Separate house,National,mean
+2019-20,51,weekly_housing_cost,owner_outright,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,531,weekly_housing_cost,owner_mortgage,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,313,weekly_housing_cost,owner_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,142,weekly_housing_cost,renter_social,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,439,weekly_housing_cost,renter_private,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,385,weekly_housing_cost,renter_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,336,weekly_housing_cost,all,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,34,weekly_housing_cost,owner_outright,dwelling_structure,Flat or apartment,National,mean
+2019-20,508,weekly_housing_cost,owner_mortgage,dwelling_structure,Flat or apartment,National,mean
+2019-20,292,weekly_housing_cost,owner_total,dwelling_structure,Flat or apartment,National,mean
+2019-20,125,weekly_housing_cost,renter_social,dwelling_structure,Flat or apartment,National,mean
+2019-20,425,weekly_housing_cost,renter_private,dwelling_structure,Flat or apartment,National,mean
+2019-20,382,weekly_housing_cost,renter_total,dwelling_structure,Flat or apartment,National,mean
+2019-20,345,weekly_housing_cost,all,dwelling_structure,Flat or apartment,National,mean
+2019-20,54,weekly_housing_cost,owner_outright,dwelling_structure,Total,National,mean
+2019-20,493,weekly_housing_cost,owner_mortgage,dwelling_structure,Total,National,mean
+2019-20,297,weekly_housing_cost,owner_total,dwelling_structure,Total,National,mean
+2019-20,150,weekly_housing_cost,renter_social,dwelling_structure,Total,National,mean
+2019-20,415,weekly_housing_cost,renter_private,dwelling_structure,Total,National,mean
+2019-20,379,weekly_housing_cost,renter_total,dwelling_structure,Total,National,mean
+2019-20,317,weekly_housing_cost,all,dwelling_structure,Total,National,mean
+2019-20,47,weekly_housing_cost,owner_outright,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,378,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,139,weekly_housing_cost,owner_total,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,130,weekly_housing_cost,renter_social,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,343,weekly_housing_cost,renter_private,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,271,weekly_housing_cost,renter_total,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,184,weekly_housing_cost,all,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,50,weekly_housing_cost,owner_outright,equiv_income_quintile,Second quintile,National,mean
+2019-20,385,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Second quintile,National,mean
+2019-20,200,weekly_housing_cost,owner_total,equiv_income_quintile,Second quintile,National,mean
+2019-20,200,weekly_housing_cost,renter_social,equiv_income_quintile,Second quintile,National,mean
+2019-20,369,weekly_housing_cost,renter_private,equiv_income_quintile,Second quintile,National,mean
+2019-20,353,weekly_housing_cost,renter_total,equiv_income_quintile,Second quintile,National,mean
+2019-20,247,weekly_housing_cost,all,equiv_income_quintile,Second quintile,National,mean
+2019-20,59,weekly_housing_cost,owner_outright,equiv_income_quintile,Third quintile,National,mean
+2019-20,417,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Third quintile,National,mean
+2019-20,282,weekly_housing_cost,owner_total,equiv_income_quintile,Third quintile,National,mean
+2019-20,273,weekly_housing_cost,renter_social,equiv_income_quintile,Third quintile,National,mean
+2019-20,405,weekly_housing_cost,renter_private,equiv_income_quintile,Third quintile,National,mean
+2019-20,398,weekly_housing_cost,renter_total,equiv_income_quintile,Third quintile,National,mean
+2019-20,316,weekly_housing_cost,all,equiv_income_quintile,Third quintile,National,mean
+2019-20,58,weekly_housing_cost,owner_outright,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,500,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,378,weekly_housing_cost,owner_total,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,260,weekly_housing_cost,renter_social,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,440,weekly_housing_cost,renter_private,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,434,weekly_housing_cost,renter_total,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,389,weekly_housing_cost,all,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,68,weekly_housing_cost,owner_outright,equiv_income_quintile,Highest quintile,National,mean
+2019-20,638,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Highest quintile,National,mean
+2019-20,473,weekly_housing_cost,owner_total,equiv_income_quintile,Highest quintile,National,mean
+2019-20,143,weekly_housing_cost,renter_social,equiv_income_quintile,Highest quintile,National,mean
+2019-20,531,weekly_housing_cost,renter_private,equiv_income_quintile,Highest quintile,National,mean
+2019-20,515,weekly_housing_cost,renter_total,equiv_income_quintile,Highest quintile,National,mean
+2019-20,478,weekly_housing_cost,all,equiv_income_quintile,Highest quintile,National,mean
+2019-20,54,weekly_housing_cost,owner_outright,equiv_income_quintile,Total,National,mean
+2019-20,493,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Total,National,mean
+2019-20,297,weekly_housing_cost,owner_total,equiv_income_quintile,Total,National,mean
+2019-20,150,weekly_housing_cost,renter_social,equiv_income_quintile,Total,National,mean
+2019-20,415,weekly_housing_cost,renter_private,equiv_income_quintile,Total,National,mean
+2019-20,379,weekly_housing_cost,renter_total,equiv_income_quintile,Total,National,mean
+2019-20,317,weekly_housing_cost,all,equiv_income_quintile,Total,National,mean
+2019-20,47,weekly_housing_cost,owner_outright,equiv_income_quintile,Lower income households,National,mean
+2019-20,376,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Lower income households,National,mean
+2019-20,162,weekly_housing_cost,owner_total,equiv_income_quintile,Lower income households,National,mean
+2019-20,141,weekly_housing_cost,renter_social,equiv_income_quintile,Lower income households,National,mean
+2019-20,353,weekly_housing_cost,renter_private,equiv_income_quintile,Lower income households,National,mean
+2019-20,301,weekly_housing_cost,renter_total,equiv_income_quintile,Lower income households,National,mean
+2019-20,207,weekly_housing_cost,all,equiv_income_quintile,Lower income households,National,mean
+2019-20,48,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,None,National,mean
+2019-20,264,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,None,National,mean
+2019-20,74,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,None,National,mean
+2019-20,129,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,None,National,mean
+2019-20,336,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,None,National,mean
+2019-20,257,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,None,National,mean
+2019-20,124,weekly_housing_cost,all,number_of_employed_persons_in_household,None,National,mean
+2019-20,56,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,One,National,mean
+2019-20,448,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,One,National,mean
+2019-20,306,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,One,National,mean
+2019-20,217,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,One,National,mean
+2019-20,386,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,One,National,mean
+2019-20,377,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,One,National,mean
+2019-20,328,weekly_housing_cost,all,number_of_employed_persons_in_household,One,National,mean
+2019-20,67,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Two,National,mean
+2019-20,547,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Two,National,mean
+2019-20,448,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Two,National,mean
+2019-20,303,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Two,National,mean
+2019-20,459,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Two,National,mean
+2019-20,452,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Two,National,mean
+2019-20,442,weekly_housing_cost,all,number_of_employed_persons_in_household,Two,National,mean
+2019-20,66,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,509,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,406,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,292,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,521,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,504,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,426,weekly_housing_cost,all,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,54,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Total,National,mean
+2019-20,493,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Total,National,mean
+2019-20,297,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Total,National,mean
+2019-20,150,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Total,National,mean
+2019-20,415,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Total,National,mean
+2019-20,379,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Total,National,mean
+2019-20,317,weekly_housing_cost,all,number_of_employed_persons_in_household,Total,National,mean
+2019-20,3.3,weekly_housing_cost,owner_outright,family_type,Couple family with dependent children,National,mean
+2019-20,2.4,weekly_housing_cost,owner_mortgage,family_type,Couple family with dependent children,National,mean
+2019-20,2.6,weekly_housing_cost,owner_total,family_type,Couple family with dependent children,National,mean
+2019-20,13.1,weekly_housing_cost,renter_social,family_type,Couple family with dependent children,National,mean
+2019-20,2.4,weekly_housing_cost,renter_private,family_type,Couple family with dependent children,National,mean
+2019-20,2.3,weekly_housing_cost,renter_total,family_type,Couple family with dependent children,National,mean
+2019-20,2,weekly_housing_cost,all,family_type,Couple family with dependent children,National,mean
+2019-20,9.3,weekly_housing_cost,owner_outright,family_type,One parent family with dependent children,National,mean
+2019-20,5.4,weekly_housing_cost,owner_mortgage,family_type,One parent family with dependent children,National,mean
+2019-20,6.4,weekly_housing_cost,owner_total,family_type,One parent family with dependent children,National,mean
+2019-20,7.1,weekly_housing_cost,renter_social,family_type,One parent family with dependent children,National,mean
+2019-20,2.5,weekly_housing_cost,renter_private,family_type,One parent family with dependent children,National,mean
+2019-20,2.6,weekly_housing_cost,renter_total,family_type,One parent family with dependent children,National,mean
+2019-20,2.9,weekly_housing_cost,all,family_type,One parent family with dependent children,National,mean
+2019-20,1.9,weekly_housing_cost,owner_outright,family_type,Couple only,National,mean
+2019-20,3,weekly_housing_cost,owner_mortgage,family_type,Couple only,National,mean
+2019-20,3.1,weekly_housing_cost,owner_total,family_type,Couple only,National,mean
+2019-20,6.9,weekly_housing_cost,renter_social,family_type,Couple only,National,mean
+2019-20,1.5,weekly_housing_cost,renter_private,family_type,Couple only,National,mean
+2019-20,1.8,weekly_housing_cost,renter_total,family_type,Couple only,National,mean
+2019-20,1.9,weekly_housing_cost,all,family_type,Couple only,National,mean
+2019-20,3.4,weekly_housing_cost,owner_outright,family_type,Other one family households,National,mean
+2019-20,4.4,weekly_housing_cost,owner_mortgage,family_type,Other one family households,National,mean
+2019-20,5.5,weekly_housing_cost,owner_total,family_type,Other one family households,National,mean
+2019-20,8.8,weekly_housing_cost,renter_social,family_type,Other one family households,National,mean
+2019-20,3,weekly_housing_cost,renter_private,family_type,Other one family households,National,mean
+2019-20,3.2,weekly_housing_cost,renter_total,family_type,Other one family households,National,mean
+2019-20,3.5,weekly_housing_cost,all,family_type,Other one family households,National,mean
+2019-20,6.7,weekly_housing_cost,owner_outright,family_type,Multiple family households,National,mean
+2019-20,8.3,weekly_housing_cost,owner_mortgage,family_type,Multiple family households,National,mean
+2019-20,9.6,weekly_housing_cost,owner_total,family_type,Multiple family households,National,mean
+2019-20,11.6,weekly_housing_cost,renter_private,family_type,Multiple family households,National,mean
+2019-20,11.2,weekly_housing_cost,renter_total,family_type,Multiple family households,National,mean
+2019-20,7.2,weekly_housing_cost,all,family_type,Multiple family households,National,mean
+2019-20,2.1,weekly_housing_cost,owner_outright,family_type,Lone person households,National,mean
+2019-20,3.2,weekly_housing_cost,owner_mortgage,family_type,Lone person households,National,mean
+2019-20,3.9,weekly_housing_cost,owner_total,family_type,Lone person households,National,mean
+2019-20,2.4,weekly_housing_cost,renter_social,family_type,Lone person households,National,mean
+2019-20,1.8,weekly_housing_cost,renter_private,family_type,Lone person households,National,mean
+2019-20,1.9,weekly_housing_cost,renter_total,family_type,Lone person households,National,mean
+2019-20,2,weekly_housing_cost,all,family_type,Lone person households,National,mean
+2019-20,20.5,weekly_housing_cost,owner_outright,family_type,Group households,National,mean
+2019-20,9.3,weekly_housing_cost,owner_mortgage,family_type,Group households,National,mean
+2019-20,11.5,weekly_housing_cost,owner_total,family_type,Group households,National,mean
+2019-20,3.9,weekly_housing_cost,renter_private,family_type,Group households,National,mean
+2019-20,4.1,weekly_housing_cost,renter_total,family_type,Group households,National,mean
+2019-20,4.1,weekly_housing_cost,all,family_type,Group households,National,mean
+2019-20,1.3,weekly_housing_cost,owner_outright,family_type,Total,National,mean
+2019-20,1.4,weekly_housing_cost,owner_mortgage,family_type,Total,National,mean
+2019-20,1.7,weekly_housing_cost,owner_total,family_type,Total,National,mean
+2019-20,3.6,weekly_housing_cost,renter_social,family_type,Total,National,mean
+2019-20,0.9,weekly_housing_cost,renter_private,family_type,Total,National,mean
+2019-20,1,weekly_housing_cost,renter_total,family_type,Total,National,mean
+2019-20,1.1,weekly_housing_cost,all,family_type,Total,National,mean
+2019-20,10.4,weekly_housing_cost,owner_mortgage,age_group,15 to 24,National,mean
+2019-20,11.7,weekly_housing_cost,owner_total,age_group,15 to 24,National,mean
+2019-20,46.8,weekly_housing_cost,renter_social,age_group,15 to 24,National,mean
+2019-20,3.6,weekly_housing_cost,renter_private,age_group,15 to 24,National,mean
+2019-20,3.7,weekly_housing_cost,renter_total,age_group,15 to 24,National,mean
+2019-20,3.7,weekly_housing_cost,all,age_group,15 to 24,National,mean
+2019-20,9.1,weekly_housing_cost,owner_outright,age_group,25 to 34,National,mean
+2019-20,2.6,weekly_housing_cost,owner_mortgage,age_group,25 to 34,National,mean
+2019-20,2.8,weekly_housing_cost,owner_total,age_group,25 to 34,National,mean
+2019-20,13.6,weekly_housing_cost,renter_social,age_group,25 to 34,National,mean
+2019-20,1.2,weekly_housing_cost,renter_private,age_group,25 to 34,National,mean
+2019-20,1.2,weekly_housing_cost,renter_total,age_group,25 to 34,National,mean
+2019-20,1.5,weekly_housing_cost,all,age_group,25 to 34,National,mean
+2019-20,5.3,weekly_housing_cost,owner_outright,age_group,35 to 44,National,mean
+2019-20,3.1,weekly_housing_cost,owner_mortgage,age_group,35 to 44,National,mean
+2019-20,3.1,weekly_housing_cost,owner_total,age_group,35 to 44,National,mean
+2019-20,7.5,weekly_housing_cost,renter_social,age_group,35 to 44,National,mean
+2019-20,1.9,weekly_housing_cost,renter_private,age_group,35 to 44,National,mean
+2019-20,2,weekly_housing_cost,renter_total,age_group,35 to 44,National,mean
+2019-20,2,weekly_housing_cost,all,age_group,35 to 44,National,mean
+2019-20,3.2,weekly_housing_cost,owner_outright,age_group,45 to 54,National,mean
+2019-20,2.6,weekly_housing_cost,owner_mortgage,age_group,45 to 54,National,mean
+2019-20,3,weekly_housing_cost,owner_total,age_group,45 to 54,National,mean
+2019-20,8.3,weekly_housing_cost,renter_social,age_group,45 to 54,National,mean
+2019-20,2.5,weekly_housing_cost,renter_private,age_group,45 to 54,National,mean
+2019-20,2.8,weekly_housing_cost,renter_total,age_group,45 to 54,National,mean
+2019-20,2.5,weekly_housing_cost,all,age_group,45 to 54,National,mean
+2019-20,2.3,weekly_housing_cost,owner_outright,age_group,55 to 64,National,mean
+2019-20,3.6,weekly_housing_cost,owner_mortgage,age_group,55 to 64,National,mean
+2019-20,3.6,weekly_housing_cost,owner_total,age_group,55 to 64,National,mean
+2019-20,6.8,weekly_housing_cost,renter_social,age_group,55 to 64,National,mean
+2019-20,3.2,weekly_housing_cost,renter_private,age_group,55 to 64,National,mean
+2019-20,3.4,weekly_housing_cost,renter_total,age_group,55 to 64,National,mean
+2019-20,2.7,weekly_housing_cost,all,age_group,55 to 64,National,mean
+2019-20,2.2,weekly_housing_cost,owner_outright,age_group,65 to 74,National,mean
+2019-20,12.8,weekly_housing_cost,owner_mortgage,age_group,65 to 74,National,mean
+2019-20,7.6,weekly_housing_cost,owner_total,age_group,65 to 74,National,mean
+2019-20,7.9,weekly_housing_cost,renter_social,age_group,65 to 74,National,mean
+2019-20,3.8,weekly_housing_cost,renter_private,age_group,65 to 74,National,mean
+2019-20,3.6,weekly_housing_cost,renter_total,age_group,65 to 74,National,mean
+2019-20,5.1,weekly_housing_cost,all,age_group,65 to 74,National,mean
+2019-20,2.4,weekly_housing_cost,owner_outright,age_group,75 and over,National,mean
+2019-20,22.9,weekly_housing_cost,owner_mortgage,age_group,75 and over,National,mean
+2019-20,3.9,weekly_housing_cost,owner_total,age_group,75 and over,National,mean
+2019-20,5.5,weekly_housing_cost,renter_social,age_group,75 and over,National,mean
+2019-20,6.7,weekly_housing_cost,renter_private,age_group,75 and over,National,mean
+2019-20,5.9,weekly_housing_cost,renter_total,age_group,75 and over,National,mean
+2019-20,4.4,weekly_housing_cost,all,age_group,75 and over,National,mean
+2019-20,1.3,weekly_housing_cost,owner_outright,age_group,Total,National,mean
+2019-20,1.4,weekly_housing_cost,owner_mortgage,age_group,Total,National,mean
+2019-20,1.7,weekly_housing_cost,owner_total,age_group,Total,National,mean
+2019-20,3.6,weekly_housing_cost,renter_social,age_group,Total,National,mean
+2019-20,0.9,weekly_housing_cost,renter_private,age_group,Total,National,mean
+2019-20,1,weekly_housing_cost,renter_total,age_group,Total,National,mean
+2019-20,1.1,weekly_housing_cost,all,age_group,Total,National,mean
+2019-20,1.7,weekly_housing_cost,owner_outright,age_group,65 and over,National,mean
+2019-20,11.7,weekly_housing_cost,owner_mortgage,age_group,65 and over,National,mean
+2019-20,5.4,weekly_housing_cost,owner_total,age_group,65 and over,National,mean
+2019-20,5.3,weekly_housing_cost,renter_social,age_group,65 and over,National,mean
+2019-20,3.6,weekly_housing_cost,renter_private,age_group,65 and over,National,mean
+2019-20,3.4,weekly_housing_cost,renter_total,age_group,65 and over,National,mean
+2019-20,3.7,weekly_housing_cost,all,age_group,65 and over,National,mean
+2019-20,1.4,weekly_housing_cost,owner_outright,dwelling_structure,Separate house,National,mean
+2019-20,1.7,weekly_housing_cost,owner_mortgage,dwelling_structure,Separate house,National,mean
+2019-20,2,weekly_housing_cost,owner_total,dwelling_structure,Separate house,National,mean
+2019-20,5.7,weekly_housing_cost,renter_social,dwelling_structure,Separate house,National,mean
+2019-20,1.4,weekly_housing_cost,renter_private,dwelling_structure,Separate house,National,mean
+2019-20,1.6,weekly_housing_cost,renter_total,dwelling_structure,Separate house,National,mean
+2019-20,1.5,weekly_housing_cost,all,dwelling_structure,Separate house,National,mean
+2019-20,3.7,weekly_housing_cost,owner_outright,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,4.1,weekly_housing_cost,owner_mortgage,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,4.8,weekly_housing_cost,owner_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,5.8,weekly_housing_cost,renter_social,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,2.5,weekly_housing_cost,renter_private,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,2.5,weekly_housing_cost,renter_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,3.2,weekly_housing_cost,all,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,mean
+2019-20,5,weekly_housing_cost,owner_outright,dwelling_structure,Flat or apartment,National,mean
+2019-20,4.8,weekly_housing_cost,owner_mortgage,dwelling_structure,Flat or apartment,National,mean
+2019-20,6.1,weekly_housing_cost,owner_total,dwelling_structure,Flat or apartment,National,mean
+2019-20,6.3,weekly_housing_cost,renter_social,dwelling_structure,Flat or apartment,National,mean
+2019-20,1.7,weekly_housing_cost,renter_private,dwelling_structure,Flat or apartment,National,mean
+2019-20,1.7,weekly_housing_cost,renter_total,dwelling_structure,Flat or apartment,National,mean
+2019-20,2.3,weekly_housing_cost,all,dwelling_structure,Flat or apartment,National,mean
+2019-20,1.3,weekly_housing_cost,owner_outright,dwelling_structure,Total,National,mean
+2019-20,1.4,weekly_housing_cost,owner_mortgage,dwelling_structure,Total,National,mean
+2019-20,1.7,weekly_housing_cost,owner_total,dwelling_structure,Total,National,mean
+2019-20,3.6,weekly_housing_cost,renter_social,dwelling_structure,Total,National,mean
+2019-20,0.9,weekly_housing_cost,renter_private,dwelling_structure,Total,National,mean
+2019-20,1,weekly_housing_cost,renter_total,dwelling_structure,Total,National,mean
+2019-20,1.1,weekly_housing_cost,all,dwelling_structure,Total,National,mean
+2019-20,2.2,weekly_housing_cost,owner_outright,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,6,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,5.7,weekly_housing_cost,owner_total,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,3.1,weekly_housing_cost,renter_social,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,2.2,weekly_housing_cost,renter_private,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,2.2,weekly_housing_cost,renter_total,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,2.7,weekly_housing_cost,all,equiv_income_quintile,Lowest quintile,National,mean
+2019-20,2.3,weekly_housing_cost,owner_outright,equiv_income_quintile,Second quintile,National,mean
+2019-20,2.9,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Second quintile,National,mean
+2019-20,3.3,weekly_housing_cost,owner_total,equiv_income_quintile,Second quintile,National,mean
+2019-20,8.8,weekly_housing_cost,renter_social,equiv_income_quintile,Second quintile,National,mean
+2019-20,1.8,weekly_housing_cost,renter_private,equiv_income_quintile,Second quintile,National,mean
+2019-20,1.8,weekly_housing_cost,renter_total,equiv_income_quintile,Second quintile,National,mean
+2019-20,2.2,weekly_housing_cost,all,equiv_income_quintile,Second quintile,National,mean
+2019-20,3,weekly_housing_cost,owner_outright,equiv_income_quintile,Third quintile,National,mean
+2019-20,2.9,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Third quintile,National,mean
+2019-20,3.4,weekly_housing_cost,owner_total,equiv_income_quintile,Third quintile,National,mean
+2019-20,10.1,weekly_housing_cost,renter_social,equiv_income_quintile,Third quintile,National,mean
+2019-20,1.8,weekly_housing_cost,renter_private,equiv_income_quintile,Third quintile,National,mean
+2019-20,1.7,weekly_housing_cost,renter_total,equiv_income_quintile,Third quintile,National,mean
+2019-20,2.1,weekly_housing_cost,all,equiv_income_quintile,Third quintile,National,mean
+2019-20,2.7,weekly_housing_cost,owner_outright,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,2.5,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,3,weekly_housing_cost,owner_total,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,36.6,weekly_housing_cost,renter_social,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,1.6,weekly_housing_cost,renter_private,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,1.7,weekly_housing_cost,renter_total,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,2.2,weekly_housing_cost,all,equiv_income_quintile,Fourth quintile,National,mean
+2019-20,2.8,weekly_housing_cost,owner_outright,equiv_income_quintile,Highest quintile,National,mean
+2019-20,2.8,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Highest quintile,National,mean
+2019-20,3.5,weekly_housing_cost,owner_total,equiv_income_quintile,Highest quintile,National,mean
+2019-20,46.4,weekly_housing_cost,renter_social,equiv_income_quintile,Highest quintile,National,mean
+2019-20,2.2,weekly_housing_cost,renter_private,equiv_income_quintile,Highest quintile,National,mean
+2019-20,2.8,weekly_housing_cost,renter_total,equiv_income_quintile,Highest quintile,National,mean
+2019-20,2.6,weekly_housing_cost,all,equiv_income_quintile,Highest quintile,National,mean
+2019-20,1.3,weekly_housing_cost,owner_outright,equiv_income_quintile,Total,National,mean
+2019-20,1.4,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Total,National,mean
+2019-20,1.7,weekly_housing_cost,owner_total,equiv_income_quintile,Total,National,mean
+2019-20,3.6,weekly_housing_cost,renter_social,equiv_income_quintile,Total,National,mean
+2019-20,0.9,weekly_housing_cost,renter_private,equiv_income_quintile,Total,National,mean
+2019-20,1,weekly_housing_cost,renter_total,equiv_income_quintile,Total,National,mean
+2019-20,1.1,weekly_housing_cost,all,equiv_income_quintile,Total,National,mean
+2019-20,1.8,weekly_housing_cost,owner_outright,equiv_income_quintile,Lower income households,National,mean
+2019-20,3.5,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Lower income households,National,mean
+2019-20,3.7,weekly_housing_cost,owner_total,equiv_income_quintile,Lower income households,National,mean
+2019-20,3.3,weekly_housing_cost,renter_social,equiv_income_quintile,Lower income households,National,mean
+2019-20,1.5,weekly_housing_cost,renter_private,equiv_income_quintile,Lower income households,National,mean
+2019-20,1.7,weekly_housing_cost,renter_total,equiv_income_quintile,Lower income households,National,mean
+2019-20,1.9,weekly_housing_cost,all,equiv_income_quintile,Lower income households,National,mean
+2019-20,1.8,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,None,National,mean
+2019-20,6.8,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,None,National,mean
+2019-20,4,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,None,National,mean
+2019-20,2.4,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,None,National,mean
+2019-20,2.2,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,None,National,mean
+2019-20,2.1,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,None,National,mean
+2019-20,2.2,weekly_housing_cost,all,number_of_employed_persons_in_household,None,National,mean
+2019-20,2.1,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,One,National,mean
+2019-20,3.2,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,One,National,mean
+2019-20,3.6,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,One,National,mean
+2019-20,10.2,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,One,National,mean
+2019-20,1.4,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,One,National,mean
+2019-20,1.4,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,One,National,mean
+2019-20,2.1,weekly_housing_cost,all,number_of_employed_persons_in_household,One,National,mean
+2019-20,3.6,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Two,National,mean
+2019-20,1.9,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Two,National,mean
+2019-20,2,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Two,National,mean
+2019-20,13.8,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Two,National,mean
+2019-20,1.3,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Two,National,mean
+2019-20,1.5,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Two,National,mean
+2019-20,1.5,weekly_housing_cost,all,number_of_employed_persons_in_household,Two,National,mean
+2019-20,3.7,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,3.5,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,4.1,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,30.5,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,3.1,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,3.9,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,2.9,weekly_housing_cost,all,number_of_employed_persons_in_household,Three or more,National,mean
+2019-20,1.3,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Total,National,mean
+2019-20,1.4,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Total,National,mean
+2019-20,1.7,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Total,National,mean
+2019-20,3.6,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Total,National,mean
+2019-20,0.9,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Total,National,mean
+2019-20,1,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Total,National,mean
+2019-20,1.1,weekly_housing_cost,all,number_of_employed_persons_in_household,Total,National,mean
+2019-20,63,weekly_housing_cost,owner_outright,family_type,Couple family with dependent children,National,median
+2019-20,497,weekly_housing_cost,owner_mortgage,family_type,Couple family with dependent children,National,median
+2019-20,441,weekly_housing_cost,owner_total,family_type,Couple family with dependent children,National,median
+2019-20,226,weekly_housing_cost,renter_social,family_type,Couple family with dependent children,National,median
+2019-20,420,weekly_housing_cost,renter_private,family_type,Couple family with dependent children,National,median
+2019-20,407,weekly_housing_cost,renter_total,family_type,Couple family with dependent children,National,median
+2019-20,421,weekly_housing_cost,all,family_type,Couple family with dependent children,National,median
+2019-20,58,weekly_housing_cost,owner_outright,family_type,One parent family with dependent children,National,median
+2019-20,378,weekly_housing_cost,owner_mortgage,family_type,One parent family with dependent children,National,median
+2019-20,305,weekly_housing_cost,owner_total,family_type,One parent family with dependent children,National,median
+2019-20,161,weekly_housing_cost,renter_social,family_type,One parent family with dependent children,National,median
+2019-20,370,weekly_housing_cost,renter_private,family_type,One parent family with dependent children,National,median
+2019-20,350,weekly_housing_cost,renter_total,family_type,One parent family with dependent children,National,median
+2019-20,336,weekly_housing_cost,all,family_type,One parent family with dependent children,National,median
+2019-20,51,weekly_housing_cost,owner_outright,family_type,Couple only,National,median
+2019-20,419,weekly_housing_cost,owner_mortgage,family_type,Couple only,National,median
+2019-20,66,weekly_housing_cost,owner_total,family_type,Couple only,National,median
+2019-20,160,weekly_housing_cost,renter_social,family_type,Couple only,National,median
+2019-20,400,weekly_housing_cost,renter_private,family_type,Couple only,National,median
+2019-20,392,weekly_housing_cost,renter_total,family_type,Couple only,National,median
+2019-20,111,weekly_housing_cost,all,family_type,Couple only,National,median
+2019-20,56,weekly_housing_cost,owner_outright,family_type,Other one family households,National,median
+2019-20,398,weekly_housing_cost,owner_mortgage,family_type,Other one family households,National,median
+2019-20,81,weekly_housing_cost,owner_total,family_type,Other one family households,National,median
+2019-20,181,weekly_housing_cost,renter_social,family_type,Other one family households,National,median
+2019-20,430,weekly_housing_cost,renter_private,family_type,Other one family households,National,median
+2019-20,405,weekly_housing_cost,renter_total,family_type,Other one family households,National,median
+2019-20,218,weekly_housing_cost,all,family_type,Other one family households,National,median
+2019-20,62,weekly_housing_cost,owner_outright,family_type,Multiple family households,National,median
+2019-20,482,weekly_housing_cost,owner_mortgage,family_type,Multiple family households,National,median
+2019-20,323,weekly_housing_cost,owner_total,family_type,Multiple family households,National,median
+2019-20,0,weekly_housing_cost,renter_social,family_type,Multiple family households,National,median
+2019-20,421,weekly_housing_cost,renter_private,family_type,Multiple family households,National,median
+2019-20,406,weekly_housing_cost,renter_total,family_type,Multiple family households,National,median
+2019-20,381,weekly_housing_cost,all,family_type,Multiple family households,National,median
+2019-20,43,weekly_housing_cost,owner_outright,family_type,Lone person households,National,median
+2019-20,361,weekly_housing_cost,owner_mortgage,family_type,Lone person households,National,median
+2019-20,53,weekly_housing_cost,owner_total,family_type,Lone person households,National,median
+2019-20,110,weekly_housing_cost,renter_social,family_type,Lone person households,National,median
+2019-20,322,weekly_housing_cost,renter_private,family_type,Lone person households,National,median
+2019-20,271,weekly_housing_cost,renter_total,family_type,Lone person households,National,median
+2019-20,114,weekly_housing_cost,all,family_type,Lone person households,National,median
+2019-20,50,weekly_housing_cost,owner_outright,family_type,Group households,National,median
+2019-20,433,weekly_housing_cost,owner_mortgage,family_type,Group households,National,median
+2019-20,73,weekly_housing_cost,owner_total,family_type,Group households,National,median
+2019-20,189,weekly_housing_cost,renter_social,family_type,Group households,National,median
+2019-20,479,weekly_housing_cost,renter_private,family_type,Group households,National,median
+2019-20,476,weekly_housing_cost,renter_total,family_type,Group households,National,median
+2019-20,450,weekly_housing_cost,all,family_type,Group households,National,median
+2019-20,50,weekly_housing_cost,owner_outright,family_type,Total,National,median
+2019-20,443,weekly_housing_cost,owner_mortgage,family_type,Total,National,median
+2019-20,101,weekly_housing_cost,owner_total,family_type,Total,National,median
+2019-20,120,weekly_housing_cost,renter_social,family_type,Total,National,median
+2019-20,390,weekly_housing_cost,renter_private,family_type,Total,National,median
+2019-20,363,weekly_housing_cost,renter_total,family_type,Total,National,median
+2019-20,273,weekly_housing_cost,all,family_type,Total,National,median
+2019-20,8,weekly_housing_cost,owner_outright,age_group,15 to 24,National,median
+2019-20,500,weekly_housing_cost,owner_mortgage,age_group,15 to 24,National,median
+2019-20,500,weekly_housing_cost,owner_total,age_group,15 to 24,National,median
+2019-20,386,weekly_housing_cost,renter_social,age_group,15 to 24,National,median
+2019-20,395,weekly_housing_cost,renter_private,age_group,15 to 24,National,median
+2019-20,384,weekly_housing_cost,renter_total,age_group,15 to 24,National,median
+2019-20,378,weekly_housing_cost,all,age_group,15 to 24,National,median
+2019-20,53,weekly_housing_cost,owner_outright,age_group,25 to 34,National,median
+2019-20,494,weekly_housing_cost,owner_mortgage,age_group,25 to 34,National,median
+2019-20,472,weekly_housing_cost,owner_total,age_group,25 to 34,National,median
+2019-20,146,weekly_housing_cost,renter_social,age_group,25 to 34,National,median
+2019-20,400,weekly_housing_cost,renter_private,age_group,25 to 34,National,median
+2019-20,389,weekly_housing_cost,renter_total,age_group,25 to 34,National,median
+2019-20,404,weekly_housing_cost,all,age_group,25 to 34,National,median
+2019-20,61,weekly_housing_cost,owner_outright,age_group,35 to 44,National,median
+2019-20,510,weekly_housing_cost,owner_mortgage,age_group,35 to 44,National,median
+2019-20,467,weekly_housing_cost,owner_total,age_group,35 to 44,National,median
+2019-20,159,weekly_housing_cost,renter_social,age_group,35 to 44,National,median
+2019-20,403,weekly_housing_cost,renter_private,age_group,35 to 44,National,median
+2019-20,395,weekly_housing_cost,renter_total,age_group,35 to 44,National,median
+2019-20,413,weekly_housing_cost,all,age_group,35 to 44,National,median
+2019-20,56,weekly_housing_cost,owner_outright,age_group,45 to 54,National,median
+2019-20,467,weekly_housing_cost,owner_mortgage,age_group,45 to 54,National,median
+2019-20,364,weekly_housing_cost,owner_total,age_group,45 to 54,National,median
+2019-20,113,weekly_housing_cost,renter_social,age_group,45 to 54,National,median
+2019-20,398,weekly_housing_cost,renter_private,age_group,45 to 54,National,median
+2019-20,364,weekly_housing_cost,renter_total,age_group,45 to 54,National,median
+2019-20,361,weekly_housing_cost,all,age_group,45 to 54,National,median
+2019-20,57,weekly_housing_cost,owner_outright,age_group,55 to 64,National,median
+2019-20,324,weekly_housing_cost,owner_mortgage,age_group,55 to 64,National,median
+2019-20,83,weekly_housing_cost,owner_total,age_group,55 to 64,National,median
+2019-20,120,weekly_housing_cost,renter_social,age_group,55 to 64,National,median
+2019-20,367,weekly_housing_cost,renter_private,age_group,55 to 64,National,median
+2019-20,325,weekly_housing_cost,renter_total,age_group,55 to 64,National,median
+2019-20,135,weekly_housing_cost,all,age_group,55 to 64,National,median
+2019-20,49,weekly_housing_cost,owner_outright,age_group,65 to 74,National,median
+2019-20,154,weekly_housing_cost,owner_mortgage,age_group,65 to 74,National,median
+2019-20,52,weekly_housing_cost,owner_total,age_group,65 to 74,National,median
+2019-20,117,weekly_housing_cost,renter_social,age_group,65 to 74,National,median
+2019-20,322,weekly_housing_cost,renter_private,age_group,65 to 74,National,median
+2019-20,239,weekly_housing_cost,renter_total,age_group,65 to 74,National,median
+2019-20,58,weekly_housing_cost,all,age_group,65 to 74,National,median
+2019-20,44,weekly_housing_cost,owner_outright,age_group,75 and over,National,median
+2019-20,66,weekly_housing_cost,owner_mortgage,age_group,75 and over,National,median
+2019-20,45,weekly_housing_cost,owner_total,age_group,75 and over,National,median
+2019-20,118,weekly_housing_cost,renter_social,age_group,75 and over,National,median
+2019-20,266,weekly_housing_cost,renter_private,age_group,75 and over,National,median
+2019-20,199,weekly_housing_cost,renter_total,age_group,75 and over,National,median
+2019-20,47,weekly_housing_cost,all,age_group,75 and over,National,median
+2019-20,50,weekly_housing_cost,owner_outright,age_group,Total,National,median
+2019-20,443,weekly_housing_cost,owner_mortgage,age_group,Total,National,median
+2019-20,101,weekly_housing_cost,owner_total,age_group,Total,National,median
+2019-20,120,weekly_housing_cost,renter_social,age_group,Total,National,median
+2019-20,390,weekly_housing_cost,renter_private,age_group,Total,National,median
+2019-20,363,weekly_housing_cost,renter_total,age_group,Total,National,median
+2019-20,273,weekly_housing_cost,all,age_group,Total,National,median
+2019-20,46,weekly_housing_cost,owner_outright,age_group,65 and over,National,median
+2019-20,146,weekly_housing_cost,owner_mortgage,age_group,65 and over,National,median
+2019-20,48,weekly_housing_cost,owner_total,age_group,65 and over,National,median
+2019-20,116,weekly_housing_cost,renter_social,age_group,65 and over,National,median
+2019-20,307,weekly_housing_cost,renter_private,age_group,65 and over,National,median
+2019-20,222,weekly_housing_cost,renter_total,age_group,65 and over,National,median
+2019-20,53,weekly_housing_cost,all,age_group,65 and over,National,median
+2019-20,52,weekly_housing_cost,owner_outright,dwelling_structure,Separate house,National,median
+2019-20,435,weekly_housing_cost,owner_mortgage,dwelling_structure,Separate house,National,median
+2019-20,100,weekly_housing_cost,owner_total,dwelling_structure,Separate house,National,median
+2019-20,161,weekly_housing_cost,renter_social,dwelling_structure,Separate house,National,median
+2019-20,380,weekly_housing_cost,renter_private,dwelling_structure,Separate house,National,median
+2019-20,360,weekly_housing_cost,renter_total,dwelling_structure,Separate house,National,median
+2019-20,236,weekly_housing_cost,all,dwelling_structure,Separate house,National,median
+2019-20,46,weekly_housing_cost,owner_outright,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,488,weekly_housing_cost,owner_mortgage,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,98,weekly_housing_cost,owner_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,116,weekly_housing_cost,renter_social,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,393,weekly_housing_cost,renter_private,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,360,weekly_housing_cost,renter_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,295,weekly_housing_cost,all,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,37,weekly_housing_cost,owner_outright,dwelling_structure,Flat or apartment,National,median
+2019-20,450,weekly_housing_cost,owner_mortgage,dwelling_structure,Flat or apartment,National,median
+2019-20,143,weekly_housing_cost,owner_total,dwelling_structure,Flat or apartment,National,median
+2019-20,111,weekly_housing_cost,renter_social,dwelling_structure,Flat or apartment,National,median
+2019-20,400,weekly_housing_cost,renter_private,dwelling_structure,Flat or apartment,National,median
+2019-20,371,weekly_housing_cost,renter_total,dwelling_structure,Flat or apartment,National,median
+2019-20,343,weekly_housing_cost,all,dwelling_structure,Flat or apartment,National,median
+2019-20,50,weekly_housing_cost,owner_outright,dwelling_structure,Total,National,median
+2019-20,443,weekly_housing_cost,owner_mortgage,dwelling_structure,Total,National,median
+2019-20,101,weekly_housing_cost,owner_total,dwelling_structure,Total,National,median
+2019-20,120,weekly_housing_cost,renter_social,dwelling_structure,Total,National,median
+2019-20,390,weekly_housing_cost,renter_private,dwelling_structure,Total,National,median
+2019-20,363,weekly_housing_cost,renter_total,dwelling_structure,Total,National,median
+2019-20,273,weekly_housing_cost,all,dwelling_structure,Total,National,median
+2019-20,45,weekly_housing_cost,owner_outright,equiv_income_quintile,Lowest quintile,National,median
+2019-20,317,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Lowest quintile,National,median
+2019-20,51,weekly_housing_cost,owner_total,equiv_income_quintile,Lowest quintile,National,median
+2019-20,114,weekly_housing_cost,renter_social,equiv_income_quintile,Lowest quintile,National,median
+2019-20,329,weekly_housing_cost,renter_private,equiv_income_quintile,Lowest quintile,National,median
+2019-20,249,weekly_housing_cost,renter_total,equiv_income_quintile,Lowest quintile,National,median
+2019-20,88,weekly_housing_cost,all,equiv_income_quintile,Lowest quintile,National,median
+2019-20,46,weekly_housing_cost,owner_outright,equiv_income_quintile,Second quintile,National,median
+2019-20,364,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Second quintile,National,median
+2019-20,65,weekly_housing_cost,owner_total,equiv_income_quintile,Second quintile,National,median
+2019-20,198,weekly_housing_cost,renter_social,equiv_income_quintile,Second quintile,National,median
+2019-20,355,weekly_housing_cost,renter_private,equiv_income_quintile,Second quintile,National,median
+2019-20,342,weekly_housing_cost,renter_total,equiv_income_quintile,Second quintile,National,median
+2019-20,220,weekly_housing_cost,all,equiv_income_quintile,Second quintile,National,median
+2019-20,54,weekly_housing_cost,owner_outright,equiv_income_quintile,Third quintile,National,median
+2019-20,387,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Third quintile,National,median
+2019-20,171,weekly_housing_cost,owner_total,equiv_income_quintile,Third quintile,National,median
+2019-20,231,weekly_housing_cost,renter_social,equiv_income_quintile,Third quintile,National,median
+2019-20,385,weekly_housing_cost,renter_private,equiv_income_quintile,Third quintile,National,median
+2019-20,380,weekly_housing_cost,renter_total,equiv_income_quintile,Third quintile,National,median
+2019-20,314,weekly_housing_cost,all,equiv_income_quintile,Third quintile,National,median
+2019-20,55,weekly_housing_cost,owner_outright,equiv_income_quintile,Fourth quintile,National,median
+2019-20,478,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Fourth quintile,National,median
+2019-20,356,weekly_housing_cost,owner_total,equiv_income_quintile,Fourth quintile,National,median
+2019-20,459,weekly_housing_cost,renter_social,equiv_income_quintile,Fourth quintile,National,median
+2019-20,410,weekly_housing_cost,renter_private,equiv_income_quintile,Fourth quintile,National,median
+2019-20,403,weekly_housing_cost,renter_total,equiv_income_quintile,Fourth quintile,National,median
+2019-20,380,weekly_housing_cost,all,equiv_income_quintile,Fourth quintile,National,median
+2019-20,62,weekly_housing_cost,owner_outright,equiv_income_quintile,Highest quintile,National,median
+2019-20,553,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Highest quintile,National,median
+2019-20,368,weekly_housing_cost,owner_total,equiv_income_quintile,Highest quintile,National,median
+2019-20,145,weekly_housing_cost,renter_social,equiv_income_quintile,Highest quintile,National,median
+2019-20,495,weekly_housing_cost,renter_private,equiv_income_quintile,Highest quintile,National,median
+2019-20,480,weekly_housing_cost,renter_total,equiv_income_quintile,Highest quintile,National,median
+2019-20,425,weekly_housing_cost,all,equiv_income_quintile,Highest quintile,National,median
+2019-20,50,weekly_housing_cost,owner_outright,equiv_income_quintile,Total,National,median
+2019-20,443,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Total,National,median
+2019-20,101,weekly_housing_cost,owner_total,equiv_income_quintile,Total,National,median
+2019-20,120,weekly_housing_cost,renter_social,equiv_income_quintile,Total,National,median
+2019-20,390,weekly_housing_cost,renter_private,equiv_income_quintile,Total,National,median
+2019-20,363,weekly_housing_cost,renter_total,equiv_income_quintile,Total,National,median
+2019-20,273,weekly_housing_cost,all,equiv_income_quintile,Total,National,median
+2019-20,45,weekly_housing_cost,owner_outright,equiv_income_quintile,Lower income households,National,median
+2019-20,341,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Lower income households,National,median
+2019-20,56,weekly_housing_cost,owner_total,equiv_income_quintile,Lower income households,National,median
+2019-20,119,weekly_housing_cost,renter_social,equiv_income_quintile,Lower income households,National,median
+2019-20,345,weekly_housing_cost,renter_private,equiv_income_quintile,Lower income households,National,median
+2019-20,295,weekly_housing_cost,renter_total,equiv_income_quintile,Lower income households,National,median
+2019-20,111,weekly_housing_cost,all,equiv_income_quintile,Lower income households,National,median
+2019-20,45,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,None,National,median
+2019-20,200,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,None,National,median
+2019-20,47,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,None,National,median
+2019-20,115,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,None,National,median
+2019-20,311,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,None,National,median
+2019-20,225,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,None,National,median
+2019-20,58,weekly_housing_cost,all,number_of_employed_persons_in_household,None,National,median
+2019-20,53,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,One,National,median
+2019-20,398,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,One,National,median
+2019-20,202,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,One,National,median
+2019-20,214,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,One,National,median
+2019-20,370,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,One,National,median
+2019-20,360,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,One,National,median
+2019-20,316,weekly_housing_cost,all,number_of_employed_persons_in_household,One,National,median
+2019-20,61,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Two,National,median
+2019-20,497,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Two,National,median
+2019-20,399,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Two,National,median
+2019-20,338,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Two,National,median
+2019-20,428,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Two,National,median
+2019-20,420,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Two,National,median
+2019-20,410,weekly_housing_cost,all,number_of_employed_persons_in_household,Two,National,median
+2019-20,64,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,455,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,345,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,170,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,483,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,487,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,403,weekly_housing_cost,all,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,50,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Total,National,median
+2019-20,443,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Total,National,median
+2019-20,101,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Total,National,median
+2019-20,120,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Total,National,median
+2019-20,390,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Total,National,median
+2019-20,363,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Total,National,median
+2019-20,273,weekly_housing_cost,all,number_of_employed_persons_in_household,Total,National,median
+2019-20,2866.4,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,3577,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,6443.3,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,277.5,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,2551.7,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,3059.9,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,9732.4,weekly_housing_cost,all,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,4680,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Number of households in sample,National,median
+2019-20,5381,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Number of households in sample,National,median
+2019-20,10061,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Number of households in sample,National,median
+2019-20,733,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Number of households in sample,National,median
+2019-20,3358,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Number of households in sample,National,median
+2019-20,4583,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Number of households in sample,National,median
+2019-20,15011,weekly_housing_cost,all,number_of_employed_persons_in_household,Number of households in sample,National,median
+2019-20,3.5,weekly_housing_cost,owner_outright,family_type,Couple family with dependent children,National,median
+2019-20,2.2,weekly_housing_cost,owner_mortgage,family_type,Couple family with dependent children,National,median
+2019-20,3.1,weekly_housing_cost,owner_total,family_type,Couple family with dependent children,National,median
+2019-20,20.9,weekly_housing_cost,renter_social,family_type,Couple family with dependent children,National,median
+2019-20,1.6,weekly_housing_cost,renter_private,family_type,Couple family with dependent children,National,median
+2019-20,1.8,weekly_housing_cost,renter_total,family_type,Couple family with dependent children,National,median
+2019-20,1.8,weekly_housing_cost,all,family_type,Couple family with dependent children,National,median
+2019-20,9.8,weekly_housing_cost,owner_outright,family_type,One parent family with dependent children,National,median
+2019-20,5,weekly_housing_cost,owner_mortgage,family_type,One parent family with dependent children,National,median
+2019-20,10.3,weekly_housing_cost,owner_total,family_type,One parent family with dependent children,National,median
+2019-20,8.5,weekly_housing_cost,renter_social,family_type,One parent family with dependent children,National,median
+2019-20,3.1,weekly_housing_cost,renter_private,family_type,One parent family with dependent children,National,median
+2019-20,2.6,weekly_housing_cost,renter_total,family_type,One parent family with dependent children,National,median
+2019-20,2.9,weekly_housing_cost,all,family_type,One parent family with dependent children,National,median
+2019-20,1.7,weekly_housing_cost,owner_outright,family_type,Couple only,National,median
+2019-20,4.4,weekly_housing_cost,owner_mortgage,family_type,Couple only,National,median
+2019-20,2,weekly_housing_cost,owner_total,family_type,Couple only,National,median
+2019-20,4.4,weekly_housing_cost,renter_social,family_type,Couple only,National,median
+2019-20,1.8,weekly_housing_cost,renter_private,family_type,Couple only,National,median
+2019-20,1.5,weekly_housing_cost,renter_total,family_type,Couple only,National,median
+2019-20,11.2,weekly_housing_cost,all,family_type,Couple only,National,median
+2019-20,2.6,weekly_housing_cost,owner_outright,family_type,Other one family households,National,median
+2019-20,5.3,weekly_housing_cost,owner_mortgage,family_type,Other one family households,National,median
+2019-20,7.9,weekly_housing_cost,owner_total,family_type,Other one family households,National,median
+2019-20,13.1,weekly_housing_cost,renter_social,family_type,Other one family households,National,median
+2019-20,3.6,weekly_housing_cost,renter_private,family_type,Other one family households,National,median
+2019-20,4.6,weekly_housing_cost,renter_total,family_type,Other one family households,National,median
+2019-20,10.4,weekly_housing_cost,all,family_type,Other one family households,National,median
+2019-20,11.8,weekly_housing_cost,owner_outright,family_type,Multiple family households,National,median
+2019-20,10.6,weekly_housing_cost,owner_mortgage,family_type,Multiple family households,National,median
+2019-20,26.1,weekly_housing_cost,owner_total,family_type,Multiple family households,National,median
+2019-20,15,weekly_housing_cost,renter_private,family_type,Multiple family households,National,median
+2019-20,14,weekly_housing_cost,renter_total,family_type,Multiple family households,National,median
+2019-20,10,weekly_housing_cost,all,family_type,Multiple family households,National,median
+2019-20,1.8,weekly_housing_cost,owner_outright,family_type,Lone person households,National,median
+2019-20,3,weekly_housing_cost,owner_mortgage,family_type,Lone person households,National,median
+2019-20,2.2,weekly_housing_cost,owner_total,family_type,Lone person households,National,median
+2019-20,0.9,weekly_housing_cost,renter_social,family_type,Lone person households,National,median
+2019-20,1.5,weekly_housing_cost,renter_private,family_type,Lone person households,National,median
+2019-20,3.3,weekly_housing_cost,renter_total,family_type,Lone person households,National,median
+2019-20,4.7,weekly_housing_cost,all,family_type,Lone person households,National,median
+2019-20,8.4,weekly_housing_cost,owner_outright,family_type,Group households,National,median
+2019-20,10.7,weekly_housing_cost,owner_mortgage,family_type,Group households,National,median
+2019-20,3.3,weekly_housing_cost,renter_private,family_type,Group households,National,median
+2019-20,3.8,weekly_housing_cost,renter_total,family_type,Group households,National,median
+2019-20,5.3,weekly_housing_cost,all,family_type,Group households,National,median
+2019-20,1.2,weekly_housing_cost,owner_outright,family_type,Total,National,median
+2019-20,1.7,weekly_housing_cost,owner_mortgage,family_type,Total,National,median
+2019-20,6.4,weekly_housing_cost,owner_total,family_type,Total,National,median
+2019-20,2.8,weekly_housing_cost,renter_social,family_type,Total,National,median
+2019-20,1.3,weekly_housing_cost,renter_private,family_type,Total,National,median
+2019-20,1.1,weekly_housing_cost,renter_total,family_type,Total,National,median
+2019-20,2.2,weekly_housing_cost,all,family_type,Total,National,median
+2019-20,12.7,weekly_housing_cost,owner_mortgage,age_group,15 to 24,National,median
+2019-20,14.1,weekly_housing_cost,owner_total,age_group,15 to 24,National,median
+2019-20,3.8,weekly_housing_cost,renter_private,age_group,15 to 24,National,median
+2019-20,3.7,weekly_housing_cost,renter_total,age_group,15 to 24,National,median
+2019-20,3.9,weekly_housing_cost,all,age_group,15 to 24,National,median
+2019-20,7.3,weekly_housing_cost,owner_outright,age_group,25 to 34,National,median
+2019-20,2.6,weekly_housing_cost,owner_mortgage,age_group,25 to 34,National,median
+2019-20,3,weekly_housing_cost,owner_total,age_group,25 to 34,National,median
+2019-20,18.6,weekly_housing_cost,renter_social,age_group,25 to 34,National,median
+2019-20,1.2,weekly_housing_cost,renter_private,age_group,25 to 34,National,median
+2019-20,1.4,weekly_housing_cost,renter_total,age_group,25 to 34,National,median
+2019-20,1,weekly_housing_cost,all,age_group,25 to 34,National,median
+2019-20,6,weekly_housing_cost,owner_outright,age_group,35 to 44,National,median
+2019-20,2.6,weekly_housing_cost,owner_mortgage,age_group,35 to 44,National,median
+2019-20,2.5,weekly_housing_cost,owner_total,age_group,35 to 44,National,median
+2019-20,10.5,weekly_housing_cost,renter_social,age_group,35 to 44,National,median
+2019-20,1.7,weekly_housing_cost,renter_private,age_group,35 to 44,National,median
+2019-20,1.8,weekly_housing_cost,renter_total,age_group,35 to 44,National,median
+2019-20,1.5,weekly_housing_cost,all,age_group,35 to 44,National,median
+2019-20,3.6,weekly_housing_cost,owner_outright,age_group,45 to 54,National,median
+2019-20,3,weekly_housing_cost,owner_mortgage,age_group,45 to 54,National,median
+2019-20,3,weekly_housing_cost,owner_total,age_group,45 to 54,National,median
+2019-20,4.7,weekly_housing_cost,renter_social,age_group,45 to 54,National,median
+2019-20,2.3,weekly_housing_cost,renter_private,age_group,45 to 54,National,median
+2019-20,3.1,weekly_housing_cost,renter_total,age_group,45 to 54,National,median
+2019-20,1.9,weekly_housing_cost,all,age_group,45 to 54,National,median
+2019-20,2.1,weekly_housing_cost,owner_outright,age_group,55 to 64,National,median
+2019-20,3.8,weekly_housing_cost,owner_mortgage,age_group,55 to 64,National,median
+2019-20,4.4,weekly_housing_cost,owner_total,age_group,55 to 64,National,median
+2019-20,3.8,weekly_housing_cost,renter_social,age_group,55 to 64,National,median
+2019-20,3.7,weekly_housing_cost,renter_private,age_group,55 to 64,National,median
+2019-20,2.7,weekly_housing_cost,renter_total,age_group,55 to 64,National,median
+2019-20,9.5,weekly_housing_cost,all,age_group,55 to 64,National,median
+2019-20,1.7,weekly_housing_cost,owner_outright,age_group,65 to 74,National,median
+2019-20,15.4,weekly_housing_cost,owner_mortgage,age_group,65 to 74,National,median
+2019-20,1.9,weekly_housing_cost,owner_total,age_group,65 to 74,National,median
+2019-20,3.5,weekly_housing_cost,renter_social,age_group,65 to 74,National,median
+2019-20,4,weekly_housing_cost,renter_private,age_group,65 to 74,National,median
+2019-20,6.4,weekly_housing_cost,renter_total,age_group,65 to 74,National,median
+2019-20,1.8,weekly_housing_cost,all,age_group,65 to 74,National,median
+2019-20,2.2,weekly_housing_cost,owner_outright,age_group,75 and over,National,median
+2019-20,23,weekly_housing_cost,owner_mortgage,age_group,75 and over,National,median
+2019-20,1.9,weekly_housing_cost,owner_total,age_group,75 and over,National,median
+2019-20,1.7,weekly_housing_cost,renter_social,age_group,75 and over,National,median
+2019-20,6.9,weekly_housing_cost,renter_private,age_group,75 and over,National,median
+2019-20,7.9,weekly_housing_cost,renter_total,age_group,75 and over,National,median
+2019-20,1.9,weekly_housing_cost,all,age_group,75 and over,National,median
+2019-20,1.2,weekly_housing_cost,owner_outright,age_group,Total,National,median
+2019-20,1.7,weekly_housing_cost,owner_mortgage,age_group,Total,National,median
+2019-20,6.4,weekly_housing_cost,owner_total,age_group,Total,National,median
+2019-20,2.8,weekly_housing_cost,renter_social,age_group,Total,National,median
+2019-20,1.3,weekly_housing_cost,renter_private,age_group,Total,National,median
+2019-20,1.1,weekly_housing_cost,renter_total,age_group,Total,National,median
+2019-20,2.2,weekly_housing_cost,all,age_group,Total,National,median
+2019-20,1.3,weekly_housing_cost,owner_outright,age_group,65 and over,National,median
+2019-20,14.3,weekly_housing_cost,owner_mortgage,age_group,65 and over,National,median
+2019-20,1.6,weekly_housing_cost,owner_total,age_group,65 and over,National,median
+2019-20,1.8,weekly_housing_cost,renter_social,age_group,65 and over,National,median
+2019-20,3.7,weekly_housing_cost,renter_private,age_group,65 and over,National,median
+2019-20,4.9,weekly_housing_cost,renter_total,age_group,65 and over,National,median
+2019-20,1.5,weekly_housing_cost,all,age_group,65 and over,National,median
+2019-20,1.2,weekly_housing_cost,owner_outright,dwelling_structure,Separate house,National,median
+2019-20,1.9,weekly_housing_cost,owner_mortgage,dwelling_structure,Separate house,National,median
+2019-20,6.6,weekly_housing_cost,owner_total,dwelling_structure,Separate house,National,median
+2019-20,5.4,weekly_housing_cost,renter_social,dwelling_structure,Separate house,National,median
+2019-20,1.8,weekly_housing_cost,renter_private,dwelling_structure,Separate house,National,median
+2019-20,1.6,weekly_housing_cost,renter_total,dwelling_structure,Separate house,National,median
+2019-20,3.8,weekly_housing_cost,all,dwelling_structure,Separate house,National,median
+2019-20,3.5,weekly_housing_cost,owner_outright,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,3.8,weekly_housing_cost,owner_mortgage,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,20.5,weekly_housing_cost,owner_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,2.9,weekly_housing_cost,renter_social,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,2,weekly_housing_cost,renter_private,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,2.4,weekly_housing_cost,renter_total,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,5.1,weekly_housing_cost,all,dwelling_structure,"Semi-detached, row or terrace house, townhouse",National,median
+2019-20,3.8,weekly_housing_cost,owner_outright,dwelling_structure,Flat or apartment,National,median
+2019-20,4.6,weekly_housing_cost,owner_mortgage,dwelling_structure,Flat or apartment,National,median
+2019-20,33.3,weekly_housing_cost,owner_total,dwelling_structure,Flat or apartment,National,median
+2019-20,2.1,weekly_housing_cost,renter_social,dwelling_structure,Flat or apartment,National,median
+2019-20,1.1,weekly_housing_cost,renter_private,dwelling_structure,Flat or apartment,National,median
+2019-20,2,weekly_housing_cost,renter_total,dwelling_structure,Flat or apartment,National,median
+2019-20,2.4,weekly_housing_cost,all,dwelling_structure,Flat or apartment,National,median
+2019-20,1.2,weekly_housing_cost,owner_outright,dwelling_structure,Total,National,median
+2019-20,1.7,weekly_housing_cost,owner_mortgage,dwelling_structure,Total,National,median
+2019-20,6.4,weekly_housing_cost,owner_total,dwelling_structure,Total,National,median
+2019-20,2.8,weekly_housing_cost,renter_social,dwelling_structure,Total,National,median
+2019-20,1.3,weekly_housing_cost,renter_private,dwelling_structure,Total,National,median
+2019-20,1.1,weekly_housing_cost,renter_total,dwelling_structure,Total,National,median
+2019-20,2.2,weekly_housing_cost,all,dwelling_structure,Total,National,median
+2019-20,1.8,weekly_housing_cost,owner_outright,equiv_income_quintile,Lowest quintile,National,median
+2019-20,5.6,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Lowest quintile,National,median
+2019-20,2.1,weekly_housing_cost,owner_total,equiv_income_quintile,Lowest quintile,National,median
+2019-20,2,weekly_housing_cost,renter_social,equiv_income_quintile,Lowest quintile,National,median
+2019-20,3,weekly_housing_cost,renter_private,equiv_income_quintile,Lowest quintile,National,median
+2019-20,3,weekly_housing_cost,renter_total,equiv_income_quintile,Lowest quintile,National,median
+2019-20,7.8,weekly_housing_cost,all,equiv_income_quintile,Lowest quintile,National,median
+2019-20,2.6,weekly_housing_cost,owner_outright,equiv_income_quintile,Second quintile,National,median
+2019-20,3.9,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Second quintile,National,median
+2019-20,2.3,weekly_housing_cost,owner_total,equiv_income_quintile,Second quintile,National,median
+2019-20,8.2,weekly_housing_cost,renter_social,equiv_income_quintile,Second quintile,National,median
+2019-20,2,weekly_housing_cost,renter_private,equiv_income_quintile,Second quintile,National,median
+2019-20,2.1,weekly_housing_cost,renter_total,equiv_income_quintile,Second quintile,National,median
+2019-20,6.6,weekly_housing_cost,all,equiv_income_quintile,Second quintile,National,median
+2019-20,2.6,weekly_housing_cost,owner_outright,equiv_income_quintile,Third quintile,National,median
+2019-20,3.4,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Third quintile,National,median
+2019-20,11,weekly_housing_cost,owner_total,equiv_income_quintile,Third quintile,National,median
+2019-20,24.9,weekly_housing_cost,renter_social,equiv_income_quintile,Third quintile,National,median
+2019-20,1.9,weekly_housing_cost,renter_private,equiv_income_quintile,Third quintile,National,median
+2019-20,1.7,weekly_housing_cost,renter_total,equiv_income_quintile,Third quintile,National,median
+2019-20,2.4,weekly_housing_cost,all,equiv_income_quintile,Third quintile,National,median
+2019-20,2.1,weekly_housing_cost,owner_outright,equiv_income_quintile,Fourth quintile,National,median
+2019-20,2.2,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Fourth quintile,National,median
+2019-20,4.7,weekly_housing_cost,owner_total,equiv_income_quintile,Fourth quintile,National,median
+2019-20,2,weekly_housing_cost,renter_private,equiv_income_quintile,Fourth quintile,National,median
+2019-20,2,weekly_housing_cost,renter_total,equiv_income_quintile,Fourth quintile,National,median
+2019-20,2.3,weekly_housing_cost,all,equiv_income_quintile,Fourth quintile,National,median
+2019-20,2.5,weekly_housing_cost,owner_outright,equiv_income_quintile,Highest quintile,National,median
+2019-20,2.3,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Highest quintile,National,median
+2019-20,6.5,weekly_housing_cost,owner_total,equiv_income_quintile,Highest quintile,National,median
+2019-20,2.7,weekly_housing_cost,renter_private,equiv_income_quintile,Highest quintile,National,median
+2019-20,3.5,weekly_housing_cost,renter_total,equiv_income_quintile,Highest quintile,National,median
+2019-20,2.9,weekly_housing_cost,all,equiv_income_quintile,Highest quintile,National,median
+2019-20,1.2,weekly_housing_cost,owner_outright,equiv_income_quintile,Total,National,median
+2019-20,1.7,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Total,National,median
+2019-20,6.4,weekly_housing_cost,owner_total,equiv_income_quintile,Total,National,median
+2019-20,2.8,weekly_housing_cost,renter_social,equiv_income_quintile,Total,National,median
+2019-20,1.3,weekly_housing_cost,renter_private,equiv_income_quintile,Total,National,median
+2019-20,1.1,weekly_housing_cost,renter_total,equiv_income_quintile,Total,National,median
+2019-20,2.2,weekly_housing_cost,all,equiv_income_quintile,Total,National,median
+2019-20,1.4,weekly_housing_cost,owner_outright,equiv_income_quintile,Lower income households,National,median
+2019-20,3.5,weekly_housing_cost,owner_mortgage,equiv_income_quintile,Lower income households,National,median
+2019-20,1.7,weekly_housing_cost,owner_total,equiv_income_quintile,Lower income households,National,median
+2019-20,2.9,weekly_housing_cost,renter_social,equiv_income_quintile,Lower income households,National,median
+2019-20,1.7,weekly_housing_cost,renter_private,equiv_income_quintile,Lower income households,National,median
+2019-20,2.2,weekly_housing_cost,renter_total,equiv_income_quintile,Lower income households,National,median
+2019-20,3.4,weekly_housing_cost,all,equiv_income_quintile,Lower income households,National,median
+2019-20,1.4,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,None,National,median
+2019-20,8.9,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,None,National,median
+2019-20,1.4,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,None,National,median
+2019-20,1.8,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,None,National,median
+2019-20,2.3,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,None,National,median
+2019-20,2.5,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,None,National,median
+2019-20,1.8,weekly_housing_cost,all,number_of_employed_persons_in_household,None,National,median
+2019-20,2.2,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,One,National,median
+2019-20,2.6,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,One,National,median
+2019-20,10.2,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,One,National,median
+2019-20,7.2,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,One,National,median
+2019-20,1.5,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,One,National,median
+2019-20,1.3,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,One,National,median
+2019-20,1.7,weekly_housing_cost,all,number_of_employed_persons_in_household,One,National,median
+2019-20,1.8,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Two,National,median
+2019-20,1.9,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Two,National,median
+2019-20,3,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Two,National,median
+2019-20,14.2,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Two,National,median
+2019-20,2,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Two,National,median
+2019-20,1.8,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Two,National,median
+2019-20,1.4,weekly_housing_cost,all,number_of_employed_persons_in_household,Two,National,median
+2019-20,4.7,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,4.8,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,7.4,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,3.7,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,4,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,4.3,weekly_housing_cost,all,number_of_employed_persons_in_household,Three or more,National,median
+2019-20,1.2,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Total,National,median
+2019-20,1.7,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Total,National,median
+2019-20,6.4,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Total,National,median
+2019-20,2.8,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Total,National,median
+2019-20,1.3,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Total,National,median
+2019-20,1.1,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Total,National,median
+2019-20,2.2,weekly_housing_cost,all,number_of_employed_persons_in_household,Total,National,median
+2019-20,1.4,weekly_housing_cost,owner_outright,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,1.3,weekly_housing_cost,owner_mortgage,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,0.8,weekly_housing_cost,owner_total,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,6.1,weekly_housing_cost,renter_social,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,2,weekly_housing_cost,renter_private,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,1.7,weekly_housing_cost,renter_total,number_of_employed_persons_in_household,Estimated number of households,National,median
+2019-20,0,weekly_housing_cost,all,number_of_employed_persons_in_household,Estimated number of households,National,median

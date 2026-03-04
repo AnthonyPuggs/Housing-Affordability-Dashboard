@@ -1,0 +1,17 @@
+# Ignore plots folder
+plots/
+
+# Ignore specific scripts and docs
+_check_cpi.R
+save_plots.R
+project_plan.md
+app_old.R
+CLAUDE.md
+
+# Ignore pipeline and Claude metadata
+pipeline/
+.claude/
+
+# Ignore PDF files in resources (top-level and any subfolders)
+resources/*.pdf
+resources/**/*.pdf

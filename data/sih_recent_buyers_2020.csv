@@ -1,0 +1,983 @@
+survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
+2019-20,2.9,Owner without a mortgage,owner_mortgage,buyer_first_home_new,Owner without a mortgage,National,proportion
+2019-20,8.7,Owner without a mortgage,owner_mortgage,buyer_first_home_established,Owner without a mortgage,National,proportion
+2019-20,8.6,Owner without a mortgage,owner_mortgage,buyer_first_home_total,Owner without a mortgage,National,proportion
+2019-20,30,Owner without a mortgage,owner_mortgage,buyer_changeover_new,Owner without a mortgage,National,proportion
+2019-20,35.2,Owner without a mortgage,owner_mortgage,buyer_changeover_established,Owner without a mortgage,National,proportion
+2019-20,35,Owner without a mortgage,owner_mortgage,buyer_changeover_total,Owner without a mortgage,National,proportion
+2019-20,21.2,Owner without a mortgage,owner_mortgage,buyer_all_recent_new,Owner without a mortgage,National,proportion
+2019-20,25.4,Owner without a mortgage,owner_mortgage,buyer_all_recent_established,Owner without a mortgage,National,proportion
+2019-20,24.7,Owner without a mortgage,owner_mortgage,buyer_all_recent_total,Owner without a mortgage,National,proportion
+2019-20,97.8,Owner with a mortgage,owner_mortgage,buyer_first_home_new,Owner with a mortgage,National,proportion
+2019-20,90.5,Owner with a mortgage,owner_mortgage,buyer_first_home_established,Owner with a mortgage,National,proportion
+2019-20,92.1,Owner with a mortgage,owner_mortgage,buyer_first_home_total,Owner with a mortgage,National,proportion
+2019-20,65.2,Owner with a mortgage,owner_mortgage,buyer_changeover_new,Owner with a mortgage,National,proportion
+2019-20,65.2,Owner with a mortgage,owner_mortgage,buyer_changeover_established,Owner with a mortgage,National,proportion
+2019-20,65,Owner with a mortgage,owner_mortgage,buyer_changeover_total,Owner with a mortgage,National,proportion
+2019-20,79.8,Owner with a mortgage,owner_mortgage,buyer_all_recent_new,Owner with a mortgage,National,proportion
+2019-20,74.7,Owner with a mortgage,owner_mortgage,buyer_all_recent_established,Owner with a mortgage,National,proportion
+2019-20,75.2,Owner with a mortgage,owner_mortgage,buyer_all_recent_total,Owner with a mortgage,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_total,Total,National,proportion
+2019-20,63.3,Couple family with dependent children,owner_mortgage,buyer_first_home_new,Couple family with dependent children,National,proportion
+2019-20,37.7,Couple family with dependent children,owner_mortgage,buyer_first_home_established,Couple family with dependent children,National,proportion
+2019-20,41.5,Couple family with dependent children,owner_mortgage,buyer_first_home_total,Couple family with dependent children,National,proportion
+2019-20,49,Couple family with dependent children,owner_mortgage,buyer_changeover_new,Couple family with dependent children,National,proportion
+2019-20,31.9,Couple family with dependent children,owner_mortgage,buyer_changeover_established,Couple family with dependent children,National,proportion
+2019-20,34.1,Couple family with dependent children,owner_mortgage,buyer_changeover_total,Couple family with dependent children,National,proportion
+2019-20,53.7,Couple family with dependent children,owner_mortgage,buyer_all_recent_new,Couple family with dependent children,National,proportion
+2019-20,34,Couple family with dependent children,owner_mortgage,buyer_all_recent_established,Couple family with dependent children,National,proportion
+2019-20,36.8,Couple family with dependent children,owner_mortgage,buyer_all_recent_total,Couple family with dependent children,National,proportion
+2019-20,0,One parent family with dependent children,owner_mortgage,buyer_first_home_new,One parent family with dependent children,National,proportion
+2019-20,3.9,One parent family with dependent children,owner_mortgage,buyer_first_home_established,One parent family with dependent children,National,proportion
+2019-20,3.7,One parent family with dependent children,owner_mortgage,buyer_first_home_total,One parent family with dependent children,National,proportion
+2019-20,3.8,One parent family with dependent children,owner_mortgage,buyer_changeover_new,One parent family with dependent children,National,proportion
+2019-20,6.3,One parent family with dependent children,owner_mortgage,buyer_changeover_established,One parent family with dependent children,National,proportion
+2019-20,6.2,One parent family with dependent children,owner_mortgage,buyer_changeover_total,One parent family with dependent children,National,proportion
+2019-20,2.8,One parent family with dependent children,owner_mortgage,buyer_all_recent_new,One parent family with dependent children,National,proportion
+2019-20,5.4,One parent family with dependent children,owner_mortgage,buyer_all_recent_established,One parent family with dependent children,National,proportion
+2019-20,5,One parent family with dependent children,owner_mortgage,buyer_all_recent_total,One parent family with dependent children,National,proportion
+2019-20,27.7,Couple only,owner_mortgage,buyer_first_home_new,Couple only,National,proportion
+2019-20,28.7,Couple only,owner_mortgage,buyer_first_home_established,Couple only,National,proportion
+2019-20,27.5,Couple only,owner_mortgage,buyer_first_home_total,Couple only,National,proportion
+2019-20,24.7,Couple only,owner_mortgage,buyer_changeover_new,Couple only,National,proportion
+2019-20,31.5,Couple only,owner_mortgage,buyer_changeover_established,Couple only,National,proportion
+2019-20,31,Couple only,owner_mortgage,buyer_changeover_total,Couple only,National,proportion
+2019-20,26.3,Couple only,owner_mortgage,buyer_all_recent_new,Couple only,National,proportion
+2019-20,30.4,Couple only,owner_mortgage,buyer_all_recent_established,Couple only,National,proportion
+2019-20,29.6,Couple only,owner_mortgage,buyer_all_recent_total,Couple only,National,proportion
+2019-20,6.9,Other one family households,owner_mortgage,buyer_first_home_new,Other one family households,National,proportion
+2019-20,4.5,Other one family households,owner_mortgage,buyer_first_home_established,Other one family households,National,proportion
+2019-20,4.2,Other one family households,owner_mortgage,buyer_first_home_total,Other one family households,National,proportion
+2019-20,9.3,Other one family households,owner_mortgage,buyer_changeover_new,Other one family households,National,proportion
+2019-20,7,Other one family households,owner_mortgage,buyer_changeover_established,Other one family households,National,proportion
+2019-20,7.4,Other one family households,owner_mortgage,buyer_changeover_total,Other one family households,National,proportion
+2019-20,9,Other one family households,owner_mortgage,buyer_all_recent_new,Other one family households,National,proportion
+2019-20,6.3,Other one family households,owner_mortgage,buyer_all_recent_established,Other one family households,National,proportion
+2019-20,6.2,Other one family households,owner_mortgage,buyer_all_recent_total,Other one family households,National,proportion
+2019-20,0,Multiple family households,owner_mortgage,buyer_first_home_new,Multiple family households,National,proportion
+2019-20,0.8,Multiple family households,owner_mortgage,buyer_first_home_established,Multiple family households,National,proportion
+2019-20,0.9,Multiple family households,owner_mortgage,buyer_first_home_total,Multiple family households,National,proportion
+2019-20,0,Multiple family households,owner_mortgage,buyer_changeover_new,Multiple family households,National,proportion
+2019-20,1,Multiple family households,owner_mortgage,buyer_changeover_established,Multiple family households,National,proportion
+2019-20,0.9,Multiple family households,owner_mortgage,buyer_changeover_total,Multiple family households,National,proportion
+2019-20,0,Multiple family households,owner_mortgage,buyer_all_recent_new,Multiple family households,National,proportion
+2019-20,1.2,Multiple family households,owner_mortgage,buyer_all_recent_established,Multiple family households,National,proportion
+2019-20,1.3,Multiple family households,owner_mortgage,buyer_all_recent_total,Multiple family households,National,proportion
+2019-20,6.9,Lone person households,owner_mortgage,buyer_first_home_new,Lone person households,National,proportion
+2019-20,21.7,Lone person households,owner_mortgage,buyer_first_home_established,Lone person households,National,proportion
+2019-20,19.9,Lone person households,owner_mortgage,buyer_first_home_total,Lone person households,National,proportion
+2019-20,7.2,Lone person households,owner_mortgage,buyer_changeover_new,Lone person households,National,proportion
+2019-20,20.9,Lone person households,owner_mortgage,buyer_changeover_established,Lone person households,National,proportion
+2019-20,19,Lone person households,owner_mortgage,buyer_changeover_total,Lone person households,National,proportion
+2019-20,6.8,Lone person households,owner_mortgage,buyer_all_recent_new,Lone person households,National,proportion
+2019-20,21.6,Lone person households,owner_mortgage,buyer_all_recent_established,Lone person households,National,proportion
+2019-20,19.4,Lone person households,owner_mortgage,buyer_all_recent_total,Lone person households,National,proportion
+2019-20,0,Group households,owner_mortgage,buyer_first_home_new,Group households,National,proportion
+2019-20,2.7,Group households,owner_mortgage,buyer_first_home_established,Group households,National,proportion
+2019-20,1.9,Group households,owner_mortgage,buyer_first_home_total,Group households,National,proportion
+2019-20,0,Group households,owner_mortgage,buyer_changeover_new,Group households,National,proportion
+2019-20,0.8,Group households,owner_mortgage,buyer_changeover_established,Group households,National,proportion
+2019-20,0.6,Group households,owner_mortgage,buyer_changeover_total,Group households,National,proportion
+2019-20,0,Group households,owner_mortgage,buyer_all_recent_new,Group households,National,proportion
+2019-20,1.2,Group households,owner_mortgage,buyer_all_recent_established,Group households,National,proportion
+2019-20,1.3,Group households,owner_mortgage,buyer_all_recent_total,Group households,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_total,Total,National,proportion
+2019-20,96.7,Separate house,owner_mortgage,buyer_first_home_new,Separate house,National,proportion
+2019-20,61.6,Separate house,owner_mortgage,buyer_first_home_established,Separate house,National,proportion
+2019-20,66.8,Separate house,owner_mortgage,buyer_first_home_total,Separate house,National,proportion
+2019-20,85.6,Separate house,owner_mortgage,buyer_changeover_new,Separate house,National,proportion
+2019-20,73.4,Separate house,owner_mortgage,buyer_changeover_established,Separate house,National,proportion
+2019-20,75.2,Separate house,owner_mortgage,buyer_changeover_total,Separate house,National,proportion
+2019-20,88.2,Separate house,owner_mortgage,buyer_all_recent_new,Separate house,National,proportion
+2019-20,69.2,Separate house,owner_mortgage,buyer_all_recent_established,Separate house,National,proportion
+2019-20,72,Separate house,owner_mortgage,buyer_all_recent_total,Separate house,National,proportion
+2019-20,8.6,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_first_home_new,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,19.6,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_first_home_established,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,16.6,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_first_home_total,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,10.6,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_changeover_new,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,13.1,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_changeover_established,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,12.7,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_changeover_total,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,8.7,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_all_recent_new,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,15.4,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_all_recent_established,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,14.7,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_all_recent_total,"Semi-detached, row or terrace house, townhouse",National,proportion
+2019-20,0,Flat or apartment,owner_mortgage,buyer_first_home_new,Flat or apartment,National,proportion
+2019-20,19.8,Flat or apartment,owner_mortgage,buyer_first_home_established,Flat or apartment,National,proportion
+2019-20,16.4,Flat or apartment,owner_mortgage,buyer_first_home_total,Flat or apartment,National,proportion
+2019-20,0,Flat or apartment,owner_mortgage,buyer_changeover_new,Flat or apartment,National,proportion
+2019-20,13.7,Flat or apartment,owner_mortgage,buyer_changeover_established,Flat or apartment,National,proportion
+2019-20,12,Flat or apartment,owner_mortgage,buyer_changeover_total,Flat or apartment,National,proportion
+2019-20,0,Flat or apartment,owner_mortgage,buyer_all_recent_new,Flat or apartment,National,proportion
+2019-20,15.6,Flat or apartment,owner_mortgage,buyer_all_recent_established,Flat or apartment,National,proportion
+2019-20,13.6,Flat or apartment,owner_mortgage,buyer_all_recent_total,Flat or apartment,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_total,Total,National,proportion
+2019-20,7.6,15 to 24,owner_mortgage,buyer_first_home_new,15 to 24,National,proportion
+2019-20,5.4,15 to 24,owner_mortgage,buyer_first_home_established,15 to 24,National,proportion
+2019-20,5.3,15 to 24,owner_mortgage,buyer_first_home_total,15 to 24,National,proportion
+2019-20,0,15 to 24,owner_mortgage,buyer_changeover_new,15 to 24,National,proportion
+2019-20,0.5,15 to 24,owner_mortgage,buyer_changeover_established,15 to 24,National,proportion
+2019-20,0.7,15 to 24,owner_mortgage,buyer_changeover_total,15 to 24,National,proportion
+2019-20,3,15 to 24,owner_mortgage,buyer_all_recent_new,15 to 24,National,proportion
+2019-20,2.2,15 to 24,owner_mortgage,buyer_all_recent_established,15 to 24,National,proportion
+2019-20,2.3,15 to 24,owner_mortgage,buyer_all_recent_total,15 to 24,National,proportion
+2019-20,63.5,25 to 34,owner_mortgage,buyer_first_home_new,25 to 34,National,proportion
+2019-20,55.8,25 to 34,owner_mortgage,buyer_first_home_established,25 to 34,National,proportion
+2019-20,56.1,25 to 34,owner_mortgage,buyer_first_home_total,25 to 34,National,proportion
+2019-20,11.4,25 to 34,owner_mortgage,buyer_changeover_new,25 to 34,National,proportion
+2019-20,12.7,25 to 34,owner_mortgage,buyer_changeover_established,25 to 34,National,proportion
+2019-20,11.6,25 to 34,owner_mortgage,buyer_changeover_total,25 to 34,National,proportion
+2019-20,29,25 to 34,owner_mortgage,buyer_all_recent_new,25 to 34,National,proportion
+2019-20,27.9,25 to 34,owner_mortgage,buyer_all_recent_established,25 to 34,National,proportion
+2019-20,28.6,25 to 34,owner_mortgage,buyer_all_recent_total,25 to 34,National,proportion
+2019-20,26.1,35 to 44,owner_mortgage,buyer_first_home_new,35 to 44,National,proportion
+2019-20,25.3,35 to 44,owner_mortgage,buyer_first_home_established,35 to 44,National,proportion
+2019-20,25.6,35 to 44,owner_mortgage,buyer_first_home_total,35 to 44,National,proportion
+2019-20,40,35 to 44,owner_mortgage,buyer_changeover_new,35 to 44,National,proportion
+2019-20,24,35 to 44,owner_mortgage,buyer_changeover_established,35 to 44,National,proportion
+2019-20,25.9,35 to 44,owner_mortgage,buyer_changeover_total,35 to 44,National,proportion
+2019-20,32.5,35 to 44,owner_mortgage,buyer_all_recent_new,35 to 44,National,proportion
+2019-20,24.6,35 to 44,owner_mortgage,buyer_all_recent_established,35 to 44,National,proportion
+2019-20,25.9,35 to 44,owner_mortgage,buyer_all_recent_total,35 to 44,National,proportion
+2019-20,8.6,45 to 54,owner_mortgage,buyer_first_home_new,45 to 54,National,proportion
+2019-20,9.1,45 to 54,owner_mortgage,buyer_first_home_established,45 to 54,National,proportion
+2019-20,9.7,45 to 54,owner_mortgage,buyer_first_home_total,45 to 54,National,proportion
+2019-20,16.4,45 to 54,owner_mortgage,buyer_changeover_new,45 to 54,National,proportion
+2019-20,21.8,45 to 54,owner_mortgage,buyer_changeover_established,45 to 54,National,proportion
+2019-20,21.9,45 to 54,owner_mortgage,buyer_changeover_total,45 to 54,National,proportion
+2019-20,15.2,45 to 54,owner_mortgage,buyer_all_recent_new,45 to 54,National,proportion
+2019-20,17.4,45 to 54,owner_mortgage,buyer_all_recent_established,45 to 54,National,proportion
+2019-20,17,45 to 54,owner_mortgage,buyer_all_recent_total,45 to 54,National,proportion
+2019-20,0,55 to 64,owner_mortgage,buyer_first_home_new,55 to 64,National,proportion
+2019-20,4.1,55 to 64,owner_mortgage,buyer_first_home_established,55 to 64,National,proportion
+2019-20,3.4,55 to 64,owner_mortgage,buyer_first_home_total,55 to 64,National,proportion
+2019-20,10.9,55 to 64,owner_mortgage,buyer_changeover_new,55 to 64,National,proportion
+2019-20,16.6,55 to 64,owner_mortgage,buyer_changeover_established,55 to 64,National,proportion
+2019-20,15.9,55 to 64,owner_mortgage,buyer_changeover_total,55 to 64,National,proportion
+2019-20,6.3,55 to 64,owner_mortgage,buyer_all_recent_new,55 to 64,National,proportion
+2019-20,11.8,55 to 64,owner_mortgage,buyer_all_recent_established,55 to 64,National,proportion
+2019-20,11.2,55 to 64,owner_mortgage,buyer_all_recent_total,55 to 64,National,proportion
+2019-20,0,65 and over,owner_mortgage,buyer_first_home_new,65 and over,National,proportion
+2019-20,0.7,65 and over,owner_mortgage,buyer_first_home_established,65 and over,National,proportion
+2019-20,0.8,65 and over,owner_mortgage,buyer_first_home_total,65 and over,National,proportion
+2019-20,22.3,65 and over,owner_mortgage,buyer_changeover_new,65 and over,National,proportion
+2019-20,24.5,65 and over,owner_mortgage,buyer_changeover_established,65 and over,National,proportion
+2019-20,24.1,65 and over,owner_mortgage,buyer_changeover_total,65 and over,National,proportion
+2019-20,12,65 and over,owner_mortgage,buyer_all_recent_new,65 and over,National,proportion
+2019-20,16,65 and over,owner_mortgage,buyer_all_recent_established,65 and over,National,proportion
+2019-20,15.2,65 and over,owner_mortgage,buyer_all_recent_total,65 and over,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_total,Total,National,proportion
+2019-20,73.5,25% or less,owner_mortgage,buyer_first_home_new,25% or less,National,proportion
+2019-20,66.9,25% or less,owner_mortgage,buyer_first_home_established,25% or less,National,proportion
+2019-20,68.1,25% or less,owner_mortgage,buyer_first_home_total,25% or less,National,proportion
+2019-20,76,25% or less,owner_mortgage,buyer_changeover_new,25% or less,National,proportion
+2019-20,76.7,25% or less,owner_mortgage,buyer_changeover_established,25% or less,National,proportion
+2019-20,76.6,25% or less,owner_mortgage,buyer_changeover_total,25% or less,National,proportion
+2019-20,74.8,25% or less,owner_mortgage,buyer_all_recent_new,25% or less,National,proportion
+2019-20,73.1,25% or less,owner_mortgage,buyer_all_recent_established,25% or less,National,proportion
+2019-20,73.4,25% or less,owner_mortgage,buyer_all_recent_total,25% or less,National,proportion
+2019-20,10.4,More than 25% to 30%,owner_mortgage,buyer_first_home_new,More than 25% to 30%,National,proportion
+2019-20,14.4,More than 25% to 30%,owner_mortgage,buyer_first_home_established,More than 25% to 30%,National,proportion
+2019-20,13.7,More than 25% to 30%,owner_mortgage,buyer_first_home_total,More than 25% to 30%,National,proportion
+2019-20,8.2,More than 25% to 30%,owner_mortgage,buyer_changeover_new,More than 25% to 30%,National,proportion
+2019-20,6.7,More than 25% to 30%,owner_mortgage,buyer_changeover_established,More than 25% to 30%,National,proportion
+2019-20,6.9,More than 25% to 30%,owner_mortgage,buyer_changeover_total,More than 25% to 30%,National,proportion
+2019-20,9.2,More than 25% to 30%,owner_mortgage,buyer_all_recent_new,More than 25% to 30%,National,proportion
+2019-20,9.6,More than 25% to 30%,owner_mortgage,buyer_all_recent_established,More than 25% to 30%,National,proportion
+2019-20,9.5,More than 25% to 30%,owner_mortgage,buyer_all_recent_total,More than 25% to 30%,National,proportion
+2019-20,11.4,More than 30% to 50%,owner_mortgage,buyer_first_home_new,More than 30% to 50%,National,proportion
+2019-20,15.7,More than 30% to 50%,owner_mortgage,buyer_first_home_established,More than 30% to 50%,National,proportion
+2019-20,14.9,More than 30% to 50%,owner_mortgage,buyer_first_home_total,More than 30% to 50%,National,proportion
+2019-20,5,More than 30% to 50%,owner_mortgage,buyer_changeover_new,More than 30% to 50%,National,proportion
+2019-20,9.6,More than 30% to 50%,owner_mortgage,buyer_changeover_established,More than 30% to 50%,National,proportion
+2019-20,9.1,More than 30% to 50%,owner_mortgage,buyer_changeover_total,More than 30% to 50%,National,proportion
+2019-20,8,More than 30% to 50%,owner_mortgage,buyer_all_recent_new,More than 30% to 50%,National,proportion
+2019-20,11.8,More than 30% to 50%,owner_mortgage,buyer_all_recent_established,More than 30% to 50%,National,proportion
+2019-20,11.3,More than 30% to 50%,owner_mortgage,buyer_all_recent_total,More than 30% to 50%,National,proportion
+2019-20,4.7,More than 50%,owner_mortgage,buyer_first_home_new,More than 50%,National,proportion
+2019-20,3,More than 50%,owner_mortgage,buyer_first_home_established,More than 50%,National,proportion
+2019-20,3.3,More than 50%,owner_mortgage,buyer_first_home_total,More than 50%,National,proportion
+2019-20,10.8,More than 50%,owner_mortgage,buyer_changeover_new,More than 50%,National,proportion
+2019-20,6.9,More than 50%,owner_mortgage,buyer_changeover_established,More than 50%,National,proportion
+2019-20,7.4,More than 50%,owner_mortgage,buyer_changeover_total,More than 50%,National,proportion
+2019-20,8,More than 50%,owner_mortgage,buyer_all_recent_new,More than 50%,National,proportion
+2019-20,5.5,More than 50%,owner_mortgage,buyer_all_recent_established,More than 50%,National,proportion
+2019-20,5.8,More than 50%,owner_mortgage,buyer_all_recent_total,More than 50%,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_total,Total,National,proportion
+2019-20,2,Lowest quintile,owner_mortgage,buyer_first_home_new,Lowest quintile,National,proportion
+2019-20,8.7,Lowest quintile,owner_mortgage,buyer_first_home_established,Lowest quintile,National,proportion
+2019-20,8.2,Lowest quintile,owner_mortgage,buyer_first_home_total,Lowest quintile,National,proportion
+2019-20,15,Lowest quintile,owner_mortgage,buyer_changeover_new,Lowest quintile,National,proportion
+2019-20,18.6,Lowest quintile,owner_mortgage,buyer_changeover_established,Lowest quintile,National,proportion
+2019-20,18.4,Lowest quintile,owner_mortgage,buyer_changeover_total,Lowest quintile,National,proportion
+2019-20,10.9,Lowest quintile,owner_mortgage,buyer_all_recent_new,Lowest quintile,National,proportion
+2019-20,15.4,Lowest quintile,owner_mortgage,buyer_all_recent_established,Lowest quintile,National,proportion
+2019-20,14.5,Lowest quintile,owner_mortgage,buyer_all_recent_total,Lowest quintile,National,proportion
+2019-20,8.7,Second quintile,owner_mortgage,buyer_first_home_new,Second quintile,National,proportion
+2019-20,12,Second quintile,owner_mortgage,buyer_first_home_established,Second quintile,National,proportion
+2019-20,12,Second quintile,owner_mortgage,buyer_first_home_total,Second quintile,National,proportion
+2019-20,14.3,Second quintile,owner_mortgage,buyer_changeover_new,Second quintile,National,proportion
+2019-20,19.6,Second quintile,owner_mortgage,buyer_changeover_established,Second quintile,National,proportion
+2019-20,19.3,Second quintile,owner_mortgage,buyer_changeover_total,Second quintile,National,proportion
+2019-20,14.1,Second quintile,owner_mortgage,buyer_all_recent_new,Second quintile,National,proportion
+2019-20,17.1,Second quintile,owner_mortgage,buyer_all_recent_established,Second quintile,National,proportion
+2019-20,16.6,Second quintile,owner_mortgage,buyer_all_recent_total,Second quintile,National,proportion
+2019-20,18.9,Third quintile,owner_mortgage,buyer_first_home_new,Third quintile,National,proportion
+2019-20,21.2,Third quintile,owner_mortgage,buyer_first_home_established,Third quintile,National,proportion
+2019-20,20.6,Third quintile,owner_mortgage,buyer_first_home_total,Third quintile,National,proportion
+2019-20,22.2,Third quintile,owner_mortgage,buyer_changeover_new,Third quintile,National,proportion
+2019-20,15.8,Third quintile,owner_mortgage,buyer_changeover_established,Third quintile,National,proportion
+2019-20,16.5,Third quintile,owner_mortgage,buyer_changeover_total,Third quintile,National,proportion
+2019-20,20.9,Third quintile,owner_mortgage,buyer_all_recent_new,Third quintile,National,proportion
+2019-20,18.1,Third quintile,owner_mortgage,buyer_all_recent_established,Third quintile,National,proportion
+2019-20,18.2,Third quintile,owner_mortgage,buyer_all_recent_total,Third quintile,National,proportion
+2019-20,35.3,Fourth quintile,owner_mortgage,buyer_first_home_new,Fourth quintile,National,proportion
+2019-20,28.1,Fourth quintile,owner_mortgage,buyer_first_home_established,Fourth quintile,National,proportion
+2019-20,28.7,Fourth quintile,owner_mortgage,buyer_first_home_total,Fourth quintile,National,proportion
+2019-20,24,Fourth quintile,owner_mortgage,buyer_changeover_new,Fourth quintile,National,proportion
+2019-20,18.9,Fourth quintile,owner_mortgage,buyer_changeover_established,Fourth quintile,National,proportion
+2019-20,19.1,Fourth quintile,owner_mortgage,buyer_changeover_total,Fourth quintile,National,proportion
+2019-20,25.4,Fourth quintile,owner_mortgage,buyer_all_recent_new,Fourth quintile,National,proportion
+2019-20,21.8,Fourth quintile,owner_mortgage,buyer_all_recent_established,Fourth quintile,National,proportion
+2019-20,22.4,Fourth quintile,owner_mortgage,buyer_all_recent_total,Fourth quintile,National,proportion
+2019-20,33.4,Highest quintile,owner_mortgage,buyer_first_home_new,Highest quintile,National,proportion
+2019-20,29.9,Highest quintile,owner_mortgage,buyer_first_home_established,Highest quintile,National,proportion
+2019-20,30.9,Highest quintile,owner_mortgage,buyer_first_home_total,Highest quintile,National,proportion
+2019-20,21.3,Highest quintile,owner_mortgage,buyer_changeover_new,Highest quintile,National,proportion
+2019-20,26.7,Highest quintile,owner_mortgage,buyer_changeover_established,Highest quintile,National,proportion
+2019-20,26,Highest quintile,owner_mortgage,buyer_changeover_total,Highest quintile,National,proportion
+2019-20,26.3,Highest quintile,owner_mortgage,buyer_all_recent_new,Highest quintile,National,proportion
+2019-20,27.6,Highest quintile,owner_mortgage,buyer_all_recent_established,Highest quintile,National,proportion
+2019-20,27.7,Highest quintile,owner_mortgage,buyer_all_recent_total,Highest quintile,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_total,Total,National,proportion
+2019-20,11.1,Lower income households,owner_mortgage,buyer_first_home_new,Lower income households,National,proportion
+2019-20,20.7,Lower income households,owner_mortgage,buyer_first_home_established,Lower income households,National,proportion
+2019-20,19.8,Lower income households,owner_mortgage,buyer_first_home_total,Lower income households,National,proportion
+2019-20,29.3,Lower income households,owner_mortgage,buyer_changeover_new,Lower income households,National,proportion
+2019-20,35.5,Lower income households,owner_mortgage,buyer_changeover_established,Lower income households,National,proportion
+2019-20,34.9,Lower income households,owner_mortgage,buyer_changeover_total,Lower income households,National,proportion
+2019-20,23,Lower income households,owner_mortgage,buyer_all_recent_new,Lower income households,National,proportion
+2019-20,30.1,Lower income households,owner_mortgage,buyer_all_recent_established,Lower income households,National,proportion
+2019-20,29,Lower income households,owner_mortgage,buyer_all_recent_total,Lower income households,National,proportion
+2019-20,94.4,Employee Income,owner_mortgage,buyer_first_home_new,Employee Income,National,proportion
+2019-20,86,Employee Income,owner_mortgage,buyer_first_home_established,Employee Income,National,proportion
+2019-20,87.4,Employee Income,owner_mortgage,buyer_first_home_total,Employee Income,National,proportion
+2019-20,71.5,Employee Income,owner_mortgage,buyer_changeover_new,Employee Income,National,proportion
+2019-20,65.7,Employee Income,owner_mortgage,buyer_changeover_established,Employee Income,National,proportion
+2019-20,66.6,Employee Income,owner_mortgage,buyer_changeover_total,Employee Income,National,proportion
+2019-20,79.8,Employee Income,owner_mortgage,buyer_all_recent_new,Employee Income,National,proportion
+2019-20,73.2,Employee Income,owner_mortgage,buyer_all_recent_established,Employee Income,National,proportion
+2019-20,74.3,Employee Income,owner_mortgage,buyer_all_recent_total,Employee Income,National,proportion
+2019-20,3.8,Own unincorporated business income,owner_mortgage,buyer_first_home_new,Own unincorporated business income,National,proportion
+2019-20,3.7,Own unincorporated business income,owner_mortgage,buyer_first_home_established,Own unincorporated business income,National,proportion
+2019-20,4.5,Own unincorporated business income,owner_mortgage,buyer_first_home_total,Own unincorporated business income,National,proportion
+2019-20,3.7,Own unincorporated business income,owner_mortgage,buyer_changeover_new,Own unincorporated business income,National,proportion
+2019-20,3.6,Own unincorporated business income,owner_mortgage,buyer_changeover_established,Own unincorporated business income,National,proportion
+2019-20,3.4,Own unincorporated business income,owner_mortgage,buyer_changeover_total,Own unincorporated business income,National,proportion
+2019-20,3.4,Own unincorporated business income,owner_mortgage,buyer_all_recent_new,Own unincorporated business income,National,proportion
+2019-20,3.9,Own unincorporated business income,owner_mortgage,buyer_all_recent_established,Own unincorporated business income,National,proportion
+2019-20,3.9,Own unincorporated business income,owner_mortgage,buyer_all_recent_total,Own unincorporated business income,National,proportion
+2019-20,3.1,Government pensions and allowances,owner_mortgage,buyer_first_home_new,Government pensions and allowances,National,proportion
+2019-20,6.8,Government pensions and allowances,owner_mortgage,buyer_first_home_established,Government pensions and allowances,National,proportion
+2019-20,5.5,Government pensions and allowances,owner_mortgage,buyer_first_home_total,Government pensions and allowances,National,proportion
+2019-20,13.5,Government pensions and allowances,owner_mortgage,buyer_changeover_new,Government pensions and allowances,National,proportion
+2019-20,15.3,Government pensions and allowances,owner_mortgage,buyer_changeover_established,Government pensions and allowances,National,proportion
+2019-20,15.7,Government pensions and allowances,owner_mortgage,buyer_changeover_total,Government pensions and allowances,National,proportion
+2019-20,8.3,Government pensions and allowances,owner_mortgage,buyer_all_recent_new,Government pensions and allowances,National,proportion
+2019-20,12,Government pensions and allowances,owner_mortgage,buyer_all_recent_established,Government pensions and allowances,National,proportion
+2019-20,11.6,Government pensions and allowances,owner_mortgage,buyer_all_recent_total,Government pensions and allowances,National,proportion
+2019-20,3.2,Other income,owner_mortgage,buyer_first_home_new,Other income,National,proportion
+2019-20,2.8,Other income,owner_mortgage,buyer_first_home_established,Other income,National,proportion
+2019-20,2.7,Other income,owner_mortgage,buyer_first_home_total,Other income,National,proportion
+2019-20,9.3,Other income,owner_mortgage,buyer_changeover_new,Other income,National,proportion
+2019-20,14.2,Other income,owner_mortgage,buyer_changeover_established,Other income,National,proportion
+2019-20,13.7,Other income,owner_mortgage,buyer_changeover_total,Other income,National,proportion
+2019-20,7.6,Other income,owner_mortgage,buyer_all_recent_new,Other income,National,proportion
+2019-20,10,Other income,owner_mortgage,buyer_all_recent_established,Other income,National,proportion
+2019-20,9.5,Other income,owner_mortgage,buyer_all_recent_total,Other income,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_total,Total,National,proportion
+2019-20,4,None,owner_mortgage,buyer_first_home_new,None,National,proportion
+2019-20,5.7,None,owner_mortgage,buyer_first_home_established,None,National,proportion
+2019-20,4.2,None,owner_mortgage,buyer_first_home_total,None,National,proportion
+2019-20,20.4,None,owner_mortgage,buyer_changeover_new,None,National,proportion
+2019-20,25.7,None,owner_mortgage,buyer_changeover_established,None,National,proportion
+2019-20,25.3,None,owner_mortgage,buyer_changeover_total,None,National,proportion
+2019-20,11.4,None,owner_mortgage,buyer_all_recent_new,None,National,proportion
+2019-20,18.3,None,owner_mortgage,buyer_all_recent_established,None,National,proportion
+2019-20,17.4,None,owner_mortgage,buyer_all_recent_total,None,National,proportion
+2019-20,23.3,One,owner_mortgage,buyer_first_home_new,One,National,proportion
+2019-20,37,One,owner_mortgage,buyer_first_home_established,One,National,proportion
+2019-20,34.9,One,owner_mortgage,buyer_first_home_total,One,National,proportion
+2019-20,22.3,One,owner_mortgage,buyer_changeover_new,One,National,proportion
+2019-20,27.1,One,owner_mortgage,buyer_changeover_established,One,National,proportion
+2019-20,27,One,owner_mortgage,buyer_changeover_total,One,National,proportion
+2019-20,21.4,One,owner_mortgage,buyer_all_recent_new,One,National,proportion
+2019-20,31,One,owner_mortgage,buyer_all_recent_established,One,National,proportion
+2019-20,29.7,One,owner_mortgage,buyer_all_recent_total,One,National,proportion
+2019-20,72.4,Two,owner_mortgage,buyer_first_home_new,Two,National,proportion
+2019-20,52.5,Two,owner_mortgage,buyer_first_home_established,Two,National,proportion
+2019-20,56,Two,owner_mortgage,buyer_first_home_total,Two,National,proportion
+2019-20,47.4,Two,owner_mortgage,buyer_changeover_new,Two,National,proportion
+2019-20,37.9,Two,owner_mortgage,buyer_changeover_established,Two,National,proportion
+2019-20,39.3,Two,owner_mortgage,buyer_changeover_total,Two,National,proportion
+2019-20,58.1,Two,owner_mortgage,buyer_all_recent_new,Two,National,proportion
+2019-20,43.3,Two,owner_mortgage,buyer_all_recent_established,Two,National,proportion
+2019-20,45.4,Two,owner_mortgage,buyer_all_recent_total,Two,National,proportion
+2019-20,5.2,Three or more,owner_mortgage,buyer_first_home_new,Three or more,National,proportion
+2019-20,5.1,Three or more,owner_mortgage,buyer_first_home_established,Three or more,National,proportion
+2019-20,5.1,Three or more,owner_mortgage,buyer_first_home_total,Three or more,National,proportion
+2019-20,12.8,Three or more,owner_mortgage,buyer_changeover_new,Three or more,National,proportion
+2019-20,8.2,Three or more,owner_mortgage,buyer_changeover_established,Three or more,National,proportion
+2019-20,8.5,Three or more,owner_mortgage,buyer_changeover_total,Three or more,National,proportion
+2019-20,6.9,Three or more,owner_mortgage,buyer_all_recent_new,Three or more,National,proportion
+2019-20,6.9,Three or more,owner_mortgage,buyer_all_recent_established,Three or more,National,proportion
+2019-20,7.5,Three or more,owner_mortgage,buyer_all_recent_total,Three or more,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_first_home_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_changeover_total,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_new,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_established,Total,National,proportion
+2019-20,100,Total,owner_mortgage,buyer_all_recent_total,Total,National,proportion
+2019-20,18.1,Median ratio of housing costs to gross household income,owner_mortgage,buyer_first_home_new,Median ratio of housing costs to gross household income,National,proportion
+2019-20,19.1,Median ratio of housing costs to gross household income,owner_mortgage,buyer_first_home_established,Median ratio of housing costs to gross household income,National,proportion
+2019-20,19,Median ratio of housing costs to gross household income,owner_mortgage,buyer_first_home_total,Median ratio of housing costs to gross household income,National,proportion
+2019-20,10.1,Median ratio of housing costs to gross household income,owner_mortgage,buyer_changeover_new,Median ratio of housing costs to gross household income,National,proportion
+2019-20,13.2,Median ratio of housing costs to gross household income,owner_mortgage,buyer_changeover_established,Median ratio of housing costs to gross household income,National,proportion
+2019-20,12.5,Median ratio of housing costs to gross household income,owner_mortgage,buyer_changeover_total,Median ratio of housing costs to gross household income,National,proportion
+2019-20,14.9,Median ratio of housing costs to gross household income,owner_mortgage,buyer_all_recent_new,Median ratio of housing costs to gross household income,National,proportion
+2019-20,15.8,Median ratio of housing costs to gross household income,owner_mortgage,buyer_all_recent_established,Median ratio of housing costs to gross household income,National,proportion
+2019-20,15.5,Median ratio of housing costs to gross household income,owner_mortgage,buyer_all_recent_total,Median ratio of housing costs to gross household income,National,proportion
+2019-20,506,Median housing costs per week,owner_mortgage,buyer_first_home_new,Median housing costs per week,National,dollars
+2019-20,478,Median housing costs per week,owner_mortgage,buyer_first_home_established,Median housing costs per week,National,dollars
+2019-20,489,Median housing costs per week,owner_mortgage,buyer_first_home_total,Median housing costs per week,National,dollars
+2019-20,265,Median housing costs per week,owner_mortgage,buyer_changeover_new,Median housing costs per week,National,dollars
+2019-20,344,Median housing costs per week,owner_mortgage,buyer_changeover_established,Median housing costs per week,National,dollars
+2019-20,339,Median housing costs per week,owner_mortgage,buyer_changeover_total,Median housing costs per week,National,dollars
+2019-20,464,Median housing costs per week,owner_mortgage,buyer_all_recent_new,Median housing costs per week,National,dollars
+2019-20,388,Median housing costs per week,owner_mortgage,buyer_all_recent_established,Median housing costs per week,National,dollars
+2019-20,411,Median housing costs per week,owner_mortgage,buyer_all_recent_total,Median housing costs per week,National,dollars
+2019-20,372.1,Median amount of mortgage outstanding,owner_mortgage,buyer_first_home_new,Median amount of mortgage outstanding,National,count
+2019-20,375.5,Median amount of mortgage outstanding,owner_mortgage,buyer_first_home_established,Median amount of mortgage outstanding,National,count
+2019-20,376.7,Median amount of mortgage outstanding,owner_mortgage,buyer_first_home_total,Median amount of mortgage outstanding,National,count
+2019-20,217.5,Median amount of mortgage outstanding,owner_mortgage,buyer_changeover_new,Median amount of mortgage outstanding,National,count
+2019-20,236.7,Median amount of mortgage outstanding,owner_mortgage,buyer_changeover_established,Median amount of mortgage outstanding,National,count
+2019-20,240,Median amount of mortgage outstanding,owner_mortgage,buyer_changeover_total,Median amount of mortgage outstanding,National,count
+2019-20,341.9,Median amount of mortgage outstanding,owner_mortgage,buyer_all_recent_new,Median amount of mortgage outstanding,National,count
+2019-20,300,Median amount of mortgage outstanding,owner_mortgage,buyer_all_recent_established,Median amount of mortgage outstanding,National,count
+2019-20,311.5,Median amount of mortgage outstanding,owner_mortgage,buyer_all_recent_total,Median amount of mortgage outstanding,National,count
+2019-20,147.5,Median equity in dwelling,owner_mortgage,buyer_first_home_new,Median equity in dwelling,National,count
+2019-20,120.6,Median equity in dwelling,owner_mortgage,buyer_first_home_established,Median equity in dwelling,National,count
+2019-20,130,Median equity in dwelling,owner_mortgage,buyer_first_home_total,Median equity in dwelling,National,count
+2019-20,418.8,Median equity in dwelling,owner_mortgage,buyer_changeover_new,Median equity in dwelling,National,count
+2019-20,320.9,Median equity in dwelling,owner_mortgage,buyer_changeover_established,Median equity in dwelling,National,count
+2019-20,340.3,Median equity in dwelling,owner_mortgage,buyer_changeover_total,Median equity in dwelling,National,count
+2019-20,280.1,Median equity in dwelling,owner_mortgage,buyer_all_recent_new,Median equity in dwelling,National,count
+2019-20,225.9,Median equity in dwelling,owner_mortgage,buyer_all_recent_established,Median equity in dwelling,National,count
+2019-20,239.2,Median equity in dwelling,owner_mortgage,buyer_all_recent_total,Median equity in dwelling,National,count
+2019-20,637.4,Mean value of dwelling,owner_mortgage,buyer_first_home_new,Mean value of dwelling,National,count
+2019-20,573,Mean value of dwelling,owner_mortgage,buyer_first_home_established,Mean value of dwelling,National,count
+2019-20,582.1,Mean value of dwelling,owner_mortgage,buyer_first_home_total,Mean value of dwelling,National,count
+2019-20,847.4,Mean value of dwelling,owner_mortgage,buyer_changeover_new,Mean value of dwelling,National,count
+2019-20,763,Mean value of dwelling,owner_mortgage,buyer_changeover_established,Mean value of dwelling,National,count
+2019-20,772.7,Mean value of dwelling,owner_mortgage,buyer_changeover_total,Mean value of dwelling,National,count
+2019-20,742.8,Mean value of dwelling,owner_mortgage,buyer_all_recent_new,Mean value of dwelling,National,count
+2019-20,696.3,Mean value of dwelling,owner_mortgage,buyer_all_recent_established,Mean value of dwelling,National,count
+2019-20,701.4,Mean value of dwelling,owner_mortgage,buyer_all_recent_total,Mean value of dwelling,National,count
+2019-20,380.5,Mean amount of mortgage outstanding,owner_mortgage,buyer_first_home_new,Mean amount of mortgage outstanding,National,count
+2019-20,384.6,Mean amount of mortgage outstanding,owner_mortgage,buyer_first_home_established,Mean amount of mortgage outstanding,National,count
+2019-20,384.4,Mean amount of mortgage outstanding,owner_mortgage,buyer_first_home_total,Mean amount of mortgage outstanding,National,count
+2019-20,353.3,Mean amount of mortgage outstanding,owner_mortgage,buyer_changeover_new,Mean amount of mortgage outstanding,National,count
+2019-20,306.4,Mean amount of mortgage outstanding,owner_mortgage,buyer_changeover_established,Mean amount of mortgage outstanding,National,count
+2019-20,311.1,Mean amount of mortgage outstanding,owner_mortgage,buyer_changeover_total,Mean amount of mortgage outstanding,National,count
+2019-20,365.1,Mean amount of mortgage outstanding,owner_mortgage,buyer_all_recent_new,Mean amount of mortgage outstanding,National,count
+2019-20,334.2,Mean amount of mortgage outstanding,owner_mortgage,buyer_all_recent_established,Mean amount of mortgage outstanding,National,count
+2019-20,337.8,Mean amount of mortgage outstanding,owner_mortgage,buyer_all_recent_total,Mean amount of mortgage outstanding,National,count
+2019-20,262.5,Mean equity in dwelling,owner_mortgage,buyer_first_home_new,Mean equity in dwelling,National,count
+2019-20,192.2,Mean equity in dwelling,owner_mortgage,buyer_first_home_established,Mean equity in dwelling,National,count
+2019-20,201.1,Mean equity in dwelling,owner_mortgage,buyer_first_home_total,Mean equity in dwelling,National,count
+2019-20,487.9,Mean equity in dwelling,owner_mortgage,buyer_changeover_new,Mean equity in dwelling,National,count
+2019-20,455.3,Mean equity in dwelling,owner_mortgage,buyer_changeover_established,Mean equity in dwelling,National,count
+2019-20,460.9,Mean equity in dwelling,owner_mortgage,buyer_changeover_total,Mean equity in dwelling,National,count
+2019-20,385.7,Mean equity in dwelling,owner_mortgage,buyer_all_recent_new,Mean equity in dwelling,National,count
+2019-20,361.2,Mean equity in dwelling,owner_mortgage,buyer_all_recent_established,Mean equity in dwelling,National,count
+2019-20,363.2,Mean equity in dwelling,owner_mortgage,buyer_all_recent_total,Mean equity in dwelling,National,count
+2019-20,3.2,Mean number of persons in household,owner_mortgage,buyer_first_home_new,Mean number of persons in household,National,count
+2019-20,2.6,Mean number of persons in household,owner_mortgage,buyer_first_home_established,Mean number of persons in household,National,count
+2019-20,2.7,Mean number of persons in household,owner_mortgage,buyer_first_home_total,Mean number of persons in household,National,count
+2019-20,3.2,Mean number of persons in household,owner_mortgage,buyer_changeover_new,Mean number of persons in household,National,count
+2019-20,2.7,Mean number of persons in household,owner_mortgage,buyer_changeover_established,Mean number of persons in household,National,count
+2019-20,2.7,Mean number of persons in household,owner_mortgage,buyer_changeover_total,Mean number of persons in household,National,count
+2019-20,3.2,Mean number of persons in household,owner_mortgage,buyer_all_recent_new,Mean number of persons in household,National,count
+2019-20,2.6,Mean number of persons in household,owner_mortgage,buyer_all_recent_established,Mean number of persons in household,National,count
+2019-20,2.7,Mean number of persons in household,owner_mortgage,buyer_all_recent_total,Mean number of persons in household,National,count
+2019-20,1.9,Mean number of employed persons in household,owner_mortgage,buyer_first_home_new,Mean number of employed persons in household,National,count
+2019-20,1.6,Mean number of employed persons in household,owner_mortgage,buyer_first_home_established,Mean number of employed persons in household,National,count
+2019-20,1.6,Mean number of employed persons in household,owner_mortgage,buyer_first_home_total,Mean number of employed persons in household,National,count
+2019-20,1.5,Mean number of employed persons in household,owner_mortgage,buyer_changeover_new,Mean number of employed persons in household,National,count
+2019-20,1.4,Mean number of employed persons in household,owner_mortgage,buyer_changeover_established,Mean number of employed persons in household,National,count
+2019-20,1.4,Mean number of employed persons in household,owner_mortgage,buyer_changeover_total,Mean number of employed persons in household,National,count
+2019-20,1.7,Mean number of employed persons in household,owner_mortgage,buyer_all_recent_new,Mean number of employed persons in household,National,count
+2019-20,1.4,Mean number of employed persons in household,owner_mortgage,buyer_all_recent_established,Mean number of employed persons in household,National,count
+2019-20,1.5,Mean number of employed persons in household,owner_mortgage,buyer_all_recent_total,Mean number of employed persons in household,National,count
+2019-20,3.8,Mean number of bedrooms in dwelling,owner_mortgage,buyer_first_home_new,Mean number of bedrooms in dwelling,National,count
+2019-20,3,Mean number of bedrooms in dwelling,owner_mortgage,buyer_first_home_established,Mean number of bedrooms in dwelling,National,count
+2019-20,3.2,Mean number of bedrooms in dwelling,owner_mortgage,buyer_first_home_total,Mean number of bedrooms in dwelling,National,count
+2019-20,3.9,Mean number of bedrooms in dwelling,owner_mortgage,buyer_changeover_new,Mean number of bedrooms in dwelling,National,count
+2019-20,3.3,Mean number of bedrooms in dwelling,owner_mortgage,buyer_changeover_established,Mean number of bedrooms in dwelling,National,count
+2019-20,3.4,Mean number of bedrooms in dwelling,owner_mortgage,buyer_changeover_total,Mean number of bedrooms in dwelling,National,count
+2019-20,3.9,Mean number of bedrooms in dwelling,owner_mortgage,buyer_all_recent_new,Mean number of bedrooms in dwelling,National,count
+2019-20,3.2,Mean number of bedrooms in dwelling,owner_mortgage,buyer_all_recent_established,Mean number of bedrooms in dwelling,National,count
+2019-20,3.3,Mean number of bedrooms in dwelling,owner_mortgage,buyer_all_recent_total,Mean number of bedrooms in dwelling,National,count
+2019-20,34,Mean age of household reference person,owner_mortgage,buyer_first_home_new,Mean age of household reference person,National,count
+2019-20,35,Mean age of household reference person,owner_mortgage,buyer_first_home_established,Mean age of household reference person,National,count
+2019-20,35,Mean age of household reference person,owner_mortgage,buyer_first_home_total,Mean age of household reference person,National,count
+2019-20,50,Mean age of household reference person,owner_mortgage,buyer_changeover_new,Mean age of household reference person,National,count
+2019-20,52,Mean age of household reference person,owner_mortgage,buyer_changeover_established,Mean age of household reference person,National,count
+2019-20,52,Mean age of household reference person,owner_mortgage,buyer_changeover_total,Mean age of household reference person,National,count
+2019-20,43,Mean age of household reference person,owner_mortgage,buyer_all_recent_new,Mean age of household reference person,National,count
+2019-20,46,Mean age of household reference person,owner_mortgage,buyer_all_recent_established,Mean age of household reference person,National,count
+2019-20,45,Mean age of household reference person,owner_mortgage,buyer_all_recent_total,Mean age of household reference person,National,count
+2019-20,72.2,Estimated number of households,owner_mortgage,buyer_first_home_new,Estimated number of households,National,count
+2019-20,345.4,Estimated number of households,owner_mortgage,buyer_first_home_established,Estimated number of households,National,count
+2019-20,420.1,Estimated number of households,owner_mortgage,buyer_first_home_total,Estimated number of households,National,count
+2019-20,86.5,Estimated number of households,owner_mortgage,buyer_changeover_new,Estimated number of households,National,count
+2019-20,607.1,Estimated number of households,owner_mortgage,buyer_changeover_established,Estimated number of households,National,count
+2019-20,692.1,Estimated number of households,owner_mortgage,buyer_changeover_total,Estimated number of households,National,count
+2019-20,162.1,Estimated number of households,owner_mortgage,buyer_all_recent_new,Estimated number of households,National,count
+2019-20,952.6,Estimated number of households,owner_mortgage,buyer_all_recent_established,Estimated number of households,National,count
+2019-20,1115,Estimated number of households,owner_mortgage,buyer_all_recent_total,Estimated number of households,National,count
+2019-20,86,Number of households in sample,owner_mortgage,buyer_first_home_new,Number of households in sample,National,count
+2019-20,479,Number of households in sample,owner_mortgage,buyer_first_home_established,Number of households in sample,National,count
+2019-20,565,Number of households in sample,owner_mortgage,buyer_first_home_total,Number of households in sample,National,count
+2019-20,110,Number of households in sample,owner_mortgage,buyer_changeover_new,Number of households in sample,National,count
+2019-20,949,Number of households in sample,owner_mortgage,buyer_changeover_established,Number of households in sample,National,count
+2019-20,1059,Number of households in sample,owner_mortgage,buyer_changeover_total,Number of households in sample,National,count
+2019-20,196,Number of households in sample,owner_mortgage,buyer_all_recent_new,Number of households in sample,National,count
+2019-20,1428,Number of households in sample,owner_mortgage,buyer_all_recent_established,Number of households in sample,National,count
+2019-20,1624,Number of households in sample,owner_mortgage,buyer_all_recent_total,Number of households in sample,National,count
+2019-20,3.5,Owner without a mortgage,owner_mortgage,buyer_first_home_established,Owner without a mortgage,National,count
+2019-20,3,Owner without a mortgage,owner_mortgage,buyer_first_home_total,Owner without a mortgage,National,count
+2019-20,15,Owner without a mortgage,owner_mortgage,buyer_changeover_new,Owner without a mortgage,National,count
+2019-20,4.9,Owner without a mortgage,owner_mortgage,buyer_changeover_established,Owner without a mortgage,National,count
+2019-20,4.7,Owner without a mortgage,owner_mortgage,buyer_changeover_total,Owner without a mortgage,National,count
+2019-20,8.6,Owner without a mortgage,owner_mortgage,buyer_all_recent_new,Owner without a mortgage,National,count
+2019-20,3.7,Owner without a mortgage,owner_mortgage,buyer_all_recent_established,Owner without a mortgage,National,count
+2019-20,3.5,Owner without a mortgage,owner_mortgage,buyer_all_recent_total,Owner without a mortgage,National,count
+2019-20,0,Owner with a mortgage,owner_mortgage,buyer_first_home_new,Owner with a mortgage,National,count
+2019-20,4.4,Owner with a mortgage,owner_mortgage,buyer_first_home_established,Owner with a mortgage,National,count
+2019-20,4.9,Owner with a mortgage,owner_mortgage,buyer_first_home_total,Owner with a mortgage,National,count
+2019-20,12.3,Owner with a mortgage,owner_mortgage,buyer_changeover_new,Owner with a mortgage,National,count
+2019-20,4.5,Owner with a mortgage,owner_mortgage,buyer_changeover_established,Owner with a mortgage,National,count
+2019-20,5,Owner with a mortgage,owner_mortgage,buyer_changeover_total,Owner with a mortgage,National,count
+2019-20,4.7,Owner with a mortgage,owner_mortgage,buyer_all_recent_new,Owner with a mortgage,National,count
+2019-20,3.1,Owner with a mortgage,owner_mortgage,buyer_all_recent_established,Owner with a mortgage,National,count
+2019-20,2.9,Owner with a mortgage,owner_mortgage,buyer_all_recent_total,Owner with a mortgage,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_total,Total,National,count
+2019-20,15.9,Couple family with dependent children,owner_mortgage,buyer_first_home_new,Couple family with dependent children,National,count
+2019-20,7.2,Couple family with dependent children,owner_mortgage,buyer_first_home_established,Couple family with dependent children,National,count
+2019-20,6.5,Couple family with dependent children,owner_mortgage,buyer_first_home_total,Couple family with dependent children,National,count
+2019-20,12.7,Couple family with dependent children,owner_mortgage,buyer_changeover_new,Couple family with dependent children,National,count
+2019-20,3.8,Couple family with dependent children,owner_mortgage,buyer_changeover_established,Couple family with dependent children,National,count
+2019-20,4,Couple family with dependent children,owner_mortgage,buyer_changeover_total,Couple family with dependent children,National,count
+2019-20,9.9,Couple family with dependent children,owner_mortgage,buyer_all_recent_new,Couple family with dependent children,National,count
+2019-20,3.1,Couple family with dependent children,owner_mortgage,buyer_all_recent_established,Couple family with dependent children,National,count
+2019-20,3.5,Couple family with dependent children,owner_mortgage,buyer_all_recent_total,Couple family with dependent children,National,count
+2019-20,3,One parent family with dependent children,owner_mortgage,buyer_first_home_established,One parent family with dependent children,National,count
+2019-20,2.5,One parent family with dependent children,owner_mortgage,buyer_first_home_total,One parent family with dependent children,National,count
+2019-20,2,One parent family with dependent children,owner_mortgage,buyer_changeover_established,One parent family with dependent children,National,count
+2019-20,1.9,One parent family with dependent children,owner_mortgage,buyer_changeover_total,One parent family with dependent children,National,count
+2019-20,1.6,One parent family with dependent children,owner_mortgage,buyer_all_recent_established,One parent family with dependent children,National,count
+2019-20,1.4,One parent family with dependent children,owner_mortgage,buyer_all_recent_total,One parent family with dependent children,National,count
+2019-20,11.4,Couple only,owner_mortgage,buyer_first_home_new,Couple only,National,count
+2019-20,4,Couple only,owner_mortgage,buyer_first_home_established,Couple only,National,count
+2019-20,3.6,Couple only,owner_mortgage,buyer_first_home_total,Couple only,National,count
+2019-20,13.2,Couple only,owner_mortgage,buyer_changeover_new,Couple only,National,count
+2019-20,4.1,Couple only,owner_mortgage,buyer_changeover_established,Couple only,National,count
+2019-20,3.6,Couple only,owner_mortgage,buyer_changeover_total,Couple only,National,count
+2019-20,7.7,Couple only,owner_mortgage,buyer_all_recent_new,Couple only,National,count
+2019-20,2.9,Couple only,owner_mortgage,buyer_all_recent_established,Couple only,National,count
+2019-20,2.5,Couple only,owner_mortgage,buyer_all_recent_total,Couple only,National,count
+2019-20,3.6,Other one family households,owner_mortgage,buyer_first_home_established,Other one family households,National,count
+2019-20,3.1,Other one family households,owner_mortgage,buyer_first_home_total,Other one family households,National,count
+2019-20,8.7,Other one family households,owner_mortgage,buyer_changeover_new,Other one family households,National,count
+2019-20,2.6,Other one family households,owner_mortgage,buyer_changeover_established,Other one family households,National,count
+2019-20,2.5,Other one family households,owner_mortgage,buyer_changeover_total,Other one family households,National,count
+2019-20,5.4,Other one family households,owner_mortgage,buyer_all_recent_new,Other one family households,National,count
+2019-20,2,Other one family households,owner_mortgage,buyer_all_recent_established,Other one family households,National,count
+2019-20,1.9,Other one family households,owner_mortgage,buyer_all_recent_total,Other one family households,National,count
+2019-20,0,Multiple family households,owner_mortgage,buyer_changeover_new,Multiple family households,National,count
+2019-20,1.2,Multiple family households,owner_mortgage,buyer_all_recent_established,Multiple family households,National,count
+2019-20,1,Multiple family households,owner_mortgage,buyer_all_recent_total,Multiple family households,National,count
+2019-20,5.1,Lone person households,owner_mortgage,buyer_first_home_established,Lone person households,National,count
+2019-20,4.5,Lone person households,owner_mortgage,buyer_first_home_total,Lone person households,National,count
+2019-20,4.4,Lone person households,owner_mortgage,buyer_changeover_new,Lone person households,National,count
+2019-20,3.3,Lone person households,owner_mortgage,buyer_changeover_established,Lone person households,National,count
+2019-20,2.8,Lone person households,owner_mortgage,buyer_changeover_total,Lone person households,National,count
+2019-20,4.1,Lone person households,owner_mortgage,buyer_all_recent_new,Lone person households,National,count
+2019-20,2.5,Lone person households,owner_mortgage,buyer_all_recent_established,Lone person households,National,count
+2019-20,2,Lone person households,owner_mortgage,buyer_all_recent_total,Lone person households,National,count
+2019-20,1.9,Group households,owner_mortgage,buyer_first_home_established,Group households,National,count
+2019-20,0.7,Group households,owner_mortgage,buyer_changeover_established,Group households,National,count
+2019-20,0.7,Group households,owner_mortgage,buyer_all_recent_established,Group households,National,count
+2019-20,0.8,Group households,owner_mortgage,buyer_all_recent_total,Group households,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_total,Total,National,count
+2019-20,0,Separate house,owner_mortgage,buyer_first_home_new,Separate house,National,count
+2019-20,6.6,Separate house,owner_mortgage,buyer_first_home_established,Separate house,National,count
+2019-20,6.8,Separate house,owner_mortgage,buyer_first_home_total,Separate house,National,count
+2019-20,13.8,Separate house,owner_mortgage,buyer_changeover_new,Separate house,National,count
+2019-20,3.2,Separate house,owner_mortgage,buyer_changeover_established,Separate house,National,count
+2019-20,2.9,Separate house,owner_mortgage,buyer_changeover_total,Separate house,National,count
+2019-20,8.5,Separate house,owner_mortgage,buyer_all_recent_new,Separate house,National,count
+2019-20,2.6,Separate house,owner_mortgage,buyer_all_recent_established,Separate house,National,count
+2019-20,2.5,Separate house,owner_mortgage,buyer_all_recent_total,Separate house,National,count
+2019-20,5.2,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_first_home_established,"Semi-detached, row or terrace house, townhouse",National,count
+2019-20,4.8,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_first_home_total,"Semi-detached, row or terrace house, townhouse",National,count
+2019-20,7.7,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_changeover_new,"Semi-detached, row or terrace house, townhouse",National,count
+2019-20,3.5,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_changeover_established,"Semi-detached, row or terrace house, townhouse",National,count
+2019-20,3.2,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_changeover_total,"Semi-detached, row or terrace house, townhouse",National,count
+2019-20,5.7,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_all_recent_new,"Semi-detached, row or terrace house, townhouse",National,count
+2019-20,2.7,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_all_recent_established,"Semi-detached, row or terrace house, townhouse",National,count
+2019-20,2.6,"Semi-detached, row or terrace house, townhouse",owner_mortgage,buyer_all_recent_total,"Semi-detached, row or terrace house, townhouse",National,count
+2019-20,5.3,Flat or apartment,owner_mortgage,buyer_first_home_established,Flat or apartment,National,count
+2019-20,4.4,Flat or apartment,owner_mortgage,buyer_first_home_total,Flat or apartment,National,count
+2019-20,0,Flat or apartment,owner_mortgage,buyer_changeover_new,Flat or apartment,National,count
+2019-20,3.2,Flat or apartment,owner_mortgage,buyer_changeover_established,Flat or apartment,National,count
+2019-20,2.8,Flat or apartment,owner_mortgage,buyer_changeover_total,Flat or apartment,National,count
+2019-20,2.9,Flat or apartment,owner_mortgage,buyer_all_recent_established,Flat or apartment,National,count
+2019-20,2.4,Flat or apartment,owner_mortgage,buyer_all_recent_total,Flat or apartment,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_total,Total,National,count
+2019-20,6,15 to 24,owner_mortgage,buyer_first_home_new,15 to 24,National,count
+2019-20,2.9,15 to 24,owner_mortgage,buyer_first_home_established,15 to 24,National,count
+2019-20,2.6,15 to 24,owner_mortgage,buyer_first_home_total,15 to 24,National,count
+2019-20,0.6,15 to 24,owner_mortgage,buyer_changeover_total,15 to 24,National,count
+2019-20,2.7,15 to 24,owner_mortgage,buyer_all_recent_new,15 to 24,National,count
+2019-20,1.2,15 to 24,owner_mortgage,buyer_all_recent_established,15 to 24,National,count
+2019-20,1.1,15 to 24,owner_mortgage,buyer_all_recent_total,15 to 24,National,count
+2019-20,13.3,25 to 34,owner_mortgage,buyer_first_home_new,25 to 34,National,count
+2019-20,4.3,25 to 34,owner_mortgage,buyer_first_home_established,25 to 34,National,count
+2019-20,5.4,25 to 34,owner_mortgage,buyer_first_home_total,25 to 34,National,count
+2019-20,7.7,25 to 34,owner_mortgage,buyer_changeover_new,25 to 34,National,count
+2019-20,2.8,25 to 34,owner_mortgage,buyer_changeover_established,25 to 34,National,count
+2019-20,2.8,25 to 34,owner_mortgage,buyer_changeover_total,25 to 34,National,count
+2019-20,9.3,25 to 34,owner_mortgage,buyer_all_recent_new,25 to 34,National,count
+2019-20,2.7,25 to 34,owner_mortgage,buyer_all_recent_established,25 to 34,National,count
+2019-20,2.6,25 to 34,owner_mortgage,buyer_all_recent_total,25 to 34,National,count
+2019-20,14.5,35 to 44,owner_mortgage,buyer_first_home_new,35 to 44,National,count
+2019-20,6.2,35 to 44,owner_mortgage,buyer_first_home_established,35 to 44,National,count
+2019-20,5.4,35 to 44,owner_mortgage,buyer_first_home_total,35 to 44,National,count
+2019-20,12.9,35 to 44,owner_mortgage,buyer_changeover_new,35 to 44,National,count
+2019-20,3.8,35 to 44,owner_mortgage,buyer_changeover_established,35 to 44,National,count
+2019-20,4,35 to 44,owner_mortgage,buyer_changeover_total,35 to 44,National,count
+2019-20,9.3,35 to 44,owner_mortgage,buyer_all_recent_new,35 to 44,National,count
+2019-20,2.7,35 to 44,owner_mortgage,buyer_all_recent_established,35 to 44,National,count
+2019-20,2.6,35 to 44,owner_mortgage,buyer_all_recent_total,35 to 44,National,count
+2019-20,7.2,45 to 54,owner_mortgage,buyer_first_home_new,45 to 54,National,count
+2019-20,3.1,45 to 54,owner_mortgage,buyer_first_home_established,45 to 54,National,count
+2019-20,2.5,45 to 54,owner_mortgage,buyer_first_home_total,45 to 54,National,count
+2019-20,12.3,45 to 54,owner_mortgage,buyer_changeover_new,45 to 54,National,count
+2019-20,3.5,45 to 54,owner_mortgage,buyer_changeover_established,45 to 54,National,count
+2019-20,3.5,45 to 54,owner_mortgage,buyer_changeover_total,45 to 54,National,count
+2019-20,7.4,45 to 54,owner_mortgage,buyer_all_recent_new,45 to 54,National,count
+2019-20,2.6,45 to 54,owner_mortgage,buyer_all_recent_established,45 to 54,National,count
+2019-20,2.3,45 to 54,owner_mortgage,buyer_all_recent_total,45 to 54,National,count
+2019-20,2.2,55 to 64,owner_mortgage,buyer_first_home_established,55 to 64,National,count
+2019-20,1.9,55 to 64,owner_mortgage,buyer_first_home_total,55 to 64,National,count
+2019-20,7.9,55 to 64,owner_mortgage,buyer_changeover_new,55 to 64,National,count
+2019-20,3.6,55 to 64,owner_mortgage,buyer_changeover_established,55 to 64,National,count
+2019-20,3.2,55 to 64,owner_mortgage,buyer_changeover_total,55 to 64,National,count
+2019-20,4.6,55 to 64,owner_mortgage,buyer_all_recent_new,55 to 64,National,count
+2019-20,2.5,55 to 64,owner_mortgage,buyer_all_recent_established,55 to 64,National,count
+2019-20,2.2,55 to 64,owner_mortgage,buyer_all_recent_total,55 to 64,National,count
+2019-20,10.9,65 and over,owner_mortgage,buyer_changeover_new,65 and over,National,count
+2019-20,4,65 and over,owner_mortgage,buyer_changeover_established,65 and over,National,count
+2019-20,3.8,65 and over,owner_mortgage,buyer_changeover_total,65 and over,National,count
+2019-20,6.3,65 and over,owner_mortgage,buyer_all_recent_new,65 and over,National,count
+2019-20,2.7,65 and over,owner_mortgage,buyer_all_recent_established,65 and over,National,count
+2019-20,2.4,65 and over,owner_mortgage,buyer_all_recent_total,65 and over,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_total,Total,National,count
+2019-20,13.7,25% or less,owner_mortgage,buyer_first_home_new,25% or less,National,count
+2019-20,6.4,25% or less,owner_mortgage,buyer_first_home_established,25% or less,National,count
+2019-20,6.1,25% or less,owner_mortgage,buyer_first_home_total,25% or less,National,count
+2019-20,12.7,25% or less,owner_mortgage,buyer_changeover_new,25% or less,National,count
+2019-20,3.3,25% or less,owner_mortgage,buyer_changeover_established,25% or less,National,count
+2019-20,2.1,25% or less,owner_mortgage,buyer_changeover_total,25% or less,National,count
+2019-20,10,25% or less,owner_mortgage,buyer_all_recent_new,25% or less,National,count
+2019-20,3.3,25% or less,owner_mortgage,buyer_all_recent_established,25% or less,National,count
+2019-20,2.9,25% or less,owner_mortgage,buyer_all_recent_total,25% or less,National,count
+2019-20,8.8,More than 25% to 30%,owner_mortgage,buyer_first_home_new,More than 25% to 30%,National,count
+2019-20,4.5,More than 25% to 30%,owner_mortgage,buyer_first_home_established,More than 25% to 30%,National,count
+2019-20,4,More than 25% to 30%,owner_mortgage,buyer_first_home_total,More than 25% to 30%,National,count
+2019-20,6.8,More than 25% to 30%,owner_mortgage,buyer_changeover_new,More than 25% to 30%,National,count
+2019-20,2.1,More than 25% to 30%,owner_mortgage,buyer_changeover_established,More than 25% to 30%,National,count
+2019-20,2,More than 25% to 30%,owner_mortgage,buyer_changeover_total,More than 25% to 30%,National,count
+2019-20,5.3,More than 25% to 30%,owner_mortgage,buyer_all_recent_new,More than 25% to 30%,National,count
+2019-20,2,More than 25% to 30%,owner_mortgage,buyer_all_recent_established,More than 25% to 30%,National,count
+2019-20,1.9,More than 25% to 30%,owner_mortgage,buyer_all_recent_total,More than 25% to 30%,National,count
+2019-20,4,More than 30% to 50%,owner_mortgage,buyer_first_home_established,More than 30% to 50%,National,count
+2019-20,4.1,More than 30% to 50%,owner_mortgage,buyer_first_home_total,More than 30% to 50%,National,count
+2019-20,4.5,More than 30% to 50%,owner_mortgage,buyer_changeover_new,More than 30% to 50%,National,count
+2019-20,2.3,More than 30% to 50%,owner_mortgage,buyer_changeover_established,More than 30% to 50%,National,count
+2019-20,2.2,More than 30% to 50%,owner_mortgage,buyer_changeover_total,More than 30% to 50%,National,count
+2019-20,7.1,More than 30% to 50%,owner_mortgage,buyer_all_recent_new,More than 30% to 50%,National,count
+2019-20,2.2,More than 30% to 50%,owner_mortgage,buyer_all_recent_established,More than 30% to 50%,National,count
+2019-20,2.2,More than 30% to 50%,owner_mortgage,buyer_all_recent_total,More than 30% to 50%,National,count
+2019-20,2.1,More than 50%,owner_mortgage,buyer_first_home_established,More than 50%,National,count
+2019-20,2,More than 50%,owner_mortgage,buyer_first_home_total,More than 50%,National,count
+2019-20,8.4,More than 50%,owner_mortgage,buyer_changeover_new,More than 50%,National,count
+2019-20,2.1,More than 50%,owner_mortgage,buyer_changeover_established,More than 50%,National,count
+2019-20,2.2,More than 50%,owner_mortgage,buyer_changeover_total,More than 50%,National,count
+2019-20,5.3,More than 50%,owner_mortgage,buyer_all_recent_new,More than 50%,National,count
+2019-20,1.7,More than 50%,owner_mortgage,buyer_all_recent_established,More than 50%,National,count
+2019-20,1.6,More than 50%,owner_mortgage,buyer_all_recent_total,More than 50%,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_total,Total,National,count
+2019-20,3.5,Lowest quintile,owner_mortgage,buyer_first_home_established,Lowest quintile,National,count
+2019-20,2.9,Lowest quintile,owner_mortgage,buyer_first_home_total,Lowest quintile,National,count
+2019-20,10.6,Lowest quintile,owner_mortgage,buyer_changeover_new,Lowest quintile,National,count
+2019-20,3.8,Lowest quintile,owner_mortgage,buyer_changeover_established,Lowest quintile,National,count
+2019-20,3.5,Lowest quintile,owner_mortgage,buyer_changeover_total,Lowest quintile,National,count
+2019-20,6.2,Lowest quintile,owner_mortgage,buyer_all_recent_new,Lowest quintile,National,count
+2019-20,2.9,Lowest quintile,owner_mortgage,buyer_all_recent_established,Lowest quintile,National,count
+2019-20,2.5,Lowest quintile,owner_mortgage,buyer_all_recent_total,Lowest quintile,National,count
+2019-20,3.8,Second quintile,owner_mortgage,buyer_first_home_established,Second quintile,National,count
+2019-20,3.2,Second quintile,owner_mortgage,buyer_first_home_total,Second quintile,National,count
+2019-20,12.2,Second quintile,owner_mortgage,buyer_changeover_new,Second quintile,National,count
+2019-20,3.2,Second quintile,owner_mortgage,buyer_changeover_established,Second quintile,National,count
+2019-20,3.1,Second quintile,owner_mortgage,buyer_changeover_total,Second quintile,National,count
+2019-20,6.7,Second quintile,owner_mortgage,buyer_all_recent_new,Second quintile,National,count
+2019-20,2.4,Second quintile,owner_mortgage,buyer_all_recent_established,Second quintile,National,count
+2019-20,2.4,Second quintile,owner_mortgage,buyer_all_recent_total,Second quintile,National,count
+2019-20,13,Third quintile,owner_mortgage,buyer_first_home_new,Third quintile,National,count
+2019-20,4.9,Third quintile,owner_mortgage,buyer_first_home_established,Third quintile,National,count
+2019-20,4.9,Third quintile,owner_mortgage,buyer_first_home_total,Third quintile,National,count
+2019-20,9.5,Third quintile,owner_mortgage,buyer_changeover_new,Third quintile,National,count
+2019-20,3.6,Third quintile,owner_mortgage,buyer_changeover_established,Third quintile,National,count
+2019-20,3.6,Third quintile,owner_mortgage,buyer_changeover_total,Third quintile,National,count
+2019-20,6.9,Third quintile,owner_mortgage,buyer_all_recent_new,Third quintile,National,count
+2019-20,3,Third quintile,owner_mortgage,buyer_all_recent_established,Third quintile,National,count
+2019-20,3,Third quintile,owner_mortgage,buyer_all_recent_total,Third quintile,National,count
+2019-20,12.8,Fourth quintile,owner_mortgage,buyer_first_home_new,Fourth quintile,National,count
+2019-20,5.4,Fourth quintile,owner_mortgage,buyer_first_home_established,Fourth quintile,National,count
+2019-20,5.2,Fourth quintile,owner_mortgage,buyer_first_home_total,Fourth quintile,National,count
+2019-20,9.1,Fourth quintile,owner_mortgage,buyer_changeover_new,Fourth quintile,National,count
+2019-20,3.2,Fourth quintile,owner_mortgage,buyer_changeover_established,Fourth quintile,National,count
+2019-20,3.3,Fourth quintile,owner_mortgage,buyer_changeover_total,Fourth quintile,National,count
+2019-20,8.4,Fourth quintile,owner_mortgage,buyer_all_recent_new,Fourth quintile,National,count
+2019-20,2.7,Fourth quintile,owner_mortgage,buyer_all_recent_established,Fourth quintile,National,count
+2019-20,2.9,Fourth quintile,owner_mortgage,buyer_all_recent_total,Fourth quintile,National,count
+2019-20,12.3,Highest quintile,owner_mortgage,buyer_first_home_new,Highest quintile,National,count
+2019-20,4.6,Highest quintile,owner_mortgage,buyer_first_home_established,Highest quintile,National,count
+2019-20,4.7,Highest quintile,owner_mortgage,buyer_first_home_total,Highest quintile,National,count
+2019-20,9.6,Highest quintile,owner_mortgage,buyer_changeover_new,Highest quintile,National,count
+2019-20,3.7,Highest quintile,owner_mortgage,buyer_changeover_established,Highest quintile,National,count
+2019-20,3.5,Highest quintile,owner_mortgage,buyer_changeover_total,Highest quintile,National,count
+2019-20,7.8,Highest quintile,owner_mortgage,buyer_all_recent_new,Highest quintile,National,count
+2019-20,3,Highest quintile,owner_mortgage,buyer_all_recent_established,Highest quintile,National,count
+2019-20,2.8,Highest quintile,owner_mortgage,buyer_all_recent_total,Highest quintile,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_total,Total,National,count
+2019-20,9.6,Lower income households,owner_mortgage,buyer_first_home_new,Lower income households,National,count
+2019-20,5.5,Lower income households,owner_mortgage,buyer_first_home_established,Lower income households,National,count
+2019-20,4.5,Lower income households,owner_mortgage,buyer_first_home_total,Lower income households,National,count
+2019-20,14.2,Lower income households,owner_mortgage,buyer_changeover_new,Lower income households,National,count
+2019-20,3.8,Lower income households,owner_mortgage,buyer_changeover_established,Lower income households,National,count
+2019-20,3.7,Lower income households,owner_mortgage,buyer_changeover_total,Lower income households,National,count
+2019-20,7.8,Lower income households,owner_mortgage,buyer_all_recent_new,Lower income households,National,count
+2019-20,3.4,Lower income households,owner_mortgage,buyer_all_recent_established,Lower income households,National,count
+2019-20,3.3,Lower income households,owner_mortgage,buyer_all_recent_total,Lower income households,National,count
+2019-20,10.9,Employee Income,owner_mortgage,buyer_first_home_new,Employee Income,National,count
+2019-20,3.7,Employee Income,owner_mortgage,buyer_first_home_established,Employee Income,National,count
+2019-20,5,Employee Income,owner_mortgage,buyer_first_home_total,Employee Income,National,count
+2019-20,2.7,Employee Income,owner_mortgage,buyer_changeover_new,Employee Income,National,count
+2019-20,4.1,Employee Income,owner_mortgage,buyer_changeover_established,Employee Income,National,count
+2019-20,4.8,Employee Income,owner_mortgage,buyer_changeover_total,Employee Income,National,count
+2019-20,5.3,Employee Income,owner_mortgage,buyer_all_recent_new,Employee Income,National,count
+2019-20,2.2,Employee Income,owner_mortgage,buyer_all_recent_established,Employee Income,National,count
+2019-20,2.6,Employee Income,owner_mortgage,buyer_all_recent_total,Employee Income,National,count
+2019-20,3.6,Own unincorporated business income,owner_mortgage,buyer_first_home_new,Own unincorporated business income,National,count
+2019-20,3,Own unincorporated business income,owner_mortgage,buyer_first_home_established,Own unincorporated business income,National,count
+2019-20,2.5,Own unincorporated business income,owner_mortgage,buyer_first_home_total,Own unincorporated business income,National,count
+2019-20,1.7,Own unincorporated business income,owner_mortgage,buyer_changeover_established,Own unincorporated business income,National,count
+2019-20,1.6,Own unincorporated business income,owner_mortgage,buyer_changeover_total,Own unincorporated business income,National,count
+2019-20,3,Own unincorporated business income,owner_mortgage,buyer_all_recent_new,Own unincorporated business income,National,count
+2019-20,1.6,Own unincorporated business income,owner_mortgage,buyer_all_recent_established,Own unincorporated business income,National,count
+2019-20,1.4,Own unincorporated business income,owner_mortgage,buyer_all_recent_total,Own unincorporated business income,National,count
+2019-20,4,Government pensions and allowances,owner_mortgage,buyer_first_home_established,Government pensions and allowances,National,count
+2019-20,3.2,Government pensions and allowances,owner_mortgage,buyer_first_home_total,Government pensions and allowances,National,count
+2019-20,11.7,Government pensions and allowances,owner_mortgage,buyer_changeover_new,Government pensions and allowances,National,count
+2019-20,3.3,Government pensions and allowances,owner_mortgage,buyer_changeover_established,Government pensions and allowances,National,count
+2019-20,3,Government pensions and allowances,owner_mortgage,buyer_changeover_total,Government pensions and allowances,National,count
+2019-20,7.1,Government pensions and allowances,owner_mortgage,buyer_all_recent_new,Government pensions and allowances,National,count
+2019-20,3.1,Government pensions and allowances,owner_mortgage,buyer_all_recent_established,Government pensions and allowances,National,count
+2019-20,2.8,Government pensions and allowances,owner_mortgage,buyer_all_recent_total,Government pensions and allowances,National,count
+2019-20,2.3,Other income,owner_mortgage,buyer_first_home_established,Other income,National,count
+2019-20,2.1,Other income,owner_mortgage,buyer_first_home_total,Other income,National,count
+2019-20,7.2,Other income,owner_mortgage,buyer_changeover_new,Other income,National,count
+2019-20,2.8,Other income,owner_mortgage,buyer_changeover_established,Other income,National,count
+2019-20,2.5,Other income,owner_mortgage,buyer_changeover_total,Other income,National,count
+2019-20,3.9,Other income,owner_mortgage,buyer_all_recent_new,Other income,National,count
+2019-20,2.1,Other income,owner_mortgage,buyer_all_recent_established,Other income,National,count
+2019-20,1.8,Other income,owner_mortgage,buyer_all_recent_total,Other income,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_total,Total,National,count
+2019-20,3.1,None,owner_mortgage,buyer_first_home_established,None,National,count
+2019-20,2.6,None,owner_mortgage,buyer_first_home_total,None,National,count
+2019-20,10.5,None,owner_mortgage,buyer_changeover_new,None,National,count
+2019-20,4.3,None,owner_mortgage,buyer_changeover_established,None,National,count
+2019-20,4,None,owner_mortgage,buyer_changeover_total,None,National,count
+2019-20,6.1,None,owner_mortgage,buyer_all_recent_new,None,National,count
+2019-20,3.3,None,owner_mortgage,buyer_all_recent_established,None,National,count
+2019-20,3,None,owner_mortgage,buyer_all_recent_total,None,National,count
+2019-20,12.1,One,owner_mortgage,buyer_first_home_new,One,National,count
+2019-20,5.5,One,owner_mortgage,buyer_first_home_established,One,National,count
+2019-20,4.9,One,owner_mortgage,buyer_first_home_total,One,National,count
+2019-20,9.8,One,owner_mortgage,buyer_changeover_new,One,National,count
+2019-20,3.9,One,owner_mortgage,buyer_changeover_established,One,National,count
+2019-20,3.4,One,owner_mortgage,buyer_changeover_total,One,National,count
+2019-20,7.5,One,owner_mortgage,buyer_all_recent_new,One,National,count
+2019-20,3.2,One,owner_mortgage,buyer_all_recent_established,One,National,count
+2019-20,2.7,One,owner_mortgage,buyer_all_recent_total,One,National,count
+2019-20,5.3,Two,owner_mortgage,buyer_first_home_new,Two,National,count
+2019-20,5.2,Two,owner_mortgage,buyer_first_home_established,Two,National,count
+2019-20,4.3,Two,owner_mortgage,buyer_first_home_total,Two,National,count
+2019-20,9.3,Two,owner_mortgage,buyer_changeover_new,Two,National,count
+2019-20,4.6,Two,owner_mortgage,buyer_changeover_established,Two,National,count
+2019-20,4.9,Two,owner_mortgage,buyer_changeover_total,Two,National,count
+2019-20,14.6,Two,owner_mortgage,buyer_all_recent_new,Two,National,count
+2019-20,3.5,Two,owner_mortgage,buyer_all_recent_established,Two,National,count
+2019-20,3.2,Two,owner_mortgage,buyer_all_recent_total,Two,National,count
+2019-20,3.3,Three or more,owner_mortgage,buyer_first_home_established,Three or more,National,count
+2019-20,2.8,Three or more,owner_mortgage,buyer_first_home_total,Three or more,National,count
+2019-20,10.2,Three or more,owner_mortgage,buyer_changeover_new,Three or more,National,count
+2019-20,3.1,Three or more,owner_mortgage,buyer_changeover_established,Three or more,National,count
+2019-20,2.9,Three or more,owner_mortgage,buyer_changeover_total,Three or more,National,count
+2019-20,6.6,Three or more,owner_mortgage,buyer_all_recent_new,Three or more,National,count
+2019-20,2.4,Three or more,owner_mortgage,buyer_all_recent_established,Three or more,National,count
+2019-20,2.2,Three or more,owner_mortgage,buyer_all_recent_total,Three or more,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_first_home_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_changeover_total,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_new,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_established,Total,National,count
+2019-20,0,Total,owner_mortgage,buyer_all_recent_total,Total,National,count
+2019-20,4,Median ratio of housing costs to gross household income,owner_mortgage,buyer_first_home_new,Median ratio of housing costs to gross household income,National,count
+2019-20,1.3,Median ratio of housing costs to gross household income,owner_mortgage,buyer_first_home_established,Median ratio of housing costs to gross household income,National,count
+2019-20,1.1,Median ratio of housing costs to gross household income,owner_mortgage,buyer_first_home_total,Median ratio of housing costs to gross household income,National,count
+2019-20,4.7,Median ratio of housing costs to gross household income,owner_mortgage,buyer_changeover_new,Median ratio of housing costs to gross household income,National,count
+2019-20,1.6,Median ratio of housing costs to gross household income,owner_mortgage,buyer_changeover_established,Median ratio of housing costs to gross household income,National,count
+2019-20,1.4,Median ratio of housing costs to gross household income,owner_mortgage,buyer_changeover_total,Median ratio of housing costs to gross household income,National,count
+2019-20,4,Median ratio of housing costs to gross household income,owner_mortgage,buyer_all_recent_new,Median ratio of housing costs to gross household income,National,count
+2019-20,1.2,Median ratio of housing costs to gross household income,owner_mortgage,buyer_all_recent_established,Median ratio of housing costs to gross household income,National,count
+2019-20,1.2,Median ratio of housing costs to gross household income,owner_mortgage,buyer_all_recent_total,Median ratio of housing costs to gross household income,National,count
+2019-20,3.1,Median housing costs per week,owner_mortgage,buyer_first_home_new,Median housing costs per week,National,count
+2019-20,3.4,Median housing costs per week,owner_mortgage,buyer_first_home_established,Median housing costs per week,National,count
+2019-20,2.5,Median housing costs per week,owner_mortgage,buyer_first_home_total,Median housing costs per week,National,count
+2019-20,41.5,Median housing costs per week,owner_mortgage,buyer_changeover_new,Median housing costs per week,National,count
+2019-20,6.2,Median housing costs per week,owner_mortgage,buyer_changeover_established,Median housing costs per week,National,count
+2019-20,7.2,Median housing costs per week,owner_mortgage,buyer_changeover_total,Median housing costs per week,National,count
+2019-20,8.7,Median housing costs per week,owner_mortgage,buyer_all_recent_new,Median housing costs per week,National,count
+2019-20,4.7,Median housing costs per week,owner_mortgage,buyer_all_recent_established,Median housing costs per week,National,count
+2019-20,4.7,Median housing costs per week,owner_mortgage,buyer_all_recent_total,Median housing costs per week,National,count
+2019-20,6.2,Median amount of mortgage outstanding,owner_mortgage,buyer_first_home_new,Median amount of mortgage outstanding,National,count
+2019-20,2.9,Median amount of mortgage outstanding,owner_mortgage,buyer_first_home_established,Median amount of mortgage outstanding,National,count
+2019-20,2.2,Median amount of mortgage outstanding,owner_mortgage,buyer_first_home_total,Median amount of mortgage outstanding,National,count
+2019-20,45,Median amount of mortgage outstanding,owner_mortgage,buyer_changeover_new,Median amount of mortgage outstanding,National,count
+2019-20,9.5,Median amount of mortgage outstanding,owner_mortgage,buyer_changeover_established,Median amount of mortgage outstanding,National,count
+2019-20,9.4,Median amount of mortgage outstanding,owner_mortgage,buyer_changeover_total,Median amount of mortgage outstanding,National,count
+2019-20,7.8,Median amount of mortgage outstanding,owner_mortgage,buyer_all_recent_new,Median amount of mortgage outstanding,National,count
+2019-20,5.3,Median amount of mortgage outstanding,owner_mortgage,buyer_all_recent_established,Median amount of mortgage outstanding,National,count
+2019-20,4.2,Median amount of mortgage outstanding,owner_mortgage,buyer_all_recent_total,Median amount of mortgage outstanding,National,count
+2019-20,18.9,Median equity in dwelling,owner_mortgage,buyer_first_home_new,Median equity in dwelling,National,count
+2019-20,9.1,Median equity in dwelling,owner_mortgage,buyer_first_home_established,Median equity in dwelling,National,count
+2019-20,7.5,Median equity in dwelling,owner_mortgage,buyer_first_home_total,Median equity in dwelling,National,count
+2019-20,7.3,Median equity in dwelling,owner_mortgage,buyer_changeover_new,Median equity in dwelling,National,count
+2019-20,6.6,Median equity in dwelling,owner_mortgage,buyer_changeover_established,Median equity in dwelling,National,count
+2019-20,7.1,Median equity in dwelling,owner_mortgage,buyer_changeover_total,Median equity in dwelling,National,count
+2019-20,15.9,Median equity in dwelling,owner_mortgage,buyer_all_recent_new,Median equity in dwelling,National,count
+2019-20,6.3,Median equity in dwelling,owner_mortgage,buyer_all_recent_established,Median equity in dwelling,National,count
+2019-20,5.5,Median equity in dwelling,owner_mortgage,buyer_all_recent_total,Median equity in dwelling,National,count
+2019-20,9.8,Mean value of dwelling,owner_mortgage,buyer_first_home_new,Mean value of dwelling,National,count
+2019-20,3.8,Mean value of dwelling,owner_mortgage,buyer_first_home_established,Mean value of dwelling,National,count
+2019-20,3.6,Mean value of dwelling,owner_mortgage,buyer_first_home_total,Mean value of dwelling,National,count
+2019-20,7.7,Mean value of dwelling,owner_mortgage,buyer_changeover_new,Mean value of dwelling,National,count
+2019-20,3.9,Mean value of dwelling,owner_mortgage,buyer_changeover_established,Mean value of dwelling,National,count
+2019-20,3.5,Mean value of dwelling,owner_mortgage,buyer_changeover_total,Mean value of dwelling,National,count
+2019-20,5.8,Mean value of dwelling,owner_mortgage,buyer_all_recent_new,Mean value of dwelling,National,count
+2019-20,3,Mean value of dwelling,owner_mortgage,buyer_all_recent_established,Mean value of dwelling,National,count
+2019-20,2.8,Mean value of dwelling,owner_mortgage,buyer_all_recent_total,Mean value of dwelling,National,count
+2019-20,8.8,Mean amount of mortgage outstanding,owner_mortgage,buyer_first_home_new,Mean amount of mortgage outstanding,National,count
+2019-20,3.8,Mean amount of mortgage outstanding,owner_mortgage,buyer_first_home_established,Mean amount of mortgage outstanding,National,count
+2019-20,3.5,Mean amount of mortgage outstanding,owner_mortgage,buyer_first_home_total,Mean amount of mortgage outstanding,National,count
+2019-20,18.8,Mean amount of mortgage outstanding,owner_mortgage,buyer_changeover_new,Mean amount of mortgage outstanding,National,count
+2019-20,5.9,Mean amount of mortgage outstanding,owner_mortgage,buyer_changeover_established,Mean amount of mortgage outstanding,National,count
+2019-20,6.3,Mean amount of mortgage outstanding,owner_mortgage,buyer_changeover_total,Mean amount of mortgage outstanding,National,count
+2019-20,11.1,Mean amount of mortgage outstanding,owner_mortgage,buyer_all_recent_new,Mean amount of mortgage outstanding,National,count
+2019-20,3.8,Mean amount of mortgage outstanding,owner_mortgage,buyer_all_recent_established,Mean amount of mortgage outstanding,National,count
+2019-20,3.9,Mean amount of mortgage outstanding,owner_mortgage,buyer_all_recent_total,Mean amount of mortgage outstanding,National,count
+2019-20,22.4,Mean equity in dwelling,owner_mortgage,buyer_first_home_new,Mean equity in dwelling,National,count
+2019-20,8.6,Mean equity in dwelling,owner_mortgage,buyer_first_home_established,Mean equity in dwelling,National,count
+2019-20,8.6,Mean equity in dwelling,owner_mortgage,buyer_first_home_total,Mean equity in dwelling,National,count
+2019-20,9.6,Mean equity in dwelling,owner_mortgage,buyer_changeover_new,Mean equity in dwelling,National,count
+2019-20,5.5,Mean equity in dwelling,owner_mortgage,buyer_changeover_established,Mean equity in dwelling,National,count
+2019-20,4.8,Mean equity in dwelling,owner_mortgage,buyer_changeover_total,Mean equity in dwelling,National,count
+2019-20,11,Mean equity in dwelling,owner_mortgage,buyer_all_recent_new,Mean equity in dwelling,National,count
+2019-20,4.9,Mean equity in dwelling,owner_mortgage,buyer_all_recent_established,Mean equity in dwelling,National,count
+2019-20,4.8,Mean equity in dwelling,owner_mortgage,buyer_all_recent_total,Mean equity in dwelling,National,count
+2019-20,5.4,Mean number of persons in household,owner_mortgage,buyer_first_home_new,Mean number of persons in household,National,count
+2019-20,4.1,Mean number of persons in household,owner_mortgage,buyer_first_home_established,Mean number of persons in household,National,count
+2019-20,3.3,Mean number of persons in household,owner_mortgage,buyer_first_home_total,Mean number of persons in household,National,count
+2019-20,4.6,Mean number of persons in household,owner_mortgage,buyer_changeover_new,Mean number of persons in household,National,count
+2019-20,2.8,Mean number of persons in household,owner_mortgage,buyer_changeover_established,Mean number of persons in household,National,count
+2019-20,2.6,Mean number of persons in household,owner_mortgage,buyer_changeover_total,Mean number of persons in household,National,count
+2019-20,3.4,Mean number of persons in household,owner_mortgage,buyer_all_recent_new,Mean number of persons in household,National,count
+2019-20,2,Mean number of persons in household,owner_mortgage,buyer_all_recent_established,Mean number of persons in household,National,count
+2019-20,1.7,Mean number of persons in household,owner_mortgage,buyer_all_recent_total,Mean number of persons in household,National,count
+2019-20,6.3,Mean number of employed persons in household,owner_mortgage,buyer_first_home_new,Mean number of employed persons in household,National,count
+2019-20,2.7,Mean number of employed persons in household,owner_mortgage,buyer_first_home_established,Mean number of employed persons in household,National,count
+2019-20,2.3,Mean number of employed persons in household,owner_mortgage,buyer_first_home_total,Mean number of employed persons in household,National,count
+2019-20,8.4,Mean number of employed persons in household,owner_mortgage,buyer_changeover_new,Mean number of employed persons in household,National,count
+2019-20,4.5,Mean number of employed persons in household,owner_mortgage,buyer_changeover_established,Mean number of employed persons in household,National,count
+2019-20,4,Mean number of employed persons in household,owner_mortgage,buyer_changeover_total,Mean number of employed persons in household,National,count
+2019-20,5.3,Mean number of employed persons in household,owner_mortgage,buyer_all_recent_new,Mean number of employed persons in household,National,count
+2019-20,2.8,Mean number of employed persons in household,owner_mortgage,buyer_all_recent_established,Mean number of employed persons in household,National,count
+2019-20,2.4,Mean number of employed persons in household,owner_mortgage,buyer_all_recent_total,Mean number of employed persons in household,National,count
+2019-20,3.1,Mean number of bedrooms in dwelling,owner_mortgage,buyer_first_home_new,Mean number of bedrooms in dwelling,National,count
+2019-20,2.4,Mean number of bedrooms in dwelling,owner_mortgage,buyer_first_home_established,Mean number of bedrooms in dwelling,National,count
+2019-20,2.1,Mean number of bedrooms in dwelling,owner_mortgage,buyer_first_home_total,Mean number of bedrooms in dwelling,National,count
+2019-20,2.6,Mean number of bedrooms in dwelling,owner_mortgage,buyer_changeover_new,Mean number of bedrooms in dwelling,National,count
+2019-20,1.3,Mean number of bedrooms in dwelling,owner_mortgage,buyer_changeover_established,Mean number of bedrooms in dwelling,National,count
+2019-20,1.3,Mean number of bedrooms in dwelling,owner_mortgage,buyer_changeover_total,Mean number of bedrooms in dwelling,National,count
+2019-20,2.1,Mean number of bedrooms in dwelling,owner_mortgage,buyer_all_recent_new,Mean number of bedrooms in dwelling,National,count
+2019-20,1.1,Mean number of bedrooms in dwelling,owner_mortgage,buyer_all_recent_established,Mean number of bedrooms in dwelling,National,count
+2019-20,1.1,Mean number of bedrooms in dwelling,owner_mortgage,buyer_all_recent_total,Mean number of bedrooms in dwelling,National,count
+2019-20,3.1,Mean age of household reference person,owner_mortgage,buyer_first_home_new,Mean age of household reference person,National,count
+2019-20,1.5,Mean age of household reference person,owner_mortgage,buyer_first_home_established,Mean age of household reference person,National,count
+2019-20,1.3,Mean age of household reference person,owner_mortgage,buyer_first_home_total,Mean age of household reference person,National,count
+2019-20,4.3,Mean age of household reference person,owner_mortgage,buyer_changeover_new,Mean age of household reference person,National,count
+2019-20,1.4,Mean age of household reference person,owner_mortgage,buyer_changeover_established,Mean age of household reference person,National,count
+2019-20,1.5,Mean age of household reference person,owner_mortgage,buyer_changeover_total,Mean age of household reference person,National,count
+2019-20,3.4,Mean age of household reference person,owner_mortgage,buyer_all_recent_new,Mean age of household reference person,National,count
+2019-20,1.1,Mean age of household reference person,owner_mortgage,buyer_all_recent_established,Mean age of household reference person,National,count
+2019-20,1.1,Mean age of household reference person,owner_mortgage,buyer_all_recent_total,Mean age of household reference person,National,count
+2019-20,16.8,Estimated number of households,owner_mortgage,buyer_first_home_new,Estimated number of households,National,count
+2019-20,5.9,Estimated number of households,owner_mortgage,buyer_first_home_established,Estimated number of households,National,count
+2019-20,5.7,Estimated number of households,owner_mortgage,buyer_first_home_total,Estimated number of households,National,count
+2019-20,18,Estimated number of households,owner_mortgage,buyer_changeover_new,Estimated number of households,National,count
+2019-20,4.5,Estimated number of households,owner_mortgage,buyer_changeover_established,Estimated number of households,National,count
+2019-20,4.6,Estimated number of households,owner_mortgage,buyer_changeover_total,Estimated number of households,National,count
+2019-20,14.5,Estimated number of households,owner_mortgage,buyer_all_recent_new,Estimated number of households,National,count
+2019-20,3.5,Estimated number of households,owner_mortgage,buyer_all_recent_established,Estimated number of households,National,count
+2019-20,3.9,Estimated number of households,owner_mortgage,buyer_all_recent_total,Estimated number of households,National,count

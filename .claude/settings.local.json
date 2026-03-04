@@ -17,7 +17,8 @@
       "Bash(cd \"C:/Anthony/Coding/Shiny Macro Dashboard/Household-Affordability-Dashboard\" && \"/c/Program Files/R/R-4.5.2/bin/Rscript.exe\" pipeline/05_driver.R 2>&1)",
       "Bash(ls:*)",
       "Bash(where Rscript:*)",
-      "Bash(\"C:/Program Files/R/R-4.5.2/bin/Rscript.exe\":*)"
+      "Bash(\"C:/Program Files/R/R-4.5.2/bin/Rscript.exe\":*)",
+      "WebFetch(domain:docs.posit.co)"
     ]
   }
 }

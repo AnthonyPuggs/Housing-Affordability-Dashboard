@@ -1,0 +1,1076 @@
+survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
+2007-08,44.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2007-08,41.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2007-08,32.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2007-08,25.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2007-08,33.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2007-08,22.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2007-08,49.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2007-08,39.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2007-08,38.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2009-10,52.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2009-10,49.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2009-10,47.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2009-10,32.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2009-10,41.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2009-10,34.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2009-10,40,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2009-10,38.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2009-10,47,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2011-12,44.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2011-12,52,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2011-12,47.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2011-12,34.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2011-12,40.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2011-12,40.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2011-12,31.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2011-12,30.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2011-12,44.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2013-14,59.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2013-14,47.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2013-14,49.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2013-14,34.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2013-14,50.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2013-14,38.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2013-14,43.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2013-14,36.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2013-14,49.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2015-16,57.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2015-16,53.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2015-16,35.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2015-16,40.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2015-16,50.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2015-16,26.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2015-16,31.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2015-16,35.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2015-16,48.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2017-18,57.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2017-18,45.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2017-18,39.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2017-18,38,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2017-18,49.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2017-18,24.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2017-18,42.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2017-18,42.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2017-18,47.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2019-20,53.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2019-20,48.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2019-20,45.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2019-20,34.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2019-20,36.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2019-20,46.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2019-20,42.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2019-20,27.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2019-20,45.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2007-08,35.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2007-08,17,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2007-08,37.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2007-08,12.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2007-08,14.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2007-08,13,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2007-08,5.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2007-08,29.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2009-10,38.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2009-10,21.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2009-10,38.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2009-10,14.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2009-10,26.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2009-10,19.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2009-10,9.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2009-10,32.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2011-12,32.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2011-12,23.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2011-12,41.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2011-12,19.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2011-12,31.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2011-12,22.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2011-12,17.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2011-12,32,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2013-14,34,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2013-14,25.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2013-14,44.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2013-14,22.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2013-14,29.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2013-14,22.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2013-14,36.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2013-14,34.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2015-16,42,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2015-16,29.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2015-16,36.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2015-16,22.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2015-16,37.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2015-16,22.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2015-16,30.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2015-16,36.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2017-18,37.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2017-18,32.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2017-18,41.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2017-18,20.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2017-18,36.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2017-18,22.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2017-18,16.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2017-18,35.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2019-20,35.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2019-20,31.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2019-20,45,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2019-20,16.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2019-20,26.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2019-20,24.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2019-20,20.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2019-20,36,pct_rental_stress_over_30,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2007-08,40.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NSW,nhha
+2007-08,34.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Vic.,nhha
+2007-08,35.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Qld,nhha
+2007-08,22.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,SA,nhha
+2007-08,30.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,WA,nhha
+2007-08,16.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Tas.,nhha
+2007-08,36.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NT,nhha
+2007-08,39.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,ACT,nhha
+2007-08,35,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Aust.,nhha
+2009-10,46.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NSW,nhha
+2009-10,39.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Vic.,nhha
+2009-10,42.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Qld,nhha
+2009-10,27.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,SA,nhha
+2009-10,37.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,WA,nhha
+2009-10,26.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Tas.,nhha
+2009-10,37.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NT,nhha
+2009-10,38.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,ACT,nhha
+2009-10,40.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Aust.,nhha
+2011-12,39.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NSW,nhha
+2011-12,41.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Vic.,nhha
+2011-12,43.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Qld,nhha
+2011-12,30.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,SA,nhha
+2011-12,38.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,WA,nhha
+2011-12,30.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Tas.,nhha
+2011-12,30,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NT,nhha
+2011-12,30.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,ACT,nhha
+2011-12,39.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Aust.,nhha
+2013-14,48.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NSW,nhha
+2013-14,40,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Vic.,nhha
+2013-14,46.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Qld,nhha
+2013-14,31.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,SA,nhha
+2013-14,45.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,WA,nhha
+2013-14,28.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Tas.,nhha
+2013-14,42.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NT,nhha
+2013-14,36.5,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,ACT,nhha
+2013-14,43.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Aust.,nhha
+2015-16,51.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NSW,nhha
+2015-16,47,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Vic.,nhha
+2015-16,35.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Qld,nhha
+2015-16,36.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,SA,nhha
+2015-16,49,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,WA,nhha
+2015-16,23.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Tas.,nhha
+2015-16,40.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NT,nhha
+2015-16,35.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,ACT,nhha
+2015-16,44.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Aust.,nhha
+2017-18,48.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NSW,nhha
+2017-18,43.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Vic.,nhha
+2017-18,40,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Qld,nhha
+2017-18,32.4,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,SA,nhha
+2017-18,46.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,WA,nhha
+2017-18,24.2,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Tas.,nhha
+2017-18,41.3,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NT,nhha
+2017-18,42.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,ACT,nhha
+2017-18,43.1,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Aust.,nhha
+2019-20,46.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NSW,nhha
+2019-20,42,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Vic.,nhha
+2019-20,44.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Qld,nhha
+2019-20,29.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,SA,nhha
+2019-20,35.6,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,WA,nhha
+2019-20,30.8,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Tas.,nhha
+2019-20,32.9,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,NT,nhha
+2019-20,27.7,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,ACT,nhha
+2019-20,42,pct_rental_stress_over_30,renter_lower_income,nhha_location,Total,Aust.,nhha
+2007-08,113039,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2007-08,76552,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2007-08,29022,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2007-08,20577,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2007-08,26904,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2007-08,3270,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2007-08,3406,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2007-08,5179,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2007-08,277948,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2009-10,125641,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2009-10,81040,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2009-10,51901,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2009-10,23587,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2009-10,34517,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2009-10,5424,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2009-10,2971,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2009-10,4609,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2009-10,329689,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2011-12,120724,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2011-12,97622,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2011-12,56145,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2011-12,27345,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2011-12,34332,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2011-12,7022,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2011-12,2876,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2011-12,5033,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2011-12,351099,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2013-14,138655,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2013-14,93469,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2013-14,68373,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2013-14,30241,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2013-14,43110,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2013-14,5658,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2013-14,2929,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2013-14,5876,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2013-14,388310,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2015-16,141275,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2015-16,120277,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2015-16,49412,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2015-16,44173,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2015-16,52096,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2015-16,4217,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2015-16,1702,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2015-16,6513,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2015-16,419576,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2017-18,169691,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2017-18,112532,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2017-18,62044,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2017-18,33458,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2017-18,48333,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2017-18,3818,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2017-18,1955,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2017-18,9414,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2017-18,439602,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2019-20,138593,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2019-20,109128,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2019-20,82365,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2019-20,31615,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2019-20,42289,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2019-20,6755,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2019-20,3125,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2019-20,4704,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2019-20,414594,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2007-08,63009,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2007-08,12793,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2007-08,52411,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2007-08,3847,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2007-08,2649,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2007-08,2928,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2007-08,157,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2007-08,137796,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2009-10,70891,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2009-10,21178,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2009-10,60978,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2009-10,4472,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2009-10,7620,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2009-10,3890,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2009-10,72,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2009-10,169101,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2011-12,58351,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2011-12,25233,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2011-12,66073,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2011-12,5551,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2011-12,9041,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2011-12,4919,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2011-12,185,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2011-12,169352,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2013-14,61701,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2013-14,24905,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2013-14,79846,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2013-14,5865,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2013-14,8183,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2013-14,4789,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2013-14,367,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2013-14,185656,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2015-16,84062,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2015-16,28599,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2015-16,62151,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2015-16,6732,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2015-16,10101,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2015-16,5076,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2015-16,647,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2015-16,201316,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2017-18,72287,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2017-18,29990,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2017-18,81471,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2017-18,6896,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2017-18,9583,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2017-18,4911,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2017-18,390,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2017-18,200762,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2019-20,71738,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2019-20,24964,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2019-20,83598,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2019-20,4177,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2019-20,8025,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2019-20,7635,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2019-20,595,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2019-20,201218,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2007-08,176048,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2007-08,89345,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2007-08,81434,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2007-08,24424,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2007-08,29553,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2007-08,6198,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2007-08,3563,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2007-08,5179,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2007-08,415744,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2009-10,196532,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2009-10,102218,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2009-10,112879,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2009-10,28058,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2009-10,42136,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2009-10,9314,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2009-10,3043,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2009-10,4609,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2009-10,498790,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2011-12,179074,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2011-12,122855,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2011-12,122218,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2011-12,32896,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2011-12,43373,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2011-12,11941,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2011-12,3061,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2011-12,5033,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2011-12,520451,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2013-14,200356,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2013-14,118374,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2013-14,148219,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2013-14,36106,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2013-14,51293,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2013-14,10448,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2013-14,3296,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2013-14,5876,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2013-14,573967,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2015-16,227436,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2015-16,151840,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2015-16,111164,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2015-16,50834,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2015-16,62577,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2015-16,9109,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2015-16,2950,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2015-16,6513,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2015-16,622182,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2017-18,231765,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2017-18,145770,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2017-18,142630,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2017-18,39556,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2017-18,58352,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2017-18,8899,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2017-18,2678,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2017-18,9414,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2017-18,639737,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2019-20,215950,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2019-20,130305,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2019-20,163975,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2019-20,34921,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2019-20,52286,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2019-20,13997,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2019-20,3467,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2019-20,4704,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2019-20,618846,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2007-08,254768,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2007-08,184202,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2007-08,88141,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2007-08,80011,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2007-08,79481,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2007-08,14389,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2007-08,6936,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2007-08,13140,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2007-08,721069,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2009-10,239170,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2009-10,162872,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2009-10,109439,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2009-10,71911,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2009-10,83365,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2009-10,15785,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2009-10,7432,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2009-10,11871,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2009-10,701845,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2011-12,269433,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2011-12,187667,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2011-12,118735,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2011-12,78834,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2011-12,84877,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2011-12,17450,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2011-12,9109,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2011-12,16411,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2011-12,782516,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2013-14,234693,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2013-14,196981,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2013-14,137099,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2013-14,87870,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2013-14,84903,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2013-14,14821,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2013-14,6697,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2013-14,16104,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2013-14,779167,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2015-16,244384,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2015-16,226086,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2015-16,138520,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2015-16,108962,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2015-16,102799,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2015-16,15866,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2015-16,5431,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2015-16,18298,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2015-16,862286,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2017-18,294056,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2017-18,245839,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2017-18,155525,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2017-18,88145,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2017-18,97172,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2017-18,15459,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2017-18,4627,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2017-18,22069,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2017-18,919374,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2019-20,258813,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2019-20,226996,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2019-20,181859,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2019-20,90580,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2019-20,115281,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2019-20,14446,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2019-20,7384,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2019-20,16960,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2019-20,918311,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2007-08,176210,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2007-08,75057,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2007-08,141192,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2007-08,29774,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2007-08,18736,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2007-08,22582,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2007-08,2780,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2007-08,466330,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2009-10,183731,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2009-10,97820,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2009-10,156626,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2009-10,30417,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2009-10,28428,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2009-10,19889,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2009-10,761,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2009-10,517672,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2011-12,181808,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2011-12,106413,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2011-12,159489,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2011-12,29093,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2011-12,28897,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2011-12,21860,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2011-12,1083,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2011-12,528642,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2013-14,181276,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2013-14,99303,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2013-14,179217,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2013-14,25703,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2013-14,27710,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2013-14,21507,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2013-14,1006,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2013-14,535722,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2015-16,200022,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2015-16,95905,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2015-16,170853,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2015-16,29459,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2015-16,26923,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2015-16,22984,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2015-16,2100,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2015-16,546770,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2017-18,193923,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2017-18,93390,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2017-18,194650,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2017-18,33814,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2017-18,25960,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2017-18,21656,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2017-18,2425,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2017-18,564258,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2019-20,202097,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2019-20,79444,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2019-20,185801,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2019-20,25920,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2019-20,30626,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2019-20,30999,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2019-20,2855,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2019-20,558396,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2007-08,430979,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2007-08,259258,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2007-08,229333,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2007-08,109785,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2007-08,98217,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2007-08,36971,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2007-08,9716,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2007-08,13140,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2007-08,1187399,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2009-10,422900,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2009-10,260692,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2009-10,266066,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2009-10,102328,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2009-10,111793,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2009-10,35674,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2009-10,8193,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2009-10,11871,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2009-10,1219517,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2011-12,451240,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2011-12,294080,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2011-12,278224,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2011-12,107927,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2011-12,113774,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2011-12,39310,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2011-12,10192,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2011-12,16411,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2011-12,1311158,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2013-14,415969,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2013-14,296285,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2013-14,316316,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2013-14,113573,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2013-14,112613,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2013-14,36328,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2013-14,7703,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2013-14,16104,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2013-14,1314889,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2015-16,438858,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2015-16,323197,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2015-16,310922,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2015-16,137918,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2015-16,127779,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2015-16,38849,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2015-16,7261,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2015-16,18298,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2015-16,1405804,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2017-18,479676,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2017-18,332391,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2017-18,356840,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2017-18,122116,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2017-18,125343,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2017-18,36788,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2017-18,6476,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2017-18,22069,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2017-18,1484257,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2019-20,462833,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2019-20,310025,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2019-20,364815,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2019-20,116976,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2019-20,146751,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2019-20,45394,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2019-20,10554,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2019-20,16960,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2019-20,1473599,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2007-08,5.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2007-08,9.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2007-08,6.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2007-08,7.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2007-08,8.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2007-08,11.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2007-08,15.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2007-08,16.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2007-08,3.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2009-10,5.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2009-10,5.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2009-10,7.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2009-10,5.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2009-10,7.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2009-10,8.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2009-10,19.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2009-10,10.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2009-10,2.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2011-12,6.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2011-12,7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2011-12,6.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2011-12,7.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2011-12,10.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2011-12,11.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2011-12,13.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2011-12,10.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2011-12,3.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2013-14,6.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2013-14,6.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2013-14,8.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2013-14,7.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2013-14,11.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2013-14,9.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2013-14,17.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2013-14,9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2013-14,4.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2015-16,8.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2015-16,6.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2015-16,7.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2015-16,6.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2015-16,7.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2015-16,9.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2015-16,16,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2015-16,13.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2015-16,3.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2017-18,5.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2017-18,6.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2017-18,8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2017-18,7.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2017-18,7.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2017-18,10.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2017-18,14.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2017-18,8.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2017-18,3.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2019-20,6.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2019-20,10,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2019-20,10.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2019-20,8.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2019-20,12.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2019-20,12.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2019-20,10.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2019-20,13.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2019-20,3.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2007-08,9.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2007-08,8.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2007-08,10,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2007-08,9.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,SA,nhha
+2007-08,12.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,WA,nhha
+2007-08,8.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2007-08,5.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2009-10,6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2009-10,8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2009-10,7.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2009-10,5.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,SA,nhha
+2009-10,4.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,WA,nhha
+2009-10,4.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2009-10,4.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2011-12,14.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2011-12,15.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2011-12,12.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2011-12,17.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,SA,nhha
+2011-12,17.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,WA,nhha
+2011-12,14.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2011-12,7.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2013-14,6.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2013-14,7.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2013-14,4.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2013-14,7.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,SA,nhha
+2013-14,8.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,WA,nhha
+2013-14,5.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2013-14,3.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2015-16,6.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2015-16,8.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2015-16,7.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2015-16,7.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,SA,nhha
+2015-16,8.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,WA,nhha
+2015-16,4.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2015-16,2.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2017-18,8.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2017-18,9.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2017-18,8.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2017-18,6.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,SA,nhha
+2017-18,6.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,WA,nhha
+2017-18,6.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2017-18,4.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2019-20,9.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2019-20,10.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2019-20,11,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2019-20,6.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,SA,nhha
+2019-20,7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,WA,nhha
+2019-20,8.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2019-20,5.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2007-08,4.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NSW,nhha
+2007-08,6.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Vic.,nhha
+2007-08,7.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Qld,nhha
+2007-08,6.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,SA,nhha
+2007-08,7.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,WA,nhha
+2007-08,6.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Tas.,nhha
+2007-08,14.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NT,nhha
+2007-08,16.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,ACT,nhha
+2007-08,3.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Aust.,nhha
+2009-10,5.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NSW,nhha
+2009-10,6.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Vic.,nhha
+2009-10,5.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Qld,nhha
+2009-10,4.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,SA,nhha
+2009-10,5.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,WA,nhha
+2009-10,5.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Tas.,nhha
+2009-10,18.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NT,nhha
+2009-10,10.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,ACT,nhha
+2009-10,2.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Aust.,nhha
+2011-12,7.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NSW,nhha
+2011-12,8.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Vic.,nhha
+2011-12,7.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Qld,nhha
+2011-12,11.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,SA,nhha
+2011-12,12.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,WA,nhha
+2011-12,11.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Tas.,nhha
+2011-12,24.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NT,nhha
+2011-12,21.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,ACT,nhha
+2011-12,4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Aust.,nhha
+2013-14,4.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NSW,nhha
+2013-14,5.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Vic.,nhha
+2013-14,4.2,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Qld,nhha
+2013-14,5.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,SA,nhha
+2013-14,9.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,WA,nhha
+2013-14,3.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Tas.,nhha
+2013-14,16.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NT,nhha
+2013-14,9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,ACT,nhha
+2013-14,2.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Aust.,nhha
+2015-16,6.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NSW,nhha
+2015-16,5.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Vic.,nhha
+2015-16,4.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Qld,nhha
+2015-16,4.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,SA,nhha
+2015-16,6.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,WA,nhha
+2015-16,4.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Tas.,nhha
+2015-16,15.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NT,nhha
+2015-16,13.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,ACT,nhha
+2015-16,2.7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Aust.,nhha
+2017-18,5.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NSW,nhha
+2017-18,5.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Vic.,nhha
+2017-18,6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Qld,nhha
+2017-18,5.9,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,SA,nhha
+2017-18,6.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,WA,nhha
+2017-18,5.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Tas.,nhha
+2017-18,13.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NT,nhha
+2017-18,8.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,ACT,nhha
+2017-18,2.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Aust.,nhha
+2019-20,5.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NSW,nhha
+2019-20,8.3,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Vic.,nhha
+2019-20,7.8,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Qld,nhha
+2019-20,7,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,SA,nhha
+2019-20,9.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,WA,nhha
+2019-20,7.4,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Tas.,nhha
+2019-20,9.6,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,NT,nhha
+2019-20,13.5,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,ACT,nhha
+2019-20,3.1,pct_95%_margin_of_error_of_proportion_(±),renter_lower_income,nhha_location,Total,Aust.,nhha
+2007-08,10.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2007-08,13,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2007-08,18.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2007-08,17.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2007-08,15.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2007-08,31.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2007-08,30,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2007-08,28,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2007-08,5.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2009-10,8.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2009-10,9.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2009-10,12.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2009-10,11.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2009-10,12.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2009-10,15.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2009-10,31.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2009-10,19.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2009-10,4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2011-12,8.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2011-12,10.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2011-12,10.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2011-12,13.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2011-12,17.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2011-12,18.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2011-12,24.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2011-12,21.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2011-12,5.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2013-14,9.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2013-14,10.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2013-14,12.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2013-14,12.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2013-14,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2013-14,15.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2013-14,24.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2013-14,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2013-14,5.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2015-16,10.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2015-16,8.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2015-16,13.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2015-16,9.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2015-16,9.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2015-16,20.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2015-16,31.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2015-16,21.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2015-16,4.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2017-18,8.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2017-18,10.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2017-18,12.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2017-18,11.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2017-18,11.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2017-18,23.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2017-18,26.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2017-18,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2017-18,4.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2019-20,9.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2019-20,13.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2019-20,15,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2019-20,15,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2019-20,19.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2019-20,20.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2019-20,20.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2019-20,28.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2019-20,5.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2007-08,16.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2007-08,28.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2007-08,18.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2007-08,42.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2007-08,35.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2007-08,11,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2009-10,11.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2009-10,21.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2009-10,11.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2009-10,21.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2009-10,16.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2009-10,15.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2009-10,7.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2011-12,14.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2011-12,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2011-12,12.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2011-12,17.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2011-12,17.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2011-12,14.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2011-12,7.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2013-14,11.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2013-14,18.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2013-14,9.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2013-14,20.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2013-14,18.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2013-14,15,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2013-14,6.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2015-16,12,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2015-16,17.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2015-16,12.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2015-16,18.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2015-16,15.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2015-16,12.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2015-16,5.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2017-18,13.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2017-18,17.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2017-18,13.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2017-18,17.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2017-18,14,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2017-18,15.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2017-18,8.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2019-20,16.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2019-20,20.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2019-20,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2019-20,22.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2019-20,19.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2019-20,22.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2019-20,9.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2007-08,8.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2007-08,11.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2007-08,13.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2007-08,16.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2007-08,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2007-08,22.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2007-08,27.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2007-08,28,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2007-08,5.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2009-10,7.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2009-10,9.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2009-10,8.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2009-10,9.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2009-10,9.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2009-10,12.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2009-10,30.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2009-10,19.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2009-10,4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2011-12,7.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2011-12,8.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2011-12,7.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2011-12,11.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2011-12,12.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2011-12,11.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2011-12,24.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2011-12,21.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2011-12,4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2013-14,6.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2013-14,9.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2013-14,7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2013-14,11.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2013-14,13.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2013-14,9.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2013-14,22.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2013-14,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2013-14,4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2015-16,8.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2015-16,7.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2015-16,8.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2015-16,8.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2015-16,9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2015-16,10.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2015-16,24.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2015-16,21.8,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2015-16,3.9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2017-18,7.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2017-18,9,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2017-18,9.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2017-18,10.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2017-18,9.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2017-18,12.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2017-18,25.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2017-18,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2017-18,3.6,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2019-20,8.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NSW,nhha
+2019-20,12.1,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Vic.,nhha
+2019-20,10.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Qld,nhha
+2019-20,13.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,SA,nhha
+2019-20,15.4,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,WA,nhha
+2019-20,15.2,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Tas.,nhha
+2019-20,18.3,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,NT,nhha
+2019-20,28.5,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,ACT,nhha
+2019-20,4.7,pct_number_of_lower_income_renter_households_paying_more_than_30%_of_income_on_housing_costs,renter_lower_income,nhha_location,Total,Aust.,nhha
+2007-08,7.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2007-08,6.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2007-08,15.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2007-08,8.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2007-08,8.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2007-08,17.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2007-08,25.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2007-08,18.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2007-08,4.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2009-10,6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2009-10,7.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2009-10,9.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2009-10,6.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2009-10,7.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2009-10,9.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2009-10,18.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2009-10,13.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2009-10,3.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2011-12,5.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2011-12,8.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2011-12,8.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2011-12,8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2011-12,10.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2011-12,12.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2011-12,11.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2011-12,12.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2011-12,3.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2013-14,7.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2013-14,7.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2013-14,8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2013-14,7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2013-14,10,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2013-14,9.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2013-14,13.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2013-14,8.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2013-14,3.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2015-16,6.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2015-16,5.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2015-16,8.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2015-16,5.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2015-16,6.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2015-16,8.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2015-16,17.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2015-16,11.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2015-16,2.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2017-18,7.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2017-18,8.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2017-18,7.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2017-18,6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2017-18,8.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2017-18,10.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2017-18,20,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2017-18,11.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2017-18,3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2019-20,7.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NSW,nhha
+2019-20,9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Vic.,nhha
+2019-20,9.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Qld,nhha
+2019-20,7.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,SA,nhha
+2019-20,9.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,WA,nhha
+2019-20,15.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Tas.,nhha
+2019-20,16.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,NT,nhha
+2019-20,13.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,ACT,nhha
+2019-20,3.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Greater capital city area,Aust.,nhha
+2007-08,10.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2007-08,13.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2007-08,11.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2007-08,15.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2007-08,22.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2007-08,14.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2007-08,37.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2007-08,5.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2009-10,7.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2009-10,9.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2009-10,6.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2009-10,11.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2009-10,13.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2009-10,9.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2009-10,46.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2009-10,3.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2011-12,8.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2011-12,9.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2011-12,8.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2011-12,10.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2011-12,12.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2011-12,9.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2011-12,4.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2013-14,7.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2013-14,9.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2013-14,8.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2013-14,10.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2013-14,11,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2013-14,8.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2013-14,4.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2015-16,8.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2015-16,8.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2015-16,7.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2015-16,9.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2015-16,11,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2015-16,8.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2015-16,37.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2015-16,4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2017-18,7.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2017-18,8.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2017-18,8.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2017-18,7.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2017-18,10.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2017-18,8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2017-18,30.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2017-18,4.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2019-20,9.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NSW,nhha
+2019-20,11.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Vic.,nhha
+2019-20,9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Qld,nhha
+2019-20,12.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,SA,nhha
+2019-20,13.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,WA,nhha
+2019-20,13.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Tas.,nhha
+2019-20,25,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,NT,nhha
+2019-20,5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Rest of state,Aust.,nhha
+2007-08,6.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2007-08,6.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2007-08,8.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2007-08,8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2007-08,7.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2007-08,9.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2007-08,18.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2007-08,18.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2007-08,3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2009-10,4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2009-10,5.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2009-10,5.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2009-10,5.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2009-10,7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2009-10,5.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2009-10,16.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2009-10,13.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2009-10,2.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2011-12,4.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2011-12,6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2011-12,4.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2011-12,6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2011-12,8.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2011-12,6.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2011-12,11.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2011-12,12.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2011-12,2.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2013-14,4.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2013-14,6.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2013-14,5.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2013-14,5.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2013-14,8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2013-14,6.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2013-14,11.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2013-14,8.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2013-14,2.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2015-16,5.2,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2015-16,4.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2015-16,4.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2015-16,4.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2015-16,5.7,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2015-16,5.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2015-16,15.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2015-16,11.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2015-16,2.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2017-18,4.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2017-18,6.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2017-18,5.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2017-18,4.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2017-18,6.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2017-18,4.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2017-18,18.4,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2017-18,11.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2017-18,2.3,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha
+2019-20,5.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NSW,nhha
+2019-20,6.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Vic.,nhha
+2019-20,5.1,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Qld,nhha
+2019-20,6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,SA,nhha
+2019-20,7.5,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,WA,nhha
+2019-20,9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Tas.,nhha
+2019-20,10.6,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,NT,nhha
+2019-20,13.9,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,ACT,nhha
+2019-20,2.8,pct_number_of_lower_income_renter_households,renter_lower_income,nhha_location,Total,Aust.,nhha

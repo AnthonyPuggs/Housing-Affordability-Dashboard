@@ -1,0 +1,1086 @@
+survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
+2019-20,42,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,5.5,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,98.2,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,0.5,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,2.2,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,2.2,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,479.5,households_000,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,375,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,26.7,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,48.2,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,10.7,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,21.1,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,18.8,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,39.9,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,234.6,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,54,median_weekly_cost,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,7.1,median_cost_income_ratio,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,82.4,pct_25_or_less,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,3.6,pct_25_to_30,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,8.1,pct_30_to_50,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,6.2,pct_over_50,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,14.6,pct_over_30,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,712,households_000,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,120,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,23.6,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,70,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,28.5,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,5.9,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,5.9,pct_over_30,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,72.7,households_000,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,389,median_weekly_cost,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,34.8,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,20.4,pct_25_or_less,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,16.9,pct_25_to_30,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,43.2,pct_30_to_50,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,20.3,pct_over_50,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,64.5,pct_over_30,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,294.5,households_000,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,320,median_weekly_cost,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,30.8,median_cost_income_ratio,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,31.3,pct_25_or_less,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,17.8,pct_25_to_30,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,35.2,pct_30_to_50,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,15.6,pct_over_50,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,50.5,pct_over_30,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,415.2,households_000,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,108,median_weekly_cost,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,15.7,median_cost_income_ratio,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,64.3,pct_25_or_less,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,8.6,pct_25_to_30,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,17,pct_30_to_50,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,9.5,pct_over_50,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,26.9,pct_over_30,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,1163.5,households_000,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,47,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,5.9,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,99.4,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,0.6,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,0,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,0,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,411.1,households_000,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,341,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,24.3,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,51.2,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,10.8,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,20.4,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,16.4,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,36,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,239.3,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,58,median_weekly_cost,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,8.2,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,81.3,pct_25_or_less,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,4.6,pct_25_to_30,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,7.8,pct_30_to_50,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,6.1,pct_over_50,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,13.3,pct_over_30,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,650.1,households_000,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,120,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,23,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,88,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,13.3,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,0,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,0,pct_over_30,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,45.3,households_000,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,349,median_weekly_cost,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,32.5,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,24.8,pct_25_or_less,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,17.9,pct_25_to_30,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,37.6,pct_30_to_50,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,21.2,pct_over_50,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,56.8,pct_over_30,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,216.2,households_000,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,313,median_weekly_cost,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,28.9,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,34.6,pct_25_or_less,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,16.5,pct_25_to_30,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,29.4,pct_30_to_50,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,18.2,pct_over_50,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,47.6,pct_over_30,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,288.2,households_000,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,88,median_weekly_cost,all,lower_income_state,Total,Victoria,lower_income
+2019-20,13.2,median_cost_income_ratio,all,lower_income_state,Total,Victoria,lower_income
+2019-20,68.8,pct_25_or_less,all,lower_income_state,Total,Victoria,lower_income
+2019-20,7.8,pct_25_to_30,all,lower_income_state,Total,Victoria,lower_income
+2019-20,13.7,pct_30_to_50,all,lower_income_state,Total,Victoria,lower_income
+2019-20,9.2,pct_over_50,all,lower_income_state,Total,Victoria,lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,Victoria,lower_income
+2019-20,23.2,pct_over_30,all,lower_income_state,Total,Victoria,lower_income
+2019-20,979.8,households_000,all,lower_income_state,Total,Victoria,lower_income
+2019-20,48,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,5.6,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,99.2,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,0.9,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,0.8,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,0.8,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,323.1,households_000,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,337,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,21.2,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,55.2,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,11.2,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,23.2,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,11.1,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,33.1,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,157.9,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,55,median_weekly_cost,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,6.9,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,84.2,pct_25_or_less,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,4.2,pct_25_to_30,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,7.5,pct_30_to_50,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,3.6,pct_over_50,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,11.6,pct_over_30,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,486.8,households_000,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,110,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,20,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,82.9,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,11.2,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,0,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,0,pct_over_30,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,57.3,households_000,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,340,median_weekly_cost,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,33.7,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,21,pct_25_or_less,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,18.2,pct_25_to_30,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,41.8,pct_30_to_50,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,14.6,pct_over_50,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,57.2,pct_over_30,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,265.9,households_000,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,306,median_weekly_cost,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,29.7,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,35.2,pct_25_or_less,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,18.3,pct_25_to_30,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,35.8,pct_30_to_50,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,13.5,pct_over_50,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,48.5,pct_over_30,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,346.5,households_000,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,150,median_weekly_cost,all,lower_income_state,Total,Queensland,lower_income
+2019-20,17.6,median_cost_income_ratio,all,lower_income_state,Total,Queensland,lower_income
+2019-20,64.5,pct_25_or_less,all,lower_income_state,Total,Queensland,lower_income
+2019-20,9.4,pct_25_to_30,all,lower_income_state,Total,Queensland,lower_income
+2019-20,19.2,pct_30_to_50,all,lower_income_state,Total,Queensland,lower_income
+2019-20,7.8,pct_over_50,all,lower_income_state,Total,Queensland,lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,Queensland,lower_income
+2019-20,26.4,pct_over_30,all,lower_income_state,Total,Queensland,lower_income
+2019-20,846.7,households_000,all,lower_income_state,Total,Queensland,lower_income
+2019-20,45,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,6.2,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,99.6,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,0.5,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,0,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,0,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,131.3,households_000,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,300,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,22.2,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,54.8,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,10.6,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,21.9,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,9.8,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,34.2,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,79.6,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,54,median_weekly_cost,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,7.8,median_cost_income_ratio,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,82.2,pct_25_or_less,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,4.5,pct_25_to_30,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,9.4,pct_30_to_50,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,3.7,pct_over_50,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,12.7,pct_over_30,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,210.2,households_000,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,116,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,22.8,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,79,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,16.3,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,1.7,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,4,pct_over_30,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,33,households_000,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,275,median_weekly_cost,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,30.1,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,33.7,pct_25_or_less,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,14.5,pct_25_to_30,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,37.5,pct_30_to_50,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,14.7,pct_over_50,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,50.8,pct_over_30,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,67.5,households_000,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,234,median_weekly_cost,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,26.1,median_cost_income_ratio,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,45.1,pct_25_or_less,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,17.3,pct_25_to_30,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,29.2,pct_30_to_50,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,9.2,pct_over_50,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,39,pct_over_30,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,112.1,households_000,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,108,median_weekly_cost,all,lower_income_state,Total,South Australia,lower_income
+2019-20,16,median_cost_income_ratio,all,lower_income_state,Total,South Australia,lower_income
+2019-20,70,pct_25_or_less,all,lower_income_state,Total,South Australia,lower_income
+2019-20,8.7,pct_25_to_30,all,lower_income_state,Total,South Australia,lower_income
+2019-20,15.5,pct_30_to_50,all,lower_income_state,Total,South Australia,lower_income
+2019-20,6.1,pct_over_50,all,lower_income_state,Total,South Australia,lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,South Australia,lower_income
+2019-20,21.4,pct_over_30,all,lower_income_state,Total,South Australia,lower_income
+2019-20,331,households_000,all,lower_income_state,Total,South Australia,lower_income
+2019-20,40,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,5.3,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,98.9,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,1.1,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,0,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,0,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,151.9,households_000,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,358,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,27.1,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,45.4,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,12.3,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,24.7,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,17.7,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,41.8,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,105.3,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,60,median_weekly_cost,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,7.1,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,77.6,pct_25_or_less,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,5.6,pct_25_to_30,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,10.5,pct_30_to_50,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,7.3,pct_over_50,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,17.8,pct_over_30,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,256,households_000,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,127,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,24.6,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,63.3,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,28.7,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,0,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,10,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,10,pct_over_30,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,28,households_000,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,310,median_weekly_cost,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,30.2,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,36.2,pct_25_or_less,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,13.9,pct_25_to_30,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,36.8,pct_30_to_50,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,17.9,pct_over_50,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,54,pct_over_30,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,95.7,households_000,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,287,median_weekly_cost,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,26.6,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,41.6,pct_25_or_less,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,15.5,pct_25_to_30,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,28.3,pct_30_to_50,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,13.2,pct_over_50,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,42.6,pct_over_30,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,141.4,households_000,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,127,median_weekly_cost,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,16.7,median_cost_income_ratio,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,65.1,pct_25_or_less,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,9.5,pct_25_to_30,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,16.5,pct_30_to_50,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,9.7,pct_over_50,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,25.5,pct_over_30,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,411.7,households_000,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,40,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,5.5,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,98.2,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,0,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,0,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,0,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,46,households_000,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,256,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,20.5,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,63,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,12.2,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,23.1,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,9,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,28.4,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,24.5,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,46,median_weekly_cost,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,7,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,87,pct_25_or_less,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,4.6,pct_25_to_30,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,6.4,pct_30_to_50,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,3.1,pct_over_50,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,9.7,pct_over_30,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,70.5,households_000,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,130,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,21.7,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,74.4,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,11.4,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,9.6,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,9.6,pct_over_30,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,10.5,households_000,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,265,median_weekly_cost,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,29.7,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,37.1,pct_25_or_less,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,12.3,pct_25_to_30,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,27.7,pct_30_to_50,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,18.4,pct_over_50,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,47.1,pct_over_30,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,28.5,households_000,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,224,median_weekly_cost,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,25.3,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,49,pct_25_or_less,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,13.1,pct_25_to_30,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,26.7,pct_30_to_50,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,11.4,pct_over_50,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,38.3,pct_over_30,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,42.4,households_000,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,110,median_weekly_cost,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,13.3,median_cost_income_ratio,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,72.5,pct_25_or_less,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,7.2,pct_25_to_30,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,14.2,pct_30_to_50,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,6.4,pct_over_50,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,20.1,pct_over_30,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,117.1,households_000,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,43,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,4.3,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,77.5,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,0,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,0,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,0,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,3.4,households_000,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,481,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,27.9,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,44.9,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,13.4,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,23.5,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,6,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,31.1,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,5.2,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,162,median_weekly_cost,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,12,median_cost_income_ratio,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,66.9,pct_25_or_less,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,8.8,pct_25_to_30,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,15.4,pct_30_to_50,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,4.3,pct_over_50,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,25.2,pct_over_30,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,8,households_000,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,140,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,19.4,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,91.9,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,4.8,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,0,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,0,pct_over_30,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,3.3,households_000,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,393,median_weekly_cost,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,31.3,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,21.2,pct_25_or_less,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,21.2,pct_25_to_30,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,38.1,pct_30_to_50,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,13.3,pct_over_50,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,54.8,pct_over_30,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,5.6,households_000,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,292,median_weekly_cost,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,25,median_cost_income_ratio,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,48.8,pct_25_or_less,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,10.9,pct_25_to_30,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,27.9,pct_30_to_50,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,13.7,pct_over_50,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,37.1,pct_over_30,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,9.8,households_000,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,274,median_weekly_cost,all,lower_income_state,Total,NT (d),lower_income
+2019-20,21.3,median_cost_income_ratio,all,lower_income_state,Total,NT (d),lower_income
+2019-20,58.5,pct_25_or_less,all,lower_income_state,Total,NT (d),lower_income
+2019-20,12.3,pct_25_to_30,all,lower_income_state,Total,NT (d),lower_income
+2019-20,23,pct_30_to_50,all,lower_income_state,Total,NT (d),lower_income
+2019-20,8.3,pct_over_50,all,lower_income_state,Total,NT (d),lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,NT (d),lower_income
+2019-20,29.3,pct_over_30,all,lower_income_state,Total,NT (d),lower_income
+2019-20,17.8,households_000,all,lower_income_state,Total,NT (d),lower_income
+2019-20,61,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,7.3,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,97.5,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,11.8,households_000,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,284,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,27.4,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,43.5,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,10.7,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,37.3,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,13.5,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,45.4,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,6.2,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,74,median_weekly_cost,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,9.1,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,74.9,pct_25_or_less,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,3.7,pct_25_to_30,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,8.1,pct_30_to_50,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,4.6,pct_over_50,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,14.5,pct_over_30,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,18.1,households_000,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,110,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,21.3,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,89.2,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,10.8,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0,pct_over_30,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,8.2,households_000,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,425,median_weekly_cost,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,32.9,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,24,pct_25_or_less,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,6.7,pct_25_to_30,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,42,pct_30_to_50,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,25.8,pct_over_50,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,64.1,pct_over_30,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,7.4,households_000,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,199,median_weekly_cost,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,23.3,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,58,pct_25_or_less,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,12.2,pct_25_to_30,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,21,pct_30_to_50,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,11.6,pct_over_50,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,34.4,pct_over_30,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,16.4,households_000,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,113,median_weekly_cost,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,19.5,median_cost_income_ratio,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,68.8,pct_25_or_less,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,9.8,pct_25_to_30,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,16.7,pct_30_to_50,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,8.6,pct_over_50,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,22.7,pct_over_30,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,35.6,households_000,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,45,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,5.7,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,98.7,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0.6,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0.9,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,100,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0.9,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,1563,households_000,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,341,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,24.1,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,51.3,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,11.5,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,21.7,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,15.5,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,100,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,37.4,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,847.7,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,56,median_weekly_cost,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,7.4,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,81.9,pct_25_or_less,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,4.4,pct_25_to_30,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,8.2,pct_30_to_50,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,5.5,pct_over_50,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,100,pct_total,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,13.7,pct_over_30,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,2408.8,households_000,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,119,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,22.7,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,77.1,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,18.2,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,3.9,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0.8,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,100,pct_total,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,4.7,pct_over_30,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,257.2,households_000,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,345,median_weekly_cost,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,33.3,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,24.7,pct_25_or_less,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,16.6,pct_25_to_30,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,39.5,pct_30_to_50,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,18.8,pct_over_50,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,100,pct_total,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,58,pct_over_30,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,983.3,households_000,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,295,median_weekly_cost,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,28.7,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,36,pct_25_or_less,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,16.9,pct_25_to_30,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,32.2,pct_30_to_50,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,14.6,pct_over_50,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,100,pct_total,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,46.7,pct_over_30,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,1374.2,households_000,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,111,median_weekly_cost,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,15.7,median_cost_income_ratio,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,66.4,pct_25_or_less,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,8.7,pct_25_to_30,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,16.5,pct_30_to_50,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,8.5,pct_over_50,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,100,pct_total,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,25.1,pct_over_30,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,3902.5,households_000,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,3.7,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,0.5,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,2.5,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,1.8,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,1.8,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,4.1,households_000,owner_outright,lower_income_state,Owner without a mortgage,New South Wales,lower_income
+2019-20,10.6,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,4,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,9.3,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,5.1,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,6.5,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,5.3,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,6.6,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,6.8,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,New South Wales,lower_income
+2019-20,3,median_weekly_cost,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,0.7,median_cost_income_ratio,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,3.2,pct_25_or_less,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,1.7,pct_25_to_30,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,2.3,pct_30_to_50,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,1.9,pct_over_50,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,2.6,pct_over_30,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,3.1,households_000,owner_total,lower_income_state,Total owners,New South Wales,lower_income
+2019-20,5.3,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,1,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,8.2,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,10.6,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,12.2,households_000,renter_social,lower_income_state,State or territory housing authority,New South Wales,lower_income
+2019-20,3.9,median_weekly_cost,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,2.9,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,6.2,pct_25_or_less,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,4.8,pct_25_to_30,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,6.4,pct_30_to_50,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,5.5,pct_over_50,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,5.9,pct_over_30,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,6.5,households_000,renter_private,lower_income_state,Private landlord,New South Wales,lower_income
+2019-20,5.9,median_weekly_cost,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,2.1,median_cost_income_ratio,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,4.6,pct_25_or_less,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,4.9,pct_25_to_30,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,5,pct_30_to_50,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,4.3,pct_over_50,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,5.2,pct_over_30,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,5.7,households_000,renter_total,lower_income_state,Total renters,New South Wales,lower_income
+2019-20,13.7,median_weekly_cost,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,3.1,median_cost_income_ratio,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,2.9,pct_25_or_less,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,1.8,pct_25_to_30,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,2.5,pct_30_to_50,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,1.9,pct_over_50,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,2.8,pct_over_30,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,2.2,households_000,all,lower_income_state,Total,New South Wales,lower_income
+2019-20,2.7,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,0.4,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,0,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,4.6,households_000,owner_outright,lower_income_state,Owner without a mortgage,Victoria,lower_income
+2019-20,9.4,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,4.1,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,10.4,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,7.2,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,5.8,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,7.4,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,7.8,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,8,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Victoria,lower_income
+2019-20,2.7,median_weekly_cost,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,1,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,3.7,pct_25_or_less,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,2.8,pct_25_to_30,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,2.3,pct_30_to_50,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,2.9,pct_over_50,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,3.4,pct_over_30,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,3.5,households_000,owner_total,lower_income_state,Total owners,Victoria,lower_income
+2019-20,9.1,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,0.7,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,10.9,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,11.5,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,19.2,households_000,renter_social,lower_income_state,State or territory housing authority,Victoria,lower_income
+2019-20,2.7,median_weekly_cost,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,3.8,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,11.3,pct_25_or_less,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,7.5,pct_25_to_30,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,8.2,pct_30_to_50,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,7,pct_over_50,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,9.1,pct_over_30,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,9,households_000,renter_private,lower_income_state,Private landlord,Victoria,lower_income
+2019-20,6.2,median_weekly_cost,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,2.7,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,9,pct_25_or_less,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,5.8,pct_25_to_30,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,6.9,pct_30_to_50,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,5.7,pct_over_50,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,8,pct_over_30,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,7.5,households_000,renter_total,lower_income_state,Total renters,Victoria,lower_income
+2019-20,11.2,median_weekly_cost,all,lower_income_state,Total,Victoria,lower_income
+2019-20,1.8,median_cost_income_ratio,all,lower_income_state,Total,Victoria,lower_income
+2019-20,2.7,pct_25_or_less,all,lower_income_state,Total,Victoria,lower_income
+2019-20,2.2,pct_25_to_30,all,lower_income_state,Total,Victoria,lower_income
+2019-20,2.3,pct_30_to_50,all,lower_income_state,Total,Victoria,lower_income
+2019-20,2.6,pct_over_50,all,lower_income_state,Total,Victoria,lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,Victoria,lower_income
+2019-20,3.1,pct_over_30,all,lower_income_state,Total,Victoria,lower_income
+2019-20,2.6,households_000,all,lower_income_state,Total,Victoria,lower_income
+2019-20,2.9,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,0.5,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,0,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,5.1,households_000,owner_outright,lower_income_state,Owner without a mortgage,Queensland,lower_income
+2019-20,11.4,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,3.1,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,9.8,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,6.9,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,7.7,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,6.4,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,7.8,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,8.7,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Queensland,lower_income
+2019-20,4.2,median_weekly_cost,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,0.8,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,3.1,pct_25_or_less,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,2.4,pct_25_to_30,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,2.7,pct_30_to_50,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,2.1,pct_over_50,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,2.9,pct_over_30,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,4.2,households_000,owner_total,lower_income_state,Total owners,Queensland,lower_income
+2019-20,10.4,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,2.1,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,14.8,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,8,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,14.8,households_000,renter_social,lower_income_state,State or territory housing authority,Queensland,lower_income
+2019-20,3.2,median_weekly_cost,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,3.2,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,7.7,pct_25_or_less,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,6.4,pct_25_to_30,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,8.5,pct_30_to_50,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,5.4,pct_over_50,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,8.2,pct_over_30,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,6.1,households_000,renter_private,lower_income_state,Private landlord,Queensland,lower_income
+2019-20,2.9,median_weekly_cost,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,3.4,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,7.5,pct_25_or_less,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,5.1,pct_25_to_30,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,8,pct_30_to_50,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,4.2,pct_over_50,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,8.1,pct_over_30,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,5.2,households_000,renter_total,lower_income_state,Total renters,Queensland,lower_income
+2019-20,15.1,median_weekly_cost,all,lower_income_state,Total,Queensland,lower_income
+2019-20,2,median_cost_income_ratio,all,lower_income_state,Total,Queensland,lower_income
+2019-20,3.9,pct_25_or_less,all,lower_income_state,Total,Queensland,lower_income
+2019-20,2.4,pct_25_to_30,all,lower_income_state,Total,Queensland,lower_income
+2019-20,4,pct_30_to_50,all,lower_income_state,Total,Queensland,lower_income
+2019-20,2.2,pct_over_50,all,lower_income_state,Total,Queensland,lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,Queensland,lower_income
+2019-20,4.2,pct_over_30,all,lower_income_state,Total,Queensland,lower_income
+2019-20,2.5,households_000,all,lower_income_state,Total,Queensland,lower_income
+2019-20,3,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,0.6,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,0,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,5.3,households_000,owner_outright,lower_income_state,Owner without a mortgage,South Australia,lower_income
+2019-20,7.8,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,4.1,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,8.6,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,6.8,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,8.6,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,5.3,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,9.4,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,7.1,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,South Australia,lower_income
+2019-20,4,median_weekly_cost,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,0.7,median_cost_income_ratio,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,3.7,pct_25_or_less,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,2.5,pct_25_to_30,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,3.6,pct_30_to_50,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,2.1,pct_over_50,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,4,pct_over_30,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,4.2,households_000,owner_total,lower_income_state,Total owners,South Australia,lower_income
+2019-20,4.4,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,0.5,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,5.6,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,8.7,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,3,pct_over_30,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,13,households_000,renter_social,lower_income_state,State or territory housing authority,South Australia,lower_income
+2019-20,3.2,median_weekly_cost,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,3.8,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,9.8,pct_25_or_less,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,7.5,pct_25_to_30,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,7.3,pct_30_to_50,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,7.3,pct_over_50,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,9.7,pct_over_30,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,9,households_000,renter_private,lower_income_state,Private landlord,South Australia,lower_income
+2019-20,5.3,median_weekly_cost,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,1.5,median_cost_income_ratio,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,7.2,pct_25_or_less,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,5.5,pct_25_to_30,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,5.3,pct_30_to_50,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,4.7,pct_over_50,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,6.5,pct_over_30,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,6.1,households_000,renter_total,lower_income_state,Total renters,South Australia,lower_income
+2019-20,6,median_weekly_cost,all,lower_income_state,Total,South Australia,lower_income
+2019-20,2.7,median_cost_income_ratio,all,lower_income_state,Total,South Australia,lower_income
+2019-20,4,pct_25_or_less,all,lower_income_state,Total,South Australia,lower_income
+2019-20,2.5,pct_25_to_30,all,lower_income_state,Total,South Australia,lower_income
+2019-20,2.7,pct_30_to_50,all,lower_income_state,Total,South Australia,lower_income
+2019-20,2.1,pct_over_50,all,lower_income_state,Total,South Australia,lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,South Australia,lower_income
+2019-20,3.3,pct_over_30,all,lower_income_state,Total,South Australia,lower_income
+2019-20,2.4,households_000,all,lower_income_state,Total,South Australia,lower_income
+2019-20,4.4,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,0.5,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,0,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,7.1,households_000,owner_outright,lower_income_state,Owner without a mortgage,Western Australia,lower_income
+2019-20,7.8,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,6.3,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,10.2,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,8.1,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,8.2,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,7.7,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,11.1,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,11.3,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Western Australia,lower_income
+2019-20,8,median_weekly_cost,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,0.9,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,4.9,pct_25_or_less,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,3.5,pct_25_to_30,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,3.8,pct_30_to_50,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,3.5,pct_over_50,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,5.5,pct_over_30,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,5.9,households_000,owner_total,lower_income_state,Total owners,Western Australia,lower_income
+2019-20,8.3,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,1.4,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,17.5,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,9.8,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,0,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,16.4,households_000,renter_social,lower_income_state,State or territory housing authority,Western Australia,lower_income
+2019-20,4.4,median_weekly_cost,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,6,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,11.2,pct_25_or_less,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,7.7,pct_25_to_30,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,10.2,pct_30_to_50,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,10,pct_over_50,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,12.2,pct_over_30,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,10.5,households_000,renter_private,lower_income_state,Private landlord,Western Australia,lower_income
+2019-20,6.8,median_weekly_cost,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,3.6,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,8.9,pct_25_or_less,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,5.9,pct_25_to_30,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,7.9,pct_30_to_50,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,7.4,pct_over_50,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,10.3,pct_over_30,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,7.6,households_000,renter_total,lower_income_state,Total renters,Western Australia,lower_income
+2019-20,19.6,median_weekly_cost,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,3.6,median_cost_income_ratio,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,5,pct_25_or_less,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,3.4,pct_25_to_30,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,3.5,pct_30_to_50,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,3.3,pct_over_50,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,4.8,pct_over_30,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,3.9,households_000,all,lower_income_state,Total,Western Australia,lower_income
+2019-20,3.2,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,0.5,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,2.3,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,6.6,households_000,owner_outright,lower_income_state,Owner without a mortgage,Tasmania,lower_income
+2019-20,12.1,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,5.1,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,12.8,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,7.2,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,10.7,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,5.5,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,12.6,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,11.4,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Tasmania,lower_income
+2019-20,4.3,median_weekly_cost,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,0.8,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,3.6,pct_25_or_less,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,2.7,pct_25_to_30,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,4.1,pct_30_to_50,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,2,pct_over_50,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,4.8,pct_over_30,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,5.5,households_000,owner_total,lower_income_state,Total owners,Tasmania,lower_income
+2019-20,12.2,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,2,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,9.8,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,7.9,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,19.6,households_000,renter_social,lower_income_state,State or territory housing authority,Tasmania,lower_income
+2019-20,6.9,median_weekly_cost,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,5.9,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,11.2,pct_25_or_less,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,7.5,pct_25_to_30,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,7.3,pct_30_to_50,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,8.3,pct_over_50,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,6,pct_over_30,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,12.5,households_000,renter_private,lower_income_state,Private landlord,Tasmania,lower_income
+2019-20,5.3,median_weekly_cost,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,1.7,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,6.8,pct_25_or_less,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,6.3,pct_25_to_30,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,6.2,pct_30_to_50,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,6.3,pct_over_50,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,6.9,pct_over_30,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,8.9,households_000,renter_total,lower_income_state,Total renters,Tasmania,lower_income
+2019-20,19.6,median_weekly_cost,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,3.6,median_cost_income_ratio,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,4,pct_25_or_less,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,2.8,pct_25_to_30,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,3.8,pct_30_to_50,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,2.4,pct_over_50,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,4.5,pct_over_30,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,3.3,households_000,all,lower_income_state,Total,Tasmania,lower_income
+2019-20,20.4,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,1.6,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,22.6,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,0,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,0,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,18.2,households_000,owner_outright,lower_income_state,Owner without a mortgage,NT (d),lower_income
+2019-20,17,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,10.9,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,26,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,13,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,18.6,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,19.1,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,17.5,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,NT (d),lower_income
+2019-20,49.4,median_weekly_cost,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,7,median_cost_income_ratio,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,18.1,pct_25_or_less,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,12.7,pct_30_to_50,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,13.2,pct_over_30,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,12.5,households_000,owner_total,lower_income_state,Total owners,NT (d),lower_income
+2019-20,10,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,2.5,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,17.7,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,25.7,households_000,renter_social,lower_income_state,State or territory housing authority,NT (d),lower_income
+2019-20,6.9,median_weekly_cost,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,6.5,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,19.1,pct_25_or_less,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,17.7,pct_25_to_30,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,16.5,pct_30_to_50,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,13.1,pct_over_30,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,18.3,households_000,renter_private,lower_income_state,Private landlord,NT (d),lower_income
+2019-20,14.1,median_weekly_cost,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,4.5,median_cost_income_ratio,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,14.6,pct_25_or_less,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,10.4,pct_25_to_30,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,10.8,pct_30_to_50,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,8.3,pct_over_50,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,10.6,pct_over_30,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,11.8,households_000,renter_total,lower_income_state,Total renters,NT (d),lower_income
+2019-20,13.7,median_weekly_cost,all,lower_income_state,Total,NT (d),lower_income
+2019-20,3.7,median_cost_income_ratio,all,lower_income_state,Total,NT (d),lower_income
+2019-20,8.9,pct_25_or_less,all,lower_income_state,Total,NT (d),lower_income
+2019-20,6.3,pct_25_to_30,all,lower_income_state,Total,NT (d),lower_income
+2019-20,8.6,pct_30_to_50,all,lower_income_state,Total,NT (d),lower_income
+2019-20,5,pct_over_50,all,lower_income_state,Total,NT (d),lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,NT (d),lower_income
+2019-20,8.8,pct_over_30,all,lower_income_state,Total,NT (d),lower_income
+2019-20,7.9,households_000,all,lower_income_state,Total,NT (d),lower_income
+2019-20,6.5,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,1.3,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,2.9,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_over_50,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,11.9,households_000,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,34.7,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,14,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,25.2,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,19.9,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,21.8,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,19.6,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,10,median_weekly_cost,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,1.8,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,12.8,pct_25_or_less,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,9.2,pct_over_30,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,9.8,households_000,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,3.1,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,2.1,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,10.3,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0,pct_over_50,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0,pct_over_30,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,17.2,households_000,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,15.1,median_weekly_cost,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,9,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,22.8,pct_30_to_50,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,15.7,pct_over_50,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,17.8,pct_over_30,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,24.5,households_000,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,26.3,median_weekly_cost,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,2,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,10.5,pct_25_or_less,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,8.6,pct_25_to_30,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,12.7,pct_30_to_50,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,8.5,pct_over_50,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,13.3,pct_over_30,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,13.7,households_000,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,12.3,median_weekly_cost,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,2.9,median_cost_income_ratio,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,5.5,pct_25_or_less,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,4.6,pct_25_to_30,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,6.2,pct_30_to_50,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,5.3,pct_over_50,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,7.5,pct_over_30,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,8.1,households_000,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,1.4,median_weekly_cost,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0.2,median_cost_income_ratio,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,1.4,pct_25_or_less,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0.4,pct_25_to_30,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0.6,pct_30_to_50,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_total,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,0.5,pct_over_30,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,2.2,households_000,owner_outright,lower_income_state,Owner without a mortgage,Australian Capital Territory,lower_income
+2019-20,3.5,median_weekly_cost,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,1.9,median_cost_income_ratio,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,5.1,pct_25_or_less,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,2.7,pct_25_to_30,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,3.5,pct_30_to_50,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,3.2,pct_over_50,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,0,pct_total,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,3.2,pct_over_30,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,3.9,households_000,owner_mortgage,lower_income_state,Owner with a mortgage,Australian Capital Territory,lower_income
+2019-20,1.7,median_weekly_cost,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,0.4,median_cost_income_ratio,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,1.8,pct_25_or_less,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,1,pct_25_to_30,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,1.4,pct_30_to_50,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,1.2,pct_over_50,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,0,pct_total,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,1.5,pct_over_30,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,1.8,households_000,owner_total,lower_income_state,Total owners,Australian Capital Territory,lower_income
+2019-20,2.9,median_weekly_cost,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0.4,median_cost_income_ratio,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,6.5,pct_25_or_less,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,3.9,pct_25_to_30,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,2.5,pct_30_to_50,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,0,pct_total,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,2.7,pct_over_30,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,6.4,households_000,renter_social,lower_income_state,State or territory housing authority,Australian Capital Territory,lower_income
+2019-20,1.7,median_weekly_cost,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,1.3,median_cost_income_ratio,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,3.6,pct_25_or_less,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,3,pct_25_to_30,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,3,pct_30_to_50,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,2.5,pct_over_50,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,0,pct_total,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,2.5,pct_over_30,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,3.7,households_000,renter_private,lower_income_state,Private landlord,Australian Capital Territory,lower_income
+2019-20,2.2,median_weekly_cost,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,1,median_cost_income_ratio,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,3,pct_25_or_less,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,2.5,pct_25_to_30,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,3,pct_30_to_50,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,2.1,pct_over_50,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,0,pct_total,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,3,pct_over_30,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,2.9,households_000,renter_total,lower_income_state,Total renters,Australian Capital Territory,lower_income
+2019-20,3.4,median_weekly_cost,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,1.1,median_cost_income_ratio,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,1.3,pct_25_or_less,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,1,pct_25_to_30,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,1.4,pct_30_to_50,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,1,pct_over_50,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,0,pct_total,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,1.4,pct_over_30,all,lower_income_state,Total,Australian Capital Territory,lower_income
+2019-20,1.1,households_000,all,lower_income_state,Total,Australian Capital Territory,lower_income
