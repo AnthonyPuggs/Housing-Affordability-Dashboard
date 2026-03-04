@@ -621,7 +621,7 @@ ui <- page_navbar(
       )
     ),
     layout_column_wrap(
-      width = 1/4,
+      width = 1/5,
       fill = FALSE,
       value_box(
         title = "NSW Approvals",
@@ -636,6 +636,13 @@ ui <- page_navbar(
         p(class = "kpi-subtitle", "Monthly dwelling units"),
         uiOutput("vb_approvals_vic_change"),
         theme = value_box_theme(bg = "#3B4C7A", fg = "#fff")
+      ),
+      value_box(
+        title = "QLD Approvals",
+        value = textOutput("vb_approvals_qld"),
+        p(class = "kpi-subtitle", "Monthly dwelling units"),
+        uiOutput("vb_approvals_qld_change"),
+        theme = value_box_theme(bg = "#7B2D26", fg = "#fff")
       ),
       value_box(
         title = "Construction Costs",
@@ -1418,6 +1425,29 @@ server <- function(input, output, session) {
     d <- supply_demand %>%
       filter(category == "Building Approvals",
              str_detect(series, "Victoria"),
+             str_detect(series, "Total \\(Type of Building\\)"),
+             str_detect(series, "Total Sectors"),
+             !is.na(value)) %>%
+      arrange(desc(date))
+    if (nrow(d) < 13) return(tags$p(class = "kpi-subtitle", ""))
+    current <- d$value[1]; previous <- d$value[13]
+    if (is.na(previous) || previous == 0) return(tags$p(class = "kpi-subtitle", ""))
+    pct <- (current / previous - 1) * 100
+    direction <- if (pct >= 0) "\u2191" else "\u2193"
+    label <- paste0(direction, " ", sprintf("%+.1f%%", pct), " YoY")
+    css_class <- if (pct >= 0) "kpi-change-up" else "kpi-change-down"
+    tags$p(class = paste("kpi-subtitle", css_class), label)
+  })
+
+  output$vb_approvals_qld <- renderText({
+    d <- approvals_latest("Queensland")
+    if (nrow(d) == 0) return("N/A")
+    fmt_number(d$value[1])
+  })
+  output$vb_approvals_qld_change <- renderUI({
+    d <- supply_demand %>%
+      filter(category == "Building Approvals",
+             str_detect(series, "Queensland"),
              str_detect(series, "Total \\(Type of Building\\)"),
              str_detect(series, "Total Sectors"),
              !is.na(value)) %>%
