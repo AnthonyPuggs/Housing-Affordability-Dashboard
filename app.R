@@ -930,6 +930,9 @@ server <- function(input, output, session) {
 
     validate(need(nrow(d) > 0, "No affordability index data available."))
 
+    # Align all series to a common start date (RPPI begins 2002-Q1)
+    d <- d %>% filter(date >= as.Date("2002-01-01"))
+
     idx_colours <- c("Rent Affordability" = "#009688",
                      "Mortgage Affordability" = "#FF9800",
                      "Price-to-Income Ratio" = "#1565C0")
