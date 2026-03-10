@@ -1,5 +1,7 @@
 # Australian Macroeconomic Dashboard (Shiny + readabs)
 
+Live web app here: https://anthonypuggs-household-affordability-dashboard.share.connect.posit.cloud/
+
 This project provides a stylish and interactive Australian macro dashboard built in **R** with:
 
 - `shiny` for the dashboard app
