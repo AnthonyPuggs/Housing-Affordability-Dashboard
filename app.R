@@ -12,6 +12,15 @@ library(plotly)
 # Shared data loading, helpers, theme, and pre-computed datasets
 source("plot_setup.R")
 
+# Concise method/source note used below chart cards.
+source_note <- function(...) {
+  tags$p(...,
+         class = "source-note px-3",
+         style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;")
+}
+
+stylised_scenario_note <- "Stylised scenario, not an official ABS measure or lender assessment."
+
 # ==============================================================================
 # UI
 # ==============================================================================
@@ -262,9 +271,9 @@ ui <- page_navbar(
         theme = value_box_theme(bg = "#3B4C7A", fg = "#fff")
       ),
       value_box(
-        title = "Mortgage to Income",
+        title = "Modelled Serviceability",
         value = textOutput("vb_service"),
-        p(class = "kpi-subtitle", "Serviceability ratio"),
+        p(class = "kpi-subtitle", "Stylised mortgage scenario"),
         uiOutput("vb_service_change"),
         theme = value_box_theme(bg = "#17415F", fg = "#fff")
       ),
@@ -304,9 +313,7 @@ ui <- page_navbar(
       card(
         fill = FALSE,
         card_header("Affordability Indices"),
-        tags$p("Higher values = worsening affordability. Rent (CPI Rents/WPI), Mortgage (Price\u00d7Rate/WPI), Deposit (Price/Income), Price-to-Income Ratio.",
-               class = "px-3",
-               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
+        source_note("Cost-pressure indexes; higher = less affordable. Rent uses ABS CPI rents/WPI, mortgage uses price\u00d7rate/WPI, deposit uses price/income, and price-to-income uses national dwelling prices/WPI."),
         card_body(plotlyOutput("overview_afford_change", height = "380px"))
       )
     )
@@ -344,6 +351,7 @@ ui <- page_navbar(
           ),
           card(
             card_header("Dwelling Price Index by Capital City"),
+            source_note("ABS dwelling price data. Price indexes describe market price movements, not household affordability or borrowing capacity."),
             card_body(div(class = "chart-wide", plotlyOutput("price_chart", height = "100%", width = "100%")))
           )
         )
@@ -366,6 +374,7 @@ ui <- page_navbar(
           ),
           card(
             card_header("Rent Consumer Price Index (CPI) by Greater Capital City"),
+            source_note("ABS CPI rents are price indexes. They measure rental price movements, not the housing cost burden of lower-income renters."),
             card_body(div(class = "chart-wide", plotlyOutput("rent_cpi_chart", height = "100%", width = "100%"))),
             card_footer(
               sliderInput("rent_cpi_dates", "Date Range",
@@ -397,11 +406,11 @@ ui <- page_navbar(
           sidebar = sidebar(
             width = 280, open = "desktop",
             checkboxGroupInput("afford_indices", "Indicators",
-                               choices = c("Price-to-Income Ratio",
-                                           "Mortgage Serviceability Index",
-                                           "Rental Affordability Index",
-                                           "Deposit Gap (Years)",
-                                           "Housing Serviceability"),
+                               choices = c("Price-to-Income Cost Pressure" = "Price-to-Income Ratio",
+                                           "Modelled Mortgage Cost Pressure" = "Mortgage Serviceability Index",
+                                           "Rent Cost Pressure" = "Rental Affordability Index",
+                                           "Stylised Deposit Gap (Years)" = "Deposit Gap (Years)",
+                                           "Modelled Serviceability" = "Housing Serviceability"),
                                selected = c("Price-to-Income Ratio",
                                            "Mortgage Serviceability Index",
                                            "Rental Affordability Index",
@@ -416,15 +425,14 @@ ui <- page_navbar(
           ),
           card(
             card_header("Affordability Indicators"),
+            source_note("Cost-pressure indexes; higher = less affordable. Market-entry measures use wage, price and rate proxies, not official ABS stress definitions."),
             card_body(div(class = "chart-wide", plotlyOutput("afford_indices_chart", height = "100%", width = "100%")))
           ),
           conditionalPanel(
             condition = "input.afford_indices.indexOf('Housing Serviceability') >= 0",
             card(
-              card_header("Housing Serviceability"),
-              tags$p("Proportion of median income required to service a new mortgage (80% LVR, 30yr)",
-                     class = "px-3",
-                     style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
+              card_header("Modelled Serviceability"),
+              source_note("Modelled annual repayment share using an 80% LVR, 30-year loan and RBA mortgage-rate inputs. ", stylised_scenario_note),
               card_body(plotlyOutput("afford_serviceability", height = "380px"))
             )
           )
@@ -436,6 +444,7 @@ ui <- page_navbar(
         layout_sidebar(
           sidebar = sidebar(
             width = 320, open = "desktop",
+            source_note(stylised_scenario_note),
             numericInput("calc_price", "Dwelling Price ($)",
                          value = 800000, min = 100000, max = 5000000,
                          step = 50000),
@@ -506,6 +515,7 @@ ui <- page_navbar(
           ),
           card(
             card_header("Housing Cost Stress Bands (2019-20)"),
+            source_note("ABS Survey of Income and Housing. Official survey-based housing cost burden bands by household group."),
             card_body(div(class = "chart-square", plotlyOutput("stress_chart", height = "100%", width = "100%")))
           )
         )
@@ -525,6 +535,7 @@ ui <- page_navbar(
           ),
           card(
             card_header("Housing Cost-to-Income Ratio by Tenure & Demographics (2019-20)"),
+            source_note("ABS Survey of Income and Housing. Gross-income housing cost ratios by tenure and demographic group."),
             card_body(div(class = "chart-square", plotlyOutput("burden_heatmap", height = "100%", width = "100%")))
           )
         )
@@ -582,6 +593,7 @@ ui <- page_navbar(
       card(
         fill = FALSE,
         card_header("Interest Rates on Residential Mortgages"),
+        source_note("RBA mortgage rates are market-rate inputs, not lender assessment outcomes or household serviceability approvals."),
         card_body(plotlyOutput("context_rates", height = "380px"))
       )
     ),
@@ -590,17 +602,13 @@ ui <- page_navbar(
       card(
         fill = FALSE,
         card_header("Labour Market Spare Capacity"),
-        tags$p("Unemployment, Underemployment & Underutilisation Rates (%)",
-               class = "px-3",
-               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
+        source_note("ABS labour force rates. KPI changes are percentage-point changes, not relative percentage changes."),
         card_body(plotlyOutput("context_labour", height = "380px"))
       ),
       card(
         fill = FALSE,
         card_header("Population Demand"),
-        tags$p("Net Overseas Migration (NOM) per annum (thousands)",
-               class = "px-3",
-               style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;"),
+        source_note("ABS population data. Net overseas migration is shown as an annualised flow in thousands."),
         card_body(plotlyOutput("context_pop", height = "380px"))
       )
     )
@@ -663,10 +671,12 @@ ui <- page_navbar(
       card(
         fill = FALSE,
         card_header("Building Approvals"),
+        source_note("ABS building approvals. Approval counts are supply pipeline indicators, not completed dwellings."),
         card_body(plotlyOutput("supply_approvals", height = "420px"))
       ),
       card(
         card_header("CPI New Dwelling Purchase (Construction Cost)"),
+        source_note("ABS CPI new dwelling purchase is a construction-cost price index, not a household burden measure."),
         card_body(div(class = "chart-wide", plotlyOutput("supply_cpi_construction", height = "100%", width = "100%")))
       )
     )
@@ -701,18 +711,22 @@ ui <- page_navbar(
         width = 1/2,
         card(
           card_header("NHHA Rental Stress by State"),
+          source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Official survey burden/stress measure."),
           card_body(div(class = "chart-square", plotlyOutput("rental_stress_state", height = "100%", width = "100%")))
         ),
         card(
           card_header("NHHA Rental Stress Trends (Over Time)"),
+          source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Values are proportions of lower-income renter households."),
           card_body(div(class = "chart-wide", plotlyOutput("rental_stress_trend", height = "100%", width = "100%")))
         ),
         card(
           card_header("Rental Affordability Index"),
+          source_note("Cost-pressure index using ABS CPI rents and WPI; higher = less affordable."),
           card_body(div(class = "chart-wide", plotlyOutput("rental_afford_index", height = "100%", width = "100%")))
         ),
         card(
           card_header("Weekly Rental Costs by Demographics (2019-20)"),
+          source_note("ABS Survey of Income and Housing. Survey rental-cost estimates by household characteristic."),
           card_body(div(class = "chart-square", plotlyOutput("rental_costs_demo", height = "100%", width = "100%")))
         )
       )
@@ -746,7 +760,9 @@ server <- function(input, output, session) {
     latest_date(national_mean_price, "city", "National Avg")
   })
   output$vb_nat_price_change <- renderUI({
-    ch <- latest_change(national_mean_price, "city", "National Avg")
+    ch <- latest_change(national_mean_price, "city", "National Avg",
+                        periods_back = 4, period_label = "YoY",
+                        change_type = "relative_pct")
     css_class <- if (!is.na(ch$change) && ch$change >= 0) "kpi-change-up" else "kpi-change-down"
     tags$p(class = paste("kpi-subtitle", css_class), ch$label)
   })
@@ -760,7 +776,9 @@ server <- function(input, output, session) {
     latest_date(median_house_prices, "city", "Sydney")
   })
   output$vb_syd_price_change <- renderUI({
-    ch <- latest_change(median_house_prices, "city", "Sydney")
+    ch <- latest_change(median_house_prices, "city", "Sydney",
+                        periods_back = 4, period_label = "YoY",
+                        change_type = "relative_pct")
     css_class <- if (!is.na(ch$change) && ch$change >= 0) "kpi-change-up" else "kpi-change-down"
     tags$p(class = paste("kpi-subtitle", css_class), ch$label)
   })
@@ -785,7 +803,7 @@ server <- function(input, output, session) {
     if (is.na(previous) || previous == 0) return(tags$p(class = "kpi-subtitle", ""))
     diff_val <- current - previous
     direction <- if (diff_val >= 0) "\u2191" else "\u2193"
-    label <- paste0(direction, " ", sprintf("%+.1fpp", diff_val), " YoY")
+    label <- paste0(direction, " ", sprintf("%+.1f pp", diff_val), " YoY")
     css_class <- if (diff_val >= 0) "kpi-change-up" else "kpi-change-down"
     tags$p(class = paste("kpi-subtitle", css_class), label)
   })
@@ -799,7 +817,9 @@ server <- function(input, output, session) {
     latest_date(afford_idx, "indicator", "Rental Affordability Index")
   })
   output$vb_rental_change <- renderUI({
-    ch <- latest_change(afford_idx, "indicator", "Rental Affordability Index")
+    ch <- latest_change(afford_idx, "indicator", "Rental Affordability Index",
+                        periods_back = 4, period_label = "YoY",
+                        change_type = "relative_pct")
     css_class <- if (!is.na(ch$change) && ch$change >= 0) "kpi-change-up" else "kpi-change-down"
     tags$p(class = paste("kpi-subtitle", css_class), ch$label)
   })
@@ -909,16 +929,16 @@ server <- function(input, output, session) {
                               "Mortgage Serviceability Index",
                               "Price-to-Income Ratio")) %>%
       mutate(indicator_label = case_when(
-        indicator == "Rental Affordability Index"  ~ "Rent Affordability",
-        indicator == "Mortgage Serviceability Index" ~ "Mortgage Affordability",
-        indicator == "Price-to-Income Ratio" ~ "Price-to-Income Ratio"
+        indicator == "Rental Affordability Index" ~ "Rent Cost Pressure",
+        indicator == "Mortgage Serviceability Index" ~ "Modelled Mortgage Cost Pressure",
+        indicator == "Price-to-Income Ratio" ~ "Price-to-Income Cost Pressure"
       ))
 
     validate(need(nrow(d) > 0, "No affordability index data available."))
 
-    idx_colours <- c("Rent Affordability" = "#009688",
-                     "Mortgage Affordability" = "#FF9800",
-                     "Price-to-Income Ratio" = "#1565C0")
+    idx_colours <- c("Rent Cost Pressure" = "#009688",
+                     "Modelled Mortgage Cost Pressure" = "#FF9800",
+                     "Price-to-Income Cost Pressure" = "#1565C0")
 
     p <- ggplot(d, aes(x = date, y = value, color = indicator_label)) +
       geom_line(linewidth = 1.1, alpha = 0.9) +
@@ -1077,12 +1097,19 @@ server <- function(input, output, session) {
     d <- afford_idx %>%
       filter(indicator %in% idx_selected,
              date >= input$afford_dates[1],
-             date <= input$afford_dates[2])
+             date <= input$afford_dates[2]) %>%
+      mutate(indicator_label = case_when(
+        indicator == "Price-to-Income Ratio" ~ "Price-to-Income Cost Pressure",
+        indicator == "Mortgage Serviceability Index" ~ "Modelled Mortgage Cost Pressure",
+        indicator == "Rental Affordability Index" ~ "Rent Cost Pressure",
+        indicator == "Deposit Gap (Years)" ~ "Stylised Deposit Gap (Years)",
+        TRUE ~ indicator
+      ))
     validate(need(nrow(d) > 0, "No data for selected indicators in this date range."))
 
-    p <- ggplot(d, aes(x = date, y = value, color = indicator)) +
+    p <- ggplot(d, aes(x = date, y = value, color = indicator_label)) +
       geom_line(linewidth = 1) +
-      facet_wrap(~indicator, scales = "free_y") +
+      facet_wrap(~indicator_label, scales = "free_y") +
       scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
       labs(x = NULL, y = NULL, color = NULL) +
       theme_afford(is_dark()) +
@@ -1245,7 +1272,9 @@ server <- function(input, output, session) {
     fmt_pct(v, 0.1)
   })
   output$vb_unemp_change <- renderUI({
-    ch <- latest_change(abs_ts, "series", "Unemployment Rate", periods_back = 12)
+    ch <- latest_change(abs_ts, "series", "Unemployment Rate",
+                        periods_back = 12, period_label = "YoY",
+                        change_type = "percentage_points")
     diff_val <- ch$change
     # For unemployment, down is good (green), up is bad (red)
     css_class <- if (!is.na(diff_val) && diff_val <= 0) "kpi-change-up" else "kpi-change-down"
@@ -1283,7 +1312,9 @@ server <- function(input, output, session) {
     fmt_pct(v, 0.1)
   })
   output$vb_participation_change <- renderUI({
-    ch <- latest_change(abs_ts, "series", "Participation Rate", periods_back = 12)
+    ch <- latest_change(abs_ts, "series", "Participation Rate",
+                        periods_back = 12, period_label = "YoY",
+                        change_type = "percentage_points")
     diff_val <- ch$change
     css_class <- if (!is.na(diff_val) && diff_val >= 0) "kpi-change-up" else "kpi-change-down"
     lbl <- if (is.na(diff_val)) "" else if (abs(diff_val) < 0.3) "\u2192 Stable" else ch$label
@@ -1437,7 +1468,9 @@ server <- function(input, output, session) {
     fmt_index(v)
   })
   output$vb_construction_change <- renderUI({
-    ch <- latest_change(abs_ts, "series", "CPI New Dwelling Purchase", periods_back = 12)
+    ch <- latest_change(abs_ts, "series", "CPI New Dwelling Purchase",
+                        periods_back = 12, period_label = "YoY",
+                        change_type = "relative_pct")
     diff_val <- ch$change
     css_class <- if (!is.na(diff_val) && diff_val >= 0) "kpi-change-up" else "kpi-change-down"
     lbl <- if (is.na(diff_val)) "" else ch$label

@@ -61,20 +61,42 @@ latest_date <- function(df, series_col, series_name, date_col = "date") {
   format(d[[date_col]][1], "%b %Y")
 }
 
-# Compute YoY or QoQ change for a time series
+# Compute labelled changes for KPI subtitles.
 latest_change <- function(df, series_col, series_name, val_col = "value",
-                          date_col = "date", periods_back = 4) {
+                          date_col = "date", periods_back = 4,
+                          period_label = NULL,
+                          change_type = c("relative_pct", "percentage_points")) {
+  change_type <- match.arg(change_type)
+  if (is.null(period_label)) {
+    period_label <- case_when(
+      periods_back %in% c(4, 12) ~ "YoY",
+      periods_back == 1 ~ "QoQ",
+      TRUE ~ paste0(periods_back, "-period")
+    )
+  }
+
   d <- df %>%
     filter(.data[[series_col]] == series_name, !is.na(.data[[val_col]])) %>%
     arrange(desc(.data[[date_col]]))
   if (nrow(d) < periods_back + 1) return(list(change = NA_real_, label = ""))
   current <- d[[val_col]][1]
   previous <- d[[val_col]][periods_back + 1]
-  if (is.na(previous) || previous == 0) return(list(change = NA_real_, label = ""))
-  pct <- (current / previous - 1) * 100
-  direction <- if (pct >= 0) "\u2191" else "\u2193"
-  lbl <- if (periods_back == 4) "YoY" else "QoQ"
-  list(change = pct, label = paste0(direction, " ", sprintf("%+.1f%%", pct), " ", lbl))
+  if (is.na(previous)) return(list(change = NA_real_, label = ""))
+
+  if (identical(change_type, "relative_pct")) {
+    if (previous == 0) return(list(change = NA_real_, label = ""))
+    change <- (current / previous - 1) * 100
+    suffix <- "%"
+  } else {
+    change <- current - previous
+    suffix <- " pp"
+  }
+
+  direction <- if (change >= 0) "\u2191" else "\u2193"
+  list(
+    change = change,
+    label = paste0(direction, " ", sprintf("%+.1f", change), suffix, " ", period_label)
+  )
 }
 
 # Smart formatting
@@ -324,9 +346,9 @@ afford_change <- afford_idx %>%
   ) %>%
   ungroup() %>%
   mutate(indicator_label = case_when(
-    indicator == "Rental Affordability Index" ~ "Rent Affordability",
-    indicator == "Mortgage Serviceability Index" ~ "Mortgage Affordability",
-    indicator == "Price-to-Income Ratio" ~ "Deposit Affordability"
+    indicator == "Rental Affordability Index" ~ "Rent Cost Pressure",
+    indicator == "Mortgage Serviceability Index" ~ "Modelled Mortgage Cost Pressure",
+    indicator == "Price-to-Income Ratio" ~ "Price-to-Income Cost Pressure"
   ))
 
 rppi_combined <- bind_rows(rppi_all, rppi_houses, rppi_units)
