@@ -70,6 +70,7 @@ overview_cost_pressure_colours <- stats::setNames(
 
 ui <- page_navbar(
   title = "Australian Housing Affordability",
+  id = "main_nav",
   theme = bs_theme(
     version = 5,
     bootswatch = "flatly",
@@ -245,8 +246,21 @@ ui <- page_navbar(
 
       /* Mobile: stack sidebars, reduce value box text */
       @media (max-width: 768px) {
+        .navbar-collapse.show {
+          max-height: 70vh;
+          overflow-y: auto;
+        }
+        .navbar-collapse.show .nav-link {
+          padding-top: 0.65rem;
+          padding-bottom: 0.65rem;
+        }
         .bslib-sidebar-layout { flex-direction: column !important; }
         .bslib-sidebar-layout > .sidebar { width: 100% !important; max-width: 100% !important; }
+        .chart-wide,
+        .chart-square {
+          height: 340px;
+          min-height: 320px;
+        }
         .value-box .value-box-value { font-size: 1.2rem; }
         .value-box .value-box-title { font-size: 0.75rem; }
       }
@@ -290,6 +304,20 @@ ui <- page_navbar(
           var next = cur === 'dark' ? 'light' : 'dark';
           window.localStorage.setItem('afford_theme', next);
           setTheme(next);
+        });
+
+        $(document).on('click', '.navbar-collapse.show .nav-link', function(e) {
+          if (window.innerWidth < 992) {
+            var mainNav = document.getElementById('main_nav');
+            var collapseEl = e.currentTarget.closest('.navbar-collapse.show');
+            if (!collapseEl) return;
+            if (mainNav && !collapseEl.contains(mainNav) && !e.currentTarget.closest('#main_nav')) {
+              return;
+            }
+            if (window.bootstrap && bootstrap.Collapse) {
+              bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false }).hide();
+            }
+          }
         });
       })();
     "))
@@ -760,7 +788,7 @@ ui <- page_navbar(
                                 "Income Quintile" = "equiv_income_quintile"))
       ),
       layout_column_wrap(
-        width = 1/2,
+        width = "420px",
         card(
           card_header("NHHA Rental Stress by State"),
           source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Official survey burden/stress measure."),

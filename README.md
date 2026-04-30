@@ -79,6 +79,7 @@ Rscript tests/test_methodology_page.R
 Rscript tests/test_methodology_module.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
+Rscript tests/test_responsive_ui_contracts.R
 Rscript tests/test_rba_raw_cache_hygiene.R
 Rscript tests/test_public_release_hygiene.R
 Rscript tests/test_project_root_paths.R
