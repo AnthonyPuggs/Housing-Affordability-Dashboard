@@ -69,7 +69,10 @@ if (file.exists(module_path)) {
     "NS(id)",
     "moduleServer",
     'tableOutput(ns("indicator_table"))',
-    "output$indicator_table <- renderTable"
+    "output$indicator_table <- renderTable",
+    'downloadButton(ns("provenance_download")',
+    "downloadHandler",
+    "methodology_provenance_report"
   )
   missing_module_text <- required_module_text[
     !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)

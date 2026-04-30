@@ -11,6 +11,13 @@ methodologyPageUI <- function(id) {
                 style = "font-weight: 700;"),
         tags$p("Indicator definitions, source series and interpretation caveats",
                style = "color: var(--app-muted); margin-bottom: 0;")
+      ),
+      div(
+        class = "methodology-download",
+        downloadButton(ns("provenance_download"),
+          "Download Methodology Summary",
+          class = "btn btn-outline-primary btn-sm"
+        )
       )
     ),
     layout_column_wrap(
@@ -84,5 +91,15 @@ methodologyPageServer <- function(id) {
     output$indicator_table <- renderTable({
       indicator_registry_methodology_table()
     }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
+
+    output$provenance_download <- downloadHandler(
+      filename = function() {
+        methodology_provenance_filename(Sys.Date())
+      },
+      content = function(file) {
+        writeLines(methodology_provenance_report(), con = file, useBytes = TRUE)
+      },
+      contentType = "text/markdown"
+    )
   })
 }

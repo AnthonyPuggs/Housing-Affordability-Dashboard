@@ -40,6 +40,7 @@ library(plotly)
 source(project_path("plot_setup.R"), local = TRUE)
 source(project_path("R", "app_ui_helpers.R"), local = TRUE)
 source(project_path("R", "plotly_helpers.R"), local = TRUE)
+source(project_path("R", "provenance_report.R"), local = TRUE)
 source(project_path("R", "methodology_module.R"), local = TRUE)
 rm(.load_app_project_paths)
 
