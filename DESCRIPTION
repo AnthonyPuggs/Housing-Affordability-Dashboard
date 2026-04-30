@@ -1,0 +1,26 @@
+Package: HousingAffordabilityDashboard
+Type: Project
+Title: Australian Housing Affordability Dashboard
+Version: 0.1.0
+Description: R Shiny dashboard and data pipeline for Australian housing
+    affordability, housing cost burden, market context and stylised
+    serviceability analysis using ABS, SIH and RBA data.
+Encoding: UTF-8
+Imports:
+    bslib,
+    dplyr,
+    ggplot2,
+    httr,
+    lubridate,
+    plotly,
+    purrr,
+    readabs,
+    readr,
+    readxl,
+    renv,
+    rlang,
+    scales,
+    shiny,
+    stringr,
+    tidyr,
+    watcher

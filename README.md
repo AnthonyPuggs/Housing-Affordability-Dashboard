@@ -4,13 +4,27 @@ Interactive R/Shiny dashboard for Australian housing affordability and cost-pres
 
 ## Run The App
 
-Install the required R packages if they are not already available:
+Restore the pinned R package environment from `renv.lock`:
+
+```bash
+Rscript -e "renv::restore()"
+```
+
+`renv.lock` pins package versions for reproducible dashboard, pipeline and test runs. In plain terms, renv.lock pins package versions so another machine can restore the same R package set. The project activation file `.Rprofile` loads `renv` automatically when R starts from the repository root.
+
+If `renv` is unavailable, install it first:
+
+```r
+install.packages("renv")
+```
+
+As a manual fallback, install the direct runtime and pipeline packages:
 
 ```r
 install.packages(c(
   "shiny", "bslib", "ggplot2", "plotly", "dplyr", "tidyr", "purrr",
   "stringr", "scales", "readr", "readxl", "readabs", "lubridate",
-  "httr", "rlang"
+  "httr", "rlang", "watcher"
 ))
 ```
 
