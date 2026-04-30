@@ -9,8 +9,36 @@ library(shiny)
 library(bslib)
 library(plotly)
 
-# Shared data loading, helpers, theme, and pre-computed datasets
-source("plot_setup.R")
+# Shared project paths, data loading, helpers, theme, and pre-computed datasets
+.load_app_project_paths <- function(envir = parent.frame()) {
+  source_file <- NULL
+  frames <- sys.frames()
+  for (i in rev(seq_along(frames))) {
+    frame <- frames[[i]]
+    if (exists("ofile", envir = frame, inherits = FALSE)) {
+      source_file <- get("ofile", envir = frame, inherits = FALSE)
+      break
+    }
+  }
+
+  starts <- unique(c(
+    if (!is.null(source_file)) dirname(normalizePath(source_file, winslash = "/", mustWork = TRUE)),
+    getwd()
+  ))
+  candidates <- unique(c(
+    file.path(starts, "R", "project_paths.R"),
+    file.path(dirname(starts), "R", "project_paths.R")
+  ))
+  candidates <- candidates[file.exists(candidates)]
+  if (length(candidates) == 0) {
+    stop("Could not locate R/project_paths.R for dashboard startup.", call. = FALSE)
+  }
+  source(candidates[[1]], local = envir)
+}
+
+.load_app_project_paths()
+source(project_path("plot_setup.R"), local = TRUE)
+rm(.load_app_project_paths)
 
 # Concise method/source note used below chart cards.
 source_note <- function(...) {

@@ -1,3 +1,12 @@
+# ==============================================================================
+# Manual CPI diagnostic
+# ==============================================================================
+# Legacy scratch diagnostic for checking historical ABS CPI workbook URLs and
+# rent series parsing. This script is not part of the production pipeline and
+# should not write project files; it only downloads temporary workbooks via
+# tempfile() during manual investigation.
+# ==============================================================================
+
 library(httr)
 
 # ABS URL pattern for previous releases of CPI Table 10
@@ -73,12 +82,12 @@ for (slug in slugs[slugs != "latest-release"]) {
     cat("\nParsed rows:", nrow(old_data), "\n")
     
     rents <- old_data %>%
-      filter(str_detect(series, regex("^Index Numbers ;\s*Rents ;", ignore_case = TRUE)))
+      filter(str_detect(series, regex("^Index Numbers ;\\s*Rents ;", ignore_case = TRUE)))
     cat("Rents rows:", nrow(rents), "\n")
     
     if (nrow(rents) > 0) {
       rents %>%
-        mutate(city = str_trim(str_extract(series, ";\s*([^;]+)\s*;?$") %>% str_remove_all(";") %>% str_trim())) %>%
+        mutate(city = str_trim(str_extract(series, ";\\s*([^;]+)\\s*;?$") %>% str_remove_all(";") %>% str_trim())) %>%
         group_by(city) %>%
         summarise(
           n = n(),

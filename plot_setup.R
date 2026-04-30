@@ -13,11 +13,42 @@ library(scales)
 library(rlang)
 library(lubridate)
 
+.load_plot_setup_project_paths <- function(envir = parent.frame()) {
+  source_file <- NULL
+  frames <- sys.frames()
+  for (i in rev(seq_along(frames))) {
+    frame <- frames[[i]]
+    if (exists("ofile", envir = frame, inherits = FALSE)) {
+      source_file <- get("ofile", envir = frame, inherits = FALSE)
+      break
+    }
+  }
+
+  starts <- unique(c(
+    if (!is.null(source_file)) dirname(normalizePath(source_file, winslash = "/", mustWork = TRUE)),
+    getwd()
+  ))
+  candidates <- unique(c(
+    file.path(starts, "R", "project_paths.R"),
+    file.path(dirname(starts), "R", "project_paths.R")
+  ))
+  candidates <- candidates[file.exists(candidates)]
+  if (length(candidates) == 0) {
+    stop("Could not locate R/project_paths.R for data loading.", call. = FALSE)
+  }
+  source(candidates[[1]], local = envir)
+}
+
+if (!exists("project_path", mode = "function")) {
+  .load_plot_setup_project_paths()
+}
+rm(.load_plot_setup_project_paths)
+
 # ==============================================================================
 # DATA LOADING — runs once at app startup
 # ==============================================================================
 
-data_dir <- file.path(getwd(), "data")
+data_dir <- project_path("data")
 
 load_csv <- function(filename) {
   path <- file.path(data_dir, filename)

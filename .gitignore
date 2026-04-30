@@ -1,17 +1,21 @@
-# Ignore plots folder
-plots/
+# Local OS and editor artefacts
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
 
-# Ignore specific scripts and docs
-_check_cpi.R
-save_plots.R
-project_plan.md
-app_old.R
-CLAUDE.md
-
-# Ignore pipeline and Claude metadata
-pipeline/
+# Local assistant/session metadata
 .claude/
+AGENTS.md
+quality_reports/
 
-# Ignore PDF files in resources (top-level and any subfolders)
-resources/*.pdf
-resources/**/*.pdf
+# Temporary Office lock files
+resources/ABS_data/**/~$*
+
+# renv local libraries and caches; keep renv.lock tracked when introduced
+renv/library/
+renv/staging/
+renv/python/
+renv/local/
+renv/cellar/
