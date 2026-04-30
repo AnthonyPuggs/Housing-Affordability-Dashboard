@@ -11,11 +11,24 @@ if (!file.exists(registry_path)) {
   stop("R/indicator_registry.R not found; run this test from the project root.",
        call. = FALSE)
 }
+helper_path <- file.path(getwd(), "R", "app_ui_helpers.R")
+module_path <- file.path(getwd(), "R", "methodology_module.R")
+if (!file.exists(helper_path)) {
+  stop("R/app_ui_helpers.R not found; run this test from the project root.",
+       call. = FALSE)
+}
+if (!file.exists(module_path)) {
+  stop("R/methodology_module.R not found; run this test from the project root.",
+       call. = FALSE)
+}
 
 app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
 readme_text <- paste(readLines(readme_path, warn = FALSE), collapse = "\n")
 registry_text <- paste(readLines(registry_path, warn = FALSE), collapse = "\n")
-method_text <- paste(app_text, readme_text, registry_text, sep = "\n")
+helper_text <- paste(readLines(helper_path, warn = FALSE), collapse = "\n")
+module_text <- paste(readLines(module_path, warn = FALSE), collapse = "\n")
+method_text <- paste(app_text, readme_text, registry_text, helper_text,
+                     module_text, sep = "\n")
 
 required_text <- c(
   "higher = less affordable",

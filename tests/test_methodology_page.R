@@ -8,10 +8,14 @@ check <- function(condition, message) {
 }
 
 registry_path <- file.path(repo_root, "R", "indicator_registry.R")
+helper_path <- file.path(repo_root, "R", "app_ui_helpers.R")
+module_path <- file.path(repo_root, "R", "methodology_module.R")
 app_path <- file.path(repo_root, "app.R")
 description_path <- file.path(repo_root, "DESCRIPTION")
 
 check(file.exists(registry_path), "R/indicator_registry.R does not exist")
+check(file.exists(helper_path), "R/app_ui_helpers.R does not exist")
+check(file.exists(module_path), "R/methodology_module.R does not exist")
 check(file.exists(app_path), "app.R does not exist")
 check(file.exists(description_path), "DESCRIPTION does not exist")
 
@@ -64,11 +68,26 @@ if (file.exists(registry_path)) {
   }
 }
 
-if (file.exists(app_path)) {
+if (all(file.exists(c(app_path, module_path)))) {
   app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
-  required_app_text <- c(
+  module_text <- paste(readLines(module_path, warn = FALSE), collapse = "\n")
+  combined_text <- paste(app_text, module_text, sep = "\n")
+
+  required_app_wiring <- c(
+    'source(project_path("R", "methodology_module.R"), local = TRUE)',
+    'methodologyPageUI("methodology")',
+    'methodologyPageServer("methodology")'
+  )
+  missing_app_wiring <- required_app_wiring[
+    !vapply(required_app_wiring, grepl, logical(1), app_text, fixed = TRUE)
+  ]
+  check(length(missing_app_wiring) == 0,
+        paste("app.R missing methodology module wiring:",
+              paste(missing_app_wiring, collapse = "; ")))
+
+  required_module_text <- c(
     'nav_panel("Methodology"',
-    'tableOutput("methodology_indicator_table")',
+    'tableOutput(ns("indicator_table"))',
     "renderTable",
     "R/indicator_registry.R",
     "pipeline/05_driver.R",
@@ -82,16 +101,16 @@ if (file.exists(app_path)) {
     "Market-entry cost-pressure indexes",
     "Stylised scenario calculators"
   )
-  missing_app_text <- required_app_text[
-    !vapply(required_app_text, grepl, logical(1), app_text, fixed = TRUE)
+  missing_module_text <- required_module_text[
+    !vapply(required_module_text, grepl, logical(1), combined_text, fixed = TRUE)
   ]
-  check(length(missing_app_text) == 0,
-        paste("app.R missing methodology page text:",
-              paste(missing_app_text, collapse = "; ")))
+  check(length(missing_module_text) == 0,
+        paste("methodology module missing page text:",
+              paste(missing_module_text, collapse = "; ")))
 }
 
 tracked_text <- paste(
-  vapply(c(app_path, registry_path, description_path), function(path) {
+  vapply(c(app_path, registry_path, helper_path, module_path, description_path), function(path) {
     if (file.exists(path)) paste(readLines(path, warn = FALSE), collapse = "\n") else ""
   }, character(1)),
   collapse = "\n"

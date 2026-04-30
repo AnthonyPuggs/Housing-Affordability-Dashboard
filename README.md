@@ -64,6 +64,8 @@ Official SIH/NHHA measures should be interpreted separately from modelled market
 
 The Shiny app includes a Methodology page backed by this registry. It shows the formula, source series, interpretation direction and official/stylised status for each derived affordability indicator.
 
+`R/methodology_module.R` is the first Shiny module pilot. It keeps the registry-backed methodology and provenance page isolated while broader page modularisation remains incremental.
+
 ## Verification
 
 The project uses lightweight base-R tests. Useful checks from the repository root are:
@@ -74,6 +76,7 @@ Rscript tests/test_app_output_ids.R
 Rscript tests/test_kpi_change_labels.R
 Rscript tests/test_app_method_text.R
 Rscript tests/test_methodology_page.R
+Rscript tests/test_methodology_module.R
 Rscript tests/test_rba_raw_cache_hygiene.R
 Rscript tests/test_public_release_hygiene.R
 Rscript tests/test_project_root_paths.R
