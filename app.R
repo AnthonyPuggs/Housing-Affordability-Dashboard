@@ -39,6 +39,7 @@ library(plotly)
 .load_app_project_paths()
 source(project_path("plot_setup.R"), local = TRUE)
 source(project_path("R", "app_ui_helpers.R"), local = TRUE)
+source(project_path("R", "plotly_helpers.R"), local = TRUE)
 source(project_path("R", "methodology_module.R"), local = TRUE)
 rm(.load_app_project_paths)
 
@@ -955,7 +956,8 @@ server <- function(input, output, session) {
     min_gap <- diff(y_range) * 0.045
     label_data$y_repelled <- repel_labels(label_data$plot_value, min_gap)
 
-    fig <- ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
+    fig <- dashboard_ggplotly(p, dark = is_dark(),
+                              tooltip = c("x", "y", "color"))
 
     # Add right-side annotations: xref="paper" x=1.01 places text just outside grid
     annotations <- lapply(seq_len(nrow(label_data)), function(i) {
@@ -976,7 +978,9 @@ server <- function(input, output, session) {
         annotations = annotations,
         margin = list(r = 100)
       )
-  })
+  }) %>%
+    bindCache(input$overview_price_dates, input$overview_price_transform,
+              is_dark())
 
   # (Housing Serviceability chart moved to Affordability page)
 
@@ -1005,8 +1009,9 @@ server <- function(input, output, session) {
     p <- p +
       geom_point(data = latest_vals, size = 3)
 
-    ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
+  }) %>%
+    bindCache(is_dark())
 
   # ============================================================================
   # PAGE 2: PRICE TRENDS
@@ -1055,8 +1060,10 @@ server <- function(input, output, session) {
       labs(x = NULL, y = y_lab, color = NULL) +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
+  }) %>%
+    bindCache(input$price_cities, input$price_dwelling, input$price_dates,
+              input$price_transform, is_dark())
 
   output$supply_cpi_construction <- renderPlotly({
     d <- abs_ts %>%
@@ -1071,8 +1078,9 @@ server <- function(input, output, session) {
       labs(x = NULL, y = "Index") +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+  }) %>%
+    bindCache(input$price_dates, is_dark())
 
   # Tab 2b: Rent CPI
   rent_cpi_data <- reactive({
@@ -1128,8 +1136,10 @@ server <- function(input, output, session) {
                           ", by greater capital city, ", date_range_label)) +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
+  }) %>%
+    bindCache(input$rent_cpi_cities, input$rent_cpi_dates,
+              input$rent_cpi_datatype, is_dark())
 
   # ============================================================================
   # PAGE 3: AFFORDABILITY
@@ -1157,8 +1167,9 @@ server <- function(input, output, session) {
       theme_afford(is_dark()) +
       theme(legend.position = "none")
 
-    ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+  }) %>%
+    bindCache(input$afford_indices, input$afford_dates, is_dark())
 
   # Tab 3a: Housing Serviceability chart (shown when selected)
   output$afford_serviceability <- renderPlotly({
@@ -1184,8 +1195,9 @@ server <- function(input, output, session) {
       labs(x = NULL, y = NULL) +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+  }) %>%
+    bindCache(input$afford_indices, input$afford_dates, is_dark())
 
   # Tab 3b: Calculator
   calc_vals <- reactive({
@@ -1273,8 +1285,9 @@ server <- function(input, output, session) {
       coord_flip() +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y", "fill")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
+  }) %>%
+    bindCache(input$stress_breakdown, input$stress_population, is_dark())
 
   # Tab 3d: Cost burden heatmap
   output$burden_heatmap <- renderPlotly({
@@ -1301,8 +1314,9 @@ server <- function(input, output, session) {
       theme_afford(is_dark()) +
       theme(axis.text.x = element_text(angle = 30, hjust = 1))
 
-    ggplotly(p, tooltip = c("x", "y", "fill")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
+  }) %>%
+    bindCache(input$burden_breakdown, input$burden_stat, is_dark())
 
   # ============================================================================
   # PAGE 4: MARKET CONTEXT
@@ -1394,8 +1408,9 @@ server <- function(input, output, session) {
       labs(x = NULL, y = "%", color = NULL) +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
+  }) %>%
+    bindCache(input$context_dates, is_dark())
 
   output$context_labour <- renderPlotly({
     d <- abs_ts %>%
@@ -1420,8 +1435,9 @@ server <- function(input, output, session) {
       labs(x = NULL, y = NULL, fill = NULL) +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y", "fill")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
+  }) %>%
+    bindCache(input$context_dates, is_dark())
 
   output$context_pop <- renderPlotly({
     d <- supply_demand %>%
@@ -1438,8 +1454,9 @@ server <- function(input, output, session) {
       labs(x = NULL, y = "Thousands") +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+  }) %>%
+    bindCache(input$context_dates, is_dark())
 
   # ============================================================================
   # PAGE 5: HOUSING SUPPLY
@@ -1604,8 +1621,9 @@ server <- function(input, output, session) {
       theme_afford(is_dark()) +
       theme(legend.text = element_text(size = 8))
 
-    ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
+  }) %>%
+    bindCache(input$supply_dates, is_dark())
 
   # ============================================================================
   # PAGE 6: RENTAL MARKET
@@ -1640,8 +1658,9 @@ server <- function(input, output, session) {
       labs(x = NULL, y = "% in Rental Stress (>30% of income)") +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+  }) %>%
+    bindCache(input$rental_year, input$rental_states, is_dark())
 
   # Rental stress trends over time
   output$rental_stress_trend <- renderPlotly({
@@ -1681,7 +1700,7 @@ server <- function(input, output, session) {
         axis.text.x = element_text(angle = 45, hjust = 1)
       )
 
-    pl <- ggplotly(p, tooltip = "fill") %>% plotly_layout(dark)
+    pl <- dashboard_ggplotly(p, dark = dark, tooltip = "fill")
     # Remove hover from the text trace to avoid doubling
     for (i in seq_along(pl$x$data)) {
       if (!is.null(pl$x$data[[i]]$mode) && grepl("text", pl$x$data[[i]]$mode)) {
@@ -1689,7 +1708,8 @@ server <- function(input, output, session) {
       }
     }
     pl
-  })
+  }) %>%
+    bindCache(input$rental_states, is_dark())
 
   # Rental affordability index
   output$rental_afford_index <- renderPlotly({
@@ -1703,8 +1723,9 @@ server <- function(input, output, session) {
       labs(x = NULL, y = "Index (CPI Rents / WPI)") +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+  }) %>%
+    bindCache(is_dark())
 
   # Rental costs by demographics
   output$rental_costs_demo <- renderPlotly({
@@ -1726,8 +1747,9 @@ server <- function(input, output, session) {
       coord_flip() +
       theme_afford(is_dark())
 
-    ggplotly(p, tooltip = c("x", "y", "fill")) %>% plotly_layout(is_dark())
-  })
+    dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
+  }) %>%
+    bindCache(input$rental_cost_breakdown, is_dark())
 }
 
 # ==============================================================================
