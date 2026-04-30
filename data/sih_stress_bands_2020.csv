@@ -187,7 +187,7 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,8.5,pct_over_50,all,dwelling_structure,Flat or apartment,National,all_households
 2019-20,100,pct_total,all,dwelling_structure,Flat or apartment,National,all_households
 2019-20,25.6,pct_over_30,all,dwelling_structure,Flat or apartment,National,all_households
-2019-20,1611.9171000000001,households_000,all,dwelling_structure,Flat or apartment,National,all_households
+2019-20,1611.9171,households_000,all,dwelling_structure,Flat or apartment,National,all_households
 2019-20,76.6,pct_25_or_less,all,dwelling_structure,Total,National,all_households
 2019-20,7.2,pct_25_to_30,all,dwelling_structure,Total,National,all_households
 2019-20,10.5,pct_30_to_50,all,dwelling_structure,Total,National,all_households
@@ -208,7 +208,7 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,4.3,pct_over_50,all,equiv_income_quintile,Second quintile,National,all_households
 2019-20,100,pct_total,all,equiv_income_quintile,Second quintile,National,all_households
 2019-20,20,pct_over_30,all,equiv_income_quintile,Second quintile,National,all_households
-2019-20,1832.4228999999998,households_000,all,equiv_income_quintile,Second quintile,National,all_households
+2019-20,1832.4229,households_000,all,equiv_income_quintile,Second quintile,National,all_households
 2019-20,77.7,pct_25_or_less,all,equiv_income_quintile,Third quintile,National,all_households
 2019-20,9.3,pct_25_to_30,all,equiv_income_quintile,Third quintile,National,all_households
 2019-20,11,pct_30_to_50,all,equiv_income_quintile,Third quintile,National,all_households
@@ -222,14 +222,14 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,0.9,pct_over_50,all,equiv_income_quintile,Fourth quintile,National,all_households
 2019-20,100,pct_total,all,equiv_income_quintile,Fourth quintile,National,all_households
 2019-20,7.1,pct_over_30,all,equiv_income_quintile,Fourth quintile,National,all_households
-2019-20,1817.5086999999999,households_000,all,equiv_income_quintile,Fourth quintile,National,all_households
+2019-20,1817.5087,households_000,all,equiv_income_quintile,Fourth quintile,National,all_households
 2019-20,94.7,pct_25_or_less,all,equiv_income_quintile,Highest quintile,National,all_households
 2019-20,2.8,pct_25_to_30,all,equiv_income_quintile,Highest quintile,National,all_households
 2019-20,2.1,pct_30_to_50,all,equiv_income_quintile,Highest quintile,National,all_households
 2019-20,0.5,pct_over_50,all,equiv_income_quintile,Highest quintile,National,all_households
 2019-20,100,pct_total,all,equiv_income_quintile,Highest quintile,National,all_households
 2019-20,2.5,pct_over_30,all,equiv_income_quintile,Highest quintile,National,all_households
-2019-20,1953.8628999999999,households_000,all,equiv_income_quintile,Highest quintile,National,all_households
+2019-20,1953.8629,households_000,all,equiv_income_quintile,Highest quintile,National,all_households
 2019-20,76.6,pct_25_or_less,all,equiv_income_quintile,Total,National,all_households
 2019-20,7.2,pct_25_to_30,all,equiv_income_quintile,Total,National,all_households
 2019-20,10.5,pct_30_to_50,all,equiv_income_quintile,Total,National,all_households
@@ -299,7 +299,7 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,0.7,pct_over_50,all,number_of_employed_persons_in_household,Three or more,National,all_households
 2019-20,100,pct_total,all,number_of_employed_persons_in_household,Three or more,National,all_households
 2019-20,3,pct_over_30,all,number_of_employed_persons_in_household,Three or more,National,all_households
-2019-20,995.7280999999999,households_000,all,number_of_employed_persons_in_household,Three or more,National,all_households
+2019-20,995.7281,households_000,all,number_of_employed_persons_in_household,Three or more,National,all_households
 2019-20,76.6,pct_25_or_less,all,number_of_employed_persons_in_household,Total,National,all_households
 2019-20,7.2,pct_25_to_30,all,number_of_employed_persons_in_household,Total,National,all_households
 2019-20,10.5,pct_30_to_50,all,number_of_employed_persons_in_household,Total,National,all_households
@@ -309,17 +309,17 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,9674.3515,households_000,all,number_of_employed_persons_in_household,Total,National,all_households
 2019-20,19453.9793,pct_25_or_less,all,number,Estimated number of persons ('000),National,all_households
 2019-20,1782.7091,pct_25_to_30,all,number,Estimated number of persons ('000),National,all_households
-2019-20,2394.2137000000002,pct_30_to_50,all,number,Estimated number of persons ('000),National,all_households
+2019-20,2394.2137,pct_30_to_50,all,number,Estimated number of persons ('000),National,all_households
 2019-20,1170.1684,pct_over_50,all,number,Estimated number of persons ('000),National,all_households
-2019-20,24797.574399999998,pct_total,all,number,Estimated number of persons ('000),National,all_households
+2019-20,24797.5744,pct_total,all,number,Estimated number of persons ('000),National,all_households
 2019-20,3563.6571,pct_over_30,all,number,Estimated number of persons ('000),National,all_households
-2019-20,24797.574399999998,households_000,all,number,Estimated number of persons ('000),National,all_households
+2019-20,24797.5744,households_000,all,number,Estimated number of persons ('000),National,all_households
 2019-20,7406.9032,pct_25_or_less,all,number,Estimated number of households ('000),National,all_households
 2019-20,700.3223,pct_25_to_30,all,number,Estimated number of households ('000),National,all_households
 2019-20,1012.2233,pct_30_to_50,all,number,Estimated number of households ('000),National,all_households
 2019-20,556.2506999999999,pct_over_50,all,number,Estimated number of households ('000),National,all_households
 2019-20,9674.3515,pct_total,all,number,Estimated number of households ('000),National,all_households
-2019-20,1568.4986999999999,pct_over_30,all,number,Estimated number of households ('000),National,all_households
+2019-20,1568.4987,pct_over_30,all,number,Estimated number of households ('000),National,all_households
 2019-20,9674.3515,households_000,all,number,Estimated number of households ('000),National,all_households
 2019-20,2.6,pct_25_or_less,all,number,Mean number of persons in household,National,all_households
 2019-20,2.6,pct_25_to_30,all,number,Mean number of persons in household,National,all_households
@@ -820,7 +820,7 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,5.5,pct_over_50,all,age_group,65 to 74,National,lower_income
 2019-20,100,pct_total,all,age_group,65 to 74,National,lower_income
 2019-20,13.2,pct_over_30,all,age_group,65 to 74,National,lower_income
-2019-20,858.4993000000001,households_000,all,age_group,65 to 74,National,lower_income
+2019-20,858.4993,households_000,all,age_group,65 to 74,National,lower_income
 2019-20,87.9,pct_25_or_less,all,age_group,75 and over,National,lower_income
 2019-20,3.4,pct_25_to_30,all,age_group,75 and over,National,lower_income
 2019-20,6.8,pct_30_to_50,all,age_group,75 and over,National,lower_income
@@ -883,7 +883,7 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,4.3,pct_over_50,all,equiv_income_quintile,Second quintile,National,lower_income
 2019-20,100,pct_total,all,equiv_income_quintile,Second quintile,National,lower_income
 2019-20,20,pct_over_30,all,equiv_income_quintile,Second quintile,National,lower_income
-2019-20,1832.4228999999998,households_000,all,equiv_income_quintile,Second quintile,National,lower_income
+2019-20,1832.4229,households_000,all,equiv_income_quintile,Second quintile,National,lower_income
 2019-20,0,pct_25_or_less,all,equiv_income_quintile,Third quintile,National,lower_income
 2019-20,0,pct_25_to_30,all,equiv_income_quintile,Third quintile,National,lower_income
 2019-20,0,pct_30_to_50,all,equiv_income_quintile,Third quintile,National,lower_income
@@ -960,7 +960,7 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,12.8,pct_over_50,all,number_of_employed_persons_in_household,One,National,lower_income
 2019-20,100,pct_total,all,number_of_employed_persons_in_household,One,National,lower_income
 2019-20,34.5,pct_over_30,all,number_of_employed_persons_in_household,One,National,lower_income
-2019-20,1109.5158000000001,households_000,all,number_of_employed_persons_in_household,One,National,lower_income
+2019-20,1109.5158,households_000,all,number_of_employed_persons_in_household,One,National,lower_income
 2019-20,58.6,pct_25_or_less,all,number_of_employed_persons_in_household,Two,National,lower_income
 2019-20,9.7,pct_25_to_30,all,number_of_employed_persons_in_household,Two,National,lower_income
 2019-20,22.1,pct_30_to_50,all,number_of_employed_persons_in_household,Two,National,lower_income
@@ -994,7 +994,7 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2019-20,645.5993000000001,pct_30_to_50,all,number,Estimated number of households ('000),National,lower_income
 2019-20,332.0406,pct_over_50,all,number,Estimated number of households ('000),National,lower_income
 2019-20,3902.5387,pct_total,all,number,Estimated number of households ('000),National,lower_income
-2019-20,978.4731999999999,pct_over_30,all,number,Estimated number of households ('000),National,lower_income
+2019-20,978.4732,pct_over_30,all,number,Estimated number of households ('000),National,lower_income
 2019-20,3902.5387,households_000,all,number,Estimated number of households ('000),National,lower_income
 2019-20,2.4,pct_25_or_less,all,number,Mean number of persons in household,National,lower_income
 2019-20,2.8,pct_25_to_30,all,number,Mean number of persons in household,National,lower_income

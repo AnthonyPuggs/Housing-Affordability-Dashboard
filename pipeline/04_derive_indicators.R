@@ -37,13 +37,39 @@ rba_ts <- if (file.exists(rba_file)) {
   tibble()
 }
 
-# --- Helper: extract a single series as date-value tibble ---------------------
-get_series <- function(df, pattern, col = "series") {
-  df %>%
-    filter(str_detect(.data[[col]], regex(pattern, ignore_case = TRUE))) %>%
-    select(date, value) %>%
-    arrange(date) %>%
-    distinct(date, .keep_all = TRUE)
+# --- Helper: extract a required source series exactly -------------------------
+get_series_exact <- function(df, series_name, min_rows = 1,
+                             col = "series", dataset = "input data") {
+  if (nrow(df) == 0) {
+    stop(dataset, " is empty; cannot select required series '", series_name, "'.")
+  }
+  if (!col %in% names(df)) {
+    stop(dataset, " has no '", col, "' column; cannot select '", series_name, "'.")
+  }
+
+  matched <- df %>%
+    filter(.data[[col]] == series_name) %>%
+    select(date, value, all_of(col)) %>%
+    arrange(date)
+
+  if (nrow(matched) == 0) {
+    stop(dataset, " is missing required series '", series_name, "'.")
+  }
+  if (length(unique(matched[[col]])) != 1) {
+    stop(dataset, " selected multiple source series for '", series_name, "'.")
+  }
+  if (anyDuplicated(matched$date) > 0) {
+    stop(dataset, " has duplicate dates for required series '", series_name, "'.")
+  }
+  if (nrow(matched) < min_rows) {
+    stop(
+      dataset, " series '", series_name, "' has ", nrow(matched),
+      " observations; expected at least ", min_rows, "."
+    )
+  }
+
+  matched %>%
+    select(date, value)
 }
 
 # --- Helper: align two series to common quarterly dates -----------------------
@@ -73,28 +99,39 @@ index_to_base <- function(values, base_idx = 1, base_value = 100) {
 }
 
 # --- Extract key series -------------------------------------------------------
-rppi       <- get_series(abs_ts, "RPPI|[Rr]esidential [Pp]roperty [Pp]rice")
-wpi        <- get_series(abs_ts, "WPI|[Ww]age [Pp]rice [Ii]ndex")
-cpi_all    <- get_series(abs_ts, "CPI All Groups|CPI.*All.*groups")
-cpi_rents  <- get_series(abs_ts, "CPI Rents|CPI.*[Rr]ents")
-cpi_infl   <- get_series(abs_ts, "CPI Inflation YoY")
-awe        <- get_series(abs_ts, "AWE")
+rppi <- get_series_exact(abs_ts, "RPPI", min_rows = 40,
+                         dataset = "abs_timeseries.csv")
+wpi <- get_series_exact(abs_ts, "WPI", min_rows = 80,
+                        dataset = "abs_timeseries.csv")
+cpi_all <- get_series_exact(abs_ts, "CPI All Groups", min_rows = 100,
+                            dataset = "abs_timeseries.csv")
+cpi_rents <- get_series_exact(
+  abs_ts,
+  "CPI Rents ; Weighted average of eight capital cities ;",
+  min_rows = 100,
+  dataset = "abs_timeseries.csv"
+)
+cpi_infl <- get_series_exact(abs_ts, "CPI Inflation YoY", min_rows = 90,
+                             dataset = "abs_timeseries.csv")
+awe <- get_series_exact(abs_ts, "AWE (AWOTE, Persons)", min_rows = 80,
+                        dataset = "abs_timeseries.csv")
 
-# Mortgage rate from RBA (use discounted/actual rate if available, else standard variable)
 mortgage_rate <- tibble()
 if (nrow(rba_ts) > 0) {
-  mortgage_rate <- get_series(rba_ts, "discount|actual.*new|weighted.*average.*housing")
-  if (nrow(mortgage_rate) == 0) {
-    mortgage_rate <- get_series(rba_ts, "standard.*variable|housing.*variable")
-  }
-  if (nrow(mortgage_rate) == 0) {
-    mortgage_rate <- get_series(rba_ts, "owner.?occupier|housing|mortgage")
-  }
+  mortgage_rate <- get_series_exact(
+    rba_ts,
+    "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier",
+    min_rows = 50,
+    dataset = "rba_rates.csv"
+  )
 }
 
 cash_rate <- tibble()
 if (nrow(rba_ts) > 0) {
-  cash_rate <- get_series(rba_ts, "cash rate target|cash rate")
+  cash_rate <- rba_ts %>%
+    filter(series == "Cash Rate Target") %>%
+    select(date, value) %>%
+    arrange(date)
 }
 
 all_indicators <- list()

@@ -990,7 +990,7 @@ server <- function(input, output, session) {
     ggplotly(p, tooltip = c("x", "y", "color")) %>% plotly_layout(is_dark())
   })
 
-  output$price_cpi_construction <- renderPlotly({
+  output$supply_cpi_construction <- renderPlotly({
     d <- abs_ts %>%
       filter(series == "CPI New Dwelling Purchase",
              date >= input$price_dates[1],

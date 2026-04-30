@@ -708,6 +708,29 @@ f13_result <- tryCatch({
   # Cols C-K = NSW, Vic., Qld, SA, WA, Tas., NT, ACT, Aust.
   state_cols <- c("NSW", "Vic.", "Qld", "SA", "WA", "Tas.", "NT", "ACT", "Aust.")
 
+  classify_nhha_section <- function(section) {
+    if (is.na(section) || section == "") {
+      return(list(metric = NA_character_, stat_type = NA_character_))
+    }
+
+    section_norm <- section %>%
+      str_remove("\\s*\\([a-z]\\)$") %>%
+      str_to_lower() %>%
+      str_squish()
+
+    if (str_detect(section_norm, "^proportion of lower income renter households paying more than 30%")) {
+      return(list(metric = "pct_rental_stress_over_30", stat_type = "proportion"))
+    }
+    if (str_detect(section_norm, "^number of lower income renter households paying more than 30%")) {
+      return(list(metric = "number_rental_stress_over_30", stat_type = "count"))
+    }
+    if (str_detect(section_norm, "^number of lower income renter households$")) {
+      return(list(metric = "number_lower_income_renter_households", stat_type = "count"))
+    }
+
+    list(metric = NA_character_, stat_type = NA_character_)
+  }
+
   raw <- read_excel(sih_files$f13, sheet = "Table 13.1", skip = 6,
                     col_names = FALSE, col_types = "text")
 
@@ -720,24 +743,33 @@ f13_result <- tryCatch({
     label <- str_trim(as.character(row[[1]]))
 
     if (is.na(label) || label == "" || label == "NA") next
-    if (str_detect(label, "^(ESTIMATES|RELATIVE|Source|Proportion|Exclud|NA)")) next
+    if (str_detect(label, regex("^95% margin of error|^relative standard error",
+                                ignore_case = TRUE))) break
+    if (str_detect(label, "^(ESTIMATES|RELATIVE|Source|Exclud|NA|#)")) next
 
     vals <- as.character(row[3:min(11, ncol(raw))])
     has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
 
     if (!has_data) {
-      # Check if this is a location header
-      if (str_detect(label, regex("greater capital|rest of state|total|location",
-                                  ignore_case = TRUE))) {
-        current_location <- label
-      } else {
+      section_info <- classify_nhha_section(label)
+      if (!is.na(section_info$metric)) {
         current_section <- label
+        current_location <- NA_character_
+      } else if (str_detect(label, regex("greater capital|rest of state|total|location",
+                                         ignore_case = TRUE))) {
+        current_location <- label
       }
       next
     }
 
     # Data row — label should be a survey year like "2007-08" or "2007–08" (en-dash)
     if (str_detect(label, "\\d{4}[-\u2013]\\d{2}")) {
+      section_info <- classify_nhha_section(current_section)
+      if (is.na(section_info$metric)) {
+        warning("Skipping File 13 data row with unrecognised section: ", current_section)
+        next
+      }
+
       # Normalize en-dash to hyphen
       year_label <- str_replace_all(label, "\u2013", "-")
       numeric_vals <- as_numeric_clean(vals)
@@ -748,16 +780,12 @@ f13_result <- tryCatch({
           results[[length(results) + 1]] <- tibble(
             survey_year   = year_label,
             value         = numeric_vals[j],
-            metric        = ifelse(is.na(current_section),
-                                   "pct_rental_stress_over_30",
-                                   paste0("pct_", str_to_lower(str_replace_all(
-                                     str_remove(current_section, "\\s*\\([a-z]\\)$"),
-                                     "\\s+", "_")))),
+            metric        = section_info$metric,
             tenure        = "renter_lower_income",
             breakdown_var = "nhha_location",
             breakdown_val = ifelse(is.na(current_location), "Total", current_location),
             geography     = state_cols[j],
-            stat_type     = "nhha"
+            stat_type     = section_info$stat_type
           )
         }
       }

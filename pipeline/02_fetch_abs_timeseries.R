@@ -237,10 +237,31 @@ if (nrow(cpi_groups) > 0) {
   }
 }
 
-# CPI All Groups via readabs helper
-cat("  Fetching CPI All Groups...\n")
-cpi_all <- safe_read(read_cpi(), "CPI All Groups") %>%
-  transmute(date, value = as.numeric(cpi)) %>%
+# CPI All Groups via ABS SDMX API
+cat("  Fetching CPI All Groups via ABS data API...\n")
+cpi_all <- safe_read({
+  resp <- httr::GET(
+    "https://data.api.abs.gov.au/rest/data/CPI/1.10001.10.50.Q",
+    httr::add_headers(Accept = "text/csv")
+  )
+  if (httr::status_code(resp) != 200) {
+    stop("ABS API returned ", httr::status_code(resp))
+  }
+  d <- readr::read_csv(
+    I(httr::content(resp, as = "text", encoding = "UTF-8")),
+    show_col_types = FALSE
+  )
+  d %>%
+    transmute(
+      date = as.Date(paste0(
+        substr(TIME_PERIOD, 1, 4), "-",
+        sprintf("%02d", as.integer(substr(TIME_PERIOD, 7, 7)) * 3 - 2),
+        "-01"
+      )),
+      value = as.numeric(OBS_VALUE)
+    ) %>%
+    arrange(date)
+}, "CPI All Groups quarterly (API)") %>%
   normalize_abs(label = "CPI All Groups", category = "Prices",
                 units = "Index", freq_hint = "Quarter")
 all_series$cpi_all <- cpi_all

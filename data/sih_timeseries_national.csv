@@ -2958,7 +2958,7 @@ survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
 2013-14,8766.425,pct_households,all,income_source,Estimated number of households,National,mean
 2015-16,8963.3,pct_households,all,income_source,Estimated number of households,National,mean
 2017-18,9270.4,pct_households,all,income_source,Estimated number of households,National,mean
-2019-20,9732.4334,pct_households,all,income_source,Estimated number of households,National,mean
+2019-20,9732.433400000002,pct_households,all,income_source,Estimated number of households,National,mean
 1994-95,2.7,pct_households,all,income_source,Mean number of persons in household,National,mean
 1995-96,2.7,pct_households,all,income_source,Mean number of persons in household,National,mean
 1996-97,2.7,pct_households,all,income_source,Mean number of persons in household,National,mean

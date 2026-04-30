@@ -35,49 +35,48 @@ cat("========================================\n")
 cat("Working directory:", getwd(), "\n")
 cat("Started:", format(start_time), "\n\n")
 
+run_step <- function(label, path) {
+  tryCatch(
+    source(path),
+    error = function(e) {
+      stop(label, " failed: ", conditionMessage(e), call. = FALSE)
+    }
+  )
+}
+
 # --- Step 0: Config ---
 cat("=== Step 0: Loading configuration ===\n")
-source("pipeline/00_config.R")
+run_step("Step 0", "pipeline/00_config.R")
 cat("\n")
 
 # --- Step 1: SIH ---
 cat("=== Step 1: Processing SIH workbooks ===\n")
-tryCatch(
-  source("pipeline/01_process_sih.R"),
-  error = function(e) warning("Step 1 failed: ", conditionMessage(e))
-)
+run_step("Step 1", "pipeline/01_process_sih.R")
 cat("\n")
 
 # --- Step 2: ABS time series ---
 cat("=== Step 2: Fetching ABS time series ===\n")
-tryCatch(
-  source("pipeline/02_fetch_abs_timeseries.R"),
-  error = function(e) warning("Step 2 failed: ", conditionMessage(e))
-)
+run_step("Step 2", "pipeline/02_fetch_abs_timeseries.R")
 cat("\n")
 
 # --- Step 2b: ABS supply & demand ---
 cat("=== Step 2b: Fetching ABS supply & demand ===\n")
-tryCatch(
-  source("pipeline/02b_fetch_abs_supply.R"),
-  error = function(e) warning("Step 2b failed: ", conditionMessage(e))
-)
+run_step("Step 2b", "pipeline/02b_fetch_abs_supply.R")
 cat("\n")
 
 # --- Step 3: RBA ---
 cat("=== Step 3: Fetching RBA data ===\n")
-tryCatch(
-  source("pipeline/03_fetch_rba.R"),
-  error = function(e) warning("Step 3 failed: ", conditionMessage(e))
-)
+run_step("Step 3", "pipeline/03_fetch_rba.R")
 cat("\n")
 
 # --- Step 4: Derived indicators ---
 cat("=== Step 4: Deriving affordability indicators ===\n")
-tryCatch(
-  source("pipeline/04_derive_indicators.R"),
-  error = function(e) warning("Step 4 failed: ", conditionMessage(e))
-)
+run_step("Step 4", "pipeline/04_derive_indicators.R")
+cat("\n")
+
+# --- Step 5: Validation ---
+cat("=== Step 5: Validating pipeline outputs ===\n")
+run_step("Step 5", "pipeline/06_validate_outputs.R")
 cat("\n")
 
 # --- Summary ---
