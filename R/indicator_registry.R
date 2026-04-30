@@ -162,3 +162,39 @@ indicator_registry_output_metadata <- function(indicator) {
     frequency = metadata$frequency[[1]]
   )
 }
+
+indicator_interpretation_label <- function(direction) {
+  labels <- c(
+    higher_less_affordable = "Higher = less affordable",
+    higher_more_affordable = "Higher = more affordable"
+  )
+  missing <- setdiff(direction, names(labels))
+  if (length(missing) > 0) {
+    stop("Unknown interpretation direction: ",
+         paste(missing, collapse = ", "),
+         call. = FALSE)
+  }
+  unname(labels[direction])
+}
+
+indicator_registry_methodology_table <- function() {
+  registry <- indicator_registry()
+  data.frame(
+    "Indicator" = registry$indicator,
+    "Chart Label" = registry$chart_label,
+    "Concept Group" = registry$concept_group,
+    "Unit" = registry$unit,
+    "Frequency" = registry$frequency,
+    "Interpretation" = indicator_interpretation_label(
+      registry$interpretation_direction
+    ),
+    "Formula" = registry$formula,
+    "Source Files" = registry$source_files,
+    "Source Series" = registry$source_series,
+    "Official Measure" = ifelse(registry$official_measure, "Yes", "No"),
+    "Stylised Scenario" = ifelse(registry$stylised_scenario, "Yes", "No"),
+    "Minimum Rows" = registry$minimum_rows,
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+}

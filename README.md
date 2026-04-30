@@ -61,6 +61,8 @@ Official SIH/NHHA measures should be interpreted separately from modelled market
 
 `R/indicator_registry.R` is the source of truth for derived indicator formulas, source series, units, interpretation direction and caveats. The registry documents the current formulas used by the pipeline and dashboard; it does not make stylised market-entry measures official ABS measures or lender assessments.
 
+The Shiny app includes a Methodology page backed by this registry. It shows the formula, source series, interpretation direction and official/stylised status for each derived affordability indicator.
+
 ## Verification
 
 The project uses lightweight base-R tests. Useful checks from the repository root are:
@@ -70,6 +72,7 @@ Rscript tests/test_pipeline_outputs.R
 Rscript tests/test_app_output_ids.R
 Rscript tests/test_kpi_change_labels.R
 Rscript tests/test_app_method_text.R
+Rscript tests/test_methodology_page.R
 Rscript tests/test_public_release_hygiene.R
 Rscript tests/test_project_root_paths.R
 ```
