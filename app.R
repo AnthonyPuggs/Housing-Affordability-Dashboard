@@ -49,6 +49,27 @@ source_note <- function(...) {
 
 stylised_scenario_note <- "Stylised scenario, not an official ABS measure or lender assessment."
 
+affordability_ui_indicators <- c(
+  "Price-to-Income Ratio",
+  "Mortgage Serviceability Index",
+  "Rental Affordability Index",
+  "Deposit Gap (Years)"
+)
+affordability_indicator_choices <- c(
+  stats::setNames(affordability_ui_indicators,
+                  indicator_chart_label(affordability_ui_indicators)),
+  "Modelled Serviceability" = "Housing Serviceability"
+)
+overview_cost_pressure_indicators <- c(
+  "Rental Affordability Index",
+  "Mortgage Serviceability Index",
+  "Price-to-Income Ratio"
+)
+overview_cost_pressure_colours <- stats::setNames(
+  c("#009688", "#FF9800", "#1565C0"),
+  indicator_chart_label(overview_cost_pressure_indicators)
+)
+
 # ==============================================================================
 # UI
 # ==============================================================================
@@ -434,16 +455,9 @@ ui <- page_navbar(
           sidebar = sidebar(
             width = 280, open = "desktop",
             checkboxGroupInput("afford_indices", "Indicators",
-                               choices = c("Price-to-Income Cost Pressure" = "Price-to-Income Ratio",
-                                           "Modelled Mortgage Cost Pressure" = "Mortgage Serviceability Index",
-                                           "Rent Cost Pressure" = "Rental Affordability Index",
-                                           "Stylised Deposit Gap (Years)" = "Deposit Gap (Years)",
-                                           "Modelled Serviceability" = "Housing Serviceability"),
-                               selected = c("Price-to-Income Ratio",
-                                           "Mortgage Serviceability Index",
-                                           "Rental Affordability Index",
-                                           "Deposit Gap (Years)",
-                                           "Housing Serviceability")),
+                               choices = affordability_indicator_choices,
+                               selected = c(affordability_ui_indicators,
+                                            "Housing Serviceability")),
             sliderInput("afford_dates", "Date Range",
                         min = min(afford_idx$date, na.rm = TRUE),
                         max = max(afford_idx$date, na.rm = TRUE),
@@ -953,24 +967,14 @@ server <- function(input, output, session) {
   # Overview chart 3: Affordability Indices (level values)
   output$overview_afford_change <- renderPlotly({
     d <- afford_idx %>%
-      filter(indicator %in% c("Rental Affordability Index",
-                              "Mortgage Serviceability Index",
-                              "Price-to-Income Ratio")) %>%
-      mutate(indicator_label = case_when(
-        indicator == "Rental Affordability Index" ~ "Rent Cost Pressure",
-        indicator == "Mortgage Serviceability Index" ~ "Modelled Mortgage Cost Pressure",
-        indicator == "Price-to-Income Ratio" ~ "Price-to-Income Cost Pressure"
-      ))
+      filter(indicator %in% overview_cost_pressure_indicators) %>%
+      mutate(indicator_label = indicator_chart_label(indicator))
 
     validate(need(nrow(d) > 0, "No affordability index data available."))
 
-    idx_colours <- c("Rent Cost Pressure" = "#009688",
-                     "Modelled Mortgage Cost Pressure" = "#FF9800",
-                     "Price-to-Income Cost Pressure" = "#1565C0")
-
     p <- ggplot(d, aes(x = date, y = value, color = indicator_label)) +
       geom_line(linewidth = 1.1, alpha = 0.9) +
-      scale_color_manual(values = idx_colours) +
+      scale_color_manual(values = overview_cost_pressure_colours) +
       scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
       scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
       labs(x = NULL, y = "Index value", color = NULL) +
@@ -1126,13 +1130,7 @@ server <- function(input, output, session) {
       filter(indicator %in% idx_selected,
              date >= input$afford_dates[1],
              date <= input$afford_dates[2]) %>%
-      mutate(indicator_label = case_when(
-        indicator == "Price-to-Income Ratio" ~ "Price-to-Income Cost Pressure",
-        indicator == "Mortgage Serviceability Index" ~ "Modelled Mortgage Cost Pressure",
-        indicator == "Rental Affordability Index" ~ "Rent Cost Pressure",
-        indicator == "Deposit Gap (Years)" ~ "Stylised Deposit Gap (Years)",
-        TRUE ~ indicator
-      ))
+      mutate(indicator_label = indicator_chart_label(indicator))
     validate(need(nrow(d) > 0, "No data for selected indicators in this date range."))
 
     p <- ggplot(d, aes(x = date, y = value, color = indicator_label)) +

@@ -18,6 +18,10 @@
 
 cat("--- Deriving affordability indicators ---\n")
 
+if (!exists("indicator_registry", mode = "function")) {
+  source(project_path("R", "indicator_registry.R"))
+}
+
 # --- Load pipeline CSVs ------------------------------------------------------
 abs_file <- file.path(DATA_DIR, "abs_timeseries.csv")
 rba_file <- file.path(DATA_DIR, "rba_rates.csv")
@@ -72,6 +76,18 @@ get_series_exact <- function(df, series_name, min_rows = 1,
     select(date, value)
 }
 
+indicator_output <- function(df, indicator_name) {
+  metadata <- indicator_registry_output_metadata(indicator_name)
+  df %>%
+    transmute(
+      date, value,
+      indicator = metadata$indicator,
+      geography = metadata$geography,
+      unit = metadata$unit,
+      frequency = metadata$frequency
+    )
+}
+
 # --- Helper: align two series to common quarterly dates -----------------------
 align_quarterly <- function(df1, df2, name1 = "v1", name2 = "v2") {
   # Ensure both are quarterly by rounding to quarter-end
@@ -99,28 +115,28 @@ index_to_base <- function(values, base_idx = 1, base_value = 100) {
 }
 
 # --- Extract key series -------------------------------------------------------
-rppi <- get_series_exact(abs_ts, "RPPI", min_rows = 40,
+rppi <- get_series_exact(abs_ts, INDICATOR_SOURCE_RPPI, min_rows = 40,
                          dataset = "abs_timeseries.csv")
-wpi <- get_series_exact(abs_ts, "WPI", min_rows = 80,
+wpi <- get_series_exact(abs_ts, INDICATOR_SOURCE_WPI, min_rows = 80,
                         dataset = "abs_timeseries.csv")
-cpi_all <- get_series_exact(abs_ts, "CPI All Groups", min_rows = 100,
+cpi_all <- get_series_exact(abs_ts, INDICATOR_SOURCE_CPI_ALL_GROUPS, min_rows = 100,
                             dataset = "abs_timeseries.csv")
 cpi_rents <- get_series_exact(
   abs_ts,
-  "CPI Rents ; Weighted average of eight capital cities ;",
+  INDICATOR_SOURCE_CPI_RENTS_NATIONAL,
   min_rows = 100,
   dataset = "abs_timeseries.csv"
 )
-cpi_infl <- get_series_exact(abs_ts, "CPI Inflation YoY", min_rows = 90,
+cpi_infl <- get_series_exact(abs_ts, INDICATOR_SOURCE_CPI_INFLATION_YOY, min_rows = 90,
                              dataset = "abs_timeseries.csv")
-awe <- get_series_exact(abs_ts, "AWE (AWOTE, Persons)", min_rows = 80,
+awe <- get_series_exact(abs_ts, INDICATOR_SOURCE_AWE, min_rows = 80,
                         dataset = "abs_timeseries.csv")
 
 mortgage_rate <- tibble()
 if (nrow(rba_ts) > 0) {
   mortgage_rate <- get_series_exact(
     rba_ts,
-    "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier",
+    INDICATOR_SOURCE_RBA_MORTGAGE_RATE,
     min_rows = 50,
     dataset = "rba_rates.csv"
   )
@@ -149,14 +165,7 @@ if (nrow(rppi) > 0 && nrow(wpi) > 0) {
       value    = rppi_idx / wpi_idx * 100
     )
 
-  all_indicators$price_to_income <- pti %>%
-    transmute(
-      date, value,
-      indicator = "Price-to-Income Ratio",
-      geography = "National",
-      unit = "Index (base=100)",
-      frequency = "Quarter"
-    )
+  all_indicators$price_to_income <- indicator_output(pti, "Price-to-Income Ratio")
   cat("    ", nrow(pti), "observations\n")
 }
 
@@ -188,14 +197,7 @@ if (nrow(rppi) > 0 && nrow(wpi) > 0 && nrow(mortgage_rate) > 0) {
   # Re-index MSI to base=100 at start
   msi$value <- index_to_base(msi$value)
 
-  all_indicators$mortgage_serviceability <- msi %>%
-    transmute(
-      date, value,
-      indicator = "Mortgage Serviceability Index",
-      geography = "National",
-      unit = "Index (base=100)",
-      frequency = "Quarter"
-    )
+  all_indicators$mortgage_serviceability <- indicator_output(msi, "Mortgage Serviceability Index")
   cat("    ", nrow(msi), "observations\n")
 }
 
@@ -212,14 +214,7 @@ if (nrow(cpi_rents) > 0 && nrow(wpi) > 0) {
       value     = rents_idx / wpi_idx * 100
     )
 
-  all_indicators$rental_affordability <- rai %>%
-    transmute(
-      date, value,
-      indicator = "Rental Affordability Index",
-      geography = "National",
-      unit = "Index (base=100)",
-      frequency = "Quarter"
-    )
+  all_indicators$rental_affordability <- indicator_output(rai, "Rental Affordability Index")
   cat("    ", nrow(rai), "observations\n")
 }
 
@@ -254,14 +249,7 @@ if (nrow(rppi) > 0 && nrow(awe) > 0) {
     ) %>%
     filter(!is.na(value) & is.finite(value))
 
-  all_indicators$deposit_gap <- deposit_data %>%
-    transmute(
-      date, value,
-      indicator = "Deposit Gap (Years)",
-      geography = "National",
-      unit = "Years",
-      frequency = "Quarter"
-    )
+  all_indicators$deposit_gap <- indicator_output(deposit_data, "Deposit Gap (Years)")
   cat("    ", nrow(deposit_data), "observations\n")
 }
 
@@ -278,14 +266,7 @@ if (nrow(rppi) > 0 && nrow(cpi_all) > 0) {
     ) %>%
     filter(!is.na(value))
 
-  all_indicators$real_house_price_growth <- real_hp %>%
-    transmute(
-      date, value,
-      indicator = "Real House Price Growth YoY",
-      geography = "National",
-      unit = "Per cent",
-      frequency = "Quarter"
-    )
+  all_indicators$real_house_price_growth <- indicator_output(real_hp, "Real House Price Growth YoY")
   cat("    ", nrow(real_hp), "observations\n")
 }
 
@@ -302,14 +283,7 @@ if (nrow(wpi) > 0 && nrow(cpi_all) > 0) {
     ) %>%
     filter(!is.na(value))
 
-  all_indicators$real_wage_growth <- real_wg %>%
-    transmute(
-      date, value,
-      indicator = "Real Wage Growth YoY",
-      geography = "National",
-      unit = "Per cent",
-      frequency = "Quarter"
-    )
+  all_indicators$real_wage_growth <- indicator_output(real_wg, "Real Wage Growth YoY")
   cat("    ", nrow(real_wg), "observations\n")
 }
 
@@ -335,14 +309,7 @@ if (nrow(mortgage_rate) > 0 && nrow(cpi_infl) > 0) {
     mutate(value = nominal_rate - inflation) %>%
     filter(!is.na(value))
 
-  all_indicators$real_mortgage_rate <- real_mr %>%
-    transmute(
-      date, value,
-      indicator = "Real Mortgage Rate",
-      geography = "National",
-      unit = "Per cent",
-      frequency = "Quarter"
-    )
+  all_indicators$real_mortgage_rate <- indicator_output(real_mr, "Real Mortgage Rate")
   cat("    ", nrow(real_mr), "observations\n")
 }
 

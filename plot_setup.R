@@ -44,6 +44,10 @@ if (!exists("project_path", mode = "function")) {
 }
 rm(.load_plot_setup_project_paths)
 
+if (!exists("indicator_registry", mode = "function")) {
+  source(project_path("R", "indicator_registry.R"))
+}
+
 # ==============================================================================
 # DATA LOADING — runs once at app startup
 # ==============================================================================
@@ -376,11 +380,7 @@ afford_change <- afford_idx %>%
     pct_change = (value / base_val - 1) * 100
   ) %>%
   ungroup() %>%
-  mutate(indicator_label = case_when(
-    indicator == "Rental Affordability Index" ~ "Rent Cost Pressure",
-    indicator == "Mortgage Serviceability Index" ~ "Modelled Mortgage Cost Pressure",
-    indicator == "Price-to-Income Ratio" ~ "Price-to-Income Cost Pressure"
-  ))
+  mutate(indicator_label = indicator_chart_label(indicator))
 
 rppi_combined <- bind_rows(rppi_all, rppi_houses, rppi_units)
 

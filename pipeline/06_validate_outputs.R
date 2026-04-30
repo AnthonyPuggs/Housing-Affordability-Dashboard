@@ -4,6 +4,10 @@
 
 cat("--- Validating pipeline outputs ---\n")
 
+if (!exists("indicator_registry", mode = "function")) {
+  source(project_path("R", "indicator_registry.R"))
+}
+
 collect_pipeline_failures <- function(data_dir = DATA_DIR) {
   failures <- character()
 
@@ -73,14 +77,7 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
       "breakdown_val", "geography", "stat_type")
   )
 
-  required_abs_series <- c(
-    "RPPI",
-    "WPI",
-    "CPI All Groups",
-    "CPI Inflation YoY",
-    "AWE (AWOTE, Persons)",
-    "CPI Rents ; Weighted average of eight capital cities ;"
-  )
+  required_abs_series <- indicator_registry_required_abs_sources()
 
   if ("series" %in% names(abs_ts)) {
     missing_abs <- setdiff(required_abs_series, unique(abs_ts$series))
@@ -91,7 +88,7 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
     )
   }
 
-  required_rba_series <- "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier"
+  required_rba_series <- indicator_registry_required_rba_sources()
   if ("series" %in% names(rba_rates)) {
     check(
       required_rba_series %in% unique(rba_rates$series),
@@ -112,11 +109,7 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
 
     indicator_counts <- afford_idx %>%
       count(indicator, name = "n")
-    expected_counts <- c(
-      "Real House Price Growth YoY" = 50L,
-      "Real Wage Growth YoY" = 80L,
-      "Real Mortgage Rate" = 50L
-    )
+    expected_counts <- indicator_registry_minimum_rows()
     for (indicator in names(expected_counts)) {
       actual <- indicator_counts %>%
         filter(.data$indicator == !!indicator) %>%

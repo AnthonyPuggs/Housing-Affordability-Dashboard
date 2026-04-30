@@ -57,6 +57,10 @@ Main dashboard CSVs live in `data/`:
 
 Official SIH/NHHA measures should be interpreted separately from modelled market-entry indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments.
 
+## Methodology Metadata
+
+`R/indicator_registry.R` is the source of truth for derived indicator formulas, source series, units, interpretation direction and caveats. The registry documents the current formulas used by the pipeline and dashboard; it does not make stylised market-entry measures official ABS measures or lender assessments.
+
 ## Verification
 
 The project uses lightweight base-R tests. Useful checks from the repository root are:

@@ -6,6 +6,8 @@ check <- function(condition, message) {
   }
 }
 
+source(file.path(getwd(), "R", "indicator_registry.R"))
+
 read_required_csv <- function(filename) {
   path <- file.path(getwd(), "data", filename)
   check(file.exists(path), paste(filename, "does not exist"))
@@ -59,12 +61,7 @@ required_columns(
 )
 
 required_abs_series <- c(
-  "RPPI",
-  "WPI",
-  "CPI All Groups",
-  "CPI Inflation YoY",
-  "AWE (AWOTE, Persons)",
-  "CPI Rents ; Weighted average of eight capital cities ;"
+  indicator_registry_required_abs_sources()
 )
 
 if ("series" %in% names(abs_ts)) {
@@ -76,7 +73,7 @@ if ("series" %in% names(abs_ts)) {
   )
 }
 
-required_rba_series <- "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier"
+required_rba_series <- indicator_registry_required_rba_sources()
 if ("series" %in% names(rba_rates)) {
   check(
     required_rba_series %in% unique(rba_rates$series),
@@ -93,11 +90,7 @@ if (all(c("indicator", "geography", "date", "value") %in% names(afford_idx))) {
   )
 
   indicator_counts <- table(afford_idx$indicator)
-  expected_counts <- c(
-    "Real House Price Growth YoY" = 50L,
-    "Real Wage Growth YoY" = 80L,
-    "Real Mortgage Rate" = 50L
-  )
+  expected_counts <- indicator_registry_minimum_rows()
   for (indicator in names(expected_counts)) {
     actual <- if (indicator %in% names(indicator_counts)) {
       unname(indicator_counts[[indicator]])
