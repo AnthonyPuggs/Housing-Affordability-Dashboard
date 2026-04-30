@@ -96,6 +96,19 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
     )
   }
 
+  rba_raw_files <- Sys.glob(file.path(data_dir, "rba_*_raw.csv"))
+  for (raw_file in rba_raw_files) {
+    problem_count <- tryCatch(
+      rba_csv_parse_problem_count(raw_file),
+      error = function(e) conditionMessage(e)
+    )
+    check(
+      identical(problem_count, 0L),
+      paste(basename(raw_file), "has", problem_count,
+            "readr parse problems")
+    )
+  }
+
   if (all(c("indicator", "geography", "date", "value") %in% names(afford_idx))) {
     dup_afford <- duplicate_count(afford_idx, c("indicator", "geography", "date"))
     check(

@@ -204,6 +204,62 @@ is_data_row <- function(row_values) {
 #' @param table_id RBA table identifier (e.g. "f5", "f6", "f1")
 #' @param cache_dir Directory to cache downloaded files
 #' @return Path to the cached CSV file, or NULL on failure
+rba_csv_parse_problem_count <- function(path) {
+  if (!file.exists(path)) {
+    stop("RBA CSV cache does not exist: ", path, call. = FALSE)
+  }
+
+  parsed <- suppressWarnings(
+    read_csv(
+      path,
+      col_names = FALSE,
+      col_types = cols(.default = "c"),
+      show_col_types = FALSE,
+      progress = FALSE
+    )
+  )
+  nrow(problems(parsed))
+}
+
+normalise_rba_csv_cache <- function(path) {
+  if (!file.exists(path)) {
+    stop("RBA CSV cache does not exist: ", path, call. = FALSE)
+  }
+
+  raw <- utils::read.csv(
+    path,
+    header = FALSE,
+    fill = TRUE,
+    stringsAsFactors = FALSE,
+    check.names = FALSE,
+    colClasses = "character",
+    na.strings = character(0),
+    blank.lines.skip = TRUE
+  )
+
+  if (nrow(raw) == 0 || ncol(raw) == 0) {
+    return(invisible(path))
+  }
+
+  raw[is.na(raw)] <- ""
+  non_empty_cols <- which(colSums(raw != "") > 0)
+  if (length(non_empty_cols) > 0) {
+    raw <- raw[, seq_len(max(non_empty_cols)), drop = FALSE]
+  }
+
+  utils::write.table(
+    raw,
+    file = path,
+    sep = ",",
+    row.names = FALSE,
+    col.names = FALSE,
+    quote = TRUE,
+    na = "",
+    qmethod = "double"
+  )
+  invisible(path)
+}
+
 fetch_rba_table <- function(table_id, cache_dir = DATA_DIR) {
   table_id_lower <- tolower(table_id)
 
@@ -229,6 +285,7 @@ fetch_rba_table <- function(table_id, cache_dir = DATA_DIR) {
       # Remove blank lines
       lines <- lines[nchar(trimws(lines)) > 0]
       writeLines(lines, cache_file)
+      normalise_rba_csv_cache(cache_file)
     }
     if (is.null(resp) || http_error(resp)) {
       # Try Excel as fallback with various naming patterns
@@ -262,6 +319,11 @@ fetch_rba_table <- function(table_id, cache_dir = DATA_DIR) {
     }
   } else {
     cat("  Using cached RBA table", toupper(table_id), "\n")
+  }
+
+  if (str_detect(cache_file, "\\.csv$") &&
+      rba_csv_parse_problem_count(cache_file) > 0) {
+    normalise_rba_csv_cache(cache_file)
   }
 
   cache_file

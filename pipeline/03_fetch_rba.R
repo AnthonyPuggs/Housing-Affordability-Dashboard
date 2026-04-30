@@ -12,6 +12,23 @@
 # Schema: date | value | series | series_id | category | unit | frequency
 # ==============================================================================
 
+if (!exists("project_path", mode = "function")) {
+  candidates <- c(
+    file.path(getwd(), "R", "project_paths.R"),
+    file.path(dirname(getwd()), "R", "project_paths.R")
+  )
+  candidates <- candidates[file.exists(candidates)]
+  if (length(candidates) == 0) {
+    stop("Could not locate R/project_paths.R for RBA pipeline stage.",
+         call. = FALSE)
+  }
+  source(candidates[[1]])
+}
+
+if (!exists("fetch_rba_table", mode = "function")) {
+  source(project_path("pipeline", "00_config.R"))
+}
+
 cat("--- Fetching RBA statistical tables ---\n")
 
 all_rba <- list()
@@ -32,6 +49,7 @@ parse_rba_file <- function(file, table_id) {
   is_csv <- str_detect(file, "\\.csv$")
 
   if (is_csv) {
+    normalise_rba_csv_cache(file)
     # Raw CSVs are already cleaned by fetch_rba_table() (BOM, title row,
     # blank lines removed). Read directly; defensive cleanup if needed.
     lines <- readLines(file, warn = FALSE)

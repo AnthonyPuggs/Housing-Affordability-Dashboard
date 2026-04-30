@@ -52,6 +52,7 @@ Main dashboard CSVs live in `data/`:
 
 - `abs_timeseries.csv`: long-format ABS macro, CPI, price, labour and supply series using `date | value | series | series_id | category | unit | frequency`.
 - `rba_rates.csv`: long-format RBA cash and mortgage-rate inputs using the same time-series schema.
+- `rba_*_raw.csv`: normalised RBA source-cache artefacts kept rectangular for reproducible parsing; `rba_rates.csv` is the dashboard-ready RBA output.
 - `affordability_indices.csv`: derived cost-pressure indicators using `date | value | indicator | geography | unit | frequency`.
 - `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental-stress measures.
 
@@ -73,6 +74,7 @@ Rscript tests/test_app_output_ids.R
 Rscript tests/test_kpi_change_labels.R
 Rscript tests/test_app_method_text.R
 Rscript tests/test_methodology_page.R
+Rscript tests/test_rba_raw_cache_hygiene.R
 Rscript tests/test_public_release_hygiene.R
 Rscript tests/test_project_root_paths.R
 ```
