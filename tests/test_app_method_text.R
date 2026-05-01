@@ -37,7 +37,10 @@ required_text <- c(
   "ABS CPI",
   "RBA",
   "Modelled Mortgage Cost Pressure",
-  "Stylised Deposit Gap (Years)"
+  "Stylised Deposit Gap (Years)",
+  "relative standard error",
+  "margin of error",
+  "interpret with caution"
 )
 
 missing <- required_text[!vapply(required_text, grepl, logical(1), method_text,

@@ -7,3 +7,9 @@ source_note <- function(...) {
 }
 
 stylised_scenario_note <- "Stylised scenario, not an official ABS measure or lender assessment."
+
+sih_sampling_error_note <- paste(
+  "SIH estimates are survey estimates;",
+  "relative standard error and 95% margin of error metadata are saved in data/sih_estimate_quality.csv,",
+  "and users should interpret with caution when estimates have high RSE values."
+)

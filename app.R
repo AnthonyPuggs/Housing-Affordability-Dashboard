@@ -596,7 +596,7 @@ ui <- page_navbar(
           ),
           card(
             card_header("Housing Cost Stress Bands (2019-20)"),
-            source_note("ABS Survey of Income and Housing. Official survey-based housing cost burden bands by household group."),
+            source_note("ABS Survey of Income and Housing. Official survey-based housing cost burden bands by household group. ", sih_sampling_error_note),
             card_body(div(class = "chart-square", plotlyOutput("stress_chart", height = "100%", width = "100%")))
           )
         )
@@ -616,7 +616,7 @@ ui <- page_navbar(
           ),
           card(
             card_header("Housing Cost-to-Income Ratio by Tenure & Demographics (2019-20)"),
-            source_note("ABS Survey of Income and Housing. Gross-income housing cost ratios by tenure and demographic group."),
+            source_note("ABS Survey of Income and Housing. Gross-income housing cost ratios by tenure and demographic group. ", sih_sampling_error_note),
             card_body(div(class = "chart-square", plotlyOutput("burden_heatmap", height = "100%", width = "100%")))
           )
         )
@@ -792,12 +792,12 @@ ui <- page_navbar(
         width = "420px",
         card(
           card_header("NHHA Rental Stress by State"),
-          source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Official survey burden/stress measure."),
+          source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Official survey burden/stress measure. ", sih_sampling_error_note),
           card_body(div(class = "chart-square", plotlyOutput("rental_stress_state", height = "100%", width = "100%")))
         ),
         card(
           card_header("NHHA Rental Stress Trends (Over Time)"),
-          source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Values are proportions of lower-income renter households."),
+          source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Values are proportions of lower-income renter households. ", sih_sampling_error_note),
           card_body(div(class = "chart-wide", plotlyOutput("rental_stress_trend", height = "100%", width = "100%")))
         ),
         card(
@@ -807,7 +807,7 @@ ui <- page_navbar(
         ),
         card(
           card_header("Weekly Rental Costs by Demographics (2019-20)"),
-          source_note("ABS Survey of Income and Housing. Survey rental-cost estimates by household characteristic."),
+          source_note("ABS Survey of Income and Housing. Survey rental-cost estimates by household characteristic. ", sih_sampling_error_note),
           card_body(div(class = "chart-square", plotlyOutput("rental_costs_demo", height = "100%", width = "100%")))
         )
       )

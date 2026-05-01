@@ -27,7 +27,8 @@ methodologyPageUI <- function(id) {
         card_header("Official SIH/NHHA burden measures"),
         card_body(
           tags$p("ABS Survey of Income and Housing measures describe observed household housing costs, gross-income cost ratios and NHHA lower-income renter stress."),
-          tags$p("These are official survey burden and stress measures, separate from price-index or market-entry proxy indicators.")
+          tags$p("These are official survey burden and stress measures, separate from price-index or market-entry proxy indicators."),
+          tags$p(sih_sampling_error_note)
         )
       ),
       card(
@@ -67,6 +68,7 @@ methodologyPageUI <- function(id) {
             tags$li("AWE is individual earnings, not household disposable income."),
             tags$li("WPI is a wage price index, not an income distribution measure."),
             tags$li("CPI rents and CPI new dwelling indexes are price indexes, not household burden measures."),
+            tags$li("SIH relative standard error and 95% margin of error metadata are provided in data/sih_estimate_quality.csv; users should interpret with caution when estimates have high RSE values."),
             tags$li("Gross-income SIH cost ratios, NHHA lower-income rental stress and modelled market-entry scenarios should not be interpreted as the same concept.")
           )
         )

@@ -61,6 +61,7 @@ if (all(file.exists(c(project_paths_path, registry_path, report_path)))) {
       "affordability_indices.csv",
       "abs_timeseries.csv",
       "rba_rates.csv",
+      "sih_estimate_quality.csv",
       "sih_nhha_rental_stress.csv"
     ))
     missing_files <- setdiff(required_files, inventory$file)

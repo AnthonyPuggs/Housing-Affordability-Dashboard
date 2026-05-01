@@ -54,6 +54,7 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
   rba_rates <- read_required_csv("rba_rates.csv")
   afford_idx <- read_required_csv("affordability_indices.csv")
   sih_nhha <- read_required_csv("sih_nhha_rental_stress.csv")
+  sih_quality <- read_required_csv("sih_estimate_quality.csv")
 
   required_columns(
     abs_ts,
@@ -75,6 +76,14 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
     "sih_nhha_rental_stress.csv",
     c("survey_year", "value", "metric", "tenure", "breakdown_var",
       "breakdown_val", "geography", "stat_type")
+  )
+  required_columns(
+    sih_quality,
+    "sih_estimate_quality.csv",
+    c("source_file", "source_table", "survey_year", "metric", "tenure",
+      "breakdown_var", "breakdown_val", "geography", "stat_type",
+      "quality_measure", "quality_value", "quality_unit",
+      "reliability_flag", "reliability_note")
   )
 
   required_abs_series <- indicator_registry_required_abs_sources()
@@ -160,6 +169,37 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
       length(missing_metrics) == 0,
       paste("sih_nhha_rental_stress.csv is missing metrics:",
             paste(missing_metrics, collapse = ", "))
+    )
+  }
+
+  if (all(c("source_file", "source_table", "survey_year", "metric", "tenure",
+            "breakdown_var", "breakdown_val", "geography", "stat_type",
+            "quality_measure", "quality_value", "quality_unit",
+            "reliability_flag") %in% names(sih_quality))) {
+    dup_quality <- duplicate_count(
+      sih_quality,
+      c("source_file", "source_table", "survey_year", "metric", "tenure",
+        "breakdown_var", "breakdown_val", "geography", "stat_type",
+        "quality_measure")
+    )
+    check(
+      !is.na(dup_quality) && dup_quality == 0,
+      paste("sih_estimate_quality.csv has", dup_quality,
+            "duplicate key rows")
+    )
+
+    missing_quality_measures <- setdiff(
+      c("moe_95", "rse_pct"),
+      unique(sih_quality$quality_measure)
+    )
+    check(
+      length(missing_quality_measures) == 0,
+      paste("sih_estimate_quality.csv is missing quality measures:",
+            paste(missing_quality_measures, collapse = ", "))
+    )
+    check(
+      all(is.finite(sih_quality$quality_value)),
+      "sih_estimate_quality.csv contains non-finite quality values"
     )
   }
 

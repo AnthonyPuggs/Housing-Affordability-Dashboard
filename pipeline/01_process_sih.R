@@ -158,6 +158,363 @@ simplify_section <- function(section) {
   )
 }
 
+# --- SIH sampling-error metadata helpers --------------------------------------
+sih_estimate_quality_columns <- c(
+  "source_file",
+  "source_table",
+  "survey_year",
+  "metric",
+  "tenure",
+  "breakdown_var",
+  "breakdown_val",
+  "geography",
+  "stat_type",
+  "quality_measure",
+  "quality_value",
+  "quality_unit",
+  "reliability_flag",
+  "reliability_note"
+)
+
+empty_sih_estimate_quality <- function() {
+  tibble(
+    source_file = character(),
+    source_table = character(),
+    survey_year = character(),
+    metric = character(),
+    tenure = character(),
+    breakdown_var = character(),
+    breakdown_val = character(),
+    geography = character(),
+    stat_type = character(),
+    quality_measure = character(),
+    quality_value = numeric(),
+    quality_unit = character(),
+    reliability_flag = character(),
+    reliability_note = character()
+  )
+}
+
+classify_quality_marker <- function(marker) {
+  marker <- str_to_lower(str_squish(as.character(marker)))
+  case_when(
+    str_detect(marker, "moe") ~ "moe_95",
+    str_detect(marker, "rse") ~ "rse_pct",
+    TRUE ~ NA_character_
+  )
+}
+
+quality_unit_for <- function(quality_measure) {
+  case_when(
+    identical(quality_measure, "moe_95") ~ "percentage_points",
+    identical(quality_measure, "rse_pct") ~ "per_cent",
+    TRUE ~ NA_character_
+  )
+}
+
+reliability_flag_for <- function(quality_measure, value) {
+  if (identical(quality_measure, "rse_pct")) {
+    if (value > 50) return("too_unreliable")
+    if (value >= 25) return("use_with_caution")
+  }
+  "standard"
+}
+
+reliability_note_for <- function(quality_measure, value) {
+  flag <- reliability_flag_for(quality_measure, value)
+  if (identical(quality_measure, "moe_95")) {
+    return("95% margin of error for a proportion estimate, in percentage points.")
+  }
+  if (identical(flag, "too_unreliable")) {
+    return("Relative standard error is greater than 50%; ABS considers the estimate too unreliable for general use.")
+  }
+  if (identical(flag, "use_with_caution")) {
+    return("Relative standard error is 25% to 50%; ABS advises users to interpret with caution.")
+  }
+  "Relative standard error is below 25%; no high-RSE caution flag is applied."
+}
+
+quality_row <- function(source_file, source_table, survey_year, metric, tenure,
+                        breakdown_var, breakdown_val, geography, stat_type,
+                        quality_measure, quality_value) {
+  tibble(
+    source_file = basename(source_file),
+    source_table = source_table,
+    survey_year = survey_year,
+    metric = metric,
+    tenure = tenure,
+    breakdown_var = breakdown_var,
+    breakdown_val = breakdown_val,
+    geography = geography,
+    stat_type = stat_type,
+    quality_measure = quality_measure,
+    quality_value = quality_value,
+    quality_unit = quality_unit_for(quality_measure),
+    reliability_flag = reliability_flag_for(quality_measure, quality_value),
+    reliability_note = reliability_note_for(quality_measure, quality_value)
+  )
+}
+
+classify_nhha_section <- function(section) {
+  if (is.na(section) || section == "") {
+    return(list(metric = NA_character_, stat_type = NA_character_))
+  }
+
+  section_norm <- section %>%
+    str_remove("\\s*\\([a-z]\\)$") %>%
+    str_to_lower() %>%
+    str_squish()
+
+  if (str_detect(section_norm, "^proportion of lower income renter households paying more than 30%")) {
+    return(list(metric = "pct_rental_stress_over_30", stat_type = "proportion"))
+  }
+  if (str_detect(section_norm, "^number of lower income renter households paying more than 30%")) {
+    return(list(metric = "number_rental_stress_over_30", stat_type = "count"))
+  }
+  if (str_detect(section_norm, "^number of lower income renter households$")) {
+    return(list(metric = "number_lower_income_renter_households", stat_type = "count"))
+  }
+
+  list(metric = NA_character_, stat_type = NA_character_)
+}
+
+parse_stress_bands_quality <- function(file, sheet, population_label) {
+  band_cols <- c("pct_25_or_less", "pct_25_to_30", "pct_30_to_50",
+                 "pct_over_50", "pct_total", "pct_over_30", "households_000")
+
+  raw <- read_excel(file, sheet = sheet, skip = 6,
+                    col_names = FALSE, col_types = "text")
+
+  results <- list()
+  current_section <- NA_character_
+  in_quality_section <- FALSE
+  quality_markers <- rep(NA_character_, length(band_cols))
+
+  for (i in seq_len(nrow(raw))) {
+    row <- raw[i, ]
+    label <- str_trim(as.character(row[[1]]))
+    vals <- as.character(row[2:min(8, ncol(raw))])
+    marker_row <- vapply(vals, classify_quality_marker, character(1))
+
+    if (is.na(label) || label == "" || label == "NA") {
+      if (in_quality_section && any(!is.na(marker_row))) {
+        quality_markers[seq_along(marker_row)] <- marker_row
+      }
+      next
+    }
+    if (str_detect(label, regex("^95% margin of error", ignore_case = TRUE))) {
+      in_quality_section <- TRUE
+      current_section <- NA_character_
+      next
+    }
+    if (str_detect(label, regex("^relative standard error", ignore_case = TRUE))) {
+      break
+    }
+    if (!in_quality_section) next
+    if (str_detect(label, "^(Source|Exclud|NA|#|Cells|\\([a-z]\\)|np not)")) next
+
+    if (all(is.na(quality_markers)) && any(!is.na(marker_row))) {
+      quality_markers[seq_along(marker_row)] <- marker_row
+      next
+    }
+
+    has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
+    if (!has_data) {
+      current_section <- label
+      next
+    }
+
+    numeric_vals <- as_numeric_clean(vals)
+    for (j in seq_along(band_cols)) {
+      if (j > length(numeric_vals)) next
+      quality_measure <- quality_markers[j]
+      if (is.na(quality_measure) || is.na(numeric_vals[j])) next
+
+      results[[length(results) + 1]] <- quality_row(
+        source_file = file,
+        source_table = sheet,
+        survey_year = "2019-20",
+        metric = band_cols[j],
+        tenure = classify_tenure(label),
+        breakdown_var = ifelse(is.na(current_section), "tenure",
+                               simplify_section(current_section)),
+        breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
+        geography = "National",
+        stat_type = population_label,
+        quality_measure = quality_measure,
+        quality_value = numeric_vals[j]
+      )
+    }
+  }
+
+  if (length(results) == 0) empty_sih_estimate_quality() else bind_rows(results)
+}
+
+parse_lower_income_quality <- function(file, sheet) {
+  metric_cols <- c("median_weekly_cost", "median_cost_income_ratio", "spacer",
+                   "pct_25_or_less", "pct_25_to_30", "pct_30_to_50",
+                   "pct_over_50", "pct_total", "pct_over_30", "households_000")
+
+  raw <- read_excel(file, sheet = sheet, skip = 8,
+                    col_names = FALSE, col_types = "text")
+
+  state_names <- c("NSW" = "New South Wales", "Vic." = "Victoria", "VIC" = "Victoria",
+                   "Qld" = "Queensland", "QLD" = "Queensland",
+                   "SA" = "South Australia", "WA" = "Western Australia",
+                   "Tas." = "Tasmania", "TAS" = "Tasmania",
+                   "NT" = "Northern Territory", "ACT" = "Australian Capital Territory",
+                   "Aust." = "Australia", "AUST" = "Australia",
+                   "Australia" = "Australia", "Total Australia" = "Australia")
+
+  results <- list()
+  current_state <- NA_character_
+  current_section <- NA_character_
+  in_quality_section <- FALSE
+  quality_markers <- rep(NA_character_, length(metric_cols))
+
+  for (i in seq_len(nrow(raw))) {
+    row <- raw[i, ]
+    label <- str_trim(as.character(row[[1]]))
+    vals <- as.character(row[2:min(11, ncol(raw))])
+    marker_row <- vapply(vals, classify_quality_marker, character(1))
+
+    if (is.na(label) || label == "" || label == "NA") {
+      if (in_quality_section && all(is.na(quality_markers)) &&
+          any(!is.na(marker_row))) {
+        quality_markers[seq_along(marker_row)] <- marker_row
+      }
+      next
+    }
+    if (str_detect(label, regex("^95% margin of error", ignore_case = TRUE))) {
+      in_quality_section <- TRUE
+      current_state <- NA_character_
+      current_section <- NA_character_
+      next
+    }
+    if (!in_quality_section) next
+    if (str_detect(label, "^(Source|Exclud|NA|#|\\*|Cells|\\([a-z]\\)|©)")) next
+
+    if (all(is.na(quality_markers)) && any(!is.na(marker_row))) {
+      quality_markers[seq_along(marker_row)] <- marker_row
+      next
+    }
+
+    other_vals <- as.character(row[2:min(11, ncol(raw))])
+    all_other_na <- all(is.na(other_vals) | other_vals == "" | other_vals == "NA")
+    if (all_other_na && (label %in% names(state_names) ||
+                         str_detect(label, "^(NSW|VIC|Vic|QLD|Qld|SA|WA|TAS|Tas|NT|ACT|Aust|Total Australia)"))) {
+      current_state <- state_names[label]
+      if (is.na(current_state)) current_state <- label
+      current_section <- NA_character_
+      next
+    }
+
+    has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
+    if (!has_data) {
+      current_section <- label
+      next
+    }
+
+    numeric_vals <- as_numeric_clean(vals)
+    for (j in seq_along(metric_cols)) {
+      mname <- metric_cols[j]
+      if (mname == "spacer" || j > length(numeric_vals)) next
+      quality_measure <- quality_markers[j]
+      if (is.na(quality_measure) || is.na(numeric_vals[j])) next
+
+      results[[length(results) + 1]] <- quality_row(
+        source_file = file,
+        source_table = sheet,
+        survey_year = "2019-20",
+        metric = mname,
+        tenure = classify_tenure(label),
+        breakdown_var = "lower_income_state",
+        breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
+        geography = ifelse(is.na(current_state), "Unknown", current_state),
+        stat_type = "lower_income",
+        quality_measure = quality_measure,
+        quality_value = numeric_vals[j]
+      )
+    }
+  }
+
+  if (length(results) == 0) empty_sih_estimate_quality() else bind_rows(results)
+}
+
+parse_nhha_quality <- function(file, sheet) {
+  state_cols <- c("NSW", "Vic.", "Qld", "SA", "WA", "Tas.", "NT", "ACT", "Aust.")
+  raw <- read_excel(file, sheet = sheet, skip = 6,
+                    col_names = FALSE, col_types = "text")
+
+  results <- list()
+  current_location <- NA_character_
+  current_section <- NA_character_
+  quality_measure <- NA_character_
+
+  for (i in seq_len(nrow(raw))) {
+    row <- raw[i, ]
+    label <- str_trim(as.character(row[[1]]))
+
+    if (is.na(label) || label == "" || label == "NA") next
+    if (str_detect(label, regex("^95% margin of error", ignore_case = TRUE))) {
+      quality_measure <- "moe_95"
+      current_location <- NA_character_
+      current_section <- NA_character_
+      next
+    }
+    if (str_detect(label, regex("^relative standard error", ignore_case = TRUE))) {
+      quality_measure <- "rse_pct"
+      current_location <- NA_character_
+      current_section <- NA_character_
+      next
+    }
+    if (is.na(quality_measure)) next
+    if (str_detect(label, "^(Source|Exclud|NA|#|\\*|Cells|\\([a-z]\\)|©|na  not)")) next
+
+    vals <- as.character(row[3:min(11, ncol(raw))])
+    has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
+
+    if (!has_data) {
+      section_info <- classify_nhha_section(label)
+      if (!is.na(section_info$metric)) {
+        current_section <- label
+        current_location <- NA_character_
+      } else if (str_detect(label, regex("greater capital|rest of state|total|location",
+                                         ignore_case = TRUE))) {
+        current_location <- label
+      }
+      next
+    }
+
+    if (str_detect(label, "\\d{4}[-\u2013]\\d{2}")) {
+      section_info <- classify_nhha_section(current_section)
+      if (is.na(section_info$metric)) next
+
+      year_label <- str_replace_all(label, "\u2013", "-")
+      numeric_vals <- as_numeric_clean(vals)
+
+      for (j in seq_along(state_cols)) {
+        if (j > length(numeric_vals) || is.na(numeric_vals[j])) next
+        results[[length(results) + 1]] <- quality_row(
+          source_file = file,
+          source_table = sheet,
+          survey_year = year_label,
+          metric = section_info$metric,
+          tenure = "renter_lower_income",
+          breakdown_var = "nhha_location",
+          breakdown_val = ifelse(is.na(current_location), "Total", current_location),
+          geography = state_cols[j],
+          stat_type = section_info$stat_type,
+          quality_measure = quality_measure,
+          quality_value = numeric_vals[j]
+        )
+      }
+    }
+  }
+
+  if (length(results) == 0) empty_sih_estimate_quality() else bind_rows(results)
+}
+
 # ==============================================================================
 # FILE 1: National time series (Tables 1.1, 1.2, 1.3)
 # ==============================================================================
@@ -708,29 +1065,6 @@ f13_result <- tryCatch({
   # Cols C-K = NSW, Vic., Qld, SA, WA, Tas., NT, ACT, Aust.
   state_cols <- c("NSW", "Vic.", "Qld", "SA", "WA", "Tas.", "NT", "ACT", "Aust.")
 
-  classify_nhha_section <- function(section) {
-    if (is.na(section) || section == "") {
-      return(list(metric = NA_character_, stat_type = NA_character_))
-    }
-
-    section_norm <- section %>%
-      str_remove("\\s*\\([a-z]\\)$") %>%
-      str_to_lower() %>%
-      str_squish()
-
-    if (str_detect(section_norm, "^proportion of lower income renter households paying more than 30%")) {
-      return(list(metric = "pct_rental_stress_over_30", stat_type = "proportion"))
-    }
-    if (str_detect(section_norm, "^number of lower income renter households paying more than 30%")) {
-      return(list(metric = "number_rental_stress_over_30", stat_type = "count"))
-    }
-    if (str_detect(section_norm, "^number of lower income renter households$")) {
-      return(list(metric = "number_lower_income_renter_households", stat_type = "count"))
-    }
-
-    list(metric = NA_character_, stat_type = NA_character_)
-  }
-
   raw <- read_excel(sih_files$f13, sheet = "Table 13.1", skip = 6,
                     col_names = FALSE, col_types = "text")
 
@@ -800,6 +1134,26 @@ f13_result <- tryCatch({
 
 if (nrow(f13_result) > 0) {
   write_pipeline_csv(f13_result, "sih_nhha_rental_stress.csv")
+}
+
+cat("  Processing SIH sampling-error metadata...\n")
+
+sih_quality_result <- tryCatch({
+  bind_rows(
+    parse_stress_bands_quality(sih_files$f5, "Table 5.1", "all_households"),
+    parse_stress_bands_quality(sih_files$f5, "Table 5.2", "lower_income"),
+    parse_lower_income_quality(sih_files$f8, "Table 8.1"),
+    parse_nhha_quality(sih_files$f13, "Table 13.1")
+  ) %>%
+    select(all_of(sih_estimate_quality_columns)) %>%
+    distinct()
+}, error = function(e) {
+  warning("Error processing SIH sampling-error metadata: ", conditionMessage(e))
+  empty_sih_estimate_quality()
+})
+
+if (nrow(sih_quality_result) > 0) {
+  write_pipeline_csv(sih_quality_result, "sih_estimate_quality.csv")
 }
 
 cat("--- SIH processing complete ---\n")

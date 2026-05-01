@@ -55,6 +55,7 @@ Main dashboard CSVs live in `data/`:
 - `rba_*_raw.csv`: normalised RBA source-cache artefacts kept rectangular for reproducible parsing; `rba_rates.csv` is the dashboard-ready RBA output.
 - `affordability_indices.csv`: derived cost-pressure indicators using `date | value | indicator | geography | unit | frequency`.
 - `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental-stress measures.
+- `sih_estimate_quality.csv`: SIH sampling-error metadata for selected workbook tables, including 95% margin of error values and relative standard error flags. Users should interpret with caution when estimates have RSE from 25% to 50%; estimates above 50% are too unreliable for general use.
 
 Official SIH/NHHA measures should be interpreted separately from modelled market-entry indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments.
 
@@ -80,6 +81,7 @@ Rscript tests/test_app_method_text.R
 Rscript tests/test_methodology_page.R
 Rscript tests/test_methodology_module.R
 Rscript tests/test_provenance_report.R
+Rscript tests/test_sih_estimate_quality.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
 Rscript tests/test_responsive_ui_contracts.R
