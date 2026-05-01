@@ -10,6 +10,9 @@ check <- function(condition, message) {
 app_path <- file.path(repo_root, "app.R")
 description_path <- file.path(repo_root, "DESCRIPTION")
 readme_path <- file.path(repo_root, "README.md")
+module_paths <- list.files(file.path(repo_root, "R"),
+                           pattern = "_module[.]R$",
+                           full.names = TRUE)
 
 check(file.exists(app_path), "app.R does not exist")
 check(file.exists(description_path), "DESCRIPTION does not exist")
@@ -17,6 +20,12 @@ check(file.exists(readme_path), "README.md does not exist")
 
 if (file.exists(app_path)) {
   app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
+  responsive_source_text <- paste(c(
+    app_text,
+    vapply(module_paths, function(path) {
+      paste(readLines(path, warn = FALSE), collapse = "\n")
+    }, character(1))
+  ), collapse = "\n")
 
   page_navbar_head <- regmatches(
     app_text,
@@ -56,10 +65,15 @@ if (file.exists(app_path)) {
 
   rental_start <- regexpr('nav_panel\\(\\s*"Rental Market"', app_text,
                           perl = TRUE)
+  if (rental_start[1] == -1L) {
+    rental_start <- regexpr('nav_panel\\(\\s*"Rental Market"',
+                            responsive_source_text, perl = TRUE)
+  }
   rental_segment <- if (rental_start[1] == -1L) {
     ""
   } else {
-    substr(app_text, rental_start[1], nchar(app_text))
+    substr(responsive_source_text, rental_start[1],
+           nchar(responsive_source_text))
   }
   check(grepl('layout_column_wrap\\(\\s*width\\s*=\\s*"420px"',
               rental_segment, perl = TRUE),
