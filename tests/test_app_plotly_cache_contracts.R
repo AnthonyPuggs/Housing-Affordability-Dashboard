@@ -1,5 +1,8 @@
 repo_root <- normalizePath(getwd(), winslash = "/", mustWork = TRUE)
 app_path <- file.path(repo_root, "app.R")
+module_paths <- list.files(file.path(repo_root, "R"),
+                           pattern = "_module[.]R$",
+                           full.names = TRUE)
 failures <- character()
 
 check <- function(condition, message) {
@@ -12,20 +15,26 @@ check(file.exists(app_path), "app.R does not exist")
 
 if (file.exists(app_path)) {
   app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
+  plot_source_text <- paste(c(
+    app_text,
+    vapply(module_paths, function(path) {
+      paste(readLines(path, warn = FALSE), collapse = "\n")
+    }, character(1))
+  ), collapse = "\n")
 
   check(grepl('source(project_path("R", "plotly_helpers.R"), local = TRUE)',
               app_text, fixed = TRUE),
         "app.R must source R/plotly_helpers.R")
   direct_ggplotly_pattern <- "(^|[^A-Za-z0-9_])ggplotly\\s*\\(|plotly::ggplotly\\s*\\("
-  check(!grepl(direct_ggplotly_pattern, app_text, perl = TRUE),
-        "app.R must not call ggplotly() directly")
+  check(!grepl(direct_ggplotly_pattern, plot_source_text, perl = TRUE),
+        "app.R and modules must not call ggplotly() directly")
 
   render_pattern <- "output\\$([A-Za-z0-9_]+)\\s*<-\\s*renderPlotly\\s*\\("
-  render_matches <- gregexpr(render_pattern, app_text, perl = TRUE)[[1]]
+  render_matches <- gregexpr(render_pattern, plot_source_text, perl = TRUE)[[1]]
   if (identical(render_matches, -1L)) {
     render_ids <- character()
   } else {
-    render_text <- regmatches(app_text, list(render_matches))[[1]]
+    render_text <- regmatches(plot_source_text, list(render_matches))[[1]]
     render_ids <- sub(render_pattern, "\\1", render_text, perl = TRUE)
   }
 
@@ -59,7 +68,7 @@ if (file.exists(app_path)) {
               paste(extra_outputs, collapse = ", ")))
 
   helper_call_count <- gregexpr("dashboard_ggplotly\\s*\\(",
-                                app_text, perl = TRUE)[[1]]
+                                plot_source_text, perl = TRUE)[[1]]
   helper_call_count <- if (length(helper_call_count) == 1 &&
                              helper_call_count[1] == -1L) {
     0L
@@ -72,11 +81,11 @@ if (file.exists(app_path)) {
 
   if (length(render_ids) > 0) {
     render_starts <- as.integer(render_matches)
-    next_starts <- c(render_starts[-1], nchar(app_text) + 1L)
+    next_starts <- c(render_starts[-1], nchar(plot_source_text) + 1L)
     missing_bind_cache <- character()
     missing_dark_key <- character()
     for (i in seq_along(render_ids)) {
-      segment <- substr(app_text, render_starts[i], next_starts[i] - 1L)
+      segment <- substr(plot_source_text, render_starts[i], next_starts[i] - 1L)
       bind_start <- regexpr("bindCache\\s*\\(", segment, perl = TRUE)
       if (bind_start[1] == -1L) {
         missing_bind_cache <- c(missing_bind_cache, render_ids[i])

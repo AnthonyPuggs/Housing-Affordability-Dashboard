@@ -1,0 +1,144 @@
+repo_root <- normalizePath(getwd(), winslash = "/", mustWork = TRUE)
+failures <- character()
+
+check <- function(condition, message) {
+  if (!isTRUE(condition)) {
+    failures <<- c(failures, message)
+  }
+}
+
+helper_path <- file.path(repo_root, "R", "app_ui_helpers.R")
+module_path <- file.path(repo_root, "R", "affordability_module.R")
+app_path <- file.path(repo_root, "app.R")
+readme_path <- file.path(repo_root, "README.md")
+
+check(file.exists(helper_path), "R/app_ui_helpers.R does not exist")
+check(file.exists(module_path), "R/affordability_module.R does not exist")
+check(file.exists(app_path), "app.R does not exist")
+check(file.exists(readme_path), "README.md does not exist")
+
+if (file.exists(module_path)) {
+  parsed <- tryCatch({
+    parse(module_path)
+    TRUE
+  }, error = function(e) conditionMessage(e))
+  check(identical(parsed, TRUE),
+        paste(module_path, "does not parse:", parsed))
+}
+
+if (all(file.exists(c(helper_path, module_path)))) {
+  suppressPackageStartupMessages({
+    library(shiny)
+    library(bslib)
+    library(plotly)
+  })
+  source(file.path(repo_root, "R", "indicator_registry.R"))
+  source(helper_path)
+
+  affordability_ui_indicators <- c(
+    "Price-to-Income Ratio",
+    "Mortgage Serviceability Index",
+    "Rental Affordability Index",
+    "Deposit Gap (Years)"
+  )
+  affordability_indicator_choices <- c(
+    stats::setNames(affordability_ui_indicators,
+                    indicator_chart_label(affordability_ui_indicators)),
+    "Modelled Serviceability" = "Housing Serviceability"
+  )
+  afford_idx <- data.frame(date = as.Date(c("2003-01-01", "2020-01-01")))
+  sih_sampling_error_note <- "SIH estimates are survey estimates."
+
+  source(module_path)
+
+  check(exists("affordabilityPageUI", mode = "function"),
+        "affordabilityPageUI() must be defined")
+  check(exists("affordabilityPageServer", mode = "function"),
+        "affordabilityPageServer() must be defined")
+
+  module_ui <- paste(as.character(affordabilityPageUI("affordability")),
+                     collapse = "\n")
+  required_ui_text <- c(
+    "Affordability",
+    "Affordability Analysis",
+    "Indices",
+    "Calculator",
+    "Housing Stress",
+    "Cost Burden",
+    "affordability-afford_indices_chart",
+    "affordability-afford_serviceability",
+    "affordability-stress_chart",
+    "affordability-burden_heatmap",
+    "affordability-calc_repayment",
+    "affordability-calc_total_interest"
+  )
+  missing_ui_text <- required_ui_text[
+    !vapply(required_ui_text, grepl, logical(1), module_ui, fixed = TRUE)
+  ]
+  check(length(missing_ui_text) == 0,
+        paste("affordabilityPageUI() missing expected UI text/IDs:",
+              paste(missing_ui_text, collapse = "; ")))
+}
+
+if (file.exists(module_path)) {
+  module_text <- paste(readLines(module_path, warn = FALSE), collapse = "\n")
+  required_module_text <- c(
+    "affordabilityPageUI <- function(id)",
+    "affordabilityPageServer <- function(id, is_dark)",
+    "NS(id)",
+    "moduleServer",
+    'plotlyOutput(ns("afford_indices_chart")',
+    'textOutput(ns("calc_repayment")',
+    "output$afford_indices_chart <- renderPlotly",
+    "output$afford_serviceability <- renderPlotly",
+    "output$stress_chart <- renderPlotly",
+    "output$burden_heatmap <- renderPlotly",
+    "output$calc_repayment",
+    "bindCache(input$afford_indices, input$afford_dates, is_dark())",
+    "bindCache(input$stress_breakdown, input$stress_population, is_dark())",
+    "dashboard_ggplotly"
+  )
+  missing_module_text <- required_module_text[
+    !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)
+  ]
+  check(length(missing_module_text) == 0,
+        paste("R/affordability_module.R missing module constructs:",
+              paste(missing_module_text, collapse = "; ")))
+}
+
+if (file.exists(app_path)) {
+  app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
+  required_app_text <- c(
+    'source(project_path("R", "affordability_module.R"), local = TRUE)',
+    'affordabilityPageUI("affordability")',
+    'affordabilityPageServer("affordability", is_dark = is_dark)'
+  )
+  missing_app_text <- required_app_text[
+    !vapply(required_app_text, grepl, logical(1), app_text, fixed = TRUE)
+  ]
+  check(length(missing_app_text) == 0,
+        paste("app.R missing affordability module wiring:",
+              paste(missing_app_text, collapse = "; ")))
+  check(!grepl("output$afford_indices_chart <- renderPlotly", app_text,
+               fixed = TRUE),
+        "app.R must not keep the old inline affordability Plotly outputs")
+  check(!grepl('navset_card_tab(\n      title = "Affordability Analysis"',
+               app_text, fixed = TRUE),
+        "app.R must not keep the old inline Affordability UI")
+}
+
+if (file.exists(readme_path)) {
+  readme_text <- paste(readLines(readme_path, warn = FALSE), collapse = "\n")
+  check(grepl("R/affordability_module.R", readme_text, fixed = TRUE),
+        "README.md must document the Affordability module pilot")
+}
+
+if (length(failures) > 0) {
+  stop(
+    paste(c("Affordability module checks failed:", paste0("- ", failures)),
+          collapse = "\n"),
+    call. = FALSE
+  )
+}
+
+cat("Affordability module checks passed.\n")
