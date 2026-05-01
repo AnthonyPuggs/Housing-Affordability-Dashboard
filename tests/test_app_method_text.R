@@ -38,11 +38,13 @@ method_text <- paste(app_text, readme_text, registry_text, helper_text,
 required_text <- c(
   "higher = less affordable",
   "Stylised scenario, not an official ABS measure or lender assessment",
+  "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment",
   "ABS Survey of Income and Housing",
   "ABS CPI",
   "RBA",
   "Modelled Mortgage Cost Pressure",
   "Stylised Deposit Gap (Years)",
+  "R/market_entry_scenarios.R",
   "relative standard error",
   "margin of error",
   "interpret with caution"

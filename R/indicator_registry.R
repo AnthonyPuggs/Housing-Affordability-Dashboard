@@ -198,3 +198,11 @@ indicator_registry_methodology_table <- function() {
     stringsAsFactors = FALSE
   )
 }
+
+market_entry_scenario_methodology_note <- function() {
+  c(
+    "Saved affordability_indices.csv rows remain proxy cost-pressure indexes documented by R/indicator_registry.R.",
+    "R/market_entry_scenarios.R defines app-only market-entry scenarios for the Affordability calculator and serviceability sensitivity chart.",
+    "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."
+  )
+}

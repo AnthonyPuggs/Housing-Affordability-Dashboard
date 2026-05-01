@@ -8,11 +8,13 @@ check <- function(condition, message) {
 }
 
 helper_path <- file.path(repo_root, "R", "app_ui_helpers.R")
+scenario_path <- file.path(repo_root, "R", "market_entry_scenarios.R")
 module_path <- file.path(repo_root, "R", "affordability_module.R")
 app_path <- file.path(repo_root, "app.R")
 readme_path <- file.path(repo_root, "README.md")
 
 check(file.exists(helper_path), "R/app_ui_helpers.R does not exist")
+check(file.exists(scenario_path), "R/market_entry_scenarios.R does not exist")
 check(file.exists(module_path), "R/affordability_module.R does not exist")
 check(file.exists(app_path), "app.R does not exist")
 check(file.exists(readme_path), "README.md does not exist")
@@ -26,7 +28,7 @@ if (file.exists(module_path)) {
         paste(module_path, "does not parse:", parsed))
 }
 
-if (all(file.exists(c(helper_path, module_path)))) {
+if (all(file.exists(c(helper_path, scenario_path, module_path)))) {
   suppressPackageStartupMessages({
     library(shiny)
     library(bslib)
@@ -34,6 +36,7 @@ if (all(file.exists(c(helper_path, module_path)))) {
   })
   source(file.path(repo_root, "R", "indicator_registry.R"))
   source(helper_path)
+  source(scenario_path)
 
   affordability_ui_indicators <- c(
     "Price-to-Income Ratio",
@@ -70,6 +73,7 @@ if (all(file.exists(c(helper_path, module_path)))) {
     "affordability-stress_chart",
     "affordability-burden_heatmap",
     "affordability-calc_repayment",
+    "affordability-calc_assessed_ratio",
     "affordability-calc_total_interest"
   )
   missing_ui_text <- required_ui_text[
@@ -87,16 +91,26 @@ if (file.exists(module_path)) {
     "affordabilityPageServer <- function(id, is_dark)",
     "NS(id)",
     "moduleServer",
+    "market_entry_scenario(",
+    "market_entry_serviceability_series(",
+    'sliderInput(ns("serviceability_buffer")',
+    'sliderInput(ns("calc_assessment_buffer")',
+    'numericInput(ns("calc_annual_expenses")',
+    'numericInput(ns("calc_monthly_debt")',
     'plotlyOutput(ns("afford_indices_chart")',
     'textOutput(ns("calc_repayment")',
+    'textOutput(ns("calc_assessed_ratio")',
     "output$afford_indices_chart <- renderPlotly",
     "output$afford_serviceability <- renderPlotly",
     "output$stress_chart <- renderPlotly",
     "output$burden_heatmap <- renderPlotly",
     "output$calc_repayment",
+    "output$calc_assessed_ratio",
     "bindCache(input$afford_indices, input$afford_dates, is_dark())",
+    "bindCache(input$afford_indices, input$afford_dates, input$serviceability_buffer, is_dark())",
     "bindCache(input$stress_breakdown, input$stress_population, is_dark())",
-    "dashboard_ggplotly"
+    "dashboard_ggplotly",
+    "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment"
   )
   missing_module_text <- required_module_text[
     !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)
@@ -109,6 +123,7 @@ if (file.exists(module_path)) {
 if (file.exists(app_path)) {
   app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
   required_app_text <- c(
+    'source(project_path("R", "market_entry_scenarios.R"), local = TRUE)',
     'source(project_path("R", "affordability_module.R"), local = TRUE)',
     'affordabilityPageUI("affordability")',
     'affordabilityPageServer("affordability", is_dark = is_dark)'
@@ -131,6 +146,11 @@ if (file.exists(readme_path)) {
   readme_text <- paste(readLines(readme_path, warn = FALSE), collapse = "\n")
   check(grepl("R/affordability_module.R", readme_text, fixed = TRUE),
         "README.md must document the Affordability module pilot")
+  check(grepl("R/market_entry_scenarios.R", readme_text, fixed = TRUE),
+        "README.md must document the market-entry scenario helper")
+  check(grepl("Rscript tests/test_market_entry_scenarios.R",
+              readme_text, fixed = TRUE),
+        "README.md must document the market-entry scenario test command")
 }
 
 if (length(failures) > 0) {

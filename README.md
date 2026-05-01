@@ -61,6 +61,8 @@ Main dashboard CSVs live in `data/`:
 
 Official SIH/NHHA measures should be interpreted separately from modelled market-entry indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments.
 
+`R/market_entry_scenarios.R` centralises app-only market-entry scenario calculations for mortgage repayments, assessed-rate sensitivity, deposit saving time and expense-adjusted serviceability ratios. Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.
+
 ## Methodology Metadata
 
 `R/indicator_registry.R` is the source of truth for derived indicator formulas, source series, units, interpretation direction and caveats. The registry documents the current formulas used by the pipeline and dashboard; it does not make stylised market-entry measures official ABS measures or lender assessments.
@@ -90,6 +92,7 @@ Rscript tests/test_market_context_module.R
 Rscript tests/test_overview_module.R
 Rscript tests/test_provenance_report.R
 Rscript tests/test_sih_estimate_quality.R
+Rscript tests/test_market_entry_scenarios.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
 Rscript tests/test_responsive_ui_contracts.R

@@ -81,6 +81,8 @@ if (all(file.exists(c(project_paths_path, registry_path, report_path)))) {
       "pipeline/06_validate_outputs.R",
       "data/*.csv",
       "Stylised scenario",
+      "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment",
+      "R/market_entry_scenarios.R",
       "Price-to-Income Cost Pressure",
       "Modelled Mortgage Cost Pressure",
       "Rent Cost Pressure",

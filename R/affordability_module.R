@@ -13,6 +13,19 @@ if (!exists("indicator_chart_label", mode = "function", inherits = TRUE)) {
   source(registry_path, local = environment())
 }
 
+if (!exists("market_entry_scenario", mode = "function", inherits = TRUE)) {
+  scenario_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "market_entry_scenarios.R")
+  } else {
+    file.path("R", "market_entry_scenarios.R")
+  }
+  if (!file.exists(scenario_path)) {
+    stop("Could not locate R/market_entry_scenarios.R for affordability module.",
+         call. = FALSE)
+  }
+  source(scenario_path, local = environment())
+}
+
 affordability_ui_indicators <- c(
   "Price-to-Income Ratio",
   "Mortgage Serviceability Index",
@@ -47,7 +60,11 @@ affordabilityPageUI <- function(id) {
                         max = max(afford_idx$date, na.rm = TRUE),
                         value = c(as.Date("2003-01-01"),
                                   max(afford_idx$date, na.rm = TRUE)),
-                        width = "100%", timeFormat = "%b %Y")
+                        width = "100%", timeFormat = "%b %Y"),
+            sliderInput(ns("serviceability_buffer"),
+                        "Assessment buffer (pp)",
+                        min = 0, max = 5, value = 3, step = 0.25),
+            source_note("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
           ),
           card(
             card_header("Affordability Indicators"),
@@ -59,7 +76,7 @@ affordabilityPageUI <- function(id) {
             ns = ns,
             card(
               card_header("Modelled Serviceability"),
-              source_note("Modelled annual repayment share using an 80% LVR, 30-year loan and RBA mortgage-rate inputs. ", stylised_scenario_note),
+              source_note("Modelled annual repayment share using an 80% LVR, 30-year loan and RBA mortgage-rate inputs. The 30% line is a stress reference, not a lender pass/fail rule. ", stylised_scenario_note),
               card_body(plotlyOutput(ns("afford_serviceability"), height = "380px"))
             )
           )
@@ -79,12 +96,24 @@ affordabilityPageUI <- function(id) {
                          step = 5000),
             sliderInput(ns("calc_rate"), "Interest Rate (%)",
                         min = 1, max = 12, value = 6.0, step = 0.1),
+            sliderInput(ns("calc_assessment_buffer"),
+                        "Assessment buffer (pp)",
+                        min = 0, max = 5, value = 3, step = 0.25),
             sliderInput(ns("calc_deposit_pct"), "Deposit (%)",
                         min = 5, max = 40, value = 20, step = 1),
             sliderInput(ns("calc_term"), "Loan Term (years)",
                         min = 10, max = 30, value = 30, step = 1),
             sliderInput(ns("calc_savings_rate"), "Savings Rate (%)",
-                        min = 5, max = 40, value = 15, step = 1)
+                        min = 5, max = 40, value = 15, step = 1),
+            numericInput(ns("calc_annual_expenses"),
+                         "Annual non-housing expenses ($)",
+                         value = 30000, min = 0, max = 1000000,
+                         step = 5000),
+            numericInput(ns("calc_monthly_debt"),
+                         "Other debt repayments ($/month)",
+                         value = 0, min = 0, max = 50000,
+                         step = 100),
+            source_note("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
           ),
           layout_column_wrap(
             width = 1/2,
@@ -95,9 +124,14 @@ affordabilityPageUI <- function(id) {
               theme = value_box_theme(bg = "#0E5A8A", fg = "#fff")
             ),
             value_box(
-              title = "Repayment / Income",
+              title = "Nominal Repayment / Gross Income",
               value = textOutput(ns("calc_ratio")),
               theme = value_box_theme(bg = "#1F9D8C", fg = "#fff")
+            ),
+            value_box(
+              title = "Assessed Repayment / Gross Income",
+              value = textOutput(ns("calc_assessed_ratio")),
+              theme = value_box_theme(bg = "#5B6C8F", fg = "#fff")
             ),
             value_box(
               title = "Years to Save Deposit",
@@ -196,66 +230,62 @@ affordabilityPageServer <- function(id, is_dark) {
 
     output$afford_serviceability <- renderPlotly({
       req("Housing Serviceability" %in% input$afford_indices)
-      d <- serviceability_ts %>%
+      d <- market_entry_serviceability_series(
+        price_ts = rppi_national_ts,
+        income_ts = awe_ts,
+        rate_ts = mortgage_rate_qtr,
+        assessment_buffer_pp = input$serviceability_buffer
+      ) %>%
         filter(!is.na(serviceability_pct),
                date >= input$afford_dates[1],
                date <= input$afford_dates[2])
 
       validate(need(nrow(d) > 0, "No serviceability data in this date range."))
 
-      p <- ggplot(d, aes(x = date, y = serviceability_pct)) +
-        geom_ribbon(aes(ymin = pmin(serviceability_pct, 30), ymax = pmax(serviceability_pct, 30)),
-                    fill = "#ffcdd2", alpha = 0.4) +
-        geom_line(linewidth = 1.2, color = "#e53935") +
+      p <- ggplot(d, aes(x = date, y = serviceability_pct,
+                         color = scenario)) +
+        geom_line(linewidth = 1.1) +
         geom_hline(yintercept = 30, linetype = "dashed", color = "#FF9800",
                    linewidth = 0.8) +
         annotate("text", x = max(d$date) - 2500, y = 31,
-                 label = "Housing Stress Threshold (30%)",
+                 label = "30% stress reference",
                  color = "#FF9800", size = 3.5, hjust = 0, vjust = 0) +
+        scale_color_manual(values = c("Nominal rate" = "#0E5A8A",
+                                      "Assessed rate" = "#e53935")) +
         scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
         scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
-        labs(x = NULL, y = NULL) +
+        labs(x = NULL, y = NULL, color = NULL) +
         theme_afford(is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%
-      bindCache(input$afford_indices, input$afford_dates, is_dark())
+      bindCache(input$afford_indices, input$afford_dates, input$serviceability_buffer, is_dark())
 
     calc_vals <- reactive({
-      price   <- input$calc_price
-      income  <- input$calc_income
-      rate    <- input$calc_rate / 100
-      dep_pct <- input$calc_deposit_pct / 100
-      term    <- input$calc_term
-      save_rt <- input$calc_savings_rate / 100
-
-      deposit     <- price * dep_pct
-      loan        <- price - deposit
-      monthly_r   <- rate / 12
-      n_payments  <- term * 12
-      monthly_pmt <- if (monthly_r == 0) loan / n_payments else
-        loan * monthly_r / (1 - (1 + monthly_r)^(-n_payments))
-      total_paid  <- monthly_pmt * n_payments
-      total_int   <- total_paid - loan
-      ratio_pct   <- (monthly_pmt * 12) / income * 100
-      years_save  <- deposit / (income * save_rt)
-      lvr         <- (1 - dep_pct) * 100
-
-      list(
-        repayment = monthly_pmt,
-        ratio     = ratio_pct,
-        years     = years_save,
-        lvr       = lvr,
-        total_int = total_int,
-        deposit   = deposit
+      tryCatch(
+        market_entry_scenario(
+          dwelling_price = input$calc_price,
+          gross_annual_income = input$calc_income,
+          annual_rate_pct = input$calc_rate,
+          deposit_pct = input$calc_deposit_pct,
+          term_years = input$calc_term,
+          savings_rate_pct = input$calc_savings_rate,
+          assessment_buffer_pp = input$calc_assessment_buffer,
+          annual_non_housing_expenses = input$calc_annual_expenses,
+          monthly_other_debt = input$calc_monthly_debt
+        ),
+        error = function(e) {
+          validate(need(FALSE, conditionMessage(e)))
+        }
       )
     })
 
-    output$calc_repayment      <- renderText(fmt_dollar(calc_vals()$repayment))
-    output$calc_ratio          <- renderText(fmt_pct(calc_vals()$ratio, 0.1))
-    output$calc_years          <- renderText(fmt_years(calc_vals()$years))
-    output$calc_lvr            <- renderText(fmt_pct(calc_vals()$lvr, 1))
-    output$calc_total_interest <- renderText(fmt_dollar(calc_vals()$total_int))
+    output$calc_repayment      <- renderText(fmt_dollar(calc_vals()$monthly_nominal_repayment))
+    output$calc_ratio          <- renderText(fmt_pct(calc_vals()$nominal_repayment_to_gross_income_pct, 0.1))
+    output$calc_assessed_ratio <- renderText(fmt_pct(calc_vals()$assessed_repayment_to_gross_income_pct, 0.1))
+    output$calc_years          <- renderText(fmt_years(calc_vals()$years_to_save_deposit))
+    output$calc_lvr            <- renderText(fmt_pct(calc_vals()$lvr_pct, 1))
+    output$calc_total_interest <- renderText(fmt_dollar(calc_vals()$total_nominal_interest))
     output$calc_deposit_amt    <- renderText(fmt_dollar(calc_vals()$deposit))
 
     output$stress_chart <- renderPlotly({

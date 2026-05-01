@@ -42,7 +42,9 @@ methodologyPageUI <- function(id) {
         card_header("Stylised scenario calculators"),
         card_body(
           tags$p("Serviceability, deposit-gap and calculator outputs use fixed modelling assumptions for a stylised household."),
-          tags$p("These stylised scenarios are not official ABS measures or lender assessments.")
+          tags$p("These stylised scenarios are not official ABS measures or lender assessments."),
+          tags$p("R/market_entry_scenarios.R defines the app-only market-entry scenarios used by the calculator and assessed-rate sensitivity chart."),
+          tags$p("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
         )
       )
     ),
@@ -68,6 +70,7 @@ methodologyPageUI <- function(id) {
             tags$li("AWE is individual earnings, not household disposable income."),
             tags$li("WPI is a wage price index, not an income distribution measure."),
             tags$li("CPI rents and CPI new dwelling indexes are price indexes, not household burden measures."),
+            tags$li("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."),
             tags$li("SIH relative standard error and 95% margin of error metadata are provided in data/sih_estimate_quality.csv; users should interpret with caution when estimates have high RSE values."),
             tags$li("Gross-income SIH cost ratios, NHHA lower-income rental stress and modelled market-entry scenarios should not be interpreted as the same concept.")
           )

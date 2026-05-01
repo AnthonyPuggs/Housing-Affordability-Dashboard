@@ -97,6 +97,8 @@ if (all(file.exists(c(app_path, module_path)))) {
     "WPI is a wage price index",
     "CPI rents and CPI new dwelling indexes are price indexes",
     "stylised scenarios are not official ABS measures or lender assessments",
+    "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment",
+    "R/market_entry_scenarios.R",
     "Official SIH/NHHA burden measures",
     "Market-entry cost-pressure indexes",
     "Stylised scenario calculators"

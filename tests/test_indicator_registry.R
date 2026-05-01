@@ -111,6 +111,25 @@ if (file.exists(registry_path)) {
         "indicator_chart_label() returned an unexpected label")
   check(nrow(indicator_metadata("Real Mortgage Rate")) == 1,
         "indicator_metadata() should return one row for a known indicator")
+
+  check(exists("market_entry_scenario_methodology_note", mode = "function"),
+        "market_entry_scenario_methodology_note() must be defined")
+  if (exists("market_entry_scenario_methodology_note", mode = "function")) {
+    scenario_note <- paste(market_entry_scenario_methodology_note(),
+                           collapse = "\n")
+    required_scenario_note_text <- c(
+      "R/market_entry_scenarios.R",
+      "app-only market-entry scenarios",
+      "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment"
+    )
+    missing_scenario_note_text <- required_scenario_note_text[
+      !vapply(required_scenario_note_text, grepl, logical(1),
+              scenario_note, fixed = TRUE)
+    ]
+    check(length(missing_scenario_note_text) == 0,
+          paste("market_entry_scenario_methodology_note() missing text:",
+                paste(missing_scenario_note_text, collapse = "; ")))
+  }
 }
 
 if (length(failures) > 0) {
