@@ -13,6 +13,9 @@ if (!file.exists(registry_path)) {
 }
 helper_path <- file.path(getwd(), "R", "app_ui_helpers.R")
 module_path <- file.path(getwd(), "R", "methodology_module.R")
+module_paths <- list.files(file.path(getwd(), "R"),
+                           pattern = "_module[.]R$",
+                           full.names = TRUE)
 if (!file.exists(helper_path)) {
   stop("R/app_ui_helpers.R not found; run this test from the project root.",
        call. = FALSE)
@@ -26,7 +29,9 @@ app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
 readme_text <- paste(readLines(readme_path, warn = FALSE), collapse = "\n")
 registry_text <- paste(readLines(registry_path, warn = FALSE), collapse = "\n")
 helper_text <- paste(readLines(helper_path, warn = FALSE), collapse = "\n")
-module_text <- paste(readLines(module_path, warn = FALSE), collapse = "\n")
+module_text <- paste(vapply(unique(c(module_path, module_paths)), function(path) {
+  paste(readLines(path, warn = FALSE), collapse = "\n")
+}, character(1)), collapse = "\n")
 method_text <- paste(app_text, readme_text, registry_text, helper_text,
                      module_text, sep = "\n")
 
