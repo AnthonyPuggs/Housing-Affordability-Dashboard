@@ -58,6 +58,7 @@ Main dashboard CSVs live in `data/`:
 - `affordability_indices.csv`: derived cost-pressure indicators using `date | value | indicator | geography | unit | frequency`.
 - `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental-stress measures.
 - `sih_estimate_quality.csv`: SIH sampling-error metadata for selected workbook tables, including 95% margin of error values and relative standard error flags. Users should interpret with caution when estimates have RSE from 25% to 50%; estimates above 50% are too unreliable for general use.
+- SIH estimate outputs are guarded by workbook benchmark checks in `R/sih_benchmarks.R`, covering key rows from ABS SIH Files 4, 5, 8 and 13 so sampling-error sections do not contaminate the main estimate CSVs.
 
 Official SIH/NHHA measures should be interpreted separately from modelled market-entry indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments.
 
@@ -92,6 +93,7 @@ Rscript tests/test_market_context_module.R
 Rscript tests/test_overview_module.R
 Rscript tests/test_provenance_report.R
 Rscript tests/test_sih_estimate_quality.R
+Rscript tests/test_sih_workbook_benchmarks.R
 Rscript tests/test_market_entry_scenarios.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R

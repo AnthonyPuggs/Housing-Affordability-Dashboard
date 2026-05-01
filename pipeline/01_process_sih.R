@@ -158,6 +158,42 @@ simplify_section <- function(section) {
   )
 }
 
+# --- Estimate-block guards ----------------------------------------------------
+is_sih_sampling_error_header <- function(label) {
+  label <- str_squish(as.character(label))
+  str_detect(
+    label,
+    regex("^95% margin of error|^relative standard error", ignore_case = TRUE)
+  )
+}
+
+estimate_block_rows <- function(raw, label_col = 1) {
+  if (nrow(raw) == 0 || ncol(raw) < label_col) {
+    return(raw)
+  }
+
+  labels <- str_squish(as.character(raw[[label_col]]))
+  start_candidates <- which(str_detect(labels, regex("^ESTIMATES", ignore_case = TRUE)))
+  start <- if (length(start_candidates) > 0) start_candidates[[1]] else 0L
+
+  stop_candidates <- which(
+    seq_along(labels) > start &
+      (is_sih_sampling_error_header(labels) |
+         str_detect(
+           labels,
+           regex("^Source|^Exclud|^NA\\b|^#|^Cells", ignore_case = TRUE)
+         ))
+  )
+  stop <- if (length(stop_candidates) > 0) stop_candidates[[1]] - 1L else nrow(raw)
+
+  first_data_row <- start + 1L
+  if (stop < first_data_row) {
+    return(raw[0, , drop = FALSE])
+  }
+
+  raw[first_data_row:stop, , drop = FALSE]
+}
+
 # --- SIH sampling-error metadata helpers --------------------------------------
 sih_estimate_quality_columns <- c(
   "source_file",
@@ -562,6 +598,7 @@ parse_tenure_crosstab <- function(file, sheet, metric, stat_type) {
 
   raw <- read_excel(file, sheet = sheet, skip = 6,
                     col_names = FALSE, col_types = "text")
+  raw <- estimate_block_rows(raw)
 
   results <- list()
   current_section <- NA_character_
@@ -655,6 +692,7 @@ parse_stress_bands <- function(file, sheet, population_label) {
 
   raw <- read_excel(file, sheet = sheet, skip = 6,
                     col_names = FALSE, col_types = "text")
+  raw <- estimate_block_rows(raw)
 
   results <- list()
   current_section <- NA_character_
@@ -720,6 +758,7 @@ f6_result <- tryCatch({
 
   raw <- read_excel(sih_files$f6, sheet = "Table 6.1", skip = 6,
                     col_names = FALSE, col_types = "text")
+  raw <- estimate_block_rows(raw)
 
   results <- list()
   current_section <- NA_character_
@@ -741,20 +780,40 @@ f6_result <- tryCatch({
     }
 
     numeric_vals <- as_numeric_clean(vals)
+    row_label <- str_trim(str_remove(label, "\\s*\\([a-z]\\)$"))
+    section_key <- ifelse(is.na(current_section), "overall",
+                          simplify_section(current_section))
+    row_metric <- case_when(
+      !is.na(unit_val) && unit_val == "$" ~ "weekly_housing_cost",
+      !is.na(unit_val) && unit_val == "'000" ~ "households_000",
+      !is.na(unit_val) && unit_val == "no." &&
+        str_detect(label, regex("bedrooms", ignore_case = TRUE)) ~ "average_bedrooms",
+      !is.na(unit_val) && unit_val == "no." &&
+        str_detect(label, regex("persons", ignore_case = TRUE)) ~ "average_persons",
+      !is.na(unit_val) && unit_val == "no." ~ "households_in_sample",
+      TRUE ~ "pct_households"
+    )
+    row_stat_type <- case_when(
+      !is.na(unit_val) && unit_val == "%" ~ "proportion",
+      !is.na(unit_val) && unit_val == "$" ~ "dollars",
+      !is.na(unit_val) && unit_val == "'000" ~ "count_000",
+      !is.na(unit_val) && unit_val == "no." ~ "count",
+      TRUE ~ "value"
+    )
 
     for (j in seq_along(age_groups)) {
       if (j > length(numeric_vals)) next
       if (!is.na(numeric_vals[j])) {
+        age_label <- str_replace_all(age_groups[j], "_", " ")
         results[[length(results) + 1]] <- tibble(
           survey_year   = "2019-20",
           value         = numeric_vals[j],
-          metric        = ifelse(!is.na(unit_val) && unit_val == "$",
-                                 "weekly_housing_cost", "pct_households"),
+          metric        = row_metric,
           tenure        = classify_tenure(label),
-          breakdown_var = "age_group",
-          breakdown_val = str_replace_all(age_groups[j], "_", " "),
+          breakdown_var = paste0(section_key, "_by_age_group"),
+          breakdown_val = paste(row_label, age_label, sep = " | "),
           geography     = "National",
-          stat_type     = "proportion"
+          stat_type     = row_stat_type
         )
       }
     }
@@ -785,6 +844,7 @@ f8_result <- tryCatch({
 
   raw <- read_excel(sih_files$f8, sheet = "Table 8.1", skip = 8,
                     col_names = FALSE, col_types = "text")
+  raw <- estimate_block_rows(raw)
 
   results <- list()
   current_state <- NA_character_
@@ -796,7 +856,7 @@ f8_result <- tryCatch({
                    "Tas." = "Tasmania", "TAS" = "Tasmania",
                    "NT" = "Northern Territory", "ACT" = "Australian Capital Territory",
                    "Aust." = "Australia", "AUST" = "Australia",
-                   "Australia" = "Australia")
+                   "Australia" = "Australia", "Total Australia" = "Australia")
 
   for (i in seq_len(nrow(raw))) {
     row <- raw[i, ]
@@ -811,7 +871,7 @@ f8_result <- tryCatch({
 
     # Match against known state abbreviations
     if (all_other_na && (label %in% names(state_names) ||
-                         str_detect(label, "^(NSW|VIC|Vic|QLD|Qld|SA|WA|TAS|Tas|NT|ACT|Aust)"))) {
+                         str_detect(label, "^(NSW|VIC|Vic|QLD|Qld|SA|WA|TAS|Tas|NT|ACT|Aust|Total Australia)"))) {
       current_state <- state_names[label]
       if (is.na(current_state)) current_state <- label
       current_section <- NA_character_

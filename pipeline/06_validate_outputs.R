@@ -7,6 +7,9 @@ cat("--- Validating pipeline outputs ---\n")
 if (!exists("indicator_registry", mode = "function")) {
   source(project_path("R", "indicator_registry.R"))
 }
+if (!exists("validate_sih_workbook_benchmarks", mode = "function")) {
+  source(project_path("R", "sih_benchmarks.R"))
+}
 
 collect_pipeline_failures <- function(data_dir = DATA_DIR) {
   failures <- character()
@@ -55,6 +58,14 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
   afford_idx <- read_required_csv("affordability_indices.csv")
   sih_nhha <- read_required_csv("sih_nhha_rental_stress.csv")
   sih_quality <- read_required_csv("sih_estimate_quality.csv")
+  sih_estimate_files <- c(
+    "sih_costs_2020.csv",
+    "sih_cost_ratios_2020.csv",
+    "sih_stress_bands_2020.csv",
+    "sih_lower_income_states.csv",
+    "sih_age_tenure_2020.csv",
+    "sih_nhha_rental_stress.csv"
+  )
 
   required_columns(
     abs_ts,
@@ -170,6 +181,37 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
       paste("sih_nhha_rental_stress.csv is missing metrics:",
             paste(missing_metrics, collapse = ", "))
     )
+  }
+
+  sih_key_cols <- c(
+    "survey_year",
+    "metric",
+    "tenure",
+    "breakdown_var",
+    "breakdown_val",
+    "geography",
+    "stat_type"
+  )
+
+  for (filename in sih_estimate_files) {
+    sih_output <- read_required_csv(filename)
+    required_columns(sih_output, filename, c(sih_key_cols, "value"))
+    if (all(c(sih_key_cols, "value") %in% names(sih_output))) {
+      dup_sih <- duplicate_count(sih_output, sih_key_cols)
+      check(
+        !is.na(dup_sih) && dup_sih == 0,
+        paste(filename, "has", dup_sih, "duplicate SIH estimate key rows")
+      )
+      check(
+        all(is.finite(sih_output$value)),
+        paste(filename, "contains non-finite estimate values")
+      )
+    }
+  }
+
+  benchmark_failures <- validate_sih_workbook_benchmarks(data_dir = data_dir)
+  for (failure in benchmark_failures) {
+    add_failure(failure)
   }
 
   if (all(c("source_file", "source_table", "survey_year", "metric", "tenure",

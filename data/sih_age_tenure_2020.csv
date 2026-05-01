@@ -1,705 +1,361 @@
 survey_year,value,metric,tenure,breakdown_var,breakdown_val,geography,stat_type
-2019-20,1.7,pct_households,owner_outright,age_group,15 to 24,National,proportion
-2019-20,2.9,pct_households,owner_outright,age_group,25 to 34,National,proportion
-2019-20,5.4,pct_households,owner_outright,age_group,35 to 44,National,proportion
-2019-20,15.2,pct_households,owner_outright,age_group,45 to 54,National,proportion
-2019-20,36.1,pct_households,owner_outright,age_group,55 to 64,National,proportion
-2019-20,68.1,pct_households,owner_outright,age_group,65 to 74,National,proportion
-2019-20,79.4,pct_households,owner_outright,age_group,75 and over,National,proportion
-2019-20,29.5,pct_households,owner_outright,age_group,all households,National,proportion
-2019-20,9.1,pct_households,owner_mortgage,age_group,15 to 24,National,proportion
-2019-20,37.8,pct_households,owner_mortgage,age_group,25 to 34,National,proportion
-2019-20,51.4,pct_households,owner_mortgage,age_group,35 to 44,National,proportion
-2019-20,56.6,pct_households,owner_mortgage,age_group,45 to 54,National,proportion
-2019-20,43,pct_households,owner_mortgage,age_group,55 to 64,National,proportion
-2019-20,13.4,pct_households,owner_mortgage,age_group,65 to 74,National,proportion
-2019-20,3.7,pct_households,owner_mortgage,age_group,75 and over,National,proportion
-2019-20,36.8,pct_households,owner_mortgage,age_group,all households,National,proportion
-2019-20,10.4,pct_households,owner_total,age_group,15 to 24,National,proportion
-2019-20,40.7,pct_households,owner_total,age_group,25 to 34,National,proportion
-2019-20,56.7,pct_households,owner_total,age_group,35 to 44,National,proportion
-2019-20,72,pct_households,owner_total,age_group,45 to 54,National,proportion
-2019-20,79.1,pct_households,owner_total,age_group,55 to 64,National,proportion
-2019-20,81.7,pct_households,owner_total,age_group,65 to 74,National,proportion
-2019-20,83,pct_households,owner_total,age_group,75 and over,National,proportion
-2019-20,66.2,pct_households,owner_total,age_group,all households,National,proportion
-2019-20,1.5,pct_households,renter_social,age_group,15 to 24,National,proportion
-2019-20,1.2,pct_households,renter_social,age_group,25 to 34,National,proportion
-2019-20,1.7,pct_households,renter_social,age_group,35 to 44,National,proportion
-2019-20,2.9,pct_households,renter_social,age_group,45 to 54,National,proportion
-2019-20,4.3,pct_households,renter_social,age_group,55 to 64,National,proportion
-2019-20,3.8,pct_households,renter_social,age_group,65 to 74,National,proportion
-2019-20,3.8,pct_households,renter_social,age_group,75 and over,National,proportion
-2019-20,2.9,pct_households,renter_social,age_group,all households,National,proportion
-2019-20,80.3,pct_households,renter_private,age_group,15 to 24,National,proportion
-2019-20,51.4,pct_households,renter_private,age_group,25 to 34,National,proportion
-2019-20,37.2,pct_households,renter_private,age_group,35 to 44,National,proportion
-2019-20,21.3,pct_households,renter_private,age_group,45 to 54,National,proportion
-2019-20,13.9,pct_households,renter_private,age_group,55 to 64,National,proportion
-2019-20,9.5,pct_households,renter_private,age_group,65 to 74,National,proportion
-2019-20,6,pct_households,renter_private,age_group,75 and over,National,proportion
-2019-20,26.2,pct_households,renter_private,age_group,all households,National,proportion
-2019-20,83.5,pct_households,renter_total,age_group,15 to 24,National,proportion
-2019-20,55.7,pct_households,renter_total,age_group,25 to 34,National,proportion
-2019-20,41.5,pct_households,renter_total,age_group,35 to 44,National,proportion
-2019-20,26.3,pct_households,renter_total,age_group,45 to 54,National,proportion
-2019-20,19.1,pct_households,renter_total,age_group,55 to 64,National,proportion
-2019-20,16,pct_households,renter_total,age_group,65 to 74,National,proportion
-2019-20,12.9,pct_households,renter_total,age_group,75 and over,National,proportion
-2019-20,31.4,pct_households,renter_total,age_group,all households,National,proportion
-2019-20,100,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,100,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,100,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,100,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,100,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,100,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,100,pct_households,all,age_group,75 and over,National,proportion
-2019-20,100,pct_households,all,age_group,all households,National,proportion
-2019-20,5.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,30.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,56.3,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,43.9,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,11.8,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.7,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.9,pct_households,all,age_group,75 and over,National,proportion
-2019-20,26.4,pct_households,all,age_group,all households,National,proportion
-2019-20,7.7,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,5.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,11.4,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,10.7,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,3.5,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.6,pct_households,all,age_group,75 and over,National,proportion
-2019-20,6.1,pct_households,all,age_group,all households,National,proportion
-2019-20,20.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,30.1,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,11.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,13.1,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,31.2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,46.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,36.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,26.3,pct_households,all,age_group,all households,National,proportion
-2019-20,16.2,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,7.1,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,3.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,10.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,22.5,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,11.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,8.6,pct_households,all,age_group,75 and over,National,proportion
-2019-20,10.8,pct_households,all,age_group,all households,National,proportion
-2019-20,2.6,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,3.1,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.3,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,3.3,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.6,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,2.3,pct_households,all,age_group,all households,National,proportion
-2019-20,23.6,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,18.9,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,13.1,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,17.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,26.3,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,36.4,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,51.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,25.2,pct_households,all,age_group,all households,National,proportion
-2019-20,25.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,6.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.8,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.7,pct_households,all,age_group,75 and over,National,proportion
-2019-20,2.8,pct_households,all,age_group,all households,National,proportion
-2019-20,100,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,100,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,100,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,100,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,100,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,100,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,100,pct_households,all,age_group,75 and over,National,proportion
-2019-20,100,pct_households,all,age_group,all households,National,proportion
-2019-20,47.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,53.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,67.4,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,77.1,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,77.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,72.9,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,67.9,pct_households,all,age_group,75 and over,National,proportion
-2019-20,69.1,pct_households,all,age_group,all households,National,proportion
-2019-20,15.3,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,16.5,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,15.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,11.2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,11.3,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,14.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,16.2,pct_households,all,age_group,75 and over,National,proportion
-2019-20,13.9,pct_households,all,age_group,all households,National,proportion
-2019-20,37.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,29.4,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,17.5,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,11.5,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,10.7,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,12.5,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,15.4,pct_households,all,age_group,75 and over,National,proportion
-2019-20,16.6,pct_households,all,age_group,all households,National,proportion
-2019-20,100,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,100,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,100,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,100,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,100,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,100,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,100,pct_households,all,age_group,75 and over,National,proportion
-2019-20,100,pct_households,all,age_group,all households,National,proportion
-2019-20,53.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,70.4,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,71,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,74.5,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,78.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,85.7,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,89.9,pct_households,all,age_group,75 and over,National,proportion
-2019-20,76.6,pct_households,all,age_group,all households,National,proportion
-2019-20,14.6,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,10.7,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,9.8,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,7.9,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,5.9,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,3.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.3,pct_households,all,age_group,75 and over,National,proportion
-2019-20,7.2,pct_households,all,age_group,all households,National,proportion
-2019-20,22.3,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,12.4,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,14.1,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,11.3,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,8.9,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,5.8,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,5.4,pct_households,all,age_group,75 and over,National,proportion
-2019-20,10.5,pct_households,all,age_group,all households,National,proportion
-2019-20,11.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,6.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,5.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,6.2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,6.5,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,5.1,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,5.7,pct_households,all,age_group,all households,National,proportion
-2019-20,100,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,100,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,100,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,100,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,100,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,100,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,100,pct_households,all,age_group,75 and over,National,proportion
-2019-20,100,pct_households,all,age_group,all households,National,proportion
-2019-20,21.4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,13.2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,14.9,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,16.3,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,22.1,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,38,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,52.9,pct_households,all,age_group,75 and over,National,proportion
-2019-20,23.9,pct_households,all,age_group,all households,National,proportion
-2019-20,20.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,16,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,19.3,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,15.8,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,15.9,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,25.7,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,22.7,pct_households,all,age_group,75 and over,National,proportion
-2019-20,18.8,pct_households,all,age_group,all households,National,proportion
-2019-20,25.2,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,19.3,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,21.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,20.4,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,19.2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,14.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,12,pct_households,all,age_group,75 and over,National,proportion
-2019-20,18.5,pct_households,all,age_group,all households,National,proportion
-2019-20,20.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,24,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,22.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,23.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,19,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,10.4,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,6.1,pct_households,all,age_group,75 and over,National,proportion
-2019-20,18.7,pct_households,all,age_group,all households,National,proportion
-2019-20,11.4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,27.1,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,22.7,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,23.9,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,24.1,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,11.6,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,5.9,pct_households,all,age_group,75 and over,National,proportion
-2019-20,20.1,pct_households,all,age_group,all households,National,proportion
-2019-20,100,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,100,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,100,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,100,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,100,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,100,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,100,pct_households,all,age_group,75 and over,National,proportion
-2019-20,100,pct_households,all,age_group,all households,National,proportion
-2019-20,39.4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,26.7,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,32.6,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,29.2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,33.7,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,61.1,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,74.2,pct_households,all,age_group,75 and over,National,proportion
-2019-20,40.1,pct_households,all,age_group,all households,National,proportion
-2019-20,69.2,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,83.8,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,83.4,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,80.2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,68.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,19.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,4.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,61.9,pct_households,all,age_group,all households,National,proportion
-2019-20,4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,3.4,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,3.6,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,3.7,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,4.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,3.1,pct_households,all,age_group,all households,National,proportion
-2019-20,12.2,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,7.8,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,9.9,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,10.5,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,14.3,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,47.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,67.4,pct_households,all,age_group,75 and over,National,proportion
-2019-20,22.3,pct_households,all,age_group,all households,National,proportion
-2019-20,15.3,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,4.2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.8,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,4.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,11.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,31.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,27.6,pct_households,all,age_group,75 and over,National,proportion
-2019-20,12.1,pct_households,all,age_group,all households,National,proportion
-2019-20,100,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,100,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,100,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,100,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,100,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,100,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,100,pct_households,all,age_group,75 and over,National,proportion
-2019-20,100,pct_households,all,age_group,all households,National,proportion
-2019-20,20.4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,8.5,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,7.8,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,10.1,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,20.5,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,65.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,89.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,28.3,pct_households,all,age_group,all households,National,proportion
-2019-20,32.7,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,35.2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,35.6,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,29.8,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,31.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,22.4,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,8.1,pct_households,all,age_group,75 and over,National,proportion
-2019-20,28.6,pct_households,all,age_group,all households,National,proportion
-2019-20,33.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,49.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,50.5,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,37,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,31.7,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,10.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.3,pct_households,all,age_group,75 and over,National,proportion
-2019-20,32.8,pct_households,all,age_group,all households,National,proportion
-2019-20,12.8,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,6.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,6.3,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,23.2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,16.3,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.8,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.4,pct_households,all,age_group,75 and over,National,proportion
-2019-20,10.3,pct_households,all,age_group,all households,National,proportion
-2019-20,100,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,100,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,100,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,100,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,100,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,100,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,100,pct_households,all,age_group,75 and over,National,proportion
-2019-20,100,pct_households,all,age_group,all households,National,proportion
-2019-20,289.8,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1554.7,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1852.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1828.5,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1728.9,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1404.9,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1076.3,pct_households,all,age_group,75 and over,National,proportion
-2019-20,9732.4,pct_households,all,age_group,all households,National,proportion
-2019-20,2.2,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,3.3,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,3.1,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.9,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.6,pct_households,all,age_group,75 and over,National,proportion
-2019-20,2.6,pct_households,all,age_group,all households,National,proportion
-2019-20,2.6,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.8,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,3.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,3.4,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,3.3,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,3.1,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,3.1,pct_households,all,age_group,all households,National,proportion
-2019-20,395,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2039,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2661,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2793,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2826,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2441,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1856,pct_households,all,age_group,75 and over,National,proportion
-2019-20,15011,pct_households,all,age_group,all households,National,proportion
-2019-20,1.3,pct_households,owner_outright,age_group,15 to 24,National,proportion
-2019-20,1.1,pct_households,owner_outright,age_group,25 to 34,National,proportion
-2019-20,1.1,pct_households,owner_outright,age_group,35 to 44,National,proportion
-2019-20,1.7,pct_households,owner_outright,age_group,45 to 54,National,proportion
-2019-20,2.4,pct_households,owner_outright,age_group,55 to 64,National,proportion
-2019-20,1.7,pct_households,owner_outright,age_group,65 to 74,National,proportion
-2019-20,2.8,pct_households,owner_outright,age_group,75 and over,National,proportion
-2019-20,0.8,pct_households,owner_outright,age_group,all households,National,proportion
-2019-20,4,pct_households,owner_mortgage,age_group,15 to 24,National,proportion
-2019-20,2.9,pct_households,owner_mortgage,age_group,25 to 34,National,proportion
-2019-20,2.6,pct_households,owner_mortgage,age_group,35 to 44,National,proportion
-2019-20,2.8,pct_households,owner_mortgage,age_group,45 to 54,National,proportion
-2019-20,2.5,pct_households,owner_mortgage,age_group,55 to 64,National,proportion
-2019-20,1.8,pct_households,owner_mortgage,age_group,65 to 74,National,proportion
-2019-20,1,pct_households,owner_mortgage,age_group,75 and over,National,proportion
-2019-20,0.9,pct_households,owner_mortgage,age_group,all households,National,proportion
-2019-20,4.2,pct_households,owner_total,age_group,15 to 24,National,proportion
-2019-20,2.9,pct_households,owner_total,age_group,25 to 34,National,proportion
-2019-20,2.4,pct_households,owner_total,age_group,35 to 44,National,proportion
-2019-20,2.1,pct_households,owner_total,age_group,45 to 54,National,proportion
-2019-20,2.5,pct_households,owner_total,age_group,55 to 64,National,proportion
-2019-20,1.6,pct_households,owner_total,age_group,65 to 74,National,proportion
-2019-20,2.6,pct_households,owner_total,age_group,75 and over,National,proportion
-2019-20,1,pct_households,owner_total,age_group,all households,National,proportion
-2019-20,0.5,pct_households,renter_social,age_group,25 to 34,National,proportion
-2019-20,0.6,pct_households,renter_social,age_group,35 to 44,National,proportion
-2019-20,0.7,pct_households,renter_social,age_group,45 to 54,National,proportion
-2019-20,0.8,pct_households,renter_social,age_group,55 to 64,National,proportion
-2019-20,0.8,pct_households,renter_social,age_group,65 to 74,National,proportion
-2019-20,1,pct_households,renter_social,age_group,75 and over,National,proportion
-2019-20,0.3,pct_households,renter_social,age_group,all households,National,proportion
-2019-20,5.7,pct_households,renter_private,age_group,15 to 24,National,proportion
-2019-20,3.6,pct_households,renter_private,age_group,25 to 34,National,proportion
-2019-20,2.7,pct_households,renter_private,age_group,35 to 44,National,proportion
-2019-20,2.1,pct_households,renter_private,age_group,45 to 54,National,proportion
-2019-20,2.1,pct_households,renter_private,age_group,55 to 64,National,proportion
-2019-20,1.5,pct_households,renter_private,age_group,65 to 74,National,proportion
-2019-20,1.6,pct_households,renter_private,age_group,75 and over,National,proportion
-2019-20,1,pct_households,renter_private,age_group,all households,National,proportion
-2019-20,5.1,pct_households,renter_total,age_group,15 to 24,National,proportion
-2019-20,3.4,pct_households,renter_total,age_group,25 to 34,National,proportion
-2019-20,2.7,pct_households,renter_total,age_group,35 to 44,National,proportion
-2019-20,2.2,pct_households,renter_total,age_group,45 to 54,National,proportion
-2019-20,2.4,pct_households,renter_total,age_group,55 to 64,National,proportion
-2019-20,1.9,pct_households,renter_total,age_group,65 to 74,National,proportion
-2019-20,2.3,pct_households,renter_total,age_group,75 and over,National,proportion
-2019-20,1,pct_households,renter_total,age_group,all households,National,proportion
-2019-20,0,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,0,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,2.8,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.9,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.9,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0.9,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.7,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.6,pct_households,all,age_group,all households,National,proportion
-2019-20,3.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.7,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.7,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0.4,pct_households,all,age_group,all households,National,proportion
-2019-20,6,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.5,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.6,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.5,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.5,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.8,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.5,pct_households,all,age_group,all households,National,proportion
-2019-20,6.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.5,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0.9,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.5,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.6,pct_households,all,age_group,all households,National,proportion
-2019-20,0.7,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.4,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0.9,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.4,pct_households,all,age_group,all households,National,proportion
-2019-20,7,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.3,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.4,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.1,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.6,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,5.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0.9,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0.6,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.4,pct_households,all,age_group,all households,National,proportion
-2019-20,0,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,0,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,9.4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.5,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.3,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,1.2,pct_households,all,age_group,all households,National,proportion
-2019-20,6.4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.4,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.8,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.3,pct_households,all,age_group,75 and over,National,proportion
-2019-20,1,pct_households,all,age_group,all households,National,proportion
-2019-20,7.7,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.8,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.1,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.7,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.7,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.1,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.4,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.9,pct_households,all,age_group,all households,National,proportion
-2019-20,0,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,0,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,7.8,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.3,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.6,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.8,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.8,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.7,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.2,pct_households,all,age_group,75 and over,National,proportion
-2019-20,1.1,pct_households,all,age_group,all households,National,proportion
-2019-20,5.4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.5,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.6,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.1,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.9,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.6,pct_households,all,age_group,all households,National,proportion
-2019-20,5.2,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.9,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.7,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.6,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.7,pct_households,all,age_group,all households,National,proportion
-2019-20,5.8,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.5,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.3,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.4,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.1,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.5,pct_households,all,age_group,all households,National,proportion
-2019-20,0,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,0,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,5.7,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.1,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.5,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,3.1,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.7,pct_households,all,age_group,all households,National,proportion
-2019-20,5.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.1,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.5,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.5,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.8,pct_households,all,age_group,all households,National,proportion
-2019-20,6,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.5,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.3,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.5,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.9,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2,pct_households,all,age_group,75 and over,National,proportion
-2019-20,1,pct_households,all,age_group,all households,National,proportion
-2019-20,6.3,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.9,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.3,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.6,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.8,pct_households,all,age_group,all households,National,proportion
-2019-20,4.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.7,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.2,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.1,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.6,pct_households,all,age_group,75 and over,National,proportion
-2019-20,1,pct_households,all,age_group,all households,National,proportion
-2019-20,0,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,0,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,5.9,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2.4,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.7,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.3,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,3.1,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,3.3,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.9,pct_households,all,age_group,all households,National,proportion
-2019-20,9.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.5,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.9,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.6,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.6,pct_households,all,age_group,all households,National,proportion
-2019-20,1.1,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0.9,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.2,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0.7,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.4,pct_households,all,age_group,all households,National,proportion
-2019-20,4.8,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.7,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.6,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.7,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,4,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.8,pct_households,all,age_group,all households,National,proportion
-2019-20,6.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.1,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0.8,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.6,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.6,pct_households,all,age_group,all households,National,proportion
-2019-20,0,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,0,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,7.1,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.4,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.4,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.8,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,3.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,2.5,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.6,pct_households,all,age_group,all households,National,proportion
-2019-20,7.8,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,3,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.3,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.5,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,2.2,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.9,pct_households,all,age_group,75 and over,National,proportion
-2019-20,1,pct_households,all,age_group,all households,National,proportion
-2019-20,8.4,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,3.3,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,2.8,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.6,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,2.6,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.7,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.9,pct_households,all,age_group,75 and over,National,proportion
-2019-20,1,pct_households,all,age_group,all households,National,proportion
-2019-20,6.2,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.8,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.5,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,2.4,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.9,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.3,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0.5,pct_households,all,age_group,all households,National,proportion
-2019-20,0,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,0,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,0,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,5.5,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.6,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.1,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.1,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.4,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.5,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.3,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,3.3,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.4,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,1.1,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,1.3,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,1.5,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,1.7,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1.8,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0,pct_households,all,age_group,all households,National,proportion
-2019-20,3,pct_households,all,age_group,15 to 24,National,proportion
-2019-20,1.2,pct_households,all,age_group,25 to 34,National,proportion
-2019-20,0.9,pct_households,all,age_group,35 to 44,National,proportion
-2019-20,0.8,pct_households,all,age_group,45 to 54,National,proportion
-2019-20,0.7,pct_households,all,age_group,55 to 64,National,proportion
-2019-20,0.9,pct_households,all,age_group,65 to 74,National,proportion
-2019-20,1,pct_households,all,age_group,75 and over,National,proportion
-2019-20,0.4,pct_households,all,age_group,all households,National,proportion
+2019-20,1.7,pct_households,owner_outright,owner_by_age_group,Owner without a mortgage | 15 to 24,National,proportion
+2019-20,2.9,pct_households,owner_outright,owner_by_age_group,Owner without a mortgage | 25 to 34,National,proportion
+2019-20,5.4,pct_households,owner_outright,owner_by_age_group,Owner without a mortgage | 35 to 44,National,proportion
+2019-20,15.2,pct_households,owner_outright,owner_by_age_group,Owner without a mortgage | 45 to 54,National,proportion
+2019-20,36.1,pct_households,owner_outright,owner_by_age_group,Owner without a mortgage | 55 to 64,National,proportion
+2019-20,68.1,pct_households,owner_outright,owner_by_age_group,Owner without a mortgage | 65 to 74,National,proportion
+2019-20,79.4,pct_households,owner_outright,owner_by_age_group,Owner without a mortgage | 75 and over,National,proportion
+2019-20,29.5,pct_households,owner_outright,owner_by_age_group,Owner without a mortgage | all households,National,proportion
+2019-20,9.1,pct_households,owner_mortgage,owner_by_age_group,Owner with a mortgage | 15 to 24,National,proportion
+2019-20,37.8,pct_households,owner_mortgage,owner_by_age_group,Owner with a mortgage | 25 to 34,National,proportion
+2019-20,51.4,pct_households,owner_mortgage,owner_by_age_group,Owner with a mortgage | 35 to 44,National,proportion
+2019-20,56.6,pct_households,owner_mortgage,owner_by_age_group,Owner with a mortgage | 45 to 54,National,proportion
+2019-20,43,pct_households,owner_mortgage,owner_by_age_group,Owner with a mortgage | 55 to 64,National,proportion
+2019-20,13.4,pct_households,owner_mortgage,owner_by_age_group,Owner with a mortgage | 65 to 74,National,proportion
+2019-20,3.7,pct_households,owner_mortgage,owner_by_age_group,Owner with a mortgage | 75 and over,National,proportion
+2019-20,36.8,pct_households,owner_mortgage,owner_by_age_group,Owner with a mortgage | all households,National,proportion
+2019-20,10.4,pct_households,owner_total,owner_by_age_group,Total owners | 15 to 24,National,proportion
+2019-20,40.7,pct_households,owner_total,owner_by_age_group,Total owners | 25 to 34,National,proportion
+2019-20,56.7,pct_households,owner_total,owner_by_age_group,Total owners | 35 to 44,National,proportion
+2019-20,72,pct_households,owner_total,owner_by_age_group,Total owners | 45 to 54,National,proportion
+2019-20,79.1,pct_households,owner_total,owner_by_age_group,Total owners | 55 to 64,National,proportion
+2019-20,81.7,pct_households,owner_total,owner_by_age_group,Total owners | 65 to 74,National,proportion
+2019-20,83,pct_households,owner_total,owner_by_age_group,Total owners | 75 and over,National,proportion
+2019-20,66.2,pct_households,owner_total,owner_by_age_group,Total owners | all households,National,proportion
+2019-20,1.5,pct_households,renter_social,renter_by_age_group,State or territory housing authority | 15 to 24,National,proportion
+2019-20,1.2,pct_households,renter_social,renter_by_age_group,State or territory housing authority | 25 to 34,National,proportion
+2019-20,1.7,pct_households,renter_social,renter_by_age_group,State or territory housing authority | 35 to 44,National,proportion
+2019-20,2.9,pct_households,renter_social,renter_by_age_group,State or territory housing authority | 45 to 54,National,proportion
+2019-20,4.3,pct_households,renter_social,renter_by_age_group,State or territory housing authority | 55 to 64,National,proportion
+2019-20,3.8,pct_households,renter_social,renter_by_age_group,State or territory housing authority | 65 to 74,National,proportion
+2019-20,3.8,pct_households,renter_social,renter_by_age_group,State or territory housing authority | 75 and over,National,proportion
+2019-20,2.9,pct_households,renter_social,renter_by_age_group,State or territory housing authority | all households,National,proportion
+2019-20,80.3,pct_households,renter_private,renter_by_age_group,Private landlord | 15 to 24,National,proportion
+2019-20,51.4,pct_households,renter_private,renter_by_age_group,Private landlord | 25 to 34,National,proportion
+2019-20,37.2,pct_households,renter_private,renter_by_age_group,Private landlord | 35 to 44,National,proportion
+2019-20,21.3,pct_households,renter_private,renter_by_age_group,Private landlord | 45 to 54,National,proportion
+2019-20,13.9,pct_households,renter_private,renter_by_age_group,Private landlord | 55 to 64,National,proportion
+2019-20,9.5,pct_households,renter_private,renter_by_age_group,Private landlord | 65 to 74,National,proportion
+2019-20,6,pct_households,renter_private,renter_by_age_group,Private landlord | 75 and over,National,proportion
+2019-20,26.2,pct_households,renter_private,renter_by_age_group,Private landlord | all households,National,proportion
+2019-20,83.5,pct_households,renter_total,renter_by_age_group,Total renters | 15 to 24,National,proportion
+2019-20,55.7,pct_households,renter_total,renter_by_age_group,Total renters | 25 to 34,National,proportion
+2019-20,41.5,pct_households,renter_total,renter_by_age_group,Total renters | 35 to 44,National,proportion
+2019-20,26.3,pct_households,renter_total,renter_by_age_group,Total renters | 45 to 54,National,proportion
+2019-20,19.1,pct_households,renter_total,renter_by_age_group,Total renters | 55 to 64,National,proportion
+2019-20,16,pct_households,renter_total,renter_by_age_group,Total renters | 65 to 74,National,proportion
+2019-20,12.9,pct_households,renter_total,renter_by_age_group,Total renters | 75 and over,National,proportion
+2019-20,31.4,pct_households,renter_total,renter_by_age_group,Total renters | all households,National,proportion
+2019-20,100,pct_households,all,renter_by_age_group,Total | 15 to 24,National,proportion
+2019-20,100,pct_households,all,renter_by_age_group,Total | 25 to 34,National,proportion
+2019-20,100,pct_households,all,renter_by_age_group,Total | 35 to 44,National,proportion
+2019-20,100,pct_households,all,renter_by_age_group,Total | 45 to 54,National,proportion
+2019-20,100,pct_households,all,renter_by_age_group,Total | 55 to 64,National,proportion
+2019-20,100,pct_households,all,renter_by_age_group,Total | 65 to 74,National,proportion
+2019-20,100,pct_households,all,renter_by_age_group,Total | 75 and over,National,proportion
+2019-20,100,pct_households,all,renter_by_age_group,Total | all households,National,proportion
+2019-20,5.5,pct_households,all,family_type_by_age_group,Couple family with dependent children | 15 to 24,National,proportion
+2019-20,30.6,pct_households,all,family_type_by_age_group,Couple family with dependent children | 25 to 34,National,proportion
+2019-20,56.3,pct_households,all,family_type_by_age_group,Couple family with dependent children | 35 to 44,National,proportion
+2019-20,43.9,pct_households,all,family_type_by_age_group,Couple family with dependent children | 45 to 54,National,proportion
+2019-20,11.8,pct_households,all,family_type_by_age_group,Couple family with dependent children | 55 to 64,National,proportion
+2019-20,1.7,pct_households,all,family_type_by_age_group,Couple family with dependent children | 65 to 74,National,proportion
+2019-20,0.9,pct_households,all,family_type_by_age_group,Couple family with dependent children | 75 and over,National,proportion
+2019-20,26.4,pct_households,all,family_type_by_age_group,Couple family with dependent children | all households,National,proportion
+2019-20,7.7,pct_households,all,family_type_by_age_group,One parent family with dependent children | 15 to 24,National,proportion
+2019-20,5.6,pct_households,all,family_type_by_age_group,One parent family with dependent children | 25 to 34,National,proportion
+2019-20,11.4,pct_households,all,family_type_by_age_group,One parent family with dependent children | 35 to 44,National,proportion
+2019-20,10.7,pct_households,all,family_type_by_age_group,One parent family with dependent children | 45 to 54,National,proportion
+2019-20,3.5,pct_households,all,family_type_by_age_group,One parent family with dependent children | 55 to 64,National,proportion
+2019-20,0.3,pct_households,all,family_type_by_age_group,One parent family with dependent children | 65 to 74,National,proportion
+2019-20,0.6,pct_households,all,family_type_by_age_group,One parent family with dependent children | 75 and over,National,proportion
+2019-20,6.1,pct_households,all,family_type_by_age_group,One parent family with dependent children | all households,National,proportion
+2019-20,20.1,pct_households,all,family_type_by_age_group,Couple only | 15 to 24,National,proportion
+2019-20,30.1,pct_households,all,family_type_by_age_group,Couple only | 25 to 34,National,proportion
+2019-20,11.2,pct_households,all,family_type_by_age_group,Couple only | 35 to 44,National,proportion
+2019-20,13.1,pct_households,all,family_type_by_age_group,Couple only | 45 to 54,National,proportion
+2019-20,31.2,pct_households,all,family_type_by_age_group,Couple only | 55 to 64,National,proportion
+2019-20,46.3,pct_households,all,family_type_by_age_group,Couple only | 65 to 74,National,proportion
+2019-20,36.8,pct_households,all,family_type_by_age_group,Couple only | 75 and over,National,proportion
+2019-20,26.3,pct_households,all,family_type_by_age_group,Couple only | all households,National,proportion
+2019-20,16.2,pct_households,all,family_type_by_age_group,Other one family households | 15 to 24,National,proportion
+2019-20,7.1,pct_households,all,family_type_by_age_group,Other one family households | 25 to 34,National,proportion
+2019-20,3.2,pct_households,all,family_type_by_age_group,Other one family households | 35 to 44,National,proportion
+2019-20,10.6,pct_households,all,family_type_by_age_group,Other one family households | 45 to 54,National,proportion
+2019-20,22.5,pct_households,all,family_type_by_age_group,Other one family households | 55 to 64,National,proportion
+2019-20,11.2,pct_households,all,family_type_by_age_group,Other one family households | 65 to 74,National,proportion
+2019-20,8.6,pct_households,all,family_type_by_age_group,Other one family households | 75 and over,National,proportion
+2019-20,10.8,pct_households,all,family_type_by_age_group,Other one family households | all households,National,proportion
+2019-20,2.6,pct_households,all,family_type_by_age_group,Multiple family households | 15 to 24,National,proportion
+2019-20,1.2,pct_households,all,family_type_by_age_group,Multiple family households | 25 to 34,National,proportion
+2019-20,3.1,pct_households,all,family_type_by_age_group,Multiple family households | 35 to 44,National,proportion
+2019-20,2.3,pct_households,all,family_type_by_age_group,Multiple family households | 45 to 54,National,proportion
+2019-20,3.3,pct_households,all,family_type_by_age_group,Multiple family households | 55 to 64,National,proportion
+2019-20,2.6,pct_households,all,family_type_by_age_group,Multiple family households | 65 to 74,National,proportion
+2019-20,0.8,pct_households,all,family_type_by_age_group,Multiple family households | 75 and over,National,proportion
+2019-20,2.3,pct_households,all,family_type_by_age_group,Multiple family households | all households,National,proportion
+2019-20,23.6,pct_households,all,family_type_by_age_group,Lone person households | 15 to 24,National,proportion
+2019-20,18.9,pct_households,all,family_type_by_age_group,Lone person households | 25 to 34,National,proportion
+2019-20,13.1,pct_households,all,family_type_by_age_group,Lone person households | 35 to 44,National,proportion
+2019-20,17.6,pct_households,all,family_type_by_age_group,Lone person households | 45 to 54,National,proportion
+2019-20,26.3,pct_households,all,family_type_by_age_group,Lone person households | 55 to 64,National,proportion
+2019-20,36.4,pct_households,all,family_type_by_age_group,Lone person households | 65 to 74,National,proportion
+2019-20,51.8,pct_households,all,family_type_by_age_group,Lone person households | 75 and over,National,proportion
+2019-20,25.2,pct_households,all,family_type_by_age_group,Lone person households | all households,National,proportion
+2019-20,25.1,pct_households,all,family_type_by_age_group,Group household | 15 to 24,National,proportion
+2019-20,6.6,pct_households,all,family_type_by_age_group,Group household | 25 to 34,National,proportion
+2019-20,1.8,pct_households,all,family_type_by_age_group,Group household | 35 to 44,National,proportion
+2019-20,1.2,pct_households,all,family_type_by_age_group,Group household | 45 to 54,National,proportion
+2019-20,1.6,pct_households,all,family_type_by_age_group,Group household | 55 to 64,National,proportion
+2019-20,1.3,pct_households,all,family_type_by_age_group,Group household | 65 to 74,National,proportion
+2019-20,0.7,pct_households,all,family_type_by_age_group,Group household | 75 and over,National,proportion
+2019-20,2.8,pct_households,all,family_type_by_age_group,Group household | all households,National,proportion
+2019-20,100,pct_households,all,family_type_by_age_group,Total | 15 to 24,National,proportion
+2019-20,100,pct_households,all,family_type_by_age_group,Total | 25 to 34,National,proportion
+2019-20,100,pct_households,all,family_type_by_age_group,Total | 35 to 44,National,proportion
+2019-20,100,pct_households,all,family_type_by_age_group,Total | 45 to 54,National,proportion
+2019-20,100,pct_households,all,family_type_by_age_group,Total | 55 to 64,National,proportion
+2019-20,100,pct_households,all,family_type_by_age_group,Total | 65 to 74,National,proportion
+2019-20,100,pct_households,all,family_type_by_age_group,Total | 75 and over,National,proportion
+2019-20,100,pct_households,all,family_type_by_age_group,Total | all households,National,proportion
+2019-20,47.1,pct_households,all,dwelling_structure_by_age_group,Separate house | 15 to 24,National,proportion
+2019-20,53.6,pct_households,all,dwelling_structure_by_age_group,Separate house | 25 to 34,National,proportion
+2019-20,67.4,pct_households,all,dwelling_structure_by_age_group,Separate house | 35 to 44,National,proportion
+2019-20,77.1,pct_households,all,dwelling_structure_by_age_group,Separate house | 45 to 54,National,proportion
+2019-20,77.6,pct_households,all,dwelling_structure_by_age_group,Separate house | 55 to 64,National,proportion
+2019-20,72.9,pct_households,all,dwelling_structure_by_age_group,Separate house | 65 to 74,National,proportion
+2019-20,67.9,pct_households,all,dwelling_structure_by_age_group,Separate house | 75 and over,National,proportion
+2019-20,69.1,pct_households,all,dwelling_structure_by_age_group,Separate house | all households,National,proportion
+2019-20,15.3,pct_households,all,dwelling_structure_by_age_group,"Semi-detached, row or terrace house, town house | 15 to 24",National,proportion
+2019-20,16.5,pct_households,all,dwelling_structure_by_age_group,"Semi-detached, row or terrace house, town house | 25 to 34",National,proportion
+2019-20,15.2,pct_households,all,dwelling_structure_by_age_group,"Semi-detached, row or terrace house, town house | 35 to 44",National,proportion
+2019-20,11.2,pct_households,all,dwelling_structure_by_age_group,"Semi-detached, row or terrace house, town house | 45 to 54",National,proportion
+2019-20,11.3,pct_households,all,dwelling_structure_by_age_group,"Semi-detached, row or terrace house, town house | 55 to 64",National,proportion
+2019-20,14.2,pct_households,all,dwelling_structure_by_age_group,"Semi-detached, row or terrace house, town house | 65 to 74",National,proportion
+2019-20,16.2,pct_households,all,dwelling_structure_by_age_group,"Semi-detached, row or terrace house, town house | 75 and over",National,proportion
+2019-20,13.9,pct_households,all,dwelling_structure_by_age_group,"Semi-detached, row or terrace house, town house | all households",National,proportion
+2019-20,37.1,pct_households,all,dwelling_structure_by_age_group,Flat or apartment | 15 to 24,National,proportion
+2019-20,29.4,pct_households,all,dwelling_structure_by_age_group,Flat or apartment | 25 to 34,National,proportion
+2019-20,17.5,pct_households,all,dwelling_structure_by_age_group,Flat or apartment | 35 to 44,National,proportion
+2019-20,11.5,pct_households,all,dwelling_structure_by_age_group,Flat or apartment | 45 to 54,National,proportion
+2019-20,10.7,pct_households,all,dwelling_structure_by_age_group,Flat or apartment | 55 to 64,National,proportion
+2019-20,12.5,pct_households,all,dwelling_structure_by_age_group,Flat or apartment | 65 to 74,National,proportion
+2019-20,15.4,pct_households,all,dwelling_structure_by_age_group,Flat or apartment | 75 and over,National,proportion
+2019-20,16.6,pct_households,all,dwelling_structure_by_age_group,Flat or apartment | all households,National,proportion
+2019-20,100,pct_households,all,dwelling_structure_by_age_group,Total | 15 to 24,National,proportion
+2019-20,100,pct_households,all,dwelling_structure_by_age_group,Total | 25 to 34,National,proportion
+2019-20,100,pct_households,all,dwelling_structure_by_age_group,Total | 35 to 44,National,proportion
+2019-20,100,pct_households,all,dwelling_structure_by_age_group,Total | 45 to 54,National,proportion
+2019-20,100,pct_households,all,dwelling_structure_by_age_group,Total | 55 to 64,National,proportion
+2019-20,100,pct_households,all,dwelling_structure_by_age_group,Total | 65 to 74,National,proportion
+2019-20,100,pct_households,all,dwelling_structure_by_age_group,Total | 75 and over,National,proportion
+2019-20,100,pct_households,all,dwelling_structure_by_age_group,Total | all households,National,proportion
+2019-20,53.1,pct_households,all,housing_type_by_age_group,25% or less | 15 to 24,National,proportion
+2019-20,70.4,pct_households,all,housing_type_by_age_group,25% or less | 25 to 34,National,proportion
+2019-20,71,pct_households,all,housing_type_by_age_group,25% or less | 35 to 44,National,proportion
+2019-20,74.5,pct_households,all,housing_type_by_age_group,25% or less | 45 to 54,National,proportion
+2019-20,78.6,pct_households,all,housing_type_by_age_group,25% or less | 55 to 64,National,proportion
+2019-20,85.7,pct_households,all,housing_type_by_age_group,25% or less | 65 to 74,National,proportion
+2019-20,89.9,pct_households,all,housing_type_by_age_group,25% or less | 75 and over,National,proportion
+2019-20,76.6,pct_households,all,housing_type_by_age_group,25% or less | all households,National,proportion
+2019-20,14.6,pct_households,all,housing_type_by_age_group,More than 25% to 30% | 15 to 24,National,proportion
+2019-20,10.7,pct_households,all,housing_type_by_age_group,More than 25% to 30% | 25 to 34,National,proportion
+2019-20,9.8,pct_households,all,housing_type_by_age_group,More than 25% to 30% | 35 to 44,National,proportion
+2019-20,7.9,pct_households,all,housing_type_by_age_group,More than 25% to 30% | 45 to 54,National,proportion
+2019-20,5.9,pct_households,all,housing_type_by_age_group,More than 25% to 30% | 55 to 64,National,proportion
+2019-20,3.2,pct_households,all,housing_type_by_age_group,More than 25% to 30% | 65 to 74,National,proportion
+2019-20,2.3,pct_households,all,housing_type_by_age_group,More than 25% to 30% | 75 and over,National,proportion
+2019-20,7.2,pct_households,all,housing_type_by_age_group,More than 25% to 30% | all households,National,proportion
+2019-20,22.3,pct_households,all,housing_type_by_age_group,More than 30% to 50% | 15 to 24,National,proportion
+2019-20,12.4,pct_households,all,housing_type_by_age_group,More than 30% to 50% | 25 to 34,National,proportion
+2019-20,14.1,pct_households,all,housing_type_by_age_group,More than 30% to 50% | 35 to 44,National,proportion
+2019-20,11.3,pct_households,all,housing_type_by_age_group,More than 30% to 50% | 45 to 54,National,proportion
+2019-20,8.9,pct_households,all,housing_type_by_age_group,More than 30% to 50% | 55 to 64,National,proportion
+2019-20,5.8,pct_households,all,housing_type_by_age_group,More than 30% to 50% | 65 to 74,National,proportion
+2019-20,5.4,pct_households,all,housing_type_by_age_group,More than 30% to 50% | 75 and over,National,proportion
+2019-20,10.5,pct_households,all,housing_type_by_age_group,More than 30% to 50% | all households,National,proportion
+2019-20,11.5,pct_households,all,housing_type_by_age_group,More than 50% | 15 to 24,National,proportion
+2019-20,6.6,pct_households,all,housing_type_by_age_group,More than 50% | 25 to 34,National,proportion
+2019-20,5.2,pct_households,all,housing_type_by_age_group,More than 50% | 35 to 44,National,proportion
+2019-20,6.2,pct_households,all,housing_type_by_age_group,More than 50% | 45 to 54,National,proportion
+2019-20,6.5,pct_households,all,housing_type_by_age_group,More than 50% | 55 to 64,National,proportion
+2019-20,5.1,pct_households,all,housing_type_by_age_group,More than 50% | 65 to 74,National,proportion
+2019-20,2.5,pct_households,all,housing_type_by_age_group,More than 50% | 75 and over,National,proportion
+2019-20,5.7,pct_households,all,housing_type_by_age_group,More than 50% | all households,National,proportion
+2019-20,100,pct_households,all,housing_type_by_age_group,Total | 15 to 24,National,proportion
+2019-20,100,pct_households,all,housing_type_by_age_group,Total | 25 to 34,National,proportion
+2019-20,100,pct_households,all,housing_type_by_age_group,Total | 35 to 44,National,proportion
+2019-20,100,pct_households,all,housing_type_by_age_group,Total | 45 to 54,National,proportion
+2019-20,100,pct_households,all,housing_type_by_age_group,Total | 55 to 64,National,proportion
+2019-20,100,pct_households,all,housing_type_by_age_group,Total | 65 to 74,National,proportion
+2019-20,100,pct_households,all,housing_type_by_age_group,Total | 75 and over,National,proportion
+2019-20,100,pct_households,all,housing_type_by_age_group,Total | all households,National,proportion
+2019-20,21.4,pct_households,all,equiv_income_quintile_by_age_group,Lowest quintile | 15 to 24,National,proportion
+2019-20,13.2,pct_households,all,equiv_income_quintile_by_age_group,Lowest quintile | 25 to 34,National,proportion
+2019-20,14.9,pct_households,all,equiv_income_quintile_by_age_group,Lowest quintile | 35 to 44,National,proportion
+2019-20,16.3,pct_households,all,equiv_income_quintile_by_age_group,Lowest quintile | 45 to 54,National,proportion
+2019-20,22.1,pct_households,all,equiv_income_quintile_by_age_group,Lowest quintile | 55 to 64,National,proportion
+2019-20,38,pct_households,all,equiv_income_quintile_by_age_group,Lowest quintile | 65 to 74,National,proportion
+2019-20,52.9,pct_households,all,equiv_income_quintile_by_age_group,Lowest quintile | 75 and over,National,proportion
+2019-20,23.9,pct_households,all,equiv_income_quintile_by_age_group,Lowest quintile | all households,National,proportion
+2019-20,20.5,pct_households,all,equiv_income_quintile_by_age_group,Second quintile | 15 to 24,National,proportion
+2019-20,16,pct_households,all,equiv_income_quintile_by_age_group,Second quintile | 25 to 34,National,proportion
+2019-20,19.3,pct_households,all,equiv_income_quintile_by_age_group,Second quintile | 35 to 44,National,proportion
+2019-20,15.8,pct_households,all,equiv_income_quintile_by_age_group,Second quintile | 45 to 54,National,proportion
+2019-20,15.9,pct_households,all,equiv_income_quintile_by_age_group,Second quintile | 55 to 64,National,proportion
+2019-20,25.7,pct_households,all,equiv_income_quintile_by_age_group,Second quintile | 65 to 74,National,proportion
+2019-20,22.7,pct_households,all,equiv_income_quintile_by_age_group,Second quintile | 75 and over,National,proportion
+2019-20,18.8,pct_households,all,equiv_income_quintile_by_age_group,Second quintile | all households,National,proportion
+2019-20,25.2,pct_households,all,equiv_income_quintile_by_age_group,Third quintile | 15 to 24,National,proportion
+2019-20,19.3,pct_households,all,equiv_income_quintile_by_age_group,Third quintile | 25 to 34,National,proportion
+2019-20,21.2,pct_households,all,equiv_income_quintile_by_age_group,Third quintile | 35 to 44,National,proportion
+2019-20,20.4,pct_households,all,equiv_income_quintile_by_age_group,Third quintile | 45 to 54,National,proportion
+2019-20,19.2,pct_households,all,equiv_income_quintile_by_age_group,Third quintile | 55 to 64,National,proportion
+2019-20,14.3,pct_households,all,equiv_income_quintile_by_age_group,Third quintile | 65 to 74,National,proportion
+2019-20,12,pct_households,all,equiv_income_quintile_by_age_group,Third quintile | 75 and over,National,proportion
+2019-20,18.5,pct_households,all,equiv_income_quintile_by_age_group,Third quintile | all households,National,proportion
+2019-20,20.1,pct_households,all,equiv_income_quintile_by_age_group,Fourth quintile | 15 to 24,National,proportion
+2019-20,24,pct_households,all,equiv_income_quintile_by_age_group,Fourth quintile | 25 to 34,National,proportion
+2019-20,22.2,pct_households,all,equiv_income_quintile_by_age_group,Fourth quintile | 35 to 44,National,proportion
+2019-20,23.6,pct_households,all,equiv_income_quintile_by_age_group,Fourth quintile | 45 to 54,National,proportion
+2019-20,19,pct_households,all,equiv_income_quintile_by_age_group,Fourth quintile | 55 to 64,National,proportion
+2019-20,10.4,pct_households,all,equiv_income_quintile_by_age_group,Fourth quintile | 65 to 74,National,proportion
+2019-20,6.1,pct_households,all,equiv_income_quintile_by_age_group,Fourth quintile | 75 and over,National,proportion
+2019-20,18.7,pct_households,all,equiv_income_quintile_by_age_group,Fourth quintile | all households,National,proportion
+2019-20,11.4,pct_households,all,equiv_income_quintile_by_age_group,Highest quintile | 15 to 24,National,proportion
+2019-20,27.1,pct_households,all,equiv_income_quintile_by_age_group,Highest quintile | 25 to 34,National,proportion
+2019-20,22.7,pct_households,all,equiv_income_quintile_by_age_group,Highest quintile | 35 to 44,National,proportion
+2019-20,23.9,pct_households,all,equiv_income_quintile_by_age_group,Highest quintile | 45 to 54,National,proportion
+2019-20,24.1,pct_households,all,equiv_income_quintile_by_age_group,Highest quintile | 55 to 64,National,proportion
+2019-20,11.6,pct_households,all,equiv_income_quintile_by_age_group,Highest quintile | 65 to 74,National,proportion
+2019-20,5.9,pct_households,all,equiv_income_quintile_by_age_group,Highest quintile | 75 and over,National,proportion
+2019-20,20.1,pct_households,all,equiv_income_quintile_by_age_group,Highest quintile | all households,National,proportion
+2019-20,100,pct_households,all,equiv_income_quintile_by_age_group,Total | 15 to 24,National,proportion
+2019-20,100,pct_households,all,equiv_income_quintile_by_age_group,Total | 25 to 34,National,proportion
+2019-20,100,pct_households,all,equiv_income_quintile_by_age_group,Total | 35 to 44,National,proportion
+2019-20,100,pct_households,all,equiv_income_quintile_by_age_group,Total | 45 to 54,National,proportion
+2019-20,100,pct_households,all,equiv_income_quintile_by_age_group,Total | 55 to 64,National,proportion
+2019-20,100,pct_households,all,equiv_income_quintile_by_age_group,Total | 65 to 74,National,proportion
+2019-20,100,pct_households,all,equiv_income_quintile_by_age_group,Total | 75 and over,National,proportion
+2019-20,100,pct_households,all,equiv_income_quintile_by_age_group,Total | all households,National,proportion
+2019-20,39.4,pct_households,all,equiv_income_quintile_by_age_group,Lower income households | 15 to 24,National,proportion
+2019-20,26.7,pct_households,all,equiv_income_quintile_by_age_group,Lower income households | 25 to 34,National,proportion
+2019-20,32.6,pct_households,all,equiv_income_quintile_by_age_group,Lower income households | 35 to 44,National,proportion
+2019-20,29.2,pct_households,all,equiv_income_quintile_by_age_group,Lower income households | 45 to 54,National,proportion
+2019-20,33.7,pct_households,all,equiv_income_quintile_by_age_group,Lower income households | 55 to 64,National,proportion
+2019-20,61.1,pct_households,all,equiv_income_quintile_by_age_group,Lower income households | 65 to 74,National,proportion
+2019-20,74.2,pct_households,all,equiv_income_quintile_by_age_group,Lower income households | 75 and over,National,proportion
+2019-20,40.1,pct_households,all,equiv_income_quintile_by_age_group,Lower income households | all households,National,proportion
+2019-20,69.2,pct_households,all,income_source_by_age_group,Employee income | 15 to 24,National,proportion
+2019-20,83.8,pct_households,all,income_source_by_age_group,Employee income | 25 to 34,National,proportion
+2019-20,83.4,pct_households,all,income_source_by_age_group,Employee income | 35 to 44,National,proportion
+2019-20,80.2,pct_households,all,income_source_by_age_group,Employee income | 45 to 54,National,proportion
+2019-20,68.6,pct_households,all,income_source_by_age_group,Employee income | 55 to 64,National,proportion
+2019-20,19.2,pct_households,all,income_source_by_age_group,Employee income | 65 to 74,National,proportion
+2019-20,4.5,pct_households,all,income_source_by_age_group,Employee income | 75 and over,National,proportion
+2019-20,61.9,pct_households,all,income_source_by_age_group,Employee income | all households,National,proportion
+2019-20,4,pct_households,all,income_source_by_age_group,Own unincorporated business income | 15 to 24,National,proportion
+2019-20,3.4,pct_households,all,income_source_by_age_group,Own unincorporated business income | 25 to 34,National,proportion
+2019-20,3.6,pct_households,all,income_source_by_age_group,Own unincorporated business income | 35 to 44,National,proportion
+2019-20,3.7,pct_households,all,income_source_by_age_group,Own unincorporated business income | 45 to 54,National,proportion
+2019-20,4.4,pct_households,all,income_source_by_age_group,Own unincorporated business income | 55 to 64,National,proportion
+2019-20,2,pct_households,all,income_source_by_age_group,Own unincorporated business income | 65 to 74,National,proportion
+2019-20,0.5,pct_households,all,income_source_by_age_group,Own unincorporated business income | 75 and over,National,proportion
+2019-20,3.1,pct_households,all,income_source_by_age_group,Own unincorporated business income | all households,National,proportion
+2019-20,12.2,pct_households,all,income_source_by_age_group,Government pensions and allowances | 15 to 24,National,proportion
+2019-20,7.8,pct_households,all,income_source_by_age_group,Government pensions and allowances | 25 to 34,National,proportion
+2019-20,9.9,pct_households,all,income_source_by_age_group,Government pensions and allowances | 35 to 44,National,proportion
+2019-20,10.5,pct_households,all,income_source_by_age_group,Government pensions and allowances | 45 to 54,National,proportion
+2019-20,14.3,pct_households,all,income_source_by_age_group,Government pensions and allowances | 55 to 64,National,proportion
+2019-20,47.2,pct_households,all,income_source_by_age_group,Government pensions and allowances | 65 to 74,National,proportion
+2019-20,67.4,pct_households,all,income_source_by_age_group,Government pensions and allowances | 75 and over,National,proportion
+2019-20,22.3,pct_households,all,income_source_by_age_group,Government pensions and allowances | all households,National,proportion
+2019-20,15.3,pct_households,all,income_source_by_age_group,Other income | 15 to 24,National,proportion
+2019-20,4.2,pct_households,all,income_source_by_age_group,Other income | 25 to 34,National,proportion
+2019-20,2.8,pct_households,all,income_source_by_age_group,Other income | 35 to 44,National,proportion
+2019-20,4.6,pct_households,all,income_source_by_age_group,Other income | 45 to 54,National,proportion
+2019-20,11.4,pct_households,all,income_source_by_age_group,Other income | 55 to 64,National,proportion
+2019-20,31.3,pct_households,all,income_source_by_age_group,Other income | 65 to 74,National,proportion
+2019-20,27.6,pct_households,all,income_source_by_age_group,Other income | 75 and over,National,proportion
+2019-20,12.1,pct_households,all,income_source_by_age_group,Other income | all households,National,proportion
+2019-20,100,pct_households,all,income_source_by_age_group,Total | 15 to 24,National,proportion
+2019-20,100,pct_households,all,income_source_by_age_group,Total | 25 to 34,National,proportion
+2019-20,100,pct_households,all,income_source_by_age_group,Total | 35 to 44,National,proportion
+2019-20,100,pct_households,all,income_source_by_age_group,Total | 45 to 54,National,proportion
+2019-20,100,pct_households,all,income_source_by_age_group,Total | 55 to 64,National,proportion
+2019-20,100,pct_households,all,income_source_by_age_group,Total | 65 to 74,National,proportion
+2019-20,100,pct_households,all,income_source_by_age_group,Total | 75 and over,National,proportion
+2019-20,100,pct_households,all,income_source_by_age_group,Total | all households,National,proportion
+2019-20,20.4,pct_households,all,number_of_employed_persons_in_household_by_age_group,None | 15 to 24,National,proportion
+2019-20,8.5,pct_households,all,number_of_employed_persons_in_household_by_age_group,None | 25 to 34,National,proportion
+2019-20,7.8,pct_households,all,number_of_employed_persons_in_household_by_age_group,None | 35 to 44,National,proportion
+2019-20,10.1,pct_households,all,number_of_employed_persons_in_household_by_age_group,None | 45 to 54,National,proportion
+2019-20,20.5,pct_households,all,number_of_employed_persons_in_household_by_age_group,None | 55 to 64,National,proportion
+2019-20,65.2,pct_households,all,number_of_employed_persons_in_household_by_age_group,None | 65 to 74,National,proportion
+2019-20,89.5,pct_households,all,number_of_employed_persons_in_household_by_age_group,None | 75 and over,National,proportion
+2019-20,28.3,pct_households,all,number_of_employed_persons_in_household_by_age_group,None | all households,National,proportion
+2019-20,32.7,pct_households,all,number_of_employed_persons_in_household_by_age_group,One | 15 to 24,National,proportion
+2019-20,35.2,pct_households,all,number_of_employed_persons_in_household_by_age_group,One | 25 to 34,National,proportion
+2019-20,35.6,pct_households,all,number_of_employed_persons_in_household_by_age_group,One | 35 to 44,National,proportion
+2019-20,29.8,pct_households,all,number_of_employed_persons_in_household_by_age_group,One | 45 to 54,National,proportion
+2019-20,31.6,pct_households,all,number_of_employed_persons_in_household_by_age_group,One | 55 to 64,National,proportion
+2019-20,22.4,pct_households,all,number_of_employed_persons_in_household_by_age_group,One | 65 to 74,National,proportion
+2019-20,8.1,pct_households,all,number_of_employed_persons_in_household_by_age_group,One | 75 and over,National,proportion
+2019-20,28.6,pct_households,all,number_of_employed_persons_in_household_by_age_group,One | all households,National,proportion
+2019-20,33.1,pct_households,all,number_of_employed_persons_in_household_by_age_group,Two | 15 to 24,National,proportion
+2019-20,49.6,pct_households,all,number_of_employed_persons_in_household_by_age_group,Two | 25 to 34,National,proportion
+2019-20,50.5,pct_households,all,number_of_employed_persons_in_household_by_age_group,Two | 35 to 44,National,proportion
+2019-20,37,pct_households,all,number_of_employed_persons_in_household_by_age_group,Two | 45 to 54,National,proportion
+2019-20,31.7,pct_households,all,number_of_employed_persons_in_household_by_age_group,Two | 55 to 64,National,proportion
+2019-20,10.3,pct_households,all,number_of_employed_persons_in_household_by_age_group,Two | 65 to 74,National,proportion
+2019-20,2.3,pct_households,all,number_of_employed_persons_in_household_by_age_group,Two | 75 and over,National,proportion
+2019-20,32.8,pct_households,all,number_of_employed_persons_in_household_by_age_group,Two | all households,National,proportion
+2019-20,12.8,pct_households,all,number_of_employed_persons_in_household_by_age_group,Three or more | 15 to 24,National,proportion
+2019-20,6.6,pct_households,all,number_of_employed_persons_in_household_by_age_group,Three or more | 25 to 34,National,proportion
+2019-20,6.3,pct_households,all,number_of_employed_persons_in_household_by_age_group,Three or more | 35 to 44,National,proportion
+2019-20,23.2,pct_households,all,number_of_employed_persons_in_household_by_age_group,Three or more | 45 to 54,National,proportion
+2019-20,16.3,pct_households,all,number_of_employed_persons_in_household_by_age_group,Three or more | 55 to 64,National,proportion
+2019-20,1.8,pct_households,all,number_of_employed_persons_in_household_by_age_group,Three or more | 65 to 74,National,proportion
+2019-20,0.4,pct_households,all,number_of_employed_persons_in_household_by_age_group,Three or more | 75 and over,National,proportion
+2019-20,10.3,pct_households,all,number_of_employed_persons_in_household_by_age_group,Three or more | all households,National,proportion
+2019-20,100,pct_households,all,number_of_employed_persons_in_household_by_age_group,Total | 15 to 24,National,proportion
+2019-20,100,pct_households,all,number_of_employed_persons_in_household_by_age_group,Total | 25 to 34,National,proportion
+2019-20,100,pct_households,all,number_of_employed_persons_in_household_by_age_group,Total | 35 to 44,National,proportion
+2019-20,100,pct_households,all,number_of_employed_persons_in_household_by_age_group,Total | 45 to 54,National,proportion
+2019-20,100,pct_households,all,number_of_employed_persons_in_household_by_age_group,Total | 55 to 64,National,proportion
+2019-20,100,pct_households,all,number_of_employed_persons_in_household_by_age_group,Total | 65 to 74,National,proportion
+2019-20,100,pct_households,all,number_of_employed_persons_in_household_by_age_group,Total | 75 and over,National,proportion
+2019-20,100,pct_households,all,number_of_employed_persons_in_household_by_age_group,Total | all households,National,proportion
+2019-20,289.8,households_000,all,number_of_employed_persons_in_household_by_age_group,Estimated number of households | 15 to 24,National,count_000
+2019-20,1554.7,households_000,all,number_of_employed_persons_in_household_by_age_group,Estimated number of households | 25 to 34,National,count_000
+2019-20,1852.2,households_000,all,number_of_employed_persons_in_household_by_age_group,Estimated number of households | 35 to 44,National,count_000
+2019-20,1828.5,households_000,all,number_of_employed_persons_in_household_by_age_group,Estimated number of households | 45 to 54,National,count_000
+2019-20,1728.9,households_000,all,number_of_employed_persons_in_household_by_age_group,Estimated number of households | 55 to 64,National,count_000
+2019-20,1404.9,households_000,all,number_of_employed_persons_in_household_by_age_group,Estimated number of households | 65 to 74,National,count_000
+2019-20,1076.3,households_000,all,number_of_employed_persons_in_household_by_age_group,Estimated number of households | 75 and over,National,count_000
+2019-20,9732.4,households_000,all,number_of_employed_persons_in_household_by_age_group,Estimated number of households | all households,National,count_000
+2019-20,2.2,average_persons,all,number_of_employed_persons_in_household_by_age_group,Average number of persons in household | 15 to 24,National,count
+2019-20,2.6,average_persons,all,number_of_employed_persons_in_household_by_age_group,Average number of persons in household | 25 to 34,National,count
+2019-20,3.3,average_persons,all,number_of_employed_persons_in_household_by_age_group,Average number of persons in household | 35 to 44,National,count
+2019-20,3.1,average_persons,all,number_of_employed_persons_in_household_by_age_group,Average number of persons in household | 45 to 54,National,count
+2019-20,2.4,average_persons,all,number_of_employed_persons_in_household_by_age_group,Average number of persons in household | 55 to 64,National,count
+2019-20,1.9,average_persons,all,number_of_employed_persons_in_household_by_age_group,Average number of persons in household | 65 to 74,National,count
+2019-20,1.6,average_persons,all,number_of_employed_persons_in_household_by_age_group,Average number of persons in household | 75 and over,National,count
+2019-20,2.6,average_persons,all,number_of_employed_persons_in_household_by_age_group,Average number of persons in household | all households,National,count
+2019-20,2.6,average_bedrooms,all,number_of_employed_persons_in_household_by_age_group,Average number of bedrooms in dwelling | 15 to 24,National,count
+2019-20,2.8,average_bedrooms,all,number_of_employed_persons_in_household_by_age_group,Average number of bedrooms in dwelling | 25 to 34,National,count
+2019-20,3.2,average_bedrooms,all,number_of_employed_persons_in_household_by_age_group,Average number of bedrooms in dwelling | 35 to 44,National,count
+2019-20,3.4,average_bedrooms,all,number_of_employed_persons_in_household_by_age_group,Average number of bedrooms in dwelling | 45 to 54,National,count
+2019-20,3.3,average_bedrooms,all,number_of_employed_persons_in_household_by_age_group,Average number of bedrooms in dwelling | 55 to 64,National,count
+2019-20,3.1,average_bedrooms,all,number_of_employed_persons_in_household_by_age_group,Average number of bedrooms in dwelling | 65 to 74,National,count
+2019-20,2.8,average_bedrooms,all,number_of_employed_persons_in_household_by_age_group,Average number of bedrooms in dwelling | 75 and over,National,count
+2019-20,3.1,average_bedrooms,all,number_of_employed_persons_in_household_by_age_group,Average number of bedrooms in dwelling | all households,National,count
+2019-20,395,households_in_sample,all,number_of_employed_persons_in_household_by_age_group,Number of households in sample | 15 to 24,National,count
+2019-20,2039,households_in_sample,all,number_of_employed_persons_in_household_by_age_group,Number of households in sample | 25 to 34,National,count
+2019-20,2661,households_in_sample,all,number_of_employed_persons_in_household_by_age_group,Number of households in sample | 35 to 44,National,count
+2019-20,2793,households_in_sample,all,number_of_employed_persons_in_household_by_age_group,Number of households in sample | 45 to 54,National,count
+2019-20,2826,households_in_sample,all,number_of_employed_persons_in_household_by_age_group,Number of households in sample | 55 to 64,National,count
+2019-20,2441,households_in_sample,all,number_of_employed_persons_in_household_by_age_group,Number of households in sample | 65 to 74,National,count
+2019-20,1856,households_in_sample,all,number_of_employed_persons_in_household_by_age_group,Number of households in sample | 75 and over,National,count
+2019-20,15011,households_in_sample,all,number_of_employed_persons_in_household_by_age_group,Number of households in sample | all households,National,count
