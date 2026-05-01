@@ -2,7 +2,7 @@
 # Australian Housing Affordability Dashboard
 # ==============================================================================
 # Shiny app shell — reads pre-processed CSVs from data/ pipeline
-# 7 pages: Overview, Price Trends, Affordability, Market Context, Housing Supply, Rental Market, Methodology
+# 8 pages: Overview, Price Trends, Affordability, Geographic Affordability, Market Context, Housing Supply, Rental Market, Methodology
 # ==============================================================================
 
 library(shiny)
@@ -47,6 +47,7 @@ source(project_path("R", "affordability_module.R"), local = TRUE)
 source(project_path("R", "rental_market_module.R"), local = TRUE)
 source(project_path("R", "housing_supply_module.R"), local = TRUE)
 source(project_path("R", "price_trends_module.R"), local = TRUE)
+source(project_path("R", "geographic_affordability_module.R"), local = TRUE)
 source(project_path("R", "market_context_module.R"), local = TRUE)
 source(project_path("R", "overview_module.R"), local = TRUE)
 rm(.load_app_project_paths)
@@ -308,22 +309,27 @@ ui <- page_navbar(
   affordabilityPageUI("affordability"),
 
   # ============================================================================
-  # PAGE 4: MARKET CONTEXT (Labour & Demographics)
+  # PAGE 4: GEOGRAPHIC AFFORDABILITY
+  # ============================================================================
+  geographicAffordabilityPageUI("geographic_affordability"),
+
+  # ============================================================================
+  # PAGE 5: MARKET CONTEXT (Labour & Demographics)
   # ============================================================================
   marketContextPageUI("market_context"),
 
   # ============================================================================
-  # PAGE 5: HOUSING SUPPLY
+  # PAGE 6: HOUSING SUPPLY
   # ============================================================================
   housingSupplyPageUI("housing_supply"),
 
   # ============================================================================
-  # PAGE 6: RENTAL MARKET
+  # PAGE 7: RENTAL MARKET
   # ============================================================================
   rentalMarketPageUI("rental_market"),
 
   # ============================================================================
-  # PAGE 7: METHODOLOGY
+  # PAGE 8: METHODOLOGY
   # ============================================================================
   methodologyPageUI("methodology")
 )
@@ -346,6 +352,7 @@ server <- function(input, output, session) {
   rentalMarketPageServer("rental_market", is_dark = is_dark)
   housingSupplyPageServer("housing_supply", is_dark = is_dark)
   priceTrendsPageServer("price_trends", is_dark = is_dark)
+  geographicAffordabilityPageServer("geographic_affordability", is_dark = is_dark)
   marketContextPageServer("market_context", is_dark = is_dark)
   overviewPageServer("overview", is_dark = is_dark)
 

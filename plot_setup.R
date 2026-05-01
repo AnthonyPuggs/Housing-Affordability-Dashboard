@@ -71,9 +71,10 @@ sih_cost_ratios  <- load_csv("sih_cost_ratios_2020.csv")
 sih_stress       <- load_csv("sih_stress_bands_2020.csv")
 sih_nhha         <- load_csv("sih_nhha_rental_stress.csv")
 sih_quality      <- load_csv("sih_estimate_quality.csv")
+sih_lower_income_states <- load_csv("sih_lower_income_states.csv")
+sih_geographic          <- load_csv("sih_geographic_2020.csv")
 # Loaded but reserved for future use:
-# sih_age_tenure_2020.csv, sih_recent_buyers_2020.csv,
-# sih_lower_income_states.csv, sih_geographic_2020.csv
+# sih_age_tenure_2020.csv, sih_recent_buyers_2020.csv
 
 # ==============================================================================
 # HELPERS

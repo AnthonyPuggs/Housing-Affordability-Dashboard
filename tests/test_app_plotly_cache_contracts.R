@@ -55,7 +55,11 @@ if (file.exists(app_path)) {
     "rental_stress_state",
     "rental_stress_trend",
     "rental_afford_index",
-    "rental_costs_demo"
+    "rental_costs_demo",
+    "geo_state_trend",
+    "geo_state_latest",
+    "geo_lower_income",
+    "geo_gcc_comparison"
   )
 
   missing_outputs <- setdiff(expected_plotly_outputs, render_ids)
