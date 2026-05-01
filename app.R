@@ -60,8 +60,22 @@ ui <- page_navbar(
   theme = bs_theme(
     version = 5,
     bootswatch = "flatly",
-    base_font = font_google("Source Sans 3"),
-    heading_font = font_google("Poppins"),
+    base_font = font_collection(
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "Segoe UI",
+      "Roboto",
+      "Helvetica Neue",
+      "Arial",
+      "sans-serif"
+    ),
+    heading_font = font_collection(
+      "Segoe UI",
+      "Roboto",
+      "Helvetica Neue",
+      "Arial",
+      "sans-serif"
+    ),
     primary = "#0E5A8A",
     secondary = "#1F9D8C"
   ),
@@ -76,7 +90,7 @@ ui <- page_navbar(
         --app-muted: #6c757d;
       }
       /* ---- Dark theme ---- */
-      html[data-theme='dark'] {
+      html[data-bs-theme='dark'] {
         --app-bg: #0b1220;
         --app-text: #e3ebf4;
         --app-panel: #111b2e;
@@ -92,17 +106,17 @@ ui <- page_navbar(
       .bslib-page-fill { background-color: var(--app-bg) !important; }
 
       /* Navbar */
-      html[data-theme='dark'] .navbar {
+      html[data-bs-theme='dark'] .navbar {
         background-color: #0d1a2d !important;
         border-bottom: 1px solid var(--app-border);
       }
-      html[data-theme='dark'] .navbar .navbar-brand,
-      html[data-theme='dark'] .navbar .nav-link,
-      html[data-theme='dark'] .navbar .navbar-toggler-icon {
+      html[data-bs-theme='dark'] .navbar .navbar-brand,
+      html[data-bs-theme='dark'] .navbar .nav-link,
+      html[data-bs-theme='dark'] .navbar .navbar-toggler-icon {
         color: #e3ebf4 !important;
       }
-      html[data-theme='dark'] .navbar .nav-link:hover,
-      html[data-theme='dark'] .navbar .nav-link.active {
+      html[data-bs-theme='dark'] .navbar .nav-link:hover,
+      html[data-bs-theme='dark'] .navbar .nav-link.active {
         color: #ffffff !important;
       }
 
@@ -140,52 +154,52 @@ ui <- page_navbar(
       }
 
       /* Nav tabs (Affordability sub-tabs) */
-      html[data-theme='dark'] .nav-tabs .nav-link,
-      html[data-theme='dark'] .nav-pills .nav-link {
+      html[data-bs-theme='dark'] .nav-tabs .nav-link,
+      html[data-bs-theme='dark'] .nav-pills .nav-link {
         color: var(--app-muted) !important;
       }
-      html[data-theme='dark'] .nav-tabs .nav-link.active,
-      html[data-theme='dark'] .nav-pills .nav-link.active {
+      html[data-bs-theme='dark'] .nav-tabs .nav-link.active,
+      html[data-bs-theme='dark'] .nav-pills .nav-link.active {
         color: #ffffff !important;
         background-color: var(--app-panel) !important;
         border-color: var(--app-border) !important;
       }
 
       /* Selectize tag items in multi-select */
-      html[data-theme='dark'] .selectize-input .item {
+      html[data-bs-theme='dark'] .selectize-input .item {
         background-color: #1e2d44 !important;
         color: #e3ebf4 !important;
         border-color: #3a4f6e !important;
       }
 
       /* Date range input */
-      html[data-theme='dark'] .input-daterange .input-group-text {
+      html[data-bs-theme='dark'] .input-daterange .input-group-text {
         background-color: var(--app-panel) !important;
         color: var(--app-text) !important;
         border-color: var(--app-border) !important;
       }
 
       /* Radio & checkbox circles/checks */
-      html[data-theme='dark'] .form-check-input {
+      html[data-bs-theme='dark'] .form-check-input {
         background-color: var(--app-border) !important;
         border-color: var(--app-muted) !important;
       }
-      html[data-theme='dark'] .form-check-input:checked {
+      html[data-bs-theme='dark'] .form-check-input:checked {
         background-color: #0E5A8A !important;
         border-color: #0E5A8A !important;
       }
 
       /* Slider (IRS) */
-      html[data-theme='dark'] .irs--shiny .irs-line,
-      html[data-theme='dark'] .irs--shiny .irs-grid-pol {
+      html[data-bs-theme='dark'] .irs--shiny .irs-line,
+      html[data-bs-theme='dark'] .irs--shiny .irs-grid-pol {
         background-color: var(--app-border) !important;
       }
-      html[data-theme='dark'] .irs--shiny .irs-min,
-      html[data-theme='dark'] .irs--shiny .irs-max,
-      html[data-theme='dark'] .irs--shiny .irs-single,
-      html[data-theme='dark'] .irs--shiny .irs-from,
-      html[data-theme='dark'] .irs--shiny .irs-to,
-      html[data-theme='dark'] .irs--shiny .irs-grid-text {
+      html[data-bs-theme='dark'] .irs--shiny .irs-min,
+      html[data-bs-theme='dark'] .irs--shiny .irs-max,
+      html[data-bs-theme='dark'] .irs--shiny .irs-single,
+      html[data-bs-theme='dark'] .irs--shiny .irs-from,
+      html[data-bs-theme='dark'] .irs--shiny .irs-to,
+      html[data-bs-theme='dark'] .irs--shiny .irs-grid-text {
         color: var(--app-text) !important;
       }
 
@@ -207,9 +221,9 @@ ui <- page_navbar(
         min-width: 1100px;
         font-size: 0.85rem;
       }
-      html[data-theme='dark'] .methodology-table-wrap table,
-      html[data-theme='dark'] .methodology-table-wrap th,
-      html[data-theme='dark'] .methodology-table-wrap td {
+      html[data-bs-theme='dark'] .methodology-table-wrap table,
+      html[data-bs-theme='dark'] .methodology-table-wrap th,
+      html[data-bs-theme='dark'] .methodology-table-wrap td {
         color: var(--app-text) !important;
         background-color: var(--app-panel) !important;
         border-color: var(--app-border) !important;
@@ -258,40 +272,6 @@ ui <- page_navbar(
     ")),
     tags$script(HTML("
       (function() {
-        function setTheme(theme) {
-          document.documentElement.setAttribute('data-theme', theme);
-          document.documentElement.setAttribute('data-bs-theme', theme);
-          var btn = document.getElementById('theme_toggle');
-          if (btn) btn.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
-          // Send to Shiny only after it's ready
-          if (window.Shiny && Shiny.setInputValue) {
-            Shiny.setInputValue('theme_mode', theme, { priority: 'event' });
-          }
-        }
-
-        // Apply saved theme immediately (before DOMContentLoaded) to avoid flash
-        var saved = window.localStorage.getItem('afford_theme');
-        var preferDark = window.matchMedia &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var initial = saved || (preferDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', initial);
-        document.documentElement.setAttribute('data-bs-theme', initial);
-
-        // Once Shiny is connected, send the initial value
-        $(document).on('shiny:connected', function() {
-          var theme = document.documentElement.getAttribute('data-theme') || 'light';
-          setTheme(theme);
-        });
-
-        // Toggle handler — use direct ID check instead of .closest()
-        $(document).on('click', '#theme_toggle', function(e) {
-          e.preventDefault();
-          var cur = document.documentElement.getAttribute('data-theme') || 'light';
-          var next = cur === 'dark' ? 'light' : 'dark';
-          window.localStorage.setItem('afford_theme', next);
-          setTheme(next);
-        });
-
         $(document).on('click', '.navbar-collapse.show .nav-link', function(e) {
           if (window.innerWidth < 992) {
             var mainNav = document.getElementById('main_nav');
@@ -309,8 +289,7 @@ ui <- page_navbar(
     "))
   ),
   nav_spacer(),
-  nav_item(actionButton("theme_toggle", "Dark mode",
-                         class = "btn-outline-light btn-sm")),
+  nav_item(input_dark_mode(id = "theme_mode")),
 
   # ============================================================================
   # PAGE 1: OVERVIEW
@@ -358,7 +337,7 @@ server <- function(input, output, session) {
   is_dark <- reactive({
     mode <- input$theme_mode
     if (is.null(mode)) return(FALSE)
-    identical(mode, "dark")
+    isTRUE(mode) || identical(mode, "dark")
   })
 
   methodologyPageServer("methodology")

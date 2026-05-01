@@ -36,6 +36,8 @@ Rscript -e "shiny::runApp('.')"
 
 The app reads pre-generated CSV files from `data/`, so it can run without refreshing live ABS or RBA inputs.
 
+The dashboard uses bslib-native dark/light mode through Bootstrap 5. It uses local system font stacks rather than Google-hosted fonts, avoiding third-party font fetches during launch or deployment.
+
 ## Refresh The Data
 
 Run the full data pipeline from the repository root:
@@ -91,6 +93,7 @@ Rscript tests/test_sih_estimate_quality.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
 Rscript tests/test_responsive_ui_contracts.R
+Rscript tests/test_theme_infrastructure.R
 Rscript tests/test_rba_raw_cache_hygiene.R
 Rscript tests/test_public_release_hygiene.R
 Rscript tests/test_project_root_paths.R
