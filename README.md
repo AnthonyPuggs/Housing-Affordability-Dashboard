@@ -108,6 +108,14 @@ Rscript tests/test_public_release_hygiene.R
 Rscript tests/test_project_root_paths.R
 ```
 
+Before publishing, run the release-readiness checklist:
+
+```bash
+Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
+```
+
+Release checklist warnings can be acceptable for known data vintage, while failures block public release until fixed.
+
 For a quick source check:
 
 ```bash
