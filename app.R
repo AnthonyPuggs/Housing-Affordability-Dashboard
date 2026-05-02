@@ -249,15 +249,39 @@ ui <- page_navbar(
       /* Mobile: stack sidebars, reduce value box text */
       @media (max-width: 768px) {
         .navbar-collapse.show {
-          max-height: 70vh;
+          max-height: 52vh;
           overflow-y: auto;
         }
         .navbar-collapse.show .nav-link {
-          padding-top: 0.65rem;
-          padding-bottom: 0.65rem;
+          padding-top: 0.48rem;
+          padding-bottom: 0.48rem;
         }
         .bslib-sidebar-layout { flex-direction: column !important; }
         .bslib-sidebar-layout > .sidebar { width: 100% !important; max-width: 100% !important; }
+        .rental-market-page .rental-market-grid {
+          width: 100%;
+        }
+        .rental-market-page .rental-market-grid > .bslib-grid {
+          grid-template-columns: minmax(0, 1fr) !important;
+          grid-auto-rows: auto !important;
+        }
+        .rental-market-page .rental-market-grid .bslib-grid-item,
+        .rental-market-page .rental-market-grid .card {
+          min-width: 0;
+          width: 100% !important;
+        }
+        .rental-market-page .rental-market-chart {
+          height: 360px;
+          min-height: 360px;
+        }
+        .rental-market-page .rental-market-chart-square {
+          height: 390px;
+          min-height: 390px;
+        }
+        .rental-market-page .rental-market-chart-trend {
+          height: 460px;
+          min-height: 460px;
+        }
         .chart-wide,
         .chart-square {
           height: 340px;

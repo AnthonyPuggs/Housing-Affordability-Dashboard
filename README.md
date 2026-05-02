@@ -105,6 +105,7 @@ Rscript tests/test_market_entry_scenarios.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
 Rscript tests/test_responsive_ui_contracts.R
+Rscript tests/test_rental_market_mobile_contracts.R
 Rscript tests/test_theme_infrastructure.R
 Rscript tests/test_rba_raw_cache_hygiene.R
 Rscript tests/test_public_release_hygiene.R

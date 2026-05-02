@@ -50,11 +50,15 @@ if (file.exists(app_path)) {
   required_mobile_css <- c(
     "@media (max-width: 768px)",
     ".navbar-collapse.show",
-    "max-height: 70vh",
+    "max-height: 52vh",
     "overflow-y: auto",
     ".chart-wide",
     ".chart-square",
-    "min-height: 320px"
+    "min-height: 320px",
+    ".rental-market-page",
+    ".rental-market-grid",
+    "grid-template-columns: minmax(0, 1fr) !important",
+    ".rental-market-chart"
   )
   missing_mobile_css <- required_mobile_css[
     !vapply(required_mobile_css, grepl, logical(1), app_text, fixed = TRUE)
@@ -75,9 +79,25 @@ if (file.exists(app_path)) {
     substr(responsive_source_text, rental_start[1],
            nchar(responsive_source_text))
   }
-  check(grepl('layout_column_wrap\\(\\s*width\\s*=\\s*"420px"',
-              rental_segment, perl = TRUE),
-        'Rental Market layout_column_wrap() must use width = "420px"')
+  required_rental_segment <- c(
+    'layout_column_wrap\\(\\s*width\\s*=\\s*"420px"',
+    'div\\(class\\s*=\\s*"rental-market-page"',
+    'div\\(class\\s*=\\s*"rental-market-grid"',
+    'margin\\s*=\\s*rental_plot_margins\\$state',
+    'margin\\s*=\\s*rental_plot_margins\\$trend',
+    'margin\\s*=\\s*rental_plot_margins\\$index',
+    'margin\\s*=\\s*rental_plot_margins\\$costs'
+  )
+  missing_rental_segment <- required_rental_segment[
+    !vapply(required_rental_segment, grepl, logical(1),
+            rental_segment, perl = TRUE)
+  ]
+  check(length(missing_rental_segment) == 0,
+        paste("Rental Market responsive contract missing:",
+              paste(missing_rental_segment, collapse = "; ")))
+  check(grepl('rental_plot_margins <- list\\(',
+              responsive_source_text, perl = TRUE),
+        "Rental Market responsive margins helper is missing")
 }
 
 if (file.exists(description_path)) {

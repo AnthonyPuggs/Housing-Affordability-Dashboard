@@ -1,51 +1,62 @@
 # Rental Market page module.
 
+rental_plot_margins <- list(
+  state = list(l = 82, r = 20, b = 76, t = 38),
+  trend = list(l = 86, r = 20, b = 92, t = 32),
+  index = list(l = 74, r = 20, b = 72, t = 30),
+  costs = list(l = 150, r = 20, b = 78, t = 30)
+)
+
 rentalMarketPageUI <- function(id) {
   ns <- NS(id)
 
   nav_panel(
     "Rental Market",
-    layout_sidebar(
-      sidebar = sidebar(
-        width = 280, open = "desktop",
-        selectInput(ns("rental_year"), "Survey Year (NHHA)",
-                    choices = if (nrow(sih_nhha) > 0)
-                      rev(sort(unique(sih_nhha$survey_year))) else "2019-20",
-                    selected = "2019-20"),
-        selectInput(ns("rental_states"), "States/Territories",
-                    choices = c("All" = "all",
-                                if (nrow(sih_nhha) > 0)
-                                  sort(unique(sih_nhha$geography[
-                                    sih_nhha$geography != "Aust."]))
-                                else character(0)),
-                    multiple = TRUE,
-                    selected = "all"),
-        selectInput(ns("rental_cost_breakdown"), "Rental Costs By",
-                    choices = c("Age Group" = "age_group",
-                                "Family Type" = "family_type",
-                                "Income Quintile" = "equiv_income_quintile"))
-      ),
-      layout_column_wrap(
-        width = "420px",
-        card(
-          card_header("NHHA Rental Stress by State"),
-          source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Official survey burden/stress measure. ", sih_sampling_error_note),
-          card_body(div(class = "chart-square", plotlyOutput(ns("rental_stress_state"), height = "100%", width = "100%")))
+    div(class = "rental-market-page",
+      layout_sidebar(
+        sidebar = sidebar(
+          width = 280, open = "desktop",
+          selectInput(ns("rental_year"), "Survey Year (NHHA)",
+                      choices = if (nrow(sih_nhha) > 0)
+                        rev(sort(unique(sih_nhha$survey_year))) else "2019-20",
+                      selected = "2019-20"),
+          selectInput(ns("rental_states"), "States/Territories",
+                      choices = c("All" = "all",
+                                  if (nrow(sih_nhha) > 0)
+                                    sort(unique(sih_nhha$geography[
+                                      sih_nhha$geography != "Aust."]))
+                                  else character(0)),
+                      multiple = TRUE,
+                      selected = "all"),
+          selectInput(ns("rental_cost_breakdown"), "Rental Costs By",
+                      choices = c("Age Group" = "age_group",
+                                  "Family Type" = "family_type",
+                                  "Income Quintile" = "equiv_income_quintile"))
         ),
-        card(
-          card_header("NHHA Rental Stress Trends (Over Time)"),
-          source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Values are proportions of lower-income renter households. ", sih_sampling_error_note),
-          card_body(div(class = "chart-wide", plotlyOutput(ns("rental_stress_trend"), height = "100%", width = "100%")))
-        ),
-        card(
-          card_header("Rental Affordability Index"),
-          source_note("Cost-pressure index using ABS CPI rents and WPI; higher = less affordable."),
-          card_body(div(class = "chart-wide", plotlyOutput(ns("rental_afford_index"), height = "100%", width = "100%")))
-        ),
-        card(
-          card_header("Weekly Rental Costs by Demographics (2019-20)"),
-          source_note("ABS Survey of Income and Housing. Survey rental-cost estimates by household characteristic. ", sih_sampling_error_note),
-          card_body(div(class = "chart-square", plotlyOutput(ns("rental_costs_demo"), height = "100%", width = "100%")))
+        div(class = "rental-market-grid",
+          layout_column_wrap(
+            width = "420px",
+            card(
+              card_header("NHHA Rental Stress by State"),
+              source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Official survey burden/stress measure. ", sih_sampling_error_note),
+              card_body(div(class = "chart-square rental-market-chart rental-market-chart-square", plotlyOutput(ns("rental_stress_state"), height = "100%", width = "100%")))
+            ),
+            card(
+              card_header("NHHA Rental Stress Trends (Over Time)"),
+              source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Values are proportions of lower-income renter households. ", sih_sampling_error_note),
+              card_body(div(class = "chart-wide rental-market-chart rental-market-chart-wide rental-market-chart-trend", plotlyOutput(ns("rental_stress_trend"), height = "100%", width = "100%")))
+            ),
+            card(
+              card_header("Rental Affordability Index"),
+              source_note("Cost-pressure index using ABS CPI rents and WPI; higher = less affordable."),
+              card_body(div(class = "chart-wide rental-market-chart rental-market-chart-wide", plotlyOutput(ns("rental_afford_index"), height = "100%", width = "100%")))
+            ),
+            card(
+              card_header("Weekly Rental Costs by Demographics (2019-20)"),
+              source_note("ABS Survey of Income and Housing. Survey rental-cost estimates by household characteristic. ", sih_sampling_error_note),
+              card_body(div(class = "chart-square rental-market-chart rental-market-chart-square", plotlyOutput(ns("rental_costs_demo"), height = "100%", width = "100%")))
+            )
+          )
         )
       )
     )
@@ -80,7 +91,8 @@ rentalMarketPageServer <- function(id, is_dark) {
         labs(x = NULL, y = "% in Rental Stress (>30% of income)") +
         theme_afford(is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"),
+                         margin = rental_plot_margins$state)
     }) %>%
       bindCache(input$rental_year, input$rental_states, is_dark())
 
@@ -102,12 +114,13 @@ rentalMarketPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0, "No NHHA trend data."))
 
       dark <- is_dark()
-      text_col <- if (dark) "#E3EBF4" else "#1F2D3D"
 
       p <- ggplot(d, aes(x = survey_year, y = geography, fill = value)) +
         geom_tile(color = if (dark) "#1B2A44" else "#FFFFFF", linewidth = 1.5) +
-        geom_text(aes(label = sprintf("%.0f%%", value)),
-                  size = 3.2, color = text_col, show.legend = FALSE) +
+        scale_x_discrete(
+          breaks = function(x) x[seq(1, length(x), by = 3)],
+          labels = function(x) sub("-.*", "", x)
+        ) +
         scale_fill_gradient2(
           low = "#2196F3", mid = "#FFB74D", high = "#e74c3c",
           midpoint = 40, limits = c(10, 60),
@@ -120,7 +133,8 @@ rentalMarketPageServer <- function(id, is_dark) {
           axis.text.x = element_text(angle = 45, hjust = 1)
         )
 
-      pl <- dashboard_ggplotly(p, dark = dark, tooltip = "fill")
+      pl <- dashboard_ggplotly(p, dark = dark, tooltip = "fill",
+                               margin = rental_plot_margins$trend)
       for (i in seq_along(pl$x$data)) {
         if (!is.null(pl$x$data[[i]]$mode) && grepl("text", pl$x$data[[i]]$mode)) {
           pl$x$data[[i]]$hoverinfo <- "skip"
@@ -141,7 +155,8 @@ rentalMarketPageServer <- function(id, is_dark) {
         labs(x = NULL, y = "Index (CPI Rents / WPI)") +
         theme_afford(is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"),
+                         margin = rental_plot_margins$index)
     }) %>%
       bindCache(is_dark())
 
@@ -156,15 +171,25 @@ rentalMarketPageServer <- function(id, is_dark) {
 
       validate(need(nrow(d) > 0, "No rental cost data for selected breakdown."))
 
-      d <- d %>% mutate(tenure_label = label_tenure(tenure))
+      d <- d %>%
+        mutate(
+          tenure_label = label_tenure(tenure),
+          breakdown_label = stringr::str_wrap(breakdown_val, width = 22)
+        )
 
-      p <- ggplot(d, aes(x = breakdown_val, y = value, fill = tenure_label)) +
+      p <- ggplot(d, aes(x = breakdown_label, y = value, fill = tenure_label)) +
         geom_col(position = "dodge", alpha = 0.85) +
+        scale_y_continuous(
+          labels = label_number(big.mark = ","),
+          breaks = scales::breaks_width(250),
+          minor_breaks = NULL
+        ) +
         labs(x = NULL, y = "Mean Weekly Rent ($)", fill = NULL) +
         coord_flip() +
         theme_afford(is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"),
+                         margin = rental_plot_margins$costs)
     }) %>%
       bindCache(input$rental_cost_breakdown, is_dark())
   })
