@@ -103,6 +103,9 @@ if (file.exists(module_path)) {
     "estimate_lower_95",
     "estimate_upper_95",
     "geom_errorbar(",
+    "rental_stress_gradient_colours()",
+    'semantic_colour("worse")',
+    'semantic_colour("caution")',
     "tooltip = c(\"x\", \"y\", \"text\")",
     "tooltip = c(\"fill\", \"text\")"
   )

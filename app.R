@@ -38,6 +38,7 @@ library(plotly)
 
 .load_app_project_paths()
 source(project_path("plot_setup.R"), local = TRUE)
+source(project_path("R", "visual_semantics.R"), local = TRUE)
 source(project_path("R", "app_ui_helpers.R"), local = TRUE)
 source(project_path("R", "plotly_helpers.R"), local = TRUE)
 source(project_path("R", "market_entry_scenarios.R"), local = TRUE)
@@ -243,8 +244,11 @@ ui <- page_navbar(
       }
 
       /* KPI change indicator colors */
-      .kpi-change-up   { color: #2ecc71 !important; font-weight: 600; }
-      .kpi-change-down { color: #e74c3c !important; font-weight: 600; }
+      .kpi-change-better { color: #0072B2 !important; font-weight: 600; }
+      .kpi-change-worse { color: #D55E00 !important; font-weight: 600; }
+      .kpi-change-neutral { color: #6C757D !important; font-weight: 600; }
+      .kpi-change-up { color: #0072B2 !important; font-weight: 600; }
+      .kpi-change-down { color: #D55E00 !important; font-weight: 600; }
 
       /* Mobile: stack sidebars, reduce value box text */
       @media (max-width: 768px) {

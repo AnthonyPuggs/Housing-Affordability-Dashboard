@@ -95,6 +95,9 @@ if (file.exists(module_path)) {
     "color = approval_label",
     "date >= input$supply_dates[1]",
     "date <= input$supply_dates[2]",
+    'kpi_change_class(pct, favourable = "increase")',
+    'kpi_change_class(diff_val, favourable = "decrease")',
+    'kpi_change_class(diff_pp, favourable = "neutral")',
     "bindCache(input$supply_dates, input$supply_states, input$supply_building_type, input$supply_sector, is_dark())",
     "dashboard_ggplotly"
   )

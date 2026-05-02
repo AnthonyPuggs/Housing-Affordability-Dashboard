@@ -93,6 +93,9 @@ if (file.exists(module_path)) {
     "output$context_pop <- renderPlotly",
     "latest_change(abs_ts, \"series\", \"Unemployment Rate\"",
     "latest_change(abs_ts, \"series\", \"Participation Rate\"",
+    'kpi_change_class(diff_val, favourable = "decrease")',
+    'kpi_change_class(pct, favourable = "neutral")',
+    'kpi_change_class(diff_val, favourable = "increase")',
     "bindCache(input$context_dates, is_dark())",
     "dashboard_ggplotly"
   )

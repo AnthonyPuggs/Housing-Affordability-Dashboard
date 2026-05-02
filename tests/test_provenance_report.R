@@ -84,6 +84,8 @@ if (all(file.exists(c(project_paths_path, registry_path, report_path)))) {
       "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment",
       "Deposit, LVR and loan-term controls are stylised serviceability assumptions",
       "serviceability chart uses AWE individual earnings as the income proxy",
+      "KPI colours encode economic interpretation",
+      "better, worse or neutral/contextual",
       "R/market_entry_scenarios.R",
       "Chart-level reliability markers",
       "visible error bars and interval hover text use 95% margin-of-error metadata",

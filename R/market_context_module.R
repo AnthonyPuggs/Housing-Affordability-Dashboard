@@ -83,8 +83,7 @@ marketContextPageServer <- function(id, is_dark) {
                           periods_back = 12, period_label = "YoY",
                           change_type = "percentage_points")
       diff_val <- ch$change
-      # For unemployment, down is good (green), up is bad (red).
-      css_class <- if (!is.na(diff_val) && diff_val <= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(diff_val, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), ch$label)
     })
 
@@ -109,7 +108,7 @@ marketContextPageServer <- function(id, is_dark) {
       pct <- (current_annual / previous_annual - 1) * 100
       direction <- if (pct >= 0) "\u2191" else "\u2193"
       label <- paste0(direction, " ", sprintf("%+.0f%%", pct), " YoY")
-      css_class <- if (pct >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(pct, favourable = "neutral")
       tags$p(class = paste("kpi-subtitle", css_class), label)
     })
 
@@ -122,7 +121,7 @@ marketContextPageServer <- function(id, is_dark) {
                           periods_back = 12, period_label = "YoY",
                           change_type = "percentage_points")
       diff_val <- ch$change
-      css_class <- if (!is.na(diff_val) && diff_val >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(diff_val, favourable = "increase")
       lbl <- if (is.na(diff_val)) "" else if (abs(diff_val) < 0.3) "\u2192 Stable" else ch$label
       tags$p(class = paste("kpi-subtitle", css_class), lbl)
     })

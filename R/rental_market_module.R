@@ -131,7 +131,7 @@ rentalMarketPageServer <- function(id, is_dark) {
 
       p <- ggplot(d, aes(x = reorder(geography, -value), y = value,
                          text = hover_text)) +
-        geom_col(fill = "#e74c3c", alpha = 0.85, width = 0.7) +
+        geom_col(fill = semantic_colour("worse"), alpha = 0.85, width = 0.7) +
         geom_errorbar(
           data = d %>%
             filter(!is.na(estimate_lower_95), !is.na(estimate_upper_95)),
@@ -150,10 +150,11 @@ rentalMarketPageServer <- function(id, is_dark) {
           vjust = -0.45,
           size = 4.2,
           fontface = "bold",
-          color = "#FFB74D"
+          color = semantic_colour("caution")
         ) +
         {if (nrow(nat) > 0) geom_hline(yintercept = nat$value[1],
-                                       linetype = "dashed", color = "#333")} +
+                                       linetype = "dashed",
+                                       color = semantic_colour("reference"))} +
         scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
         labs(x = NULL, y = "% in Rental Stress (>30% of income)") +
         theme_afford(is_dark())
@@ -196,6 +197,7 @@ rentalMarketPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0, "No NHHA trend data."))
 
       dark <- is_dark()
+      rental_stress_cols <- rental_stress_gradient_colours()
 
       p <- ggplot(d, aes(x = survey_year, y = geography, fill = value,
                          text = hover_text)) +
@@ -208,7 +210,9 @@ rentalMarketPageServer <- function(id, is_dark) {
         ) +
         scale_color_identity() +
         scale_fill_gradient2(
-          low = "#2196F3", mid = "#FFB74D", high = "#e74c3c",
+          low = rental_stress_cols[["low"]],
+          mid = rental_stress_cols[["mid"]],
+          high = rental_stress_cols[["high"]],
           midpoint = 40, limits = c(10, 60),
           name = "% in Stress"
         ) +
@@ -236,7 +240,7 @@ rentalMarketPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0, "No rental affordability index data."))
 
       p <- ggplot(d, aes(x = date, y = value)) +
-        geom_line(linewidth = 1, color = "#e74c3c") +
+        geom_line(linewidth = 1, color = semantic_colour("worse")) +
         scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
         labs(x = NULL, y = "Index (CPI Rents / WPI)") +
         theme_afford(is_dark())

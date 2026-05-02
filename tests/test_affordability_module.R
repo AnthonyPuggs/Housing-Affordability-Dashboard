@@ -122,6 +122,9 @@ if (file.exists(module_path)) {
     "reliability_marker",
     "quality_hover",
     "interval_label",
+    "cost_pressure_palette(",
+    "stress_band_palette()",
+    "burden_gradient_colours()",
     "tooltip = c(\"x\", \"y\", \"fill\", \"text\")"
   )
   missing_module_text <- required_module_text[

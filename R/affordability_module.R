@@ -238,6 +238,7 @@ affordabilityPageServer <- function(id, is_dark) {
       p <- ggplot(d, aes(x = date, y = value, color = indicator_label)) +
         geom_line(linewidth = 1) +
         facet_wrap(~indicator_label, scales = "free_y") +
+        scale_color_manual(values = cost_pressure_palette()) +
         scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
         labs(x = NULL, y = NULL, color = NULL) +
         theme_afford(is_dark()) +
@@ -266,13 +267,16 @@ affordabilityPageServer <- function(id, is_dark) {
       p <- ggplot(d, aes(x = date, y = serviceability_pct,
                          color = scenario)) +
         geom_line(linewidth = 1.1) +
-        geom_hline(yintercept = 30, linetype = "dashed", color = "#FF9800",
-                   linewidth = 0.8) +
+        geom_hline(yintercept = 30, linetype = "dashed",
+                   color = semantic_colour("caution"), linewidth = 0.8) +
         annotate("text", x = max(d$date) - 2500, y = 31,
                  label = "30% stress reference",
-                 color = "#FF9800", size = 3.5, hjust = 0, vjust = 0) +
-        scale_color_manual(values = c("Nominal rate" = "#0E5A8A",
-                                      "Assessed rate" = "#e53935")) +
+                 color = semantic_colour("caution"), size = 3.5,
+                 hjust = 0, vjust = 0) +
+        scale_color_manual(values = c(
+          "Nominal rate" = semantic_colour("categorical_navy"),
+          "Assessed rate" = semantic_colour("worse")
+        )) +
         scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
         scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
         labs(x = NULL, y = NULL, color = NULL) +
@@ -358,8 +362,7 @@ affordabilityPageServer <- function(id, is_dark) {
         mutate(stress_band = factor(stress_band,
                                     levels = c("<25%", "25-30%", "30-50%", ">50%")))
 
-      stress_cols <- c("<25%" = "#2ecc71", "25-30%" = "#f39c12",
-                       "30-50%" = "#e74c3c", ">50%" = "#8e44ad")
+      stress_cols <- stress_band_palette()
 
       p <- ggplot(d, aes(x = breakdown_val, y = value, fill = stress_band,
                          text = hover_text)) +
@@ -397,10 +400,14 @@ affordabilityPageServer <- function(id, is_dark) {
 
       d <- d %>% mutate(tenure_label = label_tenure(tenure))
 
+      burden_cols <- burden_gradient_colours()
+
       p <- ggplot(d, aes(x = tenure_label, y = breakdown_val, fill = value)) +
         geom_tile(color = "white", linewidth = 0.5) +
         geom_text(aes(label = round(value, 1)), size = 3.5) +
-        scale_fill_gradient2(low = "#2ecc71", mid = "#f39c12", high = "#e74c3c",
+        scale_fill_gradient2(low = burden_cols[["low"]],
+                             mid = burden_cols[["mid"]],
+                             high = burden_cols[["high"]],
                              midpoint = 25, name = "Cost/Income %") +
         labs(x = NULL, y = NULL) +
         theme_afford(is_dark()) +

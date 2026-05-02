@@ -6,7 +6,7 @@ overview_cost_pressure_indicators <- c(
   "Price-to-Income Ratio"
 )
 overview_cost_pressure_colours <- stats::setNames(
-  c("#009688", "#FF9800", "#1565C0"),
+  cost_pressure_palette(indicator_chart_label(overview_cost_pressure_indicators)),
   indicator_chart_label(overview_cost_pressure_indicators)
 )
 
@@ -104,7 +104,7 @@ overviewPageServer <- function(id, is_dark) {
       ch <- latest_change(national_mean_price, "city", "National Avg",
                           periods_back = 4, period_label = "YoY",
                           change_type = "relative_pct")
-      css_class <- if (!is.na(ch$change) && ch$change >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(ch$change, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), ch$label)
     })
 
@@ -119,7 +119,7 @@ overviewPageServer <- function(id, is_dark) {
       ch <- latest_change(median_house_prices, "city", "Sydney",
                           periods_back = 4, period_label = "YoY",
                           change_type = "relative_pct")
-      css_class <- if (!is.na(ch$change) && ch$change >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(ch$change, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), ch$label)
     })
 
@@ -143,7 +143,7 @@ overviewPageServer <- function(id, is_dark) {
       diff_val <- current - previous
       direction <- if (diff_val >= 0) "\u2191" else "\u2193"
       label <- paste0(direction, " ", sprintf("%+.1f pp", diff_val), " YoY")
-      css_class <- if (diff_val >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(diff_val, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), label)
     })
 
@@ -158,7 +158,7 @@ overviewPageServer <- function(id, is_dark) {
       ch <- latest_change(afford_idx, "indicator", "Rental Affordability Index",
                           periods_back = 4, period_label = "YoY",
                           change_type = "relative_pct")
-      css_class <- if (!is.na(ch$change) && ch$change >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(ch$change, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), ch$label)
     })
 

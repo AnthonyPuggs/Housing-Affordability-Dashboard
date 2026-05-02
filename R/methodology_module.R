@@ -73,6 +73,7 @@ methodologyPageUI <- function(id) {
             tags$li("CPI rents and CPI new dwelling indexes are price indexes, not household burden measures."),
             tags$li("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."),
             tags$li("Deposit, LVR and loan-term controls are stylised serviceability assumptions; the serviceability chart uses AWE individual earnings as the income proxy."),
+            tags$li("KPI colours encode economic interpretation as better, worse or neutral/contextual rather than raw up/down movement."),
             tags$li("SIH relative standard error and 95% margin of error metadata are provided in data/sih_estimate_quality.csv; users should interpret with caution when estimates have high RSE values."),
             tags$li("Chart-level reliability markers (\u2020) are driven by data/sih_estimate_quality.csv where matching SIH RSE metadata is available."),
             tags$li("Where available, visible error bars and interval hover text use 95% margin-of-error metadata from data/sih_estimate_quality.csv."),

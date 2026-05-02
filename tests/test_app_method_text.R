@@ -45,6 +45,8 @@ required_text <- c(
   "Modelled Mortgage Cost Pressure",
   "Stylised Deposit Gap (Years)",
   "R/market_entry_scenarios.R",
+  "KPI colours encode economic interpretation",
+  "better, worse or neutral/contextual",
   "relative standard error",
   "margin of error",
   "interpret with caution"

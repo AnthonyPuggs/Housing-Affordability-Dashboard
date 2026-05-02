@@ -171,7 +171,7 @@ housingSupplyPageServer <- function(id, is_dark) {
       pct <- (current / previous - 1) * 100
       direction <- if (pct >= 0) "\u2191" else "\u2193"
       label <- paste0(direction, " ", sprintf("%+.1f%%", pct), " YoY")
-      css_class <- if (pct >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(pct, favourable = "increase")
       tags$p(class = paste("kpi-subtitle", css_class), label)
     })
 
@@ -194,7 +194,7 @@ housingSupplyPageServer <- function(id, is_dark) {
       pct <- (current / previous - 1) * 100
       direction <- if (pct >= 0) "\u2191" else "\u2193"
       label <- paste0(direction, " ", sprintf("%+.1f%%", pct), " YoY")
-      css_class <- if (pct >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(pct, favourable = "increase")
       tags$p(class = paste("kpi-subtitle", css_class), label)
     })
 
@@ -207,7 +207,7 @@ housingSupplyPageServer <- function(id, is_dark) {
                           periods_back = 12, period_label = "YoY",
                           change_type = "relative_pct")
       diff_val <- ch$change
-      css_class <- if (!is.na(diff_val) && diff_val >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(diff_val, favourable = "decrease")
       lbl <- if (is.na(diff_val)) "" else ch$label
       tags$p(class = paste("kpi-subtitle", css_class), lbl)
     })
@@ -267,7 +267,7 @@ housingSupplyPageServer <- function(id, is_dark) {
       diff_pp <- current_share - previous_share
       direction <- if (diff_pp >= 0) "\u2191" else "\u2193"
       label <- paste0(direction, " ", sprintf("%+.1f pp", diff_pp), " YoY")
-      css_class <- if (diff_pp >= 0) "kpi-change-up" else "kpi-change-down"
+      css_class <- kpi_change_class(diff_pp, favourable = "neutral")
       tags$p(class = paste("kpi-subtitle", css_class), label)
     })
 
