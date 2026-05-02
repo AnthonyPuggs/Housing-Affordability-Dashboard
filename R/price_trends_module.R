@@ -83,22 +83,7 @@ priceTrendsPageServer <- function(id, is_dark) {
                date <= input$price_dates[2])
 
       if (nrow(d) == 0) return(d)
-
-      if (input$price_transform == "yoy") {
-        d <- d %>%
-          group_by(city) %>%
-          arrange(date) %>%
-          mutate(value = 100 * (value / lag(value, 4) - 1)) %>%
-          filter(!is.na(value)) %>%
-          ungroup()
-      } else if (input$price_transform == "index") {
-        d <- d %>%
-          group_by(city) %>%
-          arrange(date) %>%
-          mutate(value = 100 * value / first(value)) %>%
-          ungroup()
-      }
-      d
+      price_series_transform(d, input$price_transform)
     })
 
     output$price_chart <- renderPlotly({
@@ -106,16 +91,7 @@ priceTrendsPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0,
         "No data for selected cities/dwelling type. Try 'Total' or check dates."))
 
-      y_lab <- switch(input$price_transform,
-                      levels = "Index", yoy = "YoY %", index = "Index (start=100)")
-
-      p <- ggplot(d, aes(x = date, y = value, color = city)) +
-        geom_line(linewidth = 1, alpha = 0.9) +
-        scale_color_manual(values = city_colours, na.value = "grey50") +
-        scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
-        scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
-        labs(x = NULL, y = y_lab, color = NULL) +
-        theme_afford(is_dark())
+      p <- build_dwelling_price_plot(d, input$price_transform, is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%
@@ -129,51 +105,14 @@ priceTrendsPageServer <- function(id, is_dark) {
                date >= input$rent_cpi_dates[1],
                date <= input$rent_cpi_dates[2])
       if (nrow(d) == 0) return(d)
-
-      if (input$rent_cpi_datatype == "yoy") {
-        d <- d %>%
-          group_by(city) %>%
-          arrange(date) %>%
-          mutate(value = 100 * (value / lag(value, 4) - 1)) %>%
-          filter(!is.na(value)) %>%
-          ungroup()
-      } else if (input$rent_cpi_datatype == "qoq") {
-        d <- d %>%
-          group_by(city) %>%
-          arrange(date) %>%
-          mutate(value = 100 * (value / lag(value, 1) - 1)) %>%
-          filter(!is.na(value)) %>%
-          ungroup()
-      }
-      d
+      rent_cpi_series_transform(d, input$rent_cpi_datatype)
     })
 
     output$rent_cpi_chart <- renderPlotly({
       d <- rent_cpi_data()
       validate(need(nrow(d) > 0, "No CPI Rents data for selected cities/dates."))
 
-      y_lab <- switch(input$rent_cpi_datatype,
-                      index = "Index",
-                      yoy = "Annual change (%)",
-                      qoq = "Quarterly change (%)")
-
-      datatype_label <- switch(input$rent_cpi_datatype,
-                               index = "index numbers",
-                               yoy = "annual change (%)",
-                               qoq = "quarterly change (%)")
-
-      date_range_label <- paste(
-        format(min(d$date), "%b %Y"), "to", format(max(d$date), "%b %Y"))
-
-      p <- ggplot(d, aes(x = date, y = value, color = city)) +
-        geom_line(linewidth = 1, alpha = 0.9) +
-        scale_color_manual(values = city_colours, na.value = "grey50") +
-        scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
-        scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
-        labs(x = NULL, y = y_lab, color = NULL,
-             title = paste0("Rent CPI, ", datatype_label,
-                            ", by greater capital city, ", date_range_label)) +
-        theme_afford(is_dark())
+      p <- build_rent_cpi_plot(d, input$rent_cpi_datatype, is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%

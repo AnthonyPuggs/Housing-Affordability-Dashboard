@@ -8,11 +8,13 @@ check <- function(condition, message) {
 }
 
 helper_path <- file.path(repo_root, "R", "app_ui_helpers.R")
+chart_builder_path <- file.path(repo_root, "R", "chart_builders.R")
 module_path <- file.path(repo_root, "R", "market_context_module.R")
 app_path <- file.path(repo_root, "app.R")
 readme_path <- file.path(repo_root, "README.md")
 
 check(file.exists(helper_path), "R/app_ui_helpers.R does not exist")
+check(file.exists(chart_builder_path), "R/chart_builders.R does not exist")
 check(file.exists(module_path), "R/market_context_module.R does not exist")
 check(file.exists(app_path), "app.R does not exist")
 check(file.exists(readme_path), "README.md does not exist")
@@ -26,13 +28,18 @@ if (file.exists(module_path)) {
         paste(module_path, "does not parse:", parsed))
 }
 
-if (all(file.exists(c(helper_path, module_path)))) {
+if (all(file.exists(c(helper_path, chart_builder_path, module_path)))) {
   suppressPackageStartupMessages({
     library(shiny)
     library(bslib)
     library(plotly)
+    library(ggplot2)
+    library(dplyr)
   })
+  source(file.path(repo_root, "R", "dashboard_formatting.R"))
+  source(file.path(repo_root, "R", "dashboard_theme.R"))
   source(helper_path)
+  source(chart_builder_path)
   source(module_path)
 
   check(exists("marketContextPageUI", mode = "function"),
@@ -91,6 +98,9 @@ if (file.exists(module_path)) {
     "output$context_rates <- renderPlotly",
     "output$context_labour <- renderPlotly",
     "output$context_pop <- renderPlotly",
+    "build_context_rates_plot(",
+    "build_context_labour_plot(",
+    "build_context_population_plot(",
     "latest_change(abs_ts, \"series\", \"Unemployment Rate\"",
     "latest_change(abs_ts, \"series\", \"Participation Rate\"",
     'kpi_change_class(diff_val, favourable = "decrease")',
@@ -105,11 +115,14 @@ if (file.exists(module_path)) {
   check(length(missing_module_text) == 0,
         paste("R/market_context_module.R missing module constructs:",
               paste(missing_module_text, collapse = "; ")))
+  check(!grepl("ggplot(", module_text, fixed = TRUE),
+        "R/market_context_module.R should delegate ggplot construction to R/chart_builders.R")
 }
 
 if (file.exists(app_path)) {
   app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
   required_app_text <- c(
+    'source(project_path("R", "chart_builders.R"), local = TRUE)',
     'source(project_path("R", "market_context_module.R"), local = TRUE)',
     'marketContextPageUI("market_context")',
     'marketContextPageServer("market_context", is_dark = is_dark)'
@@ -132,8 +145,13 @@ if (file.exists(app_path)) {
 
 if (file.exists(readme_path)) {
   readme_text <- paste(readLines(readme_path, warn = FALSE), collapse = "\n")
+  check(grepl("R/chart_builders.R", readme_text, fixed = TRUE),
+        "README.md must document the chart builder helper surface")
   check(grepl("R/market_context_module.R", readme_text, fixed = TRUE),
         "README.md must document the Market Context module pilot")
+  check(grepl("Rscript tests/test_chart_builders.R",
+              readme_text, fixed = TRUE),
+        "README.md must document the chart builder test command")
   check(grepl("Rscript tests/test_market_context_module.R",
               readme_text, fixed = TRUE),
         "README.md must document the Market Context module test command")

@@ -140,21 +140,7 @@ marketContextPageServer <- function(id, is_dark) {
 
       validate(need(nrow(d) > 0, "No rate data available."))
 
-      rate_colours <- c(
-        "RBA Cash Rate" = "#1B5E20",
-        "Owner-occ Variable (Discounted)" = "#2196F3",
-        "Owner-occ 3yr Fixed" = "#1565C0",
-        "Investor Variable (Discounted)" = "#FF9800",
-        "Investor 3yr Fixed" = "#E65100"
-      )
-
-      p <- ggplot(d, aes(x = date, y = value, color = series)) +
-        geom_line(linewidth = 1, alpha = 0.9) +
-        scale_color_manual(values = rate_colours) +
-        scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
-        scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
-        labs(x = NULL, y = "%", color = NULL) +
-        theme_afford(is_dark())
+      p <- build_context_rates_plot(d, is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%
@@ -165,23 +151,10 @@ marketContextPageServer <- function(id, is_dark) {
         filter(series %in% c("Unemployment Rate", "Underemployment Rate",
                               "Labour Underutilisation Rate"),
                date >= input$context_dates[1],
-               date <= input$context_dates[2]) %>%
-        mutate(series = factor(series,
-          levels = c("Labour Underutilisation Rate", "Underemployment Rate",
-                     "Unemployment Rate")))
+               date <= input$context_dates[2])
       validate(need(nrow(d) > 0, "No labour market data available."))
 
-      labour_fills <- c("Unemployment Rate" = "#2196F3",
-                        "Underemployment Rate" = "#AB47BC",
-                        "Labour Underutilisation Rate" = "#78909C")
-
-      p <- ggplot(d, aes(x = date, y = value, fill = series)) +
-        geom_area(alpha = 0.6, linewidth = 0.5, colour = "white") +
-        scale_fill_manual(values = labour_fills) +
-        scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
-        scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
-        labs(x = NULL, y = NULL, fill = NULL) +
-        theme_afford(is_dark())
+      p <- build_context_labour_plot(d, is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
     }) %>%
@@ -195,12 +168,7 @@ marketContextPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0,
         "Run pipeline/05_driver.R to fetch population data (ABS 3101.0)"))
 
-      p <- ggplot(d, aes(x = date, y = value)) +
-        geom_col(fill = "#29B6F6", alpha = 0.85, width = 60) +
-        scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
-        scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 1)) +
-        labs(x = NULL, y = "Thousands") +
-        theme_afford(is_dark())
+      p <- build_context_population_plot(d, is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
     }) %>%

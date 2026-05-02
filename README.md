@@ -74,6 +74,8 @@ The Shiny app includes a Methodology page backed by this registry. It shows the 
 
 `plot_setup.R` is a thin compatibility entrypoint over focused support modules for CSV loading, dashboard formatting, theme helpers and app-ready precomputed series. It keeps the existing global object names available to page modules while reducing the setup file's direct responsibility.
 
+`R/chart_builders.R` is the first chart-construction helper surface. It keeps selected Price Trends and Market Context ggplot builders testable outside Shiny while modules retain input handling, validation, caching and Plotly conversion.
+
 The Housing Supply page keeps Building Approvals readable by filtering the ABS approval series with state, building-type and sector controls; the default view compares total-sector total approvals for New South Wales and Victoria.
 
 The Geographic Affordability page is an SIH-only, geography-aligned view. It compares state, lower-income state and greater-capital-city/rest-of-state SIH estimates where the housing-cost numerator and income or household denominator are measured within the same geography; it does not construct state or capital-city market-entry indexes from national wage, RPPI, AWE, WPI or CPI-rent proxies.
@@ -112,6 +114,7 @@ Rscript tests/test_sih_workbook_benchmarks.R
 Rscript tests/test_market_entry_scenarios.R
 Rscript tests/test_serviceability_scenario_controls.R
 Rscript tests/test_visual_semantics.R
+Rscript tests/test_chart_builders.R
 Rscript tests/test_plot_setup_extraction.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
