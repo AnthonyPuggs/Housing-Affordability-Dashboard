@@ -129,35 +129,11 @@ rentalMarketPageServer <- function(id, is_dark) {
                metric == "pct_rental_stress_over_30",
                geography == "Aust.")
 
-      p <- ggplot(d, aes(x = reorder(geography, -value), y = value,
-                         text = hover_text)) +
-        geom_col(fill = semantic_colour("worse"), alpha = 0.85, width = 0.7) +
-        geom_errorbar(
-          data = d %>%
-            filter(!is.na(estimate_lower_95), !is.na(estimate_upper_95)),
-          aes(ymin = estimate_lower_95, ymax = estimate_upper_95),
-          inherit.aes = TRUE,
-          width = 0.22,
-          linewidth = 0.75,
-          color = if (is_dark()) "#F8FAFC" else "#172033",
-          alpha = 0.9
-        ) +
-        geom_text(
-          data = d %>% filter(nzchar(reliability_marker)),
-          aes(x = reorder(geography, -value), y = value,
-              label = reliability_marker),
-          inherit.aes = FALSE,
-          vjust = -0.45,
-          size = 4.2,
-          fontface = "bold",
-          color = semantic_colour("caution")
-        ) +
-        {if (nrow(nat) > 0) geom_hline(yintercept = nat$value[1],
-                                       linetype = "dashed",
-                                       color = semantic_colour("reference"))} +
-        scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
-        labs(x = NULL, y = "% in Rental Stress (>30% of income)") +
-        theme_afford(is_dark())
+      p <- build_rental_stress_state_plot(
+        d,
+        national_value = if (nrow(nat) > 0) nat$value[1] else NULL,
+        dark = is_dark()
+      )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "text"),
                          margin = rental_plot_margins$state)
@@ -197,31 +173,7 @@ rentalMarketPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0, "No NHHA trend data."))
 
       dark <- is_dark()
-      rental_stress_cols <- rental_stress_gradient_colours()
-
-      p <- ggplot(d, aes(x = survey_year, y = geography, fill = value,
-                         text = hover_text)) +
-        geom_tile(color = if (dark) "#1B2A44" else "#FFFFFF", linewidth = 1.5) +
-        geom_text(aes(label = tile_label, color = tile_text_colour),
-                  size = 2.35, fontface = "bold", show.legend = FALSE) +
-        scale_x_discrete(
-          breaks = function(x) x[seq(1, length(x), by = 3)],
-          labels = function(x) sub("-.*", "", x)
-        ) +
-        scale_color_identity() +
-        scale_fill_gradient2(
-          low = rental_stress_cols[["low"]],
-          mid = rental_stress_cols[["mid"]],
-          high = rental_stress_cols[["high"]],
-          midpoint = 40, limits = c(10, 60),
-          name = "% in Stress"
-        ) +
-        labs(x = NULL, y = NULL) +
-        theme_afford(dark) +
-        theme(
-          panel.grid = element_blank(),
-          axis.text.x = element_text(angle = 45, hjust = 1)
-        )
+      p <- build_rental_stress_trend_plot(d, dark = dark)
 
       pl <- dashboard_ggplotly(p, dark = dark, tooltip = c("fill", "text"),
                                margin = rental_plot_margins$trend)
@@ -239,11 +191,7 @@ rentalMarketPageServer <- function(id, is_dark) {
         filter(indicator == "Rental Affordability Index")
       validate(need(nrow(d) > 0, "No rental affordability index data."))
 
-      p <- ggplot(d, aes(x = date, y = value)) +
-        geom_line(linewidth = 1, color = semantic_colour("worse")) +
-        scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
-        labs(x = NULL, y = "Index (CPI Rents / WPI)") +
-        theme_afford(is_dark())
+      p <- build_rental_affordability_index_plot(d, dark = is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"),
                          margin = rental_plot_margins$index)
@@ -267,16 +215,7 @@ rentalMarketPageServer <- function(id, is_dark) {
           breakdown_label = stringr::str_wrap(breakdown_val, width = 22)
         )
 
-      p <- ggplot(d, aes(x = breakdown_label, y = value, fill = tenure_label)) +
-        geom_col(position = "dodge", alpha = 0.85) +
-        scale_y_continuous(
-          labels = label_number(big.mark = ","),
-          breaks = scales::breaks_width(250),
-          minor_breaks = NULL
-        ) +
-        labs(x = NULL, y = "Mean Weekly Rent ($)", fill = NULL) +
-        coord_flip() +
-        theme_afford(is_dark())
+      p <- build_rental_costs_demographic_plot(d, dark = is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"),
                          margin = rental_plot_margins$costs)

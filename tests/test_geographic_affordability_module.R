@@ -110,9 +110,10 @@ if (file.exists(module_path)) {
     "reliability_marker",
     "quality_hover",
     "interval_label",
-    "estimate_lower_95",
-    "estimate_upper_95",
-    "geom_errorbar(",
+    "build_geo_state_trend_plot(",
+    "build_geo_state_latest_plot(",
+    "build_geo_lower_income_plot(",
+    "build_geo_gcc_comparison_plot(",
     "tooltip = c(\"x\", \"y\", \"text\")"
   )
   missing_module_text <- required_module_text[
@@ -121,6 +122,8 @@ if (file.exists(module_path)) {
   check(length(missing_module_text) == 0,
         paste("R/geographic_affordability_module.R missing module constructs:",
               paste(missing_module_text, collapse = "; ")))
+  check(!grepl("ggplot(", module_text, fixed = TRUE),
+        "R/geographic_affordability_module.R should delegate ggplot construction to R/chart_builders.R")
 
   forbidden_terms <- c(
     "afford_idx",

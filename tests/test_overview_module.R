@@ -117,6 +117,9 @@ if (file.exists(module_path)) {
     'kpi_change_class(ch$change, favourable = "decrease")',
     'kpi_change_class(diff_val, favourable = "decrease")',
     "cost_pressure_palette(",
+    "overview_price_series_transform(",
+    "build_overview_median_prices_plot(",
+    "build_overview_affordability_plot(",
     "dashboard_ggplotly",
     "annotations = annotations",
     "margin = list(r = 100)",
@@ -129,6 +132,8 @@ if (file.exists(module_path)) {
   check(length(missing_module_text) == 0,
         paste("R/overview_module.R missing module constructs:",
               paste(missing_module_text, collapse = "; ")))
+  check(!grepl("ggplot(", module_text, fixed = TRUE),
+        "R/overview_module.R should delegate ggplot construction to R/chart_builders.R")
 }
 
 if (file.exists(app_path)) {

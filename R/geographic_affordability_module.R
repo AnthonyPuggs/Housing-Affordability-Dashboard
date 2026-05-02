@@ -220,16 +220,13 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
       d <- state_series()
       validate(need(nrow(d) > 0, "No state SIH trend data for the selected options."))
 
-      p <- ggplot(d, aes(x = survey_year, y = value,
-                         color = geography, group = geography)) +
-        geom_line(linewidth = 0.9, alpha = 0.9) +
-        geom_point(size = 1.6, alpha = 0.85) +
-        scale_y_continuous(labels = geo_value_labels(input$geo_state_metric)) +
-        labs(x = NULL, y = geo_axis_label(input$geo_state_metric),
-             color = NULL, title = geo_metric_label(input$geo_state_metric)) +
-        theme_afford(is_dark()) +
-        theme(axis.text.x = element_text(angle = 45, hjust = 1),
-              legend.position = "bottom")
+      p <- build_geo_state_trend_plot(
+        d,
+        metric_label = geo_metric_label(input$geo_state_metric),
+        axis_label = geo_axis_label(input$geo_state_metric),
+        value_labels = geo_value_labels(input$geo_state_metric),
+        dark = is_dark()
+      )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%
@@ -243,13 +240,13 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
       latest_year <- tail(year_levels[year_levels %in% as.character(d$survey_year)], 1)
       d <- d %>% filter(as.character(survey_year) == latest_year)
 
-      p <- ggplot(d, aes(x = reorder(geography, value), y = value)) +
-        geom_col(fill = "#0E5A8A", alpha = 0.85, width = 0.7) +
-        coord_flip() +
-        scale_y_continuous(labels = geo_value_labels(input$geo_state_metric)) +
-        labs(x = NULL, y = geo_axis_label(input$geo_state_metric),
-             title = paste("Latest survey year:", latest_year)) +
-        theme_afford(is_dark())
+      p <- build_geo_state_latest_plot(
+        d,
+        latest_year = latest_year,
+        axis_label = geo_axis_label(input$geo_state_metric),
+        value_labels = geo_value_labels(input$geo_state_metric),
+        dark = is_dark()
+      )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
     }) %>%
@@ -306,37 +303,14 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
           )
         )
 
-      p <- ggplot(d, aes(x = reorder(geography, value), y = value,
-                         text = hover_text)) +
-        geom_col(fill = "#1F9D8C", alpha = 0.85, width = 0.7) +
-        geom_errorbar(
-          data = d %>%
-            filter(!is.na(estimate_lower_95), !is.na(estimate_upper_95)),
-          aes(ymin = estimate_lower_95, ymax = estimate_upper_95),
-          inherit.aes = TRUE,
-          width = 0.22,
-          linewidth = 0.75,
-          color = if (is_dark()) "#F8FAFC" else "#172033",
-          alpha = 0.9
-        ) +
-        geom_text(
-          data = d %>% filter(nzchar(reliability_marker)),
-          aes(x = reorder(geography, value), y = value,
-              label = reliability_marker),
-          inherit.aes = FALSE,
-          hjust = -0.35,
-          size = 4.2,
-          fontface = "bold",
-          color = "#FFB74D"
-        ) +
-        {if (nrow(nat) > 0) geom_hline(yintercept = nat$value[1],
-                                       linetype = "dashed", color = "#333333")} +
-        coord_flip() +
-        scale_y_continuous(labels = geo_value_labels(input$geo_lower_metric),
-                           expand = expansion(mult = c(0, 0.12))) +
-        labs(x = NULL, y = geo_axis_label(input$geo_lower_metric),
-             title = geo_metric_label(input$geo_lower_metric)) +
-        theme_afford(is_dark())
+      p <- build_geo_lower_income_plot(
+        d,
+        national_value = if (nrow(nat) > 0) nat$value[1] else NULL,
+        metric_label = geo_metric_label(input$geo_lower_metric),
+        axis_label = geo_axis_label(input$geo_lower_metric),
+        value_labels = geo_value_labels(input$geo_lower_metric),
+        dark = is_dark()
+      )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "text"))
     }) %>%
@@ -359,13 +333,13 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
 
       validate(need(nrow(d) > 0, "No capital/rest-of-state data for the selected options."))
 
-      p <- ggplot(d, aes(x = reorder(geography, value), y = value)) +
-        geom_col(fill = "#C44E52", alpha = 0.85, width = 0.7) +
-        coord_flip() +
-        scale_y_continuous(labels = geo_value_labels(input$geo_gcc_metric)) +
-        labs(x = NULL, y = geo_axis_label(input$geo_gcc_metric),
-             title = geo_metric_label(input$geo_gcc_metric)) +
-        theme_afford(is_dark())
+      p <- build_geo_gcc_comparison_plot(
+        d,
+        metric_label = geo_metric_label(input$geo_gcc_metric),
+        axis_label = geo_axis_label(input$geo_gcc_metric),
+        value_labels = geo_value_labels(input$geo_gcc_metric),
+        dark = is_dark()
+      )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
     }) %>%

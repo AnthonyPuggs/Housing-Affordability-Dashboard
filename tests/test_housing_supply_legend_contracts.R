@@ -74,7 +74,7 @@ if (file.exists(module_path)) {
     "approval_state %in% input$supply_states",
     "approval_building_type == input$supply_building_type",
     "approval_sector == input$supply_sector",
-    "color = approval_label",
+    "build_supply_approvals_plot(",
     "bindCache(input$supply_dates, input$supply_states, input$supply_building_type, input$supply_sector, is_dark())",
     "dashboard_ggplotly"
   )
@@ -96,6 +96,8 @@ if (file.exists(module_path)) {
   check(length(found_forbidden) == 0,
         paste("Housing Supply chart must not build legend labels from full ABS strings:",
               paste(found_forbidden, collapse = "; ")))
+  check(!grepl("ggplot(", module_text, fixed = TRUE),
+        "Housing Supply module should delegate ggplot construction to chart builders")
 
   if (exists("housingSupplyPageUI", mode = "function")) {
     module_ui <- paste(as.character(housingSupplyPageUI("housing_supply")),

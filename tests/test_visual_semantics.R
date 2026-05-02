@@ -90,6 +90,11 @@ module_text <- paste(vapply(
   function(path) paste(readLines(path, warn = FALSE), collapse = "\n"),
   character(1)
 ), collapse = "\n")
+chart_builder_text <- paste(
+  readLines(file.path(repo_root, "R", "chart_builders.R"), warn = FALSE),
+  collapse = "\n"
+)
+semantic_consumer_text <- paste(module_text, chart_builder_text, sep = "\n")
 
 required_module_text <- c(
   'kpi_change_class(ch$change, favourable = "decrease")',
@@ -106,10 +111,10 @@ required_module_text <- c(
   'semantic_colour("caution")'
 )
 missing_module_text <- required_module_text[
-  !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)
+  !vapply(required_module_text, grepl, logical(1), semantic_consumer_text, fixed = TRUE)
 ]
 check(length(missing_module_text) == 0,
-      paste("Modules missing semantic colour contracts:",
+      paste("Modules/chart builders missing semantic colour contracts:",
             paste(missing_module_text, collapse = "; ")))
 
 if (file.exists(readme_path)) {

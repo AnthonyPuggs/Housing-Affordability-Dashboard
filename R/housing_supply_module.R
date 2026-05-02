@@ -287,18 +287,11 @@ housingSupplyPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0,
         "Run pipeline/05_driver.R to fetch building approvals data (ABS 8731.0)"))
 
-      p <- ggplot(d, aes(x = date, y = value, color = approval_label)) +
-        geom_line(linewidth = 0.8, alpha = 0.85) +
-        scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
-        scale_y_continuous(labels = label_number(big.mark = ",")) +
-        labs(
-          x = NULL,
-          y = "Number of Dwellings",
-          color = NULL,
-          title = paste(input$supply_building_type, "-", input$supply_sector)
-        ) +
-        theme_afford(is_dark()) +
-        theme(legend.position = "bottom")
+      p <- build_supply_approvals_plot(
+        d,
+        title = paste(input$supply_building_type, "-", input$supply_sector),
+        dark = is_dark()
+      )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%
@@ -311,11 +304,7 @@ housingSupplyPageServer <- function(id, is_dark) {
                date <= input$supply_dates[2])
       validate(need(nrow(d) > 0, "No CPI construction cost data available."))
 
-      p <- ggplot(d, aes(x = date, y = value)) +
-        geom_line(linewidth = 1, color = "#0E5A8A") +
-        scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
-        labs(x = NULL, y = "Index") +
-        theme_afford(is_dark())
+      p <- build_supply_construction_cpi_plot(d, dark = is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
     }) %>%

@@ -92,7 +92,8 @@ if (file.exists(module_path)) {
     "approval_state %in% input$supply_states",
     "approval_building_type == input$supply_building_type",
     "approval_sector == input$supply_sector",
-    "color = approval_label",
+    "build_supply_approvals_plot(",
+    "build_supply_construction_cpi_plot(",
     "date >= input$supply_dates[1]",
     "date <= input$supply_dates[2]",
     'kpi_change_class(pct, favourable = "increase")',
@@ -109,6 +110,8 @@ if (file.exists(module_path)) {
               paste(missing_module_text, collapse = "; ")))
   check(!grepl("input$price_dates", module_text, fixed = TRUE),
         "Housing Supply module must not reference input$price_dates")
+  check(!grepl("ggplot(", module_text, fixed = TRUE),
+        "R/housing_supply_module.R should delegate ggplot construction to R/chart_builders.R")
 }
 
 if (file.exists(app_path)) {

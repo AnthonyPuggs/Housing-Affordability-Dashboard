@@ -74,7 +74,7 @@ The Shiny app includes a Methodology page backed by this registry. It shows the 
 
 `plot_setup.R` is a thin compatibility entrypoint over focused support modules for CSV loading, dashboard formatting, theme helpers and app-ready precomputed series. It keeps the existing global object names available to page modules while reducing the setup file's direct responsibility.
 
-`R/chart_builders.R` is the first chart-construction helper surface. It keeps selected Price Trends and Market Context ggplot builders testable outside Shiny while modules retain input handling, validation, caching and Plotly conversion.
+`R/chart_builders.R` is the page-level chart-construction helper surface. It keeps ggplot builders testable outside Shiny while modules retain input handling, validation, caching, SIH quality joins, Plotly conversion and deliberately Plotly-specific post-processing such as right-side annotations.
 
 The Housing Supply page keeps Building Approvals readable by filtering the ABS approval series with state, building-type and sector controls; the default view compares total-sector total approvals for New South Wales and Victoria.
 

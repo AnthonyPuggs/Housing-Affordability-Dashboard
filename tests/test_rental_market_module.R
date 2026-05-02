@@ -100,12 +100,10 @@ if (file.exists(module_path)) {
     "reliability_marker",
     "quality_hover",
     "interval_label",
-    "estimate_lower_95",
-    "estimate_upper_95",
-    "geom_errorbar(",
-    "rental_stress_gradient_colours()",
-    'semantic_colour("worse")',
-    'semantic_colour("caution")',
+    "build_rental_stress_state_plot(",
+    "build_rental_stress_trend_plot(",
+    "build_rental_affordability_index_plot(",
+    "build_rental_costs_demographic_plot(",
     "tooltip = c(\"x\", \"y\", \"text\")",
     "tooltip = c(\"fill\", \"text\")"
   )
@@ -115,6 +113,8 @@ if (file.exists(module_path)) {
   check(length(missing_module_text) == 0,
         paste("R/rental_market_module.R missing module constructs:",
               paste(missing_module_text, collapse = "; ")))
+  check(!grepl("ggplot(", module_text, fixed = TRUE),
+        "R/rental_market_module.R should delegate ggplot construction to R/chart_builders.R")
 }
 
 if (file.exists(app_path)) {

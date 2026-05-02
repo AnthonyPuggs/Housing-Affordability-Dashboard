@@ -183,16 +183,10 @@ overviewPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0, "No median house price data available."))
 
       is_index <- identical(input$overview_price_transform, "index")
-
-      if (is_index) {
-        d <- d %>%
-          group_by(city) %>%
-          arrange(date) %>%
-          mutate(plot_value = 100 * value / first(value)) %>%
-          ungroup()
-      } else {
-        d <- d %>% mutate(plot_value = value * 1000)
-      }
+      d <- overview_price_series_transform(
+        d,
+        input$overview_price_transform
+      )
 
       price_colours <- c(
         "Sydney" = "#2196F3", "Melbourne" = "#7B1FA2", "Brisbane" = "#FF5722",
@@ -200,27 +194,13 @@ overviewPageServer <- function(id, is_dark) {
         "Darwin" = "#f781bf", "Canberra" = "#999999", "National Avg" = "#4CAF50"
       )
 
-      y_scale <- if (is_index) {
-        scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1))
-      } else {
-        scale_y_continuous(labels = label_dollar(prefix = "$", suffix = "k",
-                                                 scale = 1/1000, big.mark = ","))
-      }
-
-      p <- ggplot(d, aes(x = date, y = plot_value, color = city)) +
-        geom_line(aes(linetype = city), linewidth = 1.1, alpha = 0.9) +
-        scale_color_manual(values = price_colours) +
-        scale_linetype_manual(
-          values = setNames(
-            ifelse(show_cities == "National Avg", "dashed", "solid"),
-            show_cities
-          )
-        ) +
-        scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
-        y_scale +
-        labs(x = NULL, y = NULL, color = NULL, linetype = NULL) +
-        theme_afford(is_dark()) +
-        theme(legend.position = "none")
+      p <- build_overview_median_prices_plot(
+        d,
+        is_index = is_index,
+        price_colours = price_colours,
+        show_cities = show_cities,
+        dark = is_dark()
+      )
 
       label_data <- d %>%
         group_by(city) %>%
@@ -263,21 +243,11 @@ overviewPageServer <- function(id, is_dark) {
 
       validate(need(nrow(d) > 0, "No affordability index data available."))
 
-      p <- ggplot(d, aes(x = date, y = value, color = indicator_label)) +
-        geom_line(linewidth = 1.1, alpha = 0.9) +
-        scale_color_manual(values = overview_cost_pressure_colours) +
-        scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
-        scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
-        labs(x = NULL, y = "Index value", color = NULL) +
-        theme_afford(is_dark())
-
-      latest_vals <- d %>%
-        group_by(indicator_label) %>%
-        filter(date == max(date)) %>%
-        ungroup()
-
-      p <- p +
-        geom_point(data = latest_vals, size = 3)
+      p <- build_overview_affordability_plot(
+        d,
+        colours = overview_cost_pressure_colours,
+        dark = is_dark()
+      )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%

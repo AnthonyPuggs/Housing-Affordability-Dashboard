@@ -235,14 +235,7 @@ affordabilityPageServer <- function(id, is_dark) {
         mutate(indicator_label = indicator_chart_label(indicator))
       validate(need(nrow(d) > 0, "No data for selected indicators in this date range."))
 
-      p <- ggplot(d, aes(x = date, y = value, color = indicator_label)) +
-        geom_line(linewidth = 1) +
-        facet_wrap(~indicator_label, scales = "free_y") +
-        scale_color_manual(values = cost_pressure_palette()) +
-        scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
-        labs(x = NULL, y = NULL, color = NULL) +
-        theme_afford(is_dark()) +
-        theme(legend.position = "none")
+      p <- build_affordability_indices_plot(d, dark = is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
     }) %>%
@@ -264,23 +257,7 @@ affordabilityPageServer <- function(id, is_dark) {
 
       validate(need(nrow(d) > 0, "No serviceability data in this date range."))
 
-      p <- ggplot(d, aes(x = date, y = serviceability_pct,
-                         color = scenario)) +
-        geom_line(linewidth = 1.1) +
-        geom_hline(yintercept = 30, linetype = "dashed",
-                   color = semantic_colour("caution"), linewidth = 0.8) +
-        annotate("text", x = max(d$date) - 2500, y = 31,
-                 label = "30% stress reference",
-                 color = semantic_colour("caution"), size = 3.5,
-                 hjust = 0, vjust = 0) +
-        scale_color_manual(values = c(
-          "Nominal rate" = semantic_colour("categorical_navy"),
-          "Assessed rate" = semantic_colour("worse")
-        )) +
-        scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
-        scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
-        labs(x = NULL, y = NULL, color = NULL) +
-        theme_afford(is_dark())
+      p <- build_market_entry_serviceability_plot(d, dark = is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%
@@ -362,24 +339,7 @@ affordabilityPageServer <- function(id, is_dark) {
         mutate(stress_band = factor(stress_band,
                                     levels = c("<25%", "25-30%", "30-50%", ">50%")))
 
-      stress_cols <- stress_band_palette()
-
-      p <- ggplot(d, aes(x = breakdown_val, y = value, fill = stress_band,
-                         text = hover_text)) +
-        geom_col(position = "stack", alpha = 0.9) +
-        geom_text(
-          data = d %>% filter(nzchar(reliability_marker)),
-          aes(label = reliability_marker),
-          position = position_stack(vjust = 0.5),
-          size = 4,
-          fontface = "bold",
-          color = "#172033",
-          show.legend = FALSE
-        ) +
-        scale_fill_manual(values = stress_cols) +
-        labs(x = NULL, y = "% of Households", fill = "Cost/Income") +
-        coord_flip() +
-        theme_afford(is_dark())
+      p <- build_housing_stress_bands_plot(d, dark = is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill", "text"))
     }) %>%
@@ -400,18 +360,7 @@ affordabilityPageServer <- function(id, is_dark) {
 
       d <- d %>% mutate(tenure_label = label_tenure(tenure))
 
-      burden_cols <- burden_gradient_colours()
-
-      p <- ggplot(d, aes(x = tenure_label, y = breakdown_val, fill = value)) +
-        geom_tile(color = "white", linewidth = 0.5) +
-        geom_text(aes(label = round(value, 1)), size = 3.5) +
-        scale_fill_gradient2(low = burden_cols[["low"]],
-                             mid = burden_cols[["mid"]],
-                             high = burden_cols[["high"]],
-                             midpoint = 25, name = "Cost/Income %") +
-        labs(x = NULL, y = NULL) +
-        theme_afford(is_dark()) +
-        theme(axis.text.x = element_text(angle = 30, hjust = 1))
+      p <- build_cost_burden_heatmap_plot(d, dark = is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
     }) %>%
