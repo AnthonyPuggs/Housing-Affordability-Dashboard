@@ -84,6 +84,7 @@ if (all(file.exists(c(project_paths_path, registry_path, report_path)))) {
       "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment",
       "R/market_entry_scenarios.R",
       "Chart-level reliability markers",
+      "visible error bars and interval hover text use 95% margin-of-error metadata",
       "data/sih_estimate_quality.csv",
       "Price-to-Income Cost Pressure",
       "Modelled Mortgage Cost Pressure",

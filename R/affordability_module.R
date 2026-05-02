@@ -343,7 +343,8 @@ affordabilityPageServer <- function(id, is_dark) {
             breakdown_val,
             "<br>Band: ", stress_band,
             "<br>Share: ", number(value, accuracy = 0.1), "%",
-            "<br>", quality_hover
+            "<br>", quality_hover,
+            ifelse(nzchar(interval_label), paste0("<br>", interval_label), "")
           )
         ) %>%
         mutate(stress_band = factor(stress_band,

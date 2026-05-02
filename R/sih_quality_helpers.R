@@ -67,12 +67,54 @@ sih_quality_hover_text <- function(rse_pct = NA_real_,
   }, character(1))
 }
 
+sih_quality_interval_bounds <- function(value,
+                                        moe_95,
+                                        quality_unit,
+                                        lower = 0,
+                                        upper = 100) {
+  value <- as.numeric(value)
+  moe_95 <- as.numeric(moe_95)
+  quality_unit <- as.character(quality_unit)
+
+  n <- max(length(value), length(moe_95), length(quality_unit), 1)
+  value <- rep_len(value, n)
+  moe_95 <- rep_len(moe_95, n)
+  quality_unit <- rep_len(quality_unit, n)
+
+  valid <- is.finite(value) &
+    is.finite(moe_95) &
+    quality_unit == "percentage_points"
+
+  estimate_lower_95 <- rep(NA_real_, n)
+  estimate_upper_95 <- rep(NA_real_, n)
+  estimate_lower_95[valid] <- pmax(lower, value[valid] - moe_95[valid])
+  estimate_upper_95[valid] <- pmin(upper, value[valid] + moe_95[valid])
+
+  interval_label <- rep("", n)
+  interval_label[valid] <- sprintf(
+    "95%% MOE interval: %.1f%% to %.1f%%",
+    estimate_lower_95[valid],
+    estimate_upper_95[valid]
+  )
+
+  data.frame(
+    estimate_lower_95 = estimate_lower_95,
+    estimate_upper_95 = estimate_upper_95,
+    interval_label = interval_label,
+    stringsAsFactors = FALSE
+  )
+}
+
 sih_quality_empty_join <- function(estimates) {
   n <- nrow(estimates)
   estimates$rse_pct <- rep(NA_real_, n)
   estimates$rse_reliability_flag <- rep(NA_character_, n)
   estimates$rse_reliability_note <- rep(NA_character_, n)
   estimates$moe_95 <- rep(NA_real_, n)
+  estimates$moe_95_quality_unit <- rep(NA_character_, n)
+  estimates$estimate_lower_95 <- rep(NA_real_, n)
+  estimates$estimate_upper_95 <- rep(NA_real_, n)
+  estimates$interval_label <- rep("", n)
   estimates$has_quality_metadata <- rep(FALSE, n)
   estimates$reliability_marker <- rep("", n)
   estimates$quality_hover <- sih_quality_hover_text(
@@ -104,6 +146,10 @@ join_sih_quality <- function(estimates, quality = NULL) {
     "rse_reliability_flag",
     "rse_reliability_note",
     "moe_95",
+    "moe_95_quality_unit",
+    "estimate_lower_95",
+    "estimate_upper_95",
+    "interval_label",
     "has_quality_metadata",
     "reliability_marker",
     "quality_hover"
@@ -137,11 +183,12 @@ join_sih_quality <- function(estimates, quality = NULL) {
   }
 
   moe_quality <- quality[quality$quality_measure %in% "moe_95",
-                         c(keys, "quality_value"),
+                         c(keys, "quality_value", "quality_unit"),
                          drop = FALSE]
   if (nrow(moe_quality) > 0) {
     moe_quality <- moe_quality[!duplicated(moe_quality[keys]), , drop = FALSE]
     names(moe_quality)[names(moe_quality) == "quality_value"] <- "moe_95"
+    names(moe_quality)[names(moe_quality) == "quality_unit"] <- "moe_95_quality_unit"
   } else {
     moe_quality <- data.frame()
   }
@@ -158,8 +205,17 @@ join_sih_quality <- function(estimates, quality = NULL) {
     joined <- dplyr::left_join(joined, moe_quality, by = keys)
   } else {
     joined$moe_95 <- NA_real_
+    joined$moe_95_quality_unit <- NA_character_
   }
 
+  interval_bounds <- sih_quality_interval_bounds(
+    value = joined$value,
+    moe_95 = joined$moe_95,
+    quality_unit = joined$moe_95_quality_unit
+  )
+  joined$estimate_lower_95 <- interval_bounds$estimate_lower_95
+  joined$estimate_upper_95 <- interval_bounds$estimate_upper_95
+  joined$interval_label <- interval_bounds$interval_label
   joined$has_quality_metadata <- !is.na(joined$rse_pct) | !is.na(joined$moe_95)
   joined$reliability_marker <- sih_reliability_marker(joined$rse_reliability_flag)
   joined$quality_hover <- sih_quality_hover_text(

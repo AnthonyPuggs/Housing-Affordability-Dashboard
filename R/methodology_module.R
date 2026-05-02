@@ -73,6 +73,7 @@ methodologyPageUI <- function(id) {
             tags$li("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."),
             tags$li("SIH relative standard error and 95% margin of error metadata are provided in data/sih_estimate_quality.csv; users should interpret with caution when estimates have high RSE values."),
             tags$li("Chart-level reliability markers (\u2020) are driven by data/sih_estimate_quality.csv where matching SIH RSE metadata is available."),
+            tags$li("Where available, visible error bars and interval hover text use 95% margin-of-error metadata from data/sih_estimate_quality.csv."),
             tags$li("Gross-income SIH cost ratios, NHHA lower-income rental stress and modelled market-entry scenarios should not be interpreted as the same concept.")
           )
         )

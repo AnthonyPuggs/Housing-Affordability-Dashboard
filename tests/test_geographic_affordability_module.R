@@ -109,6 +109,10 @@ if (file.exists(module_path)) {
     "sih_quality_hover_text(",
     "reliability_marker",
     "quality_hover",
+    "interval_label",
+    "estimate_lower_95",
+    "estimate_upper_95",
+    "geom_errorbar(",
     "tooltip = c(\"x\", \"y\", \"text\")"
   )
   missing_module_text <- required_module_text[

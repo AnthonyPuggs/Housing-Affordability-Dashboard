@@ -301,13 +301,24 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
             } else {
               dollar(value, accuracy = 1)
             },
-            "<br>", quality_hover
+            "<br>", quality_hover,
+            ifelse(nzchar(interval_label), paste0("<br>", interval_label), "")
           )
         )
 
       p <- ggplot(d, aes(x = reorder(geography, value), y = value,
                          text = hover_text)) +
         geom_col(fill = "#1F9D8C", alpha = 0.85, width = 0.7) +
+        geom_errorbar(
+          data = d %>%
+            filter(!is.na(estimate_lower_95), !is.na(estimate_upper_95)),
+          aes(ymin = estimate_lower_95, ymax = estimate_upper_95),
+          inherit.aes = TRUE,
+          width = 0.22,
+          linewidth = 0.75,
+          color = if (is_dark()) "#F8FAFC" else "#172033",
+          alpha = 0.9
+        ) +
         geom_text(
           data = d %>% filter(nzchar(reliability_marker)),
           aes(x = reorder(geography, value), y = value,

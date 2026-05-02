@@ -116,6 +116,7 @@ if (file.exists(module_path)) {
     "sih_quality_hover_text(",
     "reliability_marker",
     "quality_hover",
+    "interval_label",
     "tooltip = c(\"x\", \"y\", \"fill\", \"text\")"
   )
   missing_module_text <- required_module_text[
@@ -124,6 +125,8 @@ if (file.exists(module_path)) {
   check(length(missing_module_text) == 0,
         paste("R/affordability_module.R missing module constructs:",
               paste(missing_module_text, collapse = "; ")))
+  check(!grepl("geom_errorbar(", module_text, fixed = TRUE),
+        "Affordability stress stacked bars must not draw error bars")
 }
 
 if (file.exists(app_path)) {

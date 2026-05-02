@@ -103,6 +103,7 @@ if (all(file.exists(c(app_path, module_path)))) {
     "Market-entry cost-pressure indexes",
     "Stylised scenario calculators",
     "Chart-level reliability markers",
+    "visible error bars and interval hover text use 95% margin-of-error metadata",
     "data/sih_estimate_quality.csv"
   )
   missing_module_text <- required_module_text[

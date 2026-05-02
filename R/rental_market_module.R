@@ -117,7 +117,8 @@ rentalMarketPageServer <- function(id, is_dark) {
             geography,
             "<br>Survey year: ", survey_year,
             "<br>Rental stress: ", number(value, accuracy = 0.1), "%",
-            "<br>", quality_hover
+            "<br>", quality_hover,
+            ifelse(nzchar(interval_label), paste0("<br>", interval_label), "")
           )
         )
 
@@ -131,6 +132,16 @@ rentalMarketPageServer <- function(id, is_dark) {
       p <- ggplot(d, aes(x = reorder(geography, -value), y = value,
                          text = hover_text)) +
         geom_col(fill = "#e74c3c", alpha = 0.85, width = 0.7) +
+        geom_errorbar(
+          data = d %>%
+            filter(!is.na(estimate_lower_95), !is.na(estimate_upper_95)),
+          aes(ymin = estimate_lower_95, ymax = estimate_upper_95),
+          inherit.aes = TRUE,
+          width = 0.22,
+          linewidth = 0.75,
+          color = if (is_dark()) "#F8FAFC" else "#172033",
+          alpha = 0.9
+        ) +
         geom_text(
           data = d %>% filter(nzchar(reliability_marker)),
           aes(x = reorder(geography, -value), y = value,
@@ -175,7 +186,8 @@ rentalMarketPageServer <- function(id, is_dark) {
             geography,
             "<br>Survey year: ", survey_year,
             "<br>Rental stress: ", number(value, accuracy = 0.1), "%",
-            "<br>", quality_hover
+            "<br>", quality_hover,
+            ifelse(nzchar(interval_label), paste0("<br>", interval_label), "")
           ),
           tile_text_colour = ifelse(value >= 32 & value <= 48,
                                     "#172033", "#F8FAFC")
