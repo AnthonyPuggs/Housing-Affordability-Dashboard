@@ -76,6 +76,8 @@ The Shiny app includes a Methodology page backed by this registry. It shows the 
 
 `R/chart_builders.R` is the page-level chart-construction helper surface. It keeps ggplot builders testable outside Shiny while modules retain input handling, validation, caching, SIH quality joins, Plotly conversion and deliberately Plotly-specific post-processing such as right-side annotations.
 
+For the practical chart-editing workflow, see `CHART_BUILDER_WORKFLOW.md`.
+
 The Housing Supply page keeps Building Approvals readable by filtering the ABS approval series with state, building-type and sector controls; the default view compares total-sector total approvals for New South Wales and Victoria.
 
 The Geographic Affordability page is an SIH-only, geography-aligned view. It compares state, lower-income state and greater-capital-city/rest-of-state SIH estimates where the housing-cost numerator and income or household denominator are measured within the same geography; it does not construct state or capital-city market-entry indexes from national wage, RPPI, AWE, WPI or CPI-rent proxies.
