@@ -82,6 +82,10 @@ The Shiny app includes a Methodology page backed by this registry. It shows the 
 
 For the practical chart-editing workflow, see `CHART_BUILDER_WORKFLOW.md`.
 
+For release smoke testing of the live Shiny interface, see
+`docs/ui_smoke_checklist.md`. The project uses static base-R UI smoke contracts
+and the Codex in-app browser checklist, with no new browser-testing dependencies.
+
 The Housing Supply page keeps Building Approvals readable by filtering the ABS approval series with state, building-type and sector controls; the default view compares total-sector total approvals for New South Wales and Victoria.
 
 The Geographic Affordability page is an SIH-only, geography-aligned view. It compares state, lower-income state and greater-capital-city/rest-of-state SIH estimates where the housing-cost numerator and income or household denominator are measured within the same geography; it does not construct state or capital-city market-entry indexes from national wage, RPPI, AWE, WPI or CPI-rent proxies.
@@ -124,6 +128,7 @@ Rscript tests/test_chart_builders.R
 Rscript tests/test_plot_setup_extraction.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
+Rscript tests/test_ui_smoke_contracts.R
 Rscript tests/test_responsive_ui_contracts.R
 Rscript tests/test_rental_market_mobile_contracts.R
 Rscript tests/test_rental_market_interaction_contracts.R

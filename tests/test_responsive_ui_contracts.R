@@ -37,7 +37,8 @@ if (file.exists(app_path)) {
   required_nav_script <- c(
     "bootstrap.Collapse",
     ".navbar-collapse.show",
-    "window.innerWidth < 992",
+    "getComputedStyle(toggle)",
+    "window.innerWidth >= 992",
     "main_nav"
   )
   missing_nav_script <- required_nav_script[

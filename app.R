@@ -303,18 +303,39 @@ ui <- page_navbar(
     ")),
     tags$script(HTML("
       (function() {
-        $(document).on('click', '.navbar-collapse.show .nav-link', function(e) {
-          if (window.innerWidth < 992) {
-            var mainNav = document.getElementById('main_nav');
-            var collapseEl = e.currentTarget.closest('.navbar-collapse.show');
-            if (!collapseEl) return;
-            if (mainNav && !collapseEl.contains(mainNav) && !e.currentTarget.closest('#main_nav')) {
-              return;
+        document.addEventListener('click', function(e) {
+          var navLink = e.target.closest('.navbar-collapse.show .nav-link');
+          if (!navLink) return;
+
+          var mainNav = document.getElementById('main_nav');
+          var collapseEl = navLink.closest('.navbar-collapse.show');
+          if (!collapseEl) return;
+          if (mainNav && !navLink.closest('#main_nav')) return;
+
+          var toggle = mainNav ? mainNav.querySelector('.navbar-toggle, .navbar-toggler') : null;
+          var toggleVisible = toggle &&
+            window.getComputedStyle(toggle).display !== 'none' &&
+            window.getComputedStyle(toggle).visibility !== 'hidden';
+          if (!toggleVisible && window.innerWidth >= 992) return;
+
+          var forceHideNavbar = function() {
+            collapseEl.classList.remove('show');
+            collapseEl.classList.remove('collapsing');
+            collapseEl.classList.add('collapse');
+            if (toggle) {
+              toggle.classList.add('collapsed');
+              toggle.setAttribute('aria-expanded', 'false');
             }
-            if (window.bootstrap && bootstrap.Collapse) {
-              bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false }).hide();
-            }
+          };
+
+          if (window.bootstrap && bootstrap.Collapse) {
+            bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false }).hide();
+          } else if (window.jQuery && typeof $(collapseEl).collapse === 'function') {
+            $(collapseEl).collapse('hide');
+          } else {
+            forceHideNavbar();
           }
+          window.setTimeout(forceHideNavbar, 150);
         });
       })();
     "))
