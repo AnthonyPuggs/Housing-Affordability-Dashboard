@@ -72,6 +72,8 @@ The Shiny app includes a Methodology page backed by this registry. It shows the 
 
 `R/methodology_module.R`, `R/affordability_module.R`, `R/rental_market_module.R`, `R/housing_supply_module.R`, `R/price_trends_module.R`, `R/geographic_affordability_module.R`, `R/market_context_module.R` and `R/overview_module.R` are the Shiny page modules. They keep the registry-backed methodology/provenance page, Affordability page, Rental Market page, Housing Supply page, Price Trends page, Geographic Affordability page, Market Context page and Overview page isolated while broader component-level refactors remain incremental.
 
+`plot_setup.R` is a thin compatibility entrypoint over focused support modules for CSV loading, dashboard formatting, theme helpers and app-ready precomputed series. It keeps the existing global object names available to page modules while reducing the setup file's direct responsibility.
+
 The Housing Supply page keeps Building Approvals readable by filtering the ABS approval series with state, building-type and sector controls; the default view compares total-sector total approvals for New South Wales and Victoria.
 
 The Geographic Affordability page is an SIH-only, geography-aligned view. It compares state, lower-income state and greater-capital-city/rest-of-state SIH estimates where the housing-cost numerator and income or household denominator are measured within the same geography; it does not construct state or capital-city market-entry indexes from national wage, RPPI, AWE, WPI or CPI-rent proxies.
@@ -110,6 +112,7 @@ Rscript tests/test_sih_workbook_benchmarks.R
 Rscript tests/test_market_entry_scenarios.R
 Rscript tests/test_serviceability_scenario_controls.R
 Rscript tests/test_visual_semantics.R
+Rscript tests/test_plot_setup_extraction.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
 Rscript tests/test_responsive_ui_contracts.R
