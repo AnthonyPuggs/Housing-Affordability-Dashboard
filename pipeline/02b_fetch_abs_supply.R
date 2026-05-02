@@ -18,7 +18,8 @@ cat("  Fetching Population (3101.0)...\n")
 
 pop_raw <- safe_read(
   read_abs(cat_no = "3101.0", tables = "1"),
-  "Population 3101.0 Table 1"
+  "Population 3101.0 Table 1",
+  required = TRUE
 )
 
 if (nrow(pop_raw) > 0) {
@@ -74,7 +75,8 @@ cat("  Fetching Building Approvals (8731.0)...\n")
 # Table 1: Number of dwelling units approved by sector (trend/seasonally adj)
 approvals_raw <- safe_read(
   read_abs(cat_no = "8731.0", tables = "1"),
-  "Building Approvals 8731.0 Table 1"
+  "Building Approvals 8731.0 Table 1",
+  required = TRUE
 )
 
 if (nrow(approvals_raw) > 0) {
@@ -110,7 +112,8 @@ if (nrow(approvals_raw) > 0) {
 approvals_state_raw <- safe_read(
   read_abs(cat_no = "8731.0", tables = "2"),
   "Building Approvals 8731.0 Table 2",
-  warn = FALSE
+  warn = FALSE,
+  required = TRUE
 )
 
 if (nrow(approvals_state_raw) > 0) {

@@ -226,7 +226,8 @@ infer_frequency_from_dates <- function(dates) {
 cat("  Fetching RBA F1 (Cash Rate)...\n")
 
 f1_file <- tryCatch(fetch_rba_table("f1"), error = function(e) {
-  warning("Failed to fetch RBA F1: ", conditionMessage(e)); NULL
+  stop("Required source failed for RBA F1: ", conditionMessage(e),
+       call. = FALSE)
 })
 
 if (!is.null(f1_file) && file.exists(f1_file)) {
@@ -250,7 +251,8 @@ if (!is.null(f1_file) && file.exists(f1_file)) {
 cat("  Fetching RBA F5 (Lending Rates)...\n")
 
 f5_file <- tryCatch(fetch_rba_table("f5"), error = function(e) {
-  warning("Failed to fetch RBA F5: ", conditionMessage(e)); NULL
+  stop("Required source failed for RBA F5: ", conditionMessage(e),
+       call. = FALSE)
 })
 
 if (!is.null(f5_file) && file.exists(f5_file)) {
@@ -277,7 +279,8 @@ if (!is.null(f5_file) && file.exists(f5_file)) {
 cat("  Fetching RBA F6 (Housing Lending)...\n")
 
 f6_file <- tryCatch(fetch_rba_table("f6"), error = function(e) {
-  warning("Failed to fetch RBA F6: ", conditionMessage(e)); NULL
+  stop("Required source failed for RBA F6: ", conditionMessage(e),
+       call. = FALSE)
 })
 
 if (!is.null(f6_file) && file.exists(f6_file)) {

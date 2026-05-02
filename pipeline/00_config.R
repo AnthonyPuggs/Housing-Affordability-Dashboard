@@ -75,10 +75,14 @@ ensure_dir(DATA_DIR)
 
 # --- Helpers ported from app_old.R --------------------------------------------
 
-safe_read <- function(expr, label, warn = TRUE) {
+safe_read <- function(expr, label, warn = TRUE, required = FALSE) {
   tryCatch(
     expr,
     error = function(e) {
+      if (isTRUE(required)) {
+        stop("Required source failed for ", label, ": ", conditionMessage(e),
+             call. = FALSE)
+      }
       if (isTRUE(warn)) {
         warning(paste0("Failed to load ", label, ": ", conditionMessage(e)))
       }

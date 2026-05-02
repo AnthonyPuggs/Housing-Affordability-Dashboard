@@ -10,10 +10,12 @@ check <- function(condition, message) {
 project_paths_path <- file.path(repo_root, "R", "project_paths.R")
 registry_path <- file.path(repo_root, "R", "indicator_registry.R")
 report_path <- file.path(repo_root, "R", "provenance_report.R")
+contracts_path <- file.path(repo_root, "R", "pipeline_contracts.R")
 
 check(file.exists(project_paths_path), "R/project_paths.R does not exist")
 check(file.exists(registry_path), "R/indicator_registry.R does not exist")
 check(file.exists(report_path), "R/provenance_report.R does not exist")
+check(file.exists(contracts_path), "R/pipeline_contracts.R does not exist")
 
 if (file.exists(report_path)) {
   parsed <- tryCatch({
@@ -24,9 +26,11 @@ if (file.exists(report_path)) {
         paste("R/provenance_report.R does not parse:", parsed))
 }
 
-if (all(file.exists(c(project_paths_path, registry_path, report_path)))) {
+if (all(file.exists(c(project_paths_path, registry_path, report_path,
+                      contracts_path)))) {
   source(project_paths_path)
   source(registry_path)
+  source(contracts_path)
   source(report_path)
 
   required_functions <- c(
@@ -87,6 +91,12 @@ if (all(file.exists(c(project_paths_path, registry_path, report_path)))) {
       "KPI colours encode economic interpretation",
       "better, worse or neutral/contextual",
       "R/market_entry_scenarios.R",
+      "## External Data Sources",
+      "ABS 6432.0",
+      "ABS SDMX CPI",
+      "RBA F1",
+      "RBA F5",
+      "RBA F6",
       "Chart-level reliability markers",
       "visible error bars and interval hover text use 95% margin-of-error metadata",
       "data/sih_estimate_quality.csv",

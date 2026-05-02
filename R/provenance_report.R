@@ -5,6 +5,17 @@
 # indicator registry. These helpers intentionally avoid writing persistent files.
 # ==============================================================================
 
+if (!exists("pipeline_external_sources", mode = "function")) {
+  pipeline_contracts_path <- if (exists("project_path", mode = "function")) {
+    project_path("R", "pipeline_contracts.R")
+  } else {
+    file.path("R", "pipeline_contracts.R")
+  }
+  if (file.exists(pipeline_contracts_path)) {
+    source(pipeline_contracts_path, local = environment())
+  }
+}
+
 dashboard_markdown_table <- function(data) {
   if (nrow(data) == 0) {
     return(character(0))
@@ -120,6 +131,20 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
   )
   methodology <- indicator_registry_methodology_table()
   inventory <- dashboard_data_inventory(data_dir)
+  external_sources <- if (exists("pipeline_external_sources",
+                                 mode = "function")) {
+    pipeline_external_sources()
+  } else {
+    data.frame(
+      source_id = character(),
+      provider = character(),
+      source_type = character(),
+      source_reference = character(),
+      consuming_script = character(),
+      output_file = character(),
+      stringsAsFactors = FALSE
+    )
+  }
 
   lines <- c(
     "# Housing Affordability Dashboard Methodology And Provenance",
@@ -130,9 +155,14 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
     "",
     "- `pipeline/05_driver.R` is the canonical local data-refresh entrypoint.",
     "- `pipeline/06_validate_outputs.R` gates required schemas, source series and minimum row counts.",
+    "- `R/pipeline_contracts.R` documents per-stage output contracts and fixed external ABS/RBA source surfaces.",
     "- `data/*.csv` stores the dashboard-ready saved outputs read by the Shiny app.",
     "- `R/indicator_registry.R` documents derived indicator formulas, source series, units, interpretation direction and caveats.",
     "- The Methodology page and this download expose that registry metadata to dashboard users.",
+    "",
+    "## External Data Sources",
+    "",
+    dashboard_markdown_table(external_sources),
     "",
     "## Interpretation Caveats",
     "",

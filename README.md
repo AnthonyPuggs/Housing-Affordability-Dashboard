@@ -48,6 +48,8 @@ Rscript pipeline/05_driver.R
 
 The pipeline parses local ABS Survey of Income and Housing workbooks under `resources/ABS_data/`, retrieves public ABS/RBA time series, derives affordability and cost-pressure indicators, and validates the generated outputs.
 
+Pipeline runs use per-stage output gates from `R/pipeline_contracts.R` before continuing to the next stage. The same helper records the fixed external-source manifest for ABS catalogue/table calls, ABS SDMX CPI endpoints and RBA F-series tables.
+
 ## Data Model
 
 Main dashboard CSVs live in `data/`:
@@ -67,6 +69,8 @@ Official SIH/NHHA measures should be interpreted separately from modelled market
 ## Methodology Metadata
 
 `R/indicator_registry.R` is the source of truth for derived indicator formulas, source series, units, interpretation direction and caveats. The registry documents the current formulas used by the pipeline and dashboard; it does not make stylised market-entry measures official ABS measures or lender assessments.
+
+`R/pipeline_contracts.R` documents the pipeline stage contracts and fixed external-source manifest. It keeps the release surface explicit: each data-producing stage has required CSV outputs, and ABS/RBA source surfaces are listed separately from the saved dashboard data.
 
 The Shiny app includes a Methodology page backed by this registry. It shows the formula, source series, interpretation direction and official/stylised status for each derived affordability indicator.
 

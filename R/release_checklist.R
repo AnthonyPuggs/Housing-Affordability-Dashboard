@@ -9,6 +9,12 @@ if (!exists("project_root", mode = "function") ||
     !exists("project_path", mode = "function")) {
   source(file.path("R", "project_paths.R"))
 }
+if (!exists("pipeline_external_sources", mode = "function")) {
+  pipeline_contracts_path <- file.path("R", "pipeline_contracts.R")
+  if (file.exists(pipeline_contracts_path)) {
+    source(pipeline_contracts_path)
+  }
+}
 
 release_checklist_row <- function(check_id, category, status, detail,
                                   recommendation) {
@@ -247,6 +253,53 @@ release_checklist <- function(repo_root = project_root(),
       file.path("R", "provenance_report.R"), repo_root,
       "Restore the provenance report helper before public release."
     ),
+    release_file_surface_check(
+      "methodology_pipeline_contracts", "methodology",
+      file.path("R", "pipeline_contracts.R"), repo_root,
+      "Restore pipeline stage contracts and the external-source manifest before public release."
+    ),
+    {
+      if (!exists("pipeline_external_sources", mode = "function")) {
+        release_checklist_row(
+          "methodology_external_source_manifest", "methodology", "fail",
+          "R/pipeline_contracts.R is unavailable, so external sources cannot be listed.",
+          "Restore R/pipeline_contracts.R before public release."
+        )
+      } else {
+        sources <- pipeline_external_sources()
+        source_text <- paste(apply(sources, 1, paste, collapse = " "),
+                             collapse = "\n")
+        required_sources <- c("ABS 6432.0", "ABS 6401.0", "ABS SDMX CPI",
+                              "RBA F1", "RBA F5", "RBA F6")
+        missing_sources <- required_sources[
+          !vapply(required_sources, grepl, logical(1), source_text,
+                  fixed = TRUE)
+        ]
+        status <- if (length(missing_sources) == 0 &&
+                      !grepl("/Users/", source_text, fixed = TRUE)) {
+          "pass"
+        } else {
+          "fail"
+        }
+        detail <- if (identical(status, "pass")) {
+          "External ABS/RBA source manifest is present and path-safe."
+        } else if (length(missing_sources) > 0) {
+          paste("External source manifest is missing:",
+                paste(missing_sources, collapse = ", "))
+        } else {
+          "External source manifest contains a local absolute user path."
+        }
+        recommendation <- if (identical(status, "pass")) {
+          "No action required."
+        } else {
+          "Update R/pipeline_contracts.R before public release."
+        }
+        release_checklist_row(
+          "methodology_external_source_manifest", "methodology",
+          status, detail, recommendation
+        )
+      }
+    },
     release_text_check(
       "methodology_page_wiring", "methodology", "app.R",
       c('source(project_path("R", "methodology_module.R"), local = TRUE)',

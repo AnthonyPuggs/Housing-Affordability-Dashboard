@@ -37,7 +37,8 @@ cat("  Fetching mean dwelling prices (6432.0 Table 1)...\n")
 
 rppi_raw <- safe_read(
   read_abs(cat_no = "6432.0", tables = "1"),
-  "Mean Dwelling Price 6432.0 Table 1"
+  "Mean Dwelling Price 6432.0 Table 1",
+  required = TRUE
 )
 
 if (nrow(rppi_raw) > 0) {
@@ -88,7 +89,8 @@ cat("  Fetching CPI components (6401.0)...\n")
 # CPI groups table (Table 7 has expenditure class detail)
 cpi_groups <- safe_read(
   read_abs(cat_no = "6401.0", tables = "7"),
-  "CPI Groups 6401.0 Table 7"
+  "CPI Groups 6401.0 Table 7",
+  required = TRUE
 )
 
 if (nrow(cpi_groups) > 0) {
@@ -145,7 +147,7 @@ cpi_rents_qtr <- safe_read({
       series = paste0("CPI Rents ; ",
                       api_region_to_city[as.character(REGION)], " ;")
     )
-}, "CPI Rents quarterly (API)")
+}, "CPI Rents quarterly (API)", required = TRUE)
 
 if (nrow(cpi_rents_qtr) > 0) {
   cpi_rents_qtr <- cpi_rents_qtr %>%
@@ -161,7 +163,8 @@ if (nrow(cpi_rents_qtr) > 0) {
 cat("  Fetching monthly CPI Rents by city (6401.0 Table 10)...\n")
 cpi_city_raw <- safe_read(
   read_abs(cat_no = "6401.0", tables = "10"),
-  "CPI by City 6401.0 Table 10"
+  "CPI by City 6401.0 Table 10",
+  required = TRUE
 )
 
 if (nrow(cpi_city_raw) > 0) {
@@ -261,7 +264,7 @@ cpi_all <- safe_read({
       value = as.numeric(OBS_VALUE)
     ) %>%
     arrange(date)
-}, "CPI All Groups quarterly (API)") %>%
+}, "CPI All Groups quarterly (API)", required = TRUE) %>%
   normalize_abs(label = "CPI All Groups", category = "Prices",
                 units = "Index", freq_hint = "Quarter")
 all_series$cpi_all <- cpi_all
@@ -290,7 +293,8 @@ cat("  Fetching WPI (6345.0)...\n")
 
 wpi_raw <- safe_read(
   read_abs(cat_no = "6345.0", tables = "1"),
-  "WPI 6345.0 Table 1"
+  "WPI 6345.0 Table 1",
+  required = TRUE
 )
 
 if (nrow(wpi_raw) > 0) {
@@ -320,7 +324,8 @@ cat("  Fetching AWE...\n")
 
 awe <- safe_read(
   read_awe(wage_measure = "awote", sex = "persons", sector = "total"),
-  "AWE (AWOTE)"
+  "AWE (AWOTE)",
+  required = TRUE
 ) %>%
   transmute(date, value = as.numeric(value)) %>%
   normalize_abs(label = "AWE (AWOTE, Persons)", category = "Income",
@@ -382,7 +387,8 @@ cat("  Fetching Labour Force (6202.0)...\n")
 
 labour <- safe_read(
   read_abs(cat_no = "6202.0", tables = "1"),
-  "Labour Force 6202.0 Table 1"
+  "Labour Force 6202.0 Table 1",
+  required = TRUE
 )
 
 if (nrow(labour) > 0) {
@@ -408,7 +414,8 @@ if (nrow(labour) > 0) {
 cat("  Fetching Labour Force Supplementary (6202.0 Table 22)...\n")
 labour_t22 <- safe_read(
   read_abs(cat_no = "6202.0", tables = "22"),
-  "Labour Force 6202.0 Table 22"
+  "Labour Force 6202.0 Table 22",
+  required = TRUE
 )
 
 if (nrow(labour_t22) > 0) {
@@ -439,7 +446,8 @@ cat("  Fetching dwelling-type median prices (6432.0 Table 2)...\n")
 
 rppi_type_raw <- safe_read(
   read_abs(cat_no = "6432.0", tables = "2"),
-  "Dwelling Type Medians 6432.0 Table 2"
+  "Dwelling Type Medians 6432.0 Table 2",
+  required = TRUE
 )
 
 if (nrow(rppi_type_raw) > 0) {

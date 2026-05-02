@@ -51,6 +51,10 @@ if (all(file.exists(c(project_paths_path, checklist_path)))) {
     check(all(c("data", "methodology", "reproducibility", "hygiene") %in%
                 unique(checks$category)),
           "release_checklist() missing required categories")
+    check("methodology_pipeline_contracts" %in% checks$check_id,
+          "release_checklist() must include the pipeline-contract surface")
+    check("methodology_external_source_manifest" %in% checks$check_id,
+          "release_checklist() must include the external-source manifest")
     check(!any(checks$status == "fail"),
           paste("Current release checklist must not have fail statuses:",
                 paste(checks$check_id[checks$status == "fail"],
@@ -77,7 +81,9 @@ if (file.exists(readme_path)) {
   required_readme_text <- c(
     "Rscript -e \"source('R/release_checklist.R'); validate_release_checklist()\"",
     "warnings can be acceptable for known data vintage",
-    "failures block public release"
+    "failures block public release",
+    "per-stage output gates",
+    "fixed external-source manifest"
   )
   missing_readme_text <- required_readme_text[
     !vapply(required_readme_text, grepl, logical(1),

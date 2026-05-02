@@ -96,6 +96,21 @@ for (r_file in tracked_r_files) {
         paste("R file does not parse:", r_file, parsed))
 }
 
+pipeline_contracts_path <- file.path(repo_root, "R", "pipeline_contracts.R")
+check(file.exists(pipeline_contracts_path),
+      "R/pipeline_contracts.R must exist and parse")
+if (file.exists(pipeline_contracts_path)) {
+  parsed <- tryCatch(
+    {
+      parse(pipeline_contracts_path)
+      TRUE
+    },
+    error = function(e) conditionMessage(e)
+  )
+  check(identical(parsed, TRUE),
+        paste("R/pipeline_contracts.R does not parse:", parsed))
+}
+
 if (length(failures) > 0) {
   stop(
     paste(c("Public release hygiene checks failed:", paste0("- ", failures)),
