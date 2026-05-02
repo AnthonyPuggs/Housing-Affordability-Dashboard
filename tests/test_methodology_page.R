@@ -101,7 +101,9 @@ if (all(file.exists(c(app_path, module_path)))) {
     "R/market_entry_scenarios.R",
     "Official SIH/NHHA burden measures",
     "Market-entry cost-pressure indexes",
-    "Stylised scenario calculators"
+    "Stylised scenario calculators",
+    "Chart-level reliability markers",
+    "data/sih_estimate_quality.csv"
   )
   missing_module_text <- required_module_text[
     !vapply(required_module_text, grepl, logical(1), combined_text, fixed = TRUE)

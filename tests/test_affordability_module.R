@@ -110,7 +110,13 @@ if (file.exists(module_path)) {
     "bindCache(input$afford_indices, input$afford_dates, input$serviceability_buffer, is_dark())",
     "bindCache(input$stress_breakdown, input$stress_population, is_dark())",
     "dashboard_ggplotly",
-    "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment"
+    "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment",
+    "join_sih_quality(",
+    "sih_reliability_marker(",
+    "sih_quality_hover_text(",
+    "reliability_marker",
+    "quality_hover",
+    "tooltip = c(\"x\", \"y\", \"fill\", \"text\")"
   )
   missing_module_text <- required_module_text[
     !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)

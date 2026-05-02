@@ -48,6 +48,10 @@ if (!exists("indicator_registry", mode = "function")) {
   source(project_path("R", "indicator_registry.R"))
 }
 
+if (!exists("join_sih_quality", mode = "function")) {
+  source(project_path("R", "sih_quality_helpers.R"))
+}
+
 # ==============================================================================
 # DATA LOADING — runs once at app startup
 # ==============================================================================

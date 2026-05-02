@@ -26,6 +26,19 @@ if (!exists("market_entry_scenario", mode = "function", inherits = TRUE)) {
   source(scenario_path, local = environment())
 }
 
+if (!exists("join_sih_quality", mode = "function", inherits = TRUE)) {
+  sih_quality_helper_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "sih_quality_helpers.R")
+  } else {
+    file.path("R", "sih_quality_helpers.R")
+  }
+  if (!file.exists(sih_quality_helper_path)) {
+    stop("Could not locate R/sih_quality_helpers.R for affordability module.",
+         call. = FALSE)
+  }
+  source(sih_quality_helper_path, local = environment())
+}
+
 affordability_ui_indicators <- c(
   "Price-to-Income Ratio",
   "Mortgage Serviceability Index",
@@ -312,26 +325,51 @@ affordabilityPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0, "No data for selected filters."))
 
       d <- d %>%
+        join_sih_quality(sih_quality) %>%
         mutate(stress_band = case_when(
           metric == "pct_25_or_less" ~ "<25%",
           metric == "pct_25_to_30"   ~ "25-30%",
           metric == "pct_30_to_50"   ~ "30-50%",
           metric == "pct_over_50"    ~ ">50%"
         )) %>%
+        mutate(
+          reliability_marker = sih_reliability_marker(rse_reliability_flag),
+          quality_hover = sih_quality_hover_text(
+            rse_pct,
+            moe_95,
+            rse_reliability_flag
+          ),
+          hover_text = paste0(
+            breakdown_val,
+            "<br>Band: ", stress_band,
+            "<br>Share: ", number(value, accuracy = 0.1), "%",
+            "<br>", quality_hover
+          )
+        ) %>%
         mutate(stress_band = factor(stress_band,
                                     levels = c("<25%", "25-30%", "30-50%", ">50%")))
 
       stress_cols <- c("<25%" = "#2ecc71", "25-30%" = "#f39c12",
                        "30-50%" = "#e74c3c", ">50%" = "#8e44ad")
 
-      p <- ggplot(d, aes(x = breakdown_val, y = value, fill = stress_band)) +
+      p <- ggplot(d, aes(x = breakdown_val, y = value, fill = stress_band,
+                         text = hover_text)) +
         geom_col(position = "stack", alpha = 0.9) +
+        geom_text(
+          data = d %>% filter(nzchar(reliability_marker)),
+          aes(label = reliability_marker),
+          position = position_stack(vjust = 0.5),
+          size = 4,
+          fontface = "bold",
+          color = "#172033",
+          show.legend = FALSE
+        ) +
         scale_fill_manual(values = stress_cols) +
         labs(x = NULL, y = "% of Households", fill = "Cost/Income") +
         coord_flip() +
         theme_afford(is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill", "text"))
     }) %>%
       bindCache(input$stress_breakdown, input$stress_population, is_dark())
 

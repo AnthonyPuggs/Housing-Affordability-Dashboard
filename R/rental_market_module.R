@@ -1,5 +1,18 @@
 # Rental Market page module.
 
+if (!exists("join_sih_quality", mode = "function", inherits = TRUE)) {
+  sih_quality_helper_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "sih_quality_helpers.R")
+  } else {
+    file.path("R", "sih_quality_helpers.R")
+  }
+  if (!file.exists(sih_quality_helper_path)) {
+    stop("Could not locate R/sih_quality_helpers.R for rental market module.",
+         call. = FALSE)
+  }
+  source(sih_quality_helper_path, local = environment())
+}
+
 rental_plot_margins <- list(
   state = list(l = 82, r = 20, b = 76, t = 38),
   trend = list(l = 86, r = 20, b = 92, t = 32),
@@ -91,7 +104,22 @@ rentalMarketPageServer <- function(id, is_dark) {
       d <- sih_nhha %>%
         filter(survey_year == yr,
                metric == "pct_rental_stress_over_30",
-               geography %in% selected_states)
+               geography %in% selected_states) %>%
+        join_sih_quality(sih_quality) %>%
+        mutate(
+          reliability_marker = sih_reliability_marker(rse_reliability_flag),
+          quality_hover = sih_quality_hover_text(
+            rse_pct,
+            moe_95,
+            rse_reliability_flag
+          ),
+          hover_text = paste0(
+            geography,
+            "<br>Survey year: ", survey_year,
+            "<br>Rental stress: ", number(value, accuracy = 0.1), "%",
+            "<br>", quality_hover
+          )
+        )
 
       validate(need(nrow(d) > 0, "No NHHA rental stress data for selected year."))
 
@@ -100,14 +128,26 @@ rentalMarketPageServer <- function(id, is_dark) {
                metric == "pct_rental_stress_over_30",
                geography == "Aust.")
 
-      p <- ggplot(d, aes(x = reorder(geography, -value), y = value)) +
+      p <- ggplot(d, aes(x = reorder(geography, -value), y = value,
+                         text = hover_text)) +
         geom_col(fill = "#e74c3c", alpha = 0.85, width = 0.7) +
+        geom_text(
+          data = d %>% filter(nzchar(reliability_marker)),
+          aes(x = reorder(geography, -value), y = value,
+              label = reliability_marker),
+          inherit.aes = FALSE,
+          vjust = -0.45,
+          size = 4.2,
+          fontface = "bold",
+          color = "#FFB74D"
+        ) +
         {if (nrow(nat) > 0) geom_hline(yintercept = nat$value[1],
                                        linetype = "dashed", color = "#333")} +
+        scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
         labs(x = NULL, y = "% in Rental Stress (>30% of income)") +
         theme_afford(is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"),
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "text"),
                          margin = rental_plot_margins$state)
     }) %>%
       bindCache(input$rental_year, input$rental_states, is_dark())
@@ -120,10 +160,23 @@ rentalMarketPageServer <- function(id, is_dark) {
       d <- sih_nhha %>%
         filter(metric == "pct_rental_stress_over_30",
                geography %in% states) %>%
+        join_sih_quality(sih_quality) %>%
         mutate(
+          reliability_marker = sih_reliability_marker(rse_reliability_flag),
+          quality_hover = sih_quality_hover_text(
+            rse_pct,
+            moe_95,
+            rse_reliability_flag
+          ),
           geography = factor(geography,
             levels = rev(c("Aust.", sort(setdiff(unique(geography), "Aust."))))),
-          tile_label = sprintf("%.0f", value),
+          tile_label = paste0(sprintf("%.0f", value), reliability_marker),
+          hover_text = paste0(
+            geography,
+            "<br>Survey year: ", survey_year,
+            "<br>Rental stress: ", number(value, accuracy = 0.1), "%",
+            "<br>", quality_hover
+          ),
           tile_text_colour = ifelse(value >= 32 & value <= 48,
                                     "#172033", "#F8FAFC")
         )
@@ -132,7 +185,8 @@ rentalMarketPageServer <- function(id, is_dark) {
 
       dark <- is_dark()
 
-      p <- ggplot(d, aes(x = survey_year, y = geography, fill = value)) +
+      p <- ggplot(d, aes(x = survey_year, y = geography, fill = value,
+                         text = hover_text)) +
         geom_tile(color = if (dark) "#1B2A44" else "#FFFFFF", linewidth = 1.5) +
         geom_text(aes(label = tile_label, color = tile_text_colour),
                   size = 2.35, fontface = "bold", show.legend = FALSE) +
@@ -153,7 +207,7 @@ rentalMarketPageServer <- function(id, is_dark) {
           axis.text.x = element_text(angle = 45, hjust = 1)
         )
 
-      pl <- dashboard_ggplotly(p, dark = dark, tooltip = "fill",
+      pl <- dashboard_ggplotly(p, dark = dark, tooltip = c("fill", "text"),
                                margin = rental_plot_margins$trend)
       for (i in seq_along(pl$x$data)) {
         if (!is.null(pl$x$data[[i]]$mode) && grepl("text", pl$x$data[[i]]$mode)) {

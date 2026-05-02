@@ -103,7 +103,13 @@ if (file.exists(module_path)) {
     "bindCache(input$geo_gcc_metric, input$geo_gcc_tenure",
     "input$geo_gcc_geographies, is_dark())",
     "geography-aligned",
-    "not modelled market-entry indexes"
+    "not modelled market-entry indexes",
+    "join_sih_quality(",
+    "sih_reliability_marker(",
+    "sih_quality_hover_text(",
+    "reliability_marker",
+    "quality_hover",
+    "tooltip = c(\"x\", \"y\", \"text\")"
   )
   missing_module_text <- required_module_text[
     !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)

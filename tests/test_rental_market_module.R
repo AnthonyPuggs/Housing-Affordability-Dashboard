@@ -93,7 +93,14 @@ if (file.exists(module_path)) {
     "bindCache(input$rental_states, is_dark())",
     "bindCache(input$rental_cost_breakdown, is_dark())",
     "hoverinfo <- \"skip\"",
-    "dashboard_ggplotly"
+    "dashboard_ggplotly",
+    "join_sih_quality(",
+    "sih_reliability_marker(",
+    "sih_quality_hover_text(",
+    "reliability_marker",
+    "quality_hover",
+    "tooltip = c(\"x\", \"y\", \"text\")",
+    "tooltip = c(\"fill\", \"text\")"
   )
   missing_module_text <- required_module_text[
     !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)

@@ -1,5 +1,18 @@
 # Geographic Affordability page module.
 
+if (!exists("join_sih_quality", mode = "function", inherits = TRUE)) {
+  sih_quality_helper_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "sih_quality_helpers.R")
+  } else {
+    file.path("R", "sih_quality_helpers.R")
+  }
+  if (!file.exists(sih_quality_helper_path)) {
+    stop("Could not locate R/sih_quality_helpers.R for geographic affordability module.",
+         call. = FALSE)
+  }
+  source(sih_quality_helper_path, local = environment())
+}
+
 geo_state_metric_choices <- c(
   "Cost-to-income ratio" = "cost_income_ratio",
   "Real weekly housing cost" = "mean_weekly_cost_real"
@@ -268,17 +281,53 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
 
       validate(need(nrow(d) > 0, "No lower-income state data for the selected options."))
 
-      p <- ggplot(d, aes(x = reorder(geography, value), y = value)) +
+      d <- d %>%
+        join_sih_quality(sih_quality) %>%
+        mutate(
+          reliability_marker = sih_reliability_marker(rse_reliability_flag),
+          quality_hover = sih_quality_hover_text(
+            rse_pct,
+            moe_95,
+            rse_reliability_flag
+          ),
+          hover_text = paste0(
+            geography,
+            "<br>Survey year: ", survey_year,
+            "<br>", geo_metric_label(input$geo_lower_metric), ": ",
+            if (input$geo_lower_metric %in% c("pct_over_30",
+                                              "median_cost_income_ratio",
+                                              "mean_cost_income_ratio")) {
+              paste0(number(value, accuracy = 0.1), "%")
+            } else {
+              dollar(value, accuracy = 1)
+            },
+            "<br>", quality_hover
+          )
+        )
+
+      p <- ggplot(d, aes(x = reorder(geography, value), y = value,
+                         text = hover_text)) +
         geom_col(fill = "#1F9D8C", alpha = 0.85, width = 0.7) +
+        geom_text(
+          data = d %>% filter(nzchar(reliability_marker)),
+          aes(x = reorder(geography, value), y = value,
+              label = reliability_marker),
+          inherit.aes = FALSE,
+          hjust = -0.35,
+          size = 4.2,
+          fontface = "bold",
+          color = "#FFB74D"
+        ) +
         {if (nrow(nat) > 0) geom_hline(yintercept = nat$value[1],
                                        linetype = "dashed", color = "#333333")} +
         coord_flip() +
-        scale_y_continuous(labels = geo_value_labels(input$geo_lower_metric)) +
+        scale_y_continuous(labels = geo_value_labels(input$geo_lower_metric),
+                           expand = expansion(mult = c(0, 0.12))) +
         labs(x = NULL, y = geo_axis_label(input$geo_lower_metric),
              title = geo_metric_label(input$geo_lower_metric)) +
         theme_afford(is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "text"))
     }) %>%
       bindCache(input$geo_states, input$geo_lower_metric, input$geo_lower_tenure, is_dark())
 
