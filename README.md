@@ -62,7 +62,7 @@ Main dashboard CSVs live in `data/`:
 
 Official SIH/NHHA measures should be interpreted separately from modelled market-entry indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments.
 
-`R/market_entry_scenarios.R` centralises app-only market-entry scenario calculations for mortgage repayments, assessed-rate sensitivity, deposit saving time and expense-adjusted serviceability ratios. Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.
+`R/market_entry_scenarios.R` centralises app-only market-entry scenario calculations for mortgage repayments, assessed-rate sensitivity, deposit saving time and expense-adjusted serviceability ratios. Assessment buffer, deposit, implied LVR, loan-term and expense inputs are sensitivity assumptions, not a lender assessment. The serviceability chart uses AWE individual earnings as the income proxy; savings-rate assumptions remain calculator-only because they affect deposit saving time rather than repayment serviceability.
 
 ## Methodology Metadata
 
@@ -106,6 +106,7 @@ Rscript tests/test_sih_uncertainty_intervals.R
 Rscript tests/test_sih_estimate_quality.R
 Rscript tests/test_sih_workbook_benchmarks.R
 Rscript tests/test_market_entry_scenarios.R
+Rscript tests/test_serviceability_scenario_controls.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
 Rscript tests/test_responsive_ui_contracts.R

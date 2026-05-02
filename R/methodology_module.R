@@ -44,7 +44,8 @@ methodologyPageUI <- function(id) {
           tags$p("Serviceability, deposit-gap and calculator outputs use fixed modelling assumptions for a stylised household."),
           tags$p("These stylised scenarios are not official ABS measures or lender assessments."),
           tags$p("R/market_entry_scenarios.R defines the app-only market-entry scenarios used by the calculator and assessed-rate sensitivity chart."),
-          tags$p("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
+          tags$p("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."),
+          tags$p("Deposit, LVR and loan-term controls are stylised serviceability assumptions; the serviceability chart uses AWE individual earnings as the income proxy.")
         )
       )
     ),
@@ -71,6 +72,7 @@ methodologyPageUI <- function(id) {
             tags$li("WPI is a wage price index, not an income distribution measure."),
             tags$li("CPI rents and CPI new dwelling indexes are price indexes, not household burden measures."),
             tags$li("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."),
+            tags$li("Deposit, LVR and loan-term controls are stylised serviceability assumptions; the serviceability chart uses AWE individual earnings as the income proxy."),
             tags$li("SIH relative standard error and 95% margin of error metadata are provided in data/sih_estimate_quality.csv; users should interpret with caution when estimates have high RSE values."),
             tags$li("Chart-level reliability markers (\u2020) are driven by data/sih_estimate_quality.csv where matching SIH RSE metadata is available."),
             tags$li("Where available, visible error bars and interval hover text use 95% margin-of-error metadata from data/sih_estimate_quality.csv."),

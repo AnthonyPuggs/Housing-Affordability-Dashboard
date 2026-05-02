@@ -149,12 +149,20 @@ market_entry_scenario <- function(dwelling_price, gross_annual_income,
 }
 
 market_entry_serviceability_series <- function(price_ts, income_ts, rate_ts,
-                                               lvr_pct = 80,
+                                               deposit_pct = 20,
+                                               lvr_pct = NULL,
                                                term_years = 30,
                                                assessment_buffer_pp = 3) {
-  lvr_pct <- scenario_scalar(lvr_pct, "lvr_pct", positive = TRUE)
-  if (lvr_pct >= 100) {
-    stop("lvr_pct must be less than 100.", call. = FALSE)
+  if (!is.null(lvr_pct)) {
+    lvr_pct <- scenario_scalar(lvr_pct, "lvr_pct", positive = TRUE)
+    if (lvr_pct >= 100) {
+      stop("lvr_pct must be less than 100.", call. = FALSE)
+    }
+    deposit_pct <- 100 - lvr_pct
+  }
+  deposit_pct <- scenario_scalar(deposit_pct, "deposit_pct", positive = TRUE)
+  if (deposit_pct >= 100) {
+    stop("deposit_pct must be less than 100.", call. = FALSE)
   }
   term_years <- scenario_scalar(term_years, "term_years", positive = TRUE)
   assessment_buffer_pp <- scenario_scalar(
@@ -207,7 +215,6 @@ market_entry_serviceability_series <- function(price_ts, income_ts, rate_ts,
   rows <- lapply(seq_len(nrow(aligned)), function(i) {
     dwelling_price <- aligned$price_k[[i]] * 1000
     gross_annual_income <- aligned$awe[[i]] * 52
-    deposit_pct <- 100 - lvr_pct
     nominal <- market_entry_scenario(
       dwelling_price = dwelling_price,
       gross_annual_income = gross_annual_income,

@@ -77,6 +77,12 @@ affordabilityPageUI <- function(id) {
             sliderInput(ns("serviceability_buffer"),
                         "Assessment buffer (pp)",
                         min = 0, max = 5, value = 3, step = 0.25),
+            sliderInput(ns("serviceability_deposit_pct"),
+                        "Deposit (%)",
+                        min = 5, max = 40, value = 20, step = 1),
+            sliderInput(ns("serviceability_term"),
+                        "Loan term (years)",
+                        min = 10, max = 30, value = 30, step = 1),
             source_note("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
           ),
           card(
@@ -89,7 +95,7 @@ affordabilityPageUI <- function(id) {
             ns = ns,
             card(
               card_header("Modelled Serviceability"),
-              source_note("Modelled annual repayment share using an 80% LVR, 30-year loan and RBA mortgage-rate inputs. The 30% line is a stress reference, not a lender pass/fail rule. ", stylised_scenario_note),
+              source_note("Modelled annual repayment share using selected deposit, implied LVR, loan term and RBA mortgage-rate inputs; uses AWE individual earnings as the income proxy. The 30% line is a stress reference, not a lender pass/fail rule. Stylised scenario, not an official ABS measure or lender assessment."),
               card_body(plotlyOutput(ns("afford_serviceability"), height = "380px"))
             )
           )
@@ -247,6 +253,8 @@ affordabilityPageServer <- function(id, is_dark) {
         price_ts = rppi_national_ts,
         income_ts = awe_ts,
         rate_ts = mortgage_rate_qtr,
+        deposit_pct = input$serviceability_deposit_pct,
+        term_years = input$serviceability_term,
         assessment_buffer_pp = input$serviceability_buffer
       ) %>%
         filter(!is.na(serviceability_pct),
@@ -272,7 +280,7 @@ affordabilityPageServer <- function(id, is_dark) {
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%
-      bindCache(input$afford_indices, input$afford_dates, input$serviceability_buffer, is_dark())
+      bindCache(input$afford_indices, input$afford_dates, input$serviceability_deposit_pct, input$serviceability_term, input$serviceability_buffer, is_dark())
 
     calc_vals <- reactive({
       tryCatch(
