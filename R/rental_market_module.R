@@ -7,6 +7,24 @@ rental_plot_margins <- list(
   costs = list(l = 150, r = 20, b = 78, t = 30)
 )
 
+normalise_rental_states <- function(selected, geographies) {
+  available <- sort(setdiff(unique(geographies), "Aust."))
+  selected <- selected[!is.na(selected) & nzchar(selected)]
+
+  if (length(selected) == 0 || identical(selected, "all")) {
+    return(available)
+  }
+
+  explicit <- selected[selected != "all"]
+  explicit <- explicit[explicit %in% available]
+
+  if (length(explicit) > 0) {
+    return(explicit)
+  }
+
+  available
+}
+
 rentalMarketPageUI <- function(id) {
   ns <- NS(id)
 
@@ -15,7 +33,7 @@ rentalMarketPageUI <- function(id) {
     div(class = "rental-market-page",
       layout_sidebar(
         sidebar = sidebar(
-          width = 280, open = "desktop",
+          width = 280, open = "open",
           selectInput(ns("rental_year"), "Survey Year (NHHA)",
                       choices = if (nrow(sih_nhha) > 0)
                         rev(sort(unique(sih_nhha$survey_year))) else "2019-20",
@@ -67,15 +85,13 @@ rentalMarketPageServer <- function(id, is_dark) {
   moduleServer(id, function(input, output, session) {
     output$rental_stress_state <- renderPlotly({
       yr <- input$rental_year
+      selected_states <- normalise_rental_states(input$rental_states,
+                                                 sih_nhha$geography)
 
       d <- sih_nhha %>%
         filter(survey_year == yr,
                metric == "pct_rental_stress_over_30",
-               geography != "Aust.")
-
-      if (!is.null(input$rental_states) && !"all" %in% input$rental_states) {
-        d <- d %>% filter(geography %in% input$rental_states)
-      }
+               geography %in% selected_states)
 
       validate(need(nrow(d) > 0, "No NHHA rental stress data for selected year."))
 
@@ -97,18 +113,19 @@ rentalMarketPageServer <- function(id, is_dark) {
       bindCache(input$rental_year, input$rental_states, is_dark())
 
     output$rental_stress_trend <- renderPlotly({
-      states <- if (is.null(input$rental_states) || "all" %in% input$rental_states) {
-        unique(sih_nhha$geography)
-      } else {
-        c(input$rental_states, "Aust.")
-      }
+      states <- c("Aust.",
+                  normalise_rental_states(input$rental_states,
+                                          sih_nhha$geography))
 
       d <- sih_nhha %>%
         filter(metric == "pct_rental_stress_over_30",
                geography %in% states) %>%
         mutate(
           geography = factor(geography,
-            levels = rev(c("Aust.", sort(setdiff(unique(geography), "Aust.")))))
+            levels = rev(c("Aust.", sort(setdiff(unique(geography), "Aust."))))),
+          tile_label = sprintf("%.0f", value),
+          tile_text_colour = ifelse(value >= 32 & value <= 48,
+                                    "#172033", "#F8FAFC")
         )
 
       validate(need(nrow(d) > 0, "No NHHA trend data."))
@@ -117,10 +134,13 @@ rentalMarketPageServer <- function(id, is_dark) {
 
       p <- ggplot(d, aes(x = survey_year, y = geography, fill = value)) +
         geom_tile(color = if (dark) "#1B2A44" else "#FFFFFF", linewidth = 1.5) +
+        geom_text(aes(label = tile_label, color = tile_text_colour),
+                  size = 2.35, fontface = "bold", show.legend = FALSE) +
         scale_x_discrete(
           breaks = function(x) x[seq(1, length(x), by = 3)],
           labels = function(x) sub("-.*", "", x)
         ) +
+        scale_color_identity() +
         scale_fill_gradient2(
           low = "#2196F3", mid = "#FFB74D", high = "#e74c3c",
           midpoint = 40, limits = c(10, 60),
