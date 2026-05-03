@@ -9,6 +9,8 @@
 .claude/
 AGENTS.md
 quality_reports/
+.app_old.R
+CLAUDE.md
 
 # Temporary Office lock files
 resources/ABS_data/**/~$*

@@ -1,0 +1,14 @@
+.git/
+.local_untracked_backup/
+quality_reports/
+tests/
+docs/
+resources/
+renv/library/
+renv/staging/
+renv/python/
+renv/local/
+renv/cellar/
+.DS_Store
+.Rhistory
+.RData
