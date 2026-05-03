@@ -21,3 +21,11 @@ renv/staging/
 renv/python/
 renv/local/
 renv/cellar/
+
+# Graphify temporary files; keep the report and graph JSON
+.graphify_*
+
+graphify-out/*
+!graphify-out/
+!graphify-out/GRAPH_REPORT.md
+!graphify-out/graph.json
