@@ -2,6 +2,8 @@
 
 Interactive R/Shiny dashboard for Australian housing affordability and cost-pressure analysis. The app combines saved ABS, SIH and RBA-derived CSV outputs with Plotly charts for prices, rents, official housing burden measures, labour-market context, housing supply and stylised market-entry scenarios.
 
+Live web app here: https://anthonypuggs-household-affordability-dashboard.share.connect.posit.cloud/
+
 ## Run The App
 
 Restore the pinned R package environment from `renv.lock`:
