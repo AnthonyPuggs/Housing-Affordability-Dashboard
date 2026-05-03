@@ -59,45 +59,40 @@ housingSupplyPageUI <- function(id) {
 
   nav_panel(
     "Housing Supply",
-    div(
-      class = "d-flex justify-content-between align-items-start mb-3 px-2",
-      div(
-        tags$h3("Housing Supply", class = "mb-1",
-                style = "font-weight: 700;"),
-        tags$p("Building activity and construction costs",
-               style = "color: var(--app-muted); margin-bottom: 0;")
-      )
+    policy_page_header(
+      "Housing Supply",
+      "Building activity and construction costs across approvals, dwelling mix and construction-cost pressure."
     ),
     layout_column_wrap(
       width = 1/4,
       fill = FALSE,
-      value_box(
+      policy_kpi_box(
         title = "NSW Approvals",
         value = textOutput(ns("vb_approvals_nsw")),
-        p(class = "kpi-subtitle", "Monthly dwelling units"),
-        uiOutput(ns("vb_approvals_nsw_change")),
-        theme = value_box_theme(bg = "#0E5A8A", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", "Monthly dwelling units"),
+        change = uiOutput(ns("vb_approvals_nsw_change")),
+        accent = "blue"
       ),
-      value_box(
+      policy_kpi_box(
         title = "VIC Approvals",
         value = textOutput(ns("vb_approvals_vic")),
-        p(class = "kpi-subtitle", "Monthly dwelling units"),
-        uiOutput(ns("vb_approvals_vic_change")),
-        theme = value_box_theme(bg = "#3B4C7A", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", "Monthly dwelling units"),
+        change = uiOutput(ns("vb_approvals_vic_change")),
+        accent = "teal"
       ),
-      value_box(
+      policy_kpi_box(
         title = "Construction Costs",
         value = textOutput(ns("vb_construction")),
-        p(class = "kpi-subtitle", "CPI New Dwelling Index"),
-        uiOutput(ns("vb_construction_change")),
-        theme = value_box_theme(bg = "#17415F", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", "CPI New Dwelling Index"),
+        change = uiOutput(ns("vb_construction_change")),
+        accent = "navy"
       ),
-      value_box(
+      policy_kpi_box(
         title = "Houses Share",
         value = textOutput(ns("vb_houses_share")),
-        p(class = "kpi-subtitle", "% of total approvals"),
-        uiOutput(ns("vb_houses_share_change")),
-        theme = value_box_theme(bg = "#984ea3", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", "% of total approvals"),
+        change = uiOutput(ns("vb_houses_share_change")),
+        accent = "purple"
       )
     ),
     sliderInput(ns("supply_dates"), "Date Range",
@@ -124,16 +119,16 @@ housingSupplyPageUI <- function(id) {
     layout_column_wrap(
       width = 1,
       fill = FALSE,
-      card(
+      policy_chart_card(
+        title = "Building Approvals",
         fill = FALSE,
-        card_header("Building Approvals"),
-        source_note("ABS building approvals. Approval counts are supply pipeline indicators, not completed dwellings. State, building type and sector controls filter the same ABS series rather than changing methodology."),
-        card_body(plotlyOutput(ns("supply_approvals"), height = "420px"))
+        note = "ABS building approvals. Approval counts are supply pipeline indicators, not completed dwellings. State, building type and sector controls filter the same ABS series rather than changing methodology.",
+        plotlyOutput(ns("supply_approvals"), height = "420px")
       ),
-      card(
-        card_header("CPI New Dwelling Purchase (Construction Cost)"),
-        source_note("ABS CPI new dwelling purchase is a construction-cost price index, not a household burden measure."),
-        card_body(div(class = "chart-wide", plotlyOutput(ns("supply_cpi_construction"), height = "100%", width = "100%")))
+      policy_chart_card(
+        title = "CPI New Dwelling Purchase (Construction Cost)",
+        note = "ABS CPI new dwelling purchase is a construction-cost price index, not a household burden measure.",
+        div(class = "chart-wide", plotlyOutput(ns("supply_cpi_construction"), height = "100%", width = "100%"))
       )
     )
   )

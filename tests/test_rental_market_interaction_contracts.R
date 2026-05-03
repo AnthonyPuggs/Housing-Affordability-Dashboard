@@ -8,9 +8,11 @@ check <- function(condition, message) {
 }
 
 module_path <- file.path(repo_root, "R", "rental_market_module.R")
+chart_builders_path <- file.path(repo_root, "R", "chart_builders.R")
 readme_path <- file.path(repo_root, "README.md")
 
 check(file.exists(module_path), "R/rental_market_module.R does not exist")
+check(file.exists(chart_builders_path), "R/chart_builders.R does not exist")
 check(file.exists(readme_path), "README.md does not exist")
 
 if (file.exists(module_path)) {
@@ -46,8 +48,15 @@ if (file.exists(module_path)) {
   }
 
   module_text <- paste(readLines(module_path, warn = FALSE), collapse = "\n")
+  check(grepl("build_rental_stress_trend_plot(", module_text, fixed = TRUE),
+        "Rental Market module must delegate NHHA heatmap construction to chart builder")
+}
+
+if (file.exists(chart_builders_path)) {
+  chart_builders_text <- paste(readLines(chart_builders_path, warn = FALSE),
+                               collapse = "\n")
   required_heatmap_text <- c(
-    'width = 280, open = "open"',
+    "build_rental_stress_trend_plot <- function(",
     "geom_text(",
     "tile_label",
     "scale_color_identity()",
@@ -55,11 +64,17 @@ if (file.exists(module_path)) {
   )
   missing_heatmap_text <- required_heatmap_text[
     !vapply(required_heatmap_text, grepl, logical(1),
-            module_text, fixed = TRUE)
+            chart_builders_text, fixed = TRUE)
   ]
   check(length(missing_heatmap_text) == 0,
         paste("NHHA heatmap must retain compact tile labels:",
               paste(missing_heatmap_text, collapse = "; ")))
+}
+
+if (file.exists(module_path)) {
+  module_text <- paste(readLines(module_path, warn = FALSE), collapse = "\n")
+  check(grepl('width = 280, open = "open"', module_text, fixed = TRUE),
+        "Rental Market sidebar must remain open by default")
 }
 
 if (file.exists(readme_path)) {

@@ -39,6 +39,7 @@ library(plotly)
 .load_app_project_paths()
 source(project_path("plot_setup.R"), local = TRUE)
 source(project_path("R", "visual_semantics.R"), local = TRUE)
+source(project_path("R", "ui_style_system.R"), local = TRUE)
 source(project_path("R", "app_ui_helpers.R"), local = TRUE)
 source(project_path("R", "plotly_helpers.R"), local = TRUE)
 source(project_path("R", "chart_builders.R"), local = TRUE)
@@ -87,11 +88,19 @@ ui <- page_navbar(
     tags$style(HTML("
       /* ---- Light theme (default) ---- */
       :root {
-        --app-bg: #f4f7fb;
-        --app-text: #1f2d3d;
+        --app-bg: #f7f9fc;
+        --app-text: #182231;
         --app-panel: #ffffff;
-        --app-border: #d9e0e8;
-        --app-muted: #6c757d;
+        --app-border: #d8e0ea;
+        --app-muted: #5f6f82;
+        --policy-surface: #ffffff;
+        --policy-surface-subtle: #f2f6fa;
+        --policy-accent: #0E5A8A;
+        --policy-accent-soft: #E6F1F7;
+        --policy-border-strong: #bdc9d7;
+        --policy-kpi-bg: #ffffff;
+        --policy-kpi-fg: #182231;
+        --policy-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
       }
       /* ---- Dark theme ---- */
       html[data-bs-theme='dark'] {
@@ -100,16 +109,60 @@ ui <- page_navbar(
         --app-panel: #111b2e;
         --app-border: #2a3a54;
         --app-muted: #8899aa;
+        --policy-surface: #111b2e;
+        --policy-surface-subtle: #0f172a;
+        --policy-accent: #7dbce5;
+        --policy-accent-soft: #17304a;
+        --policy-border-strong: #3a4f6e;
+        --policy-kpi-bg: #111b2e;
+        --policy-kpi-fg: #e3ebf4;
+        --policy-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
       }
 
       /* Base */
       body {
         background-color: var(--app-bg) !important;
         color: var(--app-text) !important;
+        font-size: 15px;
+        line-height: 1.45;
       }
       .bslib-page-fill { background-color: var(--app-bg) !important; }
 
       /* Navbar */
+      .navbar {
+        background-color: var(--policy-surface) !important;
+        border-bottom: 1px solid var(--app-border);
+        box-shadow: var(--policy-shadow);
+      }
+      .navbar .navbar-brand {
+        font-weight: 700;
+        letter-spacing: 0;
+        color: var(--app-text) !important;
+      }
+      .navbar .nav-link {
+        color: var(--app-muted) !important;
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+      }
+      .navbar .nav-link:hover,
+      .navbar .nav-link.active {
+        color: var(--app-text) !important;
+        border-bottom-color: var(--policy-accent);
+      }
+      .navbar .navbar-toggler,
+      .navbar .navbar-toggle {
+        min-width: 44px;
+        min-height: 40px;
+        background-color: var(--policy-surface-subtle) !important;
+        border: 1px solid var(--app-border) !important;
+        color: var(--app-text);
+      }
+      .navbar .navbar-toggle .icon-bar {
+        background-color: var(--app-text) !important;
+      }
+      .navbar .navbar-toggler-icon {
+        background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2824%2C34%2C49%2C0.88%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\") !important;
+      }
       html[data-bs-theme='dark'] .navbar {
         background-color: #0d1a2d !important;
         border-bottom: 1px solid var(--app-border);
@@ -123,12 +176,16 @@ ui <- page_navbar(
       html[data-bs-theme='dark'] .navbar .nav-link.active {
         color: #ffffff !important;
       }
+      html[data-bs-theme='dark'] .navbar .navbar-toggler-icon {
+        background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28227%2C235%2C244%2C0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\") !important;
+      }
 
       /* Cards and panels */
       .card, .sidebar, .bslib-sidebar-layout > .sidebar {
         background-color: var(--app-panel) !important;
         color: var(--app-text) !important;
         border-color: var(--app-border) !important;
+        border-radius: 8px !important;
       }
       .card-header {
         background-color: var(--app-panel) !important;
@@ -142,6 +199,7 @@ ui <- page_navbar(
         background-color: var(--app-panel) !important;
         color: var(--app-text) !important;
         border-color: var(--app-border) !important;
+        border-radius: 6px !important;
       }
       .selectize-input .item { color: var(--app-text) !important; }
 
@@ -207,10 +265,95 @@ ui <- page_navbar(
         color: var(--app-text) !important;
       }
 
-      /* Value boxes */
-      .value-box .value-box-value { font-size: 1.6rem; font-weight: 700; }
-      .value-box .value-box-title { font-size: 0.85rem; opacity: 0.85; }
-      .kpi-subtitle { font-size: 0.75rem; color: var(--app-muted); margin-top: 2px; margin-bottom: 0; }
+      /* Public-policy report UI system */
+      .policy-page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1rem;
+        margin: 0.35rem 0 1.15rem;
+        padding: 0.15rem 0.25rem 0.9rem;
+        border-bottom: 1px solid var(--app-border);
+      }
+      .policy-page-title {
+        font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+        line-height: 1.12;
+        font-weight: 750;
+        color: var(--app-text);
+        margin: 0;
+      }
+      .policy-page-subtitle {
+        max-width: 760px;
+        color: var(--app-muted);
+        margin: 0.35rem 0 0;
+        font-size: 0.96rem;
+      }
+      .policy-page-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .policy-card {
+        border: 1px solid var(--app-border) !important;
+        border-radius: 8px !important;
+        box-shadow: var(--policy-shadow);
+      }
+      .policy-card-header {
+        padding: 0.72rem 1rem !important;
+        border-bottom: 1px solid var(--app-border) !important;
+      }
+      .policy-card-title {
+        font-size: 0.98rem;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+      .policy-card-body {
+        padding: 0.95rem 1rem !important;
+      }
+      .policy-chart-card .policy-card-body {
+        padding: 0.75rem 0.9rem 0.9rem !important;
+      }
+      .policy-card-body-with-note {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .policy-card-body-with-note > .policy-source-note {
+        padding: 0 !important;
+      }
+      .policy-source-note {
+        color: var(--app-muted);
+        font-size: 0.78rem;
+        line-height: 1.42;
+        margin: 0;
+        padding: 0.65rem 1rem 0 !important;
+      }
+      .policy-kpi {
+        background-color: var(--policy-kpi-bg) !important;
+        color: var(--policy-kpi-fg) !important;
+        border: 1px solid var(--app-border) !important;
+        border-left: 4px solid var(--policy-accent) !important;
+        border-radius: 8px !important;
+        box-shadow: var(--policy-shadow);
+      }
+      .policy-kpi-blue { border-left-color: #0E5A8A !important; }
+      .policy-kpi-teal { border-left-color: #1F9D8C !important; }
+      .policy-kpi-navy { border-left-color: #17415F !important; }
+      .policy-kpi-purple { border-left-color: #7B5AA6 !important; }
+      .value-box .value-box-value { font-size: 1.55rem; font-weight: 750; }
+      .value-box .value-box-title { font-size: 0.82rem; opacity: 0.9; font-weight: 700; }
+      .kpi-subtitle { font-size: 0.76rem; color: var(--app-muted); margin-top: 2px; margin-bottom: 0; }
+      .bslib-sidebar-layout > .sidebar {
+        background-color: var(--policy-surface-subtle) !important;
+      }
+      .bslib-sidebar-layout > .sidebar .shiny-input-container {
+        margin-bottom: 1rem;
+      }
+      .bslib-sidebar-layout > .sidebar .control-label,
+      .bslib-sidebar-layout > .sidebar label {
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
 
       /* Misc */
       .shiny-output-error-validation { color: #A43D3D; font-weight: 600; }
@@ -242,6 +385,19 @@ ui <- page_navbar(
       .chart-wide .js-plotly-plot, .chart-square .js-plotly-plot {
         width: 100% !important;
         height: 100% !important;
+      }
+      .geographic-affordability-page .geo-chart {
+        height: 440px;
+        min-height: 440px;
+      }
+      .affordability-indices-page .bslib-sidebar-layout > .main {
+        overflow-y: auto;
+        align-content: flex-start;
+      }
+      .affordability-indices-page .policy-chart-card,
+      .affordability-indices-page .shiny-panel-conditional {
+        flex: 0 0 auto;
+        width: 100%;
       }
 
       /* KPI change indicator colors */
@@ -291,6 +447,17 @@ ui <- page_navbar(
         .chart-square {
           height: 340px;
           min-height: 320px;
+        }
+        .geographic-affordability-page .geo-chart {
+          height: 380px;
+          min-height: 380px;
+        }
+        .policy-page-header {
+          display: block;
+          margin-bottom: 0.85rem;
+        }
+        .policy-page-actions {
+          margin-top: 0.75rem;
         }
         .value-box .value-box-value { font-size: 1.2rem; }
         .value-box .value-box-title { font-size: 0.75rem; }

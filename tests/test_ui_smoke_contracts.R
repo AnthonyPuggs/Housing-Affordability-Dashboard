@@ -139,6 +139,24 @@ check(length(missing_theme) == 0,
       paste("Theme/mobile nav contract missing:",
             paste(missing_theme, collapse = ", ")))
 
+policy_ui_contract <- c(
+  'source(project_path("R", "ui_style_system.R"), local = TRUE)',
+  ".policy-page-header",
+  ".policy-kpi",
+  ".policy-chart-card",
+  ".policy-source-note",
+  "affordability-indices-page",
+  "policy_page_header(",
+  "policy_kpi_box(",
+  "policy_chart_card("
+)
+missing_policy_ui <- policy_ui_contract[
+  !vapply(policy_ui_contract, grepl, logical(1), all_ui_text, fixed = TRUE)
+]
+check(length(missing_policy_ui) == 0,
+      paste("Public-policy UI contract missing:",
+            paste(missing_policy_ui, collapse = ", ")))
+
 input_ids <- c(
   "overview_price_dates",
   "overview_price_transform",

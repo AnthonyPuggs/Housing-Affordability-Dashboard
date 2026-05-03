@@ -1,23 +1,27 @@
 # Shared ggplot and Plotly theme helpers.
 
 theme_afford <- function(dark = FALSE) {
-  axis_col <- if (dark) "#D7E0EA" else "#3B3F4A"
-  panel_bg <- if (dark) "#0F172A" else "#FFFFFF"
-  grid_col <- if (dark) "#334155" else "#D9DDE3"
-  strip_col <- if (dark) "#E8EEF6" else "#1E2C4A"
+  axis_col <- if (dark) "#E3EBF4" else "#374151"
+  panel_bg <- if (dark) "#111B2E" else "#FFFFFF"
+  grid_col <- if (dark) "#253A56" else "#E5EAF1"
+  strip_col <- if (dark) "#E8EEF6" else "#182231"
 
-  theme_minimal(base_size = 13) +
+  theme_minimal(base_size = 12.5) +
     theme(
       panel.background = element_rect(fill = panel_bg, color = NA),
       plot.background = element_rect(fill = panel_bg, color = NA),
-      panel.grid.major = element_line(color = grid_col),
+      panel.grid.major = element_line(color = grid_col, linewidth = 0.35),
       panel.grid.minor = element_blank(),
       legend.position = "bottom",
       legend.box = "vertical",
+      legend.key = element_rect(fill = panel_bg, color = NA),
       axis.text.x = element_text(color = axis_col),
       axis.text.y = element_text(color = axis_col),
       axis.title = element_text(color = axis_col),
       legend.text = element_text(color = axis_col),
+      plot.title = element_text(color = strip_col, face = "bold"),
+      plot.subtitle = element_text(color = axis_col),
+      plot.margin = margin(8, 10, 8, 10),
       strip.text = element_text(face = "bold", color = strip_col)
     )
 }
@@ -25,9 +29,9 @@ theme_afford <- function(dark = FALSE) {
 plotly_layout <- function(p, dark = FALSE, hovermode = "x",
                           force_markers = TRUE,
                           disable_hovertemplate = TRUE) {
-  bg <- if (dark) "#0F172A" else "#FFFFFF"
-  fg <- if (dark) "#D7E0EA" else "#3B3F4A"
-  grid <- if (dark) "#334155" else "#D9DDE3"
+  bg <- if (dark) "#111B2E" else "#FFFFFF"
+  fg <- if (dark) "#E3EBF4" else "#374151"
+  grid <- if (dark) "#253A56" else "#E5EAF1"
 
   xax <- list(gridcolor = grid, title = "",
               tickformat = "%Y", dtick = "M60", tickangle = 0)
@@ -38,8 +42,8 @@ plotly_layout <- function(p, dark = FALSE, hovermode = "x",
     paper_bgcolor = bg,
     plot_bgcolor = bg,
     font = list(color = fg),
-    legend = list(orientation = "h", y = -0.12, xanchor = "center", x = 0.5),
-    margin = list(l = 50, r = 20, t = 30, b = 50),
+    legend = list(orientation = "h", y = -0.14, xanchor = "center", x = 0.5),
+    margin = list(l = 54, r = 22, t = 34, b = 56),
     autosize = TRUE,
     xaxis = xax,
     yaxis = yax

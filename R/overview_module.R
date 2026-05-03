@@ -15,56 +15,51 @@ overviewPageUI <- function(id) {
 
   nav_panel(
     "Overview",
-    div(
-      class = "d-flex justify-content-between align-items-start mb-3 px-2",
-      div(
-        tags$h3("Housing Affordability", class = "mb-1",
-                style = "font-weight: 700;"),
-        tags$p("Analysing the state of the Australian market",
-               style = "color: var(--app-muted); margin-bottom: 0;")
-      )
+    policy_page_header(
+      "Housing Affordability",
+      "Analysing the state of the Australian market through prices, serviceability and rental cost pressure."
     ),
     layout_column_wrap(
       width = 1/4,
       fill = FALSE,
-      value_box(
+      policy_kpi_box(
         title = "National Median Price",
         value = textOutput(ns("vb_nat_price")),
-        p(class = "kpi-subtitle", textOutput(ns("vb_nat_price_date"))),
-        uiOutput(ns("vb_nat_price_change")),
-        theme = value_box_theme(bg = "#0E5A8A", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", textOutput(ns("vb_nat_price_date"))),
+        change = uiOutput(ns("vb_nat_price_change")),
+        accent = "blue"
       ),
-      value_box(
+      policy_kpi_box(
         title = "Sydney Median Price",
         value = textOutput(ns("vb_syd_price")),
-        p(class = "kpi-subtitle", textOutput(ns("vb_syd_price_date"))),
-        uiOutput(ns("vb_syd_price_change")),
-        theme = value_box_theme(bg = "#3B4C7A", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", textOutput(ns("vb_syd_price_date"))),
+        change = uiOutput(ns("vb_syd_price_change")),
+        accent = "teal"
       ),
-      value_box(
+      policy_kpi_box(
         title = "Modelled Serviceability",
         value = textOutput(ns("vb_service")),
-        p(class = "kpi-subtitle", "Stylised mortgage scenario"),
-        uiOutput(ns("vb_service_change")),
-        theme = value_box_theme(bg = "#17415F", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", "Stylised mortgage scenario"),
+        change = uiOutput(ns("vb_service_change")),
+        accent = "navy"
       ),
-      value_box(
+      policy_kpi_box(
         title = "Rental Affordability",
         value = textOutput(ns("vb_rental")),
-        p(class = "kpi-subtitle", textOutput(ns("vb_rental_date"))),
-        uiOutput(ns("vb_rental_change")),
-        theme = value_box_theme(bg = "#984ea3", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", textOutput(ns("vb_rental_date"))),
+        change = uiOutput(ns("vb_rental_change")),
+        accent = "purple"
       )
     ),
     layout_column_wrap(
       width = 1,
       fill = FALSE,
-      card(
+      policy_chart_card(
+        title = "Capital City Median House Prices",
         fill = FALSE,
-        card_header("Capital City Median House Prices"),
         uiOutput(ns("overview_price_subtitle")),
-        card_body(plotlyOutput(ns("overview_median_prices"), height = "480px")),
-        card_footer(
+        plotlyOutput(ns("overview_median_prices"), height = "480px"),
+        footer = card_footer(
           sliderInput(ns("overview_price_dates"), "Date Range",
                       min = min(median_prices_combined$date, na.rm = TRUE),
                       max = max(median_prices_combined$date, na.rm = TRUE),
@@ -81,11 +76,11 @@ overviewPageUI <- function(id) {
     layout_column_wrap(
       width = 1,
       fill = FALSE,
-      card(
+      policy_chart_card(
+        title = "Affordability Indices",
         fill = FALSE,
-        card_header("Affordability Indices"),
-        source_note("Cost-pressure indexes; higher = less affordable. Rent uses ABS CPI rents/WPI, mortgage uses price\u00d7rate/WPI, deposit uses price/income, and price-to-income uses national dwelling prices/WPI."),
-        card_body(plotlyOutput(ns("overview_afford_change"), height = "380px"))
+        note = "Cost-pressure indexes; higher = less affordable. Rent uses ABS CPI rents/WPI, mortgage uses price\u00d7rate/WPI, deposit uses price/income, and price-to-income uses national dwelling prices/WPI.",
+        plotlyOutput(ns("overview_afford_change"), height = "380px")
       )
     )
   )

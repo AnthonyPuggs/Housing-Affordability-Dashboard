@@ -13,9 +13,24 @@ if (!exists("semantic_colour", mode = "function", inherits = TRUE)) {
   source(visual_semantics_path, local = environment())
 }
 
+if (!exists("policy_page_header", mode = "function", inherits = TRUE)) {
+  ui_style_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "ui_style_system.R")
+  } else {
+    file.path("R", "ui_style_system.R")
+  }
+  if (!file.exists(ui_style_path)) {
+    stop("Could not locate R/ui_style_system.R for app UI helpers.",
+         call. = FALSE)
+  }
+  source(ui_style_path, local = environment())
+}
+
 source_note <- function(...) {
-  tags$p(...,
-         class = "source-note px-3",
+  if (exists("policy_source_note", mode = "function", inherits = TRUE)) {
+    return(policy_source_note(...))
+  }
+  tags$p(..., class = "source-note px-3",
          style = "color: var(--app-muted); font-size: 0.85rem; margin-bottom: 0;")
 }
 

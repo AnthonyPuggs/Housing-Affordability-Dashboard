@@ -118,7 +118,7 @@ if (file.exists(app_path)) {
     "bootstrap.Collapse",
     ".navbar-collapse.show",
     "main_nav",
-    "window.innerWidth < 992"
+    "window.innerWidth >= 992"
   )
   missing_nav <- required_nav_contract[
     !vapply(required_nav_contract, grepl, logical(1), app_text, fixed = TRUE)

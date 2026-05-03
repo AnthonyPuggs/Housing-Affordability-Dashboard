@@ -44,6 +44,10 @@ rentalMarketPageUI <- function(id) {
   nav_panel(
     "Rental Market",
     div(class = "rental-market-page",
+      policy_page_header(
+        "Rental Market",
+        "NHHA rental stress, rental cost pressure and SIH rental-cost survey estimates."
+      ),
       layout_sidebar(
         sidebar = sidebar(
           width = 280, open = "open",
@@ -67,25 +71,29 @@ rentalMarketPageUI <- function(id) {
         div(class = "rental-market-grid",
           layout_column_wrap(
             width = "420px",
-            card(
-              card_header("NHHA Rental Stress by State"),
-              source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Official survey burden/stress measure. ", sih_sampling_error_note),
-              card_body(div(class = "chart-square rental-market-chart rental-market-chart-square", plotlyOutput(ns("rental_stress_state"), height = "100%", width = "100%")))
+            policy_chart_card(
+              "NHHA Rental Stress by State",
+              note = policy_source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Official survey burden/stress measure. ", sih_sampling_error_note),
+              div(class = "chart-square rental-market-chart rental-market-chart-square",
+                  plotlyOutput(ns("rental_stress_state"), height = "100%", width = "100%"))
             ),
-            card(
-              card_header("NHHA Rental Stress Trends (Over Time)"),
-              source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Values are proportions of lower-income renter households. ", sih_sampling_error_note),
-              card_body(div(class = "chart-wide rental-market-chart rental-market-chart-wide rental-market-chart-trend", plotlyOutput(ns("rental_stress_trend"), height = "100%", width = "100%")))
+            policy_chart_card(
+              "NHHA Rental Stress Trends (Over Time)",
+              note = policy_source_note("ABS Survey of Income and Housing, NHHA lower-income renter stress. Values are proportions of lower-income renter households. ", sih_sampling_error_note),
+              div(class = "chart-wide rental-market-chart rental-market-chart-wide rental-market-chart-trend",
+                  plotlyOutput(ns("rental_stress_trend"), height = "100%", width = "100%"))
             ),
-            card(
-              card_header("Rental Affordability Index"),
-              source_note("Cost-pressure index using ABS CPI rents and WPI; higher = less affordable."),
-              card_body(div(class = "chart-wide rental-market-chart rental-market-chart-wide", plotlyOutput(ns("rental_afford_index"), height = "100%", width = "100%")))
+            policy_chart_card(
+              "Rental Affordability Index",
+              note = "Cost-pressure index using ABS CPI rents and WPI; higher = less affordable.",
+              div(class = "chart-wide rental-market-chart rental-market-chart-wide",
+                  plotlyOutput(ns("rental_afford_index"), height = "100%", width = "100%"))
             ),
-            card(
-              card_header("Weekly Rental Costs by Demographics (2019-20)"),
-              source_note("ABS Survey of Income and Housing. Survey rental-cost estimates by household characteristic. ", sih_sampling_error_note),
-              card_body(div(class = "chart-square rental-market-chart rental-market-chart-square", plotlyOutput(ns("rental_costs_demo"), height = "100%", width = "100%")))
+            policy_chart_card(
+              "Weekly Rental Costs by Demographics (2019-20)",
+              note = policy_source_note("ABS Survey of Income and Housing. Survey rental-cost estimates by household characteristic. ", sih_sampling_error_note),
+              div(class = "chart-square rental-market-chart rental-market-chart-square",
+                  plotlyOutput(ns("rental_costs_demo"), height = "100%", width = "100%"))
             )
           )
         )

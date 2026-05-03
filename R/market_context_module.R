@@ -5,38 +5,33 @@ marketContextPageUI <- function(id) {
 
   nav_panel(
     "Market Context",
-    div(
-      class = "d-flex justify-content-between align-items-start mb-3 px-2",
-      div(
-        tags$h3("Labour & Demographics", class = "mb-1",
-                style = "font-weight: 700;"),
-        tags$p("Analysing the state of the Australian market",
-               style = "color: var(--app-muted); margin-bottom: 0;")
-      )
+    policy_page_header(
+      "Labour & Demographics",
+      "Analysing the state of the Australian market through rates, labour spare capacity and population demand."
     ),
     layout_column_wrap(
       width = 1/3,
       fill = FALSE,
-      value_box(
+      policy_kpi_box(
         title = "Unemployment Rate",
         value = textOutput(ns("vb_unemp")),
-        p(class = "kpi-subtitle", "Trend estimate"),
-        uiOutput(ns("vb_unemp_change")),
-        theme = value_box_theme(bg = "#0E5A8A", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", "Trend estimate"),
+        change = uiOutput(ns("vb_unemp_change")),
+        accent = "blue"
       ),
-      value_box(
+      policy_kpi_box(
         title = "Net Overseas Migration",
         value = textOutput(ns("vb_nom")),
-        p(class = "kpi-subtitle", "Annual estimate"),
-        uiOutput(ns("vb_nom_change")),
-        theme = value_box_theme(bg = "#3B4C7A", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", "Annual estimate"),
+        change = uiOutput(ns("vb_nom_change")),
+        accent = "teal"
       ),
-      value_box(
+      policy_kpi_box(
         title = "Participation Rate",
         value = textOutput(ns("vb_participation")),
-        p(class = "kpi-subtitle", "Trend estimate"),
-        uiOutput(ns("vb_participation_change")),
-        theme = value_box_theme(bg = "#17415F", fg = "#fff")
+        subtitle = p(class = "kpi-subtitle", "Trend estimate"),
+        change = uiOutput(ns("vb_participation_change")),
+        accent = "navy"
       )
     ),
     sliderInput(ns("context_dates"), "Date Range",
@@ -47,26 +42,26 @@ marketContextPageUI <- function(id) {
     layout_column_wrap(
       width = 1,
       fill = FALSE,
-      card(
+      policy_chart_card(
+        title = "Interest Rates on Residential Mortgages",
         fill = FALSE,
-        card_header("Interest Rates on Residential Mortgages"),
-        source_note("RBA mortgage rates are market-rate inputs, not lender assessment outcomes or household serviceability approvals."),
-        card_body(plotlyOutput(ns("context_rates"), height = "380px"))
+        note = "RBA mortgage rates are market-rate inputs, not lender assessment outcomes or household serviceability approvals.",
+        plotlyOutput(ns("context_rates"), height = "380px")
       )
     ),
     layout_column_wrap(
       width = 1/2,
-      card(
+      policy_chart_card(
+        title = "Labour Market Spare Capacity",
         fill = FALSE,
-        card_header("Labour Market Spare Capacity"),
-        source_note("ABS labour force rates. KPI changes are percentage-point changes, not relative percentage changes."),
-        card_body(plotlyOutput(ns("context_labour"), height = "380px"))
+        note = "ABS labour force rates. KPI changes are percentage-point changes, not relative percentage changes.",
+        plotlyOutput(ns("context_labour"), height = "380px")
       ),
-      card(
+      policy_chart_card(
+        title = "Population Demand",
         fill = FALSE,
-        card_header("Population Demand"),
-        source_note("ABS population data. Net overseas migration is shown as an annualised flow in thousands."),
-        card_body(plotlyOutput(ns("context_pop"), height = "380px"))
+        note = "ABS population data. Net overseas migration is shown as an annualised flow in thousands.",
+        plotlyOutput(ns("context_pop"), height = "380px")
       )
     )
   )

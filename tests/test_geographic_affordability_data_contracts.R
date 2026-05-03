@@ -1,6 +1,7 @@
 repo_root <- normalizePath(getwd(), winslash = "/", mustWork = TRUE)
 data_dir <- file.path(repo_root, "data")
 plot_setup_path <- file.path(repo_root, "plot_setup.R")
+data_loader_path <- file.path(repo_root, "R", "data_loader.R")
 failures <- character()
 
 check <- function(condition, message) {
@@ -135,16 +136,35 @@ if (file.exists(plot_setup_path)) {
   plot_setup_text <- paste(readLines(plot_setup_path, warn = FALSE),
                            collapse = "\n")
   required_plot_setup_text <- c(
-    'sih_lower_income_states <- load_csv("sih_lower_income_states.csv")',
-    'sih_geographic          <- load_csv("sih_geographic_2020.csv")'
+    "load_dashboard_csvs(data_dir)",
+    "list2env(dashboard_data, envir = environment())"
   )
   missing_plot_setup <- required_plot_setup_text[
     !vapply(required_plot_setup_text, grepl, logical(1),
             plot_setup_text, fixed = TRUE)
   ]
   check(length(missing_plot_setup) == 0,
-        paste("plot_setup.R must load reserved SIH geographic files:",
+        paste("plot_setup.R must load dashboard CSVs through the loader:",
               paste(missing_plot_setup, collapse = "; ")))
+}
+
+check(file.exists(data_loader_path), "R/data_loader.R does not exist")
+if (file.exists(data_loader_path)) {
+  data_loader_text <- paste(readLines(data_loader_path, warn = FALSE),
+                            collapse = "\n")
+  required_loader_text <- c(
+    "sih_lower_income_states = load_dashboard_csv(",
+    '"sih_lower_income_states.csv"',
+    "sih_geographic = load_dashboard_csv(",
+    '"sih_geographic_2020.csv"'
+  )
+  missing_loader_text <- required_loader_text[
+    !vapply(required_loader_text, grepl, logical(1),
+            data_loader_text, fixed = TRUE)
+  ]
+  check(length(missing_loader_text) == 0,
+        paste("R/data_loader.R must load reserved SIH geographic files:",
+              paste(missing_loader_text, collapse = "; ")))
 }
 
 if (length(failures) > 0) {

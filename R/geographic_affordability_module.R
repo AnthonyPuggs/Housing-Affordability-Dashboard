@@ -123,68 +123,75 @@ geographicAffordabilityPageUI <- function(id) {
 
   nav_panel(
     "Geographic Affordability",
-    layout_sidebar(
-      sidebar = sidebar(
-        width = 310, open = "desktop",
-        tags$h5("Geography-aligned SIH affordability measures"),
-        source_note(
-          "Comparisons on this page use housing-cost and household-income measures from the same SIH geography. They should not be read as modelled market-entry indexes."
+    policy_page_header(
+      "Geographic Affordability",
+      "SIH-only comparisons where housing costs and household-income denominators are measured within the same geography."
+    ),
+    div(
+      class = "geographic-affordability-page",
+      layout_sidebar(
+        sidebar = sidebar(
+          width = 310, open = "desktop",
+          tags$h5("Geography-aligned SIH affordability measures"),
+          source_note(
+            "Comparisons on this page use housing-cost and household-income measures from the same SIH geography. They should not be read as modelled market-entry indexes."
+          ),
+          selectizeInput(ns("geo_states"), "States/Territories",
+                         choices = c("All" = "all", state_choices),
+                         selected = "all", multiple = TRUE),
+          selectInput(ns("geo_state_metric"), "State trend measure",
+                      choices = geo_state_metric_choices,
+                      selected = "cost_income_ratio"),
+          selectInput(ns("geo_state_tenure"), "State tenure",
+                      choices = geo_tenure_choices,
+                      selected = "renter_total"),
+          selectInput(ns("geo_lower_metric"), "Lower-income state measure",
+                      choices = geo_lower_metric_choices,
+                      selected = "pct_over_30"),
+          selectInput(ns("geo_lower_tenure"), "Lower-income tenure",
+                      choices = geo_tenure_choices,
+                      selected = "renter_total"),
+          selectizeInput(ns("geo_gcc_geographies"),
+                         "Capital/rest-of-state geographies",
+                         choices = c("All" = "all", region_choices),
+                         selected = default_regions, multiple = TRUE),
+          selectInput(ns("geo_gcc_metric"), "Capital/rest-of-state measure",
+                      choices = geo_gcc_metric_choices,
+                      selected = "median_cost_income_ratio"),
+          selectInput(ns("geo_gcc_tenure"), "Capital/rest-of-state tenure",
+                      choices = geo_tenure_choices,
+                      selected = "renter_total")
         ),
-        selectizeInput(ns("geo_states"), "States/Territories",
-                       choices = c("All" = "all", state_choices),
-                       selected = "all", multiple = TRUE),
-        selectInput(ns("geo_state_metric"), "State trend measure",
-                    choices = geo_state_metric_choices,
-                    selected = "cost_income_ratio"),
-        selectInput(ns("geo_state_tenure"), "State tenure",
-                    choices = geo_tenure_choices,
-                    selected = "renter_total"),
-        selectInput(ns("geo_lower_metric"), "Lower-income state measure",
-                    choices = geo_lower_metric_choices,
-                    selected = "pct_over_30"),
-        selectInput(ns("geo_lower_tenure"), "Lower-income tenure",
-                    choices = geo_tenure_choices,
-                    selected = "renter_total"),
-        selectizeInput(ns("geo_gcc_geographies"),
-                       "Capital/rest-of-state geographies",
-                       choices = c("All" = "all", region_choices),
-                       selected = default_regions, multiple = TRUE),
-        selectInput(ns("geo_gcc_metric"), "Capital/rest-of-state measure",
-                    choices = geo_gcc_metric_choices,
-                    selected = "median_cost_income_ratio"),
-        selectInput(ns("geo_gcc_tenure"), "Capital/rest-of-state tenure",
-                    choices = geo_tenure_choices,
-                    selected = "renter_total")
-      ),
-      layout_column_wrap(
-        width = "520px",
-        card(
-          card_header("State SIH Cost-to-Income Trend"),
-          geo_sih_note("Trend uses File 12 state/territory SIH estimates."),
-          card_body(div(class = "chart-wide",
-                        plotlyOutput(ns("geo_state_trend"),
-                                     height = "100%", width = "100%")))
-        ),
-        card(
-          card_header("Latest State Comparison"),
-          geo_sih_note("Latest available survey year from the state SIH series."),
-          card_body(div(class = "chart-square",
-                        plotlyOutput(ns("geo_state_latest"),
-                                     height = "100%", width = "100%")))
-        ),
-        card(
-          card_header("Lower-Income State Burden"),
-          geo_sih_note("Lower-income household estimates from SIH File 8."),
-          card_body(div(class = "chart-square",
-                        plotlyOutput(ns("geo_lower_income"),
-                                     height = "100%", width = "100%")))
-        ),
-        card(
-          card_header("Capital City / Rest-of-State Comparison"),
-          geo_sih_note("Greater-capital-city and rest-of-state estimates from SIH File 11."),
-          card_body(div(class = "chart-square",
-                        plotlyOutput(ns("geo_gcc_comparison"),
-                                     height = "100%", width = "100%")))
+        layout_column_wrap(
+          width = "520px",
+          policy_chart_card(
+            "State SIH Cost-to-Income Trend",
+            note = geo_sih_note("Trend uses File 12 state/territory SIH estimates."),
+            div(class = "chart-square geo-chart",
+                plotlyOutput(ns("geo_state_trend"),
+                             height = "100%", width = "100%"))
+          ),
+          policy_chart_card(
+            "Latest State Comparison",
+            note = geo_sih_note("Latest available survey year from the state SIH series."),
+            div(class = "chart-square geo-chart",
+                plotlyOutput(ns("geo_state_latest"),
+                             height = "100%", width = "100%"))
+          ),
+          policy_chart_card(
+            "Lower-Income State Burden",
+            note = geo_sih_note("Lower-income household estimates from SIH File 8."),
+            div(class = "chart-square geo-chart",
+                plotlyOutput(ns("geo_lower_income"),
+                             height = "100%", width = "100%"))
+          ),
+          policy_chart_card(
+            "Capital City / Rest-of-State Comparison",
+            note = geo_sih_note("Greater-capital-city and rest-of-state estimates from SIH File 11."),
+            div(class = "chart-square geo-chart",
+                plotlyOutput(ns("geo_gcc_comparison"),
+                             height = "100%", width = "100%"))
+          )
         )
       )
     )

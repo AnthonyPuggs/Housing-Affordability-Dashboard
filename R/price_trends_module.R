@@ -5,6 +5,10 @@ priceTrendsPageUI <- function(id) {
 
   nav_panel(
     "Price Trends",
+    policy_page_header(
+      "Price Trends",
+      "Capital-city dwelling price indexes and ABS rent CPI movements."
+    ),
     navset_card_tab(
       nav_panel(
         "Dwelling Price Index",
@@ -29,10 +33,11 @@ priceTrendsPageUI <- function(id) {
                                      "Index (start=100)" = "index"),
                          selected = "levels")
           ),
-          card(
-            card_header("Dwelling Price Index by Capital City"),
-            source_note("ABS dwelling price data. Price indexes describe market price movements, not household affordability or borrowing capacity."),
-            card_body(div(class = "chart-wide", plotlyOutput(ns("price_chart"), height = "100%", width = "100%")))
+          policy_chart_card(
+            "Dwelling Price Index by Capital City",
+            note = "ABS dwelling price data. Price indexes describe market price movements, not household affordability or borrowing capacity.",
+            div(class = "chart-wide",
+                plotlyOutput(ns("price_chart"), height = "100%", width = "100%"))
           )
         )
       ),
@@ -51,11 +56,12 @@ priceTrendsPageUI <- function(id) {
                                      "Quarterly change (%)" = "qoq"),
                          selected = "index")
           ),
-          card(
-            card_header("Rent Consumer Price Index (CPI) by Greater Capital City"),
-            source_note("ABS CPI rents are price indexes. They measure rental price movements, not the housing cost burden of lower-income renters."),
-            card_body(div(class = "chart-wide", plotlyOutput(ns("rent_cpi_chart"), height = "100%", width = "100%"))),
-            card_footer(
+          policy_chart_card(
+            "Rent Consumer Price Index (CPI) by Greater Capital City",
+            note = "ABS CPI rents are price indexes. They measure rental price movements, not the housing cost burden of lower-income renters.",
+            div(class = "chart-wide",
+                plotlyOutput(ns("rent_cpi_chart"), height = "100%", width = "100%")),
+            footer = card_footer(
               sliderInput(ns("rent_cpi_dates"), "Date Range",
                           min = min(rent_cpi_combined$date, na.rm = TRUE),
                           max = max(rent_cpi_combined$date, na.rm = TRUE),

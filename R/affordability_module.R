@@ -57,46 +57,54 @@ affordabilityPageUI <- function(id) {
 
   nav_panel(
     "Affordability",
+    policy_page_header(
+      "Affordability",
+      "Cost-pressure indexes, stylised market-entry scenarios and SIH survey burden measures."
+    ),
     navset_card_tab(
       title = "Affordability Analysis",
       nav_panel(
         "Indices",
-        layout_sidebar(
-          sidebar = sidebar(
-            width = 280, open = "desktop",
-            checkboxGroupInput(ns("afford_indices"), "Indicators",
-                               choices = affordability_indicator_choices,
-                               selected = c(affordability_ui_indicators,
-                                            "Housing Serviceability")),
-            sliderInput(ns("afford_dates"), "Date Range",
-                        min = min(afford_idx$date, na.rm = TRUE),
-                        max = max(afford_idx$date, na.rm = TRUE),
-                        value = c(as.Date("2003-01-01"),
-                                  max(afford_idx$date, na.rm = TRUE)),
-                        width = "100%", timeFormat = "%b %Y"),
-            sliderInput(ns("serviceability_buffer"),
-                        "Assessment buffer (pp)",
-                        min = 0, max = 5, value = 3, step = 0.25),
-            sliderInput(ns("serviceability_deposit_pct"),
-                        "Deposit (%)",
-                        min = 5, max = 40, value = 20, step = 1),
-            sliderInput(ns("serviceability_term"),
-                        "Loan term (years)",
-                        min = 10, max = 30, value = 30, step = 1),
-            source_note("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
-          ),
-          card(
-            card_header("Affordability Indicators"),
-            source_note("Cost-pressure indexes; higher = less affordable. Market-entry measures use wage, price and rate proxies, not official ABS stress definitions."),
-            card_body(div(class = "chart-wide", plotlyOutput(ns("afford_indices_chart"), height = "100%", width = "100%")))
-          ),
-          conditionalPanel(
-            condition = "input.afford_indices.indexOf('Housing Serviceability') >= 0",
-            ns = ns,
-            card(
-              card_header("Modelled Serviceability"),
-              source_note("Modelled annual repayment share using selected deposit, implied LVR, loan term and RBA mortgage-rate inputs; uses AWE individual earnings as the income proxy. The 30% line is a stress reference, not a lender pass/fail rule. Stylised scenario, not an official ABS measure or lender assessment."),
-              card_body(plotlyOutput(ns("afford_serviceability"), height = "380px"))
+        div(
+          class = "affordability-indices-page",
+          layout_sidebar(
+            sidebar = sidebar(
+              width = 280, open = "desktop",
+              checkboxGroupInput(ns("afford_indices"), "Indicators",
+                                 choices = affordability_indicator_choices,
+                                 selected = c(affordability_ui_indicators,
+                                              "Housing Serviceability")),
+              sliderInput(ns("afford_dates"), "Date Range",
+                          min = min(afford_idx$date, na.rm = TRUE),
+                          max = max(afford_idx$date, na.rm = TRUE),
+                          value = c(as.Date("2003-01-01"),
+                                    max(afford_idx$date, na.rm = TRUE)),
+                          width = "100%", timeFormat = "%b %Y"),
+              sliderInput(ns("serviceability_buffer"),
+                          "Assessment buffer (pp)",
+                          min = 0, max = 5, value = 3, step = 0.25),
+              sliderInput(ns("serviceability_deposit_pct"),
+                          "Deposit (%)",
+                          min = 5, max = 40, value = 20, step = 1),
+              sliderInput(ns("serviceability_term"),
+                          "Loan term (years)",
+                          min = 10, max = 30, value = 30, step = 1),
+              source_note("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
+            ),
+            policy_chart_card(
+              "Affordability Indicators",
+              note = "Cost-pressure indexes; higher = less affordable. Market-entry measures use wage, price and rate proxies, not official ABS stress definitions.",
+              div(class = "chart-wide",
+                  plotlyOutput(ns("afford_indices_chart"), height = "100%", width = "100%"))
+            ),
+            conditionalPanel(
+              condition = "input.afford_indices.indexOf('Housing Serviceability') >= 0",
+              ns = ns,
+              policy_chart_card(
+                "Modelled Serviceability",
+                note = "Modelled annual repayment share using selected deposit, implied LVR, loan term and RBA mortgage-rate inputs; uses AWE individual earnings as the income proxy. The 30% line is a stress reference, not a lender pass/fail rule. Stylised scenario, not an official ABS measure or lender assessment.",
+                plotlyOutput(ns("afford_serviceability"), height = "380px")
+              )
             )
           )
         )
@@ -137,40 +145,40 @@ affordabilityPageUI <- function(id) {
           layout_column_wrap(
             width = 1/2,
             fill = FALSE,
-            value_box(
+            policy_kpi_box(
               title = "Monthly Repayment",
               value = textOutput(ns("calc_repayment")),
-              theme = value_box_theme(bg = "#0E5A8A", fg = "#fff")
+              accent = "blue"
             ),
-            value_box(
+            policy_kpi_box(
               title = "Nominal Repayment / Gross Income",
               value = textOutput(ns("calc_ratio")),
-              theme = value_box_theme(bg = "#1F9D8C", fg = "#fff")
+              accent = "teal"
             ),
-            value_box(
+            policy_kpi_box(
               title = "Assessed Repayment / Gross Income",
               value = textOutput(ns("calc_assessed_ratio")),
-              theme = value_box_theme(bg = "#5B6C8F", fg = "#fff")
+              accent = "navy"
             ),
-            value_box(
+            policy_kpi_box(
               title = "Years to Save Deposit",
               value = textOutput(ns("calc_years")),
-              theme = value_box_theme(bg = "#3B4C7A", fg = "#fff")
+              accent = "purple"
             ),
-            value_box(
+            policy_kpi_box(
               title = "Loan-to-Value Ratio",
               value = textOutput(ns("calc_lvr")),
-              theme = value_box_theme(bg = "#326273", fg = "#fff")
+              accent = "blue"
             ),
-            value_box(
+            policy_kpi_box(
               title = "Total Interest Paid",
               value = textOutput(ns("calc_total_interest")),
-              theme = value_box_theme(bg = "#984ea3", fg = "#fff")
+              accent = "teal"
             ),
-            value_box(
+            policy_kpi_box(
               title = "Deposit Amount",
               value = textOutput(ns("calc_deposit_amt")),
-              theme = value_box_theme(bg = "#17415F", fg = "#fff")
+              accent = "navy"
             )
           )
         )
@@ -191,10 +199,11 @@ affordabilityPageUI <- function(id) {
                          choices = c("All Households" = "all_households",
                                      "Lower Income (Bottom 40%)" = "lower_income"))
           ),
-          card(
-            card_header("Housing Cost Stress Bands (2019-20)"),
-            source_note("ABS Survey of Income and Housing. Official survey-based housing cost burden bands by household group. ", sih_sampling_error_note),
-            card_body(div(class = "chart-square", plotlyOutput(ns("stress_chart"), height = "100%", width = "100%")))
+          policy_chart_card(
+            "Housing Cost Stress Bands (2019-20)",
+            note = policy_source_note("ABS Survey of Income and Housing. Official survey-based housing cost burden bands by household group. ", sih_sampling_error_note),
+            div(class = "chart-square",
+                plotlyOutput(ns("stress_chart"), height = "100%", width = "100%"))
           )
         )
       ),
@@ -210,10 +219,11 @@ affordabilityPageUI <- function(id) {
             radioButtons(ns("burden_stat"), "Statistic",
                          choices = c("Mean" = "mean", "Median" = "median"))
           ),
-          card(
-            card_header("Housing Cost-to-Income Ratio by Tenure & Demographics (2019-20)"),
-            source_note("ABS Survey of Income and Housing. Gross-income housing cost ratios by tenure and demographic group. ", sih_sampling_error_note),
-            card_body(div(class = "chart-square", plotlyOutput(ns("burden_heatmap"), height = "100%", width = "100%")))
+          policy_chart_card(
+            "Housing Cost-to-Income Ratio by Tenure & Demographics (2019-20)",
+            note = policy_source_note("ABS Survey of Income and Housing. Gross-income housing cost ratios by tenure and demographic group. ", sih_sampling_error_note),
+            div(class = "chart-square",
+                plotlyOutput(ns("burden_heatmap"), height = "100%", width = "100%"))
           )
         )
       )

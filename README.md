@@ -38,6 +38,8 @@ The app reads pre-generated CSV files from `data/`, so it can run without refres
 
 The dashboard uses bslib-native dark/light mode through Bootstrap 5. It uses local system font stacks rather than Google-hosted fonts, avoiding third-party font fetches during launch or deployment.
 
+The Shiny interface uses a public-policy report UI system in `R/ui_style_system.R`. Page headers, calmer KPI tiles, chart cards and source notes are helper-backed so modules share the same hierarchy, spacing and local/system-font treatment.
+
 ## Refresh The Data
 
 Run the full data pipeline from the repository root:
@@ -128,6 +130,7 @@ Rscript tests/test_chart_builders.R
 Rscript tests/test_plot_setup_extraction.R
 Rscript tests/test_plotly_helpers.R
 Rscript tests/test_app_plotly_cache_contracts.R
+Rscript tests/test_ui_style_system.R
 Rscript tests/test_ui_smoke_contracts.R
 Rscript tests/test_responsive_ui_contracts.R
 Rscript tests/test_rental_market_mobile_contracts.R
