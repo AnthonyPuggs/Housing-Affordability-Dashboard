@@ -38,14 +38,22 @@ if (all(file.exists(c(helper_path, plot_setup_path)))) {
 
   light_fig <- dashboard_ggplotly(p, dark = FALSE, tooltip = c("x", "y"))
   dark_fig <- dashboard_ggplotly(p, dark = TRUE, tooltip = c("x", "y"))
+  sourced_fig <- dashboard_ggplotly(
+    p,
+    dark = FALSE,
+    tooltip = c("x", "y"),
+    source = "overview_afford_score"
+  )
 
-  for (fig_name in c("light_fig", "dark_fig")) {
+  for (fig_name in c("light_fig", "dark_fig", "sourced_fig")) {
     fig <- get(fig_name)
     check(inherits(fig, "plotly"), paste(fig_name, "must inherit from plotly"))
     check(inherits(fig, "htmlwidget"), paste(fig_name, "must inherit from htmlwidget"))
     check(length(fig$x$data) > 0, paste(fig_name, "must contain at least one trace"))
     check(!is.null(fig$x$layout), paste(fig_name, "must contain a Plotly layout"))
   }
+  check(identical(sourced_fig$x$source, "overview_afford_score"),
+        "dashboard_ggplotly() must forward a custom Plotly source")
 }
 
 if (file.exists(description_path)) {

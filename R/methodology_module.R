@@ -29,6 +29,29 @@ methodologyPageUI <- function(id) {
         tags$p("Higher values generally mean less affordable unless the table states otherwise. These are analytical indexes, not official ABS affordability measures.")
       ),
       policy_card(
+        "National Housing Affordability Score",
+        tags$p("The National Housing Affordability Score is a descriptive composite indicator for national market-entry affordability."),
+        tags$p("The v1 score uses fixed 40/35/25 weights for mortgage serviceability, rental entry and deposit barrier component scores."),
+        tags$p("Higher values mean more affordable relative to the score history; it is not an official ABS/NHHA statistic or lender assessment.")
+      ),
+      policy_card(
+        "Plain English Interpretation",
+        tags$p("A low score means market-entry conditions are poor relative to the score history; it is not a pass/fail affordability threshold."),
+        tags$p("A high score does not mean housing is affordable for all households, and the score is not the share of households who can afford housing."),
+        tags$p("Official SIH/NHHA stress measures remain separate because they measure observed household burden, not market-entry conditions."),
+        tags$p("Rental-entry stress may be understated relative to advertised-rent or new-lease evidence because v1 uses public index-style inputs rather than a direct new-tenancy rent series.")
+      ),
+      policy_card(
+        "Score Diagnostics",
+        tags$p("The score is a historical-relative monitoring index, not an absolute affordability threshold."),
+        tags$p("A score near 0 or 100 is low or high versus the score window, not a statement that housing is affordable or unaffordable for all households."),
+        tags$p("Mortgage serviceability and deposit barrier have an ownership-channel overlap, but v1 keeps both because they describe monthly servicing versus upfront deposit constraints."),
+        tags$p("Sensitivity diagnostics compare equal weights, ownership-heavy weights, rental-heavy weights, leave-one-out variants and geometric aggregation."),
+        uiOutput(ns("score_diagnostics_summary")),
+        tableOutput(ns("score_contribution_table")),
+        tableOutput(ns("score_sensitivity_table"))
+      ),
+      policy_card(
         "Stylised scenario calculators",
         tags$p("Serviceability, deposit-gap and calculator outputs use fixed modelling assumptions for a stylised household."),
         tags$p("These stylised scenarios are not official ABS measures or lender assessments."),
@@ -56,6 +79,7 @@ methodologyPageUI <- function(id) {
           tags$li("AWE is individual earnings, not household disposable income."),
           tags$li("WPI is a wage price index, not an income distribution measure."),
           tags$li("CPI rents and CPI new dwelling indexes are price indexes, not household burden measures."),
+          tags$li("Rental-entry stress may be understated relative to advertised-rent or new-lease evidence because v1 uses public index-style inputs."),
           tags$li("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."),
           tags$li("Deposit, LVR and loan-term controls are stylised serviceability assumptions; the serviceability chart uses AWE individual earnings as the income proxy."),
           tags$li("KPI colours encode economic interpretation as better, worse or neutral/contextual rather than raw up/down movement."),
@@ -80,6 +104,71 @@ methodologyPageUI <- function(id) {
 
 methodologyPageServer <- function(id) {
   moduleServer(id, function(input, output, session) {
+    score_diagnostics <- reactive({
+      if (exists("national_affordability_score_diagnostics_data")) {
+        return(national_affordability_score_diagnostics_data)
+      }
+      if (exists("afford_idx") &&
+          exists("national_affordability_score_diagnostics", mode = "function")) {
+        return(national_affordability_score_diagnostics(afford_idx))
+      }
+      NULL
+    })
+
+    output$score_diagnostics_summary <- renderUI({
+      diagnostics <- score_diagnostics()
+      if (is.null(diagnostics)) {
+        return(tags$p("Score diagnostics are unavailable in this session."))
+      }
+      sample <- diagnostics$sample_window
+      tags$ul(
+        tags$li(paste0(
+          "Common score sample: ",
+          format(sample$start_date[1], "%b %Y"),
+          " to ",
+          format(sample$latest_date[1], "%b %Y"),
+          " (",
+          sample$score_rows[1],
+          " complete score dates)."
+        )),
+        tags$li(paste0(
+          "Latest headline score: ",
+          fmt_index(sample$latest_score[1]),
+          " / 100."
+        )),
+        tags$li(diagnostics$interpretation_warning)
+      )
+    })
+
+    output$score_contribution_table <- renderTable({
+      diagnostics <- score_diagnostics()
+      if (is.null(diagnostics)) {
+        return(data.frame())
+      }
+      d <- diagnostics$latest_contributions
+      data.frame(
+        Component = d$component_label,
+        Score = paste0(fmt_index(d$score), " / 100"),
+        Weight = scales::percent(d$weight, accuracy = 1),
+        `Contribution Points` = fmt_index(d$contribution_points),
+        check.names = FALSE
+      )
+    }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
+
+    output$score_sensitivity_table <- renderTable({
+      diagnostics <- score_diagnostics()
+      if (is.null(diagnostics)) {
+        return(data.frame())
+      }
+      d <- diagnostics$sensitivity_scores
+      data.frame(
+        Scenario = gsub("_", " ", d$scenario),
+        Score = fmt_index(d$score),
+        `Difference From Default` = sprintf("%+.1f", d$difference_from_default),
+        check.names = FALSE
+      )
+    }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
+
     output$indicator_table <- renderTable({
       indicator_registry_methodology_table()
     }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)

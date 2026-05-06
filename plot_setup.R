@@ -49,6 +49,7 @@ if (!exists("project_path", mode = "function")) {
 rm(.load_plot_setup_project_paths)
 
 source(project_path("R", "indicator_registry.R"), local = TRUE)
+source(project_path("R", "national_affordability_score.R"), local = TRUE)
 source(project_path("R", "sih_quality_helpers.R"), local = TRUE)
 source(project_path("R", "data_loader.R"), local = TRUE)
 source(project_path("R", "dashboard_formatting.R"), local = TRUE)

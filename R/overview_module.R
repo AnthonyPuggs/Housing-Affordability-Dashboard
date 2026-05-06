@@ -10,6 +10,91 @@ overview_cost_pressure_colours <- stats::setNames(
   indicator_chart_label(overview_cost_pressure_indicators)
 )
 
+overview_affordability_indices_note <- "Cost-pressure indexes are burden measures where higher = less affordable. The National Housing Affordability Score above is the reverse: higher = more affordable. Rent uses ABS CPI rents/WPI, mortgage uses price\u00d7rate/WPI, deposit uses price/income, and price-to-income uses national dwelling prices/WPI."
+
+score_component_short_labels <- c(
+  mortgage_serviceability = "Mortgage",
+  rental_entry = "Rental",
+  deposit_barrier = "Deposit"
+)
+
+score_component_explanations <- c(
+  mortgage_serviceability = "Monthly repayment burden",
+  rental_entry = "Rent pressure relative to wages",
+  deposit_barrier = "Upfront saving barrier"
+)
+
+overview_score_change <- function(score_data, selected_date = NULL) {
+  if (nrow(score_data) == 0) {
+    return(list(change = NA_real_, label = ""))
+  }
+
+  d <- score_data %>%
+    filter(!is.na(score)) %>%
+    arrange(desc(date))
+  if (nrow(d) == 0) {
+    return(list(change = NA_real_, label = ""))
+  }
+
+  current_date <- if (is.null(selected_date) || is.na(selected_date)) {
+    d$date[1]
+  } else {
+    as.Date(selected_date)
+  }
+  current <- d %>% filter(date == current_date)
+  if (nrow(current) == 0) {
+    return(list(change = NA_real_, label = ""))
+  }
+  target_date <- as.Date(sprintf(
+    "%d-%s",
+    as.integer(format(current_date, "%Y")) - 1L,
+    format(current_date, "%m-%d")
+  ))
+  previous <- d %>% filter(date == target_date)
+  if (nrow(previous) == 0) {
+    return(list(change = NA_real_, label = ""))
+  }
+
+  change <- current$score[1] - previous$score[1]
+  direction <- if (change >= 0) "Up" else "Down"
+  list(
+    change = change,
+    label = paste0(direction, " ", sprintf("%+.1f pts YoY", change))
+  )
+}
+
+overview_snap_score_date <- function(clicked_date, available_dates) {
+  available_dates <- sort(unique(as.Date(available_dates)))
+  available_dates <- available_dates[!is.na(available_dates)]
+  if (length(available_dates) == 0 || is.null(clicked_date) ||
+      length(clicked_date) == 0 || is.na(clicked_date)) {
+    return(NULL)
+  }
+
+  clicked_date <- as.Date(clicked_date)
+  available_dates[which.min(abs(as.numeric(available_dates - clicked_date)))]
+}
+
+overview_parse_score_click_date <- function(event_x, available_dates) {
+  if (is.null(event_x) || length(event_x) == 0) {
+    return(NULL)
+  }
+
+  parsed <- tryCatch(
+    suppressWarnings(as.Date(event_x)),
+    error = function(e) as.Date(NA)
+  )
+  if (is.na(parsed) && is.numeric(event_x)) {
+    parsed <- suppressWarnings(as.Date(event_x, origin = "1970-01-01"))
+  }
+  if (is.na(parsed) && is.numeric(event_x)) {
+    parsed <- suppressWarnings(as.Date(event_x / 86400000,
+                                      origin = "1970-01-01"))
+  }
+
+  overview_snap_score_date(parsed, available_dates)
+}
+
 overviewPageUI <- function(id) {
   ns <- NS(id)
 
@@ -18,6 +103,67 @@ overviewPageUI <- function(id) {
     policy_page_header(
       "Housing Affordability",
       "Analysing the state of the Australian market through prices, serviceability and rental cost pressure."
+    ),
+    layout_column_wrap(
+      width = 1,
+      fill = FALSE,
+      policy_card(
+        "National Market-Entry Affordability Score",
+        class = "affordability-score-card",
+        div(
+          class = "affordability-score-panel",
+          div(
+            class = "affordability-score-summary",
+            div(
+              class = "affordability-score-value-group",
+              div(class = "affordability-score-value",
+                  textOutput(ns("vb_afford_score"), inline = TRUE)),
+              tags$span(
+                "Relative index, not household stress",
+                class = "affordability-score-badge"
+              )
+            ),
+            tags$p(class = "affordability-score-date",
+                   textOutput(ns("vb_afford_score_date"), inline = TRUE)),
+            tags$p(class = "affordability-score-basis",
+                   textOutput(ns("vb_afford_score_basis"), inline = TRUE)),
+            tags$p(
+              class = "affordability-score-howto",
+              "Higher = easier market entry relative to 2012-2025 history. It is not the share of households who can afford housing."
+            ),
+            uiOutput(ns("vb_afford_score_change")),
+            tags$p(
+              class = "affordability-score-note",
+              "Modelled national score for entering ownership or renting. It combines mortgage serviceability, rental cost pressure and deposit barriers. Not an official ABS/NHHA statistic or lender assessment."
+            ),
+            actionButton(
+              ns("reset_afford_score_date"),
+              "Reset to latest",
+              class = "btn btn-outline-secondary btn-sm affordability-score-reset"
+            )
+          ),
+          div(
+            class = "affordability-score-trend",
+            plotlyOutput(ns("overview_afford_score_trend"), height = "220px")
+          ),
+          div(
+            class = "affordability-score-components",
+            tags$h3("Component scores and weighted contribution",
+                    class = "affordability-score-components-title"),
+            uiOutput(ns("overview_afford_score_components")),
+            tags$div(
+              class = "affordability-score-interpretation-strip",
+              lapply(names(score_component_short_labels), function(component) {
+                tags$span(paste0(
+                  score_component_short_labels[[component]],
+                  " = ",
+                  tolower(score_component_explanations[[component]])
+                ))
+              })
+            )
+          )
+        )
+      )
     ),
     layout_column_wrap(
       width = 1/4,
@@ -77,9 +223,17 @@ overviewPageUI <- function(id) {
       width = 1,
       fill = FALSE,
       policy_chart_card(
-        title = "Affordability Indices",
+        title = tags$span(
+          class = "overview-affordability-indices-title-wrap",
+          tags$span("Affordability Indices",
+                    class = "overview-affordability-indices-title"),
+          policy_info_icon(
+            "Affordability indices note",
+            overview_affordability_indices_note,
+            class = "policy-info-icon-left-aligned"
+          )
+        ),
         fill = FALSE,
-        note = "Cost-pressure indexes; higher = less affordable. Rent uses ABS CPI rents/WPI, mortgage uses price\u00d7rate/WPI, deposit uses price/income, and price-to-income uses national dwelling prices/WPI.",
         plotlyOutput(ns("overview_afford_change"), height = "380px")
       )
     )
@@ -88,6 +242,173 @@ overviewPageUI <- function(id) {
 
 overviewPageServer <- function(id, is_dark) {
   moduleServer(id, function(input, output, session) {
+    score_dates <- sort(unique(national_affordability_score_ts$date[
+      !is.na(national_affordability_score_ts$score)
+    ]))
+    latest_score_date <- if (length(score_dates) == 0) {
+      as.Date(NA)
+    } else {
+      max(score_dates)
+    }
+    selected_score_date <- reactiveVal(latest_score_date)
+
+    score_click <- reactive({
+      event_data("plotly_click", source = "overview_afford_score",
+                 priority = "event")
+    })
+
+    observeEvent(score_click(), {
+      clicked <- overview_parse_score_click_date(score_click()$x, score_dates)
+      if (!is.null(clicked)) {
+        selected_score_date(clicked)
+      }
+    }, ignoreNULL = TRUE)
+
+    observeEvent(input$reset_afford_score_date, {
+      selected_score_date(latest_score_date)
+    }, ignoreInit = TRUE)
+
+    selected_score_row <- reactive({
+      if (nrow(national_affordability_score_ts) == 0) {
+        return(national_affordability_score_ts)
+      }
+      d <- national_affordability_score_ts %>%
+        filter(!is.na(score))
+      selected <- selected_score_date()
+      row <- d %>% filter(date == selected)
+      if (nrow(row) == 0) {
+        row <- d %>% filter(date == max(date))
+      }
+      row
+    })
+
+    output$vb_afford_score <- renderText({
+      row <- selected_score_row()
+      if (nrow(row) == 0) return("N/A")
+      v <- row$score[1]
+      paste0(fmt_index(v), " / 100")
+    })
+    output$vb_afford_score_date <- renderText({
+      row <- selected_score_row()
+      if (nrow(row) == 0) return("")
+      prefix <- if (identical(row$date[1], latest_score_date)) {
+        "Latest:"
+      } else {
+        "Selected:"
+      }
+      paste(prefix, format(row$date[1], "%b %Y"))
+    })
+    output$vb_afford_score_basis <- renderText({
+      if (length(score_dates) == 0) return("")
+      paste0(
+        "Relative to ",
+        format(min(score_dates), "%Y"),
+        "-",
+        format(max(score_dates), "%Y"),
+        " history"
+      )
+    })
+    output$vb_afford_score_change <- renderUI({
+      ch <- overview_score_change(
+        national_affordability_score_ts,
+        selected_date = selected_score_date()
+      )
+      css_class <- kpi_change_class(ch$change, favourable = "increase")
+      tags$p(class = paste("affordability-score-change", css_class),
+             ch$label)
+    })
+    output$overview_afford_score_components <- renderUI({
+      d <- national_affordability_score_components %>%
+        filter(!is.na(value), date == selected_score_date()) %>%
+        arrange(display_order)
+      if (nrow(d) == 0) {
+        return(tags$p(class = "affordability-score-empty",
+                      "No score component data available."))
+      }
+
+      component_classes <- c(
+        mortgage_serviceability = "score-component-mortgage",
+        rental_entry = "score-component-rental",
+        deposit_barrier = "score-component-deposit"
+      )
+
+      tags$div(
+        class = "affordability-score-component-list",
+        lapply(seq_len(nrow(d)), function(i) {
+          row <- d[i, ]
+          tags$div(
+            class = "affordability-score-component-row",
+            tags$div(
+              class = "affordability-score-component-header",
+              tags$span(
+                class = "affordability-score-component-label-wrap",
+                tags$span(row$component_label,
+                          class = "affordability-score-component-label"),
+                tags$span(
+                  score_component_explanations[[row$component]],
+                  class = "affordability-score-component-context"
+                )
+              ),
+              tags$span(
+                paste0("Score ", fmt_index(row$value), " / 100",
+                       " | Weight ", scales::percent(row$weight, accuracy = 1),
+                       " | Contribution ", fmt_index(row$value * row$weight),
+                       " pts"),
+                class = "affordability-score-component-meta"
+              )
+            ),
+            tags$div(
+              class = "affordability-score-component-track",
+              tags$div(
+                class = paste(
+                  "affordability-score-component-fill",
+                  component_classes[[row$component]]
+                ),
+                style = paste0("width: ", max(min(row$value, 100), 0), "%;")
+              )
+            )
+          )
+        })
+      )
+    })
+    output$overview_afford_score_trend <- renderPlotly({
+      d <- national_affordability_score_ts %>%
+        filter(!is.na(score))
+      validate(need(nrow(d) > 0, "No national affordability score data available."))
+
+      p <- build_national_affordability_score_plot(
+        d,
+        selected_date = selected_score_date(),
+        dark = is_dark()
+      )
+      dashboard_ggplotly(
+        p,
+        dark = is_dark(),
+        tooltip = c("x", "y"),
+        source = "overview_afford_score"
+      ) %>%
+        plotly::layout(
+          margin = list(l = 44, r = 18, t = 10, b = 38),
+          showlegend = FALSE,
+          dragmode = FALSE
+        ) %>%
+        plotly::config(
+          scrollZoom = FALSE,
+          doubleClick = FALSE,
+          modeBarButtonsToRemove = c(
+            "zoom2d",
+            "pan2d",
+            "select2d",
+            "lasso2d",
+            "zoomIn2d",
+            "zoomOut2d",
+            "autoScale2d",
+            "resetScale2d"
+          )
+        )
+    }) %>%
+      bindCache(is_dark(), selected_score_date())
+
     output$vb_nat_price <- renderText({
       v <- latest_val(national_mean_price, "city", "National Avg")
       if (is.na(v)) "N/A" else fmt_dollar_k(v * 1000)

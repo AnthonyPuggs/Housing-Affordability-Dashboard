@@ -103,7 +103,17 @@ if (all(file.exists(c(project_paths_path, registry_path, report_path,
       "Price-to-Income Cost Pressure",
       "Modelled Mortgage Cost Pressure",
       "Rent Cost Pressure",
-      "Stylised Deposit Gap (Years)"
+      "Stylised Deposit Gap (Years)",
+      "National Housing Affordability Score",
+      "National Market-Entry Affordability Score",
+      "40 per cent mortgage serviceability component",
+      "historical-relative market-entry composite",
+      "front-page market-entry interpretation layer over the existing v1 composite",
+      "not the share of households who can afford housing",
+      "not an absolute affordability threshold",
+      "A score near 0 or 100 is low or high versus the score window",
+      "Rental-entry stress may be understated relative to advertised-rent or new-lease evidence",
+      "Not an official ABS/NHHA statistic or lender assessment"
     )
     missing_report_text <- required_report_text[
       !vapply(required_report_text, grepl, logical(1), report, fixed = TRUE)

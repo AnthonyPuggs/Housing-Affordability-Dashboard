@@ -1,7 +1,7 @@
-# Graph Report - .  (2026-05-03)
+# Graph Report - Housing-Affordability-Dashboard  (2026-05-07)
 
 ## Corpus Check
-- 140 files · ~165,099 words
+- 98 files · ~174,726 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,47 +10,47 @@
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Affordability Indicator Pipeline|Affordability Indicator Pipeline]]
-- [[_COMMUNITY_Dashboard Architecture|Dashboard Architecture]]
-- [[_COMMUNITY_ABS API And renv Bootstrap|ABS API And renv Bootstrap]]
-- [[_COMMUNITY_Affordability Methodology Literature|Affordability Methodology Literature]]
-- [[_COMMUNITY_Pipeline Contracts|Pipeline Contracts]]
-- [[_COMMUNITY_Age Housing Stress Bands|Age Housing Stress Bands]]
-- [[_COMMUNITY_NHHA Stress Trends|NHHA Stress Trends]]
-- [[_COMMUNITY_State Rental Stress|State Rental Stress]]
-- [[_COMMUNITY_UI Quality Contracts|UI Quality Contracts]]
-- [[_COMMUNITY_Rental Costs By Age|Rental Costs By Age]]
-- [[_COMMUNITY_Median House Prices|Median House Prices]]
-- [[_COMMUNITY_Building Approvals Context|Building Approvals Context]]
-- [[_COMMUNITY_Serviceability Stress|Serviceability Stress]]
-- [[_COMMUNITY_Affordability Change Indices|Affordability Change Indices]]
-- [[_COMMUNITY_Review Findings|Review Findings]]
-- [[_COMMUNITY_renv CI And Docker|renv CI And Docker]]
-- [[_COMMUNITY_Capital City Price Indexes|Capital City Price Indexes]]
-- [[_COMMUNITY_Rental Affordability Index|Rental Affordability Index]]
-- [[_COMMUNITY_Interest Rate Transmission|Interest Rate Transmission]]
-- [[_COMMUNITY_Construction Cost Inflation|Construction Cost Inflation]]
-- [[_COMMUNITY_Affordability Metrics|Affordability Metrics]]
-- [[_COMMUNITY_Tenure Age Burdens|Tenure Age Burdens]]
-- [[_COMMUNITY_Labour Market Context|Labour Market Context]]
-- [[_COMMUNITY_Population Pressure Context|Population Pressure Context]]
-- [[_COMMUNITY_renv Logo Asset|renv Logo Asset]]
-- [[_COMMUNITY_renv Cache And Migration|renv Cache And Migration]]
-- [[_COMMUNITY_R Package Repositories|R Package Repositories]]
-- [[_COMMUNITY_renv Package Development|renv Package Development]]
-- [[_COMMUNITY_renv Install Transactions|renv Install Transactions]]
-- [[_COMMUNITY_External Library Sources|External Library Sources]]
-- [[_COMMUNITY_Parallel Package Install|Parallel Package Install]]
-- [[_COMMUNITY_CI Lockfile Resolution|CI Lockfile Resolution]]
-- [[_COMMUNITY_renv Vulnerability Checks|renv Vulnerability Checks]]
-- [[_COMMUNITY_Package Credentials|Package Credentials]]
-- [[_COMMUNITY_Package Download Failures|Package Download Failures]]
-- [[_COMMUNITY_ABI And Build Dependencies|ABI And Build Dependencies]]
-- [[_COMMUNITY_Dependency Error Handling|Dependency Error Handling]]
-- [[_COMMUNITY_Cache-Only renv|Cache-Only renv]]
-- [[_COMMUNITY_CI knitr Options|CI knitr Options]]
-- [[_COMMUNITY_Development Dependencies|Development Dependencies]]
-- [[_COMMUNITY_Package Configure Args|Package Configure Args]]
+- [[_COMMUNITY_Community 0|Community 0]]
+- [[_COMMUNITY_Community 1|Community 1]]
+- [[_COMMUNITY_Community 2|Community 2]]
+- [[_COMMUNITY_Community 3|Community 3]]
+- [[_COMMUNITY_Community 4|Community 4]]
+- [[_COMMUNITY_Community 5|Community 5]]
+- [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
+- [[_COMMUNITY_Community 8|Community 8]]
+- [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
+- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
+- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
+- [[_COMMUNITY_Community 41|Community 41]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Capital City Median House Prices` - 14 edges
@@ -98,167 +98,167 @@
 
 ## Communities
 
-### Community 0 - "Affordability Indicator Pipeline"
+### Community 0 - "Community 0"
 Cohesion: 0.08
 Nodes (41): Overview Cost Pressure Indicators, Overview Page Module, ABS Normalisation Schema, RBA Table Fetcher, Shared Pipeline Configuration, Write Pipeline CSV Helper, SIH Estimate Quality Metadata, SIH Workbook Parser (+33 more)
 
-### Community 1 - "Dashboard Architecture"
+### Community 1 - "Community 1"
 Cohesion: 0.09
 Nodes (40): Affordability Market Entry Surface, Affordability Page Module, SIH Housing Stress and Cost Burden Surface, ABS SIH Housing Occupancy and Costs Resources, Housing Affordability Methodology Concepts, Normalised ABS Long Schema Rule, Household Affordability Dashboard Project Overview, Dashboard Dark and Light Theme System (+32 more)
 
-### Community 2 - "ABS API And renv Bootstrap"
+### Community 2 - "Community 2"
 Cohesion: 0.08
 Nodes (28): ABS Data API Beta SDMX Service, ABS REST API XML JSON CSV Formats, ANSI Help and Run Links, renv Bootstrap, Bootstrap renv, Bootstrap Download Sources, Profile-Specific renv Paths, Project Library Loading (+20 more)
 
-### Community 3 - "Affordability Methodology Literature"
+### Community 3 - "Community 3"
 Cohesion: 0.09
 Nodes (28): Guide to Housing Affordability Statistics, Change in Housing Affordability Indicators, Deposit Affordability Index, Interest Price Index, Market Entry Affordability, Median Household Disposable Income, Mortgage Affordability Index, Rental Affordability Index (+20 more)
 
-### Community 4 - "Pipeline Contracts"
+### Community 4 - "Community 4"
 Cohesion: 0.1
 Nodes (27): Loader Reserved SIH Geographic Files, SIH Geographic Output Contracts, Geographic Affordability Module Contract, SIH Quality Annotations, Housing Supply Approval Legend Parser, Housing Supply Module Contract, Indicator Registry Contract, Market Entry Scenario Methodology Note (+19 more)
 
-### Community 5 - "Age Housing Stress Bands"
+### Community 5 - "Community 5"
 Cohesion: 0.13
 Nodes (22): 15 to 24 Age Group, 15 to 24 Age Group Has Highest Visible Stress Share, Cost/Income 25-30% Band, 25 to 34 Age Group, Cost/Income 30-50% Band, 35 to 44 Age Group, 45 to 54 Age Group, 55 to 64 Age Group (+14 more)
 
-### Community 6 - "NHHA Stress Trends"
+### Community 6 - "Community 6"
 Cohesion: 0.13
 Nodes (20): 2013 Elevated Rental Stress Cluster, 2019 Mixed State Rental Stress Outcomes, ACT Rental Stress Series, Australia Rental Stress Series, Cross-State Dispersion in Rental Stress, NHHA Rental Stress Measure, NHHA Rental Stress Trends Over Time Chart, No Explicit Threshold Line Visible (+12 more)
 
-### Community 7 - "State Rental Stress"
+### Community 7 - "Community 7"
 Cohesion: 0.17
 Nodes (19): 2019-20 Reference Period, ACT Rental Stress, ACT Lowest Rental Stress, All States and Territories Above Reference Line, Dashed Average Reference Line Around 45 Percent, NHHA Rental Stress by State Chart, Cross-Jurisdiction Rental Stress Comparison, NHHA Rental Stress Measure (+11 more)
 
-### Community 8 - "UI Quality Contracts"
+### Community 8 - "Community 8"
 Cohesion: 0.15
 Nodes (18): Rental Market Interaction Contract, Rental Market Mobile Layout Contract, Rental Market Module Contract, SIH Quality Overlay Contract, Responsive UI Contract, market_entry_serviceability_series, Serviceability Scenario Controls Contract, SIH Estimate Quality Dataset Contract (+10 more)
 
-### Community 9 - "Rental Costs By Age"
+### Community 9 - "Community 9"
 Cohesion: 0.14
 Nodes (18): 15 to 24 Age Group, 25 to 34 Age Group, 35 to 44 Age Group, 45 to 54 Age Group, 55 to 64 Age Group, 65 and over Age Group, 65 to 74 Age Group, 75 and over Age Group (+10 more)
 
-### Community 10 - "Median House Prices"
+### Community 10 - "Community 10"
 Cohesion: 0.15
 Nodes (15): Adelaide median house price series, Benchmark capital city housing affordability pressure using median prices, Brisbane median house price series, Canberra median house price series, Capital City Median House Prices, Darwin median house price series, Hobart median house price series, Melbourne median house price series (+7 more)
 
-### Community 11 - "Building Approvals Context"
+### Community 11 - "Community 11"
 Cohesion: 0.15
 Nodes (14): Building Approvals, Building Approvals Chart, Dwellings Excluding Houses, Houses, Housing Supply Pipeline Indicator, Mid-2010s Building Approvals Peak, Multi-Series Time Trend, New South Wales (+6 more)
 
-### Community 12 - "Serviceability Stress"
+### Community 12 - "Community 12"
 Cohesion: 0.22
 Nodes (14): 2013 to 2021 Serviceability Below Threshold, 2020 Serviceability Trough Near 24 Percent, 2022 Threshold Crossing, 2023 to 2025 Elevated Housing Stress, Assess Mortgage Or Housing Cost Burden Against Stress Benchmark, Housing Serviceability, Housing Stress Threshold (30%), Overview Serviceability Chart Image (+6 more)
 
-### Community 13 - "Affordability Change Indices"
+### Community 13 - "Community 13"
 Cohesion: 0.24
 Nodes (13): Change from Base Period Axis, Change in Affordability Indices Since Base Period Chart, Cross-Indicator Affordability Comparison, Deposit Affordability, Deposit Affordability Approx 160% Above Base Period Latest, Mortgage Affordability, Mortgage Affordability Approx 130% Above Base Period Latest, Percentage Scale from 0% to Above 150% (+5 more)
 
-### Community 14 - "Review Findings"
+### Community 14 - "Community 14"
 Cohesion: 0.18
 Nodes (12): Housing Affordability Dashboard Full Review, Housing Supply Output ID Mismatch, Strict Indicator Registry, Insufficient Real Indicator History, KPI Change Label Misclassification, Market Entry Scenario Measures, NHHA Duplicate Metric Parsing, Official SIH and NHHA Measures (+4 more)
 
-### Community 15 - "renv CI And Docker"
+### Community 15 - "Community 15"
 Cohesion: 0.18
 Nodes (12): Continuous Integration Restore Workflow, GitHub Actions renv Cache, BuildKit Cache Mount for renv, Containerised renv Project, Docker Layer Cache for renv Restore, Docker Multi-Stage Builds, Docker System Dependencies, Snapshot and Lockfile Update FAQ (+4 more)
 
-### Community 16 - "Capital City Price Indexes"
+### Community 16 - "Community 16"
 Cohesion: 0.23
 Nodes (12): Analytical purpose: compare capital city dwelling price growth as housing affordability pressure input, Brisbane shows a pronounced late-period surge after about 2020, Brisbane dwelling price index series, Dwelling Price Index by Capital City Chart, Y-axis: Index, Melbourne rises earlier but is comparatively flat after about 2021, Melbourne dwelling price index series, Capital city dwelling price indexes generally rise substantially after 2012 (+4 more)
 
-### Community 17 - "Rental Affordability Index"
+### Community 17 - "Community 17"
 Cohesion: 0.23
 Nodes (12): 2024 to 2026 Rebound Toward 100, Rental Affordability Trend Monitoring Purpose, Index Baseline Around 100, Rental Affordability Index Chart, Early-2010s Index Peak Around 105, Early-2020s Index Trough Around 93, Red Line Index Series, Mid-2000s Index Trough Around 94 (+4 more)
 
-### Community 18 - "Interest Rate Transmission"
+### Community 18 - "Community 18"
 Cohesion: 0.47
 Nodes (10): Cash Rate & Mortgage Rates Chart, Interest Rate Transmission to Housing Costs, Investor 3yr Fixed Mortgage Rate, Investor Variable Discounted Mortgage Rate, Mortgage Rate and Cash Rate Spread, Owner-occupied 3yr Fixed Mortgage Rate, Owner-occupied Variable Discounted Mortgage Rate, Percentage Rate Axis (+2 more)
 
-### Community 19 - "Construction Cost Inflation"
+### Community 19 - "Community 19"
 Cohesion: 0.22
 Nodes (10): Analytical Purpose Construction Cost Inflation Input For Housing Affordability Assessment, CPI New Dwelling Purchase Chart, Index Ticks 70 80 90 100, New Dwelling Purchase Construction Cost Index Series, Index Rises From About 69 To Above 101, CPI New Dwelling Purchase (Construction Cost), Sharp Acceleration Around 2021 To 2022 Followed By Continued Growth, Brief Plateau Near Index 98 To 99 Before Rising Again (+2 more)
 
-### Community 20 - "Affordability Metrics"
+### Community 20 - "Community 20"
 Cohesion: 0.36
 Nodes (8): Affordability Indicators Chart, Affordability Indicators, Mortgage Serviceability Index, Mortgage Serviceability Volatility, Post-2021 Housing Affordability Deterioration, Price-to-Income Ratio, Long-Run Price-to-Income Uptrend, Time Series Comparison of Housing Affordability Metrics
 
-### Community 21 - "Tenure Age Burdens"
+### Community 21 - "Community 21"
 Cohesion: 0.29
 Nodes (8): 2019-20 Housing Affordability Period, Compare Housing Affordability Stress by Tenure and Age Cohort, Age Groups from 15 to 24 through 75 and Over, Housing Cost-to-Income Ratio Heatmap by Tenure and Age, Housing Cost-to-Income Percentage, Private Renter Cost Burden Remains Material Across Age Groups, Tenure Groups: All Households, All Renters, Owners with Mortgage, Private Renters, Younger Households Show Higher All-Household Cost Burdens
 
-### Community 22 - "Labour Market Context"
+### Community 22 - "Community 22"
 Cohesion: 0.36
 Nodes (8): Labour Market Context for Household Affordability Analysis, Labour Market Spare Capacity Chart, COVID-era Spike in Labour Spare Capacity, Labour Underutilisation Rate, Percentage Time Series from Early 2000s to Mid 2020s, Recent Labour Market Tightening After 2020 Peak, Underemployment Rate, Unemployment Rate
 
-### Community 24 - "Population Pressure Context"
+### Community 24 - "Community 24"
 Cohesion: 0.38
 Nodes (6): Time Axis from 2000 to 2025, COVID-era Net Migration Collapse, Population Pressure Context for Housing Affordability, Net Overseas Migration (NOM) per Annum, Post-2022 Migration Rebound, Thousands
 
-### Community 25 - "renv Logo Asset"
+### Community 25 - "Community 25"
 Cohesion: 0.47
 Nodes (6): renv documentation figure asset, Hexagonal badge, Leaf-like green symbol, www.rstudio.com text, renv logo.svg, renv wordmark
 
-### Community 26 - "renv Cache And Migration"
+### Community 26 - "Community 26"
 Cohesion: 0.4
 Nodes (5): Package Retrieval in CI, Global Package Cache Configuration, Global Package Cache Compared With Packrat, JSON Lockfile Compared With Packrat, Packrat to renv Migration
 
-### Community 27 - "R Package Repositories"
+### Community 27 - "Community 27"
 Cohesion: 0.67
 Nodes (3): crandb Lookup Configuration, Repository-Aware Restore Strictness, Custom R Package Repositories
 
-### Community 28 - "renv Package Development"
+### Community 28 - "Community 28"
 Cohesion: 0.67
 Nodes (3): CRAN Submission Without renv Infrastructure, Package Development with renv, Project Library Isolation
 
-### Community 29 - "renv Install Transactions"
+### Community 29 - "Community 29"
 Cohesion: 1.0
 Nodes (2): Transactional Install Configuration, Rebuild and Restore Package Installation
 
-### Community 30 - "External Library Sources"
+### Community 30 - "Community 30"
 Cohesion: 1.0
 Nodes (2): External Libraries Configuration, Bioconductor Package Sources
 
-### Community 31 - "Parallel Package Install"
+### Community 31 - "Community 31"
 Cohesion: 1.0
 Nodes (2): Install Jobs Configuration, Parallel Install and Restore
 
-### Community 32 - "CI Lockfile Resolution"
+### Community 32 - "Community 32"
 Cohesion: 1.0
 Nodes (2): Lockfile Generation in CI, renv Plan Lockfile Resolution
 
-### Community 33 - "renv Vulnerability Checks"
+### Community 33 - "Community 33"
 Cohesion: 1.0
 Nodes (2): Known Vulnerability Check FAQ, renv Vulnerability Querying
 
-### Community 34 - "Package Credentials"
+### Community 34 - "Community 34"
 Cohesion: 1.0
 Nodes (2): Credential Stripping in Lockfiles, Package Installation Authentication
 
-### Community 35 - "Package Download Failures"
+### Community 35 - "Community 35"
 Cohesion: 1.0
 Nodes (2): Package Download Failures FAQ, Package Download Overrides
 
-### Community 36 - "ABI And Build Dependencies"
+### Community 36 - "Community 36"
 Cohesion: 1.0
 Nodes (2): ABI Compatibility, Build-Time Dependencies
 
-### Community 37 - "Dependency Error Handling"
+### Community 37 - "Community 37"
 Cohesion: 1.0
 Nodes (1): Dependency Error Handling Configuration
 
-### Community 38 - "Cache-Only renv"
+### Community 38 - "Community 38"
 Cohesion: 1.0
 Nodes (1): Cache-Only renv Use
 
-### Community 39 - "CI knitr Options"
+### Community 39 - "Community 39"
 Cohesion: 1.0
 Nodes (1): CI Vignette knitr Options
 
-### Community 40 - "Development Dependencies"
+### Community 40 - "Community 40"
 Cohesion: 1.0
 Nodes (1): Development Dependencies FAQ
 
-### Community 41 - "Package Configure Args"
+### Community 41 - "Community 41"
 Cohesion: 1.0
 Nodes (1): Package Configure Arguments
 
@@ -293,31 +293,31 @@ Nodes (1): Package Configure Arguments
 ## Knowledge Gaps
 - **151 isolated node(s):** `Legacy Claude Project Instructions`, `Pipeline Refresh and Output Gates`, `Dashboard Dark and Light Theme System`, `Policy Source Notes and SIH Sampling Warning Helpers`, `Empty Project Plan File` (+146 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `renv Install Transactions`** (2 nodes): `Transactional Install Configuration`, `Rebuild and Restore Package Installation`
+- **Thin community `Community 29`** (2 nodes): `Transactional Install Configuration`, `Rebuild and Restore Package Installation`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `External Library Sources`** (2 nodes): `External Libraries Configuration`, `Bioconductor Package Sources`
+- **Thin community `Community 30`** (2 nodes): `External Libraries Configuration`, `Bioconductor Package Sources`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Parallel Package Install`** (2 nodes): `Install Jobs Configuration`, `Parallel Install and Restore`
+- **Thin community `Community 31`** (2 nodes): `Install Jobs Configuration`, `Parallel Install and Restore`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `CI Lockfile Resolution`** (2 nodes): `Lockfile Generation in CI`, `renv Plan Lockfile Resolution`
+- **Thin community `Community 32`** (2 nodes): `Lockfile Generation in CI`, `renv Plan Lockfile Resolution`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `renv Vulnerability Checks`** (2 nodes): `Known Vulnerability Check FAQ`, `renv Vulnerability Querying`
+- **Thin community `Community 33`** (2 nodes): `Known Vulnerability Check FAQ`, `renv Vulnerability Querying`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Package Credentials`** (2 nodes): `Credential Stripping in Lockfiles`, `Package Installation Authentication`
+- **Thin community `Community 34`** (2 nodes): `Credential Stripping in Lockfiles`, `Package Installation Authentication`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Package Download Failures`** (2 nodes): `Package Download Failures FAQ`, `Package Download Overrides`
+- **Thin community `Community 35`** (2 nodes): `Package Download Failures FAQ`, `Package Download Overrides`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `ABI And Build Dependencies`** (2 nodes): `ABI Compatibility`, `Build-Time Dependencies`
+- **Thin community `Community 36`** (2 nodes): `ABI Compatibility`, `Build-Time Dependencies`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Dependency Error Handling`** (1 nodes): `Dependency Error Handling Configuration`
+- **Thin community `Community 37`** (1 nodes): `Dependency Error Handling Configuration`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Cache-Only renv`** (1 nodes): `Cache-Only renv Use`
+- **Thin community `Community 38`** (1 nodes): `Cache-Only renv Use`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `CI knitr Options`** (1 nodes): `CI Vignette knitr Options`
+- **Thin community `Community 39`** (1 nodes): `CI Vignette knitr Options`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Development Dependencies`** (1 nodes): `Development Dependencies FAQ`
+- **Thin community `Community 40`** (1 nodes): `Development Dependencies FAQ`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Package Configure Args`** (1 nodes): `Package Configure Arguments`
+- **Thin community `Community 41`** (1 nodes): `Package Configure Arguments`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions

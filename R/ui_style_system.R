@@ -26,6 +26,16 @@ policy_source_note <- function(...) {
   tags$p(..., class = "source-note policy-source-note")
 }
 
+policy_info_icon <- function(label, tooltip, class = NULL) {
+  tags$span(
+    class = policy_compact_class("policy-info-icon", class),
+    tabindex = "0",
+    `aria-label` = paste0(label, ": ", tooltip),
+    `data-tooltip` = tooltip,
+    tags$i(class = "fa-solid fa-circle-info", `aria-hidden` = "true")
+  )
+}
+
 policy_kpi_box <- function(title, value, subtitle = NULL, change = NULL,
                            accent = c("blue", "teal", "navy", "purple"),
                            class = NULL) {

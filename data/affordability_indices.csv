@@ -1,4 +1,31 @@
 date,value,indicator,geography,unit,frequency
+2012-10-01,98.07692307692307,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2013-04-01,98.07692307692307,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2013-10-01,88.46153846153845,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2014-04-01,84.61538461538461,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2014-10-01,73.07692307692308,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2015-04-01,76.92307692307692,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2015-10-01,65.38461538461539,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2016-04-01,69.23076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2016-10-01,61.53846153846154,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2017-04-01,53.84615384615385,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2017-10-01,42.307692307692314,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2018-04-01,57.692307692307686,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2018-10-01,46.15384615384615,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2019-04-01,80.76923076923077,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2019-10-01,50,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2020-04-01,92.3076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2020-10-01,38.46153846153846,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2021-04-01,34.61538461538461,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2021-10-01,30.76923076923077,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2022-04-01,23.076923076923073,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2022-10-01,26.923076923076927,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2023-04-01,19.23076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2023-10-01,15.384615384615385,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2024-04-01,11.538461538461542,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2024-10-01,7.692307692307687,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2025-04-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2025-10-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2011-07-01,9.053036144406727,Deposit Gap (Years),National,Years,Quarter
 2011-10-01,9.106976808846634,Deposit Gap (Years),National,Years,Quarter
 2012-01-01,8.84249004685971,Deposit Gap (Years),National,Years,Quarter
@@ -30,6 +57,33 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,13.546384397807286,Deposit Gap (Years),National,Years,Quarter
 2025-04-01,13.612499913344855,Deposit Gap (Years),National,Years,Quarter
 2025-10-01,14.427026547514952,Deposit Gap (Years),National,Years,Quarter
+2012-10-01,26.923076923076927,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2013-04-01,30.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2013-10-01,46.15384615384615,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2014-04-01,42.307692307692314,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2014-10-01,38.46153846153846,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2015-04-01,61.53846153846154,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2015-10-01,50,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2016-04-01,57.692307692307686,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2016-10-01,80.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2017-04-01,76.92307692307692,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2017-10-01,69.23076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2018-04-01,73.07692307692308,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2018-10-01,53.84615384615385,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2019-04-01,65.38461538461539,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2019-10-01,88.46153846153845,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2020-04-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2020-10-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2021-04-01,92.3076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2021-10-01,84.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2022-04-01,34.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2022-10-01,23.076923076923073,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2023-04-01,19.23076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2023-10-01,7.692307692307687,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2024-04-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2024-10-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2025-04-01,15.384615384615385,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2025-10-01,11.538461538461542,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2011-07-01,100,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2011-10-01,96.72551679358334,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2012-01-01,92.60034619097526,Mortgage Serviceability Index,National,Index (base=100),Quarter
@@ -88,6 +142,33 @@ date,value,indicator,geography,unit,frequency
 2025-04-01,146.28176769091868,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2025-07-01,142.84587073949743,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2025-10-01,146.29087976369885,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-10-01,42.01923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
+2013-04-01,37.5,National Housing Affordability Score,National,Score (0-100),Quarter
+2013-10-01,43.26923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
+2014-04-01,38.75,National Housing Affordability Score,National,Score (0-100),Quarter
+2014-10-01,37.69230769230769,National Housing Affordability Score,National,Score (0-100),Quarter
+2015-04-01,49.230769230769226,National Housing Affordability Score,National,Score (0-100),Quarter
+2015-10-01,44.42307692307692,National Housing Affordability Score,National,Score (0-100),Quarter
+2016-04-01,49.80769230769231,National Housing Affordability Score,National,Score (0-100),Quarter
+2016-10-01,58.46153846153847,National Housing Affordability Score,National,Score (0-100),Quarter
+2017-04-01,56.34615384615385,National Housing Affordability Score,National,Score (0-100),Quarter
+2017-10-01,51.73076923076923,National Housing Affordability Score,National,Score (0-100),Quarter
+2018-04-01,58.46153846153846,National Housing Affordability Score,National,Score (0-100),Quarter
+2018-10-01,51.92307692307693,National Housing Affordability Score,National,Score (0-100),Quarter
+2019-04-01,67.88461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
+2019-10-01,72.11538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
+2020-04-01,89.23076923076923,National Housing Affordability Score,National,Score (0-100),Quarter
+2020-10-01,78.46153846153845,National Housing Affordability Score,National,Score (0-100),Quarter
+2021-04-01,76.53846153846155,National Housing Affordability Score,National,Score (0-100),Quarter
+2021-10-01,75.86538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
+2022-04-01,53.942307692307686,National Housing Affordability Score,National,Score (0-100),Quarter
+2022-10-01,48.26923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
+2023-04-01,40.76923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
+2023-10-01,32.5,National Housing Affordability Score,National,Score (0-100),Quarter
+2024-04-01,26.53846153846154,National Housing Affordability Score,National,Score (0-100),Quarter
+2024-10-01,22.884615384615383,National Housing Affordability Score,National,Score (0-100),Quarter
+2025-04-01,22.78846153846154,National Housing Affordability Score,National,Score (0-100),Quarter
+2025-10-01,22.59615384615385,National Housing Affordability Score,National,Score (0-100),Quarter
 2011-07-01,100,Price-to-Income Ratio,National,Index (base=100),Quarter
 2011-10-01,100.24108076348766,Price-to-Income Ratio,National,Index (base=100),Quarter
 2012-01-01,97.64454295999893,Price-to-Income Ratio,National,Index (base=100),Quarter
@@ -512,3 +593,30 @@ date,value,indicator,geography,unit,frequency
 2025-04-01,100.25068520623037,Rental Affordability Index,National,Index (base=100),Quarter
 2025-07-01,99.80183567741675,Rental Affordability Index,National,Index (base=100),Quarter
 2025-10-01,99.89508816221175,Rental Affordability Index,National,Index (base=100),Quarter
+2012-10-01,19.23076923076923,Rental Entry Component Score,National,Score (0-100),Quarter
+2013-04-01,1.9230769230769273,Rental Entry Component Score,National,Score (0-100),Quarter
+2013-10-01,7.692307692307687,Rental Entry Component Score,National,Score (0-100),Quarter
+2014-04-01,1.9230769230769273,Rental Entry Component Score,National,Score (0-100),Quarter
+2014-10-01,11.538461538461542,Rental Entry Component Score,National,Score (0-100),Quarter
+2015-04-01,15.384615384615385,Rental Entry Component Score,National,Score (0-100),Quarter
+2015-10-01,23.076923076923073,Rental Entry Component Score,National,Score (0-100),Quarter
+2016-04-01,26.923076923076927,Rental Entry Component Score,National,Score (0-100),Quarter
+2016-10-01,30.76923076923077,Rental Entry Component Score,National,Score (0-100),Quarter
+2017-04-01,34.61538461538461,Rental Entry Component Score,National,Score (0-100),Quarter
+2017-10-01,38.46153846153846,Rental Entry Component Score,National,Score (0-100),Quarter
+2018-04-01,42.307692307692314,Rental Entry Component Score,National,Score (0-100),Quarter
+2018-10-01,53.84615384615385,Rental Entry Component Score,National,Score (0-100),Quarter
+2019-04-01,61.53846153846154,Rental Entry Component Score,National,Score (0-100),Quarter
+2019-10-01,69.23076923076923,Rental Entry Component Score,National,Score (0-100),Quarter
+2020-04-01,76.92307692307692,Rental Entry Component Score,National,Score (0-100),Quarter
+2020-10-01,84.61538461538461,Rental Entry Component Score,National,Score (0-100),Quarter
+2021-04-01,88.46153846153845,Rental Entry Component Score,National,Score (0-100),Quarter
+2021-10-01,98.07692307692307,Rental Entry Component Score,National,Score (0-100),Quarter
+2022-04-01,98.07692307692307,Rental Entry Component Score,National,Score (0-100),Quarter
+2022-10-01,92.3076923076923,Rental Entry Component Score,National,Score (0-100),Quarter
+2023-04-01,80.76923076923077,Rental Entry Component Score,National,Score (0-100),Quarter
+2023-10-01,73.07692307692308,Rental Entry Component Score,National,Score (0-100),Quarter
+2024-04-01,65.38461538461539,Rental Entry Component Score,National,Score (0-100),Quarter
+2024-10-01,57.692307692307686,Rental Entry Component Score,National,Score (0-100),Quarter
+2025-04-01,46.15384615384615,Rental Entry Component Score,National,Score (0-100),Quarter
+2025-10-01,50,Rental Entry Component Score,National,Score (0-100),Quarter

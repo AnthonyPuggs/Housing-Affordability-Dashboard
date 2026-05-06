@@ -213,6 +213,7 @@ check(length(missing_inputs) == 0,
             paste(missing_inputs, collapse = ", ")))
 
 plotly_output_ids <- c(
+  "overview_afford_score_trend",
   "overview_median_prices",
   "overview_afford_change",
   "price_chart",

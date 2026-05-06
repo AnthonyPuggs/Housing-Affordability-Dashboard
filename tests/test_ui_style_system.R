@@ -38,6 +38,7 @@ if (file.exists(style_path)) {
     "policy_kpi_box",
     "policy_chart_card",
     "policy_source_note",
+    "policy_info_icon",
     "policy_card"
   )
   missing_functions <- required_functions[
@@ -52,6 +53,7 @@ if (file.exists(style_path)) {
     "policy-page-header",
     "policy-kpi",
     "policy-chart-card",
+    "policy-info-icon",
     "policy-source-note"
   )
   missing_style_classes <- required_style_classes[
@@ -86,6 +88,19 @@ if (file.exists(style_path)) {
         "policy_chart_card() must retain policy source-note markup")
   check(grepl("chart-wide", chart_card_html, fixed = TRUE),
         "policy_chart_card() must retain chart body markup")
+
+  info_icon_html <- paste(as.character(
+    policy_info_icon("Affordability index note", "Tooltip content")
+  ), collapse = "\n")
+  check(grepl("policy-info-icon", info_icon_html, fixed = TRUE),
+        "policy_info_icon() must render the policy info-icon class")
+  check(grepl("data-tooltip=\"Tooltip content\"", info_icon_html, fixed = TRUE),
+        "policy_info_icon() must expose tooltip text through data-tooltip")
+  check(grepl("aria-label=\"Affordability index note: Tooltip content\"",
+              info_icon_html, fixed = TRUE),
+        "policy_info_icon() must expose tooltip text through an accessible label")
+  check(grepl("tabindex=\"0\"", info_icon_html, fixed = TRUE),
+        "policy_info_icon() must be keyboard focusable")
 }
 
 app_text <- if (file.exists(app_path)) read_text(app_path) else ""
@@ -110,6 +125,18 @@ if (nzchar(app_text)) {
     ".policy-page-header",
     ".policy-kpi",
     ".policy-chart-card",
+    ".overview-affordability-indices-title-wrap",
+    ".policy-info-icon",
+    ".policy-info-icon-left-aligned",
+    ".policy-info-icon:hover::after",
+    ".policy-info-icon:focus::after",
+    ".policy-info-icon-left-aligned:hover::after",
+    ".policy-info-icon-left-aligned:focus::after",
+    ".policy-info-icon-left-aligned {",
+    "position: static",
+    "left: calc(100% - 0.75rem)",
+    "max-width: calc(100vw - 4rem)",
+    "overflow-wrap: anywhere",
     ".policy-card-body-with-note",
     ".policy-source-note",
     ".bslib-sidebar-layout > .sidebar"

@@ -61,12 +61,14 @@ Main dashboard CSVs live in `data/`:
 - `abs_timeseries.csv`: long-format ABS macro, CPI, price, labour and supply series using `date | value | series | series_id | category | unit | frequency`.
 - `rba_rates.csv`: long-format RBA cash and mortgage-rate inputs using the same time-series schema.
 - `rba_*_raw.csv`: normalised RBA source-cache artefacts kept rectangular for reproducible parsing; `rba_rates.csv` is the dashboard-ready RBA output.
-- `affordability_indices.csv`: derived cost-pressure indicators using `date | value | indicator | geography | unit | frequency`.
+- `affordability_indices.csv`: derived cost-pressure indicators and the National Housing Affordability Score using `date | value | indicator | geography | unit | frequency`.
 - `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental-stress measures.
 - `sih_estimate_quality.csv`: SIH sampling-error metadata for selected workbook tables, including 95% margin of error values and relative standard error flags. Users should interpret with caution when estimates have RSE from 25% to 50%; estimates above 50% are too unreliable for general use.
 - SIH estimate outputs are guarded by workbook benchmark checks in `R/sih_benchmarks.R`, covering key rows from ABS SIH Files 4, 5, 8 and 13 so sampling-error sections do not contaminate the main estimate CSVs.
 
 Official SIH/NHHA measures should be interpreted separately from modelled market-entry indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments.
+
+The National Housing Affordability Score is a modelled national market-entry composite, not an official ABS/NHHA statistic or lender assessment. The Overview page labels it as the National Market-Entry Affordability Score: a front-page market-entry interpretation layer over the existing v1 composite, not a new data series. Version 1 combines mortgage serviceability, rental entry and deposit barrier component scores using fixed 40/35/25 weights, where higher values mean more affordable relative to the score history. The score is not the share of households who can afford housing, and the rental-entry component may understate new-lease stress because v1 uses public index-style inputs. The Overview chart lets users click historical score dates to update the headline score and component contribution display without changing the fixed headline weights.
 
 `R/market_entry_scenarios.R` centralises app-only market-entry scenario calculations for mortgage repayments, assessed-rate sensitivity, deposit saving time and expense-adjusted serviceability ratios. Assessment buffer, deposit, implied LVR, loan-term and expense inputs are sensitivity assumptions, not a lender assessment. The serviceability chart uses AWE individual earnings as the income proxy; savings-rate assumptions remain calculator-only because they affect deposit saving time rather than repayment serviceability.
 

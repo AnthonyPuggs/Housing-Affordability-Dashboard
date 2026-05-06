@@ -328,6 +328,83 @@ ui <- page_navbar(
         margin: 0;
         padding: 0.65rem 1rem 0 !important;
       }
+      .overview-affordability-indices-title-wrap {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        max-width: 100%;
+      }
+      .policy-info-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.35rem;
+        color: var(--app-muted);
+        cursor: help;
+        vertical-align: middle;
+      }
+      .policy-info-icon i {
+        font-size: 0.82rem;
+        line-height: 1;
+      }
+      .policy-info-icon:focus {
+        outline: 2px solid var(--policy-accent);
+        outline-offset: 2px;
+        border-radius: 999px;
+      }
+      .policy-info-icon:hover::after,
+      .policy-info-icon:focus::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        z-index: 20;
+        top: calc(100% + 0.55rem);
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(28rem, calc(100vw - 2rem));
+        padding: 0.65rem 0.75rem;
+        border: 1px solid var(--app-border);
+        border-radius: 8px;
+        background-color: var(--policy-surface);
+        color: var(--app-text);
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.16);
+        font-size: 0.76rem;
+        font-weight: 500;
+        line-height: 1.42;
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+      .policy-info-icon:hover::before,
+      .policy-info-icon:focus::before {
+        content: '';
+        position: absolute;
+        z-index: 21;
+        top: calc(100% + 0.28rem);
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 0.55rem;
+        height: 0.55rem;
+        border-left: 1px solid var(--app-border);
+        border-top: 1px solid var(--app-border);
+        background-color: var(--policy-surface);
+      }
+      .policy-info-icon-left-aligned {
+        position: static;
+      }
+      .policy-info-icon-left-aligned:hover::after,
+      .policy-info-icon-left-aligned:focus::after {
+        left: 0;
+        transform: none;
+        width: min(28rem, calc(100vw - 4rem));
+        max-width: calc(100vw - 4rem);
+      }
+      .policy-info-icon-left-aligned:hover::before,
+      .policy-info-icon-left-aligned:focus::before {
+        left: calc(100% - 0.75rem);
+        transform: rotate(45deg);
+      }
       .policy-kpi {
         background-color: var(--policy-kpi-bg) !important;
         color: var(--policy-kpi-fg) !important;
@@ -343,6 +420,167 @@ ui <- page_navbar(
       .value-box .value-box-value { font-size: 1.55rem; font-weight: 750; }
       .value-box .value-box-title { font-size: 0.82rem; opacity: 0.9; font-weight: 700; }
       .kpi-subtitle { font-size: 0.76rem; color: var(--app-muted); margin-top: 2px; margin-bottom: 0; }
+      .affordability-score-card .policy-card-body {
+        padding: 1rem !important;
+      }
+      .affordability-score-panel {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.8fr) minmax(260px, 1.1fr) minmax(260px, 1fr);
+        gap: 1rem;
+        align-items: stretch;
+      }
+      .affordability-score-summary,
+      .affordability-score-trend,
+      .affordability-score-components {
+        min-width: 0;
+      }
+      .affordability-score-summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.35rem;
+      }
+      .affordability-score-value {
+        color: var(--app-text);
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+      .affordability-score-value-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        align-items: flex-start;
+      }
+      .affordability-score-badge {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        max-width: 100%;
+        border: 1px solid var(--app-border);
+        border-radius: 999px;
+        background-color: var(--policy-accent-soft);
+        color: var(--policy-accent);
+        font-size: 0.68rem;
+        font-weight: 750;
+        line-height: 1.15;
+        padding: 0.22rem 0.55rem;
+      }
+      .affordability-score-date,
+      .affordability-score-basis,
+      .affordability-score-change,
+      .affordability-score-howto,
+      .affordability-score-note,
+      .affordability-score-empty {
+        margin: 0;
+      }
+      .affordability-score-date {
+        color: var(--app-muted);
+        font-size: 0.82rem;
+        font-weight: 650;
+      }
+      .affordability-score-basis {
+        color: var(--app-muted);
+        font-size: 0.76rem;
+      }
+      .affordability-score-howto {
+        color: var(--app-text);
+        font-size: 0.76rem;
+        line-height: 1.42;
+        max-width: 25rem;
+      }
+      .affordability-score-change {
+        font-size: 0.82rem;
+      }
+      .affordability-score-note {
+        color: var(--app-muted);
+        font-size: 0.78rem;
+        line-height: 1.42;
+        max-width: 24rem;
+        margin-top: 0.2rem;
+      }
+      .affordability-score-reset {
+        align-self: flex-start;
+        margin-top: 0.35rem;
+      }
+      .affordability-score-components {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .affordability-score-components-title {
+        color: var(--app-text);
+        font-size: 0.86rem;
+        font-weight: 750;
+        margin: 0 0 0.65rem;
+      }
+      .affordability-score-component-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .affordability-score-component-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .affordability-score-component-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        align-items: baseline;
+      }
+      .affordability-score-component-label {
+        color: var(--app-text);
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+      .affordability-score-component-label-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 0.08rem;
+        min-width: 0;
+      }
+      .affordability-score-component-context {
+        color: var(--app-muted);
+        font-size: 0.7rem;
+        line-height: 1.25;
+      }
+      .affordability-score-component-meta {
+        color: var(--app-muted);
+        font-size: 0.74rem;
+        white-space: nowrap;
+      }
+      .affordability-score-component-track {
+        height: 0.52rem;
+        overflow: hidden;
+        border-radius: 999px;
+        background-color: var(--policy-surface-subtle);
+        border: 1px solid var(--app-border);
+      }
+      .affordability-score-component-fill {
+        height: 100%;
+        border-radius: 999px;
+      }
+      .affordability-score-interpretation-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 0.55rem;
+        margin-top: 0.75rem;
+      }
+      .affordability-score-interpretation-strip span {
+        color: var(--app-muted);
+        background-color: var(--policy-surface-subtle);
+        border: 1px solid var(--app-border);
+        border-radius: 999px;
+        font-size: 0.68rem;
+        line-height: 1.2;
+        padding: 0.22rem 0.5rem;
+      }
+      .score-component-mortgage { background-color: #0E5A8A; }
+      .score-component-rental { background-color: #1F9D8C; }
+      .score-component-deposit { background-color: #7B5AA6; }
       .bslib-sidebar-layout > .sidebar {
         background-color: var(--policy-surface-subtle) !important;
       }
@@ -458,6 +696,25 @@ ui <- page_navbar(
         }
         .policy-page-actions {
           margin-top: 0.75rem;
+        }
+        .affordability-score-panel {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 0.9rem;
+        }
+        .affordability-score-trend .plotly,
+        .affordability-score-trend .js-plotly-plot {
+          min-height: 210px;
+        }
+        .affordability-score-component-header {
+          display: block;
+        }
+        .affordability-score-component-label-wrap {
+          margin-bottom: 0.16rem;
+        }
+        .affordability-score-component-meta {
+          display: block;
+          margin-top: 0.12rem;
+          white-space: normal;
         }
         .value-box .value-box-value { font-size: 1.2rem; }
         .value-box .value-box-title { font-size: 0.75rem; }

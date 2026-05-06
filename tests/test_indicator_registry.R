@@ -78,7 +78,11 @@ if (file.exists(registry_path)) {
     "Price-to-Income Cost Pressure",
     "Modelled Mortgage Cost Pressure",
     "Rent Cost Pressure",
-    "Stylised Deposit Gap (Years)"
+    "Stylised Deposit Gap (Years)",
+    "National Housing Affordability Score",
+    "Mortgage Serviceability Component",
+    "Rental Entry Component",
+    "Deposit Barrier Component"
   )
   missing_labels <- setdiff(required_labels, registry$chart_label)
   check(length(missing_labels) == 0,
@@ -91,6 +95,43 @@ if (file.exists(registry_path)) {
   check(nrow(cost_pressure) > 0, "Registry has no cost_pressure indicators")
   check(all(cost_pressure$interpretation_direction == "higher_less_affordable"),
         "Cost-pressure indicators must use higher_less_affordable interpretation")
+
+  score_registry <- registry[
+    registry$indicator %in% c(
+      "National Housing Affordability Score",
+      "Mortgage Serviceability Component Score",
+      "Rental Entry Component Score",
+      "Deposit Barrier Component Score"
+    ),
+  ]
+  check(nrow(score_registry) == 4,
+        "Registry must contain headline and component score rows")
+  if (nrow(score_registry) == 4) {
+    check(all(score_registry$unit == "Score (0-100)"),
+          "Score registry rows must use Score (0-100) units")
+    check(all(score_registry$concept_group == "market_entry_composite"),
+          "Score registry rows must use market_entry_composite concept_group")
+    check(all(score_registry$interpretation_direction == "higher_more_affordable"),
+          "Score registry rows must use higher_more_affordable interpretation")
+    check(all(!score_registry$official_measure),
+          "Score registry rows must not be official ABS measures")
+    check(all(score_registry$stylised_scenario),
+          "Score registry rows must be marked as stylised scenarios")
+    score_formula_text <- paste(score_registry$formula, collapse = "\n")
+    required_score_formula_text <- c(
+      "40 per cent",
+      "35 per cent",
+      "25 per cent",
+      "Not an official ABS/NHHA statistic or lender assessment"
+    )
+    missing_score_formula_text <- required_score_formula_text[
+      !vapply(required_score_formula_text, grepl, logical(1),
+              score_formula_text, fixed = TRUE)
+    ]
+    check(length(missing_score_formula_text) == 0,
+          paste("Score registry formulas missing text:",
+                paste(missing_score_formula_text, collapse = "; ")))
+  }
 
   minimum_expectations <- c(
     "Real House Price Growth YoY" = 50L,

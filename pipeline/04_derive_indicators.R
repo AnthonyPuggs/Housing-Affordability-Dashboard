@@ -21,6 +21,9 @@ cat("--- Deriving affordability indicators ---\n")
 if (!exists("indicator_registry", mode = "function")) {
   source(project_path("R", "indicator_registry.R"))
 }
+if (!exists("calculate_national_affordability_score", mode = "function")) {
+  source(project_path("R", "national_affordability_score.R"))
+}
 
 # --- Load pipeline CSVs ------------------------------------------------------
 abs_file <- file.path(DATA_DIR, "abs_timeseries.csv")
@@ -316,7 +319,17 @@ if (nrow(mortgage_rate) > 0 && nrow(cpi_infl) > 0) {
 # ==============================================================================
 # Combine and write
 # ==============================================================================
-affordability_indices <- bind_rows(all_indicators) %>%
+base_affordability_indices <- bind_rows(all_indicators) %>%
+  arrange(indicator, date)
+
+national_score_indices <- calculate_national_affordability_score(
+  base_affordability_indices
+)
+
+affordability_indices <- bind_rows(
+  base_affordability_indices,
+  national_score_indices
+) %>%
   arrange(indicator, date)
 
 if (nrow(affordability_indices) > 0) {

@@ -72,7 +72,9 @@ if (identical(plot_result, TRUE)) {
     "serviceability_ts", "afford_change", "rent_cpi_combined",
     "rent_cpi_cities", "rppi_cities", "rba_cash_rate",
     "rba_mortgage_var", "rba_mortgage_fixed", "rba_mortgage_std",
-    "rba_investor_var", "rba_investor_fixed"
+    "rba_investor_var", "rba_investor_fixed",
+    "national_affordability_score_ts",
+    "national_affordability_score_components"
   )
 
   missing_globals <- expected_globals[
@@ -100,6 +102,19 @@ if (identical(plot_result, TRUE)) {
                      c("date", "serviceability_pct"),
                      "serviceability_ts")
   }
+  if (exists("national_affordability_score_ts", envir = plot_env)) {
+    expected_columns(get("national_affordability_score_ts", envir = plot_env),
+                     c("date", "score"),
+                     "national_affordability_score_ts")
+  }
+  if (exists("national_affordability_score_components", envir = plot_env)) {
+    expected_columns(
+      get("national_affordability_score_components", envir = plot_env),
+      c("date", "value", "indicator", "component", "component_label",
+        "weight", "display_order"),
+      "national_affordability_score_components"
+    )
+  }
 }
 
 plot_setup_text <- paste(readLines(file.path(repo_root, "plot_setup.R"),
@@ -110,6 +125,7 @@ required_sources <- c(
   'source(project_path("R", "data_loader.R")',
   'source(project_path("R", "dashboard_formatting.R")',
   'source(project_path("R", "dashboard_theme.R")',
+  'source(project_path("R", "national_affordability_score.R")',
   'source(project_path("R", "precomputed_series.R")'
 )
 

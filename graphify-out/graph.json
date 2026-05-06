@@ -351,9 +351,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_project_overview",
       "community": 1,
-      "norm_label": "household affordability dashboard project overview"
+      "norm_label": "household affordability dashboard project overview",
+      "id": "agents_project_overview"
     },
     {
       "label": "ABS SIH Housing Occupancy and Costs Resources",
@@ -364,9 +364,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_abs_sih_resources",
       "community": 1,
-      "norm_label": "abs sih housing occupancy and costs resources"
+      "norm_label": "abs sih housing occupancy and costs resources",
+      "id": "agents_abs_sih_resources"
     },
     {
       "label": "Housing Affordability Methodology Concepts",
@@ -377,9 +377,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_affordability_methodology",
       "community": 1,
-      "norm_label": "housing affordability methodology concepts"
+      "norm_label": "housing affordability methodology concepts",
+      "id": "agents_affordability_methodology"
     },
     {
       "label": "Normalised ABS Long Schema Rule",
@@ -390,9 +390,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_normalize_abs_schema_rule",
       "community": 1,
-      "norm_label": "normalised abs long schema rule"
+      "norm_label": "normalised abs long schema rule",
+      "id": "agents_normalize_abs_schema_rule"
     },
     {
       "label": "Legacy Claude Project Instructions",
@@ -403,9 +403,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "claude_project_instructions",
       "community": 1,
-      "norm_label": "legacy claude project instructions"
+      "norm_label": "legacy claude project instructions",
+      "id": "claude_project_instructions"
     },
     {
       "label": "Australian Housing Affordability Dashboard App",
@@ -416,9 +416,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_dashboard_app",
       "community": 1,
-      "norm_label": "australian housing affordability dashboard app"
+      "norm_label": "australian housing affordability dashboard app",
+      "id": "readme_dashboard_app"
     },
     {
       "label": "Saved Dashboard CSV Data Model",
@@ -429,9 +429,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_dashboard_data_model",
       "community": 1,
-      "norm_label": "saved dashboard csv data model"
+      "norm_label": "saved dashboard csv data model",
+      "id": "readme_dashboard_data_model"
     },
     {
       "label": "Pipeline Refresh and Output Gates",
@@ -442,9 +442,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_pipeline_refresh_contract",
       "community": 1,
-      "norm_label": "pipeline refresh and output gates"
+      "norm_label": "pipeline refresh and output gates",
+      "id": "readme_pipeline_refresh_contract"
     },
     {
       "label": "Methodology Metadata and Provenance",
@@ -455,9 +455,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_methodology_metadata",
       "community": 1,
-      "norm_label": "methodology metadata and provenance"
+      "norm_label": "methodology metadata and provenance",
+      "id": "readme_methodology_metadata"
     },
     {
       "label": "SIH Estimate Quality Metadata",
@@ -468,9 +468,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_sih_quality_metadata",
       "community": 1,
-      "norm_label": "sih estimate quality metadata"
+      "norm_label": "sih estimate quality metadata",
+      "id": "readme_sih_quality_metadata"
     },
     {
       "label": "Chart Builder Separation Workflow",
@@ -481,9 +481,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "chart_builder_workflow_chart_builder_separation",
       "community": 1,
-      "norm_label": "chart builder separation workflow"
+      "norm_label": "chart builder separation workflow",
+      "id": "chart_builder_workflow_chart_builder_separation"
     },
     {
       "label": "Shiny Application Shell",
@@ -494,9 +494,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "app_shiny_app_shell",
       "community": 1,
-      "norm_label": "shiny application shell"
+      "norm_label": "shiny application shell",
+      "id": "app_shiny_app_shell"
     },
     {
       "label": "Dashboard Page Module Orchestration",
@@ -507,9 +507,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "app_page_module_orchestration",
       "community": 1,
-      "norm_label": "dashboard page module orchestration"
+      "norm_label": "dashboard page module orchestration",
+      "id": "app_page_module_orchestration"
     },
     {
       "label": "Dashboard Dark and Light Theme System",
@@ -520,9 +520,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "app_dark_light_theme_system",
       "community": 1,
-      "norm_label": "dashboard dark and light theme system"
+      "norm_label": "dashboard dark and light theme system",
+      "id": "app_dark_light_theme_system"
     },
     {
       "label": "Plot Setup Compatibility Entrypoint",
@@ -533,9 +533,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "plot_setup_compatibility_entrypoint",
       "community": 1,
-      "norm_label": "plot setup compatibility entrypoint"
+      "norm_label": "plot setup compatibility entrypoint",
+      "id": "plot_setup_compatibility_entrypoint"
     },
     {
       "label": "Dashboard CSV Loader",
@@ -546,9 +546,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "data_loader_dashboard_csvs",
       "community": 1,
-      "norm_label": "dashboard csv loader"
+      "norm_label": "dashboard csv loader",
+      "id": "data_loader_dashboard_csvs"
     },
     {
       "label": "Dashboard KPI Formatting Helpers",
@@ -559,9 +559,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "dashboard_formatting_kpi_formatters",
       "community": 1,
-      "norm_label": "dashboard kpi formatting helpers"
+      "norm_label": "dashboard kpi formatting helpers",
+      "id": "dashboard_formatting_kpi_formatters"
     },
     {
       "label": "Shared ggplot and Plotly Theme Helpers",
@@ -572,9 +572,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "dashboard_theme_plot_theme",
       "community": 1,
-      "norm_label": "shared ggplot and plotly theme helpers"
+      "norm_label": "shared ggplot and plotly theme helpers",
+      "id": "dashboard_theme_plot_theme"
     },
     {
       "label": "Policy Source Notes and SIH Sampling Warning Helpers",
@@ -585,9 +585,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "app_ui_helpers_policy_notes",
       "community": 1,
-      "norm_label": "policy source notes and sih sampling warning helpers"
+      "norm_label": "policy source notes and sih sampling warning helpers",
+      "id": "app_ui_helpers_policy_notes"
     },
     {
       "label": "Page-Level ggplot Chart Builders",
@@ -598,9 +598,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "chart_builders_page_plots",
       "community": 1,
-      "norm_label": "page-level ggplot chart builders"
+      "norm_label": "page-level ggplot chart builders",
+      "id": "chart_builders_page_plots"
     },
     {
       "label": "Derived Affordability Indicator Registry",
@@ -611,9 +611,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "indicator_registry_derived_indicators",
       "community": 1,
-      "norm_label": "derived affordability indicator registry"
+      "norm_label": "derived affordability indicator registry",
+      "id": "indicator_registry_derived_indicators"
     },
     {
       "label": "Official versus Stylised Indicator Boundary",
@@ -624,9 +624,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "indicator_registry_official_stylised_boundary",
       "community": 1,
-      "norm_label": "official versus stylised indicator boundary"
+      "norm_label": "official versus stylised indicator boundary",
+      "id": "indicator_registry_official_stylised_boundary"
     },
     {
       "label": "Market Entry Scenario Calculator",
@@ -637,9 +637,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "market_entry_scenarios_calculator",
       "community": 1,
-      "norm_label": "market entry scenario calculator"
+      "norm_label": "market entry scenario calculator",
+      "id": "market_entry_scenarios_calculator"
     },
     {
       "label": "Market Entry Serviceability Series",
@@ -650,9 +650,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "market_entry_scenarios_serviceability_series",
       "community": 1,
-      "norm_label": "market entry serviceability series"
+      "norm_label": "market entry serviceability series",
+      "id": "market_entry_scenarios_serviceability_series"
     },
     {
       "label": "Affordability Page Module",
@@ -663,9 +663,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "affordability_module_page",
       "community": 1,
-      "norm_label": "affordability page module"
+      "norm_label": "affordability page module",
+      "id": "affordability_module_page"
     },
     {
       "label": "Affordability Market Entry Surface",
@@ -676,9 +676,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "affordability_module_market_entry_surface",
       "community": 1,
-      "norm_label": "affordability market entry surface"
+      "norm_label": "affordability market entry surface",
+      "id": "affordability_module_market_entry_surface"
     },
     {
       "label": "SIH Housing Stress and Cost Burden Surface",
@@ -689,9 +689,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "affordability_module_sih_burden_surface",
       "community": 1,
-      "norm_label": "sih housing stress and cost burden surface"
+      "norm_label": "sih housing stress and cost burden surface",
+      "id": "affordability_module_sih_burden_surface"
     },
     {
       "label": "Geographic Affordability Page Module",
@@ -702,9 +702,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "geographic_affordability_module_page",
       "community": 1,
-      "norm_label": "geographic affordability page module"
+      "norm_label": "geographic affordability page module",
+      "id": "geographic_affordability_module_page"
     },
     {
       "label": "Geography-Aligned SIH Affordability Comparisons",
@@ -715,9 +715,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "geographic_affordability_sih_alignment",
       "community": 1,
-      "norm_label": "geography-aligned sih affordability comparisons"
+      "norm_label": "geography-aligned sih affordability comparisons",
+      "id": "geographic_affordability_sih_alignment"
     },
     {
       "label": "Housing Supply Page Module",
@@ -728,9 +728,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_supply_module_page",
       "community": 1,
-      "norm_label": "housing supply page module"
+      "norm_label": "housing supply page module",
+      "id": "housing_supply_module_page"
     },
     {
       "label": "Building Approval Series Component Parser",
@@ -741,9 +741,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_supply_approval_parser",
       "community": 1,
-      "norm_label": "building approval series component parser"
+      "norm_label": "building approval series component parser",
+      "id": "housing_supply_approval_parser"
     },
     {
       "label": "Market Context Page Module",
@@ -754,9 +754,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "market_context_module_page",
       "community": 1,
-      "norm_label": "market context page module"
+      "norm_label": "market context page module",
+      "id": "market_context_module_page"
     },
     {
       "label": "Methodology and Provenance Page Module",
@@ -767,9 +767,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "methodology_module_page",
       "community": 1,
-      "norm_label": "methodology and provenance page module"
+      "norm_label": "methodology and provenance page module",
+      "id": "methodology_module_page"
     },
     {
       "label": "Legacy CPI Rent Series Diagnostic",
@@ -780,9 +780,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "check_cpi_legacy_diagnostic",
       "community": 1,
-      "norm_label": "legacy cpi rent series diagnostic"
+      "norm_label": "legacy cpi rent series diagnostic",
+      "id": "check_cpi_legacy_diagnostic"
     },
     {
       "label": "Static Plot Export Script",
@@ -793,9 +793,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "save_plots_static_export",
       "community": 1,
-      "norm_label": "static plot export script"
+      "norm_label": "static plot export script",
+      "id": "save_plots_static_export"
     },
     {
       "label": "Legacy Macro Dashboard",
@@ -806,9 +806,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "app_old_legacy_macro_dashboard",
       "community": 1,
-      "norm_label": "legacy macro dashboard"
+      "norm_label": "legacy macro dashboard",
+      "id": "app_old_legacy_macro_dashboard"
     },
     {
       "label": "Legacy ABS Normalisation Pattern",
@@ -819,9 +819,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "app_old_abs_normalisation_pattern",
       "community": 1,
-      "norm_label": "legacy abs normalisation pattern"
+      "norm_label": "legacy abs normalisation pattern",
+      "id": "app_old_abs_normalisation_pattern"
     },
     {
       "label": "Legacy Macro Data Fetch Function",
@@ -832,9 +832,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "app_old_macro_data_fetch",
       "community": 1,
-      "norm_label": "legacy macro data fetch function"
+      "norm_label": "legacy macro data fetch function",
+      "id": "app_old_macro_data_fetch"
     },
     {
       "label": "Legacy Transform and Plot Pipeline",
@@ -845,9 +845,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "app_old_transform_and_plot",
       "community": 1,
-      "norm_label": "legacy transform and plot pipeline"
+      "norm_label": "legacy transform and plot pipeline",
+      "id": "app_old_transform_and_plot"
     },
     {
       "label": "Empty Project Plan File",
@@ -858,9 +858,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "project_plan_empty",
       "community": 1,
-      "norm_label": "empty project plan file"
+      "norm_label": "empty project plan file",
+      "id": "project_plan_empty"
     },
     {
       "label": "Overview Page Module",
@@ -871,9 +871,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_module_overview_page",
       "community": 0,
-      "norm_label": "overview page module"
+      "norm_label": "overview page module",
+      "id": "overview_module_overview_page"
     },
     {
       "label": "Overview Cost Pressure Indicators",
@@ -884,9 +884,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_module_overview_cost_pressure_indicators",
       "community": 0,
-      "norm_label": "overview cost pressure indicators"
+      "norm_label": "overview cost pressure indicators",
+      "id": "overview_module_overview_cost_pressure_indicators"
     },
     {
       "label": "Pipeline Stage Contracts",
@@ -897,9 +897,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_contracts_stage_contracts",
       "community": 0,
-      "norm_label": "pipeline stage contracts"
+      "norm_label": "pipeline stage contracts",
+      "id": "pipeline_contracts_stage_contracts"
     },
     {
       "label": "External Sources Manifest",
@@ -910,9 +910,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_contracts_external_sources_manifest",
       "community": 0,
-      "norm_label": "external sources manifest"
+      "norm_label": "external sources manifest",
+      "id": "pipeline_contracts_external_sources_manifest"
     },
     {
       "label": "Pipeline Stage Schema",
@@ -923,9 +923,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_contracts_stage_schema",
       "community": 0,
-      "norm_label": "pipeline stage schema"
+      "norm_label": "pipeline stage schema",
+      "id": "pipeline_contracts_stage_schema"
     },
     {
       "label": "Validate Pipeline Stage Outputs",
@@ -936,9 +936,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_contracts_validate_stage_outputs",
       "community": 0,
-      "norm_label": "validate pipeline stage outputs"
+      "norm_label": "validate pipeline stage outputs",
+      "id": "pipeline_contracts_validate_stage_outputs"
     },
     {
       "label": "Dashboard ggplotly Wrapper",
@@ -949,9 +949,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "plotly_helpers_dashboard_ggplotly",
       "community": 0,
-      "norm_label": "dashboard ggplotly wrapper"
+      "norm_label": "dashboard ggplotly wrapper",
+      "id": "plotly_helpers_dashboard_ggplotly"
     },
     {
       "label": "Precomputed Dashboard Series",
@@ -962,9 +962,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "precomputed_series_dashboard_series",
       "community": 0,
-      "norm_label": "precomputed dashboard series"
+      "norm_label": "precomputed dashboard series",
+      "id": "precomputed_series_dashboard_series"
     },
     {
       "label": "Stylised Mortgage Serviceability Time Series",
@@ -975,9 +975,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "precomputed_series_serviceability_ts",
       "community": 0,
-      "norm_label": "stylised mortgage serviceability time series"
+      "norm_label": "stylised mortgage serviceability time series",
+      "id": "precomputed_series_serviceability_ts"
     },
     {
       "label": "Rent CPI Combined Series",
@@ -988,9 +988,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "precomputed_series_rent_cpi_combined",
       "community": 0,
-      "norm_label": "rent cpi combined series"
+      "norm_label": "rent cpi combined series",
+      "id": "precomputed_series_rent_cpi_combined"
     },
     {
       "label": "Price Trends Page Module",
@@ -1001,9 +1001,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_trends_module_price_trends_page",
       "community": 0,
-      "norm_label": "price trends page module"
+      "norm_label": "price trends page module",
+      "id": "price_trends_module_price_trends_page"
     },
     {
       "label": "Project Root Resolution",
@@ -1014,9 +1014,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "project_paths_project_root_resolution",
       "community": 0,
-      "norm_label": "project root resolution"
+      "norm_label": "project root resolution",
+      "id": "project_paths_project_root_resolution"
     },
     {
       "label": "Methodology Provenance Report",
@@ -1027,9 +1027,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "provenance_report_methodology_provenance_report",
       "community": 0,
-      "norm_label": "methodology provenance report"
+      "norm_label": "methodology provenance report",
+      "id": "provenance_report_methodology_provenance_report"
     },
     {
       "label": "Dashboard Data Inventory",
@@ -1040,9 +1040,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "provenance_report_data_inventory",
       "community": 0,
-      "norm_label": "dashboard data inventory"
+      "norm_label": "dashboard data inventory",
+      "id": "provenance_report_data_inventory"
     },
     {
       "label": "Public Release Readiness Checklist",
@@ -1053,9 +1053,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "release_checklist_public_release_readiness",
       "community": 0,
-      "norm_label": "public release readiness checklist"
+      "norm_label": "public release readiness checklist",
+      "id": "release_checklist_public_release_readiness"
     },
     {
       "label": "Rental Market Page Module",
@@ -1066,9 +1066,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_market_module_rental_market_page",
       "community": 0,
-      "norm_label": "rental market page module"
+      "norm_label": "rental market page module",
+      "id": "rental_market_module_rental_market_page"
     },
     {
       "label": "NHHA Rental Stress Views",
@@ -1079,9 +1079,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_market_module_nhha_rental_stress",
       "community": 0,
-      "norm_label": "nhha rental stress views"
+      "norm_label": "nhha rental stress views",
+      "id": "rental_market_module_nhha_rental_stress"
     },
     {
       "label": "SIH Workbook Benchmarks",
@@ -1092,9 +1092,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "sih_benchmarks_workbook_benchmarks",
       "community": 0,
-      "norm_label": "sih workbook benchmarks"
+      "norm_label": "sih workbook benchmarks",
+      "id": "sih_benchmarks_workbook_benchmarks"
     },
     {
       "label": "Validate SIH Workbook Benchmarks",
@@ -1105,9 +1105,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "sih_benchmarks_validate_workbook_benchmarks",
       "community": 0,
-      "norm_label": "validate sih workbook benchmarks"
+      "norm_label": "validate sih workbook benchmarks",
+      "id": "sih_benchmarks_validate_workbook_benchmarks"
     },
     {
       "label": "Join SIH Quality Metadata",
@@ -1118,9 +1118,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "sih_quality_helpers_join_sih_quality",
       "community": 0,
-      "norm_label": "join sih quality metadata"
+      "norm_label": "join sih quality metadata",
+      "id": "sih_quality_helpers_join_sih_quality"
     },
     {
       "label": "SIH Reliability Annotation",
@@ -1131,9 +1131,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "sih_quality_helpers_reliability_annotation",
       "community": 0,
-      "norm_label": "sih reliability annotation"
+      "norm_label": "sih reliability annotation",
+      "id": "sih_quality_helpers_reliability_annotation"
     },
     {
       "label": "Public Policy UI Components",
@@ -1144,9 +1144,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ui_style_system_policy_components",
       "community": 0,
-      "norm_label": "public policy ui components"
+      "norm_label": "public policy ui components",
+      "id": "ui_style_system_policy_components"
     },
     {
       "label": "Economic Colour Semantics",
@@ -1157,9 +1157,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "visual_semantics_economic_colour_semantics",
       "community": 0,
-      "norm_label": "economic colour semantics"
+      "norm_label": "economic colour semantics",
+      "id": "visual_semantics_economic_colour_semantics"
     },
     {
       "label": "Live UI Smoke Pass",
@@ -1170,9 +1170,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ui_smoke_checklist_live_ui_smoke_pass",
       "community": 0,
-      "norm_label": "live ui smoke pass"
+      "norm_label": "live ui smoke pass",
+      "id": "ui_smoke_checklist_live_ui_smoke_pass"
     },
     {
       "label": "Shared Pipeline Configuration",
@@ -1183,9 +1183,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_00_config_shared_pipeline_config",
       "community": 0,
-      "norm_label": "shared pipeline configuration"
+      "norm_label": "shared pipeline configuration",
+      "id": "pipeline_00_config_shared_pipeline_config"
     },
     {
       "label": "ABS Normalisation Schema",
@@ -1196,9 +1196,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_00_config_abs_normalisation_schema",
       "community": 0,
-      "norm_label": "abs normalisation schema"
+      "norm_label": "abs normalisation schema",
+      "id": "pipeline_00_config_abs_normalisation_schema"
     },
     {
       "label": "RBA Table Fetcher",
@@ -1209,9 +1209,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_00_config_rba_table_fetcher",
       "community": 0,
-      "norm_label": "rba table fetcher"
+      "norm_label": "rba table fetcher",
+      "id": "pipeline_00_config_rba_table_fetcher"
     },
     {
       "label": "Write Pipeline CSV Helper",
@@ -1222,9 +1222,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_00_config_write_pipeline_csv",
       "community": 0,
-      "norm_label": "write pipeline csv helper"
+      "norm_label": "write pipeline csv helper",
+      "id": "pipeline_00_config_write_pipeline_csv"
     },
     {
       "label": "SIH Workbook Parser",
@@ -1235,9 +1235,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_01_process_sih_sih_workbook_parser",
       "community": 0,
-      "norm_label": "sih workbook parser"
+      "norm_label": "sih workbook parser",
+      "id": "pipeline_01_process_sih_sih_workbook_parser"
     },
     {
       "label": "SIH Estimate Quality Metadata",
@@ -1248,9 +1248,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_01_process_sih_sih_estimate_quality_metadata",
       "community": 0,
-      "norm_label": "sih estimate quality metadata"
+      "norm_label": "sih estimate quality metadata",
+      "id": "pipeline_01_process_sih_sih_estimate_quality_metadata"
     },
     {
       "label": "ABS Live Time Series Fetch",
@@ -1261,9 +1261,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_02_fetch_abs_timeseries_abs_live_time_series_fetch",
       "community": 0,
-      "norm_label": "abs live time series fetch"
+      "norm_label": "abs live time series fetch",
+      "id": "pipeline_02_fetch_abs_timeseries_abs_live_time_series_fetch"
     },
     {
       "label": "CPI Rents City Quarterly Series",
@@ -1274,9 +1274,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_02_fetch_abs_timeseries_cpi_rents_city_quarterly",
       "community": 0,
-      "norm_label": "cpi rents city quarterly series"
+      "norm_label": "cpi rents city quarterly series",
+      "id": "pipeline_02_fetch_abs_timeseries_cpi_rents_city_quarterly"
     },
     {
       "label": "ABS Supply and Demand Fetch",
@@ -1287,9 +1287,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_02b_fetch_abs_supply_supply_demand_fetch",
       "community": 0,
-      "norm_label": "abs supply and demand fetch"
+      "norm_label": "abs supply and demand fetch",
+      "id": "pipeline_02b_fetch_abs_supply_supply_demand_fetch"
     },
     {
       "label": "RBA Rates Fetch",
@@ -1300,9 +1300,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_03_fetch_rba_rba_rates_fetch",
       "community": 0,
-      "norm_label": "rba rates fetch"
+      "norm_label": "rba rates fetch",
+      "id": "pipeline_03_fetch_rba_rba_rates_fetch"
     },
     {
       "label": "RBA Statistical Table Parser",
@@ -1313,9 +1313,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_03_fetch_rba_rba_file_parser",
       "community": 0,
-      "norm_label": "rba statistical table parser"
+      "norm_label": "rba statistical table parser",
+      "id": "pipeline_03_fetch_rba_rba_file_parser"
     },
     {
       "label": "Affordability Indicator Derivation",
@@ -1326,9 +1326,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_04_derive_indicators_affordability_indicator_derivation",
       "community": 0,
-      "norm_label": "affordability indicator derivation"
+      "norm_label": "affordability indicator derivation",
+      "id": "pipeline_04_derive_indicators_affordability_indicator_derivation"
     },
     {
       "label": "Price-to-Income Ratio Indicator",
@@ -1339,9 +1339,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_04_derive_indicators_price_to_income_ratio",
       "community": 0,
-      "norm_label": "price-to-income ratio indicator"
+      "norm_label": "price-to-income ratio indicator",
+      "id": "pipeline_04_derive_indicators_price_to_income_ratio"
     },
     {
       "label": "Mortgage Serviceability Index",
@@ -1352,9 +1352,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_04_derive_indicators_mortgage_serviceability_index",
       "community": 0,
-      "norm_label": "mortgage serviceability index"
+      "norm_label": "mortgage serviceability index",
+      "id": "pipeline_04_derive_indicators_mortgage_serviceability_index"
     },
     {
       "label": "Rental Affordability Index",
@@ -1365,9 +1365,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_04_derive_indicators_rental_affordability_index",
       "community": 0,
-      "norm_label": "rental affordability index"
+      "norm_label": "rental affordability index",
+      "id": "pipeline_04_derive_indicators_rental_affordability_index"
     },
     {
       "label": "Master Data Pipeline Driver",
@@ -1378,9 +1378,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_05_driver_master_pipeline",
       "community": 0,
-      "norm_label": "master data pipeline driver"
+      "norm_label": "master data pipeline driver",
+      "id": "pipeline_05_driver_master_pipeline"
     },
     {
       "label": "Fail-fast Pipeline Output Validation",
@@ -1391,9 +1391,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pipeline_06_validate_outputs_fail_fast_validation",
       "community": 0,
-      "norm_label": "fail-fast pipeline output validation"
+      "norm_label": "fail-fast pipeline output validation",
+      "id": "pipeline_06_validate_outputs_fail_fast_validation"
     },
     {
       "label": "Housing Affordability Dashboard Full Review",
@@ -1404,9 +1404,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_dashboard_review",
       "community": 14,
-      "norm_label": "housing affordability dashboard full review"
+      "norm_label": "housing affordability dashboard full review",
+      "id": "housing_dashboard_full_review_dashboard_review"
     },
     {
       "label": "RPPI Selector Contamination",
@@ -1417,9 +1417,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_rppi_selector_contamination",
       "community": 14,
-      "norm_label": "rppi selector contamination"
+      "norm_label": "rppi selector contamination",
+      "id": "housing_dashboard_full_review_rppi_selector_contamination"
     },
     {
       "label": "Housing Supply Output ID Mismatch",
@@ -1430,9 +1430,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_housing_supply_output_mismatch",
       "community": 14,
-      "norm_label": "housing supply output id mismatch"
+      "norm_label": "housing supply output id mismatch",
+      "id": "housing_dashboard_full_review_housing_supply_output_mismatch"
     },
     {
       "label": "Insufficient Real Indicator History",
@@ -1443,9 +1443,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_insufficient_real_indicator_history",
       "community": 14,
-      "norm_label": "insufficient real indicator history"
+      "norm_label": "insufficient real indicator history",
+      "id": "housing_dashboard_full_review_insufficient_real_indicator_history"
     },
     {
       "label": "NHHA Duplicate Metric Parsing",
@@ -1456,9 +1456,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_nhha_duplicate_metric_parsing",
       "community": 14,
-      "norm_label": "nhha duplicate metric parsing"
+      "norm_label": "nhha duplicate metric parsing",
+      "id": "housing_dashboard_full_review_nhha_duplicate_metric_parsing"
     },
     {
       "label": "KPI Change Label Misclassification",
@@ -1469,9 +1469,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_latest_change_misclassification",
       "community": 14,
-      "norm_label": "kpi change label misclassification"
+      "norm_label": "kpi change label misclassification",
+      "id": "housing_dashboard_full_review_latest_change_misclassification"
     },
     {
       "label": "Mortgage Serviceability and Deposit Assumptions",
@@ -1482,9 +1482,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_serviceability_deposit_assumptions",
       "community": 14,
-      "norm_label": "mortgage serviceability and deposit assumptions"
+      "norm_label": "mortgage serviceability and deposit assumptions",
+      "id": "housing_dashboard_full_review_serviceability_deposit_assumptions"
     },
     {
       "label": "Pipeline Failures Too Easy To Miss",
@@ -1495,9 +1495,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_pipeline_fail_silent",
       "community": 14,
-      "norm_label": "pipeline failures too easy to miss"
+      "norm_label": "pipeline failures too easy to miss",
+      "id": "housing_dashboard_full_review_pipeline_fail_silent"
     },
     {
       "label": "Strict Indicator Registry",
@@ -1508,9 +1508,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_indicator_registry",
       "community": 14,
-      "norm_label": "strict indicator registry"
+      "norm_label": "strict indicator registry",
+      "id": "housing_dashboard_full_review_indicator_registry"
     },
     {
       "label": "Official SIH and NHHA Measures",
@@ -1521,9 +1521,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_official_sih_nhha_measures",
       "community": 14,
-      "norm_label": "official sih and nhha measures"
+      "norm_label": "official sih and nhha measures",
+      "id": "housing_dashboard_full_review_official_sih_nhha_measures"
     },
     {
       "label": "Market Entry Scenario Measures",
@@ -1534,9 +1534,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_market_entry_scenarios",
       "community": 14,
-      "norm_label": "market entry scenario measures"
+      "norm_label": "market entry scenario measures",
+      "id": "housing_dashboard_full_review_market_entry_scenarios"
     },
     {
       "label": "Public Release Hygiene",
@@ -1547,9 +1547,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "housing_dashboard_full_review_public_release_hygiene",
       "community": 14,
-      "norm_label": "public release hygiene"
+      "norm_label": "public release hygiene",
+      "id": "housing_dashboard_full_review_public_release_hygiene"
     },
     {
       "label": "renv Autoloader",
@@ -1560,9 +1560,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "activate_renv_autoloader",
       "community": 2,
-      "norm_label": "renv autoloader"
+      "norm_label": "renv autoloader",
+      "id": "activate_renv_autoloader"
     },
     {
       "label": "renv Bootstrap",
@@ -1573,9 +1573,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "activate_bootstrap",
       "community": 2,
-      "norm_label": "renv bootstrap"
+      "norm_label": "renv bootstrap",
+      "id": "activate_bootstrap"
     },
     {
       "label": "Project Library Loading",
@@ -1586,9 +1586,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "activate_project_library",
       "community": 2,
-      "norm_label": "project library loading"
+      "norm_label": "project library loading",
+      "id": "activate_project_library"
     },
     {
       "label": "Bootstrap Download Sources",
@@ -1599,9 +1599,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "activate_download_sources",
       "community": 2,
-      "norm_label": "bootstrap download sources"
+      "norm_label": "bootstrap download sources",
+      "id": "activate_download_sources"
     },
     {
       "label": "Profile-Specific renv Paths",
@@ -1612,9 +1612,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "activate_profile_paths",
       "community": 2,
-      "norm_label": "profile-specific renv paths"
+      "norm_label": "profile-specific renv paths",
+      "id": "activate_profile_paths"
     },
     {
       "label": "ANSI Help and Run Links",
@@ -1625,9 +1625,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "activate_ansify_links",
       "community": 2,
-      "norm_label": "ansi help and run links"
+      "norm_label": "ansi help and run links",
+      "id": "activate_ansify_links"
     },
     {
       "label": "Autoloader Enabled Configuration",
@@ -1638,9 +1638,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "config_autoloader_enabled",
       "community": 2,
-      "norm_label": "autoloader enabled configuration"
+      "norm_label": "autoloader enabled configuration",
+      "id": "config_autoloader_enabled"
     },
     {
       "label": "Global Package Cache Configuration",
@@ -1651,9 +1651,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "config_cache_enabled",
       "community": 26,
-      "norm_label": "global package cache configuration"
+      "norm_label": "global package cache configuration",
+      "id": "config_cache_enabled"
     },
     {
       "label": "Transactional Install Configuration",
@@ -1664,9 +1664,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "config_install_transactional",
       "community": 29,
-      "norm_label": "transactional install configuration"
+      "norm_label": "transactional install configuration",
+      "id": "config_install_transactional"
     },
     {
       "label": "Install Jobs Configuration",
@@ -1677,9 +1677,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "config_install_jobs",
       "community": 31,
-      "norm_label": "install jobs configuration"
+      "norm_label": "install jobs configuration",
+      "id": "config_install_jobs"
     },
     {
       "label": "Dependency Error Handling Configuration",
@@ -1690,9 +1690,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "config_dependency_errors",
       "community": 37,
-      "norm_label": "dependency error handling configuration"
+      "norm_label": "dependency error handling configuration",
+      "id": "config_dependency_errors"
     },
     {
       "label": "crandb Lookup Configuration",
@@ -1703,9 +1703,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "config_crandb_enabled",
       "community": 27,
-      "norm_label": "crandb lookup configuration"
+      "norm_label": "crandb lookup configuration",
+      "id": "config_crandb_enabled"
     },
     {
       "label": "External Libraries Configuration",
@@ -1716,9 +1716,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "config_external_libraries",
       "community": 30,
-      "norm_label": "external libraries configuration"
+      "norm_label": "external libraries configuration",
+      "id": "config_external_libraries"
     },
     {
       "label": "Parallel Install and Restore",
@@ -1729,9 +1729,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "news_parallel_install_restore",
       "community": 31,
-      "norm_label": "parallel install and restore"
+      "norm_label": "parallel install and restore",
+      "id": "news_parallel_install_restore"
     },
     {
       "label": "renv Plan Lockfile Resolution",
@@ -1742,9 +1742,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "news_plan_lockfile",
       "community": 32,
-      "norm_label": "renv plan lockfile resolution"
+      "norm_label": "renv plan lockfile resolution",
+      "id": "news_plan_lockfile"
     },
     {
       "label": "Repository-Aware Restore Strictness",
@@ -1755,9 +1755,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "news_repository_strict_restore",
       "community": 27,
-      "norm_label": "repository-aware restore strictness"
+      "norm_label": "repository-aware restore strictness",
+      "id": "news_repository_strict_restore"
     },
     {
       "label": "Credential Stripping in Lockfiles",
@@ -1768,9 +1768,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "news_credential_stripping",
       "community": 34,
-      "norm_label": "credential stripping in lockfiles"
+      "norm_label": "credential stripping in lockfiles",
+      "id": "news_credential_stripping"
     },
     {
       "label": "Cache-Only renv Use",
@@ -1781,9 +1781,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "news_cache_only_use",
       "community": 38,
-      "norm_label": "cache-only renv use"
+      "norm_label": "cache-only renv use",
+      "id": "news_cache_only_use"
     },
     {
       "label": "renv Vulnerability Querying",
@@ -1794,9 +1794,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "news_vulns",
       "community": 33,
-      "norm_label": "renv vulnerability querying"
+      "norm_label": "renv vulnerability querying",
+      "id": "news_vulns"
     },
     {
       "label": "renv Command-Line Executor",
@@ -1807,9 +1807,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "bin_renv_cli_exec",
       "community": 2,
-      "norm_label": "renv command-line executor"
+      "norm_label": "renv command-line executor",
+      "id": "bin_renv_cli_exec"
     },
     {
       "label": "CI Vignette knitr Options",
@@ -1820,9 +1820,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ci_vignette_knitr_options",
       "community": 39,
-      "norm_label": "ci vignette knitr options"
+      "norm_label": "ci vignette knitr options",
+      "id": "ci_vignette_knitr_options"
     },
     {
       "label": "Continuous Integration Restore Workflow",
@@ -1833,9 +1833,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ci_continuous_integration_restore",
       "community": 15,
-      "norm_label": "continuous integration restore workflow"
+      "norm_label": "continuous integration restore workflow",
+      "id": "ci_continuous_integration_restore"
     },
     {
       "label": "GitHub Actions renv Cache",
@@ -1846,9 +1846,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ci_github_actions_cache",
       "community": 15,
-      "norm_label": "github actions renv cache"
+      "norm_label": "github actions renv cache",
+      "id": "ci_github_actions_cache"
     },
     {
       "label": "Lockfile Generation in CI",
@@ -1859,9 +1859,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ci_plan_lockfile_in_ci",
       "community": 32,
-      "norm_label": "lockfile generation in ci"
+      "norm_label": "lockfile generation in ci",
+      "id": "ci_plan_lockfile_in_ci"
     },
     {
       "label": "Package Retrieval in CI",
@@ -1872,9 +1872,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ci_retrieve_packages",
       "community": 26,
-      "norm_label": "package retrieval in ci"
+      "norm_label": "package retrieval in ci",
+      "id": "ci_retrieve_packages"
     },
     {
       "label": "Containerised renv Project",
@@ -1885,9 +1885,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_containerised_renv_project",
       "community": 15,
-      "norm_label": "containerised renv project"
+      "norm_label": "containerised renv project",
+      "id": "docker_containerised_renv_project"
     },
     {
       "label": "Docker Layer Cache for renv Restore",
@@ -1898,9 +1898,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_layer_cache",
       "community": 15,
-      "norm_label": "docker layer cache for renv restore"
+      "norm_label": "docker layer cache for renv restore",
+      "id": "docker_layer_cache"
     },
     {
       "label": "BuildKit Cache Mount for renv",
@@ -1911,9 +1911,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_buildkit_cache_mount",
       "community": 15,
-      "norm_label": "buildkit cache mount for renv"
+      "norm_label": "buildkit cache mount for renv",
+      "id": "docker_buildkit_cache_mount"
     },
     {
       "label": "Docker System Dependencies",
@@ -1924,9 +1924,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_system_dependencies",
       "community": 15,
-      "norm_label": "docker system dependencies"
+      "norm_label": "docker system dependencies",
+      "id": "docker_system_dependencies"
     },
     {
       "label": "Docker Multi-Stage Builds",
@@ -1937,9 +1937,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_multistage_builds",
       "community": 15,
-      "norm_label": "docker multi-stage builds"
+      "norm_label": "docker multi-stage builds",
+      "id": "docker_multistage_builds"
     },
     {
       "label": "Snapshot and Lockfile Update FAQ",
@@ -1950,9 +1950,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "faq_snapshot_lockfile",
       "community": 15,
-      "norm_label": "snapshot and lockfile update faq"
+      "norm_label": "snapshot and lockfile update faq",
+      "id": "faq_snapshot_lockfile"
     },
     {
       "label": "Development Dependencies FAQ",
@@ -1963,9 +1963,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "faq_development_dependencies",
       "community": 40,
-      "norm_label": "development dependencies faq"
+      "norm_label": "development dependencies faq",
+      "id": "faq_development_dependencies"
     },
     {
       "label": "Known Vulnerability Check FAQ",
@@ -1976,9 +1976,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "faq_vulnerability_check",
       "community": 33,
-      "norm_label": "known vulnerability check faq"
+      "norm_label": "known vulnerability check faq",
+      "id": "faq_vulnerability_check"
     },
     {
       "label": "Package Download Failures FAQ",
@@ -1989,9 +1989,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "faq_package_download_failures",
       "community": 35,
-      "norm_label": "package download failures faq"
+      "norm_label": "package download failures faq",
+      "id": "faq_package_download_failures"
     },
     {
       "label": "renv Vignette Index",
@@ -2002,9 +2002,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "index_renv_vignette_index",
       "community": 15,
-      "norm_label": "renv vignette index"
+      "norm_label": "renv vignette index",
+      "id": "index_renv_vignette_index"
     },
     {
       "label": "Rebuild and Restore Package Installation",
@@ -2015,9 +2015,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_install_rebuild_restore",
       "community": 29,
-      "norm_label": "rebuild and restore package installation"
+      "norm_label": "rebuild and restore package installation",
+      "id": "package_install_rebuild_restore"
     },
     {
       "label": "Package Configure Arguments",
@@ -2028,9 +2028,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_install_configure_args",
       "community": 41,
-      "norm_label": "package configure arguments"
+      "norm_label": "package configure arguments",
+      "id": "package_install_configure_args"
     },
     {
       "label": "Package Installation Authentication",
@@ -2041,9 +2041,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_install_authentication",
       "community": 34,
-      "norm_label": "package installation authentication"
+      "norm_label": "package installation authentication",
+      "id": "package_install_authentication"
     },
     {
       "label": "Package Download Overrides",
@@ -2054,9 +2054,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_install_download_overrides",
       "community": 35,
-      "norm_label": "package download overrides"
+      "norm_label": "package download overrides",
+      "id": "package_install_download_overrides"
     },
     {
       "label": "Package Source Inference",
@@ -2067,9 +2067,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_sources_inference",
       "community": 15,
-      "norm_label": "package source inference"
+      "norm_label": "package source inference",
+      "id": "package_sources_inference"
     },
     {
       "label": "Unknown Package Sources",
@@ -2080,9 +2080,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_sources_unknown_sources",
       "community": 15,
-      "norm_label": "unknown package sources"
+      "norm_label": "unknown package sources",
+      "id": "package_sources_unknown_sources"
     },
     {
       "label": "Custom R Package Repositories",
@@ -2093,9 +2093,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_sources_custom_repositories",
       "community": 27,
-      "norm_label": "custom r package repositories"
+      "norm_label": "custom r package repositories",
+      "id": "package_sources_custom_repositories"
     },
     {
       "label": "Bioconductor Package Sources",
@@ -2106,9 +2106,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_sources_bioconductor",
       "community": 30,
-      "norm_label": "bioconductor package sources"
+      "norm_label": "bioconductor package sources",
+      "id": "package_sources_bioconductor"
     },
     {
       "label": "renv Package Cellar",
@@ -2119,9 +2119,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_sources_cellar",
       "community": 15,
-      "norm_label": "renv package cellar"
+      "norm_label": "renv package cellar",
+      "id": "package_sources_cellar"
     },
     {
       "label": "ABI Compatibility",
@@ -2132,9 +2132,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_sources_abi_compatibility",
       "community": 36,
-      "norm_label": "abi compatibility"
+      "norm_label": "abi compatibility",
+      "id": "package_sources_abi_compatibility"
     },
     {
       "label": "Build-Time Dependencies",
@@ -2145,9 +2145,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "package_sources_build_time_dependencies",
       "community": 36,
-      "norm_label": "build-time dependencies"
+      "norm_label": "build-time dependencies",
+      "id": "package_sources_build_time_dependencies"
     },
     {
       "label": "Package Development with renv",
@@ -2158,9 +2158,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "packages_package_development",
       "community": 28,
-      "norm_label": "package development with renv"
+      "norm_label": "package development with renv",
+      "id": "packages_package_development"
     },
     {
       "label": "Project Library Isolation",
@@ -2171,9 +2171,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "packages_project_library_isolation",
       "community": 28,
-      "norm_label": "project library isolation"
+      "norm_label": "project library isolation",
+      "id": "packages_project_library_isolation"
     },
     {
       "label": "CRAN Submission Without renv Infrastructure",
@@ -2184,9 +2184,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "packages_cran_submission",
       "community": 28,
-      "norm_label": "cran submission without renv infrastructure"
+      "norm_label": "cran submission without renv infrastructure",
+      "id": "packages_cran_submission"
     },
     {
       "label": "Packrat to renv Migration",
@@ -2197,9 +2197,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "packrat_migration",
       "community": 26,
-      "norm_label": "packrat to renv migration"
+      "norm_label": "packrat to renv migration",
+      "id": "packrat_migration"
     },
     {
       "label": "JSON Lockfile Compared With Packrat",
@@ -2210,9 +2210,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "packrat_json_lockfile",
       "community": 26,
-      "norm_label": "json lockfile compared with packrat"
+      "norm_label": "json lockfile compared with packrat",
+      "id": "packrat_json_lockfile"
     },
     {
       "label": "Global Package Cache Compared With Packrat",
@@ -2223,9 +2223,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "packrat_global_cache",
       "community": 26,
-      "norm_label": "global package cache compared with packrat"
+      "norm_label": "global package cache compared with packrat",
+      "id": "packrat_global_cache"
     },
     {
       "label": "renv Project Profiles",
@@ -2236,9 +2236,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "profiles_project_profiles",
       "community": 2,
-      "norm_label": "renv project profiles"
+      "norm_label": "renv project profiles",
+      "id": "profiles_project_profiles"
     },
     {
       "label": "Profile-Specific Dependencies",
@@ -2249,9 +2249,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "profiles_profile_specific_dependencies",
       "community": 2,
-      "norm_label": "profile-specific dependencies"
+      "norm_label": "profile-specific dependencies",
+      "id": "profiles_profile_specific_dependencies"
     },
     {
       "label": "Profile-Specific Ignore Rules",
@@ -2262,9 +2262,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "profiles_profile_ignore_rules",
       "community": 2,
-      "norm_label": "profile-specific ignore rules"
+      "norm_label": "profile-specific ignore rules",
+      "id": "profiles_profile_ignore_rules"
     },
     {
       "label": "Reproducible R Project Environments",
@@ -2275,9 +2275,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_reproducible_r_project_environments",
       "community": 2,
-      "norm_label": "reproducible r project environments"
+      "norm_label": "reproducible r project environments",
+      "id": "renv_reproducible_r_project_environments"
     },
     {
       "label": "renv Project Library",
@@ -2288,9 +2288,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_project_library",
       "community": 2,
-      "norm_label": "renv project library"
+      "norm_label": "renv project library",
+      "id": "renv_project_library"
     },
     {
       "label": "renv.lock Lockfile",
@@ -2301,9 +2301,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_lockfile",
       "community": 2,
-      "norm_label": "renv.lock lockfile"
+      "norm_label": "renv.lock lockfile",
+      "id": "renv_lockfile"
     },
     {
       "label": "renv snapshot and restore Workflow",
@@ -2314,9 +2314,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_snapshot_restore",
       "community": 2,
-      "norm_label": "renv snapshot and restore workflow"
+      "norm_label": "renv snapshot and restore workflow",
+      "id": "renv_snapshot_restore"
     },
     {
       "label": "renv Python Integration",
@@ -2327,9 +2327,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "python_renv_python_integration",
       "community": 2,
-      "norm_label": "renv python integration"
+      "norm_label": "renv python integration",
+      "id": "python_renv_python_integration"
     },
     {
       "label": "reticulate Python Virtual Environment",
@@ -2340,9 +2340,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "python_reticulate_virtual_environment",
       "community": 2,
-      "norm_label": "reticulate python virtual environment"
+      "norm_label": "reticulate python virtual environment",
+      "id": "python_reticulate_virtual_environment"
     },
     {
       "label": "requirements.txt Python Dependency Record",
@@ -2353,9 +2353,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "python_requirements_txt",
       "community": 2,
-      "norm_label": "requirements.txt python dependency record"
+      "norm_label": "requirements.txt python dependency record",
+      "id": "python_requirements_txt"
     },
     {
       "label": "Conda environment.yml Dependency Record",
@@ -2366,9 +2366,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "python_conda_environment_yml",
       "community": 2,
-      "norm_label": "conda environment.yml dependency record"
+      "norm_label": "conda environment.yml dependency record",
+      "id": "python_conda_environment_yml"
     },
     {
       "label": "Posit Connect Deployment",
@@ -2379,9 +2379,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rsconnect_posit_connect_deployment",
       "community": 2,
-      "norm_label": "posit connect deployment"
+      "norm_label": "posit connect deployment",
+      "id": "rsconnect_posit_connect_deployment"
     },
     {
       "label": "rsconnect Manifest File",
@@ -2392,9 +2392,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rsconnect_manifest_file",
       "community": 2,
-      "norm_label": "rsconnect manifest file"
+      "norm_label": "rsconnect manifest file",
+      "id": "rsconnect_manifest_file"
     },
     {
       "label": "Bootstrap renv",
@@ -2405,9 +2405,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "activate_bootstrap_renv",
       "community": 2,
-      "norm_label": "bootstrap renv"
+      "norm_label": "bootstrap renv",
+      "id": "activate_bootstrap_renv"
     },
     {
       "label": "renv Bootstrap Repositories",
@@ -2418,9 +2418,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "activate_renv_bootstrap_repos",
       "community": 2,
-      "norm_label": "renv bootstrap repositories"
+      "norm_label": "renv bootstrap repositories",
+      "id": "activate_renv_bootstrap_repos"
     },
     {
       "label": "renv Dependency Recursion C Routine",
@@ -2431,9 +2431,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_c_dependency_recursion",
       "community": 2,
-      "norm_label": "renv dependency recursion c routine"
+      "norm_label": "renv dependency recursion c routine",
+      "id": "renv_c_dependency_recursion"
     },
     {
       "label": "renv Enumerate FFI Routine",
@@ -2444,9 +2444,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_c_enumerate_ffi",
       "community": 2,
-      "norm_label": "renv enumerate ffi routine"
+      "norm_label": "renv enumerate ffi routine",
+      "id": "renv_c_enumerate_ffi"
     },
     {
       "label": "ABS Data API Beta SDMX Service",
@@ -2457,9 +2457,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "abs_data_api_beta_sdmx",
       "community": 2,
-      "norm_label": "abs data api beta sdmx service"
+      "norm_label": "abs data api beta sdmx service",
+      "id": "abs_data_api_beta_sdmx"
     },
     {
       "label": "ABS REST API XML JSON CSV Formats",
@@ -2470,9 +2470,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "abs_data_api_rest_formats",
       "community": 2,
-      "norm_label": "abs rest api xml json csv formats"
+      "norm_label": "abs rest api xml json csv formats",
+      "id": "abs_data_api_rest_formats"
     },
     {
       "label": "Credit Constraints and Housing Prices",
@@ -2483,9 +2483,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_credit_constraints_housing_prices",
       "community": 3,
-      "norm_label": "credit constraints and housing prices"
+      "norm_label": "credit constraints and housing prices",
+      "id": "rba2023_credit_constraints_housing_prices"
     },
     {
       "label": "Marginal Buyer",
@@ -2496,9 +2496,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_marginal_buyer",
       "community": 3,
-      "norm_label": "marginal buyer"
+      "norm_label": "marginal buyer",
+      "id": "rba2023_marginal_buyer"
     },
     {
       "label": "Heterogeneous Willingness to Pay",
@@ -2509,9 +2509,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_willingness_to_pay",
       "community": 3,
-      "norm_label": "heterogeneous willingness to pay"
+      "norm_label": "heterogeneous willingness to pay",
+      "id": "rba2023_willingness_to_pay"
     },
     {
       "label": "Housing Demand Curve Method",
@@ -2522,9 +2522,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_demand_curve_method",
       "community": 3,
-      "norm_label": "housing demand curve method"
+      "norm_label": "housing demand curve method",
+      "id": "rba2023_demand_curve_method"
     },
     {
       "label": "Collateral Constraints",
@@ -2535,9 +2535,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_collateral_constraints",
       "community": 3,
-      "norm_label": "collateral constraints"
+      "norm_label": "collateral constraints",
+      "id": "rba2023_collateral_constraints"
     },
     {
       "label": "Mortgage Rate Experiment",
@@ -2548,9 +2548,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_mortgage_rate_experiment",
       "community": 3,
-      "norm_label": "mortgage rate experiment"
+      "norm_label": "mortgage rate experiment",
+      "id": "rba2023_mortgage_rate_experiment"
     },
     {
       "label": "Heterogeneous User Cost Model",
@@ -2561,9 +2561,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_heterogeneous_user_cost_model",
       "community": 3,
-      "norm_label": "heterogeneous user cost model"
+      "norm_label": "heterogeneous user cost model",
+      "id": "rba2023_heterogeneous_user_cost_model"
     },
     {
       "label": "Fuster and Zafar 2021 Survey Experiment",
@@ -2574,9 +2574,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_fuster_zafar_2021",
       "community": 3,
-      "norm_label": "fuster and zafar 2021 survey experiment"
+      "norm_label": "fuster and zafar 2021 survey experiment",
+      "id": "rba2023_fuster_zafar_2021"
     },
     {
       "label": "Australian SIH Simulation",
@@ -2587,9 +2587,9 @@
       "captured_at": null,
       "author": "Tom Cusbert",
       "contributor": null,
-      "id": "rba2023_australian_sih_simulation",
       "community": 3,
-      "norm_label": "australian sih simulation"
+      "norm_label": "australian sih simulation",
+      "id": "rba2023_australian_sih_simulation"
     },
     {
       "label": "Household Living-costs Price Indexes",
@@ -2600,9 +2600,9 @@
       "captured_at": null,
       "author": "Statistics New Zealand",
       "contributor": null,
-      "id": "hlpi_household_living_costs_price_indexes",
       "community": 3,
-      "norm_label": "household living-costs price indexes"
+      "norm_label": "household living-costs price indexes",
+      "id": "hlpi_household_living_costs_price_indexes"
     },
     {
       "label": "Payment Approach to Owner-occupied Housing",
@@ -2613,9 +2613,9 @@
       "captured_at": null,
       "author": "Statistics New Zealand",
       "contributor": null,
-      "id": "hlpi_payment_approach",
       "community": 3,
-      "norm_label": "payment approach to owner-occupied housing"
+      "norm_label": "payment approach to owner-occupied housing",
+      "id": "hlpi_payment_approach"
     },
     {
       "label": "Democratic Weighting",
@@ -2626,9 +2626,9 @@
       "captured_at": null,
       "author": "Statistics New Zealand",
       "contributor": null,
-      "id": "hlpi_democratic_weighting",
       "community": 3,
-      "norm_label": "democratic weighting"
+      "norm_label": "democratic weighting",
+      "id": "hlpi_democratic_weighting"
     },
     {
       "label": "Household Economic Survey Expenditure Patterns",
@@ -2639,9 +2639,9 @@
       "captured_at": null,
       "author": "Statistics New Zealand",
       "contributor": null,
-      "id": "hlpi_household_economic_survey",
       "community": 3,
-      "norm_label": "household economic survey expenditure patterns"
+      "norm_label": "household economic survey expenditure patterns",
+      "id": "hlpi_household_economic_survey"
     },
     {
       "label": "Change in Housing Affordability Indicators",
@@ -2652,9 +2652,9 @@
       "captured_at": null,
       "author": "Alan Bentley",
       "contributor": null,
-      "id": "chai_change_housing_affordability_indicators",
       "community": 3,
-      "norm_label": "change in housing affordability indicators"
+      "norm_label": "change in housing affordability indicators",
+      "id": "chai_change_housing_affordability_indicators"
     },
     {
       "label": "Rental Affordability Index",
@@ -2665,9 +2665,9 @@
       "captured_at": null,
       "author": "Alan Bentley",
       "contributor": null,
-      "id": "chai_rental_affordability_index",
       "community": 3,
-      "norm_label": "rental affordability index"
+      "norm_label": "rental affordability index",
+      "id": "chai_rental_affordability_index"
     },
     {
       "label": "Deposit Affordability Index",
@@ -2678,9 +2678,9 @@
       "captured_at": null,
       "author": "Alan Bentley",
       "contributor": null,
-      "id": "chai_deposit_affordability_index",
       "community": 3,
-      "norm_label": "deposit affordability index"
+      "norm_label": "deposit affordability index",
+      "id": "chai_deposit_affordability_index"
     },
     {
       "label": "Mortgage Affordability Index",
@@ -2691,9 +2691,9 @@
       "captured_at": null,
       "author": "Alan Bentley",
       "contributor": null,
-      "id": "chai_mortgage_affordability_index",
       "community": 3,
-      "norm_label": "mortgage affordability index"
+      "norm_label": "mortgage affordability index",
+      "id": "chai_mortgage_affordability_index"
     },
     {
       "label": "Interest Price Index",
@@ -2704,9 +2704,9 @@
       "captured_at": null,
       "author": "Alan Bentley",
       "contributor": null,
-      "id": "chai_interest_price_index",
       "community": 3,
-      "norm_label": "interest price index"
+      "norm_label": "interest price index",
+      "id": "chai_interest_price_index"
     },
     {
       "label": "Market Entry Affordability",
@@ -2717,9 +2717,9 @@
       "captured_at": null,
       "author": "Alan Bentley",
       "contributor": null,
-      "id": "chai_market_entry_affordability",
       "community": 3,
-      "norm_label": "market entry affordability"
+      "norm_label": "market entry affordability",
+      "id": "chai_market_entry_affordability"
     },
     {
       "label": "Median Household Disposable Income",
@@ -2730,9 +2730,9 @@
       "captured_at": null,
       "author": "Alan Bentley",
       "contributor": null,
-      "id": "chai_median_household_disposable_income",
       "community": 3,
-      "norm_label": "median household disposable income"
+      "norm_label": "median household disposable income",
+      "id": "chai_median_household_disposable_income"
     },
     {
       "label": "Guide to Housing Affordability Statistics",
@@ -2743,9 +2743,9 @@
       "captured_at": null,
       "author": "Anthony Puglisi",
       "contributor": null,
-      "id": "abs_guide_housing_affordability_statistics",
       "community": 3,
-      "norm_label": "guide to housing affordability statistics"
+      "norm_label": "guide to housing affordability statistics",
+      "id": "abs_guide_housing_affordability_statistics"
     },
     {
       "label": "Affordability Module Contract Test",
@@ -2756,9 +2756,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_affordability_module_contract",
       "community": 3,
-      "norm_label": "affordability module contract test"
+      "norm_label": "affordability module contract test",
+      "id": "test_affordability_module_contract"
     },
     {
       "label": "Methodology Text Contract Test",
@@ -2769,9 +2769,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_methodology_text_contract",
       "community": 3,
-      "norm_label": "methodology text contract test"
+      "norm_label": "methodology text contract test",
+      "id": "test_methodology_text_contract"
     },
     {
       "label": "Plotly Output ID Contract Test",
@@ -2782,9 +2782,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_plotly_output_id_contract",
       "community": 3,
-      "norm_label": "plotly output id contract test"
+      "norm_label": "plotly output id contract test",
+      "id": "test_plotly_output_id_contract"
     },
     {
       "label": "Plotly Cache Contract Test",
@@ -2795,9 +2795,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_plotly_cache_contract",
       "community": 3,
-      "norm_label": "plotly cache contract test"
+      "norm_label": "plotly cache contract test",
+      "id": "test_plotly_cache_contract"
     },
     {
       "label": "Chart Builders Contract Test",
@@ -2808,9 +2808,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_chart_builders_contract",
       "community": 3,
-      "norm_label": "chart builders contract test"
+      "norm_label": "chart builders contract test",
+      "id": "test_chart_builders_contract"
     },
     {
       "label": "Dependency Reproducibility Contract Test",
@@ -2821,9 +2821,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_dependency_reproducibility_contract",
       "community": 2,
-      "norm_label": "dependency reproducibility contract test"
+      "norm_label": "dependency reproducibility contract test",
+      "id": "test_dependency_reproducibility_contract"
     },
     {
       "label": "dashboard_ggplotly Helper Contract",
@@ -2834,9 +2834,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_dashboard_ggplotly_helper",
       "community": 3,
-      "norm_label": "dashboard_ggplotly helper contract"
+      "norm_label": "dashboard_ggplotly helper contract",
+      "id": "test_dashboard_ggplotly_helper"
     },
     {
       "label": "SIH Quality Annotation Contract",
@@ -2847,9 +2847,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_sih_quality_annotations",
       "community": 3,
-      "norm_label": "sih quality annotation contract"
+      "norm_label": "sih quality annotation contract",
+      "id": "test_sih_quality_annotations"
     },
     {
       "label": "SIH Geographic Output Contracts",
@@ -2860,9 +2860,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_geographic_affordability_data_contracts_sih_geographic_outputs",
       "community": 4,
-      "norm_label": "sih geographic output contracts"
+      "norm_label": "sih geographic output contracts",
+      "id": "test_geographic_affordability_data_contracts_sih_geographic_outputs"
     },
     {
       "label": "Loader Reserved SIH Geographic Files",
@@ -2873,9 +2873,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_geographic_affordability_data_contracts_loader_reserved_files",
       "community": 4,
-      "norm_label": "loader reserved sih geographic files"
+      "norm_label": "loader reserved sih geographic files",
+      "id": "test_geographic_affordability_data_contracts_loader_reserved_files"
     },
     {
       "label": "Geographic Affordability Module Contract",
@@ -2886,9 +2886,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_geographic_affordability_module_geographic_module_contract",
       "community": 4,
-      "norm_label": "geographic affordability module contract"
+      "norm_label": "geographic affordability module contract",
+      "id": "test_geographic_affordability_module_geographic_module_contract"
     },
     {
       "label": "SIH Quality Annotations",
@@ -2899,9 +2899,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_geographic_affordability_module_sih_quality_annotations",
       "community": 4,
-      "norm_label": "sih quality annotations"
+      "norm_label": "sih quality annotations",
+      "id": "test_geographic_affordability_module_sih_quality_annotations"
     },
     {
       "label": "Housing Supply Approval Legend Parser",
@@ -2912,9 +2912,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_housing_supply_legend_contracts_approval_legend_parser",
       "community": 4,
-      "norm_label": "housing supply approval legend parser"
+      "norm_label": "housing supply approval legend parser",
+      "id": "test_housing_supply_legend_contracts_approval_legend_parser"
     },
     {
       "label": "Housing Supply Module Contract",
@@ -2925,9 +2925,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_housing_supply_module_supply_module_contract",
       "community": 4,
-      "norm_label": "housing supply module contract"
+      "norm_label": "housing supply module contract",
+      "id": "test_housing_supply_module_supply_module_contract"
     },
     {
       "label": "Indicator Registry Contract",
@@ -2938,9 +2938,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_indicator_registry_indicator_registry_contract",
       "community": 4,
-      "norm_label": "indicator registry contract"
+      "norm_label": "indicator registry contract",
+      "id": "test_indicator_registry_indicator_registry_contract"
     },
     {
       "label": "Market Entry Scenario Methodology Note",
@@ -2951,9 +2951,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_indicator_registry_market_entry_methodology_note",
       "community": 4,
-      "norm_label": "market entry scenario methodology note"
+      "norm_label": "market entry scenario methodology note",
+      "id": "test_indicator_registry_market_entry_methodology_note"
     },
     {
       "label": "Latest Change Label Semantics",
@@ -2964,9 +2964,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_kpi_change_labels_latest_change_labels",
       "community": 4,
-      "norm_label": "latest change label semantics"
+      "norm_label": "latest change label semantics",
+      "id": "test_kpi_change_labels_latest_change_labels"
     },
     {
       "label": "Market Context Module Contract",
@@ -2977,9 +2977,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_market_context_module_market_context_contract",
       "community": 4,
-      "norm_label": "market context module contract"
+      "norm_label": "market context module contract",
+      "id": "test_market_context_module_market_context_contract"
     },
     {
       "label": "Market Entry Serviceability Calculator Contract",
@@ -2990,9 +2990,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_market_entry_scenarios_serviceability_calculator_contract",
       "community": 4,
-      "norm_label": "market entry serviceability calculator contract"
+      "norm_label": "market entry serviceability calculator contract",
+      "id": "test_market_entry_scenarios_serviceability_calculator_contract"
     },
     {
       "label": "Methodology Module Contract",
@@ -3003,9 +3003,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_methodology_module_methodology_module_contract",
       "community": 4,
-      "norm_label": "methodology module contract"
+      "norm_label": "methodology module contract",
+      "id": "test_methodology_module_methodology_module_contract"
     },
     {
       "label": "Methodology Page Content Contract",
@@ -3016,9 +3016,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_methodology_page_methodology_page_content_contract",
       "community": 4,
-      "norm_label": "methodology page content contract"
+      "norm_label": "methodology page content contract",
+      "id": "test_methodology_page_methodology_page_content_contract"
     },
     {
       "label": "Overview Module Contract",
@@ -3029,9 +3029,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_overview_module_overview_module_contract",
       "community": 4,
-      "norm_label": "overview module contract"
+      "norm_label": "overview module contract",
+      "id": "test_overview_module_overview_module_contract"
     },
     {
       "label": "Pipeline Driver Stage Gate Order",
@@ -3042,9 +3042,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_pipeline_driver_stage_gates_driver_stage_gate_order",
       "community": 4,
-      "norm_label": "pipeline driver stage gate order"
+      "norm_label": "pipeline driver stage gate order",
+      "id": "test_pipeline_driver_stage_gates_driver_stage_gate_order"
     },
     {
       "label": "Pipeline Output Contract",
@@ -3055,9 +3055,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_pipeline_outputs_pipeline_output_contract",
       "community": 4,
-      "norm_label": "pipeline output contract"
+      "norm_label": "pipeline output contract",
+      "id": "test_pipeline_outputs_pipeline_output_contract"
     },
     {
       "label": "SIH Workbook Benchmark Validation",
@@ -3068,9 +3068,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_pipeline_outputs_sih_benchmark_validation",
       "community": 4,
-      "norm_label": "sih workbook benchmark validation"
+      "norm_label": "sih workbook benchmark validation",
+      "id": "test_pipeline_outputs_sih_benchmark_validation"
     },
     {
       "label": "Pipeline Stage Contract Surface",
@@ -3081,9 +3081,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_pipeline_stage_contracts_stage_contract_surface",
       "community": 4,
-      "norm_label": "pipeline stage contract surface"
+      "norm_label": "pipeline stage contract surface",
+      "id": "test_pipeline_stage_contracts_stage_contract_surface"
     },
     {
       "label": "External Source Manifest Contract",
@@ -3094,9 +3094,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_pipeline_stage_contracts_external_source_manifest",
       "community": 4,
-      "norm_label": "external source manifest contract"
+      "norm_label": "external source manifest contract",
+      "id": "test_pipeline_stage_contracts_external_source_manifest"
     },
     {
       "label": "Plot Setup Extraction Contract",
@@ -3107,9 +3107,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_plot_setup_extraction_plot_setup_extraction_contract",
       "community": 4,
-      "norm_label": "plot setup extraction contract"
+      "norm_label": "plot setup extraction contract",
+      "id": "test_plot_setup_extraction_plot_setup_extraction_contract"
     },
     {
       "label": "Dashboard Plotly Helper Contract",
@@ -3120,9 +3120,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_plotly_helpers_dashboard_plotly_helper_contract",
       "community": 4,
-      "norm_label": "dashboard plotly helper contract"
+      "norm_label": "dashboard plotly helper contract",
+      "id": "test_plotly_helpers_dashboard_plotly_helper_contract"
     },
     {
       "label": "Price Trends Module Contract",
@@ -3133,9 +3133,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_price_trends_module_price_trends_contract",
       "community": 4,
-      "norm_label": "price trends module contract"
+      "norm_label": "price trends module contract",
+      "id": "test_price_trends_module_price_trends_contract"
     },
     {
       "label": "Root-Stable Project Paths",
@@ -3146,9 +3146,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_project_root_paths_root_stable_paths",
       "community": 4,
-      "norm_label": "root-stable project paths"
+      "norm_label": "root-stable project paths",
+      "id": "test_project_root_paths_root_stable_paths"
     },
     {
       "label": "Methodology Provenance Report Contract",
@@ -3159,9 +3159,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_provenance_report_methodology_provenance_report",
       "community": 4,
-      "norm_label": "methodology provenance report contract"
+      "norm_label": "methodology provenance report contract",
+      "id": "test_provenance_report_methodology_provenance_report"
     },
     {
       "label": "Public Release Hygiene Contract",
@@ -3172,9 +3172,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_public_release_hygiene_public_release_hygiene_contract",
       "community": 4,
-      "norm_label": "public release hygiene contract"
+      "norm_label": "public release hygiene contract",
+      "id": "test_public_release_hygiene_public_release_hygiene_contract"
     },
     {
       "label": "RBA Raw Cache Normalisation Contract",
@@ -3185,9 +3185,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_rba_raw_cache_hygiene_rba_cache_normalisation",
       "community": 4,
-      "norm_label": "rba raw cache normalisation contract"
+      "norm_label": "rba raw cache normalisation contract",
+      "id": "test_rba_raw_cache_hygiene_rba_cache_normalisation"
     },
     {
       "label": "Release Checklist Contract",
@@ -3198,9 +3198,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_release_checklist_release_checklist_contract",
       "community": 4,
-      "norm_label": "release checklist contract"
+      "norm_label": "release checklist contract",
+      "id": "test_release_checklist_release_checklist_contract"
     },
     {
       "label": "Rental Market Module Contract",
@@ -3211,9 +3211,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_rental_market_module_rental_market_module_contract",
       "community": 8,
-      "norm_label": "rental market module contract"
+      "norm_label": "rental market module contract",
+      "id": "test_rental_market_module_rental_market_module_contract"
     },
     {
       "label": "SIH Quality Overlay Contract",
@@ -3224,9 +3224,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_rental_market_module_sih_quality_overlay_contract",
       "community": 8,
-      "norm_label": "sih quality overlay contract"
+      "norm_label": "sih quality overlay contract",
+      "id": "test_rental_market_module_sih_quality_overlay_contract"
     },
     {
       "label": "Rental Market Interaction Contract",
@@ -3237,9 +3237,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_rental_market_interaction_contracts_rental_market_interaction_contract",
       "community": 8,
-      "norm_label": "rental market interaction contract"
+      "norm_label": "rental market interaction contract",
+      "id": "test_rental_market_interaction_contracts_rental_market_interaction_contract"
     },
     {
       "label": "Rental Market Mobile Layout Contract",
@@ -3250,9 +3250,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_rental_market_mobile_contracts_rental_market_mobile_layout_contract",
       "community": 8,
-      "norm_label": "rental market mobile layout contract"
+      "norm_label": "rental market mobile layout contract",
+      "id": "test_rental_market_mobile_contracts_rental_market_mobile_layout_contract"
     },
     {
       "label": "Responsive UI Contract",
@@ -3263,9 +3263,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_responsive_ui_contracts_responsive_ui_contract",
       "community": 8,
-      "norm_label": "responsive ui contract"
+      "norm_label": "responsive ui contract",
+      "id": "test_responsive_ui_contracts_responsive_ui_contract"
     },
     {
       "label": "Serviceability Scenario Controls Contract",
@@ -3276,9 +3276,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_serviceability_scenario_controls_serviceability_scenario_controls_contract",
       "community": 8,
-      "norm_label": "serviceability scenario controls contract"
+      "norm_label": "serviceability scenario controls contract",
+      "id": "test_serviceability_scenario_controls_serviceability_scenario_controls_contract"
     },
     {
       "label": "market_entry_serviceability_series",
@@ -3289,9 +3289,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_serviceability_scenario_controls_market_entry_serviceability_series",
       "community": 8,
-      "norm_label": "market_entry_serviceability_series"
+      "norm_label": "market_entry_serviceability_series",
+      "id": "test_serviceability_scenario_controls_market_entry_serviceability_series"
     },
     {
       "label": "SIH Estimate Quality Dataset Contract",
@@ -3302,9 +3302,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_sih_estimate_quality_sih_estimate_quality_dataset_contract",
       "community": 8,
-      "norm_label": "sih estimate quality dataset contract"
+      "norm_label": "sih estimate quality dataset contract",
+      "id": "test_sih_estimate_quality_sih_estimate_quality_dataset_contract"
     },
     {
       "label": "SIH Quality Helpers Contract",
@@ -3315,9 +3315,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_sih_quality_helpers_sih_quality_helpers_contract",
       "community": 8,
-      "norm_label": "sih quality helpers contract"
+      "norm_label": "sih quality helpers contract",
+      "id": "test_sih_quality_helpers_sih_quality_helpers_contract"
     },
     {
       "label": "join_sih_quality",
@@ -3328,9 +3328,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_sih_quality_helpers_join_sih_quality",
       "community": 8,
-      "norm_label": "join_sih_quality"
+      "norm_label": "join_sih_quality",
+      "id": "test_sih_quality_helpers_join_sih_quality"
     },
     {
       "label": "SIH Uncertainty Interval Contract",
@@ -3341,9 +3341,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_sih_uncertainty_intervals_sih_uncertainty_interval_contract",
       "community": 8,
-      "norm_label": "sih uncertainty interval contract"
+      "norm_label": "sih uncertainty interval contract",
+      "id": "test_sih_uncertainty_intervals_sih_uncertainty_interval_contract"
     },
     {
       "label": "sih_quality_interval_bounds",
@@ -3354,9 +3354,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_sih_uncertainty_intervals_sih_quality_interval_bounds",
       "community": 8,
-      "norm_label": "sih_quality_interval_bounds"
+      "norm_label": "sih_quality_interval_bounds",
+      "id": "test_sih_uncertainty_intervals_sih_quality_interval_bounds"
     },
     {
       "label": "SIH Workbook Benchmark Contract",
@@ -3367,9 +3367,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_sih_workbook_benchmarks_sih_workbook_benchmark_contract",
       "community": 8,
-      "norm_label": "sih workbook benchmark contract"
+      "norm_label": "sih workbook benchmark contract",
+      "id": "test_sih_workbook_benchmarks_sih_workbook_benchmark_contract"
     },
     {
       "label": "bslib Theme Infrastructure Contract",
@@ -3380,9 +3380,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_theme_infrastructure_bslib_theme_infrastructure_contract",
       "community": 8,
-      "norm_label": "bslib theme infrastructure contract"
+      "norm_label": "bslib theme infrastructure contract",
+      "id": "test_theme_infrastructure_bslib_theme_infrastructure_contract"
     },
     {
       "label": "UI Smoke Contract",
@@ -3393,9 +3393,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_ui_smoke_contracts_ui_smoke_contract",
       "community": 8,
-      "norm_label": "ui smoke contract"
+      "norm_label": "ui smoke contract",
+      "id": "test_ui_smoke_contracts_ui_smoke_contract"
     },
     {
       "label": "Public Policy UI Style System Contract",
@@ -3406,9 +3406,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_ui_style_system_public_policy_ui_style_system_contract",
       "community": 8,
-      "norm_label": "public policy ui style system contract"
+      "norm_label": "public policy ui style system contract",
+      "id": "test_ui_style_system_public_policy_ui_style_system_contract"
     },
     {
       "label": "Visual Semantics Contract",
@@ -3419,9 +3419,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_visual_semantics_visual_semantics_contract",
       "community": 8,
-      "norm_label": "visual semantics contract"
+      "norm_label": "visual semantics contract",
+      "id": "test_visual_semantics_visual_semantics_contract"
     },
     {
       "label": "KPI Economic Interpretation Contract",
@@ -3432,9 +3432,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "test_visual_semantics_kpi_economic_interpretation_contract",
       "community": 8,
-      "norm_label": "kpi economic interpretation contract"
+      "norm_label": "kpi economic interpretation contract",
+      "id": "test_visual_semantics_kpi_economic_interpretation_contract"
     },
     {
       "label": "Affordability Indicators Chart",
@@ -3445,9 +3445,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "afford_indices_chart_affordability_indicators_chart",
       "community": 20,
-      "norm_label": "affordability indicators chart"
+      "norm_label": "affordability indicators chart",
+      "id": "afford_indices_chart_affordability_indicators_chart"
     },
     {
       "label": "Affordability Indicators",
@@ -3458,9 +3458,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "afford_indices_chart_affordability_indicators_title",
       "community": 20,
-      "norm_label": "affordability indicators"
+      "norm_label": "affordability indicators",
+      "id": "afford_indices_chart_affordability_indicators_title"
     },
     {
       "label": "Mortgage Serviceability Index",
@@ -3471,9 +3471,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "afford_indices_chart_mortgage_serviceability_index",
       "community": 20,
-      "norm_label": "mortgage serviceability index"
+      "norm_label": "mortgage serviceability index",
+      "id": "afford_indices_chart_mortgage_serviceability_index"
     },
     {
       "label": "Price-to-Income Ratio",
@@ -3484,9 +3484,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "afford_indices_chart_price_to_income_ratio",
       "community": 20,
-      "norm_label": "price-to-income ratio"
+      "norm_label": "price-to-income ratio",
+      "id": "afford_indices_chart_price_to_income_ratio"
     },
     {
       "label": "Time Series Comparison of Housing Affordability Metrics",
@@ -3497,9 +3497,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "afford_indices_chart_time_series_comparison",
       "community": 20,
-      "norm_label": "time series comparison of housing affordability metrics"
+      "norm_label": "time series comparison of housing affordability metrics",
+      "id": "afford_indices_chart_time_series_comparison"
     },
     {
       "label": "Post-2021 Housing Affordability Deterioration",
@@ -3510,9 +3510,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "afford_indices_chart_post_2021_affordability_deterioration",
       "community": 20,
-      "norm_label": "post-2021 housing affordability deterioration"
+      "norm_label": "post-2021 housing affordability deterioration",
+      "id": "afford_indices_chart_post_2021_affordability_deterioration"
     },
     {
       "label": "Mortgage Serviceability Volatility",
@@ -3523,9 +3523,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "afford_indices_chart_mortgage_serviceability_volatility",
       "community": 20,
-      "norm_label": "mortgage serviceability volatility"
+      "norm_label": "mortgage serviceability volatility",
+      "id": "afford_indices_chart_mortgage_serviceability_volatility"
     },
     {
       "label": "Long-Run Price-to-Income Uptrend",
@@ -3536,9 +3536,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "afford_indices_chart_price_to_income_uptrend",
       "community": 20,
-      "norm_label": "long-run price-to-income uptrend"
+      "norm_label": "long-run price-to-income uptrend",
+      "id": "afford_indices_chart_price_to_income_uptrend"
     },
     {
       "label": "Housing Cost-to-Income Ratio Heatmap by Tenure and Age",
@@ -3549,9 +3549,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "burden_heatmap_chart",
       "community": 21,
-      "norm_label": "housing cost-to-income ratio heatmap by tenure and age"
+      "norm_label": "housing cost-to-income ratio heatmap by tenure and age",
+      "id": "burden_heatmap_chart"
     },
     {
       "label": "Housing Cost-to-Income Percentage",
@@ -3562,9 +3562,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "burden_heatmap_cost_income_metric",
       "community": 21,
-      "norm_label": "housing cost-to-income percentage"
+      "norm_label": "housing cost-to-income percentage",
+      "id": "burden_heatmap_cost_income_metric"
     },
     {
       "label": "Tenure Groups: All Households, All Renters, Owners with Mortgage, Private Renters",
@@ -3575,9 +3575,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "burden_heatmap_tenure_groups",
       "community": 21,
-      "norm_label": "tenure groups: all households, all renters, owners with mortgage, private renters"
+      "norm_label": "tenure groups: all households, all renters, owners with mortgage, private renters",
+      "id": "burden_heatmap_tenure_groups"
     },
     {
       "label": "Age Groups from 15 to 24 through 75 and Over",
@@ -3588,9 +3588,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "burden_heatmap_age_groups",
       "community": 21,
-      "norm_label": "age groups from 15 to 24 through 75 and over"
+      "norm_label": "age groups from 15 to 24 through 75 and over",
+      "id": "burden_heatmap_age_groups"
     },
     {
       "label": "2019-20 Housing Affordability Period",
@@ -3601,9 +3601,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "burden_heatmap_2019_20_period",
       "community": 21,
-      "norm_label": "2019-20 housing affordability period"
+      "norm_label": "2019-20 housing affordability period",
+      "id": "burden_heatmap_2019_20_period"
     },
     {
       "label": "Younger Households Show Higher All-Household Cost Burdens",
@@ -3614,9 +3614,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "burden_heatmap_younger_household_burden",
       "community": 21,
-      "norm_label": "younger households show higher all-household cost burdens"
+      "norm_label": "younger households show higher all-household cost burdens",
+      "id": "burden_heatmap_younger_household_burden"
     },
     {
       "label": "Private Renter Cost Burden Remains Material Across Age Groups",
@@ -3627,9 +3627,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "burden_heatmap_private_renter_burden",
       "community": 21,
-      "norm_label": "private renter cost burden remains material across age groups"
+      "norm_label": "private renter cost burden remains material across age groups",
+      "id": "burden_heatmap_private_renter_burden"
     },
     {
       "label": "Compare Housing Affordability Stress by Tenure and Age Cohort",
@@ -3640,9 +3640,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "burden_heatmap_affordability_comparison_purpose",
       "community": 21,
-      "norm_label": "compare housing affordability stress by tenure and age cohort"
+      "norm_label": "compare housing affordability stress by tenure and age cohort",
+      "id": "burden_heatmap_affordability_comparison_purpose"
     },
     {
       "label": "Building Approvals Chart",
@@ -3653,9 +3653,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_chart",
       "community": 11,
-      "norm_label": "building approvals chart"
+      "norm_label": "building approvals chart",
+      "id": "context_approvals_chart"
     },
     {
       "label": "Building Approvals",
@@ -3666,9 +3666,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_building_approvals",
       "community": 11,
-      "norm_label": "building approvals"
+      "norm_label": "building approvals",
+      "id": "context_approvals_building_approvals"
     },
     {
       "label": "Number of Dwellings",
@@ -3679,9 +3679,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_number_of_dwellings",
       "community": 11,
-      "norm_label": "number of dwellings"
+      "norm_label": "number of dwellings",
+      "id": "context_approvals_number_of_dwellings"
     },
     {
       "label": "New South Wales",
@@ -3692,9 +3692,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_new_south_wales",
       "community": 11,
-      "norm_label": "new south wales"
+      "norm_label": "new south wales",
+      "id": "context_approvals_new_south_wales"
     },
     {
       "label": "Victoria",
@@ -3705,9 +3705,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_victoria",
       "community": 11,
-      "norm_label": "victoria"
+      "norm_label": "victoria",
+      "id": "context_approvals_victoria"
     },
     {
       "label": "Houses",
@@ -3718,9 +3718,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_houses",
       "community": 11,
-      "norm_label": "houses"
+      "norm_label": "houses",
+      "id": "context_approvals_houses"
     },
     {
       "label": "Dwellings Excluding Houses",
@@ -3731,9 +3731,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_dwellings_excluding_houses",
       "community": 11,
-      "norm_label": "dwellings excluding houses"
+      "norm_label": "dwellings excluding houses",
+      "id": "context_approvals_dwellings_excluding_houses"
     },
     {
       "label": "Private Sector",
@@ -3744,9 +3744,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_private_sector",
       "community": 11,
-      "norm_label": "private sector"
+      "norm_label": "private sector",
+      "id": "context_approvals_private_sector"
     },
     {
       "label": "Total Sectors",
@@ -3757,9 +3757,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_total_sectors",
       "community": 11,
-      "norm_label": "total sectors"
+      "norm_label": "total sectors",
+      "id": "context_approvals_total_sectors"
     },
     {
       "label": "Total Type of Building",
@@ -3770,9 +3770,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_total_type_of_building",
       "community": 11,
-      "norm_label": "total type of building"
+      "norm_label": "total type of building",
+      "id": "context_approvals_total_type_of_building"
     },
     {
       "label": "Multi-Series Time Trend",
@@ -3783,9 +3783,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_multi_series_time_trend",
       "community": 11,
-      "norm_label": "multi-series time trend"
+      "norm_label": "multi-series time trend",
+      "id": "context_approvals_multi_series_time_trend"
     },
     {
       "label": "Mid-2010s Building Approvals Peak",
@@ -3796,9 +3796,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_mid_2010s_peak",
       "community": 11,
-      "norm_label": "mid-2010s building approvals peak"
+      "norm_label": "mid-2010s building approvals peak",
+      "id": "context_approvals_mid_2010s_peak"
     },
     {
       "label": "Recent Moderation and Volatility",
@@ -3809,9 +3809,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_recent_moderation",
       "community": 11,
-      "norm_label": "recent moderation and volatility"
+      "norm_label": "recent moderation and volatility",
+      "id": "context_approvals_recent_moderation"
     },
     {
       "label": "Housing Supply Pipeline Indicator",
@@ -3822,9 +3822,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_approvals_housing_supply_pipeline",
       "community": 11,
-      "norm_label": "housing supply pipeline indicator"
+      "norm_label": "housing supply pipeline indicator",
+      "id": "context_approvals_housing_supply_pipeline"
     },
     {
       "label": "Labour Market Spare Capacity Chart",
@@ -3835,9 +3835,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_labour_chart",
       "community": 22,
-      "norm_label": "labour market spare capacity chart"
+      "norm_label": "labour market spare capacity chart",
+      "id": "context_labour_chart"
     },
     {
       "label": "Unemployment Rate",
@@ -3848,9 +3848,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_labour_unemployment_rate",
       "community": 22,
-      "norm_label": "unemployment rate"
+      "norm_label": "unemployment rate",
+      "id": "context_labour_unemployment_rate"
     },
     {
       "label": "Underemployment Rate",
@@ -3861,9 +3861,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_labour_underemployment_rate",
       "community": 22,
-      "norm_label": "underemployment rate"
+      "norm_label": "underemployment rate",
+      "id": "context_labour_underemployment_rate"
     },
     {
       "label": "Labour Underutilisation Rate",
@@ -3874,9 +3874,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_labour_labour_underutilisation_rate",
       "community": 22,
-      "norm_label": "labour underutilisation rate"
+      "norm_label": "labour underutilisation rate",
+      "id": "context_labour_labour_underutilisation_rate"
     },
     {
       "label": "Percentage Time Series from Early 2000s to Mid 2020s",
@@ -3887,9 +3887,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_labour_percentage_time_series",
       "community": 22,
-      "norm_label": "percentage time series from early 2000s to mid 2020s"
+      "norm_label": "percentage time series from early 2000s to mid 2020s",
+      "id": "context_labour_percentage_time_series"
     },
     {
       "label": "COVID-era Spike in Labour Spare Capacity",
@@ -3900,9 +3900,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_labour_covid_spare_capacity_spike",
       "community": 22,
-      "norm_label": "covid-era spike in labour spare capacity"
+      "norm_label": "covid-era spike in labour spare capacity",
+      "id": "context_labour_covid_spare_capacity_spike"
     },
     {
       "label": "Recent Labour Market Tightening After 2020 Peak",
@@ -3913,9 +3913,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_labour_recent_tightening",
       "community": 22,
-      "norm_label": "recent labour market tightening after 2020 peak"
+      "norm_label": "recent labour market tightening after 2020 peak",
+      "id": "context_labour_recent_tightening"
     },
     {
       "label": "Labour Market Context for Household Affordability Analysis",
@@ -3926,9 +3926,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_labour_affordability_context",
       "community": 22,
-      "norm_label": "labour market context for household affordability analysis"
+      "norm_label": "labour market context for household affordability analysis",
+      "id": "context_labour_affordability_context"
     },
     {
       "label": "context_pop.png",
@@ -3939,9 +3939,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_pop_image",
       "community": 24,
-      "norm_label": "context_pop.png"
+      "norm_label": "context_pop.png",
+      "id": "context_pop_image"
     },
     {
       "label": "Net Overseas Migration (NOM) per Annum",
@@ -3952,9 +3952,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_pop_net_overseas_migration_per_annum",
       "community": 24,
-      "norm_label": "net overseas migration (nom) per annum"
+      "norm_label": "net overseas migration (nom) per annum",
+      "id": "context_pop_net_overseas_migration_per_annum"
     },
     {
       "label": "Thousands",
@@ -3965,9 +3965,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_pop_thousands_unit",
       "community": 24,
-      "norm_label": "thousands"
+      "norm_label": "thousands",
+      "id": "context_pop_thousands_unit"
     },
     {
       "label": "Time Axis from 2000 to 2025",
@@ -3978,9 +3978,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_pop_2000_to_2025_time_axis",
       "community": 24,
-      "norm_label": "time axis from 2000 to 2025"
+      "norm_label": "time axis from 2000 to 2025",
+      "id": "context_pop_2000_to_2025_time_axis"
     },
     {
       "label": "COVID-era Net Migration Collapse",
@@ -3991,9 +3991,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_pop_covid_era_migration_collapse",
       "community": 24,
-      "norm_label": "covid-era net migration collapse"
+      "norm_label": "covid-era net migration collapse",
+      "id": "context_pop_covid_era_migration_collapse"
     },
     {
       "label": "Post-2022 Migration Rebound",
@@ -4004,9 +4004,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_pop_post_2022_migration_rebound",
       "community": 24,
-      "norm_label": "post-2022 migration rebound"
+      "norm_label": "post-2022 migration rebound",
+      "id": "context_pop_post_2022_migration_rebound"
     },
     {
       "label": "Population Pressure Context for Housing Affordability",
@@ -4017,9 +4017,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_pop_housing_affordability_context",
       "community": 24,
-      "norm_label": "population pressure context for housing affordability"
+      "norm_label": "population pressure context for housing affordability",
+      "id": "context_pop_housing_affordability_context"
     },
     {
       "label": "Cash Rate & Mortgage Rates Chart",
@@ -4030,9 +4030,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_cash_rate_mortgage_rates_chart",
       "community": 18,
-      "norm_label": "cash rate & mortgage rates chart"
+      "norm_label": "cash rate & mortgage rates chart",
+      "id": "context_rates_cash_rate_mortgage_rates_chart"
     },
     {
       "label": "RBA Cash Rate",
@@ -4043,9 +4043,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_rba_cash_rate",
       "community": 18,
-      "norm_label": "rba cash rate"
+      "norm_label": "rba cash rate",
+      "id": "context_rates_rba_cash_rate"
     },
     {
       "label": "Owner-occupied 3yr Fixed Mortgage Rate",
@@ -4056,9 +4056,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_owner_occupied_three_year_fixed_mortgage_rate",
       "community": 18,
-      "norm_label": "owner-occupied 3yr fixed mortgage rate"
+      "norm_label": "owner-occupied 3yr fixed mortgage rate",
+      "id": "context_rates_owner_occupied_three_year_fixed_mortgage_rate"
     },
     {
       "label": "Owner-occupied Variable Discounted Mortgage Rate",
@@ -4069,9 +4069,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_owner_occupied_variable_discounted_mortgage_rate",
       "community": 18,
-      "norm_label": "owner-occupied variable discounted mortgage rate"
+      "norm_label": "owner-occupied variable discounted mortgage rate",
+      "id": "context_rates_owner_occupied_variable_discounted_mortgage_rate"
     },
     {
       "label": "Investor 3yr Fixed Mortgage Rate",
@@ -4082,9 +4082,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_investor_three_year_fixed_mortgage_rate",
       "community": 18,
-      "norm_label": "investor 3yr fixed mortgage rate"
+      "norm_label": "investor 3yr fixed mortgage rate",
+      "id": "context_rates_investor_three_year_fixed_mortgage_rate"
     },
     {
       "label": "Investor Variable Discounted Mortgage Rate",
@@ -4095,9 +4095,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_investor_variable_discounted_mortgage_rate",
       "community": 18,
-      "norm_label": "investor variable discounted mortgage rate"
+      "norm_label": "investor variable discounted mortgage rate",
+      "id": "context_rates_investor_variable_discounted_mortgage_rate"
     },
     {
       "label": "Interest Rate Transmission to Housing Costs",
@@ -4108,9 +4108,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_interest_rate_transmission_to_housing_costs",
       "community": 18,
-      "norm_label": "interest rate transmission to housing costs"
+      "norm_label": "interest rate transmission to housing costs",
+      "id": "context_rates_interest_rate_transmission_to_housing_costs"
     },
     {
       "label": "Post-2022 Rate Tightening",
@@ -4121,9 +4121,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_post_2022_rate_tightening",
       "community": 18,
-      "norm_label": "post-2022 rate tightening"
+      "norm_label": "post-2022 rate tightening",
+      "id": "context_rates_post_2022_rate_tightening"
     },
     {
       "label": "Mortgage Rate and Cash Rate Spread",
@@ -4134,9 +4134,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_mortgage_rate_cash_rate_spread",
       "community": 18,
-      "norm_label": "mortgage rate and cash rate spread"
+      "norm_label": "mortgage rate and cash rate spread",
+      "id": "context_rates_mortgage_rate_cash_rate_spread"
     },
     {
       "label": "Percentage Rate Axis",
@@ -4147,9 +4147,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "context_rates_percentage_rate_axis",
       "community": 18,
-      "norm_label": "percentage rate axis"
+      "norm_label": "percentage rate axis",
+      "id": "context_rates_percentage_rate_axis"
     },
     {
       "label": "Change in Affordability Indices Since Base Period Chart",
@@ -4160,9 +4160,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_change_in_affordability_indices_chart",
       "community": 13,
-      "norm_label": "change in affordability indices since base period chart"
+      "norm_label": "change in affordability indices since base period chart",
+      "id": "overview_afford_change_change_in_affordability_indices_chart"
     },
     {
       "label": "Deposit Affordability",
@@ -4173,9 +4173,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_deposit_affordability",
       "community": 13,
-      "norm_label": "deposit affordability"
+      "norm_label": "deposit affordability",
+      "id": "overview_afford_change_deposit_affordability"
     },
     {
       "label": "Mortgage Affordability",
@@ -4186,9 +4186,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_mortgage_affordability",
       "community": 13,
-      "norm_label": "mortgage affordability"
+      "norm_label": "mortgage affordability",
+      "id": "overview_afford_change_mortgage_affordability"
     },
     {
       "label": "Rent Affordability",
@@ -4199,9 +4199,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_rent_affordability",
       "community": 13,
-      "norm_label": "rent affordability"
+      "norm_label": "rent affordability",
+      "id": "overview_afford_change_rent_affordability"
     },
     {
       "label": "Change from Base Period Axis",
@@ -4212,9 +4212,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_change_from_base_period_axis",
       "community": 13,
-      "norm_label": "change from base period axis"
+      "norm_label": "change from base period axis",
+      "id": "overview_afford_change_change_from_base_period_axis"
     },
     {
       "label": "Percentage Scale from 0% to Above 150%",
@@ -4225,9 +4225,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_percentage_scale_0_to_150_plus",
       "community": 13,
-      "norm_label": "percentage scale from 0% to above 150%"
+      "norm_label": "percentage scale from 0% to above 150%",
+      "id": "overview_afford_change_percentage_scale_0_to_150_plus"
     },
     {
       "label": "Time Axis from Jan 1999 to Jan 2026",
@@ -4238,9 +4238,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_time_axis_1999_to_2026",
       "community": 13,
-      "norm_label": "time axis from jan 1999 to jan 2026"
+      "norm_label": "time axis from jan 1999 to jan 2026",
+      "id": "overview_afford_change_time_axis_1999_to_2026"
     },
     {
       "label": "Deposit Affordability Approx 160% Above Base Period Latest",
@@ -4251,9 +4251,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_deposit_affordability_approx_160_percent_latest",
       "community": 13,
-      "norm_label": "deposit affordability approx 160% above base period latest"
+      "norm_label": "deposit affordability approx 160% above base period latest",
+      "id": "overview_afford_change_deposit_affordability_approx_160_percent_latest"
     },
     {
       "label": "Mortgage Affordability Approx 130% Above Base Period Latest",
@@ -4264,9 +4264,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_mortgage_affordability_approx_130_percent_latest",
       "community": 13,
-      "norm_label": "mortgage affordability approx 130% above base period latest"
+      "norm_label": "mortgage affordability approx 130% above base period latest",
+      "id": "overview_afford_change_mortgage_affordability_approx_130_percent_latest"
     },
     {
       "label": "Rent Affordability Near Base Period Latest",
@@ -4277,9 +4277,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_rent_affordability_near_base_latest",
       "community": 13,
-      "norm_label": "rent affordability near base period latest"
+      "norm_label": "rent affordability near base period latest",
+      "id": "overview_afford_change_rent_affordability_near_base_latest"
     },
     {
       "label": "Post-2020 Affordability Deterioration",
@@ -4290,9 +4290,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_post_2020_affordability_deterioration",
       "community": 13,
-      "norm_label": "post-2020 affordability deterioration"
+      "norm_label": "post-2020 affordability deterioration",
+      "id": "overview_afford_change_post_2020_affordability_deterioration"
     },
     {
       "label": "Post-2022 Mortgage Affordability Surge",
@@ -4303,9 +4303,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_post_2022_mortgage_affordability_surge",
       "community": 13,
-      "norm_label": "post-2022 mortgage affordability surge"
+      "norm_label": "post-2022 mortgage affordability surge",
+      "id": "overview_afford_change_post_2022_mortgage_affordability_surge"
     },
     {
       "label": "Cross-Indicator Affordability Comparison",
@@ -4316,9 +4316,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_afford_change_cross_indicator_affordability_comparison",
       "community": 13,
-      "norm_label": "cross-indicator affordability comparison"
+      "norm_label": "cross-indicator affordability comparison",
+      "id": "overview_afford_change_cross_indicator_affordability_comparison"
     },
     {
       "label": "overview_median_prices.png",
@@ -4329,9 +4329,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_image",
       "community": 10,
-      "norm_label": "overview_median_prices.png"
+      "norm_label": "overview_median_prices.png",
+      "id": "overview_median_prices_image"
     },
     {
       "label": "Capital City Median House Prices",
@@ -4342,9 +4342,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_capital_city_median_house_prices",
       "community": 10,
-      "norm_label": "capital city median house prices"
+      "norm_label": "capital city median house prices",
+      "id": "overview_median_prices_capital_city_median_house_prices"
     },
     {
       "label": "Y-axis in Australian dollars thousands",
@@ -4355,9 +4355,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_y_axis_thousands_aud",
       "community": 10,
-      "norm_label": "y-axis in australian dollars thousands"
+      "norm_label": "y-axis in australian dollars thousands",
+      "id": "overview_median_prices_y_axis_thousands_aud"
     },
     {
       "label": "X-axis years 2012 to 2027",
@@ -4368,9 +4368,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_x_axis_years",
       "community": 10,
-      "norm_label": "x-axis years 2012 to 2027"
+      "norm_label": "x-axis years 2012 to 2027",
+      "id": "overview_median_prices_x_axis_years"
     },
     {
       "label": "Sydney median house price series",
@@ -4381,9 +4381,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_sydney_series",
       "community": 10,
-      "norm_label": "sydney median house price series"
+      "norm_label": "sydney median house price series",
+      "id": "overview_median_prices_sydney_series"
     },
     {
       "label": "Canberra median house price series",
@@ -4394,9 +4394,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_canberra_series",
       "community": 10,
-      "norm_label": "canberra median house price series"
+      "norm_label": "canberra median house price series",
+      "id": "overview_median_prices_canberra_series"
     },
     {
       "label": "Brisbane median house price series",
@@ -4407,9 +4407,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_brisbane_series",
       "community": 10,
-      "norm_label": "brisbane median house price series"
+      "norm_label": "brisbane median house price series",
+      "id": "overview_median_prices_brisbane_series"
     },
     {
       "label": "National Avg median house price series",
@@ -4420,9 +4420,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_national_avg_series",
       "community": 10,
-      "norm_label": "national avg median house price series"
+      "norm_label": "national avg median house price series",
+      "id": "overview_median_prices_national_avg_series"
     },
     {
       "label": "Adelaide median house price series",
@@ -4433,9 +4433,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_adelaide_series",
       "community": 10,
-      "norm_label": "adelaide median house price series"
+      "norm_label": "adelaide median house price series",
+      "id": "overview_median_prices_adelaide_series"
     },
     {
       "label": "Perth median house price series",
@@ -4446,9 +4446,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_perth_series",
       "community": 10,
-      "norm_label": "perth median house price series"
+      "norm_label": "perth median house price series",
+      "id": "overview_median_prices_perth_series"
     },
     {
       "label": "Melbourne median house price series",
@@ -4459,9 +4459,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_melbourne_series",
       "community": 10,
-      "norm_label": "melbourne median house price series"
+      "norm_label": "melbourne median house price series",
+      "id": "overview_median_prices_melbourne_series"
     },
     {
       "label": "Hobart median house price series",
@@ -4472,9 +4472,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_hobart_series",
       "community": 10,
-      "norm_label": "hobart median house price series"
+      "norm_label": "hobart median house price series",
+      "id": "overview_median_prices_hobart_series"
     },
     {
       "label": "Darwin median house price series",
@@ -4485,9 +4485,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_darwin_series",
       "community": 10,
-      "norm_label": "darwin median house price series"
+      "norm_label": "darwin median house price series",
+      "id": "overview_median_prices_darwin_series"
     },
     {
       "label": "Sydney remains the highest-priced capital city series",
@@ -4498,9 +4498,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_sydney_highest_price_insight",
       "community": 10,
-      "norm_label": "sydney remains the highest-priced capital city series"
+      "norm_label": "sydney remains the highest-priced capital city series",
+      "id": "overview_median_prices_sydney_highest_price_insight"
     },
     {
       "label": "Most capital city house prices rise strongly after 2021",
@@ -4511,9 +4511,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_post_2021_growth_insight",
       "community": 10,
-      "norm_label": "most capital city house prices rise strongly after 2021"
+      "norm_label": "most capital city house prices rise strongly after 2021",
+      "id": "overview_median_prices_post_2021_growth_insight"
     },
     {
       "label": "Benchmark capital city housing affordability pressure using median prices",
@@ -4524,9 +4524,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_median_prices_affordability_benchmark_purpose",
       "community": 10,
-      "norm_label": "benchmark capital city housing affordability pressure using median prices"
+      "norm_label": "benchmark capital city housing affordability pressure using median prices",
+      "id": "overview_median_prices_affordability_benchmark_purpose"
     },
     {
       "label": "Overview Serviceability Chart Image",
@@ -4537,9 +4537,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_image",
       "community": 12,
-      "norm_label": "overview serviceability chart image"
+      "norm_label": "overview serviceability chart image",
+      "id": "overview_serviceability_image"
     },
     {
       "label": "Housing Serviceability",
@@ -4550,9 +4550,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_housing_serviceability",
       "community": 12,
-      "norm_label": "housing serviceability"
+      "norm_label": "housing serviceability",
+      "id": "overview_serviceability_housing_serviceability"
     },
     {
       "label": "Housing Stress Threshold (30%)",
@@ -4563,9 +4563,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_housing_stress_threshold_30_percent",
       "community": 12,
-      "norm_label": "housing stress threshold (30%)"
+      "norm_label": "housing stress threshold (30%)",
+      "id": "overview_serviceability_housing_stress_threshold_30_percent"
     },
     {
       "label": "Percentage Y Axis",
@@ -4576,9 +4576,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_percent_y_axis",
       "community": 12,
-      "norm_label": "percentage y axis"
+      "norm_label": "percentage y axis",
+      "id": "overview_serviceability_percent_y_axis"
     },
     {
       "label": "Time Axis 2013 to 2025",
@@ -4589,9 +4589,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_time_axis_2013_2025",
       "community": 12,
-      "norm_label": "time axis 2013 to 2025"
+      "norm_label": "time axis 2013 to 2025",
+      "id": "overview_serviceability_time_axis_2013_2025"
     },
     {
       "label": "Pre-2013 Serviceability Above Threshold",
@@ -4602,9 +4602,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_pre_2013_above_threshold",
       "community": 12,
-      "norm_label": "pre-2013 serviceability above threshold"
+      "norm_label": "pre-2013 serviceability above threshold",
+      "id": "overview_serviceability_pre_2013_above_threshold"
     },
     {
       "label": "2013 to 2021 Serviceability Below Threshold",
@@ -4615,9 +4615,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_2013_2021_below_threshold",
       "community": 12,
-      "norm_label": "2013 to 2021 serviceability below threshold"
+      "norm_label": "2013 to 2021 serviceability below threshold",
+      "id": "overview_serviceability_2013_2021_below_threshold"
     },
     {
       "label": "2020 Serviceability Trough Near 24 Percent",
@@ -4628,9 +4628,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_2020_trough",
       "community": 12,
-      "norm_label": "2020 serviceability trough near 24 percent"
+      "norm_label": "2020 serviceability trough near 24 percent",
+      "id": "overview_serviceability_2020_trough"
     },
     {
       "label": "2022 Threshold Crossing",
@@ -4641,9 +4641,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_2022_threshold_crossing",
       "community": 12,
-      "norm_label": "2022 threshold crossing"
+      "norm_label": "2022 threshold crossing",
+      "id": "overview_serviceability_2022_threshold_crossing"
     },
     {
       "label": "2023 to 2025 Elevated Housing Stress",
@@ -4654,9 +4654,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_2023_2025_elevated_stress",
       "community": 12,
-      "norm_label": "2023 to 2025 elevated housing stress"
+      "norm_label": "2023 to 2025 elevated housing stress",
+      "id": "overview_serviceability_2023_2025_elevated_stress"
     },
     {
       "label": "Peak Above 50 Percent Around 2024",
@@ -4667,9 +4667,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_peak_above_50_percent",
       "community": 12,
-      "norm_label": "peak above 50 percent around 2024"
+      "norm_label": "peak above 50 percent around 2024",
+      "id": "overview_serviceability_peak_above_50_percent"
     },
     {
       "label": "Latest Value Near 50 Percent",
@@ -4680,9 +4680,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_latest_near_50_percent",
       "community": 12,
-      "norm_label": "latest value near 50 percent"
+      "norm_label": "latest value near 50 percent",
+      "id": "overview_serviceability_latest_near_50_percent"
     },
     {
       "label": "Sharp Post-2021 Deterioration In Housing Serviceability",
@@ -4693,9 +4693,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_trend_insight",
       "community": 12,
-      "norm_label": "sharp post-2021 deterioration in housing serviceability"
+      "norm_label": "sharp post-2021 deterioration in housing serviceability",
+      "id": "overview_serviceability_trend_insight"
     },
     {
       "label": "Assess Mortgage Or Housing Cost Burden Against Stress Benchmark",
@@ -4706,9 +4706,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "overview_serviceability_analytical_purpose",
       "community": 12,
-      "norm_label": "assess mortgage or housing cost burden against stress benchmark"
+      "norm_label": "assess mortgage or housing cost burden against stress benchmark",
+      "id": "overview_serviceability_analytical_purpose"
     },
     {
       "label": "Dwelling Price Index by Capital City Chart",
@@ -4719,9 +4719,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_dwelling_price_index_chart",
       "community": 16,
-      "norm_label": "dwelling price index by capital city chart"
+      "norm_label": "dwelling price index by capital city chart",
+      "id": "price_chart_dwelling_price_index_chart"
     },
     {
       "label": "Y-axis: Index",
@@ -4732,9 +4732,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_index_y_axis",
       "community": 16,
-      "norm_label": "y-axis: index"
+      "norm_label": "y-axis: index",
+      "id": "price_chart_index_y_axis"
     },
     {
       "label": "X-axis: Time from about 2012 to 2025",
@@ -4745,9 +4745,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_time_x_axis",
       "community": 16,
-      "norm_label": "x-axis: time from about 2012 to 2025"
+      "norm_label": "x-axis: time from about 2012 to 2025",
+      "id": "price_chart_time_x_axis"
     },
     {
       "label": "Brisbane dwelling price index series",
@@ -4758,9 +4758,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_brisbane_series",
       "community": 16,
-      "norm_label": "brisbane dwelling price index series"
+      "norm_label": "brisbane dwelling price index series",
+      "id": "price_chart_brisbane_series"
     },
     {
       "label": "Melbourne dwelling price index series",
@@ -4771,9 +4771,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_melbourne_series",
       "community": 16,
-      "norm_label": "melbourne dwelling price index series"
+      "norm_label": "melbourne dwelling price index series",
+      "id": "price_chart_melbourne_series"
     },
     {
       "label": "Sydney dwelling price index series",
@@ -4784,9 +4784,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_sydney_series",
       "community": 16,
-      "norm_label": "sydney dwelling price index series"
+      "norm_label": "sydney dwelling price index series",
+      "id": "price_chart_sydney_series"
     },
     {
       "label": "Weighted average of eight capital cities dwelling price index series",
@@ -4797,9 +4797,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_weighted_average_series",
       "community": 16,
-      "norm_label": "weighted average of eight capital cities dwelling price index series"
+      "norm_label": "weighted average of eight capital cities dwelling price index series",
+      "id": "price_chart_weighted_average_series"
     },
     {
       "label": "Capital city dwelling price indexes generally rise substantially after 2012",
@@ -4810,9 +4810,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_price_growth_trend",
       "community": 16,
-      "norm_label": "capital city dwelling price indexes generally rise substantially after 2012"
+      "norm_label": "capital city dwelling price indexes generally rise substantially after 2012",
+      "id": "price_chart_price_growth_trend"
     },
     {
       "label": "Sydney appears to have the highest index by 2025",
@@ -4823,9 +4823,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_sydney_highest_index",
       "community": 16,
-      "norm_label": "sydney appears to have the highest index by 2025"
+      "norm_label": "sydney appears to have the highest index by 2025",
+      "id": "price_chart_sydney_highest_index"
     },
     {
       "label": "Brisbane shows a pronounced late-period surge after about 2020",
@@ -4836,9 +4836,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_brisbane_late_surge",
       "community": 16,
-      "norm_label": "brisbane shows a pronounced late-period surge after about 2020"
+      "norm_label": "brisbane shows a pronounced late-period surge after about 2020",
+      "id": "price_chart_brisbane_late_surge"
     },
     {
       "label": "Melbourne rises earlier but is comparatively flat after about 2021",
@@ -4849,9 +4849,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_melbourne_flattening",
       "community": 16,
-      "norm_label": "melbourne rises earlier but is comparatively flat after about 2021"
+      "norm_label": "melbourne rises earlier but is comparatively flat after about 2021",
+      "id": "price_chart_melbourne_flattening"
     },
     {
       "label": "Analytical purpose: compare capital city dwelling price growth as housing affordability pressure input",
@@ -4862,9 +4862,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_chart_affordability_purpose",
       "community": 16,
-      "norm_label": "analytical purpose: compare capital city dwelling price growth as housing affordability pressure input"
+      "norm_label": "analytical purpose: compare capital city dwelling price growth as housing affordability pressure input",
+      "id": "price_chart_affordability_purpose"
     },
     {
       "label": "CPI New Dwelling Purchase Chart",
@@ -4875,9 +4875,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_chart",
       "community": 19,
-      "norm_label": "cpi new dwelling purchase chart"
+      "norm_label": "cpi new dwelling purchase chart",
+      "id": "price_cpi_construction_chart"
     },
     {
       "label": "CPI New Dwelling Purchase (Construction Cost)",
@@ -4888,9 +4888,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_title",
       "community": 19,
-      "norm_label": "cpi new dwelling purchase (construction cost)"
+      "norm_label": "cpi new dwelling purchase (construction cost)",
+      "id": "price_cpi_construction_title"
     },
     {
       "label": "Index Y Axis",
@@ -4901,9 +4901,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_y_axis_index",
       "community": 19,
-      "norm_label": "index y axis"
+      "norm_label": "index y axis",
+      "id": "price_cpi_construction_y_axis_index"
     },
     {
       "label": "Index Ticks 70 80 90 100",
@@ -4914,9 +4914,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_index_ticks",
       "community": 19,
-      "norm_label": "index ticks 70 80 90 100"
+      "norm_label": "index ticks 70 80 90 100",
+      "id": "price_cpi_construction_index_ticks"
     },
     {
       "label": "2022 X Axis Marker",
@@ -4927,9 +4927,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_x_axis_2022",
       "community": 19,
-      "norm_label": "2022 x axis marker"
+      "norm_label": "2022 x axis marker",
+      "id": "price_cpi_construction_x_axis_2022"
     },
     {
       "label": "New Dwelling Purchase Construction Cost Index Series",
@@ -4940,9 +4940,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_line_series",
       "community": 19,
-      "norm_label": "new dwelling purchase construction cost index series"
+      "norm_label": "new dwelling purchase construction cost index series",
+      "id": "price_cpi_construction_line_series"
     },
     {
       "label": "Index Rises From About 69 To Above 101",
@@ -4953,9 +4953,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_metric_range",
       "community": 19,
-      "norm_label": "index rises from about 69 to above 101"
+      "norm_label": "index rises from about 69 to above 101",
+      "id": "price_cpi_construction_metric_range"
     },
     {
       "label": "Sharp Acceleration Around 2021 To 2022 Followed By Continued Growth",
@@ -4966,9 +4966,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_trend_acceleration",
       "community": 19,
-      "norm_label": "sharp acceleration around 2021 to 2022 followed by continued growth"
+      "norm_label": "sharp acceleration around 2021 to 2022 followed by continued growth",
+      "id": "price_cpi_construction_trend_acceleration"
     },
     {
       "label": "Brief Plateau Near Index 98 To 99 Before Rising Again",
@@ -4979,9 +4979,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_trend_plateau",
       "community": 19,
-      "norm_label": "brief plateau near index 98 to 99 before rising again"
+      "norm_label": "brief plateau near index 98 to 99 before rising again",
+      "id": "price_cpi_construction_trend_plateau"
     },
     {
       "label": "Analytical Purpose Construction Cost Inflation Input For Housing Affordability Assessment",
@@ -4992,9 +4992,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "price_cpi_construction_affordability_purpose",
       "community": 19,
-      "norm_label": "analytical purpose construction cost inflation input for housing affordability assessment"
+      "norm_label": "analytical purpose construction cost inflation input for housing affordability assessment",
+      "id": "price_cpi_construction_affordability_purpose"
     },
     {
       "label": "Rental Affordability Index Chart",
@@ -5005,9 +5005,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_chart",
       "community": 17,
-      "norm_label": "rental affordability index chart"
+      "norm_label": "rental affordability index chart",
+      "id": "rental_afford_index_chart"
     },
     {
       "label": "Rental Affordability Index",
@@ -5018,9 +5018,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_title",
       "community": 17,
-      "norm_label": "rental affordability index"
+      "norm_label": "rental affordability index",
+      "id": "rental_afford_index_title"
     },
     {
       "label": "Index (CPI Rents / WPI)",
@@ -5031,9 +5031,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_y_axis",
       "community": 17,
-      "norm_label": "index (cpi rents / wpi)"
+      "norm_label": "index (cpi rents / wpi)",
+      "id": "rental_afford_index_y_axis"
     },
     {
       "label": "Years 1998 to 2026",
@@ -5044,9 +5044,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_x_axis_years",
       "community": 17,
-      "norm_label": "years 1998 to 2026"
+      "norm_label": "years 1998 to 2026",
+      "id": "rental_afford_index_x_axis_years"
     },
     {
       "label": "Red Line Index Series",
@@ -5057,9 +5057,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_line_series",
       "community": 17,
-      "norm_label": "red line index series"
+      "norm_label": "red line index series",
+      "id": "rental_afford_index_line_series"
     },
     {
       "label": "Index Baseline Around 100",
@@ -5070,9 +5070,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_baseline_100",
       "community": 17,
-      "norm_label": "index baseline around 100"
+      "norm_label": "index baseline around 100",
+      "id": "rental_afford_index_baseline_100"
     },
     {
       "label": "Mid-2000s Index Trough Around 94",
@@ -5083,9 +5083,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_mid_2000s_low",
       "community": 17,
-      "norm_label": "mid-2000s index trough around 94"
+      "norm_label": "mid-2000s index trough around 94",
+      "id": "rental_afford_index_mid_2000s_low"
     },
     {
       "label": "Early-2010s Index Peak Around 105",
@@ -5096,9 +5096,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_early_2010s_peak",
       "community": 17,
-      "norm_label": "early-2010s index peak around 105"
+      "norm_label": "early-2010s index peak around 105",
+      "id": "rental_afford_index_early_2010s_peak"
     },
     {
       "label": "Early-2020s Index Trough Around 93",
@@ -5109,9 +5109,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_early_2020s_low",
       "community": 17,
-      "norm_label": "early-2020s index trough around 93"
+      "norm_label": "early-2020s index trough around 93",
+      "id": "rental_afford_index_early_2020s_low"
     },
     {
       "label": "2024 to 2026 Rebound Toward 100",
@@ -5122,9 +5122,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_2024_2026_rebound",
       "community": 17,
-      "norm_label": "2024 to 2026 rebound toward 100"
+      "norm_label": "2024 to 2026 rebound toward 100",
+      "id": "rental_afford_index_2024_2026_rebound"
     },
     {
       "label": "Relative Rent and Wage Pressure",
@@ -5135,9 +5135,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_relative_rent_wage_pressure",
       "community": 17,
-      "norm_label": "relative rent and wage pressure"
+      "norm_label": "relative rent and wage pressure",
+      "id": "rental_afford_index_relative_rent_wage_pressure"
     },
     {
       "label": "Rental Affordability Trend Monitoring Purpose",
@@ -5148,9 +5148,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_afford_index_affordability_purpose",
       "community": 17,
-      "norm_label": "rental affordability trend monitoring purpose"
+      "norm_label": "rental affordability trend monitoring purpose",
+      "id": "rental_afford_index_affordability_purpose"
     },
     {
       "label": "Weekly Rental Costs by Age Group Chart",
@@ -5161,9 +5161,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_chart",
       "community": 9,
-      "norm_label": "weekly rental costs by age group chart"
+      "norm_label": "weekly rental costs by age group chart",
+      "id": "rental_costs_demo_chart"
     },
     {
       "label": "Weekly Rental Costs by Age Group 2019-20",
@@ -5174,9 +5174,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_title_2019_20",
       "community": 9,
-      "norm_label": "weekly rental costs by age group 2019-20"
+      "norm_label": "weekly rental costs by age group 2019-20",
+      "id": "rental_costs_demo_title_2019_20"
     },
     {
       "label": "Mean Weekly Rent Axis in Australian Dollars",
@@ -5187,9 +5187,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_mean_weekly_rent_axis",
       "community": 9,
-      "norm_label": "mean weekly rent axis in australian dollars"
+      "norm_label": "mean weekly rent axis in australian dollars",
+      "id": "rental_costs_demo_mean_weekly_rent_axis"
     },
     {
       "label": "Age Group Axis",
@@ -5200,9 +5200,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_age_group_axis",
       "community": 9,
-      "norm_label": "age group axis"
+      "norm_label": "age group axis",
+      "id": "rental_costs_demo_age_group_axis"
     },
     {
       "label": "All Renters Series",
@@ -5213,9 +5213,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_all_renters_series",
       "community": 9,
-      "norm_label": "all renters series"
+      "norm_label": "all renters series",
+      "id": "rental_costs_demo_all_renters_series"
     },
     {
       "label": "Private Renter Series",
@@ -5226,9 +5226,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_private_renter_series",
       "community": 9,
-      "norm_label": "private renter series"
+      "norm_label": "private renter series",
+      "id": "rental_costs_demo_private_renter_series"
     },
     {
       "label": "15 to 24 Age Group",
@@ -5239,9 +5239,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_15_to_24_age_group",
       "community": 9,
-      "norm_label": "15 to 24 age group"
+      "norm_label": "15 to 24 age group",
+      "id": "rental_costs_demo_15_to_24_age_group"
     },
     {
       "label": "25 to 34 Age Group",
@@ -5252,9 +5252,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_25_to_34_age_group",
       "community": 9,
-      "norm_label": "25 to 34 age group"
+      "norm_label": "25 to 34 age group",
+      "id": "rental_costs_demo_25_to_34_age_group"
     },
     {
       "label": "35 to 44 Age Group",
@@ -5265,9 +5265,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_35_to_44_age_group",
       "community": 9,
-      "norm_label": "35 to 44 age group"
+      "norm_label": "35 to 44 age group",
+      "id": "rental_costs_demo_35_to_44_age_group"
     },
     {
       "label": "45 to 54 Age Group",
@@ -5278,9 +5278,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_45_to_54_age_group",
       "community": 9,
-      "norm_label": "45 to 54 age group"
+      "norm_label": "45 to 54 age group",
+      "id": "rental_costs_demo_45_to_54_age_group"
     },
     {
       "label": "55 to 64 Age Group",
@@ -5291,9 +5291,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_55_to_64_age_group",
       "community": 9,
-      "norm_label": "55 to 64 age group"
+      "norm_label": "55 to 64 age group",
+      "id": "rental_costs_demo_55_to_64_age_group"
     },
     {
       "label": "65 and over Age Group",
@@ -5304,9 +5304,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_65_and_over_age_group",
       "community": 9,
-      "norm_label": "65 and over age group"
+      "norm_label": "65 and over age group",
+      "id": "rental_costs_demo_65_and_over_age_group"
     },
     {
       "label": "65 to 74 Age Group",
@@ -5317,9 +5317,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_65_to_74_age_group",
       "community": 9,
-      "norm_label": "65 to 74 age group"
+      "norm_label": "65 to 74 age group",
+      "id": "rental_costs_demo_65_to_74_age_group"
     },
     {
       "label": "75 and over Age Group",
@@ -5330,9 +5330,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_75_and_over_age_group",
       "community": 9,
-      "norm_label": "75 and over age group"
+      "norm_label": "75 and over age group",
+      "id": "rental_costs_demo_75_and_over_age_group"
     },
     {
       "label": "Private Renter Mean Rent Exceeds All Renters in Every Age Group",
@@ -5343,9 +5343,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_private_rents_exceed_all_renters",
       "community": 9,
-      "norm_label": "private renter mean rent exceeds all renters in every age group"
+      "norm_label": "private renter mean rent exceeds all renters in every age group",
+      "id": "rental_costs_demo_private_rents_exceed_all_renters"
     },
     {
       "label": "Highest Mean Weekly Rental Costs Around Ages 35 to 44",
@@ -5356,9 +5356,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_peak_costs_35_to_44",
       "community": 9,
-      "norm_label": "highest mean weekly rental costs around ages 35 to 44"
+      "norm_label": "highest mean weekly rental costs around ages 35 to 44",
+      "id": "rental_costs_demo_peak_costs_35_to_44"
     },
     {
       "label": "Older Age Groups Have Lower Mean Weekly Rental Costs",
@@ -5369,9 +5369,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_lower_costs_older_households",
       "community": 9,
-      "norm_label": "older age groups have lower mean weekly rental costs"
+      "norm_label": "older age groups have lower mean weekly rental costs",
+      "id": "rental_costs_demo_lower_costs_older_households"
     },
     {
       "label": "Age Gradient in Rental Costs",
@@ -5382,9 +5382,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_costs_demo_age_gradient_comparison",
       "community": 9,
-      "norm_label": "age gradient in rental costs"
+      "norm_label": "age gradient in rental costs",
+      "id": "rental_costs_demo_age_gradient_comparison"
     },
     {
       "label": "NHHA Rental Stress by State Chart",
@@ -5395,9 +5395,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_chart",
       "community": 7,
-      "norm_label": "nhha rental stress by state chart"
+      "norm_label": "nhha rental stress by state chart",
+      "id": "rental_stress_state_chart"
     },
     {
       "label": "NHHA Rental Stress Measure",
@@ -5408,9 +5408,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_nhha_measure",
       "community": 7,
-      "norm_label": "nhha rental stress measure"
+      "norm_label": "nhha rental stress measure",
+      "id": "rental_stress_state_nhha_measure"
     },
     {
       "label": "2019-20 Reference Period",
@@ -5421,9 +5421,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_2019_20_period",
       "community": 7,
-      "norm_label": "2019-20 reference period"
+      "norm_label": "2019-20 reference period",
+      "id": "rental_stress_state_2019_20_period"
     },
     {
       "label": "Y-axis Percent in Rental Stress Greater Than 30 Percent of Income",
@@ -5434,9 +5434,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_y_axis_percent_income",
       "community": 7,
-      "norm_label": "y-axis percent in rental stress greater than 30 percent of income"
+      "norm_label": "y-axis percent in rental stress greater than 30 percent of income",
+      "id": "rental_stress_state_y_axis_percent_income"
     },
     {
       "label": "X-axis Australian States and Territories",
@@ -5447,9 +5447,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_x_axis_states",
       "community": 7,
-      "norm_label": "x-axis australian states and territories"
+      "norm_label": "x-axis australian states and territories",
+      "id": "rental_stress_state_x_axis_states"
     },
     {
       "label": "Dashed Average Reference Line Around 45 Percent",
@@ -5460,9 +5460,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_average_reference_line",
       "community": 7,
-      "norm_label": "dashed average reference line around 45 percent"
+      "norm_label": "dashed average reference line around 45 percent",
+      "id": "rental_stress_state_average_reference_line"
     },
     {
       "label": "NSW Rental Stress",
@@ -5473,9 +5473,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_nsw",
       "community": 7,
-      "norm_label": "nsw rental stress"
+      "norm_label": "nsw rental stress",
+      "id": "rental_stress_state_nsw"
     },
     {
       "label": "Queensland Rental Stress",
@@ -5486,9 +5486,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_qld",
       "community": 7,
-      "norm_label": "queensland rental stress"
+      "norm_label": "queensland rental stress",
+      "id": "rental_stress_state_qld"
     },
     {
       "label": "Victoria Rental Stress",
@@ -5499,9 +5499,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_vic",
       "community": 7,
-      "norm_label": "victoria rental stress"
+      "norm_label": "victoria rental stress",
+      "id": "rental_stress_state_vic"
     },
     {
       "label": "Tasmania Rental Stress",
@@ -5512,9 +5512,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_tas",
       "community": 7,
-      "norm_label": "tasmania rental stress"
+      "norm_label": "tasmania rental stress",
+      "id": "rental_stress_state_tas"
     },
     {
       "label": "Western Australia Rental Stress",
@@ -5525,9 +5525,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_wa",
       "community": 7,
-      "norm_label": "western australia rental stress"
+      "norm_label": "western australia rental stress",
+      "id": "rental_stress_state_wa"
     },
     {
       "label": "Northern Territory Rental Stress",
@@ -5538,9 +5538,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_nt",
       "community": 7,
-      "norm_label": "northern territory rental stress"
+      "norm_label": "northern territory rental stress",
+      "id": "rental_stress_state_nt"
     },
     {
       "label": "ACT Rental Stress",
@@ -5551,9 +5551,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_act",
       "community": 7,
-      "norm_label": "act rental stress"
+      "norm_label": "act rental stress",
+      "id": "rental_stress_state_act"
     },
     {
       "label": "South Australia Rental Stress",
@@ -5564,9 +5564,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_sa",
       "community": 7,
-      "norm_label": "south australia rental stress"
+      "norm_label": "south australia rental stress",
+      "id": "rental_stress_state_sa"
     },
     {
       "label": "NSW and Queensland Highest Rental Stress",
@@ -5577,9 +5577,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_nsw_qld_highest",
       "community": 7,
-      "norm_label": "nsw and queensland highest rental stress"
+      "norm_label": "nsw and queensland highest rental stress",
+      "id": "rental_stress_state_nsw_qld_highest"
     },
     {
       "label": "Victoria Third Highest Rental Stress",
@@ -5590,9 +5590,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_vic_third_highest",
       "community": 7,
-      "norm_label": "victoria third highest rental stress"
+      "norm_label": "victoria third highest rental stress",
+      "id": "rental_stress_state_vic_third_highest"
     },
     {
       "label": "ACT Lowest Rental Stress",
@@ -5603,9 +5603,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_act_lowest",
       "community": 7,
-      "norm_label": "act lowest rental stress"
+      "norm_label": "act lowest rental stress",
+      "id": "rental_stress_state_act_lowest"
     },
     {
       "label": "All States and Territories Above Reference Line",
@@ -5616,9 +5616,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_all_above_reference",
       "community": 7,
-      "norm_label": "all states and territories above reference line"
+      "norm_label": "all states and territories above reference line",
+      "id": "rental_stress_state_all_above_reference"
     },
     {
       "label": "Cross-Jurisdiction Rental Stress Comparison",
@@ -5629,9 +5629,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_state_cross_jurisdiction_comparison",
       "community": 7,
-      "norm_label": "cross-jurisdiction rental stress comparison"
+      "norm_label": "cross-jurisdiction rental stress comparison",
+      "id": "rental_stress_state_cross_jurisdiction_comparison"
     },
     {
       "label": "NHHA Rental Stress Trends Over Time Chart",
@@ -5642,9 +5642,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_nhha_rental_stress_trends_chart",
       "community": 6,
-      "norm_label": "nhha rental stress trends over time chart"
+      "norm_label": "nhha rental stress trends over time chart",
+      "id": "rental_stress_trend_nhha_rental_stress_trends_chart"
     },
     {
       "label": "Percent in Rental Stress Axis",
@@ -5655,9 +5655,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_percent_in_rental_stress_axis",
       "community": 6,
-      "norm_label": "percent in rental stress axis"
+      "norm_label": "percent in rental stress axis",
+      "id": "rental_stress_trend_percent_in_rental_stress_axis"
     },
     {
       "label": "Time Axis from 2007 to 2019",
@@ -5668,9 +5668,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_time_axis_2007_to_2019",
       "community": 6,
-      "norm_label": "time axis from 2007 to 2019"
+      "norm_label": "time axis from 2007 to 2019",
+      "id": "rental_stress_trend_time_axis_2007_to_2019"
     },
     {
       "label": "NHHA Rental Stress Measure",
@@ -5681,9 +5681,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_nhha_rental_stress_measure",
       "community": 6,
-      "norm_label": "nhha rental stress measure"
+      "norm_label": "nhha rental stress measure",
+      "id": "rental_stress_trend_nhha_rental_stress_measure"
     },
     {
       "label": "No Explicit Threshold Line Visible",
@@ -5694,9 +5694,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_no_explicit_threshold_line",
       "community": 6,
-      "norm_label": "no explicit threshold line visible"
+      "norm_label": "no explicit threshold line visible",
+      "id": "rental_stress_trend_no_explicit_threshold_line"
     },
     {
       "label": "Australia Rental Stress Series",
@@ -5707,9 +5707,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_australia_series",
       "community": 6,
-      "norm_label": "australia rental stress series"
+      "norm_label": "australia rental stress series",
+      "id": "rental_stress_trend_australia_series"
     },
     {
       "label": "ACT Rental Stress Series",
@@ -5720,9 +5720,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_act_series",
       "community": 6,
-      "norm_label": "act rental stress series"
+      "norm_label": "act rental stress series",
+      "id": "rental_stress_trend_act_series"
     },
     {
       "label": "NSW Rental Stress Series",
@@ -5733,9 +5733,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_nsw_series",
       "community": 6,
-      "norm_label": "nsw rental stress series"
+      "norm_label": "nsw rental stress series",
+      "id": "rental_stress_trend_nsw_series"
     },
     {
       "label": "NT Rental Stress Series",
@@ -5746,9 +5746,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_nt_series",
       "community": 6,
-      "norm_label": "nt rental stress series"
+      "norm_label": "nt rental stress series",
+      "id": "rental_stress_trend_nt_series"
     },
     {
       "label": "Queensland Rental Stress Series",
@@ -5759,9 +5759,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_qld_series",
       "community": 6,
-      "norm_label": "queensland rental stress series"
+      "norm_label": "queensland rental stress series",
+      "id": "rental_stress_trend_qld_series"
     },
     {
       "label": "South Australia Rental Stress Series",
@@ -5772,9 +5772,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_sa_series",
       "community": 6,
-      "norm_label": "south australia rental stress series"
+      "norm_label": "south australia rental stress series",
+      "id": "rental_stress_trend_sa_series"
     },
     {
       "label": "Tasmania Rental Stress Series",
@@ -5785,9 +5785,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_tas_series",
       "community": 6,
-      "norm_label": "tasmania rental stress series"
+      "norm_label": "tasmania rental stress series",
+      "id": "rental_stress_trend_tas_series"
     },
     {
       "label": "Victoria Rental Stress Series",
@@ -5798,9 +5798,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_vic_series",
       "community": 6,
-      "norm_label": "victoria rental stress series"
+      "norm_label": "victoria rental stress series",
+      "id": "rental_stress_trend_vic_series"
     },
     {
       "label": "Western Australia Rental Stress Series",
@@ -5811,9 +5811,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_wa_series",
       "community": 6,
-      "norm_label": "western australia rental stress series"
+      "norm_label": "western australia rental stress series",
+      "id": "rental_stress_trend_wa_series"
     },
     {
       "label": "NSW Persistent High Rental Stress",
@@ -5824,9 +5824,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_nsw_persistent_high_stress",
       "community": 6,
-      "norm_label": "nsw persistent high rental stress"
+      "norm_label": "nsw persistent high rental stress",
+      "id": "rental_stress_trend_nsw_persistent_high_stress"
     },
     {
       "label": "Tasmania Sharp Rise by 2019",
@@ -5837,9 +5837,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_tasmania_late_sharp_rise",
       "community": 6,
-      "norm_label": "tasmania sharp rise by 2019"
+      "norm_label": "tasmania sharp rise by 2019",
+      "id": "rental_stress_trend_tasmania_late_sharp_rise"
     },
     {
       "label": "NT High Volatility Across Years",
@@ -5850,9 +5850,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_nt_high_volatility",
       "community": 6,
-      "norm_label": "nt high volatility across years"
+      "norm_label": "nt high volatility across years",
+      "id": "rental_stress_trend_nt_high_volatility"
     },
     {
       "label": "Cross-State Dispersion in Rental Stress",
@@ -5863,9 +5863,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_cross_state_dispersion",
       "community": 6,
-      "norm_label": "cross-state dispersion in rental stress"
+      "norm_label": "cross-state dispersion in rental stress",
+      "id": "rental_stress_trend_cross_state_dispersion"
     },
     {
       "label": "2013 Elevated Rental Stress Cluster",
@@ -5876,9 +5876,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_2013_elevated_stress_cluster",
       "community": 6,
-      "norm_label": "2013 elevated rental stress cluster"
+      "norm_label": "2013 elevated rental stress cluster",
+      "id": "rental_stress_trend_2013_elevated_stress_cluster"
     },
     {
       "label": "2019 Mixed State Rental Stress Outcomes",
@@ -5889,9 +5889,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "rental_stress_trend_2019_mixed_state_outcomes",
       "community": 6,
-      "norm_label": "2019 mixed state rental stress outcomes"
+      "norm_label": "2019 mixed state rental stress outcomes",
+      "id": "rental_stress_trend_2019_mixed_state_outcomes"
     },
     {
       "label": "Housing Cost Stress Bands (2019-20) by Age Group Chart",
@@ -5902,9 +5902,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_housing_cost_stress_bands_chart",
       "community": 5,
-      "norm_label": "housing cost stress bands (2019-20) by age group chart"
+      "norm_label": "housing cost stress bands (2019-20) by age group chart",
+      "id": "stress_chart_housing_cost_stress_bands_chart"
     },
     {
       "label": "Housing Cost-to-Income Ratio Metric",
@@ -5915,9 +5915,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_cost_income_ratio_metric",
       "community": 5,
-      "norm_label": "housing cost-to-income ratio metric"
+      "norm_label": "housing cost-to-income ratio metric",
+      "id": "stress_chart_cost_income_ratio_metric"
     },
     {
       "label": "Percent of Households Axis",
@@ -5928,9 +5928,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_percent_households_axis",
       "community": 5,
-      "norm_label": "percent of households axis"
+      "norm_label": "percent of households axis",
+      "id": "stress_chart_percent_households_axis"
     },
     {
       "label": "Age Group Axis",
@@ -5941,9 +5941,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_age_group_axis",
       "community": 5,
-      "norm_label": "age group axis"
+      "norm_label": "age group axis",
+      "id": "stress_chart_age_group_axis"
     },
     {
       "label": "Cost/Income Below 25% Band",
@@ -5954,9 +5954,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_under_25_percent_band",
       "community": 5,
-      "norm_label": "cost/income below 25% band"
+      "norm_label": "cost/income below 25% band",
+      "id": "stress_chart_under_25_percent_band"
     },
     {
       "label": "Cost/Income 25-30% Band",
@@ -5967,9 +5967,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_25_to_30_percent_band",
       "community": 5,
-      "norm_label": "cost/income 25-30% band"
+      "norm_label": "cost/income 25-30% band",
+      "id": "stress_chart_25_to_30_percent_band"
     },
     {
       "label": "Cost/Income 30-50% Band",
@@ -5980,9 +5980,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_30_to_50_percent_band",
       "community": 5,
-      "norm_label": "cost/income 30-50% band"
+      "norm_label": "cost/income 30-50% band",
+      "id": "stress_chart_30_to_50_percent_band"
     },
     {
       "label": "Cost/Income Above 50% Band",
@@ -5993,9 +5993,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_over_50_percent_band",
       "community": 5,
-      "norm_label": "cost/income above 50% band"
+      "norm_label": "cost/income above 50% band",
+      "id": "stress_chart_over_50_percent_band"
     },
     {
       "label": "Housing Stress Indicator at 30% or More of Income",
@@ -6006,9 +6006,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_housing_stress_30_plus_indicator",
       "community": 5,
-      "norm_label": "housing stress indicator at 30% or more of income"
+      "norm_label": "housing stress indicator at 30% or more of income",
+      "id": "stress_chart_housing_stress_30_plus_indicator"
     },
     {
       "label": "Severe Housing Stress Indicator Above 50% of Income",
@@ -6019,9 +6019,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_severe_stress_over_50_indicator",
       "community": 5,
-      "norm_label": "severe housing stress indicator above 50% of income"
+      "norm_label": "severe housing stress indicator above 50% of income",
+      "id": "stress_chart_severe_stress_over_50_indicator"
     },
     {
       "label": "15 to 24 Age Group",
@@ -6032,9 +6032,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_15_to_24_age_group",
       "community": 5,
-      "norm_label": "15 to 24 age group"
+      "norm_label": "15 to 24 age group",
+      "id": "stress_chart_15_to_24_age_group"
     },
     {
       "label": "25 to 34 Age Group",
@@ -6045,9 +6045,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_25_to_34_age_group",
       "community": 5,
-      "norm_label": "25 to 34 age group"
+      "norm_label": "25 to 34 age group",
+      "id": "stress_chart_25_to_34_age_group"
     },
     {
       "label": "35 to 44 Age Group",
@@ -6058,9 +6058,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_35_to_44_age_group",
       "community": 5,
-      "norm_label": "35 to 44 age group"
+      "norm_label": "35 to 44 age group",
+      "id": "stress_chart_35_to_44_age_group"
     },
     {
       "label": "45 to 54 Age Group",
@@ -6071,9 +6071,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_45_to_54_age_group",
       "community": 5,
-      "norm_label": "45 to 54 age group"
+      "norm_label": "45 to 54 age group",
+      "id": "stress_chart_45_to_54_age_group"
     },
     {
       "label": "55 to 64 Age Group",
@@ -6084,9 +6084,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_55_to_64_age_group",
       "community": 5,
-      "norm_label": "55 to 64 age group"
+      "norm_label": "55 to 64 age group",
+      "id": "stress_chart_55_to_64_age_group"
     },
     {
       "label": "65 and Over Age Group",
@@ -6097,9 +6097,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_65_and_over_age_group",
       "community": 5,
-      "norm_label": "65 and over age group"
+      "norm_label": "65 and over age group",
+      "id": "stress_chart_65_and_over_age_group"
     },
     {
       "label": "65 to 74 Age Group",
@@ -6110,9 +6110,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_65_to_74_age_group",
       "community": 5,
-      "norm_label": "65 to 74 age group"
+      "norm_label": "65 to 74 age group",
+      "id": "stress_chart_65_to_74_age_group"
     },
     {
       "label": "75 and Over Age Group",
@@ -6123,9 +6123,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_75_and_over_age_group",
       "community": 5,
-      "norm_label": "75 and over age group"
+      "norm_label": "75 and over age group",
+      "id": "stress_chart_75_and_over_age_group"
     },
     {
       "label": "15 to 24 Age Group Has Highest Visible Stress Share",
@@ -6136,9 +6136,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_15_to_24_highest_stress_share",
       "community": 5,
-      "norm_label": "15 to 24 age group has highest visible stress share"
+      "norm_label": "15 to 24 age group has highest visible stress share",
+      "id": "stress_chart_15_to_24_highest_stress_share"
     },
     {
       "label": "Younger Groups Have Larger 30% Plus Cost Bands",
@@ -6149,9 +6149,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_younger_groups_larger_30_plus_bands",
       "community": 5,
-      "norm_label": "younger groups have larger 30% plus cost bands"
+      "norm_label": "younger groups have larger 30% plus cost bands",
+      "id": "stress_chart_younger_groups_larger_30_plus_bands"
     },
     {
       "label": "Older Groups Show Lower High-Stress Shares",
@@ -6162,9 +6162,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_older_groups_lower_high_stress_share",
       "community": 5,
-      "norm_label": "older groups show lower high-stress shares"
+      "norm_label": "older groups show lower high-stress shares",
+      "id": "stress_chart_older_groups_lower_high_stress_share"
     },
     {
       "label": "Below 25% Cost Band Dominates Most Age Groups",
@@ -6175,9 +6175,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stress_chart_under_25_band_dominates_most_age_groups",
       "community": 5,
-      "norm_label": "below 25% cost band dominates most age groups"
+      "norm_label": "below 25% cost band dominates most age groups",
+      "id": "stress_chart_under_25_band_dominates_most_age_groups"
     },
     {
       "label": "renv logo.svg",
@@ -6188,9 +6188,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_logo_svg",
       "community": 25,
-      "norm_label": "renv logo.svg"
+      "norm_label": "renv logo.svg",
+      "id": "renv_logo_svg"
     },
     {
       "label": "Hexagonal badge",
@@ -6201,9 +6201,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_logo_hexagonal_badge",
       "community": 25,
-      "norm_label": "hexagonal badge"
+      "norm_label": "hexagonal badge",
+      "id": "renv_logo_hexagonal_badge"
     },
     {
       "label": "Leaf-like green symbol",
@@ -6214,9 +6214,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_logo_leaf_symbol",
       "community": 25,
-      "norm_label": "leaf-like green symbol"
+      "norm_label": "leaf-like green symbol",
+      "id": "renv_logo_leaf_symbol"
     },
     {
       "label": "renv wordmark",
@@ -6227,9 +6227,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_logo_wordmark",
       "community": 25,
-      "norm_label": "renv wordmark"
+      "norm_label": "renv wordmark",
+      "id": "renv_logo_wordmark"
     },
     {
       "label": "www.rstudio.com text",
@@ -6240,9 +6240,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_logo_rstudio_url",
       "community": 25,
-      "norm_label": "www.rstudio.com text"
+      "norm_label": "www.rstudio.com text",
+      "id": "renv_logo_rstudio_url"
     },
     {
       "label": "renv documentation figure asset",
@@ -6253,9 +6253,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "renv_logo_documentation_asset",
       "community": 25,
-      "norm_label": "renv documentation figure asset"
+      "norm_label": "renv documentation figure asset",
+      "id": "renv_logo_documentation_asset"
     }
   ],
   "links": [
@@ -6265,9 +6265,9 @@
       "source_file": "renv/library/macos/R-4.5/aarch64-apple-darwin20/renv/ext/renv.c",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "renv_library_macos_r_4_5_aarch64_apple_darwin20_renv_ext_renv_c",
-      "target": "ext_renv_renv_call_expect",
-      "confidence_score": 1.0
+      "target": "ext_renv_renv_call_expect"
     },
     {
       "relation": "contains",
@@ -6275,9 +6275,9 @@
       "source_file": "renv/library/macos/R-4.5/aarch64-apple-darwin20/renv/ext/renv.c",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "renv_library_macos_r_4_5_aarch64_apple_darwin20_renv_ext_renv_c",
-      "target": "ext_renv_renv_dependencies_recurse",
-      "confidence_score": 1.0
+      "target": "ext_renv_renv_dependencies_recurse"
     },
     {
       "relation": "contains",
@@ -6285,9 +6285,9 @@
       "source_file": "renv/library/macos/R-4.5/aarch64-apple-darwin20/renv/ext/renv.c",
       "source_location": "L294",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "renv_library_macos_r_4_5_aarch64_apple_darwin20_renv_ext_renv_c",
-      "target": "ext_renv_enumerate",
-      "confidence_score": 1.0
+      "target": "ext_renv_enumerate"
     },
     {
       "relation": "contains",
@@ -6295,9 +6295,9 @@
       "source_file": "renv/library/macos/R-4.5/aarch64-apple-darwin20/renv/ext/renv.c",
       "source_location": "L319",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "renv_library_macos_r_4_5_aarch64_apple_darwin20_renv_ext_renv_c",
-      "target": "ext_renv_recurse",
-      "confidence_score": 1.0
+      "target": "ext_renv_recurse"
     },
     {
       "relation": "contains",
@@ -6305,9 +6305,9 @@
       "source_file": "renv/library/macos/R-4.5/aarch64-apple-darwin20/renv/ext/renv.c",
       "source_location": "L399",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "renv_library_macos_r_4_5_aarch64_apple_darwin20_renv_ext_renv_c",
-      "target": "ext_renv_renv_version_matrix",
-      "confidence_score": 1.0
+      "target": "ext_renv_renv_version_matrix"
     },
     {
       "relation": "contains",
@@ -6315,9 +6315,9 @@
       "source_file": "renv/library/macos/R-4.5/aarch64-apple-darwin20/renv/ext/renv.c",
       "source_location": "L457",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "renv_library_macos_r_4_5_aarch64_apple_darwin20_renv_ext_renv_c",
-      "target": "ext_renv_r_init_renv",
-      "confidence_score": 1.0
+      "target": "ext_renv_r_init_renv"
     },
     {
       "relation": "conceptually_related_to",

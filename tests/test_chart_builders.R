@@ -57,6 +57,7 @@ required_functions <- c(
   "overview_price_series_transform",
   "build_overview_median_prices_plot",
   "build_overview_affordability_plot",
+  "build_national_affordability_score_plot",
   "build_affordability_indices_plot",
   "build_market_entry_serviceability_plot",
   "build_housing_stress_bands_plot",
@@ -377,6 +378,33 @@ if (exists("build_overview_affordability_plot", mode = "function")) {
     colours = cost_pressure_palette(unique(overview_afford_fixture$indicator_label)),
     dark = TRUE
   ), "ggplot"), "build_overview_affordability_plot() must return a ggplot")
+}
+
+score_fixture <- data.frame(
+  date = as.Date(c("2023-04-01", "2023-10-01", "2024-04-01",
+                   "2024-10-01")),
+  score = c(55, 49, 43, 38),
+  stringsAsFactors = FALSE
+)
+
+if (exists("build_national_affordability_score_plot", mode = "function")) {
+  p <- build_national_affordability_score_plot(score_fixture, dark = FALSE)
+  check(inherits(p, "ggplot"),
+        "build_national_affordability_score_plot() must return a ggplot")
+  y_limits <- p$scales$get_scales("y")$limits
+  check(identical(y_limits, c(0, 100)),
+        "National affordability score plot must use a fixed 0-100 y-axis")
+
+  selected_p <- build_national_affordability_score_plot(
+    score_fixture,
+    selected_date = as.Date("2023-10-01"),
+    dark = FALSE
+  )
+  has_selected_rule <- any(vapply(selected_p$layers, function(layer) {
+    inherits(layer$geom, "GeomVline") || inherits(layer$geom, "GeomSegment")
+  }, logical(1)))
+  check(has_selected_rule,
+        "National affordability score plot must show a selected-date marker")
 }
 
 if (exists("build_affordability_indices_plot", mode = "function")) {

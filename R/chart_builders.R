@@ -391,6 +391,54 @@ build_overview_affordability_plot <- function(data, colours, dark = FALSE) {
     theme_afford(dark)
 }
 
+build_national_affordability_score_plot <- function(data, selected_date = NULL,
+                                                    dark = FALSE) {
+  latest_vals <- data %>%
+    filter(date == max(date))
+  selected_date <- if (is.null(selected_date)) max(data$date) else as.Date(selected_date)
+  selected_vals <- data %>%
+    filter(date == selected_date)
+  selected_rule <- data.frame(
+    date = selected_date,
+    y = 0,
+    yend = 100
+  )
+
+  ggplot(data, aes(x = date, y = score)) +
+    geom_hline(yintercept = 50, linetype = "dashed",
+               color = semantic_colour("reference"), linewidth = 0.45,
+               alpha = 0.55) +
+    geom_segment(
+      data = selected_rule,
+      aes(x = date, xend = date, y = y, yend = yend),
+      inherit.aes = FALSE,
+      linetype = "solid",
+      color = semantic_colour("caution"),
+      linewidth = 0.45,
+      alpha = 0.65
+    ) +
+    geom_line(linewidth = 1.15, color = semantic_colour("better"),
+              alpha = 0.92) +
+    geom_point(size = 1.8, color = semantic_colour("better"), alpha = 0.35) +
+    geom_point(data = latest_vals, size = 3.2,
+               color = semantic_colour("better")) +
+    geom_point(data = selected_vals, size = 4.2, shape = 21,
+               stroke = 1.1, fill = semantic_colour("caution"),
+               color = semantic_colour("reference_dark")) +
+    scale_x_date(date_labels = "%Y", date_breaks = "2 years") +
+    scale_y_continuous(
+      limits = c(0, 100),
+      labels = label_number(accuracy = 1),
+      breaks = c(0, 25, 50, 75, 100)
+    ) +
+    labs(x = NULL, y = "Score") +
+    theme_afford(dark) +
+    theme(
+      legend.position = "none",
+      panel.grid.minor = element_blank()
+    )
+}
+
 build_affordability_indices_plot <- function(data, dark = FALSE) {
   ggplot(data, aes(x = date, y = value, color = indicator_label)) +
     geom_line(linewidth = 1) +

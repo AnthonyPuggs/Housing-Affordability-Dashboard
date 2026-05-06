@@ -39,6 +39,7 @@ if (file.exists(app_path)) {
   }
 
   expected_plotly_outputs <- c(
+    "overview_afford_score_trend",
     "overview_median_prices",
     "overview_afford_change",
     "price_chart",
@@ -99,6 +100,11 @@ if (file.exists(app_path)) {
       if (!grepl("is_dark\\s*\\(", bind_segment, perl = TRUE)) {
         missing_dark_key <- c(missing_dark_key, render_ids[i])
       }
+      if (identical(render_ids[i], "overview_afford_score_trend") &&
+          !grepl("selected_score_date\\s*\\(", bind_segment, perl = TRUE)) {
+        missing_dark_key <- c(missing_dark_key,
+                              "overview_afford_score_trend:selected_score_date")
+      }
     }
 
     check(length(missing_bind_cache) == 0,
@@ -108,6 +114,10 @@ if (file.exists(app_path)) {
           paste("renderPlotly cache keys missing is_dark():",
                 paste(missing_dark_key, collapse = ", ")))
   }
+
+  check(grepl('event_data("plotly_click", source = "overview_afford_score"',
+              plot_source_text, fixed = TRUE),
+        "Overview score trend must listen to Plotly click events using its unique source")
 }
 
 if (length(failures) > 0) {

@@ -122,6 +122,30 @@ if (all(c("indicator", "geography", "date", "value") %in% names(afford_idx))) {
              expected_counts[[indicator]])
     )
   }
+
+  score_indicators <- c(
+    "National Housing Affordability Score",
+    "Mortgage Serviceability Component Score",
+    "Rental Entry Component Score",
+    "Deposit Barrier Component Score"
+  )
+  missing_score_indicators <- setdiff(score_indicators,
+                                      unique(afford_idx$indicator))
+  check(length(missing_score_indicators) == 0,
+        paste("affordability_indices.csv is missing national score rows:",
+              paste(missing_score_indicators, collapse = ", ")))
+  score_rows <- afford_idx[afford_idx$indicator %in% score_indicators, ]
+  if (nrow(score_rows) > 0) {
+    check(all(score_rows$unit == "Score (0-100)"),
+          "National score rows must use Score (0-100) units")
+    check(all(score_rows$value >= 0 & score_rows$value <= 100),
+          "National score rows must stay within the 0-100 range")
+    score_dates <- split(score_rows$date, score_rows$indicator)
+    score_date_sets_match <- length(score_dates) == length(score_indicators) &&
+      length(unique(vapply(score_dates, paste, character(1), collapse = "|"))) == 1
+    check(score_date_sets_match,
+          "Headline and component score rows must use identical date sets")
+  }
 }
 
 if (all(c("survey_year", "metric", "tenure", "breakdown_var", "breakdown_val",

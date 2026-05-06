@@ -39,7 +39,11 @@ indicator_registry <- function() {
       "Deposit Gap (Years)",
       "Real House Price Growth YoY",
       "Real Wage Growth YoY",
-      "Real Mortgage Rate"
+      "Real Mortgage Rate",
+      "National Housing Affordability Score",
+      "Mortgage Serviceability Component Score",
+      "Rental Entry Component Score",
+      "Deposit Barrier Component Score"
     ),
     chart_label = c(
       "Price-to-Income Cost Pressure",
@@ -48,7 +52,11 @@ indicator_registry <- function() {
       "Stylised Deposit Gap (Years)",
       "Real House Price Growth YoY",
       "Real Wage Growth YoY",
-      "Real Mortgage Rate"
+      "Real Mortgage Rate",
+      "National Housing Affordability Score",
+      "Mortgage Serviceability Component",
+      "Rental Entry Component",
+      "Deposit Barrier Component"
     ),
     unit = c(
       "Index (base=100)",
@@ -57,10 +65,11 @@ indicator_registry <- function() {
       "Years",
       "Per cent",
       "Per cent",
-      "Per cent"
+      "Per cent",
+      rep("Score (0-100)", 4)
     ),
-    geography = rep("National", 7),
-    frequency = rep("Quarter", 7),
+    geography = rep("National", 11),
+    frequency = rep("Quarter", 11),
     concept_group = c(
       "cost_pressure",
       "cost_pressure",
@@ -68,7 +77,8 @@ indicator_registry <- function() {
       "market_entry_scenario",
       "real_growth",
       "real_growth",
-      "interest_rate_context"
+      "interest_rate_context",
+      rep("market_entry_composite", 4)
     ),
     interpretation_direction = c(
       "higher_less_affordable",
@@ -77,7 +87,8 @@ indicator_registry <- function() {
       "higher_less_affordable",
       "higher_less_affordable",
       "higher_more_affordable",
-      "higher_less_affordable"
+      "higher_less_affordable",
+      rep("higher_more_affordable", 4)
     ),
     formula = c(
       "Indexed RPPI divided by indexed WPI, multiplied by 100.",
@@ -86,7 +97,11 @@ indicator_registry <- function() {
       "Twenty per cent of an RPPI-scaled SIH-base dwelling price divided by annual AWE savings at a 15 per cent savings rate.",
       "Year-ended percentage change in RPPI deflated by CPI All Groups.",
       "Year-ended percentage change in WPI deflated by CPI All Groups.",
-      "RBA owner-occupier discounted variable mortgage rate minus CPI Inflation YoY."
+      "RBA owner-occupier discounted variable mortgage rate minus CPI Inflation YoY.",
+      "Weighted market-entry composite score on a 0-100 historical percentile scale: 40 per cent mortgage serviceability component, 35 per cent rental entry component and 25 per cent deposit barrier component. Higher = more affordable. Not an official ABS/NHHA statistic or lender assessment.",
+      "Winsorised historical percentile score for the Mortgage Serviceability Index burden input. Higher = more affordable. Used at 40 per cent weight in the National Housing Affordability Score. Not an official ABS/NHHA statistic or lender assessment.",
+      "Winsorised historical percentile score for the Rental Affordability Index burden input. Higher = more affordable. Used at 35 per cent weight in the National Housing Affordability Score. Not an official ABS/NHHA statistic or lender assessment.",
+      "Winsorised historical percentile score for the Deposit Gap (Years) burden input. Higher = more affordable. Used at 25 per cent weight in the National Housing Affordability Score. Not an official ABS/NHHA statistic or lender assessment."
     ),
     source_files = c(
       "abs_timeseries.csv",
@@ -95,7 +110,8 @@ indicator_registry <- function() {
       "abs_timeseries.csv",
       "abs_timeseries.csv",
       "abs_timeseries.csv",
-      "abs_timeseries.csv | rba_rates.csv"
+      "abs_timeseries.csv | rba_rates.csv",
+      rep("affordability_indices.csv", 4)
     ),
     source_series = c(
       join_sources(INDICATOR_SOURCE_RPPI, INDICATOR_SOURCE_WPI),
@@ -109,11 +125,19 @@ indicator_registry <- function() {
       join_sources(INDICATOR_SOURCE_WPI,
                    INDICATOR_SOURCE_CPI_ALL_GROUPS),
       join_sources(INDICATOR_SOURCE_RBA_MORTGAGE_RATE,
-                   INDICATOR_SOURCE_CPI_INFLATION_YOY)
+                   INDICATOR_SOURCE_CPI_INFLATION_YOY),
+      join_sources("Mortgage Serviceability Index",
+                   "Rental Affordability Index",
+                   "Deposit Gap (Years)"),
+      "Mortgage Serviceability Index",
+      "Rental Affordability Index",
+      "Deposit Gap (Years)"
     ),
-    official_measure = rep(FALSE, 7),
-    stylised_scenario = c(TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE),
-    minimum_rows = c(40L, 50L, 80L, 30L, 50L, 80L, 50L),
+    official_measure = rep(FALSE, 11),
+    stylised_scenario = c(TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE,
+                          TRUE, TRUE, TRUE, TRUE),
+    minimum_rows = c(40L, 50L, 80L, 30L, 50L, 80L, 50L,
+                     20L, 20L, 20L, 20L),
     stringsAsFactors = FALSE
   )
 }

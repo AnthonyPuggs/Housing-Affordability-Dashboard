@@ -1,7 +1,8 @@
 # Shared Plotly rendering helpers for Shiny chart outputs.
 
-dashboard_ggplotly <- function(p, dark, tooltip, hovermode = "x", margin = NULL) {
-  fig <- plotly::ggplotly(p, tooltip = tooltip)
+dashboard_ggplotly <- function(p, dark, tooltip, hovermode = "x",
+                               margin = NULL, source = "A") {
+  fig <- plotly::ggplotly(p, tooltip = tooltip, source = source)
   fig <- plotly_layout(fig, dark = dark, hovermode = hovermode)
 
   if (!is.null(margin)) {

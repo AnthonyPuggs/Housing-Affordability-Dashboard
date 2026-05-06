@@ -90,6 +90,35 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
     ungroup() %>%
     mutate(indicator_label = indicator_chart_label(indicator))
 
+  national_affordability_score_ts <- afford_idx %>%
+    filter(indicator == "National Housing Affordability Score") %>%
+    transmute(date, score = value)
+
+  score_component_metadata <- national_affordability_score_indicators() %>%
+    filter(!is.na(component)) %>%
+    select(indicator, component, component_label, weight, display_order)
+
+  national_affordability_score_components <- afford_idx %>%
+    filter(indicator %in% score_component_metadata$indicator) %>%
+    left_join(score_component_metadata, by = "indicator") %>%
+    select(date, value, indicator, component, component_label, weight,
+           display_order)
+
+  national_affordability_score_diagnostics_data <-
+    national_affordability_score_diagnostics(afford_idx)
+
+  if (nrow(national_affordability_score_components) == 0) {
+    national_affordability_score_components <- tibble(
+      date = as.Date(character()),
+      value = numeric(),
+      indicator = character(),
+      component = character(),
+      component_label = character(),
+      weight = numeric(),
+      display_order = integer()
+    )
+  }
+
   rppi_combined <- bind_rows(rppi_all, rppi_houses, rppi_units)
 
   rppi_cities <- sort(unique(rppi_all$city))
@@ -138,6 +167,10 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
     mortgage_rate_qtr = mortgage_rate_qtr,
     serviceability_ts = serviceability_ts,
     afford_change = afford_change,
+    national_affordability_score_ts = national_affordability_score_ts,
+    national_affordability_score_components = national_affordability_score_components,
+    national_affordability_score_diagnostics_data =
+      national_affordability_score_diagnostics_data,
     rppi_combined = rppi_combined,
     rppi_cities = rppi_cities,
     rent_cpi_combined = rent_cpi_combined,
