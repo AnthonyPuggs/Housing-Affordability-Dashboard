@@ -27,6 +27,7 @@ suppressPackageStartupMessages({
   library(dplyr)
   library(scales)
   library(lubridate)
+  library(plotly)
 })
 
 source(file.path(repo_root, "R", "dashboard_formatting.R"))
@@ -218,6 +219,25 @@ if (exists("build_rental_stress_state_plot", mode = "function")) {
   }, logical(1)))
   check(has_errorbar,
         "build_rental_stress_state_plot() must include error bars when interval columns are supplied")
+
+  horizontal_p <- tryCatch({
+    build_rental_stress_state_plot(
+      survey_fixture[survey_fixture$survey_year == "2019-20", ],
+      national_value = 35,
+      dark = FALSE,
+      orientation = "horizontal"
+    )
+  }, error = function(e) e)
+  check(inherits(horizontal_p, "ggplot"),
+        "build_rental_stress_state_plot(orientation = 'horizontal') must return a ggplot")
+  if (inherits(horizontal_p, "ggplot")) {
+    check(inherits(horizontal_p$coordinates, "CoordFlip"),
+          "Horizontal rental stress state plot must use coord_flip() for mobile readability")
+    horizontal_y_limits <- horizontal_p$scales$get_scales("y")$limits
+    check(!is.null(horizontal_y_limits) && horizontal_y_limits[1] == 0 &&
+            horizontal_y_limits[2] <= 100,
+          "Horizontal rental stress state plot must constrain the percentage axis to the 0-100 domain")
+  }
 }
 
 if (exists("build_rental_stress_trend_plot", mode = "function")) {
@@ -232,6 +252,40 @@ if (exists("build_rental_stress_trend_plot", mode = "function")) {
   }, logical(1)))
   check(has_tile && has_text,
         "build_rental_stress_trend_plot() must remain a tile/text heatmap")
+
+  builder_text <- paste(readLines(helper_path, warn = FALSE), collapse = "\n")
+  check(!grepl("breaks = function(x) x[seq(1, length(x), by = 3)]",
+               builder_text, fixed = TRUE),
+        "NHHA heatmap must not thin discrete x-axis breaks because ggplotly can emit matrix warnings")
+
+  trend_years <- paste0(seq(1995, 2021, by = 2), "-", sprintf("%02d", seq(96, 122, by = 2) %% 100))
+  trend_fixture <- expand.grid(
+    survey_year = trend_years,
+    geography = c("Aust.", "NSW", "Vic.", "Qld", "SA", "WA", "Tas.", "NT", "ACT"),
+    KEEP.OUT.ATTRS = FALSE,
+    stringsAsFactors = FALSE
+  )
+  trend_fixture$value <- rep(seq(28, 48, length.out = length(trend_years)),
+                             times = 9)
+  trend_fixture$hover_text <- paste("trend", seq_len(nrow(trend_fixture)))
+  trend_fixture$tile_label <- sprintf("%.0f", trend_fixture$value)
+  trend_fixture$tile_text_colour <- "#F8FAFC"
+  trend_fixture$survey_year <- factor(trend_fixture$survey_year,
+                                      levels = trend_years)
+  heatmap_warnings <- character()
+  invisible(withCallingHandlers(
+    plotly::ggplotly(
+      build_rental_stress_trend_plot(trend_fixture, dark = FALSE),
+      tooltip = c("fill", "text")
+    ),
+    warning = function(w) {
+      heatmap_warnings <<- c(heatmap_warnings, conditionMessage(w))
+      invokeRestart("muffleWarning")
+    }
+  ))
+  check(!any(grepl("sub-multiple|matrix\\(", heatmap_warnings, perl = TRUE)),
+        paste("NHHA heatmap ggplotly conversion emitted matrix warnings:",
+              paste(heatmap_warnings, collapse = " | ")))
 }
 
 rental_index_fixture <- data.frame(

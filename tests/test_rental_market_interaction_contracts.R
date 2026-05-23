@@ -50,6 +50,15 @@ if (file.exists(module_path)) {
   module_text <- paste(readLines(module_path, warn = FALSE), collapse = "\n")
   check(grepl("build_rental_stress_trend_plot(", module_text, fixed = TRUE),
         "Rental Market module must delegate NHHA heatmap construction to chart builder")
+  total_filters <- gregexpr('breakdown_val == "Total"', module_text,
+                            fixed = TRUE)[[1]]
+  total_filter_count <- if (identical(total_filters, -1L)) {
+    0L
+  } else {
+    length(total_filters)
+  }
+  check(total_filter_count >= 3,
+        "Rental Market NHHA state/trend charts must filter to Total location rows")
 }
 
 if (file.exists(chart_builders_path)) {

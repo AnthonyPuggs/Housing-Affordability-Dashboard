@@ -8,16 +8,18 @@ check <- function(condition, message) {
 }
 
 helper_path <- file.path(repo_root, "R", "app_ui_helpers.R")
+formatting_path <- file.path(repo_root, "R", "dashboard_formatting.R")
 module_path <- file.path(repo_root, "R", "methodology_module.R")
 app_path <- file.path(repo_root, "app.R")
 readme_path <- file.path(repo_root, "README.md")
 
 check(file.exists(helper_path), "R/app_ui_helpers.R does not exist")
+check(file.exists(formatting_path), "R/dashboard_formatting.R does not exist")
 check(file.exists(module_path), "R/methodology_module.R does not exist")
 check(file.exists(app_path), "app.R does not exist")
 check(file.exists(readme_path), "README.md does not exist")
 
-for (path in c(helper_path, module_path)) {
+for (path in c(helper_path, formatting_path, module_path)) {
   if (file.exists(path)) {
     parsed <- tryCatch({
       parse(path)
@@ -31,8 +33,10 @@ if (all(file.exists(c(helper_path, module_path)))) {
   suppressPackageStartupMessages({
     library(shiny)
     library(bslib)
+    library(scales)
   })
   source(file.path(repo_root, "R", "indicator_registry.R"))
+  source(formatting_path)
   source(helper_path)
   source(module_path)
 
@@ -44,6 +48,15 @@ if (all(file.exists(c(helper_path, module_path)))) {
         "methodologyPageUI() must be defined by R/methodology_module.R")
   check(exists("methodologyPageServer", mode = "function"),
         "methodologyPageServer() must be defined by R/methodology_module.R")
+  check(identical(fmt_index(c(55, NA, 38.44)),
+                  c("55.0", "N/A", "38.4")),
+        "fmt_index() must vectorise for Methodology score diagnostics tables")
+  check(identical(fmt_pct(c(12.34, NA), acc = 0.1),
+                  c("12.3%", "N/A")),
+        "fmt_pct() must vectorise for table renderers")
+  check(identical(fmt_dollar(c(1000, NA)),
+                  c("$1,000", "N/A")),
+        "fmt_dollar() must vectorise for table renderers")
 
   module_ui <- paste(as.character(methodologyPageUI("methodology")),
                      collapse = "\n")
@@ -72,7 +85,8 @@ if (file.exists(module_path)) {
     "output$indicator_table <- renderTable",
     'downloadButton(ns("provenance_download")',
     "downloadHandler",
-    "methodology_provenance_report"
+    "methodology_provenance_report",
+    'heights_equal = "row"'
   )
   missing_module_text <- required_module_text[
     !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)

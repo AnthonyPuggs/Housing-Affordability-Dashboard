@@ -251,6 +251,10 @@ overviewPageServer <- function(id, is_dark) {
       max(score_dates)
     }
     selected_score_date <- reactiveVal(latest_score_date)
+    session$userData$plotlyShinyEventIDs <- unique(c(
+      session$userData$plotlyShinyEventIDs,
+      "plotly_click-overview_afford_score"
+    ))
 
     score_click <- reactive({
       event_data("plotly_click", source = "overview_afford_score",
@@ -405,7 +409,8 @@ overviewPageServer <- function(id, is_dark) {
             "autoScale2d",
             "resetScale2d"
           )
-        )
+        ) %>%
+        plotly::event_register("plotly_click")
     }) %>%
       bindCache(is_dark(), selected_score_date())
 

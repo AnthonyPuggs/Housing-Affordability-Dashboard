@@ -54,39 +54,47 @@ latest_change <- function(df, series_col, series_name, val_col = "value",
   )
 }
 
+replace_missing_labels <- function(x, labels) {
+  labels <- as.character(labels)
+  labels[is.na(x)] <- "N/A"
+  labels
+}
+
 fmt_dollar <- function(x) {
-  if (is.na(x)) "N/A" else paste0("$", comma(round(x)))
+  replace_missing_labels(x, paste0("$", comma(round(x))))
 }
 
 fmt_dollar_k <- function(x) {
-  if (is.na(x)) return("N/A")
-  if (abs(x) >= 1e6) {
-    paste0("$", number(x / 1e6, accuracy = 0.01), "M")
-  } else if (abs(x) >= 1e3) {
-    paste0("$", comma(round(x / 1e3)), "k")
-  } else {
-    paste0("$", comma(round(x)))
-  }
+  labels <- ifelse(
+    abs(x) >= 1e6,
+    paste0("$", number(x / 1e6, accuracy = 0.01), "M"),
+    ifelse(
+      abs(x) >= 1e3,
+      paste0("$", comma(round(x / 1e3)), "k"),
+      paste0("$", comma(round(x)))
+    )
+  )
+  replace_missing_labels(x, labels)
 }
 
 fmt_pct <- function(x, acc = 0.01) {
-  if (is.na(x)) "N/A" else paste0(number(x, accuracy = acc), "%")
+  replace_missing_labels(x, paste0(number(x, accuracy = acc), "%"))
 }
 
 fmt_ratio <- function(x) {
-  if (is.na(x)) "N/A" else number(x, accuracy = 0.1)
+  replace_missing_labels(x, number(x, accuracy = 0.1))
 }
 
 fmt_years <- function(x) {
-  if (is.na(x)) "N/A" else paste0(number(x, accuracy = 0.1), " yrs")
+  replace_missing_labels(x, paste0(number(x, accuracy = 0.1), " yrs"))
 }
 
 fmt_index <- function(x) {
-  if (is.na(x)) "N/A" else number(x, accuracy = 0.1)
+  replace_missing_labels(x, number(x, accuracy = 0.1))
 }
 
 fmt_number <- function(x) {
-  if (is.na(x)) "N/A" else comma(round(x))
+  replace_missing_labels(x, comma(round(x)))
 }
 
 tenure_labels <- c(

@@ -657,6 +657,13 @@ ui <- page_navbar(
         }
         .bslib-sidebar-layout { flex-direction: column !important; }
         .bslib-sidebar-layout > .sidebar { width: 100% !important; max-width: 100% !important; }
+        .bslib-sidebar-layout.sidebar-collapsed > .sidebar {
+          display: none !important;
+        }
+        .bslib-sidebar-layout.sidebar-collapsed > .main {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
         .rental-market-page .rental-market-grid {
           width: 100%;
         }
@@ -723,6 +730,25 @@ ui <- page_navbar(
       /* Tablet: tighten chart spacing */
       @media (max-width: 1024px) {
         .card-body { padding: 0.5rem !important; }
+        .affordability-score-panel {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 0.9rem;
+        }
+        .affordability-score-trend .plotly,
+        .affordability-score-trend .js-plotly-plot {
+          min-height: 210px;
+        }
+        .affordability-score-component-header {
+          display: block;
+        }
+        .affordability-score-component-label-wrap {
+          margin-bottom: 0.16rem;
+        }
+        .affordability-score-component-meta {
+          display: block;
+          margin-top: 0.12rem;
+          white-space: normal;
+        }
       }
     ")),
     tags$script(HTML("

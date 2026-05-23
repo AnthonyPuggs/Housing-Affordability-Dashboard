@@ -80,6 +80,7 @@ if (file.exists(module_path)) {
     "margin = rental_plot_margins$trend",
     "margin = rental_plot_margins$index",
     "margin = rental_plot_margins$costs",
+    'orientation = "horizontal"',
     "dashboard_ggplotly",
     "bindCache(input$rental_year, input$rental_states, is_dark())",
     "bindCache(input$rental_states, is_dark())",

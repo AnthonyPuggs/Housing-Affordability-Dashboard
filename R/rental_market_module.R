@@ -112,6 +112,7 @@ rentalMarketPageServer <- function(id, is_dark) {
       d <- sih_nhha %>%
         filter(survey_year == yr,
                metric == "pct_rental_stress_over_30",
+               breakdown_val == "Total",
                geography %in% selected_states) %>%
         join_sih_quality(sih_quality) %>%
         mutate(
@@ -135,12 +136,14 @@ rentalMarketPageServer <- function(id, is_dark) {
       nat <- sih_nhha %>%
         filter(survey_year == yr,
                metric == "pct_rental_stress_over_30",
+               breakdown_val == "Total",
                geography == "Aust.")
 
       p <- build_rental_stress_state_plot(
         d,
         national_value = if (nrow(nat) > 0) nat$value[1] else NULL,
-        dark = is_dark()
+        dark = is_dark(),
+        orientation = "horizontal"
       )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "text"),
@@ -155,6 +158,7 @@ rentalMarketPageServer <- function(id, is_dark) {
 
       d <- sih_nhha %>%
         filter(metric == "pct_rental_stress_over_30",
+               breakdown_val == "Total",
                geography %in% states) %>%
         join_sih_quality(sih_quality) %>%
         mutate(

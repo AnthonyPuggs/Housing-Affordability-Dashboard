@@ -61,6 +61,8 @@ if (file.exists(app_path)) {
     ".policy-card",
     ".rental-market-page",
     ".rental-market-grid",
+    ".bslib-sidebar-layout.sidebar-collapsed > .sidebar",
+    "display: none !important",
     "grid-template-columns: minmax(0, 1fr) !important",
     ".rental-market-chart"
   )
@@ -70,6 +72,30 @@ if (file.exists(app_path)) {
   check(length(missing_mobile_css) == 0,
         paste("Responsive mobile CSS missing:",
               paste(missing_mobile_css, collapse = ", ")))
+
+  tablet_start <- regexpr("@media (max-width: 1024px)", app_text,
+                          fixed = TRUE)
+  tablet_segment <- if (tablet_start[1] == -1L) {
+    ""
+  } else {
+    substr(app_text, tablet_start[1], nchar(app_text))
+  }
+  required_tablet_css <- c(
+    "@media (max-width: 1024px)",
+    ".affordability-score-panel",
+    "grid-template-columns: minmax(0, 1fr);",
+    ".affordability-score-component-header",
+    "display: block;",
+    ".affordability-score-component-meta",
+    "white-space: normal;"
+  )
+  missing_tablet_css <- required_tablet_css[
+    !vapply(required_tablet_css, grepl, logical(1),
+            tablet_segment, fixed = TRUE)
+  ]
+  check(length(missing_tablet_css) == 0,
+        paste("Tablet affordability score CSS missing:",
+              paste(missing_tablet_css, collapse = ", ")))
 
   rental_start <- regexpr('nav_panel\\(\\s*"Rental Market"', app_text,
                           perl = TRUE)

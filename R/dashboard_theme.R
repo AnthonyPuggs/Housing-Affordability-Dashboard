@@ -45,6 +45,7 @@ plotly_layout <- function(p, dark = FALSE, hovermode = "x",
     legend = list(orientation = "h", y = -0.14, xanchor = "center", x = 0.5),
     margin = list(l = 54, r = 22, t = 34, b = 56),
     autosize = TRUE,
+    hovermode = hovermode,
     xaxis = xax,
     yaxis = yax
   )
@@ -61,7 +62,9 @@ plotly_layout <- function(p, dark = FALSE, hovermode = "x",
     }
   }
 
-  result %>% plotly::config(responsive = TRUE)
+  result <- result %>% plotly::config(responsive = TRUE)
+  result$x$layout$hovermode <- hovermode
+  result
 }
 
 plot_ts <- function(df, x = "date", y = "value", colour = "series",

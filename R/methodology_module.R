@@ -16,6 +16,7 @@ methodologyPageUI <- function(id) {
     ),
     layout_column_wrap(
       width = 1/3,
+      heights_equal = "row",
       fill = FALSE,
       policy_card(
         "Official SIH/NHHA burden measures",

@@ -167,7 +167,19 @@ build_supply_construction_cpi_plot <- function(data, dark = FALSE) {
 }
 
 build_rental_stress_state_plot <- function(data, national_value = NULL,
-                                           dark = FALSE) {
+                                           dark = FALSE,
+                                           orientation = c("vertical",
+                                                           "horizontal")) {
+  orientation <- match.arg(orientation)
+  data <- data %>%
+    mutate(
+      state_order = if (identical(orientation, "horizontal")) {
+        stats::reorder(geography, value)
+      } else {
+        stats::reorder(geography, -value)
+      }
+    )
+
   reference_layer <- NULL
   if (!is.null(national_value) && length(national_value) > 0 &&
       is.finite(national_value[[1]])) {
@@ -177,9 +189,42 @@ build_rental_stress_state_plot <- function(data, national_value = NULL,
       color = semantic_colour("reference")
     )
   }
+  upper_candidates <- c(
+    data$value,
+    data$estimate_upper_95,
+    if (!is.null(national_value)) national_value[[1]] else NA_real_
+  )
+  upper_candidates <- upper_candidates[is.finite(upper_candidates)]
+  upper_limit <- if (length(upper_candidates) > 0) {
+    min(100, max(50, max(upper_candidates) * 1.12))
+  } else {
+    100
+  }
 
-  ggplot(data, aes(x = reorder(geography, -value), y = value,
-                   text = hover_text)) +
+  marker_layer <- if (identical(orientation, "horizontal")) {
+    geom_text(
+      data = data %>% filter(nzchar(reliability_marker)),
+      aes(x = state_order, y = value, label = reliability_marker),
+      inherit.aes = FALSE,
+      hjust = -0.3,
+      vjust = 0.5,
+      size = 4.2,
+      fontface = "bold",
+      color = semantic_colour("caution")
+    )
+  } else {
+    geom_text(
+      data = data %>% filter(nzchar(reliability_marker)),
+      aes(x = state_order, y = value, label = reliability_marker),
+      inherit.aes = FALSE,
+      vjust = -0.45,
+      size = 4.2,
+      fontface = "bold",
+      color = semantic_colour("caution")
+    )
+  }
+
+  p <- ggplot(data, aes(x = state_order, y = value, text = hover_text)) +
     geom_col(fill = semantic_colour("worse"), alpha = 0.85, width = 0.7) +
     geom_errorbar(
       data = data %>%
@@ -191,20 +236,26 @@ build_rental_stress_state_plot <- function(data, national_value = NULL,
       color = if (dark) "#F8FAFC" else "#172033",
       alpha = 0.9
     ) +
-    geom_text(
-      data = data %>% filter(nzchar(reliability_marker)),
-      aes(x = reorder(geography, -value), y = value,
-          label = reliability_marker),
-      inherit.aes = FALSE,
-      vjust = -0.45,
-      size = 4.2,
-      fontface = "bold",
-      color = semantic_colour("caution")
-    ) +
+    marker_layer +
     reference_layer +
-    scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+    scale_y_continuous(
+      limits = c(0, upper_limit),
+      oob = scales::squish,
+      expand = expansion(mult = c(0, 0.08))
+    ) +
     labs(x = NULL, y = "% in Rental Stress (>30% of income)") +
     theme_afford(dark)
+
+  if (identical(orientation, "horizontal")) {
+    p <- p +
+      coord_flip(clip = "off") +
+      theme(
+        axis.text.y = element_text(size = 10),
+        plot.margin = margin(8, 16, 8, 10)
+      )
+  }
+
+  p
 }
 
 build_rental_stress_trend_plot <- function(data, dark = FALSE) {
@@ -215,10 +266,7 @@ build_rental_stress_trend_plot <- function(data, dark = FALSE) {
     geom_tile(color = if (dark) "#1B2A44" else "#FFFFFF", linewidth = 1.5) +
     geom_text(aes(label = tile_label, color = tile_text_colour),
               size = 2.35, fontface = "bold", show.legend = FALSE) +
-    scale_x_discrete(
-      breaks = function(x) x[seq(1, length(x), by = 3)],
-      labels = function(x) sub("-.*", "", x)
-    ) +
+    scale_x_discrete(labels = function(x) sub("-.*", "", x)) +
     scale_color_identity() +
     scale_fill_gradient2(
       low = rental_stress_cols[["low"]],

@@ -44,8 +44,14 @@ if (all(file.exists(c(helper_path, plot_setup_path)))) {
     tooltip = c("x", "y"),
     source = "overview_afford_score"
   )
+  hover_fig <- dashboard_ggplotly(
+    p,
+    dark = FALSE,
+    tooltip = c("x", "y"),
+    hovermode = "closest"
+  )
 
-  for (fig_name in c("light_fig", "dark_fig", "sourced_fig")) {
+  for (fig_name in c("light_fig", "dark_fig", "sourced_fig", "hover_fig")) {
     fig <- get(fig_name)
     check(inherits(fig, "plotly"), paste(fig_name, "must inherit from plotly"))
     check(inherits(fig, "htmlwidget"), paste(fig_name, "must inherit from htmlwidget"))
@@ -54,6 +60,10 @@ if (all(file.exists(c(helper_path, plot_setup_path)))) {
   }
   check(identical(sourced_fig$x$source, "overview_afford_score"),
         "dashboard_ggplotly() must forward a custom Plotly source")
+  check(identical(light_fig$x$layout$hovermode, "x"),
+        "dashboard_ggplotly() must preserve the default Plotly hovermode")
+  check(identical(hover_fig$x$layout$hovermode, "closest"),
+        "dashboard_ggplotly() must forward a custom Plotly hovermode")
 }
 
 if (file.exists(description_path)) {
