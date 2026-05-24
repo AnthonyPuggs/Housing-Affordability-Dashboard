@@ -479,6 +479,7 @@ date,value,indicator,geography,unit,frequency
 2025-04-01,1.2040228394301078,Real Wage Growth YoY,National,Per cent,Quarter
 2025-07-01,0.0559439713964327,Real Wage Growth YoY,National,Per cent,Quarter
 2025-10-01,-0.29466254859449315,Real Wage Growth YoY,National,Per cent,Quarter
+2026-01-01,-0.7619974988305578,Real Wage Growth YoY,National,Per cent,Quarter
 1997-07-01,100,Rental Affordability Index,National,Index (base=100),Quarter
 1997-10-01,100.03004776630004,Rental Affordability Index,National,Index (base=100),Quarter
 1998-01-01,99.72941124231049,Rental Affordability Index,National,Index (base=100),Quarter
@@ -593,6 +594,7 @@ date,value,indicator,geography,unit,frequency
 2025-04-01,100.25068520623037,Rental Affordability Index,National,Index (base=100),Quarter
 2025-07-01,99.80183567741675,Rental Affordability Index,National,Index (base=100),Quarter
 2025-10-01,99.89508816221175,Rental Affordability Index,National,Index (base=100),Quarter
+2026-01-01,100.25068520623034,Rental Affordability Index,National,Index (base=100),Quarter
 2012-10-01,19.23076923076923,Rental Entry Component Score,National,Score (0-100),Quarter
 2013-04-01,1.9230769230769273,Rental Entry Component Score,National,Score (0-100),Quarter
 2013-10-01,7.692307692307687,Rental Entry Component Score,National,Score (0-100),Quarter

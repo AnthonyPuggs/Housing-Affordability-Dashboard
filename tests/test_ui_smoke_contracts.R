@@ -140,11 +140,14 @@ check(length(missing_theme) == 0,
             paste(missing_theme, collapse = ", ")))
 
 policy_ui_contract <- c(
+  'source(project_path("R", "data_vintage.R"), local = TRUE)',
   'source(project_path("R", "ui_style_system.R"), local = TRUE)',
   ".policy-page-header",
   ".policy-kpi",
   ".policy-chart-card",
   ".policy-source-note",
+  ".data-vintage-badge",
+  "data_vintage_badge(",
   "affordability-indices-page",
   "policy_page_header(",
   "policy_kpi_box(",

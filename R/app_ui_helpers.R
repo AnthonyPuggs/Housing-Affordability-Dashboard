@@ -41,3 +41,15 @@ sih_sampling_error_note <- paste(
   "relative standard error and 95% margin of error metadata are saved in data/sih_estimate_quality.csv,",
   "and users should interpret with caution when estimates have high RSE values."
 )
+
+data_vintage_badge <- function(data_dir = project_path("data")) {
+  vintage <- read_data_vintage(data_dir, fallback = TRUE)
+  summary <- data_vintage_summary(vintage)
+  detail <- data_vintage_detail(vintage)
+  tags$span(
+    class = "data-vintage-badge",
+    title = detail,
+    `aria-label` = summary,
+    summary
+  )
+}

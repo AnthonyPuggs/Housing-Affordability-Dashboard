@@ -15,6 +15,16 @@ if (!exists("pipeline_external_sources", mode = "function")) {
     source(pipeline_contracts_path, local = environment())
   }
 }
+if (!exists("data_vintage_summary", mode = "function")) {
+  data_vintage_path <- if (exists("project_path", mode = "function")) {
+    project_path("R", "data_vintage.R")
+  } else {
+    file.path("R", "data_vintage.R")
+  }
+  if (file.exists(data_vintage_path)) {
+    source(data_vintage_path, local = environment())
+  }
+}
 
 dashboard_markdown_table <- function(data) {
   if (nrow(data) == 0) {
@@ -131,6 +141,16 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
   )
   methodology <- indicator_registry_methodology_table()
   inventory <- dashboard_data_inventory(data_dir)
+  vintage <- if (exists("read_data_vintage", mode = "function")) {
+    read_data_vintage(data_dir, fallback = TRUE)
+  } else {
+    data.frame()
+  }
+  vintage_summary <- if (exists("data_vintage_summary", mode = "function")) {
+    data_vintage_summary(vintage)
+  } else {
+    "Data vintage unavailable"
+  }
   external_sources <- if (exists("pipeline_external_sources",
                                  mode = "function")) {
     pipeline_external_sources()
@@ -157,8 +177,15 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
     "- `pipeline/06_validate_outputs.R` gates required schemas, source series and minimum row counts.",
     "- `R/pipeline_contracts.R` documents per-stage output contracts and fixed external ABS/RBA source surfaces.",
     "- `data/*.csv` stores the dashboard-ready saved outputs read by the Shiny app.",
+    "- `data/data_vintage.csv` records the last successful refresh and observation-period coverage.",
     "- `R/indicator_registry.R` documents derived indicator formulas, source series, units, interpretation direction and caveats.",
     "- The Methodology page and this download expose that registry metadata to dashboard users.",
+    "",
+    "## Data Vintage",
+    "",
+    vintage_summary,
+    "",
+    dashboard_markdown_table(vintage),
     "",
     "## External Data Sources",
     "",

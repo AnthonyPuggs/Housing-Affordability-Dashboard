@@ -95,9 +95,11 @@ methodologyPageUI <- function(id) {
         tags$ul(
           tags$li("Run pipeline/05_driver.R to refresh local SIH, ABS and RBA-derived CSV outputs."),
           tags$li("Run pipeline/06_validate_outputs.R to gate required schemas, source series and minimum row counts."),
+          tags$li("data/data_vintage.csv records the last successful refresh time and observation-period coverage."),
           tags$li("The app reads saved data/*.csv outputs at launch."),
           tags$li("R/indicator_registry.R documents derived indicator formulas, source series, units and interpretation direction.")
-        )
+        ),
+        uiOutput(ns("data_vintage_summary"))
       )
     )
   )
@@ -173,6 +175,11 @@ methodologyPageServer <- function(id) {
     output$indicator_table <- renderTable({
       indicator_registry_methodology_table()
     }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
+
+    output$data_vintage_summary <- renderUI({
+      vintage <- read_data_vintage(fallback = TRUE)
+      tags$p(data_vintage_summary(vintage), class = "source-note policy-source-note")
+    })
 
     output$provenance_download <- downloadHandler(
       filename = function() {

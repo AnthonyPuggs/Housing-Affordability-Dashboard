@@ -63,8 +63,10 @@ pipeline_external_sources <- function() {
       "abs-awe-helper",
       "abs-5206-table-2",
       "abs-5206-table-7",
-      "abs-6202-table-1",
-      "abs-6202-table-22",
+      "abs-sdmx-lf-participation",
+      "abs-sdmx-lf-unemployment",
+      "abs-sdmx-lf-underemployment",
+      "abs-sdmx-lf-underutilisation",
       "abs-3101-table-1",
       "abs-3101-table-2",
       "abs-8731-table-1",
@@ -74,14 +76,15 @@ pipeline_external_sources <- function() {
       "rba-f6"
     ),
     provider = c(
-      rep("ABS", 16),
+      rep("ABS", 18),
       rep("RBA", 3)
     ),
     source_type = c(
       rep("readabs catalogue table", 4),
       rep("ABS SDMX CPI endpoint", 2),
       rep("readabs catalogue table", 2),
-      rep("readabs catalogue table", 4),
+      rep("readabs catalogue table", 2),
+      rep("ABS SDMX LF endpoint", 4),
       rep("readabs catalogue table", 4),
       rep("RBA statistical table CSV/XLSX", 3)
     ),
@@ -96,8 +99,10 @@ pipeline_external_sources <- function() {
       "ABS AWE readabs helper",
       "ABS 5206.0 Table 2",
       "ABS 5206.0 Table 7",
-      "ABS 6202.0 Table 1",
-      "ABS 6202.0 Table 22",
+      "ABS 6202.0 SDMX LF/M12.3.1599.20.AUS.M",
+      "ABS 6202.0 SDMX LF/M13.3.1599.20.AUS.M",
+      "ABS 6202.0 SDMX LF_UNDER/M23.3.1599.20.AUS.M",
+      "ABS 6202.0 SDMX LF_UNDER/M24.3.1599.20.AUS.M",
       "ABS 3101.0 Table 1",
       "ABS 3101.0 Table 2",
       "ABS 8731.0 Table 1",
@@ -107,12 +112,12 @@ pipeline_external_sources <- function() {
       "RBA F6"
     ),
     consuming_script = c(
-      rep("pipeline/02_fetch_abs_timeseries.R", 12),
+      rep("pipeline/02_fetch_abs_timeseries.R", 14),
       rep("pipeline/02b_fetch_abs_supply.R", 4),
       rep("pipeline/03_fetch_rba.R", 3)
     ),
     output_file = c(
-      rep("data/abs_timeseries.csv", 12),
+      rep("data/abs_timeseries.csv", 14),
       rep("data/abs_supply_demand.csv", 4),
       rep("data/rba_rates.csv", 3)
     ),

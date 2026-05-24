@@ -100,6 +100,11 @@ cat("=== Step 5: Validating pipeline outputs ===\n")
 run_step("Step 5", project_path("pipeline", "06_validate_outputs.R"))
 cat("\n")
 
+# --- Step 6: Data vintage metadata ---
+cat("=== Step 6: Writing data vintage metadata ===\n")
+run_step("Step 6", project_path("pipeline", "07_write_data_vintage.R"))
+cat("\n")
+
 # --- Summary ---
 cat("========================================\n")
 cat("  Pipeline complete\n")

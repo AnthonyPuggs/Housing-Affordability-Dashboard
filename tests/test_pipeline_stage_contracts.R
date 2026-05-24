@@ -144,6 +144,7 @@ if (all(file.exists(c(project_paths_path, contracts_path)))) {
       "ABS 3101.0",
       "ABS 8731.0",
       "ABS SDMX CPI",
+      "ABS SDMX LF",
       "RBA F1",
       "RBA F5",
       "RBA F6"

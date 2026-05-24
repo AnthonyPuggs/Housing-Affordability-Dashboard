@@ -38,6 +38,7 @@ library(plotly)
 
 .load_app_project_paths()
 source(project_path("plot_setup.R"), local = TRUE)
+source(project_path("R", "data_vintage.R"), local = TRUE)
 source(project_path("R", "visual_semantics.R"), local = TRUE)
 source(project_path("R", "ui_style_system.R"), local = TRUE)
 source(project_path("R", "app_ui_helpers.R"), local = TRUE)
@@ -148,6 +149,20 @@ ui <- page_navbar(
       .navbar .nav-link.active {
         color: var(--app-text) !important;
         border-bottom-color: var(--policy-accent);
+      }
+      .data-vintage-badge {
+        display: inline-flex;
+        align-items: center;
+        max-width: 42rem;
+        margin: 0 0.5rem;
+        padding: 0.32rem 0.55rem;
+        border: 1px solid var(--app-border);
+        border-radius: 6px;
+        background-color: var(--policy-surface-subtle);
+        color: var(--app-muted);
+        font-size: 0.78rem;
+        line-height: 1.25;
+        white-space: normal;
       }
       .navbar .navbar-toggler,
       .navbar .navbar-toggle {
@@ -791,6 +806,7 @@ ui <- page_navbar(
     "))
   ),
   nav_spacer(),
+  nav_item(data_vintage_badge()),
   nav_item(input_dark_mode(id = "theme_mode")),
 
   # ============================================================================

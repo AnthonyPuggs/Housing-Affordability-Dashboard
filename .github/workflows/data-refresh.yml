@@ -1,0 +1,55 @@
+name: Refresh dashboard data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 7 * * 1-5'
+      timezone: Australia/Brisbane
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Restore renv library
+        uses: r-lib/actions/setup-renv@v2
+
+      - name: Refresh dashboard data
+        run: Rscript pipeline/05_driver.R
+
+      - name: Run refresh contract tests
+        run: |
+          Rscript tests/test_data_vintage.R
+          Rscript tests/test_abs_labour_api_contracts.R
+          Rscript tests/test_pipeline_driver_stage_gates.R
+          Rscript tests/test_provenance_report.R
+          Rscript tests/test_ui_smoke_contracts.R
+          Rscript tests/test_data_refresh_workflow.R
+          Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
+
+      - name: Commit refreshed dashboard data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- data/*.csv)" ]; then
+            git add data/*.csv
+            git commit -m "data: refresh dashboard inputs"
+            git push
+          else
+            echo "No dashboard data changes to commit."
+          fi

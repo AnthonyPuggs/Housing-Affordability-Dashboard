@@ -11,11 +11,13 @@ project_paths_path <- file.path(repo_root, "R", "project_paths.R")
 registry_path <- file.path(repo_root, "R", "indicator_registry.R")
 report_path <- file.path(repo_root, "R", "provenance_report.R")
 contracts_path <- file.path(repo_root, "R", "pipeline_contracts.R")
+data_vintage_path <- file.path(repo_root, "R", "data_vintage.R")
 
 check(file.exists(project_paths_path), "R/project_paths.R does not exist")
 check(file.exists(registry_path), "R/indicator_registry.R does not exist")
 check(file.exists(report_path), "R/provenance_report.R does not exist")
 check(file.exists(contracts_path), "R/pipeline_contracts.R does not exist")
+check(file.exists(data_vintage_path), "R/data_vintage.R does not exist")
 
 if (file.exists(report_path)) {
   parsed <- tryCatch({
@@ -27,10 +29,11 @@ if (file.exists(report_path)) {
 }
 
 if (all(file.exists(c(project_paths_path, registry_path, report_path,
-                      contracts_path)))) {
+                      contracts_path, data_vintage_path)))) {
   source(project_paths_path)
   source(registry_path)
   source(contracts_path)
+  source(data_vintage_path)
   source(report_path)
 
   required_functions <- c(
@@ -84,6 +87,11 @@ if (all(file.exists(c(project_paths_path, registry_path, report_path,
       "pipeline/05_driver.R",
       "pipeline/06_validate_outputs.R",
       "data/*.csv",
+      "## Data Vintage",
+      "Data refreshed",
+      "Latest ABS/RBA observation",
+      "SIH:",
+      "data/data_vintage.csv",
       "Stylised scenario",
       "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment",
       "Deposit, LVR and loan-term controls are stylised serviceability assumptions",

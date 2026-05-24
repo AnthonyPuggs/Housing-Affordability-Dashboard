@@ -383,59 +383,68 @@ if (nrow(na_table2) > 0) {
 # ==============================================================================
 # 6. Labour Force — ABS 6202.0
 # ==============================================================================
-cat("  Fetching Labour Force (6202.0)...\n")
-
-labour <- safe_read(
-  read_abs(cat_no = "6202.0", tables = "1"),
-  "Labour Force 6202.0 Table 1",
-  required = TRUE
-)
-
-if (nrow(labour) > 0) {
-  unemployment <- select_series(
-    labour,
-    "Unemployment rate.*Persons",
-    "Unemployment Rate", "Labour Market", units = "Per cent"
+fetch_abs_lf_series <- function(dataflow, measure_key, label) {
+  endpoint <- paste0(
+    "https://data.api.abs.gov.au/rest/data/",
+    dataflow,
+    "/",
+    measure_key
   )
-  all_series$unemployment <- unemployment
-
-  participation <- select_series(
-    labour,
-    "Participation rate.*Persons",
-    "Participation Rate", "Labour Market", units = "Per cent"
-  )
-  all_series$participation <- participation
-
-  cat("    Unemployment:", nrow(unemployment), "obs |",
-      "Participation:", nrow(participation), "obs\n")
+  safe_read({
+    resp <- httr::GET(endpoint, httr::add_headers(Accept = "text/csv"))
+    if (httr::status_code(resp) != 200) {
+      stop("ABS API returned ", httr::status_code(resp))
+    }
+    readr::read_csv(
+      I(httr::content(resp, as = "text", encoding = "UTF-8")),
+      show_col_types = FALSE
+    ) %>%
+      transmute(
+        date = as.Date(paste0(TIME_PERIOD, "-01")),
+        value = as.numeric(OBS_VALUE),
+        series = label,
+        series_id = paste0("ABS:", dataflow, "/", measure_key),
+        unit = "Per cent",
+        frequency = "Month"
+      ) %>%
+      normalize_abs(label = label, category = "Labour Market",
+                    units = "Per cent", freq_hint = "Month") %>%
+      arrange(date)
+  }, label, required = TRUE)
 }
 
-# Table 22: Underemployment and underutilisation rates
-cat("  Fetching Labour Force Supplementary (6202.0 Table 22)...\n")
-labour_t22 <- safe_read(
-  read_abs(cat_no = "6202.0", tables = "22"),
-  "Labour Force 6202.0 Table 22",
-  required = TRUE
+cat("  Fetching Labour Force via ABS SDMX LF API...\n")
+
+participation <- fetch_abs_lf_series(
+  "LF",
+  "M12.3.1599.20.AUS.M",
+  "Participation Rate"
+)
+unemployment <- fetch_abs_lf_series(
+  "LF",
+  "M13.3.1599.20.AUS.M",
+  "Unemployment Rate"
+)
+underemployment <- fetch_abs_lf_series(
+  "LF_UNDER",
+  "M23.3.1599.20.AUS.M",
+  "Underemployment Rate"
+)
+underutilisation <- fetch_abs_lf_series(
+  "LF_UNDER",
+  "M24.3.1599.20.AUS.M",
+  "Labour Underutilisation Rate"
 )
 
-if (nrow(labour_t22) > 0) {
-  underemployment <- select_series(
-    labour_t22,
-    "Underemployment rate \\(proportion of labour force\\) ;\\s+Persons ;$",
-    "Underemployment Rate", "Labour Market", units = "Per cent"
-  )
-  all_series$underemployment <- underemployment
+all_series$participation <- participation
+all_series$unemployment <- unemployment
+all_series$underemployment <- underemployment
+all_series$underutilisation <- underutilisation
 
-  underutilisation <- select_series(
-    labour_t22,
-    "Underutilisation rate ;\\s+Persons ;$",
-    "Labour Underutilisation Rate", "Labour Market", units = "Per cent"
-  )
-  all_series$underutilisation <- underutilisation
-
-  cat("    Underemployment:", nrow(underemployment), "obs |",
-      "Underutilisation:", nrow(underutilisation), "obs\n")
-}
+cat("    Unemployment:", nrow(unemployment), "obs |",
+    "Participation:", nrow(participation), "obs |",
+    "Underemployment:", nrow(underemployment), "obs |",
+    "Underutilisation:", nrow(underutilisation), "obs\n")
 
 # ==============================================================================
 # 7. RPPI by dwelling type — ABS 6432.0 Table 2 median transfer prices

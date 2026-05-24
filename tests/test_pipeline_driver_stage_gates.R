@@ -55,12 +55,18 @@ for (pair in ordered_pairs) {
 }
 
 final_validation_pos <- position('run_step("Step 5", project_path("pipeline", "06_validate_outputs.R"))')
+vintage_pos <- position('run_step("Step 6", project_path("pipeline", "07_write_data_vintage.R"))')
 complete_pos <- position("Pipeline complete")
 check(!is.na(final_validation_pos),
       "pipeline/05_driver.R must keep final pipeline/06_validate_outputs.R validation")
+check(!is.na(vintage_pos),
+      "pipeline/05_driver.R must write data vintage metadata after validation")
+check(!is.na(final_validation_pos) && !is.na(vintage_pos) &&
+        final_validation_pos < vintage_pos,
+      "data vintage metadata must be written after final output validation")
 check(!is.na(final_validation_pos) && !is.na(complete_pos) &&
-        final_validation_pos < complete_pos,
-      "Pipeline complete must appear after final output validation")
+        !is.na(vintage_pos) && vintage_pos < complete_pos,
+      "Pipeline complete must appear after data vintage metadata is written")
 
 if (length(failures) > 0) {
   stop(
