@@ -50,6 +50,7 @@ data_vintage_badge <- function(data_dir = project_path("data")) {
     class = "data-vintage-badge",
     title = detail,
     `aria-label` = summary,
-    summary
+    summary,
+    tags$span(class = "data-vintage-badge-detail", detail)
   )
 }

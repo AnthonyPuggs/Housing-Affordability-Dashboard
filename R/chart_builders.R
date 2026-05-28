@@ -518,6 +518,41 @@ build_market_entry_serviceability_plot <- function(data, dark = FALSE) {
     theme_afford(dark)
 }
 
+build_market_entry_sensitivity_plot <- function(data, dark = FALSE) {
+  label_map <- c(
+    interest_rate = "Interest rate",
+    dwelling_price = "Dwelling price",
+    deposit_share = "Deposit share",
+    non_housing_expenses = "Non-housing expenses"
+  )
+
+  data <- data %>%
+    mutate(
+      sensitivity_label = ifelse(
+        sensitivity %in% names(label_map),
+        label_map[sensitivity],
+        sensitivity
+      ),
+      sensitivity_label = factor(
+        sensitivity_label,
+        levels = unname(label_map)
+      )
+    )
+
+  ggplot(data, aes(x = input_value,
+                   y = expense_adjusted_repayment_ratio_pct,
+                   group = sensitivity_label)) +
+    geom_line(linewidth = 1, color = semantic_colour("worse"), alpha = 0.85) +
+    geom_point(size = 2.4, color = semantic_colour("worse")) +
+    geom_hline(yintercept = 30, linetype = "dashed",
+               color = semantic_colour("caution"), linewidth = 0.65) +
+    facet_wrap(~sensitivity_label, scales = "free_x") +
+    scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
+    labs(x = NULL, y = "Expense-adjusted repayment / income") +
+    theme_afford(dark) +
+    theme(legend.position = "none")
+}
+
 build_housing_stress_bands_plot <- function(data, dark = FALSE) {
   ggplot(data, aes(x = breakdown_val, y = value, fill = stress_band,
                    text = hover_text)) +
@@ -535,6 +570,38 @@ build_housing_stress_bands_plot <- function(data, dark = FALSE) {
     labs(x = NULL, y = "% of Households", fill = "Cost/Income") +
     coord_flip() +
     theme_afford(dark)
+}
+
+build_distributional_stress_plot <- function(data, dark = FALSE) {
+  ggplot(data, aes(x = reorder(group_label, value), y = value,
+                   text = hover_text)) +
+    geom_col(fill = semantic_colour("worse"), alpha = 0.86, width = 0.7) +
+    geom_errorbar(
+      data = data %>%
+        filter(!is.na(estimate_lower_95), !is.na(estimate_upper_95)),
+      aes(ymin = estimate_lower_95, ymax = estimate_upper_95),
+      inherit.aes = TRUE,
+      width = 0.22,
+      linewidth = 0.75,
+      color = if (dark) "#F8FAFC" else "#172033",
+      alpha = 0.9
+    ) +
+    geom_text(
+      data = data %>% filter(nzchar(reliability_marker)),
+      aes(label = reliability_marker),
+      inherit.aes = TRUE,
+      hjust = -0.35,
+      size = 4.2,
+      fontface = "bold",
+      color = semantic_colour("caution"),
+      show.legend = FALSE
+    ) +
+    coord_flip(clip = "off") +
+    scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1),
+                       expand = expansion(mult = c(0, 0.12))) +
+    labs(x = NULL, y = "% of households", title = unique(data$measure_label)[[1]]) +
+    theme_afford(dark) +
+    theme(plot.margin = margin(8, 18, 8, 10))
 }
 
 build_cost_burden_heatmap_plot <- function(data, dark = FALSE) {

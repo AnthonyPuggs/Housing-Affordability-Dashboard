@@ -1,7 +1,7 @@
-# Graph Report - codex-scheduled-refresh-vintage  (2026-05-24)
+# Graph Report - credibility-first-features  (2026-05-29)
 
 ## Corpus Check
-- 103 files · ~174,473 words
+- 108 files · ~178,667 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary

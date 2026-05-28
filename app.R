@@ -42,10 +42,12 @@ source(project_path("R", "data_vintage.R"), local = TRUE)
 source(project_path("R", "visual_semantics.R"), local = TRUE)
 source(project_path("R", "ui_style_system.R"), local = TRUE)
 source(project_path("R", "app_ui_helpers.R"), local = TRUE)
+source(project_path("R", "indicator_context.R"), local = TRUE)
 source(project_path("R", "plotly_helpers.R"), local = TRUE)
 source(project_path("R", "chart_builders.R"), local = TRUE)
 source(project_path("R", "market_entry_scenarios.R"), local = TRUE)
 source(project_path("R", "provenance_report.R"), local = TRUE)
+source(project_path("R", "release_checklist.R"), local = TRUE)
 source(project_path("R", "methodology_module.R"), local = TRUE)
 source(project_path("R", "affordability_module.R"), local = TRUE)
 source(project_path("R", "rental_market_module.R"), local = TRUE)
@@ -153,6 +155,7 @@ ui <- page_navbar(
       .data-vintage-badge {
         display: inline-flex;
         align-items: center;
+        position: relative;
         max-width: 42rem;
         margin: 0 0.5rem;
         padding: 0.32rem 0.55rem;
@@ -163,6 +166,29 @@ ui <- page_navbar(
         font-size: 0.78rem;
         line-height: 1.25;
         white-space: normal;
+      }
+      .data-vintage-badge-detail {
+        display: none;
+        position: absolute;
+        top: calc(100% + 0.35rem);
+        right: 0;
+        z-index: 1100;
+        width: min(34rem, 82vw);
+        max-height: 16rem;
+        overflow: auto;
+        padding: 0.55rem 0.65rem;
+        border: 1px solid var(--app-border);
+        border-radius: 6px;
+        background-color: var(--policy-surface);
+        color: var(--app-text);
+        box-shadow: var(--policy-shadow);
+        font-size: 0.76rem;
+        line-height: 1.35;
+      }
+      .data-vintage-badge:hover .data-vintage-badge-detail,
+      .data-vintage-badge:focus .data-vintage-badge-detail,
+      .data-vintage-badge:focus-within .data-vintage-badge-detail {
+        display: block;
       }
       .navbar .navbar-toggler,
       .navbar .navbar-toggle {

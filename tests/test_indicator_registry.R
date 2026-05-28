@@ -38,6 +38,12 @@ if (file.exists(registry_path)) {
     "source_series",
     "official_measure",
     "stylised_scenario",
+    "measure_class",
+    "methodology_version",
+    "primary_source",
+    "quality_note",
+    "vintage_dataset",
+    "public_caveat",
     "minimum_rows"
   )
   missing_columns <- setdiff(required_columns, names(registry))
@@ -91,10 +97,38 @@ if (file.exists(registry_path)) {
   check(all(!is.na(registry$interpretation_direction) &
               nzchar(registry$interpretation_direction)),
         "Every registry row must declare interpretation_direction")
+  allowed_measure_classes <- c(
+    "official_survey",
+    "derived_index",
+    "stylised_scenario",
+    "context_series"
+  )
+  check(all(registry$measure_class %in% allowed_measure_classes),
+        "Registry contains unsupported measure_class values")
+  metadata_columns <- c(
+    "methodology_version",
+    "primary_source",
+    "quality_note",
+    "vintage_dataset",
+    "public_caveat"
+  )
+  for (column in metadata_columns) {
+    check(all(!is.na(registry[[column]]) & nzchar(registry[[column]])),
+          paste("Every registry row must declare", column))
+  }
+  check(all(registry$official_measure ==
+              (registry$measure_class == "official_survey")),
+        "official_measure must match official_survey measure_class")
+  check(all(registry$stylised_scenario ==
+              (registry$measure_class == "stylised_scenario")),
+        "stylised_scenario must match stylised_scenario measure_class")
+
   cost_pressure <- registry[registry$concept_group == "cost_pressure", ]
   check(nrow(cost_pressure) > 0, "Registry has no cost_pressure indicators")
   check(all(cost_pressure$interpretation_direction == "higher_less_affordable"),
         "Cost-pressure indicators must use higher_less_affordable interpretation")
+  check(all(cost_pressure$measure_class == "derived_index"),
+        "Cost-pressure indicators must be classified as derived_index")
 
   score_registry <- registry[
     registry$indicator %in% c(
@@ -117,6 +151,11 @@ if (file.exists(registry_path)) {
           "Score registry rows must not be official ABS measures")
     check(all(score_registry$stylised_scenario),
           "Score registry rows must be marked as stylised scenarios")
+    check(all(score_registry$measure_class == "stylised_scenario"),
+          "Score registry rows must use stylised_scenario measure_class")
+    check(all(score_registry$methodology_version ==
+                "national_affordability_score_v1"),
+          "Score registry rows must use the v1 score methodology version")
     score_formula_text <- paste(score_registry$formula, collapse = "\n")
     required_score_formula_text <- c(
       "40 per cent",

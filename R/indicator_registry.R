@@ -134,8 +134,62 @@ indicator_registry <- function() {
       "Deposit Gap (Years)"
     ),
     official_measure = rep(FALSE, 11),
-    stylised_scenario = c(TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE,
+    stylised_scenario = c(FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE,
                           TRUE, TRUE, TRUE, TRUE),
+    measure_class = c(
+      "derived_index",
+      "derived_index",
+      "derived_index",
+      "stylised_scenario",
+      "context_series",
+      "context_series",
+      "context_series",
+      rep("stylised_scenario", 4)
+    ),
+    methodology_version = c(
+      rep("affordability_indices_v1", 7),
+      rep("national_affordability_score_v1", 4)
+    ),
+    primary_source = c(
+      "ABS 6432.0 mean dwelling prices and ABS WPI",
+      "ABS 6432.0 mean dwelling prices, ABS WPI and RBA owner-occupier mortgage rates",
+      "ABS CPI rents and ABS WPI",
+      "ABS mean dwelling prices and AWE with fixed deposit and savings assumptions",
+      "ABS mean dwelling prices and CPI All Groups",
+      "ABS WPI and CPI All Groups",
+      "RBA owner-occupier mortgage rates and ABS CPI inflation",
+      "Dashboard affordability_indices.csv component scores",
+      "Dashboard Mortgage Serviceability Index component",
+      "Dashboard Rental Affordability Index component",
+      "Dashboard Deposit Gap component"
+    ),
+    quality_note = c(
+      "Derived dashboard index from public ABS time series; no SIH sampling-error interval applies.",
+      "Derived dashboard index from public ABS/RBA time series; no SIH sampling-error interval applies.",
+      "Derived dashboard index from public ABS CPI and wage series; no SIH sampling-error interval applies.",
+      "Stylised scenario using fixed deposit and savings assumptions; not an official ABS or lender measure.",
+      "Context series derived from public ABS price and CPI inputs.",
+      "Context series derived from public ABS wage and CPI inputs.",
+      "Context series derived from public RBA rates and ABS inflation inputs.",
+      "Stylised composite score with sensitivity diagnostics; not an official ABS/NHHA statistic or lender assessment.",
+      "Stylised component score; no SIH sampling-error interval applies.",
+      "Stylised component score; CPI rents may understate new-lease stress.",
+      "Stylised component score using fixed deposit assumptions."
+    ),
+    vintage_dataset = rep("affordability_indices", 11),
+    public_caveat = c(
+      "Cost-pressure index, higher = less affordable.",
+      "Modelled mortgage cost-pressure index, higher = less affordable.",
+      "Rent cost-pressure index, higher = less affordable.",
+      "Stylised years-to-save estimate, not an official ABS measure or lender assessment.",
+      "Context series, not a household burden measure.",
+      "Context series, not a household distribution measure.",
+      "Context series, not a lender assessment.",
+      "Historical-relative market-entry score, not an official ABS/NHHA statistic or lender assessment.",
+      "Historical-relative component score, not a standalone affordability threshold.",
+      "Historical-relative component score; CPI rents may lag advertised rents.",
+      "Historical-relative component score using fixed upfront deposit assumptions."
+    ),
     minimum_rows = c(40L, 50L, 80L, 30L, 50L, 80L, 50L,
                      20L, 20L, 20L, 20L),
     stringsAsFactors = FALSE
@@ -217,6 +271,12 @@ indicator_registry_methodology_table <- function() {
     "Source Series" = registry$source_series,
     "Official Measure" = ifelse(registry$official_measure, "Yes", "No"),
     "Stylised Scenario" = ifelse(registry$stylised_scenario, "Yes", "No"),
+    "Measure Class" = registry$measure_class,
+    "Methodology Version" = registry$methodology_version,
+    "Primary Source" = registry$primary_source,
+    "Quality Note" = registry$quality_note,
+    "Vintage Dataset" = registry$vintage_dataset,
+    "Public Caveat" = registry$public_caveat,
     "Minimum Rows" = registry$minimum_rows,
     check.names = FALSE,
     stringsAsFactors = FALSE

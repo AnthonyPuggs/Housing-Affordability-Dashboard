@@ -1,5 +1,27 @@
 # Methodology page module.
 
+if (!exists("indicator_quality_coverage_summary", mode = "function", inherits = TRUE)) {
+  indicator_context_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "indicator_context.R")
+  } else {
+    file.path("R", "indicator_context.R")
+  }
+  if (file.exists(indicator_context_path)) {
+    source(indicator_context_path, local = environment())
+  }
+}
+
+if (!exists("release_confidence_summary", mode = "function", inherits = TRUE)) {
+  release_checklist_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "release_checklist.R")
+  } else {
+    file.path("R", "release_checklist.R")
+  }
+  if (file.exists(release_checklist_path)) {
+    source(release_checklist_path, local = environment())
+  }
+}
+
 methodologyPageUI <- function(id) {
   ns <- NS(id)
 
@@ -59,6 +81,22 @@ methodologyPageUI <- function(id) {
         tags$p("R/market_entry_scenarios.R defines the app-only market-entry scenarios used by the calculator and assessed-rate sensitivity chart."),
         tags$p("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."),
         tags$p("Deposit, LVR and loan-term controls are stylised serviceability assumptions; the serviceability chart uses AWE individual earnings as the income proxy.")
+      )
+    ),
+    layout_column_wrap(
+      width = 1/2,
+      fill = FALSE,
+      policy_card(
+        "Quality & Coverage",
+        tags$p("Indicator confidence groups separate official survey measures, derived indexes, stylised scenarios and context series."),
+        div(class = "methodology-table-wrap",
+            tableOutput(ns("quality_coverage_table")))
+      ),
+      policy_card(
+        "Release Confidence",
+        tags$p("Read-only release confidence uses saved CSVs, data vintage metadata and the public release checklist; it does not refresh ABS or RBA data inside the app."),
+        div(class = "methodology-table-wrap",
+            tableOutput(ns("release_confidence_table")))
       )
     ),
     layout_column_wrap(
@@ -174,6 +212,22 @@ methodologyPageServer <- function(id) {
 
     output$indicator_table <- renderTable({
       indicator_registry_methodology_table()
+    }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
+
+    output$quality_coverage_table <- renderTable({
+      summary <- indicator_quality_coverage_summary()
+      data.frame(
+        "Measure Class" = indicator_measure_class_label(summary$measure_class),
+        "Indicators" = summary$indicators,
+        "Latest Period" = summary$latest_period,
+        "Quality Note" = summary$quality_note,
+        check.names = FALSE,
+        stringsAsFactors = FALSE
+      )
+    }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
+
+    output$release_confidence_table <- renderTable({
+      release_confidence_summary()
     }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
 
     output$data_vintage_summary <- renderUI({

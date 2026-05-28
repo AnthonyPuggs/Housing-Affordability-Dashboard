@@ -148,6 +148,131 @@ market_entry_scenario <- function(dwelling_price, gross_annual_income,
   )
 }
 
+market_entry_scenario_presets <- function() {
+  data.frame(
+    preset_id = c("first_home_buyer", "mortgage_stress", "renter_entry"),
+    label = c("First-home buyer", "Mortgage-stress", "Renter entry"),
+    dwelling_price = c(800000, 950000, 650000),
+    gross_annual_income = c(120000, 140000, 95000),
+    annual_rate_pct = c(6.0, 7.0, 6.0),
+    deposit_pct = c(20, 10, 20),
+    term_years = c(30, 30, 30),
+    savings_rate_pct = c(15, 10, 12),
+    assessment_buffer_pp = c(3, 3, 2),
+    annual_non_housing_expenses = c(30000, 45000, 28000),
+    monthly_other_debt = c(0, 750, 0),
+    stringsAsFactors = FALSE
+  )
+}
+
+market_entry_sensitivity_grid <- function(dwelling_price, gross_annual_income,
+                                          annual_rate_pct, deposit_pct = 20,
+                                          term_years = 30,
+                                          savings_rate_pct = 15,
+                                          assessment_buffer_pp = 0,
+                                          annual_non_housing_expenses = 0,
+                                          monthly_other_debt = 0) {
+  dwelling_price <- scenario_scalar(dwelling_price, "dwelling_price", positive = TRUE)
+  gross_annual_income <- scenario_scalar(
+    gross_annual_income,
+    "gross_annual_income",
+    positive = TRUE
+  )
+  annual_rate_pct <- scenario_scalar(
+    annual_rate_pct,
+    "annual_rate_pct",
+    non_negative = TRUE
+  )
+  deposit_pct <- scenario_scalar(deposit_pct, "deposit_pct", positive = TRUE)
+  term_years <- scenario_scalar(term_years, "term_years", positive = TRUE)
+  savings_rate_pct <- scenario_scalar(
+    savings_rate_pct,
+    "savings_rate_pct",
+    positive = TRUE
+  )
+  assessment_buffer_pp <- scenario_scalar(
+    assessment_buffer_pp,
+    "assessment_buffer_pp",
+    non_negative = TRUE
+  )
+  annual_non_housing_expenses <- scenario_scalar(
+    annual_non_housing_expenses,
+    "annual_non_housing_expenses",
+    non_negative = TRUE
+  )
+  monthly_other_debt <- scenario_scalar(
+    monthly_other_debt,
+    "monthly_other_debt",
+    non_negative = TRUE
+  )
+
+  sensitivity_inputs <- rbind(
+    data.frame(
+      sensitivity = "interest_rate",
+      input_value = sort(unique(pmax(0, annual_rate_pct + c(-1, 0, 1, 2)))),
+      stringsAsFactors = FALSE
+    ),
+    data.frame(
+      sensitivity = "dwelling_price",
+      input_value = sort(unique(round(dwelling_price * c(0.85, 1, 1.15, 1.30)))),
+      stringsAsFactors = FALSE
+    ),
+    data.frame(
+      sensitivity = "deposit_share",
+      input_value = sort(unique(pmin(40, pmax(5, deposit_pct + c(-10, 0, 10, 20))))),
+      stringsAsFactors = FALSE
+    ),
+    data.frame(
+      sensitivity = "non_housing_expenses",
+      input_value = sort(unique(pmax(0, annual_non_housing_expenses +
+        c(0, 15000, 30000, 45000)))),
+      stringsAsFactors = FALSE
+    )
+  )
+
+  rows <- lapply(seq_len(nrow(sensitivity_inputs)), function(i) {
+    row <- sensitivity_inputs[i, ]
+    scenario <- market_entry_scenario(
+      dwelling_price = if (row$sensitivity == "dwelling_price") {
+        row$input_value
+      } else {
+        dwelling_price
+      },
+      gross_annual_income = gross_annual_income,
+      annual_rate_pct = if (row$sensitivity == "interest_rate") {
+        row$input_value
+      } else {
+        annual_rate_pct
+      },
+      deposit_pct = if (row$sensitivity == "deposit_share") {
+        row$input_value
+      } else {
+        deposit_pct
+      },
+      term_years = term_years,
+      savings_rate_pct = savings_rate_pct,
+      assessment_buffer_pp = assessment_buffer_pp,
+      annual_non_housing_expenses = if (row$sensitivity == "non_housing_expenses") {
+        row$input_value
+      } else {
+        annual_non_housing_expenses
+      },
+      monthly_other_debt = monthly_other_debt
+    )
+    cbind(
+      data.frame(
+        sensitivity = row$sensitivity,
+        input_value = row$input_value,
+        stringsAsFactors = FALSE
+      ),
+      scenario
+    )
+  })
+
+  out <- do.call(rbind, rows)
+  out[order(out$sensitivity, out$input_value), , drop = FALSE]
+}
+
 market_entry_serviceability_series <- function(price_ts, income_ts, rate_ts,
                                                deposit_pct = 20,
                                                lvr_pct = NULL,

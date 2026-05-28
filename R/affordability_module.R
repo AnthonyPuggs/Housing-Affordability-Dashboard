@@ -52,6 +52,77 @@ affordability_indicator_choices <- c(
   "Modelled Serviceability" = "Housing Serviceability"
 )
 
+distributional_stress_data <- function(measure = "nhha_state",
+                                       tenure = "renter_lower_income",
+                                       group = "state",
+                                       quality = NULL) {
+  if (identical(measure, "nhha_state")) {
+    d <- sih_nhha %>%
+      filter(metric == "pct_rental_stress_over_30",
+             tenure == "renter_lower_income",
+             breakdown_val == "Total",
+             geography != "Aust.") %>%
+      group_by(geography) %>%
+      filter(survey_year == max(survey_year)) %>%
+      ungroup()
+    measure_label <- "Official SIH/NHHA burden measure: lower-income renters paying >30% of income"
+    group_label <- d$geography
+  } else if (identical(measure, "lower_income_state")) {
+    d <- sih_lower_income_states %>%
+      filter(metric == "pct_over_30",
+             tenure == tenure,
+             geography != "Australia") %>%
+      group_by(geography) %>%
+      filter(survey_year == max(survey_year)) %>%
+      ungroup()
+    measure_label <- "Official SIH lower-income burden measure: households paying >30% of income"
+    group_label <- d$geography
+  } else {
+    breakdown <- if (group %in% c("age_group", "family_type",
+                                  "equiv_income_quintile")) {
+      group
+    } else {
+      "equiv_income_quintile"
+    }
+    d <- sih_cost_ratios %>%
+      filter(metric == "cost_income_ratio",
+             tenure == tenure,
+             breakdown_var == breakdown,
+             stat_type == "mean",
+             breakdown_val != "Total")
+    measure_label <- "Official SIH cost-to-income burden measure by household group"
+    group_label <- d$breakdown_val
+  }
+
+  if (nrow(d) == 0) {
+    return(d)
+  }
+
+  d <- d %>%
+    join_sih_quality(quality) %>%
+    mutate(
+      group_label = group_label,
+      measure_label = measure_label,
+      measure_class = "official_survey",
+      reliability_marker = sih_reliability_marker(rse_reliability_flag),
+      quality_hover = sih_quality_hover_text(
+        rse_pct,
+        moe_95,
+        rse_reliability_flag
+      ),
+      hover_text = paste0(
+        group_label,
+        "<br>Survey year: ", survey_year,
+        "<br>Value: ", number(value, accuracy = 0.1), "%",
+        "<br>", quality_hover,
+        ifelse(nzchar(interval_label), paste0("<br>", interval_label), ""),
+        "<br>Official SIH/NHHA burden measure; not modelled market-entry."
+      )
+    )
+
+  d
+}
+
 affordabilityPageUI <- function(id) {
   ns <- NS(id)
 
@@ -115,6 +186,11 @@ affordabilityPageUI <- function(id) {
           sidebar = sidebar(
             width = 320, open = "desktop",
             source_note(stylised_scenario_note),
+            selectInput(ns("calc_preset"), "Scenario preset",
+                        choices = c("First-home buyer" = "first_home_buyer",
+                                    "Mortgage-stress" = "mortgage_stress",
+                                    "Renter entry" = "renter_entry"),
+                        selected = "first_home_buyer"),
             numericInput(ns("calc_price"), "Dwelling Price ($)",
                          value = 800000, min = 100000, max = 5000000,
                          step = 50000),
@@ -180,6 +256,11 @@ affordabilityPageUI <- function(id) {
               value = textOutput(ns("calc_deposit_amt")),
               accent = "navy"
             )
+          ),
+          policy_chart_card(
+            "Scenario Sensitivity",
+            note = "Stylised sensitivity chart. Higher values mean a larger expense-adjusted repayment burden; it is not an official ABS/NHHA measure or lender assessment.",
+            plotlyOutput(ns("calc_sensitivity"), height = "360px")
           )
         )
       ),
@@ -226,6 +307,41 @@ affordabilityPageUI <- function(id) {
                 plotlyOutput(ns("burden_heatmap"), height = "100%", width = "100%"))
           )
         )
+      ),
+      nav_panel(
+        "Distributional Stress Explorer",
+        layout_sidebar(
+          sidebar = sidebar(
+            width = 300, open = "desktop",
+            selectInput(ns("dist_measure"), "Official measure",
+                        choices = c(
+                          "NHHA lower-income renter stress by state" = "nhha_state",
+                          "Lower-income housing stress by state" = "lower_income_state",
+                          "Cost-to-income by household group" = "cost_income_demographic"
+                        ),
+                        selected = "nhha_state"),
+            selectInput(ns("dist_tenure"), "Tenure",
+                        choices = c("Lower-income renters" = "renter_lower_income",
+                                    "Private renters" = "renter_private",
+                                    "Mortgage owners" = "owner_mortgage",
+                                    "All households" = "all"),
+                        selected = "renter_lower_income"),
+            selectInput(ns("dist_group"), "Group",
+                        choices = c("State/Territory" = "state",
+                                    "Income quintile" = "equiv_income_quintile",
+                                    "Age group" = "age_group",
+                                    "Family type" = "family_type"),
+                        selected = "state"),
+            source_note("Official SIH/NHHA burden measure. These estimates are not modelled market-entry indexes.")
+          ),
+          policy_chart_card(
+            "Distributional Stress Explorer",
+            note = policy_source_note("Official SIH/NHHA burden measure with SIH reliability markers where available. This surface is not modelled market-entry analysis. ", sih_sampling_error_note),
+            div(class = "chart-square",
+                plotlyOutput(ns("distributional_stress"),
+                             height = "100%", width = "100%"))
+          )
+        )
       )
     )
   )
@@ -233,6 +349,33 @@ affordabilityPageUI <- function(id) {
 
 affordabilityPageServer <- function(id, is_dark) {
   moduleServer(id, function(input, output, session) {
+    observeEvent(input$calc_preset, {
+      presets <- market_entry_scenario_presets()
+      preset <- presets[presets$preset_id == input$calc_preset, , drop = FALSE]
+      if (nrow(preset) != 1) {
+        return(NULL)
+      }
+
+      updateNumericInput(session, "calc_price",
+                         value = preset$dwelling_price[[1]])
+      updateNumericInput(session, "calc_income",
+                         value = preset$gross_annual_income[[1]])
+      updateSliderInput(session, "calc_rate",
+                        value = preset$annual_rate_pct[[1]])
+      updateSliderInput(session, "calc_assessment_buffer",
+                        value = preset$assessment_buffer_pp[[1]])
+      updateSliderInput(session, "calc_deposit_pct",
+                        value = preset$deposit_pct[[1]])
+      updateSliderInput(session, "calc_term",
+                        value = preset$term_years[[1]])
+      updateSliderInput(session, "calc_savings_rate",
+                        value = preset$savings_rate_pct[[1]])
+      updateNumericInput(session, "calc_annual_expenses",
+                         value = preset$annual_non_housing_expenses[[1]])
+      updateNumericInput(session, "calc_monthly_debt",
+                         value = preset$monthly_other_debt[[1]])
+    }, ignoreInit = TRUE)
+
     output$afford_indices_chart <- renderPlotly({
       req(input$afford_indices)
       idx_selected <- setdiff(input$afford_indices, "Housing Serviceability")
@@ -299,6 +442,30 @@ affordabilityPageServer <- function(id, is_dark) {
     output$calc_lvr            <- renderText(fmt_pct(calc_vals()$lvr_pct, 1))
     output$calc_total_interest <- renderText(fmt_dollar(calc_vals()$total_nominal_interest))
     output$calc_deposit_amt    <- renderText(fmt_dollar(calc_vals()$deposit))
+
+    output$calc_sensitivity <- renderPlotly({
+      d <- market_entry_sensitivity_grid(
+        dwelling_price = input$calc_price,
+        gross_annual_income = input$calc_income,
+        annual_rate_pct = input$calc_rate,
+        deposit_pct = input$calc_deposit_pct,
+        term_years = input$calc_term,
+        savings_rate_pct = input$calc_savings_rate,
+        assessment_buffer_pp = input$calc_assessment_buffer,
+        annual_non_housing_expenses = input$calc_annual_expenses,
+        monthly_other_debt = input$calc_monthly_debt
+      )
+      validate(need(nrow(d) > 0, "No scenario sensitivity data available."))
+
+      p <- build_market_entry_sensitivity_plot(d, dark = is_dark())
+
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+    }) %>%
+      bindCache(input$calc_price, input$calc_income, input$calc_rate,
+                input$calc_deposit_pct, input$calc_term,
+                input$calc_savings_rate, input$calc_assessment_buffer,
+                input$calc_annual_expenses, input$calc_monthly_debt,
+                is_dark())
 
     output$stress_chart <- renderPlotly({
       bd <- input$stress_breakdown
@@ -375,5 +542,21 @@ affordabilityPageServer <- function(id, is_dark) {
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
     }) %>%
       bindCache(input$burden_breakdown, input$burden_stat, is_dark())
+
+    output$distributional_stress <- renderPlotly({
+      d <- distributional_stress_data(
+        measure = input$dist_measure,
+        tenure = input$dist_tenure,
+        group = input$dist_group,
+        quality = sih_quality
+      )
+      validate(need(nrow(d) > 0, "No official SIH/NHHA distributional stress data for selected filters."))
+
+      p <- build_distributional_stress_plot(d, dark = is_dark())
+
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "text"))
+    }) %>%
+      bindCache(input$dist_measure, input$dist_tenure, input$dist_group,
+                is_dark())
   })
 }

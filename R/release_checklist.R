@@ -446,3 +446,84 @@ validate_release_checklist <- function(fail_on = "fail") {
 
   invisible(checks)
 }
+
+release_confidence_summary <- function(repo_root = project_root(),
+                                       data_dir = project_path("data")) {
+  checks <- release_checklist(repo_root = repo_root, data_dir = data_dir)
+  pass_count <- sum(checks$status == "pass", na.rm = TRUE)
+  warn_count <- sum(checks$status == "warn", na.rm = TRUE)
+  fail_count <- sum(checks$status == "fail", na.rm = TRUE)
+  release_status <- if (fail_count > 0) {
+    "fail"
+  } else if (warn_count > 0) {
+    "warn"
+  } else {
+    "pass"
+  }
+
+  vintage <- if (exists("read_data_vintage", mode = "function")) {
+    read_data_vintage(data_dir, fallback = TRUE)
+  } else {
+    data.frame()
+  }
+  latest_live <- if (exists("data_vintage_latest_period", mode = "function")) {
+    data_vintage_latest_period(
+      vintage,
+      c("ABS live time series", "RBA live tables")
+    )
+  } else {
+    ""
+  }
+  latest_sih <- if (exists("data_vintage_latest_period", mode = "function")) {
+    data_vintage_latest_period(
+      vintage,
+      "Static ABS SIH workbook outputs"
+    )
+  } else {
+    ""
+  }
+
+  manifest <- if (exists("pipeline_external_sources", mode = "function")) {
+    pipeline_external_sources()
+  } else {
+    data.frame()
+  }
+  manifest_status <- if (nrow(manifest) > 0) "pass" else "fail"
+  manifest_detail <- if (nrow(manifest) > 0) {
+    paste(nrow(manifest), "fixed ABS/RBA source surfaces documented.")
+  } else {
+    "External source manifest is unavailable."
+  }
+
+  data.frame(
+    label = c(
+      "Release checks",
+      "Latest ABS/RBA observation",
+      "SIH survey period",
+      "External source manifest",
+      "Known caveats"
+    ),
+    value = c(
+      paste0(pass_count, " pass, ", warn_count, " warn, ", fail_count, " fail"),
+      ifelse(nzchar(latest_live), latest_live, "Unavailable"),
+      ifelse(nzchar(latest_sih), latest_sih, "Unavailable"),
+      ifelse(nrow(manifest) > 0, "Available", "Unavailable"),
+      "Official SIH/NHHA measures stay separate from stylised scenarios."
+    ),
+    status = c(
+      release_status,
+      ifelse(nzchar(latest_live), "pass", "warn"),
+      ifelse(nzchar(latest_sih), "pass", "warn"),
+      manifest_status,
+      "warn"
+    ),
+    detail = c(
+      "Read-only summary from validate_release_checklist().",
+      "Latest saved observation across ABS live time series and RBA tables.",
+      "Latest saved survey period across static ABS SIH workbook outputs.",
+      manifest_detail,
+      "National score, serviceability and calculator outputs are descriptive or stylised, not official ABS/NHHA statistics or lender assessments."
+    ),
+    stringsAsFactors = FALSE
+  )
+}
