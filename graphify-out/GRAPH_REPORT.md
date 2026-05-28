@@ -1,7 +1,7 @@
-# Graph Report - credibility-first-features  (2026-05-29)
+# Graph Report - Housing-Affordability-Dashboard  (2026-05-29)
 
 ## Corpus Check
-- 108 files · ~178,667 words
+- 108 files · ~183,330 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
