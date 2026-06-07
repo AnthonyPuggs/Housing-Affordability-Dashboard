@@ -150,17 +150,98 @@ market_entry_scenario <- function(dwelling_price, gross_annual_income,
 
 market_entry_scenario_presets <- function() {
   data.frame(
-    preset_id = c("first_home_buyer", "mortgage_stress", "renter_entry"),
-    label = c("First-home buyer", "Mortgage-stress", "Renter entry"),
+    preset_id = c("first_home_buyer", "mortgage_stress", "high_lvr_buyer"),
+    label = c("First-home buyer", "Mortgage-stress", "High-LVR buyer"),
     dwelling_price = c(800000, 950000, 650000),
     gross_annual_income = c(120000, 140000, 95000),
     annual_rate_pct = c(6.0, 7.0, 6.0),
-    deposit_pct = c(20, 10, 20),
+    deposit_pct = c(20, 10, 10),
     term_years = c(30, 30, 30),
     savings_rate_pct = c(15, 10, 12),
     assessment_buffer_pp = c(3, 3, 2),
     annual_non_housing_expenses = c(30000, 45000, 28000),
     monthly_other_debt = c(0, 750, 0),
+    stringsAsFactors = FALSE
+  )
+}
+
+renter_entry_scenario <- function(weekly_rent, gross_annual_income,
+                                  bond_weeks = 4,
+                                  upfront_moving_costs = 0,
+                                  savings_rate_pct = 10,
+                                  annual_non_housing_expenses = 0) {
+  weekly_rent <- scenario_scalar(weekly_rent, "weekly_rent", positive = TRUE)
+  gross_annual_income <- scenario_scalar(
+    gross_annual_income,
+    "gross_annual_income",
+    positive = TRUE
+  )
+  bond_weeks <- scenario_scalar(bond_weeks, "bond_weeks", non_negative = TRUE)
+  upfront_moving_costs <- scenario_scalar(
+    upfront_moving_costs,
+    "upfront_moving_costs",
+    non_negative = TRUE
+  )
+  savings_rate_pct <- scenario_scalar(
+    savings_rate_pct,
+    "savings_rate_pct",
+    positive = TRUE
+  )
+  annual_non_housing_expenses <- scenario_scalar(
+    annual_non_housing_expenses,
+    "annual_non_housing_expenses",
+    non_negative = TRUE
+  )
+
+  if (savings_rate_pct > 100) {
+    stop("savings_rate_pct must be 100 or less.", call. = FALSE)
+  }
+
+  expense_adjusted_income <- gross_annual_income - annual_non_housing_expenses
+  if (expense_adjusted_income <= 0) {
+    stop(
+      "gross_annual_income must exceed annual_non_housing_expenses.",
+      call. = FALSE
+    )
+  }
+
+  annual_rent <- weekly_rent * 52
+  bond_amount <- weekly_rent * bond_weeks
+  upfront_cash_required <- bond_amount + upfront_moving_costs
+  annual_savings <- gross_annual_income * savings_rate_pct / 100
+  years_to_save_upfront <- upfront_cash_required / annual_savings
+
+  data.frame(
+    weekly_rent = weekly_rent,
+    annual_rent = annual_rent,
+    gross_annual_income = gross_annual_income,
+    annual_non_housing_expenses = annual_non_housing_expenses,
+    rent_to_gross_income_pct = annual_rent / gross_annual_income * 100,
+    expense_adjusted_rent_ratio_pct =
+      annual_rent / expense_adjusted_income * 100,
+    bond_weeks = bond_weeks,
+    bond_amount = bond_amount,
+    upfront_moving_costs = upfront_moving_costs,
+    upfront_cash_required = upfront_cash_required,
+    savings_rate_pct = savings_rate_pct,
+    years_to_save_upfront = years_to_save_upfront,
+    weeks_to_save_upfront = years_to_save_upfront * 52,
+    stringsAsFactors = FALSE
+  )
+}
+
+renter_entry_scenario_presets <- function() {
+  data.frame(
+    preset_id = c("median_renter_entry", "tight_rental_entry",
+                  "lower_income_renter"),
+    label = c("Median renter entry", "Tight rental entry",
+              "Lower-income renter"),
+    weekly_rent = c(620, 760, 430),
+    gross_annual_income = c(95000, 120000, 62000),
+    bond_weeks = c(4, 4, 4),
+    upfront_moving_costs = c(3000, 4500, 2200),
+    savings_rate_pct = c(10, 12, 8),
+    annual_non_housing_expenses = c(28000, 36000, 22000),
     stringsAsFactors = FALSE
   )
 }

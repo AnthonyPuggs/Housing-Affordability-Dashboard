@@ -292,14 +292,34 @@ build_rental_affordability_index_plot <- function(data, dark = FALSE) {
 }
 
 build_rental_costs_demographic_plot <- function(data, dark = FALSE) {
-  ggplot(data, aes(x = breakdown_label, y = value, fill = tenure_label)) +
+  axis_label <- if ("axis_label" %in% names(data) &&
+                    length(unique(data$axis_label)) == 1) {
+    unique(data$axis_label)[[1]]
+  } else {
+    "Mean Weekly Rent ($)"
+  }
+  y_labels <- if ("measure" %in% names(data) &&
+                  identical(unique(data$measure), "rent_to_income")) {
+    label_percent(scale = 1, accuracy = 0.1)
+  } else {
+    label_number(big.mark = ",")
+  }
+  y_breaks <- if ("measure" %in% names(data) &&
+                  identical(unique(data$measure), "rent_to_income")) {
+    scales::breaks_width(5)
+  } else {
+    scales::breaks_width(250)
+  }
+
+  ggplot(data, aes(x = breakdown_label, y = value, fill = tenure_label,
+                   text = hover_text)) +
     geom_col(position = "dodge", alpha = 0.85) +
     scale_y_continuous(
-      labels = label_number(big.mark = ","),
-      breaks = scales::breaks_width(250),
+      labels = y_labels,
+      breaks = y_breaks,
       minor_breaks = NULL
     ) +
-    labs(x = NULL, y = "Mean Weekly Rent ($)", fill = NULL) +
+    labs(x = NULL, y = axis_label, fill = NULL) +
     coord_flip() +
     theme_afford(dark)
 }
@@ -551,6 +571,23 @@ build_market_entry_sensitivity_plot <- function(data, dark = FALSE) {
     labs(x = NULL, y = "Expense-adjusted repayment / income") +
     theme_afford(dark) +
     theme(legend.position = "none")
+}
+
+build_recent_buyers_plot <- function(data, metric_label, dark = FALSE) {
+  ggplot(data, aes(x = buyer_type_label, y = value,
+                   fill = dwelling_type_label, text = hover_text)) +
+    geom_col(position = position_dodge(width = 0.72),
+             width = 0.64, alpha = 0.88) +
+    scale_fill_manual(values = c(
+      "New dwellings" = semantic_colour("categorical_teal"),
+      "Established dwellings" = semantic_colour("categorical_navy"),
+      "Total dwellings" = semantic_colour("reference")
+    ), na.value = "grey60") +
+    scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1),
+                       expand = expansion(mult = c(0, 0.08))) +
+    labs(x = NULL, y = metric_label, fill = NULL) +
+    theme_afford(dark) +
+    theme(legend.position = "bottom")
 }
 
 build_housing_stress_bands_plot <- function(data, dark = FALSE) {

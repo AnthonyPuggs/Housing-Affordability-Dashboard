@@ -1,5 +1,31 @@
 # Overview page module.
 
+if (!exists("official_burden_summary", mode = "function", inherits = TRUE)) {
+  official_burden_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "official_burden_summary.R")
+  } else {
+    file.path("R", "official_burden_summary.R")
+  }
+  if (!file.exists(official_burden_path)) {
+    stop("Could not locate R/official_burden_summary.R for overview module.",
+         call. = FALSE)
+  }
+  source(official_burden_path, local = environment())
+}
+
+if (!exists("latest_capital_price_extreme", mode = "function", inherits = TRUE)) {
+  contextual_kpi_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "contextual_kpi_helpers.R")
+  } else {
+    file.path("R", "contextual_kpi_helpers.R")
+  }
+  if (!file.exists(contextual_kpi_path)) {
+    stop("Could not locate R/contextual_kpi_helpers.R for overview module.",
+         call. = FALSE)
+  }
+  source(contextual_kpi_path, local = environment())
+}
+
 overview_cost_pressure_indicators <- c(
   "Rental Affordability Index",
   "Mortgage Serviceability Index",
@@ -95,6 +121,19 @@ overview_parse_score_click_date <- function(event_x, available_dates) {
   overview_snap_score_date(parsed, available_dates)
 }
 
+overview_score_date_should_update <- function(clicked_date, current_date) {
+  if (is.null(clicked_date) || length(clicked_date) == 0 ||
+      is.na(clicked_date)) {
+    return(FALSE)
+  }
+  if (is.null(current_date) || length(current_date) == 0 ||
+      is.na(current_date)) {
+    return(TRUE)
+  }
+
+  !identical(as.Date(clicked_date), as.Date(current_date))
+}
+
 overviewPageUI <- function(id) {
   ns <- NS(id)
 
@@ -162,6 +201,16 @@ overviewPageUI <- function(id) {
               })
             )
           )
+        ),
+        tags$div(
+          class = "official-burden-snapshot",
+          tags$h3("Official SIH/NHHA burden snapshot",
+                  class = "affordability-score-components-title"),
+          tags$p(
+            "Observed household burden measures from SIH/NHHA, kept separate from the stylised market-entry score.",
+            class = "affordability-score-note"
+          ),
+          uiOutput(ns("official_burden_summary"))
         )
       )
     ),
@@ -169,17 +218,18 @@ overviewPageUI <- function(id) {
       width = 1/4,
       fill = FALSE,
       policy_kpi_box(
-        title = "National Median Price",
+        title = "National Mean Dwelling Price",
         value = textOutput(ns("vb_nat_price")),
         subtitle = p(class = "kpi-subtitle", textOutput(ns("vb_nat_price_date"))),
         change = uiOutput(ns("vb_nat_price_change")),
         accent = "blue"
       ),
       policy_kpi_box(
-        title = "Sydney Median Price",
-        value = textOutput(ns("vb_syd_price")),
-        subtitle = p(class = "kpi-subtitle", textOutput(ns("vb_syd_price_date"))),
-        change = uiOutput(ns("vb_syd_price_change")),
+        title = "Highest Capital Median Price",
+        value = textOutput(ns("vb_high_capital_price")),
+        subtitle = p(class = "kpi-subtitle",
+                     textOutput(ns("vb_high_capital_price_city"))),
+        change = uiOutput(ns("vb_high_capital_price_change")),
         accent = "teal"
       ),
       policy_kpi_box(
@@ -263,7 +313,7 @@ overviewPageServer <- function(id, is_dark) {
 
     observeEvent(score_click(), {
       clicked <- overview_parse_score_click_date(score_click()$x, score_dates)
-      if (!is.null(clicked)) {
+      if (overview_score_date_should_update(clicked, selected_score_date())) {
         selected_score_date(clicked)
       }
     }, ignoreNULL = TRUE)
@@ -375,6 +425,38 @@ overviewPageServer <- function(id, is_dark) {
         })
       )
     })
+    output$official_burden_summary <- renderUI({
+      nhha_data <- if (exists("sih_nhha", inherits = TRUE)) sih_nhha else data.frame()
+      stress_data <- if (exists("sih_stress", inherits = TRUE)) sih_stress else data.frame()
+      cost_ratio_data <- if (exists("sih_cost_ratios", inherits = TRUE)) {
+        sih_cost_ratios
+      } else {
+        data.frame()
+      }
+      d <- official_burden_summary(
+        sih_nhha = nhha_data,
+        sih_stress = stress_data,
+        sih_cost_ratios = cost_ratio_data
+      )
+      validate(need(nrow(d) > 0, "No official SIH/NHHA burden summary available."))
+
+      accents <- c("blue", "teal", "navy", "purple")
+      boxes <- lapply(seq_len(nrow(d)), function(i) {
+        row <- d[i, ]
+        policy_kpi_box(
+          title = row$title,
+          value = tags$span(row$formatted_value),
+          subtitle = tags$p(
+            paste0(row$survey_year, " | ", row$source),
+            class = "kpi-subtitle"
+          ),
+          change = tags$p(row$subtitle, class = "kpi-subtitle"),
+          accent = accents[((i - 1) %% length(accents)) + 1]
+        )
+      })
+
+      do.call(layout_column_wrap, c(list(width = 1/4, fill = FALSE), boxes))
+    })
     output$overview_afford_score_trend <- renderPlotly({
       d <- national_affordability_score_ts %>%
         filter(!is.na(score))
@@ -429,15 +511,30 @@ overviewPageServer <- function(id, is_dark) {
       tags$p(class = paste("kpi-subtitle", css_class), ch$label)
     })
 
-    output$vb_syd_price <- renderText({
-      v <- latest_val(median_house_prices, "city", "Sydney")
-      if (is.na(v)) "N/A" else fmt_dollar_k(v * 1000)
+    highest_capital_price <- reactive({
+      latest_capital_price_extreme(median_house_prices, direction = "highest")
     })
-    output$vb_syd_price_date <- renderText({
-      latest_date(median_house_prices, "city", "Sydney")
+
+    output$vb_high_capital_price <- renderText({
+      d <- highest_capital_price()
+      if (nrow(d) == 0 || is.na(d$value[1])) {
+        return("N/A")
+      }
+      fmt_dollar_k(d$value[1] * 1000)
     })
-    output$vb_syd_price_change <- renderUI({
-      ch <- latest_change(median_house_prices, "city", "Sydney",
+    output$vb_high_capital_price_city <- renderText({
+      d <- highest_capital_price()
+      if (nrow(d) == 0) {
+        return("")
+      }
+      paste0(d$city[1], " | ", format(d$date[1], "%b %Y"))
+    })
+    output$vb_high_capital_price_change <- renderUI({
+      d <- highest_capital_price()
+      if (nrow(d) == 0) {
+        return(tags$p(class = "kpi-subtitle", ""))
+      }
+      ch <- latest_change(median_house_prices, "city", d$city[1],
                           periods_back = 4, period_label = "YoY",
                           change_type = "relative_pct")
       css_class <- kpi_change_class(ch$change, favourable = "decrease")

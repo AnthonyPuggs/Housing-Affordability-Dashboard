@@ -13,6 +13,19 @@ if (!exists("join_sih_quality", mode = "function", inherits = TRUE)) {
   source(sih_quality_helper_path, local = environment())
 }
 
+if (!exists("rental_demographic_measure_data", mode = "function", inherits = TRUE)) {
+  rental_helper_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "rental_market_helpers.R")
+  } else {
+    file.path("R", "rental_market_helpers.R")
+  }
+  if (!file.exists(rental_helper_path)) {
+    stop("Could not locate R/rental_market_helpers.R for rental market module.",
+         call. = FALSE)
+  }
+  source(rental_helper_path, local = environment())
+}
+
 rental_plot_margins <- list(
   state = list(l = 82, r = 20, b = 76, t = 38),
   trend = list(l = 86, r = 20, b = 92, t = 32),
@@ -63,6 +76,10 @@ rentalMarketPageUI <- function(id) {
                                   else character(0)),
                       multiple = TRUE,
                       selected = "all"),
+          selectInput(ns("rental_cost_measure"), "Measure",
+                      choices = rental_cost_measure_choices(),
+                      selected = "weekly_rent",
+                      selectize = FALSE),
           selectInput(ns("rental_cost_breakdown"), "Rental Costs By",
                       choices = c("Age Group" = "age_group",
                                   "Family Type" = "family_type",
@@ -90,8 +107,12 @@ rentalMarketPageUI <- function(id) {
                   plotlyOutput(ns("rental_afford_index"), height = "100%", width = "100%"))
             ),
             policy_chart_card(
-              "Weekly Rental Costs by Demographics (2019-20)",
-              note = policy_source_note("ABS Survey of Income and Housing. Survey rental-cost estimates by household characteristic. ", sih_sampling_error_note),
+              "Rental Costs and Burden by Demographics (2019-20)",
+              note = policy_source_note(
+                "ABS Survey of Income and Housing. Use the measure selector to separate nominal weekly rent from rent-to-gross-income burden. ",
+                sih_sampling_error_note
+              ),
+              uiOutput(ns("rental_costs_source_note")),
               div(class = "chart-square rental-market-chart rental-market-chart-square",
                   plotlyOutput(ns("rental_costs_demo"), height = "100%", width = "100%"))
             )
@@ -212,26 +233,27 @@ rentalMarketPageServer <- function(id, is_dark) {
 
     output$rental_costs_demo <- renderPlotly({
       bd <- input$rental_cost_breakdown
+      measure <- input$rental_cost_measure
 
-      d <- sih_costs %>%
-        filter(tenure %in% c("renter_private", "renter_total"),
-               breakdown_var == bd,
-               stat_type == "mean",
-               breakdown_val != "Total")
+      d <- rental_demographic_measure_data(
+        measure = measure,
+        breakdown = bd,
+        sih_costs = sih_costs,
+        sih_cost_ratios = sih_cost_ratios,
+        sih_quality = sih_quality
+      )
 
       validate(need(nrow(d) > 0, "No rental cost data for selected breakdown."))
 
-      d <- d %>%
-        mutate(
-          tenure_label = label_tenure(tenure),
-          breakdown_label = stringr::str_wrap(breakdown_val, width = 22)
-        )
-
       p <- build_rental_costs_demographic_plot(d, dark = is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"),
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("text"),
                          margin = rental_plot_margins$costs)
     }) %>%
-      bindCache(input$rental_cost_breakdown, is_dark())
+      bindCache(input$rental_cost_measure, input$rental_cost_breakdown, is_dark())
+
+    output$rental_costs_source_note <- renderUI({
+      policy_source_note(rental_cost_measure_source_note(input$rental_cost_measure))
+    })
   })
 }

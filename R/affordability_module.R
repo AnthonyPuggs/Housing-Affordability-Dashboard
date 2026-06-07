@@ -39,6 +39,19 @@ if (!exists("join_sih_quality", mode = "function", inherits = TRUE)) {
   source(sih_quality_helper_path, local = environment())
 }
 
+if (!exists("normalise_recent_buyers", mode = "function", inherits = TRUE)) {
+  recent_buyers_helper_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "recent_buyers_helpers.R")
+  } else {
+    file.path("R", "recent_buyers_helpers.R")
+  }
+  if (!file.exists(recent_buyers_helper_path)) {
+    stop("Could not locate R/recent_buyers_helpers.R for affordability module.",
+         call. = FALSE)
+  }
+  source(recent_buyers_helper_path, local = environment())
+}
+
 affordability_ui_indicators <- c(
   "Price-to-Income Ratio",
   "Mortgage Serviceability Index",
@@ -125,145 +138,21 @@ distributional_stress_data <- function(measure = "nhha_state",
 
 affordabilityPageUI <- function(id) {
   ns <- NS(id)
+  default_index_selection <- c(
+    "Mortgage Serviceability Index",
+    "Rental Affordability Index",
+    "Deposit Gap (Years)",
+    "Housing Serviceability"
+  )
 
   nav_panel(
     "Affordability",
     policy_page_header(
       "Affordability",
-      "Cost-pressure indexes, stylised market-entry scenarios and SIH survey burden measures."
+      "Official SIH burden measures first, followed by market-entry scenarios and diagnostic indexes."
     ),
     navset_card_tab(
       title = "Affordability Analysis",
-      nav_panel(
-        "Indices",
-        div(
-          class = "affordability-indices-page",
-          layout_sidebar(
-            sidebar = sidebar(
-              width = 280, open = "desktop",
-              checkboxGroupInput(ns("afford_indices"), "Indicators",
-                                 choices = affordability_indicator_choices,
-                                 selected = c(affordability_ui_indicators,
-                                              "Housing Serviceability")),
-              sliderInput(ns("afford_dates"), "Date Range",
-                          min = min(afford_idx$date, na.rm = TRUE),
-                          max = max(afford_idx$date, na.rm = TRUE),
-                          value = c(as.Date("2003-01-01"),
-                                    max(afford_idx$date, na.rm = TRUE)),
-                          width = "100%", timeFormat = "%b %Y"),
-              sliderInput(ns("serviceability_buffer"),
-                          "Assessment buffer (pp)",
-                          min = 0, max = 5, value = 3, step = 0.25),
-              sliderInput(ns("serviceability_deposit_pct"),
-                          "Deposit (%)",
-                          min = 5, max = 40, value = 20, step = 1),
-              sliderInput(ns("serviceability_term"),
-                          "Loan term (years)",
-                          min = 10, max = 30, value = 30, step = 1),
-              source_note("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
-            ),
-            policy_chart_card(
-              "Affordability Indicators",
-              note = "Cost-pressure indexes; higher = less affordable. Market-entry measures use wage, price and rate proxies, not official ABS stress definitions.",
-              div(class = "chart-wide",
-                  plotlyOutput(ns("afford_indices_chart"), height = "100%", width = "100%"))
-            ),
-            conditionalPanel(
-              condition = "input.afford_indices.indexOf('Housing Serviceability') >= 0",
-              ns = ns,
-              policy_chart_card(
-                "Modelled Serviceability",
-                note = "Modelled annual repayment share using selected deposit, implied LVR, loan term and RBA mortgage-rate inputs; uses AWE individual earnings as the income proxy. The 30% line is a stress reference, not a lender pass/fail rule. Stylised scenario, not an official ABS measure or lender assessment.",
-                plotlyOutput(ns("afford_serviceability"), height = "380px")
-              )
-            )
-          )
-        )
-      ),
-      nav_panel(
-        "Calculator",
-        layout_sidebar(
-          sidebar = sidebar(
-            width = 320, open = "desktop",
-            source_note(stylised_scenario_note),
-            selectInput(ns("calc_preset"), "Scenario preset",
-                        choices = c("First-home buyer" = "first_home_buyer",
-                                    "Mortgage-stress" = "mortgage_stress",
-                                    "Renter entry" = "renter_entry"),
-                        selected = "first_home_buyer"),
-            numericInput(ns("calc_price"), "Dwelling Price ($)",
-                         value = 800000, min = 100000, max = 5000000,
-                         step = 50000),
-            numericInput(ns("calc_income"), "Household Gross Income ($/yr)",
-                         value = 120000, min = 20000, max = 1000000,
-                         step = 5000),
-            sliderInput(ns("calc_rate"), "Interest Rate (%)",
-                        min = 1, max = 12, value = 6.0, step = 0.1),
-            sliderInput(ns("calc_assessment_buffer"),
-                        "Assessment buffer (pp)",
-                        min = 0, max = 5, value = 3, step = 0.25),
-            sliderInput(ns("calc_deposit_pct"), "Deposit (%)",
-                        min = 5, max = 40, value = 20, step = 1),
-            sliderInput(ns("calc_term"), "Loan Term (years)",
-                        min = 10, max = 30, value = 30, step = 1),
-            sliderInput(ns("calc_savings_rate"), "Savings Rate (%)",
-                        min = 5, max = 40, value = 15, step = 1),
-            numericInput(ns("calc_annual_expenses"),
-                         "Annual non-housing expenses ($)",
-                         value = 30000, min = 0, max = 1000000,
-                         step = 5000),
-            numericInput(ns("calc_monthly_debt"),
-                         "Other debt repayments ($/month)",
-                         value = 0, min = 0, max = 50000,
-                         step = 100),
-            source_note("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
-          ),
-          layout_column_wrap(
-            width = 1/2,
-            fill = FALSE,
-            policy_kpi_box(
-              title = "Monthly Repayment",
-              value = textOutput(ns("calc_repayment")),
-              accent = "blue"
-            ),
-            policy_kpi_box(
-              title = "Nominal Repayment / Gross Income",
-              value = textOutput(ns("calc_ratio")),
-              accent = "teal"
-            ),
-            policy_kpi_box(
-              title = "Assessed Repayment / Gross Income",
-              value = textOutput(ns("calc_assessed_ratio")),
-              accent = "navy"
-            ),
-            policy_kpi_box(
-              title = "Years to Save Deposit",
-              value = textOutput(ns("calc_years")),
-              accent = "purple"
-            ),
-            policy_kpi_box(
-              title = "Loan-to-Value Ratio",
-              value = textOutput(ns("calc_lvr")),
-              accent = "blue"
-            ),
-            policy_kpi_box(
-              title = "Total Interest Paid",
-              value = textOutput(ns("calc_total_interest")),
-              accent = "teal"
-            ),
-            policy_kpi_box(
-              title = "Deposit Amount",
-              value = textOutput(ns("calc_deposit_amt")),
-              accent = "navy"
-            )
-          ),
-          policy_chart_card(
-            "Scenario Sensitivity",
-            note = "Stylised sensitivity chart. Higher values mean a larger expense-adjusted repayment burden; it is not an official ABS/NHHA measure or lender assessment.",
-            plotlyOutput(ns("calc_sensitivity"), height = "360px")
-          )
-        )
-      ),
       nav_panel(
         "Housing Stress",
         layout_sidebar(
@@ -342,6 +231,203 @@ affordabilityPageUI <- function(id) {
                              height = "100%", width = "100%"))
           )
         )
+      ),
+      nav_panel(
+        "Recent Buyers",
+        layout_sidebar(
+          sidebar = sidebar(
+            width = 300, open = "desktop",
+            selectInput(ns("recent_buyers_metric"), "Metric",
+                        choices = recent_buyers_metric_choices(),
+                        selected = "mean_dwelling_value"),
+            checkboxGroupInput(ns("recent_buyers_dwelling"), "Dwelling type",
+                               choices = c("New" = "new",
+                                           "Established" = "established",
+                                           "Total" = "total"),
+                               selected = c("new", "established", "total")),
+            source_note("2019-20 SIH recent home buyer households. Empirical Recent Buyer Evidence, not a live market-entry index.")
+          ),
+          uiOutput(ns("recent_buyers_summary")),
+          policy_chart_card(
+            "Empirical Recent Buyer Evidence",
+            note = policy_source_note("ABS Survey of Income and Housing File 9. Values describe 2019-20 recent buyer households and should be read separately from stylised deposit/serviceability scenarios. ", sih_sampling_error_note),
+            div(class = "chart-wide",
+                plotlyOutput(ns("recent_buyers_chart"), height = "100%",
+                             width = "100%"))
+          )
+        )
+      ),
+      nav_panel(
+        "Indices",
+        div(
+          class = "affordability-indices-page",
+          layout_sidebar(
+            sidebar = sidebar(
+              width = 280, open = "desktop",
+              checkboxGroupInput(ns("afford_indices"), "Indicators",
+                                 choices = affordability_indicator_choices,
+                                 selected = default_index_selection),
+              sliderInput(ns("afford_dates"), "Date Range",
+                          min = min(afford_idx$date, na.rm = TRUE),
+                          max = max(afford_idx$date, na.rm = TRUE),
+                          value = c(as.Date("2003-01-01"),
+                                    max(afford_idx$date, na.rm = TRUE)),
+                          width = "100%", timeFormat = "%b %Y"),
+              sliderInput(ns("serviceability_buffer"),
+                          "Assessment buffer (pp)",
+                          min = 0, max = 5, value = 3, step = 0.25),
+              sliderInput(ns("serviceability_deposit_pct"),
+                          "Deposit (%)",
+                          min = 5, max = 40, value = 20, step = 1),
+              sliderInput(ns("serviceability_term"),
+                          "Loan term (years)",
+                          min = 10, max = 30, value = 30, step = 1),
+              source_note("Price-to-income remains available as a diagnostic. Default selections prioritise serviceability, rental pressure and deposit barriers.")
+            ),
+            policy_chart_card(
+              "Affordability Indicators",
+              note = "Cost-pressure indexes; higher = less affordable. Market-entry measures use wage, price and rate proxies, not official ABS stress definitions.",
+              div(class = "chart-wide",
+                  plotlyOutput(ns("afford_indices_chart"), height = "100%", width = "100%"))
+            ),
+            conditionalPanel(
+              condition = "input.afford_indices.indexOf('Housing Serviceability') >= 0",
+              ns = ns,
+              policy_chart_card(
+                "Modelled Serviceability",
+                note = "Modelled annual repayment share using selected deposit, implied LVR, loan term and RBA mortgage-rate inputs; uses AWE individual earnings as the income proxy. The 30% line is a stress reference, not a lender pass/fail rule. Stylised scenario, not an official ABS measure or lender assessment.",
+                plotlyOutput(ns("afford_serviceability"), height = "380px")
+              )
+            )
+          )
+        )
+      ),
+      nav_panel(
+        "Calculator",
+        layout_sidebar(
+          sidebar = sidebar(
+            width = 320, open = "desktop",
+            source_note(stylised_scenario_note),
+            selectInput(ns("calc_pathway"), "Pathway",
+                        choices = c("Ownership serviceability" = "ownership",
+                                    "Rental entry" = "rental"),
+                        selected = "ownership"),
+            conditionalPanel(
+              condition = "input.calc_pathway == 'ownership'",
+              ns = ns,
+              selectInput(ns("calc_preset"), "Ownership scenario preset",
+                          choices = c("First-home buyer" = "first_home_buyer",
+                                      "Mortgage-stress" = "mortgage_stress",
+                                      "High-LVR buyer" = "high_lvr_buyer"),
+                          selected = "first_home_buyer"),
+              numericInput(ns("calc_price"), "Dwelling Price ($)",
+                           value = 800000, min = 100000, max = 5000000,
+                           step = 50000),
+              numericInput(ns("calc_income"), "Household Gross Income ($/yr)",
+                           value = 120000, min = 20000, max = 1000000,
+                           step = 5000),
+              sliderInput(ns("calc_rate"), "Interest Rate (%)",
+                          min = 1, max = 12, value = 6.0, step = 0.1),
+              sliderInput(ns("calc_assessment_buffer"),
+                          "Assessment buffer (pp)",
+                          min = 0, max = 5, value = 3, step = 0.25),
+              sliderInput(ns("calc_deposit_pct"), "Deposit (%)",
+                          min = 5, max = 40, value = 20, step = 1),
+              sliderInput(ns("calc_term"), "Loan Term (years)",
+                          min = 10, max = 30, value = 30, step = 1),
+              sliderInput(ns("calc_savings_rate"), "Savings Rate (%)",
+                          min = 5, max = 40, value = 15, step = 1),
+              numericInput(ns("calc_annual_expenses"),
+                           "Annual non-housing expenses ($)",
+                           value = 30000, min = 0, max = 1000000,
+                           step = 5000),
+              numericInput(ns("calc_monthly_debt"),
+                           "Other debt repayments ($/month)",
+                           value = 0, min = 0, max = 50000,
+                           step = 100),
+              source_note("Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.")
+            ),
+            conditionalPanel(
+              condition = "input.calc_pathway == 'rental'",
+              ns = ns,
+              selectInput(ns("rent_preset"), "Rental entry preset",
+                          choices = c("Median renter entry" = "median_renter_entry",
+                                      "Tight rental entry" = "tight_rental_entry",
+                                      "Lower-income renter" = "lower_income_renter"),
+                          selected = "median_renter_entry"),
+              numericInput(ns("rent_weekly_input"), "Weekly rent ($)",
+                           value = 620, min = 100, max = 5000, step = 25),
+              numericInput(ns("rent_income"), "Household Gross Income ($/yr)",
+                           value = 95000, min = 10000, max = 1000000,
+                           step = 5000),
+              sliderInput(ns("rent_bond_weeks"), "Bond weeks",
+                          min = 0, max = 12, value = 4, step = 1),
+              numericInput(ns("rent_upfront_costs"),
+                           "Upfront moving/setup costs ($)",
+                           value = 3000, min = 0, max = 100000,
+                           step = 500),
+              sliderInput(ns("rent_savings_rate"), "Savings Rate (%)",
+                          min = 1, max = 40, value = 10, step = 1),
+              numericInput(ns("rent_annual_expenses"),
+                           "Annual non-housing expenses ($)",
+                           value = 28000, min = 0, max = 1000000,
+                           step = 5000),
+              source_note("Rental entry outputs are stylised cash-flow measures, not an official ABS/NHHA measure or tenancy eligibility assessment.")
+            )
+          ),
+          conditionalPanel(
+            condition = "input.calc_pathway == 'ownership'",
+            ns = ns,
+            layout_column_wrap(
+              width = 1/2,
+              fill = FALSE,
+              policy_kpi_box("Monthly Repayment", textOutput(ns("calc_repayment")),
+                             accent = "blue"),
+              policy_kpi_box("Nominal Repayment / Gross Income",
+                             textOutput(ns("calc_ratio")), accent = "teal"),
+              policy_kpi_box("Assessed Repayment / Gross Income",
+                             textOutput(ns("calc_assessed_ratio")), accent = "navy"),
+              policy_kpi_box("Years to Save Deposit",
+                             textOutput(ns("calc_years")), accent = "purple"),
+              policy_kpi_box("Loan-to-Value Ratio",
+                             textOutput(ns("calc_lvr")), accent = "blue"),
+              policy_kpi_box("Total Interest Paid",
+                             textOutput(ns("calc_total_interest")), accent = "teal"),
+              policy_kpi_box("Deposit Amount",
+                             textOutput(ns("calc_deposit_amt")), accent = "navy")
+            ),
+            policy_chart_card(
+              "Scenario Sensitivity",
+              note = "Stylised sensitivity chart. Higher values mean a larger expense-adjusted repayment burden; it is not an official ABS/NHHA measure or lender assessment.",
+              plotlyOutput(ns("calc_sensitivity"), height = "360px")
+            )
+          ),
+          conditionalPanel(
+            condition = "input.calc_pathway == 'rental'",
+            ns = ns,
+            layout_column_wrap(
+              width = 1/2,
+              fill = FALSE,
+              policy_kpi_box("Weekly Rent", textOutput(ns("rent_weekly")),
+                             accent = "blue"),
+              policy_kpi_box("Rent / Gross Income",
+                             textOutput(ns("rent_to_income")), accent = "teal"),
+              policy_kpi_box("Rent / Expense-Adjusted Income",
+                             textOutput(ns("rent_adjusted_ratio")), accent = "navy"),
+              policy_kpi_box("Upfront Cash Required",
+                             textOutput(ns("rent_upfront_cash")), accent = "purple"),
+              policy_kpi_box("Years to Save Upfront Costs",
+                             textOutput(ns("rent_years_to_save")), accent = "blue"),
+              policy_kpi_box("Weeks to Save Upfront Costs",
+                             textOutput(ns("rent_weeks_to_save")), accent = "teal")
+            ),
+            policy_card(
+              "Rental entry interpretation",
+              tags$p("This pathway estimates rental cash-flow pressure and upfront entry costs from user assumptions."),
+              tags$p("It does not use NHHA stress definitions, advertised-rent data or tenancy eligibility rules.")
+            )
+          )
+        )
       )
     )
   )
@@ -374,6 +460,27 @@ affordabilityPageServer <- function(id, is_dark) {
                          value = preset$annual_non_housing_expenses[[1]])
       updateNumericInput(session, "calc_monthly_debt",
                          value = preset$monthly_other_debt[[1]])
+    }, ignoreInit = TRUE)
+
+    observeEvent(input$rent_preset, {
+      presets <- renter_entry_scenario_presets()
+      preset <- presets[presets$preset_id == input$rent_preset, , drop = FALSE]
+      if (nrow(preset) != 1) {
+        return(NULL)
+      }
+
+      updateNumericInput(session, "rent_weekly_input",
+                         value = preset$weekly_rent[[1]])
+      updateNumericInput(session, "rent_income",
+                         value = preset$gross_annual_income[[1]])
+      updateSliderInput(session, "rent_bond_weeks",
+                        value = preset$bond_weeks[[1]])
+      updateNumericInput(session, "rent_upfront_costs",
+                         value = preset$upfront_moving_costs[[1]])
+      updateSliderInput(session, "rent_savings_rate",
+                        value = preset$savings_rate_pct[[1]])
+      updateNumericInput(session, "rent_annual_expenses",
+                         value = preset$annual_non_housing_expenses[[1]])
     }, ignoreInit = TRUE)
 
     output$afford_indices_chart <- renderPlotly({
@@ -416,6 +523,61 @@ affordabilityPageServer <- function(id, is_dark) {
     }) %>%
       bindCache(input$afford_indices, input$afford_dates, input$serviceability_deposit_pct, input$serviceability_term, input$serviceability_buffer, is_dark())
 
+    recent_buyers_data <- reactive({
+      raw <- if (exists("sih_recent_buyers", inherits = TRUE)) {
+        sih_recent_buyers
+      } else {
+        data.frame()
+      }
+      normalise_recent_buyers(raw)
+    })
+
+    output$recent_buyers_summary <- renderUI({
+      d <- recent_buyers_summary(recent_buyers_data())
+      validate(need(nrow(d) > 0, "No recent buyer summary data available."))
+
+      accents <- c("blue", "teal", "navy", "purple")
+      boxes <- lapply(seq_len(nrow(d)), function(i) {
+        row <- d[i, ]
+        policy_kpi_box(
+          title = row$title,
+          value = tags$span(row$formatted_value),
+          subtitle = tags$p(row$subtitle, class = "kpi-subtitle"),
+          accent = accents[((i - 1) %% length(accents)) + 1]
+        )
+      })
+      do.call(layout_column_wrap, c(list(width = 1/4, fill = FALSE), boxes))
+    })
+
+    output$recent_buyers_chart <- renderPlotly({
+      req(input$recent_buyers_metric, input$recent_buyers_dwelling)
+      d <- recent_buyers_data() %>%
+        filter(
+          metric_id == input$recent_buyers_metric,
+          dwelling_type %in% input$recent_buyers_dwelling,
+          buyer_type %in% c("first_home", "changeover", "all_recent")
+        ) %>%
+        mutate(
+          hover_text = paste0(
+            buyer_type_label,
+            "<br>Dwelling type: ", dwelling_type_label,
+            "<br>", metric_label, ": ", formatted_value,
+            "<br>Survey year: ", survey_year,
+            "<br>Official SIH File 9 recent buyer evidence."
+          )
+        )
+      validate(need(nrow(d) > 0, "No recent buyer data for selected filters."))
+
+      metric_label <- unique(d$metric_label)[[1]]
+      p <- build_recent_buyers_plot(d, metric_label = metric_label,
+                                    dark = is_dark())
+
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = "text",
+                         hovermode = "closest")
+    }) %>%
+      bindCache(input$recent_buyers_metric, input$recent_buyers_dwelling,
+                is_dark())
+
     calc_vals <- reactive({
       tryCatch(
         market_entry_scenario(
@@ -442,6 +604,29 @@ affordabilityPageServer <- function(id, is_dark) {
     output$calc_lvr            <- renderText(fmt_pct(calc_vals()$lvr_pct, 1))
     output$calc_total_interest <- renderText(fmt_dollar(calc_vals()$total_nominal_interest))
     output$calc_deposit_amt    <- renderText(fmt_dollar(calc_vals()$deposit))
+
+    rent_vals <- reactive({
+      tryCatch(
+        renter_entry_scenario(
+          weekly_rent = input$rent_weekly_input,
+          gross_annual_income = input$rent_income,
+          bond_weeks = input$rent_bond_weeks,
+          upfront_moving_costs = input$rent_upfront_costs,
+          savings_rate_pct = input$rent_savings_rate,
+          annual_non_housing_expenses = input$rent_annual_expenses
+        ),
+        error = function(e) {
+          validate(need(FALSE, conditionMessage(e)))
+        }
+      )
+    })
+
+    output$rent_weekly         <- renderText(fmt_dollar(rent_vals()$weekly_rent))
+    output$rent_to_income      <- renderText(fmt_pct(rent_vals()$rent_to_gross_income_pct, 0.1))
+    output$rent_adjusted_ratio <- renderText(fmt_pct(rent_vals()$expense_adjusted_rent_ratio_pct, 0.1))
+    output$rent_upfront_cash   <- renderText(fmt_dollar(rent_vals()$upfront_cash_required))
+    output$rent_years_to_save  <- renderText(fmt_years(rent_vals()$years_to_save_upfront))
+    output$rent_weeks_to_save  <- renderText(paste0(number(rent_vals()$weeks_to_save_upfront, accuracy = 0.1), " weeks"))
 
     output$calc_sensitivity <- renderPlotly({
       d <- market_entry_sensitivity_grid(

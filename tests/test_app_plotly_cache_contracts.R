@@ -47,6 +47,7 @@ if (file.exists(app_path)) {
     "rent_cpi_chart",
     "afford_indices_chart",
     "afford_serviceability",
+    "recent_buyers_chart",
     "calc_sensitivity",
     "stress_chart",
     "burden_heatmap",

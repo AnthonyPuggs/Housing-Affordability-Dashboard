@@ -50,6 +50,19 @@ if (all(file.exists(c(helper_path, registry_path, module_path)))) {
         "overviewPageUI() must be defined")
   check(exists("overviewPageServer", mode = "function"),
         "overviewPageServer() must be defined")
+  check(exists("overview_score_date_should_update", mode = "function"),
+        "overview_score_date_should_update() must be defined")
+
+  if (exists("overview_score_date_should_update", mode = "function")) {
+    check(overview_score_date_should_update(as.Date("2024-01-01"),
+                                            as.Date("2023-01-01")),
+          "Score-date click guard must update when the clicked date changes")
+    check(!overview_score_date_should_update(as.Date("2024-01-01"),
+                                             as.Date("2024-01-01")),
+          "Score-date click guard must ignore clicks on the already-selected date")
+    check(!overview_score_date_should_update(NULL, as.Date("2024-01-01")),
+          "Score-date click guard must ignore missing click dates")
+  }
 
   module_ui <- paste(as.character(overviewPageUI("overview")),
                      collapse = "\n")
@@ -70,8 +83,11 @@ if (all(file.exists(c(helper_path, registry_path, module_path)))) {
     "Rental = rent pressure relative to wages",
     "Deposit = upfront saving barrier",
     "Reset to latest",
-    "National Median Price",
-    "Sydney Median Price",
+    "Official SIH/NHHA burden snapshot",
+    "Observed household burden measures",
+    "overview-official_burden_summary",
+    "National Mean Dwelling Price",
+    "Highest Capital Median Price",
     "Modelled Serviceability",
     "Rental Affordability",
     "Capital City Median House Prices",
@@ -85,9 +101,9 @@ if (all(file.exists(c(helper_path, registry_path, module_path)))) {
     "overview-vb_nat_price",
     "overview-vb_nat_price_date",
     "overview-vb_nat_price_change",
-    "overview-vb_syd_price",
-    "overview-vb_syd_price_date",
-    "overview-vb_syd_price_change",
+    "overview-vb_high_capital_price",
+    "overview-vb_high_capital_price_city",
+    "overview-vb_high_capital_price_change",
     "overview-vb_service",
     "overview-vb_service_change",
     "overview-vb_rental",
@@ -129,9 +145,9 @@ if (file.exists(module_path)) {
     "output$vb_nat_price <- renderText",
     "output$vb_nat_price_date <- renderText",
     "output$vb_nat_price_change <- renderUI",
-    "output$vb_syd_price <- renderText",
-    "output$vb_syd_price_date <- renderText",
-    "output$vb_syd_price_change <- renderUI",
+    "output$vb_high_capital_price <- renderText",
+    "output$vb_high_capital_price_city <- renderText",
+    "output$vb_high_capital_price_change <- renderUI",
     "output$vb_service <- renderText",
     "output$vb_service_change <- renderUI",
     "output$vb_rental <- renderText",
@@ -150,7 +166,10 @@ if (file.exists(module_path)) {
     'class = "policy-info-icon-left-aligned"',
     "plotly_click-overview_afford_score",
     "plotlyShinyEventIDs",
+    "overview_score_date_should_update <- function",
+    "overview_score_date_should_update(clicked, selected_score_date())",
     "output$overview_afford_score_components <- renderUI",
+    "output$official_burden_summary <- renderUI",
     "output$overview_afford_score_trend <- renderPlotly",
     "selected_score_date <- reactiveVal",
     'event_data("plotly_click", source = "overview_afford_score"',
@@ -164,6 +183,8 @@ if (file.exists(module_path)) {
     "overview_price_series_transform(",
     "build_overview_median_prices_plot(",
     "build_national_affordability_score_plot(",
+    "latest_capital_price_extreme(",
+    "official_burden_summary(",
     'source = "overview_afford_score"',
     "plotly::event_register",
     "dragmode = FALSE",

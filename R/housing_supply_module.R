@@ -1,6 +1,26 @@
 # Housing Supply page module.
 
-supply_state_choices <- c("New South Wales", "Victoria")
+if (!exists("selected_approvals_latest", mode = "function", inherits = TRUE)) {
+  contextual_kpi_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
+    project_path("R", "contextual_kpi_helpers.R")
+  } else {
+    file.path("R", "contextual_kpi_helpers.R")
+  }
+  if (!file.exists(contextual_kpi_path)) {
+    stop("Could not locate R/contextual_kpi_helpers.R for housing supply module.",
+         call. = FALSE)
+  }
+  source(contextual_kpi_path, local = environment())
+}
+
+supply_state_choices <- function() {
+  supply_data <- if (exists("supply_demand", inherits = TRUE)) {
+    supply_demand
+  } else {
+    NULL
+  }
+  available_supply_states(supply_data)
+}
 
 supply_building_type_choices <- c(
   "Total approvals" = "Total approvals",
@@ -14,48 +34,12 @@ supply_sector_choices <- c(
 )
 
 supply_approval_series_components <- function(series) {
-  parse_one <- function(x) {
-    parts <- trimws(strsplit(x, ";", fixed = TRUE)[[1]])
-    parts <- parts[nzchar(parts)]
-
-    approval_state <- if (length(parts) >= 2) parts[[2]] else NA_character_
-    approval_building_type_raw <- if (length(parts) >= 3) parts[[3]] else NA_character_
-    approval_sector_raw <- if (length(parts) >= 4) parts[[4]] else NA_character_
-
-    approval_building_type <- dplyr::case_when(
-      approval_building_type_raw == "Total (Type of Building)" ~ "Total approvals",
-      approval_building_type_raw == "Houses" ~ "Houses",
-      approval_building_type_raw == "Dwellings excluding houses" ~ "Dwellings excluding houses",
-      TRUE ~ approval_building_type_raw
-    )
-
-    approval_sector <- dplyr::case_when(
-      approval_sector_raw == "Total Sectors" ~ "Total sectors",
-      approval_sector_raw == "Private Sector" ~ "Private sector",
-      TRUE ~ approval_sector_raw
-    )
-
-    approval_label <- dplyr::case_when(
-      approval_state == "New South Wales" ~ "NSW",
-      approval_state == "Victoria" ~ "VIC",
-      TRUE ~ approval_state
-    )
-
-    data.frame(
-      series = x,
-      approval_state = approval_state,
-      approval_building_type = approval_building_type,
-      approval_sector = approval_sector,
-      approval_label = approval_label,
-      stringsAsFactors = FALSE
-    )
-  }
-
-  dplyr::bind_rows(lapply(as.character(series), parse_one))
+  contextual_approval_series_components(series)
 }
 
 housingSupplyPageUI <- function(id) {
   ns <- NS(id)
+  states <- supply_state_choices()
 
   nav_panel(
     "Housing Supply",
@@ -67,17 +51,18 @@ housingSupplyPageUI <- function(id) {
       width = 1/4,
       fill = FALSE,
       policy_kpi_box(
-        title = "NSW Approvals",
-        value = textOutput(ns("vb_approvals_nsw")),
-        subtitle = p(class = "kpi-subtitle", "Monthly dwelling units"),
-        change = uiOutput(ns("vb_approvals_nsw_change")),
+        title = "Selected Approvals",
+        value = textOutput(ns("vb_selected_approvals")),
+        subtitle = p(class = "kpi-subtitle",
+                     textOutput(ns("vb_selected_approvals_date"))),
+        change = uiOutput(ns("vb_selected_approvals_change")),
         accent = "blue"
       ),
       policy_kpi_box(
-        title = "VIC Approvals",
-        value = textOutput(ns("vb_approvals_vic")),
-        subtitle = p(class = "kpi-subtitle", "Monthly dwelling units"),
-        change = uiOutput(ns("vb_approvals_vic_change")),
+        title = "Largest Selected Jurisdiction",
+        value = textOutput(ns("vb_largest_approval")),
+        subtitle = p(class = "kpi-subtitle",
+                     textOutput(ns("vb_largest_approval_state"))),
         accent = "teal"
       ),
       policy_kpi_box(
@@ -104,8 +89,8 @@ housingSupplyPageUI <- function(id) {
       width = 1/3,
       fill = FALSE,
       selectizeInput(ns("supply_states"), "States/Territories",
-                     choices = supply_state_choices,
-                     selected = supply_state_choices,
+                     choices = states,
+                     selected = states,
                      multiple = TRUE),
       selectInput(ns("supply_building_type"), "Building type",
                   choices = supply_building_type_choices,
@@ -136,62 +121,79 @@ housingSupplyPageUI <- function(id) {
 
 housingSupplyPageServer <- function(id, is_dark) {
   moduleServer(id, function(input, output, session) {
+    selected_supply_states <- reactive({
+      states <- input$supply_states
+      if (is.null(states) || length(states) == 0) {
+        return(supply_state_choices())
+      }
+      states
+    })
+
+    selected_approvals <- reactive({
+      req(input$supply_building_type, input$supply_sector)
+      selected_approvals_latest(
+        supply_demand,
+        states = selected_supply_states(),
+        building_type = input$supply_building_type,
+        sector = input$supply_sector
+      )
+    })
+
+    largest_approval <- reactive({
+      req(input$supply_building_type, input$supply_sector)
+      largest_selected_approval(
+        supply_demand,
+        states = selected_supply_states(),
+        building_type = input$supply_building_type,
+        sector = input$supply_sector
+      )
+    })
+
+    output$vb_selected_approvals <- renderText({
+      d <- selected_approvals()
+      if (nrow(d) == 0) return("N/A")
+      fmt_number(d$value[1])
+    })
+    output$vb_selected_approvals_date <- renderText({
+      d <- selected_approvals()
+      if (nrow(d) == 0) return("Monthly dwelling units")
+      paste0(format(d$date[1], "%b %Y"), " | ", d$n_jurisdictions[1],
+             " selected")
+    })
+    output$vb_selected_approvals_change <- renderUI({
+      ch <- selected_approvals_yoy_change(
+        supply_demand,
+        states = selected_supply_states(),
+        building_type = input$supply_building_type,
+        sector = input$supply_sector
+      )
+      pct <- ch$change[1]
+      css_class <- kpi_change_class(pct, favourable = "increase")
+      lbl <- if (is.na(pct)) "" else ch$label[1]
+      tags$p(class = paste("kpi-subtitle", css_class), lbl)
+    })
+
+    output$vb_largest_approval <- renderText({
+      d <- largest_approval()
+      if (nrow(d) == 0) return("N/A")
+      fmt_number(d$value[1])
+    })
+    output$vb_largest_approval_state <- renderText({
+      d <- largest_approval()
+      if (nrow(d) == 0) return("")
+      paste0(d$approval_label[1], " | ", format(d$date[1], "%b %Y"))
+    })
+
     approvals_latest <- function(state_name) {
-      supply_demand %>%
-        filter(category == "Building Approvals",
-               str_detect(series, state_name),
-               str_detect(series, "Total \\(Type of Building\\)"),
-               str_detect(series, "Total Sectors")) %>%
-        filter(!is.na(value)) %>%
-        arrange(desc(date)) %>%
-        slice(1)
+      d <- selected_approvals_latest(
+        supply_demand,
+        states = state_name,
+        building_type = "Total approvals",
+        sector = "Total sectors"
+      )
+      if (nrow(d) == 0) return(data.frame())
+      d
     }
-
-    output$vb_approvals_nsw <- renderText({
-      d <- approvals_latest("New South Wales")
-      if (nrow(d) == 0) return("N/A")
-      fmt_number(d$value[1])
-    })
-    output$vb_approvals_nsw_change <- renderUI({
-      d <- supply_demand %>%
-        filter(category == "Building Approvals",
-               str_detect(series, "New South Wales"),
-               str_detect(series, "Total \\(Type of Building\\)"),
-               str_detect(series, "Total Sectors"),
-               !is.na(value)) %>%
-        arrange(desc(date))
-      if (nrow(d) < 13) return(tags$p(class = "kpi-subtitle", ""))
-      current <- d$value[1]; previous <- d$value[13]
-      if (is.na(previous) || previous == 0) return(tags$p(class = "kpi-subtitle", ""))
-      pct <- (current / previous - 1) * 100
-      direction <- if (pct >= 0) "\u2191" else "\u2193"
-      label <- paste0(direction, " ", sprintf("%+.1f%%", pct), " YoY")
-      css_class <- kpi_change_class(pct, favourable = "increase")
-      tags$p(class = paste("kpi-subtitle", css_class), label)
-    })
-
-    output$vb_approvals_vic <- renderText({
-      d <- approvals_latest("Victoria")
-      if (nrow(d) == 0) return("N/A")
-      fmt_number(d$value[1])
-    })
-    output$vb_approvals_vic_change <- renderUI({
-      d <- supply_demand %>%
-        filter(category == "Building Approvals",
-               str_detect(series, "Victoria"),
-               str_detect(series, "Total \\(Type of Building\\)"),
-               str_detect(series, "Total Sectors"),
-               !is.na(value)) %>%
-        arrange(desc(date))
-      if (nrow(d) < 13) return(tags$p(class = "kpi-subtitle", ""))
-      current <- d$value[1]; previous <- d$value[13]
-      if (is.na(previous) || previous == 0) return(tags$p(class = "kpi-subtitle", ""))
-      pct <- (current / previous - 1) * 100
-      direction <- if (pct >= 0) "\u2191" else "\u2193"
-      label <- paste0(direction, " ", sprintf("%+.1f%%", pct), " YoY")
-      css_class <- kpi_change_class(pct, favourable = "increase")
-      tags$p(class = paste("kpi-subtitle", css_class), label)
-    })
 
     output$vb_construction <- renderText({
       v <- latest_val(abs_ts, "series", "CPI New Dwelling Purchase")

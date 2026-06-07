@@ -27,10 +27,10 @@ marketContextPageUI <- function(id) {
         accent = "teal"
       ),
       policy_kpi_box(
-        title = "Participation Rate",
-        value = textOutput(ns("vb_participation")),
+        title = "Labour Underutilisation",
+        value = textOutput(ns("vb_underutilisation")),
         subtitle = p(class = "kpi-subtitle", "Trend estimate"),
-        change = uiOutput(ns("vb_participation_change")),
+        change = uiOutput(ns("vb_underutilisation_change")),
         accent = "navy"
       )
     ),
@@ -107,16 +107,16 @@ marketContextPageServer <- function(id, is_dark) {
       tags$p(class = paste("kpi-subtitle", css_class), label)
     })
 
-    output$vb_participation <- renderText({
-      v <- latest_val(abs_ts, "series", "Participation Rate")
+    output$vb_underutilisation <- renderText({
+      v <- latest_val(abs_ts, "series", "Labour Underutilisation Rate")
       fmt_pct(v, 0.1)
     })
-    output$vb_participation_change <- renderUI({
-      ch <- latest_change(abs_ts, "series", "Participation Rate",
+    output$vb_underutilisation_change <- renderUI({
+      ch <- latest_change(abs_ts, "series", "Labour Underutilisation Rate",
                           periods_back = 12, period_label = "YoY",
                           change_type = "percentage_points")
       diff_val <- ch$change
-      css_class <- kpi_change_class(diff_val, favourable = "increase")
+      css_class <- kpi_change_class(diff_val, favourable = "decrease")
       lbl <- if (is.na(diff_val)) "" else if (abs(diff_val) < 0.3) "\u2192 Stable" else ch$label
       tags$p(class = paste("kpi-subtitle", css_class), lbl)
     })

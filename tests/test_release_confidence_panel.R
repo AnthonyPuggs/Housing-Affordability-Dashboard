@@ -52,8 +52,10 @@ if (file.exists(ui_helper_path)) {
   helper_text <- paste(readLines(ui_helper_path, warn = FALSE), collapse = "\n")
   check(grepl("data_vintage_detail", helper_text, fixed = TRUE),
         "Data vintage badge must expose detailed vintage text")
-  check(grepl("data-vintage-badge-detail", helper_text, fixed = TRUE),
-        "Data vintage badge must include a detail popover/tooltip class")
+  check(grepl("data-vintage-detail", helper_text, fixed = TRUE),
+        "Data vintage badge must retain detail text for non-hover provenance use")
+  check(!grepl("title = detail", helper_text, fixed = TRUE),
+        "Data vintage badge must not expose the full CSV inventory through the browser-native title tooltip")
 }
 
 if (file.exists(methodology_path)) {

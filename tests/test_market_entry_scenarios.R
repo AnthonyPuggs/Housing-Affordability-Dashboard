@@ -27,6 +27,7 @@ if (file.exists(scenario_path)) {
   required_functions <- c(
     "mortgage_monthly_payment",
     "market_entry_scenario",
+    "renter_entry_scenario",
     "market_entry_serviceability_series"
   )
   missing_functions <- required_functions[

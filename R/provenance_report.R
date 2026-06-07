@@ -45,6 +45,16 @@ if (!exists("release_confidence_summary", mode = "function")) {
     source(release_checklist_path, local = environment())
   }
 }
+if (!exists("source_audit_methodology_table", mode = "function")) {
+  source_audit_path <- if (exists("project_path", mode = "function")) {
+    project_path("R", "source_audit_registry.R")
+  } else {
+    file.path("R", "source_audit_registry.R")
+  }
+  if (file.exists(source_audit_path)) {
+    source(source_audit_path, local = environment())
+  }
+}
 
 dashboard_markdown_table <- function(data) {
   if (nrow(data) == 0) {
@@ -197,6 +207,12 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
   } else {
     data.frame()
   }
+  source_audit <- if (exists("source_audit_methodology_table",
+                             mode = "function")) {
+    source_audit_methodology_table()
+  } else {
+    data.frame()
+  }
 
   lines <- c(
     "# Housing Affordability Dashboard Methodology And Provenance",
@@ -209,6 +225,7 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
     "- `pipeline/06_validate_outputs.R` gates required schemas, source series and minimum row counts.",
     "- `R/pipeline_contracts.R` documents per-stage output contracts and fixed external ABS/RBA source surfaces.",
     "- `data/*.csv` stores the dashboard-ready saved outputs read by the Shiny app.",
+    "- `data/sih_recent_buyers_2020.csv` stores SIH File 9 recent buyer empirical evidence used by the Affordability page.",
     "- `data/data_vintage.csv` records the last successful refresh and observation-period coverage.",
     "- `R/indicator_registry.R` documents derived indicator formulas, source series, units, interpretation direction and caveats.",
     "- The Methodology page and this download expose that registry metadata to dashboard users.",
@@ -235,9 +252,17 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
     "",
     dashboard_markdown_table(release_confidence),
     "",
+    "## Data Source Audit",
+    "",
+    "No new live external data ingestion is activated by this audit. Household disposable income, new-tenancy or advertised rents, and residual income / living costs remain candidate-source work until source quality and coverage are accepted.",
+    "",
+    dashboard_markdown_table(source_audit),
+    "",
     "## Interpretation Caveats",
     "",
     "- Official SIH/NHHA burden and stress measures should be interpreted separately from price-index and market-entry proxy indicators.",
+    "- The Overview official SIH/NHHA burden snapshot surfaces selected observed household burden measures beside the stylised market-entry score.",
+    "- Recent buyer empirical evidence comes from `data/sih_recent_buyers_2020.csv` and describes 2019-20 SIH recent home buyer households.",
     "- The National Housing Affordability Score is a historical-relative market-entry composite using fixed 40/35/25 weights for mortgage serviceability, rental entry and deposit barrier component scores.",
     "- The front page labels this as the National Market-Entry Affordability Score: a front-page market-entry interpretation layer over the existing v1 composite, not a change to the saved data indicator.",
     "- National score rows are not official ABS/NHHA statistics or lender assessments; they are descriptive monitoring indicators and not an absolute affordability threshold.",
@@ -253,6 +278,7 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
     "- Where available, visible error bars and interval hover text use 95% margin-of-error metadata from `data/sih_estimate_quality.csv`.",
     "- Stylised scenario, not an official ABS measure or lender assessment.",
     "- `R/market_entry_scenarios.R` defines app-only market-entry scenarios for the calculator and assessed-rate sensitivity chart.",
+    "- The renter-entry calculator pathway estimates rent, bond and upfront moving/setup cash-flow pressure; it is not an official ABS/NHHA stress measure or tenancy eligibility assessment.",
     "- Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.",
     "- Deposit, LVR and loan-term controls are stylised serviceability assumptions; the serviceability chart uses AWE individual earnings as the income proxy.",
     "- KPI colours encode economic interpretation as better, worse or neutral/contextual rather than raw up/down movement.",

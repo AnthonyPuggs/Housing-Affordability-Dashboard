@@ -25,6 +25,7 @@ load_dashboard_csvs <- function(data_dir = project_path("data")) {
     sih_lower_income_states = load_dashboard_csv(
       "sih_lower_income_states.csv", data_dir
     ),
+    sih_recent_buyers = load_dashboard_csv("sih_recent_buyers_2020.csv", data_dir),
     sih_geographic = load_dashboard_csv("sih_geographic_2020.csv", data_dir)
   )
 }

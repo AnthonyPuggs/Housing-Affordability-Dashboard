@@ -203,6 +203,7 @@ input_ids <- c(
   "supply_sector",
   "rental_year",
   "rental_states",
+  "rental_cost_measure",
   "rental_cost_breakdown"
 )
 
@@ -300,7 +301,7 @@ check(length(missing_tabs) == 0,
 required_cache_contracts <- c(
   "bindCache(input$rental_year, input$rental_states, is_dark())",
   "bindCache(input$rental_states, is_dark())",
-  "bindCache(input$rental_cost_breakdown, is_dark())",
+  "bindCache(input$rental_cost_measure, input$rental_cost_breakdown, is_dark())",
   "bindCache(input$supply_dates, input$supply_states, input$supply_building_type, input$supply_sector, is_dark())",
   "bindCache(input$afford_indices, input$afford_dates, input$serviceability_deposit_pct, input$serviceability_term, input$serviceability_buffer, is_dark())",
   "bindCache(input$geo_states, input$geo_lower_metric, input$geo_lower_tenure, is_dark())"

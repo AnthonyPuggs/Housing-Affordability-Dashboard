@@ -47,9 +47,11 @@ if (file.exists(scenario_path)) {
     check(length(missing_preset_cols) == 0,
           paste("market_entry_scenario_presets() missing columns:",
                 paste(missing_preset_cols, collapse = ", ")))
-    check(all(c("first_home_buyer", "mortgage_stress", "renter_entry") %in%
+    check(all(c("first_home_buyer", "mortgage_stress", "high_lvr_buyer") %in%
                 presets$preset_id),
-          "Scenario presets must include renter entry, first-home buyer and mortgage-stress cases")
+          "Ownership scenario presets must include first-home buyer, mortgage-stress and high-LVR cases")
+    check(!("renter_entry" %in% presets$preset_id),
+          "Ownership scenario presets must not include renter_entry")
   }
 
   if (exists("market_entry_sensitivity_grid", mode = "function")) {
@@ -103,7 +105,9 @@ if (file.exists(module_path)) {
     'selectInput(ns("calc_preset")',
     "First-home buyer",
     "Mortgage-stress",
-    "Renter entry",
+    "High-LVR buyer",
+    "Rental entry",
+    'selectInput(ns("calc_pathway")',
     'plotlyOutput(ns("calc_sensitivity")',
     "output$calc_sensitivity <- renderPlotly",
     "market_entry_sensitivity_grid(",
