@@ -102,6 +102,7 @@ date,value,series,series_id,category,unit,frequency
 2026-01-01,101.47,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
 2026-02-01,101.62,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
 2026-03-01,102.11,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
+2026-04-01,102.84,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
 2011-09-01,100,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
 2011-12-01,101.15819952619111,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
 2012-03-01,99.34193208739141,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
@@ -3805,39 +3806,40 @@ date,value,series,series_id,category,unit,frequency
 2017-03-01,208586,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
 2017-06-01,211001,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
 2017-09-01,214095,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2017-12-01,217069,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2018-03-01,219800,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2018-06-01,222339,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
+2017-12-01,217070,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
+2018-03-01,219801,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
+2018-06-01,222338,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
 2018-09-01,225013,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2018-12-01,228159,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2019-03-01,231484,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2019-06-01,234940,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2019-09-01,237233,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2019-12-01,240222,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2020-03-01,241838,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2020-06-01,237828,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2020-09-01,242540,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2020-12-01,247210,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2021-03-01,251849,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2021-06-01,256733,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2021-09-01,258236,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2021-12-01,265222,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2022-03-01,270622,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2022-06-01,278242,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2022-09-01,286366,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2022-12-01,291866,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2023-03-01,297881,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2023-06-01,303039,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2023-09-01,310631,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2023-12-01,315981,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2024-03-01,319833,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2024-06-01,323512,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2024-09-01,328201,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2024-12-01,334800,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2025-03-01,340472,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2025-06-01,345199,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2025-09-01,351305,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
-2025-12-01,356127,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2018-12-01,228160,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
+2019-03-01,231485,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
+2019-06-01,234937,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2019-09-01,237228,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2019-12-01,240224,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2020-03-01,241850,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2020-06-01,237819,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2020-09-01,242529,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2020-12-01,247216,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2021-03-01,251871,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2021-06-01,256717,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2021-09-01,258215,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2021-12-01,265237,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2022-03-01,270659,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2022-06-01,278209,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2022-09-01,286323,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2022-12-01,291928,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2023-03-01,297898,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2023-06-01,302992,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2023-09-01,310577,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2023-12-01,316120,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2024-03-01,319815,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2024-06-01,323426,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2024-09-01,328135,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2024-12-01,335011,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2025-03-01,340280,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2025-06-01,345221,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2025-09-01,351115,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2025-12-01,356211,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2026-03-01,360412,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
 1997-09-01,67.4,WPI,A2603039T,Income,Index Numbers,Quarter
 1997-12-01,67.9,WPI,A2603039T,Income,Index Numbers,Quarter
 1998-03-01,68.5,WPI,A2603039T,Income,Index Numbers,Quarter
@@ -6887,51 +6889,52 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,3.2187952804802356,CPI Inflation YoY,NA,Prices,Per cent,Quarter
 2025-10-01,3.625658506352636,CPI Inflation YoY,NA,Prices,Per cent,Quarter
 2026-01-01,4.094165813715445,CPI Inflation YoY,NA,Prices,Per cent,Quarter
-2022-07-01,83.05,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2022-08-01,83.48,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-07-01,83.06,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-08-01,83.49,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2022-09-01,84.01,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2022-10-01,84.59,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2022-11-01,84.75,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2022-12-01,85.19,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-11-01,84.74,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-12-01,85.18,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2023-01-01,85.7,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-02-01,86.23,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-03-01,86.65,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-04-01,87.33,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-05-01,87.96,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-06-01,88.69,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-07-01,89.36,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-08-01,90,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-02-01,86.22,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-03-01,86.64,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-04-01,87.32,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-05-01,87.98,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-06-01,88.7,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-07-01,89.37,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-08-01,90.01,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2023-09-01,90.31,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2023-10-01,90.2,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2023-11-01,90.79,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-12-01,91.5,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-01-01,92.11,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-02-01,92.72,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-03-01,93.34,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-12-01,91.49,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-01-01,92.1,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-02-01,92.71,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-03-01,93.33,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-04-01,93.86,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-05-01,94.46,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-06-01,94.97,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-07-01,95.53,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-08-01,96.06,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-05-01,94.48,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-06-01,94.98,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-07-01,95.54,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-08-01,96.07,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-09-01,96.32,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-10-01,96.29,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-11-01,96.79,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-12-01,97.14,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-01-01,97.48,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-02-01,97.83,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-03-01,98.18,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-01-01,97.47,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-02-01,97.82,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-03-01,98.17,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-04-01,98.5,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-05-01,98.74,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-06-01,98.96,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-07-01,99.27,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-08-01,99.59,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-09-01,99.96,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-10-01,100.34,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-05-01,98.76,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-06-01,98.98,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-07-01,99.28,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-08-01,99.6,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-09-01,99.97,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-10-01,100.33,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-11-01,100.7,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-12-01,100.97,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2026-01-01,101.26,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2026-02-01,101.52,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2026-03-01,101.77,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2026-01-01,101.25,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2026-02-01,101.5,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2026-03-01,101.76,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2026-04-01,101.96,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2022-07-01,84.29333333333334,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
 2022-10-01,85.43333333333334,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
 2023-01-01,86.92666666666666,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
