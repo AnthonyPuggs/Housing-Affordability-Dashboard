@@ -1,7 +1,7 @@
-# Graph Report - Housing-Affordability-Dashboard  (2026-05-31)
+# Graph Report - Housing-Affordability-Dashboard  (2026-06-07)
 
 ## Corpus Check
-- 121 files · ~196,142 words
+- 122 files · ~197,022 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary

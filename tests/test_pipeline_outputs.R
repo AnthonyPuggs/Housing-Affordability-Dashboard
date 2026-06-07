@@ -90,6 +90,32 @@ if ("series" %in% names(abs_ts)) {
     paste("abs_timeseries.csv is missing required series:",
           paste(missing_abs, collapse = ", "))
   )
+
+  rent_cpi_rows <- abs_ts[startsWith(abs_ts$series, "CPI Rents ;"), ]
+  if (nrow(rent_cpi_rows) > 0) {
+    rent_cpi_rows$date <- as.Date(rent_cpi_rows$date)
+    rent_cpi_rows$city <- trimws(vapply(
+      strsplit(rent_cpi_rows$series, ";", fixed = TRUE),
+      function(parts) parts[[2]],
+      character(1)
+    ))
+    national_city <- "Weighted average of eight capital cities"
+    national_rows <- rent_cpi_rows[rent_cpi_rows$city == national_city, ]
+    city_rows <- rent_cpi_rows[rent_cpi_rows$city != national_city, ]
+    check(nrow(national_rows) > 0,
+          "abs_timeseries.csv must include national weighted-average CPI rents")
+    check(nrow(city_rows) > 0,
+          "abs_timeseries.csv must include capital-city CPI rents")
+    if (nrow(national_rows) > 0) {
+      check(min(national_rows$date) < as.Date("2012-01-01"),
+            "weighted-average CPI rents must retain long-run pre-2012 history")
+    }
+    if (nrow(city_rows) > 0) {
+      city_starts <- aggregate(date ~ city, city_rows, min)
+      check(all(city_starts$date == as.Date("2022-07-01")),
+            "capital-city CPI rent series must start at the current post-rebase July 2022 boundary")
+    }
+  }
 }
 
 required_rba_series <- indicator_registry_required_rba_sources()

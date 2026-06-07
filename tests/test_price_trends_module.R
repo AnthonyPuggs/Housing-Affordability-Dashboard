@@ -42,11 +42,26 @@ if (all(file.exists(c(helper_path, chart_builder_path, module_path)))) {
   source(chart_builder_path)
 
   rppi_cities <- c("Sydney", "Melbourne", "Weighted average of eight capital cities")
-  rent_cpi_cities <- c("Sydney", "Melbourne")
+  rent_cpi_national_city <- "Weighted average of eight capital cities"
+  rent_cpi_cities <- c(
+    rent_cpi_national_city, "Brisbane", "Melbourne", "Perth", "Sydney"
+  )
+  rent_cpi_city_cities <- setdiff(rent_cpi_cities, rent_cpi_national_city)
+  rent_cpi_default_cities <- c("Sydney", "Melbourne", "Brisbane", "Perth")
+  rent_cpi_national_range <- as.Date(c("1972-07-01", "2026-01-01"))
+  rent_cpi_city_range <- as.Date(c("2022-07-01", "2026-01-01"))
   rent_cpi_combined <- data.frame(
-    date = as.Date(c("2012-01-01", "2024-01-01")),
-    value = c(100, 130),
-    city = c("Sydney", "Melbourne"),
+    date = as.Date(c(
+      "2012-01-01", "2026-01-01",
+      "2022-07-01", "2026-01-01",
+      "2022-07-01", "2026-01-01"
+    )),
+    value = c(73.5, 101.5, 83, 101.4, 85.4, 101.1),
+    city = c(
+      rent_cpi_national_city, rent_cpi_national_city,
+      "Sydney", "Sydney",
+      "Melbourne", "Melbourne"
+    ),
     stringsAsFactors = FALSE
   )
 
@@ -67,12 +82,19 @@ if (all(file.exists(c(helper_path, chart_builder_path, module_path)))) {
     "Dwelling Type",
     "Transform",
     "Data Type",
+    "Rent CPI View",
+    "National long-run",
+    "Capital-city comparison",
+    "Include weighted-average reference",
+    "City CPI rent series in the saved data are post-rebase and available only from July 2022",
     "Rent Consumer Price Index (CPI) by Greater Capital City",
+    "price_trends-rent_cpi_view",
     "price_trends-price_cities",
     "price_trends-price_dwelling",
     "price_trends-price_dates",
     "price_trends-price_transform",
     "price_trends-rent_cpi_cities",
+    "price_trends-rent_cpi_include_national",
     "price_trends-rent_cpi_datatype",
     "price_trends-rent_cpi_dates",
     "price_trends-price_chart",
@@ -95,6 +117,9 @@ if (file.exists(module_path)) {
     "moduleServer",
     "price_data <- reactive",
     "rent_cpi_data <- reactive",
+    "input$rent_cpi_view",
+    "updateSliderInput",
+    "updateRadioButtons",
     "price_series_transform(",
     "rent_cpi_series_transform(",
     "build_dwelling_price_plot(",
@@ -106,7 +131,8 @@ if (file.exists(module_path)) {
     "bindCache(input$price_cities, input$price_dwelling, input$price_dates,",
     "input$price_transform, is_dark())",
     "bindCache(input$rent_cpi_cities, input$rent_cpi_dates,",
-    "input$rent_cpi_datatype, is_dark())",
+    "input$rent_cpi_datatype, input$rent_cpi_view,",
+    "input$rent_cpi_include_national, is_dark())",
     "dashboard_ggplotly"
   )
   missing_module_text <- required_module_text[

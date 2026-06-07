@@ -63,8 +63,10 @@ rent_cpi_series_transform <- function(data, data_type = c("index", "yoy", "qoq")
 }
 
 build_rent_cpi_plot <- function(data, data_type = c("index", "yoy", "qoq"),
-                                dark = FALSE) {
+                                dark = FALSE,
+                                view = c("city", "national")) {
   data_type <- match.arg(data_type)
+  view <- match.arg(view)
   y_lab <- switch(data_type,
                   index = "Index",
                   yoy = "Annual change (%)",
@@ -77,6 +79,9 @@ build_rent_cpi_plot <- function(data, data_type = c("index", "yoy", "qoq"),
 
   date_range_label <- paste(
     format(min(data$date), "%b %Y"), "to", format(max(data$date), "%b %Y"))
+  view_label <- switch(view,
+                       national = "national long-run",
+                       city = "capital-city comparison")
 
   ggplot(data, aes(x = date, y = value, color = city)) +
     geom_line(linewidth = 1, alpha = 0.9) +
@@ -88,7 +93,7 @@ build_rent_cpi_plot <- function(data, data_type = c("index", "yoy", "qoq"),
       y = y_lab,
       color = NULL,
       title = paste0("Rent CPI, ", datatype_label,
-                     ", by greater capital city, ", date_range_label)
+                     ", ", view_label, ", ", date_range_label)
     ) +
     theme_afford(dark)
 }

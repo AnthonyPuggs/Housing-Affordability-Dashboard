@@ -124,6 +124,24 @@ if (exists("build_dwelling_price_plot", mode = "function")) {
 if (exists("build_rent_cpi_plot", mode = "function")) {
   p <- build_rent_cpi_plot(rent_fixture, "index", dark = TRUE)
   check(inherits(p, "ggplot"), "build_rent_cpi_plot() must return a ggplot")
+
+  p_national <- build_rent_cpi_plot(
+    rent_fixture,
+    "index",
+    dark = FALSE,
+    view = "national"
+  )
+  check(grepl("national long-run", p_national$labels$title, fixed = TRUE),
+        "build_rent_cpi_plot() must label national long-run Rent CPI views")
+
+  p_city <- build_rent_cpi_plot(
+    rent_fixture,
+    "yoy",
+    dark = FALSE,
+    view = "city"
+  )
+  check(grepl("capital-city comparison", p_city$labels$title, fixed = TRUE),
+        "build_rent_cpi_plot() must label city-comparison Rent CPI views")
 }
 
 rates_fixture <- data.frame(

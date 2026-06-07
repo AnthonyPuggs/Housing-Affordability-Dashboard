@@ -1,5 +1,54 @@
 # App-ready series derived from loaded dashboard CSVs.
 
+rent_cpi_national_city <- "Weighted average of eight capital cities"
+
+rent_cpi_coverage_summary <- function(data, national_city = rent_cpi_national_city) {
+  if (nrow(data) == 0 || !"city" %in% names(data)) {
+    return(tibble(
+      city = character(),
+      n = integer(),
+      min_date = as.Date(character()),
+      max_date = as.Date(character()),
+      is_national = logical()
+    ))
+  }
+
+  data %>%
+    group_by(city) %>%
+    summarise(
+      n = n(),
+      min_date = min(date, na.rm = TRUE),
+      max_date = max(date, na.rm = TRUE),
+      .groups = "drop"
+    ) %>%
+    mutate(is_national = city == national_city)
+}
+
+rent_cpi_city_common_range <- function(coverage,
+                                       national_city = rent_cpi_national_city) {
+  city_coverage <- coverage %>%
+    filter(city != national_city)
+
+  if (nrow(city_coverage) == 0) {
+    return(as.Date(c(NA, NA)))
+  }
+
+  as.Date(c(max(city_coverage$min_date), min(city_coverage$max_date)))
+}
+
+rent_cpi_default_city_selection <- function(cities,
+                                            national_city = rent_cpi_national_city) {
+  city_choices <- setdiff(cities, national_city)
+  preferred <- c("Sydney", "Melbourne", "Brisbane", "Perth")
+  selected <- preferred[preferred %in% city_choices]
+
+  if (length(selected) == 0) {
+    selected <- head(city_choices, 4)
+  }
+
+  selected
+}
+
 precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
   rppi_all <- abs_ts %>%
     filter(str_detect(series, "^Dwelling Price Index ;")) %>%
@@ -136,6 +185,20 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
     rent_cpi_cities[rent_cpi_cities == "Weighted average of eight capital cities"],
     rent_cpi_cities[rent_cpi_cities != "Weighted average of eight capital cities"]
   )
+  rent_cpi_city_cities <- setdiff(rent_cpi_cities, rent_cpi_national_city)
+  rent_cpi_default_cities <- rent_cpi_default_city_selection(rent_cpi_cities)
+  rent_cpi_coverage <- rent_cpi_coverage_summary(rent_cpi_combined)
+  rent_cpi_national_coverage <- rent_cpi_coverage %>%
+    filter(city == rent_cpi_national_city)
+  rent_cpi_national_range <- if (nrow(rent_cpi_national_coverage) == 0) {
+    as.Date(c(NA, NA))
+  } else {
+    as.Date(c(
+      min(rent_cpi_national_coverage$min_date),
+      max(rent_cpi_national_coverage$max_date)
+    ))
+  }
+  rent_cpi_city_range <- rent_cpi_city_common_range(rent_cpi_coverage)
 
   rba_cash_rate <- rba_rates %>%
     filter(series == "Cash Rate Target")
@@ -175,6 +238,12 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
     rppi_cities = rppi_cities,
     rent_cpi_combined = rent_cpi_combined,
     rent_cpi_cities = rent_cpi_cities,
+    rent_cpi_city_cities = rent_cpi_city_cities,
+    rent_cpi_default_cities = rent_cpi_default_cities,
+    rent_cpi_coverage = rent_cpi_coverage,
+    rent_cpi_national_city = rent_cpi_national_city,
+    rent_cpi_national_range = rent_cpi_national_range,
+    rent_cpi_city_range = rent_cpi_city_range,
     rba_cash_rate = rba_cash_rate,
     rba_mortgage_var = rba_mortgage_var,
     rba_mortgage_fixed = rba_mortgage_fixed,

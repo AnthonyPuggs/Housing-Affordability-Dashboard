@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Shiny dashboard",
+      "type": "shell",
+      "command": "Rscript",
+      "args": [
+        "run_app.R"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "RENV_CONFIG_AUTOLOADER_ENABLED": "FALSE"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
