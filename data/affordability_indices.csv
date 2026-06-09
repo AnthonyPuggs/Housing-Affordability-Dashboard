@@ -56,7 +56,7 @@ date,value,indicator,geography,unit,frequency
 2024-04-01,12.890431754491345,Deposit Gap (Years),National,Years,Quarter
 2024-10-01,13.546384397807286,Deposit Gap (Years),National,Years,Quarter
 2025-04-01,13.612499913344855,Deposit Gap (Years),National,Years,Quarter
-2025-10-01,14.427026547514952,Deposit Gap (Years),National,Years,Quarter
+2025-10-01,14.43625393897483,Deposit Gap (Years),National,Years,Quarter
 2012-10-01,26.923076923076927,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2013-04-01,30.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2013-10-01,46.15384615384615,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
@@ -140,8 +140,9 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,159.76061091138197,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2025-01-01,154.9301403323894,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2025-04-01,146.28176769091868,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-07-01,142.84587073949743,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-10-01,146.29087976369885,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-07-01,142.81403169553454,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-10-01,146.384446044328,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2026-01-01,157.12844146209326,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2012-10-01,42.01923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
 2013-04-01,37.5,National Housing Affordability Score,National,Score (0-100),Quarter
 2013-10-01,43.26923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
@@ -225,8 +226,9 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,158.93205517351058,Price-to-Income Ratio,National,Index (base=100),Quarter
 2025-01-01,157.39171694816642,Price-to-Income Ratio,National,Index (base=100),Quarter
 2025-04-01,160.5902860706756,Price-to-Income Ratio,National,Index (base=100),Quarter
-2025-07-01,163.8069495980107,Price-to-Income Ratio,National,Index (base=100),Quarter
-2025-10-01,170.0681852900301,Price-to-Income Ratio,National,Index (base=100),Quarter
+2025-07-01,163.77043852042283,Price-to-Income Ratio,National,Index (base=100),Quarter
+2025-10-01,170.17695931324087,Price-to-Income Ratio,National,Index (base=100),Quarter
+2026-01-01,175.41852459524702,Price-to-Income Ratio,National,Index (base=100),Quarter
 2012-07-01,-3.0458276297367415,Real House Price Growth YoY,National,Per cent,Quarter
 2012-10-01,-4.373864825118234,Real House Price Growth YoY,National,Per cent,Quarter
 2013-01-01,-1.838244143868395,Real House Price Growth YoY,National,Per cent,Quarter
@@ -279,8 +281,9 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,12.12839813350801,Real House Price Growth YoY,National,Per cent,Quarter
 2025-01-01,7.472561625725027,Real House Price Growth YoY,National,Per cent,Quarter
 2025-04-01,8.091481553002989,Real House Price Growth YoY,National,Per cent,Quarter
-2025-07-01,6.325638421389401,Real House Price Growth YoY,National,Per cent,Quarter
-2025-10-01,6.691540517603567,Real House Price Growth YoY,National,Per cent,Quarter
+2025-07-01,6.301939404690127,Real House Price Growth YoY,National,Per cent,Quarter
+2025-10-01,6.759779430630486,Real House Price Growth YoY,National,Per cent,Quarter
+2026-01-01,10.604193918715477,Real House Price Growth YoY,National,Per cent,Quarter
 2004-04-01,4.118377883559125,Real Mortgage Rate,National,Per cent,Quarter
 2004-07-01,4.277966502821766,Real Mortgage Rate,National,Per cent,Quarter
 2004-10-01,4.036577327055417,Real Mortgage Rate,National,Per cent,Quarter

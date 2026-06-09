@@ -159,8 +159,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,223.34824953935248,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
 2025-03-01,222.47959989470917,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
 2025-06-01,228.32324295867332,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2025-09-01,236.19373519347198,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2025-12-01,246.93340352724405,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
+2025-09-01,236.1410897604633,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
+2025-12-01,247.0913398262701,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
+2026-03-01,256.14635430376416,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
 2011-09-01,100,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
 2011-12-01,99.27705223880596,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
 2012-03-01,98.50746268656717,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
@@ -217,8 +218,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,218.35354477611938,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
 2025-03-01,223.34421641791047,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
 2025-06-01,228.49813432835816,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2025-09-01,237.22014925373136,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2025-12-01,248.6007462686567,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
+2025-09-01,238.03638059701493,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
+2025-12-01,250.4430970149254,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
+2026-03-01,262.05690298507466,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
 2011-09-01,100,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
 2011-12-01,102.55707762557078,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
 2012-03-01,101.00456621004565,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
@@ -275,8 +277,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,172.69406392694066,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
 2025-03-01,171.52511415525115,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
 2025-06-01,174.11872146118722,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2025-09-01,174.1552511415525,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2025-12-01,177.86301369863014,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
+2025-09-01,173.31506849315068,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
+2025-12-01,183.4337899543379,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
+2026-03-01,185.93607305936072,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
 2011-09-01,100,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
 2011-12-01,90.39602066194757,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
 2012-03-01,88.88463745934571,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
@@ -333,8 +336,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,96.44155347235508,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
 2025-03-01,96.09718767935718,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
 2025-06-01,102.48708628276258,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2025-09-01,106.29424143868376,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2025-12-01,110.96231107709966,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
+2025-09-01,106.27511000573942,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
+2025-12-01,110.73273388176771,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
+2026-03-01,114.27204897646833,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
 2011-09-01,100,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
 2011-12-01,101.60603080957063,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
 2012-03-01,99.86889544411667,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
@@ -391,8 +395,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,219.69845952146835,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
 2025-03-01,221.63225172074726,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
 2025-06-01,220.78007210750573,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2025-09-01,223.04162569649293,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2025-12-01,230.67846607669617,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
+2025-09-01,226.05703048180925,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
+2025-12-01,236.6764995083579,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
+2026-03-01,245.91937069813176,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
 2011-09-01,100,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
 2011-12-01,98.82949668357394,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
 2012-03-01,97.54194303550527,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
@@ -449,8 +454,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,176.02419040187277,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
 2025-03-01,177.56535310183378,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
 2025-06-01,179.12602419040186,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2025-09-01,180.23800234100662,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2025-12-01,182.0327740928599,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
+2025-09-01,180.82325399921965,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
+2025-12-01,185.23214982442448,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
+2026-03-01,184.76394849785407,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
 2011-09-01,100,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
 2011-12-01,99.35213414634147,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
 2012-03-01,101.44817073170734,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
@@ -507,8 +513,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,165.47256097560975,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
 2025-03-01,167.66387195121953,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
 2025-06-01,174.25685975609758,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2025-09-01,179.82088414634148,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2025-12-01,193.25457317073173,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
+2025-09-01,179.9733231707317,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
+2025-12-01,196.22713414634148,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
+2026-03-01,210.27057926829272,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
 2011-09-01,100,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
 2011-12-01,98.98298816568047,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
 2012-03-01,101.16494082840237,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
@@ -565,8 +572,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,232.23002958579886,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
 2025-03-01,230.82470414201185,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
 2025-06-01,236.7233727810651,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2025-09-01,237.64792899408286,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2025-12-01,240.5880177514793,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
+2025-09-01,239.55251479289942,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
+2025-12-01,243.9903846153846,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
+2026-03-01,244.97041420118344,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
 2011-09-01,100,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
 2011-12-01,99.20537897310513,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
 2012-03-01,99.5517522412388,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
@@ -623,8 +631,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,204.3398533007335,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
 2025-03-01,205.33822330888344,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
 2025-06-01,209.84107579462105,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2025-09-01,213.12143439282804,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2025-12-01,218.9690301548492,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
+2025-09-01,214.119804400978,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
+2025-12-01,221.84189079054605,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
+2026-03-01,226.3854930725346,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
 2011-09-01,379.9,RPPI,A83728622K,House Prices,$'000,Quarter
 2011-12-01,384.3,RPPI,A83728622K,House Prices,$'000,Quarter
 2012-03-01,377.4,RPPI,A83728622K,House Prices,$'000,Quarter
@@ -681,8 +690,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,848.5,RPPI,A83728622K,House Prices,$'000,Quarter
 2025-03-01,845.2,RPPI,A83728622K,House Prices,$'000,Quarter
 2025-06-01,867.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2025-09-01,897.3,RPPI,A83728622K,House Prices,$'000,Quarter
-2025-12-01,938.1,RPPI,A83728622K,House Prices,$'000,Quarter
+2025-09-01,897.1,RPPI,A83728622K,House Prices,$'000,Quarter
+2025-12-01,938.7,RPPI,A83728622K,House Prices,$'000,Quarter
+2026-03-01,973.1,RPPI,A83728622K,House Prices,$'000,Quarter
 2003-09-01,182.5,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
 2003-12-01,191,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
 2004-03-01,193.5,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
@@ -770,9 +780,10 @@ date,value,series,series_id,category,unit,frequency
 2024-09-01,610,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
 2024-12-01,640,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
 2025-03-01,640,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
-2025-06-01,663,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
-2025-09-01,685.8,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
-2025-12-01,730,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
+2025-06-01,661,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
+2025-09-01,685.5,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
+2025-12-01,735,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
+2026-03-01,740,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
 2003-09-01,221,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
 2003-12-01,241.6,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
 2004-03-01,249,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
@@ -857,12 +868,13 @@ date,value,series,series_id,category,unit,frequency
 2023-12-01,548,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
 2024-03-01,580,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
 2024-06-01,610,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
-2024-09-01,631,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
+2024-09-01,630.5,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
 2024-12-01,655,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
 2025-03-01,685,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
-2025-06-01,706,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
+2025-06-01,705,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
 2025-09-01,740,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
-2025-12-01,793,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
+2025-12-01,795,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
+2026-03-01,834.5,RPPI Attached Dwellings ;  Brisbane ;,A83728554V,House Prices,$'000,Quarter
 2003-09-01,290,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2003-12-01,300,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2004-03-01,295,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
@@ -944,15 +956,16 @@ date,value,series,series_id,category,unit,frequency
 2023-03-01,610,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2023-06-01,600,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2023-09-01,619,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
-2023-12-01,625,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
-2024-03-01,597,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
-2024-06-01,630,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
+2023-12-01,626,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
+2024-03-01,600,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
+2024-06-01,626.3,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2024-09-01,595,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2024-12-01,610,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2025-03-01,600,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2025-06-01,600,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
-2025-09-01,612,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
-2025-12-01,620,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
+2025-09-01,615,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
+2025-12-01,624,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
+2026-03-01,625,RPPI Attached Dwellings ;  Canberra ;,A83728574C,House Prices,$'000,Quarter
 2003-09-01,130,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
 2003-12-01,135.5,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
 2004-03-01,147.1,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
@@ -1040,9 +1053,10 @@ date,value,series,series_id,category,unit,frequency
 2024-09-01,350,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
 2024-12-01,341,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
 2025-03-01,360,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
-2025-06-01,389,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
+2025-06-01,385,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
 2025-09-01,405,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
-2025-12-01,433.2,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
+2025-12-01,432.3,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
+2026-03-01,430,RPPI Attached Dwellings ;  Darwin ;,A83728570V,House Prices,$'000,Quarter
 2003-09-01,165,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
 2003-12-01,175,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
 2004-03-01,192,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
@@ -1128,11 +1142,12 @@ date,value,series,series_id,category,unit,frequency
 2024-03-01,551,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
 2024-06-01,555,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
 2024-09-01,525,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
-2024-12-01,539.5,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
-2025-03-01,550,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
-2025-06-01,555.3,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
-2025-09-01,582.5,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
-2025-12-01,586,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
+2024-12-01,539,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
+2025-03-01,548,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
+2025-06-01,557.5,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
+2025-09-01,577.5,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
+2025-12-01,600,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
+2026-03-01,610,RPPI Attached Dwellings ;  Hobart ;,A83728566C,House Prices,$'000,Quarter
 2003-09-01,276,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
 2003-12-01,285,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
 2004-03-01,272.5,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
@@ -1214,15 +1229,16 @@ date,value,series,series_id,category,unit,frequency
 2023-03-01,605,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
 2023-06-01,620,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
 2023-09-01,625,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
-2023-12-01,632.5,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
-2024-03-01,629,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
+2023-12-01,635,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
+2024-03-01,630,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
 2024-06-01,630,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
-2024-09-01,618,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
-2024-12-01,625,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
-2025-03-01,625,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
+2024-09-01,620,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
+2024-12-01,628,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
+2025-03-01,628,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
 2025-06-01,625,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
 2025-09-01,630,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
-2025-12-01,660,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
+2025-12-01,670,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
+2026-03-01,615,RPPI Attached Dwellings ;  Melbourne ;,A83728550K,House Prices,$'000,Quarter
 2003-09-01,195,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2003-12-01,198,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2004-03-01,208,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
@@ -1304,15 +1320,16 @@ date,value,series,series_id,category,unit,frequency
 2023-03-01,402.6,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2023-06-01,410,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2023-09-01,420,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
-2023-12-01,445,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
+2023-12-01,447,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2024-03-01,475,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2024-06-01,510,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2024-09-01,540,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
-2024-12-01,557.5,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
+2024-12-01,558,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2025-03-01,575,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2025-06-01,600,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
-2025-09-01,625.9,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
+2025-09-01,628,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2025-12-01,700,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
+2026-03-01,735,RPPI Attached Dwellings ;  Perth ;,A83728562V,House Prices,$'000,Quarter
 2003-09-01,240,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2003-12-01,250,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2004-03-01,269,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
@@ -1395,14 +1412,15 @@ date,value,series,series_id,category,unit,frequency
 2023-06-01,608,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2023-09-01,625,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2023-12-01,630,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
-2024-03-01,626.8,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
+2024-03-01,628.5,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2024-06-01,645,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
-2024-09-01,640,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
+2024-09-01,641,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2024-12-01,650,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
-2025-03-01,650,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
+2025-03-01,652.5,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2025-06-01,665,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2025-09-01,675,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
-2025-12-01,700,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
+2025-12-01,705,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
+2026-03-01,705.1,RPPI Attached Dwellings ;  Rest of NSW ;,A83728578L,House Prices,$'000,Quarter
 2003-09-01,136,RPPI Attached Dwellings ;  Rest of NT ;,A83728602A,House Prices,$'000,Quarter
 2003-12-01,129,RPPI Attached Dwellings ;  Rest of NT ;,A83728602A,House Prices,$'000,Quarter
 2004-03-01,150,RPPI Attached Dwellings ;  Rest of NT ;,A83728602A,House Prices,$'000,Quarter
@@ -1493,6 +1511,7 @@ date,value,series,series_id,category,unit,frequency
 2025-06-01,300,RPPI Attached Dwellings ;  Rest of NT ;,A83728602A,House Prices,$'000,Quarter
 2025-09-01,310,RPPI Attached Dwellings ;  Rest of NT ;,A83728602A,House Prices,$'000,Quarter
 2025-12-01,315,RPPI Attached Dwellings ;  Rest of NT ;,A83728602A,House Prices,$'000,Quarter
+2026-03-01,330,RPPI Attached Dwellings ;  Rest of NT ;,A83728602A,House Prices,$'000,Quarter
 2003-09-01,230,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2003-12-01,240,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2004-03-01,257,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
@@ -1574,7 +1593,7 @@ date,value,series,series_id,category,unit,frequency
 2023-03-01,550,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2023-06-01,562.5,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2023-09-01,580,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
-2023-12-01,591.5,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
+2023-12-01,592,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2024-03-01,625,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2024-06-01,640,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2024-09-01,660,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
@@ -1582,7 +1601,8 @@ date,value,series,series_id,category,unit,frequency
 2025-03-01,700,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2025-06-01,720,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2025-09-01,740,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
-2025-12-01,786,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
+2025-12-01,790,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
+2026-03-01,820,RPPI Attached Dwellings ;  Rest of Qld. ;,A83728586L,House Prices,$'000,Quarter
 2003-09-01,82,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
 2003-12-01,85,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
 2004-03-01,82.9,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
@@ -1670,9 +1690,10 @@ date,value,series,series_id,category,unit,frequency
 2024-09-01,249.5,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
 2024-12-01,320,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
 2025-03-01,297,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
-2025-06-01,330,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
+2025-06-01,329,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
 2025-09-01,365,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
-2025-12-01,410,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
+2025-12-01,404.5,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
+2026-03-01,350,RPPI Attached Dwellings ;  Rest of SA ;,A83728590C,House Prices,$'000,Quarter
 2003-09-01,130,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
 2003-12-01,120,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
 2004-03-01,145,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
@@ -1759,10 +1780,11 @@ date,value,series,series_id,category,unit,frequency
 2024-06-01,445,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
 2024-09-01,450,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
 2024-12-01,462.5,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
-2025-03-01,442,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
+2025-03-01,440,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
 2025-06-01,450,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
-2025-09-01,455,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
-2025-12-01,493.5,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
+2025-09-01,460,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
+2025-12-01,495,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
+2026-03-01,493,RPPI Attached Dwellings ;  Rest of Tas. ;,A83728598W,House Prices,$'000,Quarter
 2003-09-01,160,RPPI Attached Dwellings ;  Rest of Vic. ;,A83728582C,House Prices,$'000,Quarter
 2003-12-01,170,RPPI Attached Dwellings ;  Rest of Vic. ;,A83728582C,House Prices,$'000,Quarter
 2004-03-01,173,RPPI Attached Dwellings ;  Rest of Vic. ;,A83728582C,House Prices,$'000,Quarter
@@ -1853,6 +1875,7 @@ date,value,series,series_id,category,unit,frequency
 2025-06-01,435,RPPI Attached Dwellings ;  Rest of Vic. ;,A83728582C,House Prices,$'000,Quarter
 2025-09-01,440,RPPI Attached Dwellings ;  Rest of Vic. ;,A83728582C,House Prices,$'000,Quarter
 2025-12-01,465,RPPI Attached Dwellings ;  Rest of Vic. ;,A83728582C,House Prices,$'000,Quarter
+2026-03-01,480,RPPI Attached Dwellings ;  Rest of Vic. ;,A83728582C,House Prices,$'000,Quarter
 2003-09-01,135.5,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
 2003-12-01,138,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
 2004-03-01,139,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
@@ -1941,8 +1964,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,400,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
 2025-03-01,420,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
 2025-06-01,410,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
-2025-09-01,430,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
-2025-12-01,450,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
+2025-09-01,435,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
+2025-12-01,447.5,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
+2026-03-01,500,RPPI Attached Dwellings ;  Rest of WA ;,A83728594L,House Prices,$'000,Quarter
 2003-09-01,371,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2003-12-01,387,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2004-03-01,380,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
@@ -2026,13 +2050,14 @@ date,value,series,series_id,category,unit,frequency
 2023-09-01,795,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2023-12-01,800,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2024-03-01,790,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
-2024-06-01,800,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
+2024-06-01,805,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2024-09-01,815,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2024-12-01,820,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2025-03-01,820,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2025-06-01,835,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
-2025-09-01,840,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
-2025-12-01,850,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
+2025-09-01,845,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
+2025-12-01,862.3,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
+2026-03-01,848,RPPI Attached Dwellings ;  Sydney ;,A83728546V,House Prices,$'000,Quarter
 2002-03-01,166,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
 2002-06-01,175,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
 2002-09-01,181,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
@@ -2123,12 +2148,13 @@ date,value,series,series_id,category,unit,frequency
 2023-12-01,750,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
 2024-03-01,765,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
 2024-06-01,785,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
-2024-09-01,818.3,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
+2024-09-01,817.5,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
 2024-12-01,850,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
-2025-03-01,853,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
+2025-03-01,852,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
 2025-06-01,868,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
 2025-09-01,900,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
-2025-12-01,950,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
+2025-12-01,956.5,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
+2026-03-01,980,RPPI Established Houses ;  Adelaide ;,A83728557A,House Prices,$'000,Quarter
 2002-03-01,185,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
 2002-06-01,182.6,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
 2002-09-01,198,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
@@ -2221,10 +2247,11 @@ date,value,series,series_id,category,unit,frequency
 2024-06-01,890,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
 2024-09-01,890,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
 2024-12-01,935,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
-2025-03-01,947.5,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
+2025-03-01,947,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
 2025-06-01,970,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
-2025-09-01,1020,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
-2025-12-01,1100,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
+2025-09-01,1022,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
+2025-12-01,1110,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
+2026-03-01,1150,RPPI Established Houses ;  Brisbane ;,A83728553T,House Prices,$'000,Quarter
 2002-03-01,245,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
 2002-06-01,258,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
 2002-09-01,275,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
@@ -2319,8 +2346,9 @@ date,value,series,series_id,category,unit,frequency
 2024-12-01,1000,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
 2025-03-01,975,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
 2025-06-01,1000,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
-2025-09-01,1027,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
-2025-12-01,1042.5,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
+2025-09-01,1028.5,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
+2025-12-01,1070,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
+2026-03-01,1071.3,RPPI Established Houses ;  Canberra ;,A83728573A,House Prices,$'000,Quarter
 2002-03-01,190,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
 2002-06-01,188.3,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
 2002-09-01,190,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
@@ -2413,10 +2441,11 @@ date,value,series,series_id,category,unit,frequency
 2024-06-01,582.5,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
 2024-09-01,558.8,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
 2024-12-01,560,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
-2025-03-01,600,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
-2025-06-01,624,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
+2025-03-01,599.8,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
+2025-06-01,622.4,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
 2025-09-01,670,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
-2025-12-01,711,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
+2025-12-01,710,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
+2026-03-01,750,RPPI Established Houses ;  Darwin ;,A83728569K,House Prices,$'000,Quarter
 2002-03-01,123.3,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
 2002-06-01,117,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
 2002-09-01,124,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
@@ -2506,13 +2535,14 @@ date,value,series,series_id,category,unit,frequency
 2023-09-01,695,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
 2023-12-01,715,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
 2024-03-01,705,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
-2024-06-01,695.5,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
+2024-06-01,690.5,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
 2024-09-01,700,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
 2024-12-01,715,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
-2025-03-01,710.5,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
-2025-06-01,707.5,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
-2025-09-01,715,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
-2025-12-01,749.5,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
+2025-03-01,715,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
+2025-06-01,715,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
+2025-09-01,720,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
+2025-12-01,750,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
+2026-03-01,740,RPPI Established Houses ;  Hobart ;,A83728565A,House Prices,$'000,Quarter
 2002-03-01,241,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
 2002-06-01,260,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
 2002-09-01,265,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
@@ -2605,10 +2635,11 @@ date,value,series,series_id,category,unit,frequency
 2024-06-01,845,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
 2024-09-01,825,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
 2024-12-01,850,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
-2025-03-01,840,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
-2025-06-01,845,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
-2025-09-01,846.8,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
-2025-12-01,875,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
+2025-03-01,835,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
+2025-06-01,840,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
+2025-09-01,845.3,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
+2025-12-01,892,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
+2026-03-01,850,RPPI Established Houses ;  Melbourne ;,A83728549A,House Prices,$'000,Quarter
 2002-03-01,190,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
 2002-06-01,190,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
 2002-09-01,195,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
@@ -2698,13 +2729,14 @@ date,value,series,series_id,category,unit,frequency
 2023-09-01,600,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
 2023-12-01,660,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
 2024-03-01,700,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
-2024-06-01,756,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
+2024-06-01,755,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
 2024-09-01,780,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
 2024-12-01,820,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
-2025-03-01,821.5,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
+2025-03-01,820,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
 2025-06-01,850,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
-2025-09-01,871,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
-2025-12-01,951,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
+2025-09-01,872.5,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
+2025-12-01,960,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
+2026-03-01,1000,RPPI Established Houses ;  Perth ;,A83728561T,House Prices,$'000,Quarter
 2003-09-01,247.3,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2003-12-01,255,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2004-03-01,265,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
@@ -2787,14 +2819,15 @@ date,value,series,series_id,category,unit,frequency
 2023-06-01,710,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2023-09-01,718,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2023-12-01,720,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
-2024-03-01,747,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
+2024-03-01,747.2,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2024-06-01,750,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2024-09-01,745,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2024-12-01,760,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
-2025-03-01,760,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
+2025-03-01,762,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2025-06-01,770,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2025-09-01,780,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
-2025-12-01,800,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
+2025-12-01,810,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
+2026-03-01,825,RPPI Established Houses ;  Rest of NSW ;,A83728577K,House Prices,$'000,Quarter
 2003-09-01,195,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
 2003-12-01,204.5,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
 2004-03-01,217.8,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
@@ -2878,13 +2911,14 @@ date,value,series,series_id,category,unit,frequency
 2023-09-01,463.5,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
 2023-12-01,466.3,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
 2024-03-01,425,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
-2024-06-01,438.8,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
+2024-06-01,440,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
 2024-09-01,422.7,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
 2024-12-01,462.5,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
-2025-03-01,430,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
+2025-03-01,435,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
 2025-06-01,443.5,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
-2025-09-01,433,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
-2025-12-01,460,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
+2025-09-01,431,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
+2025-12-01,466.3,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
+2026-03-01,460,RPPI Established Houses ;  Rest of NT ;,A83728601X,House Prices,$'000,Quarter
 2003-09-01,197,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
 2003-12-01,205,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
 2004-03-01,224,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
@@ -2972,9 +3006,10 @@ date,value,series,series_id,category,unit,frequency
 2024-09-01,649,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
 2024-12-01,675,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
 2025-03-01,710,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
-2025-06-01,725,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
+2025-06-01,727.5,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
 2025-09-01,765,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
-2025-12-01,799.4,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
+2025-12-01,800,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
+2026-03-01,815,RPPI Established Houses ;  Rest of Qld. ;,A83728585K,House Prices,$'000,Quarter
 2003-09-01,150,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
 2003-12-01,162,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
 2004-03-01,166.6,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
@@ -3061,10 +3096,11 @@ date,value,series,series_id,category,unit,frequency
 2024-06-01,450,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
 2024-09-01,465,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
 2024-12-01,500,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
-2025-03-01,490,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
+2025-03-01,485,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
 2025-06-01,510,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
 2025-09-01,535,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
-2025-12-01,575,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
+2025-12-01,579.5,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
+2026-03-01,595,RPPI Established Houses ;  Rest of SA ;,A83728589V,House Prices,$'000,Quarter
 2003-09-01,125,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
 2003-12-01,139.3,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
 2004-03-01,156,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
@@ -3148,13 +3184,14 @@ date,value,series,series_id,category,unit,frequency
 2023-09-01,527.5,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
 2023-12-01,525,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
 2024-03-01,535,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
-2024-06-01,537,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
-2024-09-01,515.1,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
+2024-06-01,535,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
+2024-09-01,515,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
 2024-12-01,550,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
 2025-03-01,550,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
 2025-06-01,550,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
-2025-09-01,575,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
-2025-12-01,609,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
+2025-09-01,578,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
+2025-12-01,605,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
+2026-03-01,620,RPPI Established Houses ;  Rest of Tas. ;,A83728597V,House Prices,$'000,Quarter
 2003-09-01,176,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
 2003-12-01,185,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
 2004-03-01,190,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
@@ -3244,7 +3281,8 @@ date,value,series,series_id,category,unit,frequency
 2025-03-01,575,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
 2025-06-01,575,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
 2025-09-01,590,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
-2025-12-01,610,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
+2025-12-01,615,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
+2026-03-01,625,RPPI Established Houses ;  Rest of Vic. ;,A83728581A,House Prices,$'000,Quarter
 2003-09-01,160,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2003-12-01,164,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2004-03-01,178,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
@@ -3326,15 +3364,16 @@ date,value,series,series_id,category,unit,frequency
 2023-03-01,400,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2023-06-01,400,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2023-09-01,410,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
-2023-12-01,443,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
+2023-12-01,444,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2024-03-01,450,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2024-06-01,470,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2024-09-01,495,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2024-12-01,520,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2025-03-01,540,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2025-06-01,550,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
-2025-09-01,577.5,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
-2025-12-01,622,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
+2025-09-01,575,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
+2025-12-01,625.5,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
+2026-03-01,661,RPPI Established Houses ;  Rest of WA ;,A83728593K,House Prices,$'000,Quarter
 2002-03-01,365,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
 2002-06-01,393.5,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
 2002-09-01,413,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
@@ -3424,13 +3463,14 @@ date,value,series,series_id,category,unit,frequency
 2023-09-01,1370,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
 2023-12-01,1420,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
 2024-03-01,1401,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
-2024-06-01,1455,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
+2024-06-01,1454.3,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
 2024-09-01,1410,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
 2024-12-01,1450,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
 2025-03-01,1450,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
-2025-06-01,1520,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
-2025-09-01,1511,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
-2025-12-01,1515,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
+2025-06-01,1520.5,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
+2025-09-01,1520,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
+2025-12-01,1560,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
+2026-03-01,1485,RPPI Established Houses ;  Sydney ;,A83728545T,House Prices,$'000,Quarter
 1983-11-15,345.2,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 1984-02-15,353.5,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 1984-05-15,365.3,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
