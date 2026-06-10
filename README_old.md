@@ -1,0 +1,166 @@
+# Australian Housing Affordability Dashboard
+
+Interactive R/Shiny dashboard for Australian housing affordability and cost-pressure analysis. The app combines saved ABS, SIH and RBA-derived CSV outputs with Plotly charts for prices, rents, official housing burden measures, labour-market context, housing supply and stylised market-entry scenarios.
+
+Live web app here: [https://anthonypuggs-household-affordability-dashboard.share.connect.posit.cloud/](https://anthonypuggs-housing-affordability-dashboard.share.connect.posit.cloud/)
+
+## Run The App
+
+Restore the pinned R package environment from `renv.lock`:
+
+```bash
+Rscript -e "renv::restore()"
+```
+
+`renv.lock` pins package versions for reproducible dashboard, pipeline and test runs. In plain terms, renv.lock pins package versions so another machine can restore the same R package set. The project activation file `.Rprofile` loads `renv` automatically when R starts from the repository root.
+
+If `renv` is unavailable, install it first:
+
+```r
+install.packages("renv")
+```
+
+As a manual fallback, install the direct runtime and pipeline packages:
+
+```r
+install.packages(c(
+  "shiny", "bslib", "ggplot2", "plotly", "dplyr", "tidyr", "purrr",
+  "stringr", "scales", "readr", "readxl", "readabs", "lubridate",
+  "httr", "rlang", "watcher"
+))
+```
+
+From the repository root, start the dashboard with:
+
+```bash
+Rscript -e "shiny::runApp('.')"
+```
+
+The app reads pre-generated CSV files from `data/`, so it can run without refreshing live ABS or RBA inputs.
+
+The dashboard uses bslib-native dark/light mode through Bootstrap 5. It uses local system font stacks rather than Google-hosted fonts, avoiding third-party font fetches during launch or deployment.
+
+The Shiny interface uses a public-policy report UI system in `R/ui_style_system.R`. Page headers, calmer KPI tiles, chart cards and source notes are helper-backed so modules share the same hierarchy, spacing and local/system-font treatment.
+
+## Refresh The Data
+
+Run the full data pipeline from the repository root:
+
+```bash
+Rscript pipeline/05_driver.R
+```
+
+The pipeline parses local ABS Survey of Income and Housing workbooks under `resources/ABS_data/`, retrieves public ABS/RBA time series, derives affordability and cost-pressure indicators, and validates the generated outputs.
+
+Pipeline runs use per-stage output gates from `R/pipeline_contracts.R` before continuing to the next stage. The same helper records the fixed external-source manifest for ABS catalogue/table calls, ABS SDMX CPI endpoints and RBA F-series tables.
+
+## Data Model
+
+Main dashboard CSVs live in `data/`:
+
+- `abs_timeseries.csv`: long-format ABS macro, CPI, price, labour and supply series using `date | value | series | series_id | category | unit | frequency`.
+- `rba_rates.csv`: long-format RBA cash and mortgage-rate inputs using the same time-series schema.
+- `rba_*_raw.csv`: normalised RBA source-cache artefacts kept rectangular for reproducible parsing; `rba_rates.csv` is the dashboard-ready RBA output.
+- `affordability_indices.csv`: derived cost-pressure indicators and the National Housing Affordability Score using `date | value | indicator | geography | unit | frequency`.
+- `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental-stress measures.
+- `sih_estimate_quality.csv`: SIH sampling-error metadata for selected workbook tables, including 95% margin of error values and relative standard error flags. Users should interpret with caution when estimates have RSE from 25% to 50%; estimates above 50% are too unreliable for general use.
+- SIH estimate outputs are guarded by workbook benchmark checks in `R/sih_benchmarks.R`, covering key rows from ABS SIH Files 4, 5, 8 and 13 so sampling-error sections do not contaminate the main estimate CSVs.
+
+Official SIH/NHHA measures should be interpreted separately from modelled market-entry indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments.
+
+The National Housing Affordability Score is a modelled national market-entry composite, not an official ABS/NHHA statistic or lender assessment. The Overview page labels it as the National Market-Entry Affordability Score: a front-page market-entry interpretation layer over the existing v1 composite, not a new data series. Version 1 combines mortgage serviceability, rental entry and deposit barrier component scores using fixed 40/35/25 weights, where higher values mean more affordable relative to the score history. The score is not the share of households who can afford housing, and the rental-entry component may understate new-lease stress because v1 uses public index-style inputs. The Overview chart lets users click historical score dates to update the headline score and component contribution display without changing the fixed headline weights.
+
+`R/market_entry_scenarios.R` centralises app-only market-entry scenario calculations for mortgage repayments, assessed-rate sensitivity, deposit saving time and expense-adjusted serviceability ratios. Assessment buffer, deposit, implied LVR, loan-term and expense inputs are sensitivity assumptions, not a lender assessment. The serviceability chart uses AWE individual earnings as the income proxy; savings-rate assumptions remain calculator-only because they affect deposit saving time rather than repayment serviceability.
+
+## Methodology Metadata
+
+`R/indicator_registry.R` is the source of truth for derived indicator formulas, source series, units, interpretation direction and caveats. The registry documents the current formulas used by the pipeline and dashboard; it does not make stylised market-entry measures official ABS measures or lender assessments.
+
+`R/pipeline_contracts.R` documents the pipeline stage contracts and fixed external-source manifest. It keeps the release surface explicit: each data-producing stage has required CSV outputs, and ABS/RBA source surfaces are listed separately from the saved dashboard data.
+
+The Shiny app includes a Methodology page backed by this registry. It shows the formula, source series, interpretation direction and official/stylised status for each derived affordability indicator.
+
+`R/methodology_module.R`, `R/affordability_module.R`, `R/rental_market_module.R`, `R/housing_supply_module.R`, `R/price_trends_module.R`, `R/geographic_affordability_module.R`, `R/market_context_module.R` and `R/overview_module.R` are the Shiny page modules. They keep the registry-backed methodology/provenance page, Affordability page, Rental Market page, Housing Supply page, Price Trends page, Geographic Affordability page, Market Context page and Overview page isolated while broader component-level refactors remain incremental.
+
+`plot_setup.R` is a thin compatibility entrypoint over focused support modules for CSV loading, dashboard formatting, theme helpers and app-ready precomputed series. It keeps the existing global object names available to page modules while reducing the setup file's direct responsibility.
+
+`R/chart_builders.R` is the page-level chart-construction helper surface. It keeps ggplot builders testable outside Shiny while modules retain input handling, validation, caching, SIH quality joins, Plotly conversion and deliberately Plotly-specific post-processing such as right-side annotations.
+
+For the practical chart-editing workflow, see `CHART_BUILDER_WORKFLOW.md`.
+
+For release smoke testing of the live Shiny interface, see
+`docs/ui_smoke_checklist.md`. The project uses static base-R UI smoke contracts
+and the Codex in-app browser checklist, with no new browser-testing dependencies.
+
+The Housing Supply page keeps Building Approvals readable by filtering the ABS approval series with state, building-type and sector controls; the default view compares total-sector total approvals for New South Wales and Victoria.
+
+The Geographic Affordability page is an SIH-only, geography-aligned view. It compares state, lower-income state and greater-capital-city/rest-of-state SIH estimates where the housing-cost numerator and income or household denominator are measured within the same geography; it does not construct state or capital-city market-entry indexes from national wage, RPPI, AWE, WPI or CPI-rent proxies.
+
+Survey charts that have matching SIH estimate-quality metadata display compact reliability markers (`†`) and include relative standard error or margin-of-error details in Plotly hover text. Where available, visible error bars and interval hover text use 95% margin-of-error metadata from `data/sih_estimate_quality.csv`.
+
+KPI colours encode economic interpretation as better, worse or neutral/contextual rather than raw up/down movement. `R/visual_semantics.R` centralises these classes and chart palettes so affordability-worsening increases are not shown as favourable.
+
+The Methodology page also provides an on-demand Markdown download generated by `R/provenance_report.R`. The download combines the registry-backed methodology table with saved `data/*.csv` inventory metadata, without writing a persistent report into the repository.
+
+## Verification
+
+The project uses lightweight base-R tests. Useful checks from the repository root are:
+
+```bash
+Rscript tests/test_pipeline_outputs.R
+Rscript tests/test_app_output_ids.R
+Rscript tests/test_kpi_change_labels.R
+Rscript tests/test_app_method_text.R
+Rscript tests/test_methodology_page.R
+Rscript tests/test_methodology_module.R
+Rscript tests/test_affordability_module.R
+Rscript tests/test_rental_market_module.R
+Rscript tests/test_housing_supply_module.R
+Rscript tests/test_housing_supply_legend_contracts.R
+Rscript tests/test_price_trends_module.R
+Rscript tests/test_geographic_affordability_module.R
+Rscript tests/test_geographic_affordability_data_contracts.R
+Rscript tests/test_market_context_module.R
+Rscript tests/test_overview_module.R
+Rscript tests/test_provenance_report.R
+Rscript tests/test_sih_quality_helpers.R
+Rscript tests/test_sih_uncertainty_intervals.R
+Rscript tests/test_sih_estimate_quality.R
+Rscript tests/test_sih_workbook_benchmarks.R
+Rscript tests/test_market_entry_scenarios.R
+Rscript tests/test_serviceability_scenario_controls.R
+Rscript tests/test_visual_semantics.R
+Rscript tests/test_chart_builders.R
+Rscript tests/test_plot_setup_extraction.R
+Rscript tests/test_plotly_helpers.R
+Rscript tests/test_app_plotly_cache_contracts.R
+Rscript tests/test_ui_style_system.R
+Rscript tests/test_ui_smoke_contracts.R
+Rscript tests/test_responsive_ui_contracts.R
+Rscript tests/test_rental_market_mobile_contracts.R
+Rscript tests/test_rental_market_interaction_contracts.R
+Rscript tests/test_theme_infrastructure.R
+Rscript tests/test_rba_raw_cache_hygiene.R
+Rscript tests/test_public_release_hygiene.R
+Rscript tests/test_project_root_paths.R
+```
+
+Before publishing, run the release-readiness checklist:
+
+```bash
+Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
+```
+
+Release checklist warnings can be acceptable for known data vintage, while failures block public release until fixed.
+
+For a quick source check:
+
+```bash
+Rscript -e "source('plot_setup.R'); source('app.R'); cat('APP_SOURCE_OK\n')"
+```
+
+## Notes
+
+- `pipeline/05_driver.R` is the canonical data-refresh entrypoint.
+- `app_old.R`, `_check_cpi.R` and `save_plots.R` are legacy or manual-support scripts and are not part of the production app launch path.
+- `HOUSING_DASHBOARD_ROOT` can be set to the repository path when launching scripts from unusual working directories.
