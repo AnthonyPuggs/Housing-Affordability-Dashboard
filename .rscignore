@@ -8,7 +8,7 @@ quality_reports/
 tests/
 docs/
 resources/
-plots/
+archive/
 renv/library/
 renv/staging/
 renv/python/
@@ -17,11 +17,6 @@ renv/cellar/
 .DS_Store
 .Rhistory
 .RData
-app_old.R
-README_old.md
-save_plots.R
-_check_cpi.R
-project_plan.md
 CLAUDE.md
 AGENTS.md
 CHART_BUILDER_WORKFLOW.md

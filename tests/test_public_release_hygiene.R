@@ -56,10 +56,7 @@ test_that("public_release_hygiene contracts", {
 
   tracked_source_patterns <- c(
     "pipeline/",
-    "_check_cpi.R",
-    "app_old.R",
-    "save_plots.R",
-    "plots/",
+    "archive/",
     "resources/*.pdf",
     "resources/**/*.pdf"
   )
@@ -89,8 +86,8 @@ test_that("public_release_hygiene contracts", {
   tracked_files <- system2("git", c("-C", repo_root, "ls-files"),
                            stdout = TRUE)
   tracked_r_files <- grep("\\.R$", tracked_files, value = TRUE)
-  check("_check_cpi.R" %in% tracked_r_files,
-        "_check_cpi.R must remain tracked and parse-valid")
+  check("archive/_check_cpi.R" %in% tracked_r_files,
+        "archive/_check_cpi.R must remain tracked and parse-valid")
 
   for (r_file in tracked_r_files) {
     parsed <- tryCatch(

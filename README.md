@@ -290,7 +290,7 @@ Rscript -e "source('plot_setup.R'); source('app.R'); cat('APP_SOURCE_OK\n')"
 ### Notes
 
 - `pipeline/05_driver.R` is the canonical data-refresh entrypoint.
-- `app_old.R`, `_check_cpi.R` and `save_plots.R` are legacy or manual-support scripts and are not part of the production app launch path.
+- Legacy and manual-support scripts (`app_old.R`, `_check_cpi.R`, `save_plots.R`, exported `plots/`) live under `archive/` and are not part of the production app launch path.
 - `HOUSING_DASHBOARD_ROOT` can be set to the repository path when launching scripts from unusual working directories.
 
 ---

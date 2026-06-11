@@ -1,7 +1,8 @@
 # ==============================================================================
 # Static Plot Export & IDE Display
 # ==============================================================================
-# Run: source("save_plots.R") in Positron/RStudio console
+# Legacy export utility, archived under archive/ (roadmap Track 3 / SHINY-09).
+# Run from the repo root: source("archive/save_plots.R") in Positron/RStudio console
 # - Prints each plot to the IDE Plots pane
 # - Saves PNGs to plots/ directory
 # ==============================================================================

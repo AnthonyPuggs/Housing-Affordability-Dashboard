@@ -17,8 +17,8 @@ Production R/Shiny dashboard for Australian housing affordability analysis, depl
 | `data/` | Committed pipeline outputs the app reads (`abs_timeseries.csv`, `rba_rates.csv`, `affordability_indices.csv`, `sih_*.csv`, `data_vintage.csv`). `data/rba_*_raw.*` are gitignored download caches, not outputs |
 | `tests/` | testthat suite (`test_*.R` + shared `helper-contracts.R` harness); run with `testthat::test_dir("tests")` or any single file standalone via `Rscript tests/test_X.R` from the repo root. `tests/fixtures/data/` holds frozen fixture CSVs for unit/module tests (regenerate with `Rscript tests/fixtures/generate_fixtures.R`); `tests/test_app_smoke.R` is a `shinytest2::AppDriver` smoke test over all nav panels (skips without Chrome/Edge) |
 | `resources/` | ABS SIH workbooks + methodology PDFs (see below); inputs to stage 01, never read by the app |
-| `docs/` | Reviews, roadmap (`docs/roadmap.md`), UI smoke checklist |
-| `app_old.R` | Legacy pre-pipeline macro dashboard. Not part of the app; archival candidate (roadmap Track 3) |
+| `docs/` | Reviews, roadmap (`docs/roadmap.md`), Track 3 plan (`docs/track3_plan.md`), UI smoke checklist |
+| `archive/` | Legacy scripts kept for history (`app_old.R` pre-pipeline dashboard, `save_plots.R` static export, `_check_cpi.R`, `README_old.md`, exported `plots/`). Not part of the app; excluded from deployment via `.rscignore` |
 
 ## Key Conventions
 

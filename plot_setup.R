@@ -1,7 +1,8 @@
 # ==============================================================================
 # Shared Data Loading, Helpers & Theme
 # ==============================================================================
-# Sourced by both app.R (Shiny dashboard) and save_plots.R (static export).
+# Sourced by app.R (Shiny dashboard); also usable from archive/save_plots.R
+# (legacy static export, run from the repo root).
 # This file is a compatibility entrypoint: page modules may keep using the
 # existing global helper names and app-ready data objects.
 # ==============================================================================
