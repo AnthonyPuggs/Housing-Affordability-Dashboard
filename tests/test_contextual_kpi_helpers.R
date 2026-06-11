@@ -106,6 +106,38 @@ if (file.exists(helper_path)) {
     )
     check(isTRUE(all.equal(yoy$change[1], 100)),
           "Selected approvals YoY change should compare selected latest total with 12-month-prior selected total")
+
+    # A missing t-12 observation must blank the YoY label, never fall back
+    # to the immediately preceding observation.
+    approvals_gap <- approvals
+    approvals_gap$date[approvals_gap$date == as.Date("2025-03-01")] <-
+      as.Date("2025-12-01")
+    yoy_gap <- selected_approvals_yoy_change(
+      approvals_gap,
+      states = c("New South Wales", "Victoria"),
+      building_type = "Total approvals",
+      sector = "Total sectors"
+    )
+    check(is.na(yoy_gap$change[1]),
+          "YoY change must be NA when the exact 12-month-prior observation is missing")
+    check(identical(yoy_gap$label[1], ""),
+          "YoY label must be blank when the exact 12-month-prior observation is missing")
+
+    # A Feb-29 latest date must roll back to Feb-28 rather than erroring or
+    # blanking (the previous sprintf date construction produced NA here).
+    approvals_leap <- approvals
+    approvals_leap$date[approvals_leap$date == as.Date("2026-03-01")] <-
+      as.Date("2028-02-29")
+    approvals_leap$date[approvals_leap$date == as.Date("2025-03-01")] <-
+      as.Date("2027-02-28")
+    yoy_leap <- selected_approvals_yoy_change(
+      approvals_leap,
+      states = c("New South Wales", "Victoria"),
+      building_type = "Total approvals",
+      sector = "Total sectors"
+    )
+    check(isTRUE(all.equal(yoy_leap$change[1], 100)),
+          "YoY change must roll a Feb-29 latest date back to the Feb-28 prior observation")
   }
 
   if (exists("available_supply_states", mode = "function")) {

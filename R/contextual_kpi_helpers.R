@@ -193,16 +193,13 @@ selected_approvals_yoy_change <- function(data, states, building_type, sector) {
   }
 
   latest_date <- by_date$date[1]
-  prior_target <- as.Date(sprintf(
-    "%d-%s",
-    as.integer(format(latest_date, "%Y")) - 1L,
-    format(latest_date, "%m-%d")
-  ))
+  # Exact t-12 observation only: a "YoY" label must never describe a shorter
+  # interval (the previous fallback substituted the immediately preceding
+  # observation, so a 1-month change could be published as year-on-year).
+  # add_with_rollback keeps a Feb-29 latest date valid (rolls to Feb-28).
+  prior_target <- lubridate::add_with_rollback(latest_date,
+                                               -lubridate::years(1))
   prior <- by_date[by_date$date == prior_target, , drop = FALSE]
-  if (nrow(prior) == 0) {
-    prior <- by_date[by_date$date < latest_date, , drop = FALSE][1, ,
-                                                                  drop = FALSE]
-  }
   if (nrow(prior) == 0 || is.na(prior$value[1]) || prior$value[1] == 0) {
     return(data.frame(change = NA_real_, label = "", stringsAsFactors = FALSE))
   }

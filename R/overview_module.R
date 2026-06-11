@@ -71,11 +71,11 @@ overview_score_change <- function(score_data, selected_date = NULL) {
   if (nrow(current) == 0) {
     return(list(change = NA_real_, label = ""))
   }
-  target_date <- as.Date(sprintf(
-    "%d-%s",
-    as.integer(format(current_date, "%Y")) - 1L,
-    format(current_date, "%m-%d")
-  ))
+  # Feb-29-safe exact t-12 target (the previous sprintf construction
+  # produced NA for a Feb-29 date); no fallback — a missing t-12 blanks
+  # the label rather than mislabelling a shorter change as YoY.
+  target_date <- lubridate::add_with_rollback(current_date,
+                                              -lubridate::years(1))
   previous <- d %>% filter(date == target_date)
   if (nrow(previous) == 0) {
     return(list(change = NA_real_, label = ""))
@@ -173,7 +173,7 @@ overviewPageUI <- function(id) {
             uiOutput(ns("vb_afford_score_change")),
             tags$p(
               class = "affordability-score-note",
-              "Modelled national score for entering ownership or renting. It combines mortgage serviceability, rental cost pressure and deposit barriers. Not an official ABS/NHHA statistic or lender assessment."
+              "Modelled national score for entering ownership or renting. It combines mortgage serviceability, rental cost pressure and deposit barriers. Not an official ABS/NHHA statistic or lender assessment. The score is published only for quarters with all three components, so it can lag the semiannual AWE wage input."
             ),
             actionButton(
               ns("reset_afford_score_date"),
