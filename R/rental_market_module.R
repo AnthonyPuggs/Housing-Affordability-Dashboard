@@ -63,7 +63,7 @@ rentalMarketPageUI <- function(id) {
       ),
       layout_sidebar(
         sidebar = sidebar(
-          width = 280, open = "open",
+          width = 280, open = "desktop",
           selectInput(ns("rental_year"), "Survey Year (NHHA)",
                       choices = if (nrow(sih_nhha) > 0)
                         rev(sort(unique(sih_nhha$survey_year))) else "2019-20",

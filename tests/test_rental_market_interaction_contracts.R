@@ -82,8 +82,8 @@ if (file.exists(chart_builders_path)) {
 
 if (file.exists(module_path)) {
   module_text <- paste(readLines(module_path, warn = FALSE), collapse = "\n")
-  check(grepl('width = 280, open = "open"', module_text, fixed = TRUE),
-        "Rental Market sidebar must remain open by default")
+  check(grepl('width = 280, open = "desktop"', module_text, fixed = TRUE),
+        "Rental Market sidebar must be open on desktop and collapsed on mobile")
 }
 
 if (file.exists(readme_path)) {

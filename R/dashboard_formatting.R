@@ -150,3 +150,14 @@ city_colours <- c(
   "Canberra" = "#999999",
   "Weighted average of eight capital cities" = "#000000"
 )
+
+# Theme-aware city palette: the eight-capitals weighted average is pure black,
+# which is invisible against the dark panel background (~1.2:1 contrast), so
+# dark mode swaps it for a light tone. Chart builders pass their dark flag in.
+city_palette <- function(dark = FALSE) {
+  colours <- city_colours
+  if (isTRUE(dark)) {
+    colours[["Weighted average of eight capital cities"]] <- "#E8EEF7"
+  }
+  colours
+}

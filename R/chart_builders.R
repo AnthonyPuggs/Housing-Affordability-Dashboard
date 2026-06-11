@@ -32,7 +32,7 @@ build_dwelling_price_plot <- function(data, transform = c("levels", "yoy", "inde
 
   ggplot(data, aes(x = date, y = value, color = city)) +
     geom_line(linewidth = 1, alpha = 0.9) +
-    scale_color_manual(values = city_colours, na.value = "grey50") +
+    scale_color_manual(values = city_palette(dark), na.value = "grey50") +
     scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
     scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
     labs(x = NULL, y = y_lab, color = NULL) +
@@ -85,7 +85,7 @@ build_rent_cpi_plot <- function(data, data_type = c("index", "yoy", "qoq"),
 
   ggplot(data, aes(x = date, y = value, color = city)) +
     geom_line(linewidth = 1, alpha = 0.9) +
-    scale_color_manual(values = city_colours, na.value = "grey50") +
+    scale_color_manual(values = city_palette(dark), na.value = "grey50") +
     scale_x_date(date_labels = "%Y", date_breaks = "3 years") +
     scale_y_continuous(labels = label_number(big.mark = ",", accuracy = 0.1)) +
     labs(

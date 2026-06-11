@@ -93,7 +93,9 @@ ui <- page_navbar(
     primary = "#0E5A8A",
     secondary = "#1F9D8C"
   ),
-  header = tags$head(
+  header = tagList(
+    useBusyIndicators(),
+    tags$head(
     tags$style(HTML("
       /* ---- Light theme (default) ---- */
       :root {
@@ -110,6 +112,12 @@ ui <- page_navbar(
         --policy-kpi-bg: #ffffff;
         --policy-kpi-fg: #182231;
         --policy-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+        /* KPI change colours: >=4.5:1 against the KPI card background
+           (Okabe-Ito blue; vermilion darkened for small-text contrast). */
+        --kpi-better: #0072B2;
+        --kpi-worse: #A84A00;
+        --kpi-neutral: #6C757D;
+        --validation-error: #A43D3D;
       }
       /* ---- Dark theme ---- */
       html[data-bs-theme='dark'] {
@@ -126,7 +134,37 @@ ui <- page_navbar(
         --policy-kpi-bg: #111b2e;
         --policy-kpi-fg: #e3ebf4;
         --policy-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+        /* Lighter Okabe-Ito variants: >=7:1 on the dark card background
+           (the light-theme colours fell to ~3.3:1 here). */
+        --kpi-better: #56B4E9;
+        --kpi-worse: #E69F00;
+        --kpi-neutral: #8899aa;
+        --validation-error: #E08585;
       }
+
+      /* ---- Startup loading splash (removed on first shiny:idle) ---- */
+      #app-loading-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--app-bg);
+        transition: opacity 0.4s ease;
+      }
+      #app-loading-splash.app-splash-hidden { opacity: 0; pointer-events: none; }
+      #app-loading-splash .splash-inner { text-align: center; color: var(--app-muted); }
+      #app-loading-splash .splash-spinner {
+        width: 44px;
+        height: 44px;
+        margin: 0 auto 0.9rem auto;
+        border: 4px solid var(--app-border);
+        border-top-color: var(--policy-accent);
+        border-radius: 50%;
+        animation: app-splash-spin 0.9s linear infinite;
+      }
+      @keyframes app-splash-spin { to { transform: rotate(360deg); } }
 
       /* Base */
       body {
@@ -618,7 +656,7 @@ ui <- page_navbar(
       }
 
       /* Misc */
-      .shiny-output-error-validation { color: #A43D3D; font-weight: 600; }
+      .shiny-output-error-validation { color: var(--validation-error); font-weight: 600; }
       .calc-result { font-size: 1.3rem; font-weight: 600; color: var(--app-text); }
       .calc-label { font-size: 0.85rem; color: var(--app-muted); }
 
@@ -662,12 +700,12 @@ ui <- page_navbar(
         width: 100%;
       }
 
-      /* KPI change indicator colors */
-      .kpi-change-better { color: #0072B2 !important; font-weight: 600; }
-      .kpi-change-worse { color: #D55E00 !important; font-weight: 600; }
-      .kpi-change-neutral { color: #6C757D !important; font-weight: 600; }
-      .kpi-change-up { color: #0072B2 !important; font-weight: 600; }
-      .kpi-change-down { color: #D55E00 !important; font-weight: 600; }
+      /* KPI change indicator colors (theme-aware, WCAG AA on card bg) */
+      .kpi-change-better { color: var(--kpi-better) !important; font-weight: 600; }
+      .kpi-change-worse { color: var(--kpi-worse) !important; font-weight: 600; }
+      .kpi-change-neutral { color: var(--kpi-neutral) !important; font-weight: 600; }
+      .kpi-change-up { color: var(--kpi-better) !important; font-weight: 600; }
+      .kpi-change-down { color: var(--kpi-worse) !important; font-weight: 600; }
 
       /* Mobile: stack sidebars, reduce value box text */
       @media (max-width: 768px) {
@@ -812,6 +850,27 @@ ui <- page_navbar(
           window.setTimeout(forceHideNavbar, 150);
         });
       })();
+    "))
+    ),
+    div(
+      id = "app-loading-splash",
+      role = "status",
+      `aria-label` = "Loading dashboard",
+      div(
+        class = "splash-inner",
+        div(class = "splash-spinner"),
+        p("Loading the Australian Housing Affordability dashboard…")
+      )
+    ),
+    tags$script(HTML("
+      $(document).one('shiny:idle', function() {
+        var splash = document.getElementById('app-loading-splash');
+        if (!splash) return;
+        splash.classList.add('app-splash-hidden');
+        window.setTimeout(function() {
+          if (splash.parentNode) splash.parentNode.removeChild(splash);
+        }, 450);
+      });
     "))
   ),
   nav_spacer(),
