@@ -188,6 +188,144 @@ release_text_check <- function(check_id, category, file, needles, repo_root,
   )
 }
 
+# --- Deployment manifest checks ------------------------------------------------
+# The Connect deployment is driven by manifest.json; a stale manifest (missing
+# files app.R sources, or bundling .rscignore-excluded internals) makes the
+# next git-backed redeploy an outage. These checks fail the checklist when the
+# manifest drifts from the repository.
+
+release_sourced_app_files <- function(repo_root) {
+  entrypoints <- c("app.R", "plot_setup.R")
+  src <- character()
+  for (entry in entrypoints) {
+    path <- file.path(repo_root, entry)
+    if (!file.exists(path)) next
+    lines <- readLines(path, warn = FALSE)
+    hits <- regmatches(lines, regexpr('project_path\\("[^)]*"\\)', lines))
+    hits <- gsub('project_path\\(|"|\\)', "", hits)
+    hits <- gsub(", ", "/", hits, fixed = TRUE)
+    src <- c(src, hits[grepl("\\.R$", hits)])
+  }
+  unique(src)
+}
+
+release_rscignore_patterns <- function(repo_root) {
+  path <- file.path(repo_root, ".rscignore")
+  if (!file.exists(path)) {
+    return(character())
+  }
+  patterns <- trimws(readLines(path, warn = FALSE))
+  patterns[nzchar(patterns) & !startsWith(patterns, "#")]
+}
+
+release_manifest_checks <- function(repo_root) {
+  manifest_path <- file.path(repo_root, "manifest.json")
+  regenerate <- paste(
+    "Regenerate with rsconnect::writeManifest() using git-tracked files",
+    "filtered by .rscignore, then commit manifest.json."
+  )
+
+  if (!file.exists(manifest_path)) {
+    return(list(release_checklist_row(
+      "deployment_manifest_exists", "deployment", "fail",
+      "manifest.json is missing.", regenerate
+    )))
+  }
+  if (!requireNamespace("jsonlite", quietly = TRUE)) {
+    return(list(release_checklist_row(
+      "deployment_manifest_parse", "deployment", "warn",
+      "jsonlite is unavailable, so manifest.json cannot be validated.",
+      "Install jsonlite (a plotly dependency) and re-run the checklist."
+    )))
+  }
+
+  manifest <- tryCatch(
+    jsonlite::fromJSON(manifest_path, simplifyVector = FALSE),
+    error = function(e) e
+  )
+  if (inherits(manifest, "error")) {
+    return(list(release_checklist_row(
+      "deployment_manifest_parse", "deployment", "fail",
+      "manifest.json could not be parsed as JSON.", regenerate
+    )))
+  }
+
+  manifest_files <- names(manifest$files)
+  checks <- list()
+
+  sourced <- release_sourced_app_files(repo_root)
+  missing_sourced <- setdiff(sourced, manifest_files)
+  checks[[length(checks) + 1L]] <- release_checklist_row(
+    "deployment_manifest_sourced_files", "deployment",
+    if (length(missing_sourced) == 0) "pass" else "fail",
+    if (length(missing_sourced) == 0) {
+      paste("All", length(sourced),
+            "files sourced by app.R/plot_setup.R are in manifest.json.")
+    } else {
+      paste("manifest.json is missing sourced files:",
+            paste(missing_sourced, collapse = ", "))
+    },
+    if (length(missing_sourced) == 0) "No action required." else regenerate
+  )
+
+  tracked_data <- release_git_output(
+    c("-c", "core.quotepath=false", "ls-files", "data/*.csv"), repo_root
+  )
+  missing_data <- if (tracked_data$status == 0L) {
+    setdiff(tracked_data$output[nzchar(tracked_data$output)], manifest_files)
+  } else {
+    character()
+  }
+  checks[[length(checks) + 1L]] <- release_checklist_row(
+    "deployment_manifest_data_files", "deployment",
+    if (tracked_data$status != 0L) {
+      "warn"
+    } else if (length(missing_data) == 0) {
+      "pass"
+    } else {
+      "fail"
+    },
+    if (tracked_data$status != 0L) {
+      "git ls-files failed, so tracked data CSVs could not be compared."
+    } else if (length(missing_data) == 0) {
+      "All tracked data/*.csv files are in manifest.json."
+    } else {
+      paste("manifest.json is missing tracked data files:",
+            paste(missing_data, collapse = ", "))
+    },
+    if (length(missing_data) == 0) "No action required." else regenerate
+  )
+
+  ignore_patterns <- release_rscignore_patterns(repo_root)
+  leaked <- character()
+  for (pattern in ignore_patterns) {
+    if (endsWith(pattern, "/")) {
+      leaked <- c(leaked, manifest_files[startsWith(manifest_files, pattern)])
+    } else {
+      leaked <- c(
+        leaked,
+        manifest_files[manifest_files == pattern |
+                         startsWith(manifest_files, paste0(pattern, "/"))]
+      )
+    }
+  }
+  leaked <- unique(leaked)
+  checks[[length(checks) + 1L]] <- release_checklist_row(
+    "deployment_manifest_no_rscignore_leaks", "deployment",
+    if (length(leaked) == 0) "pass" else "fail",
+    if (length(leaked) == 0) {
+      "No .rscignore-excluded paths appear in manifest.json."
+    } else {
+      paste("manifest.json bundles .rscignore-excluded paths:",
+            paste(utils::head(leaked, 10), collapse = ", "),
+            if (length(leaked) > 10) paste("(+", length(leaked) - 10, "more)") else "")
+    },
+    if (length(leaked) == 0) "No action required." else regenerate
+  )
+
+  checks
+}
+
 release_git_output <- function(args, repo_root) {
   old_wd <- getwd()
   on.exit(setwd(old_wd), add = TRUE)
@@ -412,6 +550,8 @@ release_checklist <- function(repo_root = project_root(),
       )
     }
   ))
+
+  checks <- c(checks, release_manifest_checks(repo_root))
 
   out <- do.call(rbind, checks)
   rownames(out) <- NULL
