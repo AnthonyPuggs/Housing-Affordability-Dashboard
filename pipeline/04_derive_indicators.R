@@ -5,12 +5,12 @@
 # Output: data/affordability_indices.csv
 #
 # Indicators:
-#   1. Price-to-Income Ratio (RPPI / WPI, indexed)
+#   1. Price-to-Income Ratio (national mean dwelling price / WPI, indexed)
 #   2. Mortgage Serviceability Index (annuity P&I repayments at the spliced
 #      F6 new-loan rate / WPI, indexed) — v2
 #   3. Rental Affordability Index (CPI Rents / WPI, indexed)
 #   4. Deposit Gap in years
-#   5. Real House Price Growth (RPPI deflated by CPI, YoY %)
+#   5. Real House Price Growth (mean dwelling price deflated by CPI, YoY %)
 #   6. Real Wage Growth (WPI deflated by CPI, YoY %)
 #   7. Real Mortgage Rate (nominal rate − CPI inflation)
 #
@@ -62,7 +62,8 @@ indicator_output <- function(df, indicator_name) {
 }
 
 # --- Extract key series -------------------------------------------------------
-rppi <- get_series_exact(abs_ts, INDICATOR_SOURCE_RPPI, min_rows = 40,
+rppi <- get_series_exact(abs_ts, INDICATOR_SOURCE_MEAN_DWELLING_PRICE,
+                         min_rows = 40,
                          dataset = "abs_timeseries.csv")
 wpi <- get_series_exact(abs_ts, INDICATOR_SOURCE_WPI, min_rows = 80,
                         dataset = "abs_timeseries.csv")
@@ -159,8 +160,8 @@ cat("  Computing Deposit Gap...\n")
 SAVINGS_RATE <- 0.15  # assumed share of gross income saved (AWE proxy)
 
 if (nrow(rppi) > 0 && nrow(awe) > 0) {
-  # The "RPPI" source series is the ABS 6432.0 national mean price of
-  # residential dwellings in $'000s, so the dollar level is used directly.
+  # The source series is the ABS 6432.0 national mean price of residential
+  # dwellings in $'000s, so the dollar level is used directly.
   # (A previous version spliced a hard-coded $575,000 anchor mis-cited to
   # SIH File 10 onto this series' growth; File 10 covers property other than
   # the own home and cannot source an owner-occupied dwelling value.)
@@ -171,7 +172,7 @@ if (nrow(rppi) > 0 && nrow(awe) > 0) {
 }
 
 # ==============================================================================
-# 5. Real House Price Growth (RPPI / CPI, YoY %)
+# 5. Real House Price Growth (mean dwelling price / CPI, YoY %)
 # ==============================================================================
 cat("  Computing Real House Price Growth...\n")
 

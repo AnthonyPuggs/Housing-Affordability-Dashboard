@@ -6,7 +6,10 @@
 # proxy measures into official ABS or lender assessment measures.
 # ==============================================================================
 
-INDICATOR_SOURCE_RPPI <- "RPPI"
+# ABS 6432.0 national mean dwelling price ($'000). Historically mislabelled
+# "RPPI"; the actual Residential Property Price Index (6416.0) was
+# discontinued in 2021 and is not what this series measures (review PIPE-11).
+INDICATOR_SOURCE_MEAN_DWELLING_PRICE <- "Mean Dwelling Price ; Australia ;"
 INDICATOR_SOURCE_WPI <- "WPI"
 INDICATOR_SOURCE_CPI_ALL_GROUPS <- "CPI All Groups"
 INDICATOR_SOURCE_CPI_RENTS_NATIONAL <- "CPI Rents ; Weighted average of eight capital cities ;"
@@ -85,7 +88,7 @@ rba_new_loan_rate_spliced <- function(rba_rates) {
 
 indicator_source_series_constants <- function() {
   c(
-    rppi = INDICATOR_SOURCE_RPPI,
+    mean_dwelling_price = INDICATOR_SOURCE_MEAN_DWELLING_PRICE,
     wpi = INDICATOR_SOURCE_WPI,
     cpi_all_groups = INDICATOR_SOURCE_CPI_ALL_GROUPS,
     cpi_rents_national = INDICATOR_SOURCE_CPI_RENTS_NATIONAL,
@@ -182,11 +185,11 @@ indicator_registry <- function() {
       "higher_less_affordable"
     ),
     formula = c(
-      "Indexed RPPI divided by indexed WPI, multiplied by 100.",
+      "Indexed ABS 6432.0 national mean dwelling price divided by indexed WPI, multiplied by 100.",
       "Indexed 30-year annuity principal-and-interest repayments on an 80 per cent LVR loan against the ABS 6432.0 national mean dwelling price, at the RBA F6 new-loan owner-occupier rate (spliced onto level-adjusted F5 history before July 2019), divided by WPI as the income-growth proxy, then indexed to 100.",
       "Indexed eight-capital-city CPI rents (ABS weighted average of the eight capital cities; rest-of-state areas are not covered) divided by indexed WPI, multiplied by 100.",
       "Twenty per cent of the ABS 6432.0 national mean dwelling price divided by annual savings assumed at 15 per cent of gross income, with income proxied by AWE individual earnings.",
-      "Year-ended percentage change in RPPI deflated by CPI All Groups.",
+      "Year-ended percentage change in the ABS 6432.0 national mean dwelling price deflated by CPI All Groups.",
       "Year-ended percentage change in WPI deflated by CPI All Groups.",
       "RBA owner-occupier discounted variable mortgage rate minus CPI Inflation YoY.",
       "Weighted market-entry composite score on a 0-100 historical percentile scale: 40 per cent mortgage serviceability component, 35 per cent rental entry component and 25 per cent deposit barrier component. Higher = more affordable. Not an official ABS/NHHA statistic or lender assessment.",
@@ -213,14 +216,14 @@ indicator_registry <- function() {
       "rba_rates.csv"
     ),
     source_series = c(
-      join_sources(INDICATOR_SOURCE_RPPI, INDICATOR_SOURCE_WPI),
-      join_sources(INDICATOR_SOURCE_RPPI, INDICATOR_SOURCE_WPI,
+      join_sources(INDICATOR_SOURCE_MEAN_DWELLING_PRICE, INDICATOR_SOURCE_WPI),
+      join_sources(INDICATOR_SOURCE_MEAN_DWELLING_PRICE, INDICATOR_SOURCE_WPI,
                    INDICATOR_SOURCE_RBA_NEW_LOAN_RATE,
                    INDICATOR_SOURCE_RBA_MORTGAGE_RATE),
       join_sources(INDICATOR_SOURCE_CPI_RENTS_NATIONAL,
                    INDICATOR_SOURCE_WPI),
-      join_sources(INDICATOR_SOURCE_RPPI, INDICATOR_SOURCE_AWE),
-      join_sources(INDICATOR_SOURCE_RPPI,
+      join_sources(INDICATOR_SOURCE_MEAN_DWELLING_PRICE, INDICATOR_SOURCE_AWE),
+      join_sources(INDICATOR_SOURCE_MEAN_DWELLING_PRICE,
                    INDICATOR_SOURCE_CPI_ALL_GROUPS),
       join_sources(INDICATOR_SOURCE_WPI,
                    INDICATOR_SOURCE_CPI_ALL_GROUPS),
@@ -323,7 +326,7 @@ indicator_registry <- function() {
 
 indicator_registry_required_abs_sources <- function() {
   unname(c(
-    INDICATOR_SOURCE_RPPI,
+    INDICATOR_SOURCE_MEAN_DWELLING_PRICE,
     INDICATOR_SOURCE_WPI,
     INDICATOR_SOURCE_CPI_ALL_GROUPS,
     INDICATOR_SOURCE_CPI_INFLATION_YOY,

@@ -382,7 +382,8 @@ assert_selection_nonempty <- function(df, what) {
 
 # Deterministic combine: collapse exact repeats on (date, series, series_id) -
 # the same source series may be deliberately republished under different names
-# (e.g. the 6432.0 mean price ships as both "RPPI" and a city index) - then
+# (e.g. the 6432.0 mean price ships as both the national mean price and a
+# state index) - then
 # fail loudly if distinct source series still share a (date, series) cell.
 # Previously distinct(date, series) silently kept whichever variant bind_rows
 # ordered first.
@@ -406,6 +407,58 @@ combine_series_unique <- function(series_list, dataset) {
   }
   combined %>% arrange(category, series, date)
 }
+
+# --- ABS SDMX API (pinned dataflows) -------------------------------------------
+# Direct SDMX endpoints are pinned to explicit dataflow versions (review
+# PIPE-09): an ABS dataflow upgrade changes our results only when the version
+# is deliberately bumped here, never silently. abs_sdmx_csv() additionally
+# asserts the response echoes the pinned dataflow and carries the expected
+# dimension columns, so an ABS recode fails loudly at fetch time instead of
+# shipping silently different numbers.
+ABS_SDMX_DATA_URL <- "https://data.api.abs.gov.au/rest/data"
+ABS_SDMX_CPI_FLOW <- "ABS,CPI,2.0.0"
+ABS_SDMX_LF_FLOW <- "ABS,LF,1.0.0"
+ABS_SDMX_LF_UNDER_FLOW <- "ABS,LF_UNDER,1.0.1"
+# Keys are MEASURE.INDEX.TSEST.REGION.FREQ for the CPI dataflow.
+ABS_SDMX_CPI_RENTS_KEY <- "1.115522.10.50.Q"
+ABS_SDMX_CPI_ALL_GROUPS_KEY <- "1.10001.10.50.Q"
+
+abs_sdmx_csv <- function(flow, key, what,
+                         required_columns = c("TIME_PERIOD", "OBS_VALUE")) {
+  url <- paste0(ABS_SDMX_DATA_URL, "/", flow, "/", key)
+  resp <- httr::GET(url, httr::add_headers(Accept = "text/csv"))
+  if (httr::status_code(resp) != 200) {
+    stop("ABS SDMX API returned ", httr::status_code(resp), " for ", what,
+         " (", url, ")", call. = FALSE)
+  }
+  d <- readr::read_csv(I(httr::content(resp, as = "text", encoding = "UTF-8")),
+                       show_col_types = FALSE)
+  if (nrow(d) == 0) {
+    stop("ABS SDMX response for ", what, " contains no observations.",
+         call. = FALSE)
+  }
+  missing_columns <- setdiff(required_columns, names(d))
+  if (length(missing_columns) > 0) {
+    stop("ABS SDMX response for ", what, " is missing expected columns: ",
+         paste(missing_columns, collapse = ", "),
+         " - the dataflow structure may have changed.", call. = FALSE)
+  }
+  # The CSV echoes the dataflow as e.g. "ABS:CPI(2.0.0)".
+  expected_dataflow <- sub("^([^,]+),([^,]+),(.+)$", "\\1:\\2(\\3)", flow)
+  if ("DATAFLOW" %in% names(d) &&
+      !all(d$DATAFLOW == expected_dataflow, na.rm = TRUE)) {
+    stop("ABS SDMX response for ", what, " reports dataflow '",
+         d$DATAFLOW[[1]], "' instead of pinned '", expected_dataflow, "'.",
+         call. = FALSE)
+  }
+  d
+}
+
+# Fixed base quarter for the 6432.0 mean dwelling price state indexes (review
+# PIPE-11): indexing to first(value) re-bases silently whenever ABS revises or
+# back-extends history. 2011-09 is the first published quarter of the 6432.0
+# mean price series, so pinning it keeps existing index values unchanged.
+DWELLING_PRICE_INDEX_BASE_QUARTER <- as.Date("2011-09-01")
 
 # --- CSV output helper --------------------------------------------------------
 

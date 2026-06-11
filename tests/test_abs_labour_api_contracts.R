@@ -20,7 +20,9 @@ test_that("abs_labour_api_contracts contracts", {
 
   required_text <- c(
     "fetch_abs_lf_series <- function",
-    "https://data.api.abs.gov.au/rest/data/",
+    "abs_sdmx_csv(",
+    "ABS_SDMX_LF_FLOW",
+    "ABS_SDMX_LF_UNDER_FLOW",
     "\"LF\",\n  \"M12.3.1599.20.AUS.M\"",
     "\"LF\",\n  \"M13.3.1599.20.AUS.M\"",
     "\"LF_UNDER\",\n  \"M23.3.1599.20.AUS.M\"",

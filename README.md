@@ -212,7 +212,7 @@ Chromium-based browser is available).
 
 The Housing Supply page keeps Building Approvals readable by filtering the ABS approval series with state, building-type and sector controls; the default view compares total-sector total approvals for New South Wales and Victoria.
 
-The Geographic Affordability page is an SIH-only, geography-aligned view. It compares state, lower-income state and greater-capital-city/rest-of-state SIH estimates where the housing-cost numerator and income or household denominator are measured within the same geography; it does not construct state or capital-city market-entry indexes from national wage, RPPI, AWE, WPI or CPI-rent proxies.
+The Geographic Affordability page is an SIH-only, geography-aligned view. It compares state, lower-income state and greater-capital-city/rest-of-state SIH estimates where the housing-cost numerator and income or household denominator are measured within the same geography; it does not construct state or capital-city market-entry indexes from national wage, mean dwelling price, AWE, WPI or CPI-rent proxies.
 
 Survey charts that have matching SIH estimate-quality metadata display compact reliability markers (`†`) and include relative standard error or margin-of-error details in Plotly hover text. Where available, visible error bars and interval hover text use 95% margin-of-error metadata from `data/sih_estimate_quality.csv`.
 

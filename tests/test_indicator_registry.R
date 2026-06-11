@@ -69,7 +69,7 @@ test_that("indicator_registry contracts", {
     }
 
     required_abs_sources <- c(
-      "RPPI",
+      "Mean Dwelling Price ; Australia ;",
       "WPI",
       "CPI All Groups",
       "CPI Inflation YoY",

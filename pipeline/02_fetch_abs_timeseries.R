@@ -47,11 +47,17 @@ if (nrow(rppi_raw) > 0) {
                 str_remove_all(";") %>% str_trim())
     ) %>%
     filter(state %in% allowed_price_geographies) %>%
-    # Convert mean price to base=100 index (per geography)
+    # Convert mean price to base=100 index (per geography) against the FIXED
+    # base quarter (PIPE-11): first(value) would silently re-base the index
+    # if ABS ever revises or back-extends the series history.
     group_by(state) %>%
     arrange(date) %>%
-    mutate(value = value / first(value) * 100) %>%
+    mutate(
+      base_value = value[date == DWELLING_PRICE_INDEX_BASE_QUARTER][1],
+      value = value / base_value * 100
+    ) %>%
     ungroup() %>%
+    select(-base_value) %>%
     # Honest label: the geography is the state/territory, not its capital
     mutate(series = paste0("Dwelling Price Index ;  ", state, " ;")) %>%
     # Drop raw unit column so normalize_abs uses our "Index" specification
@@ -59,12 +65,20 @@ if (nrow(rppi_raw) > 0) {
     normalize_abs(category = "House Prices", units = "Index",
                   freq_hint = "Quarter")
   assert_selection_nonempty(rppi, "state mean dwelling price indexes (6432.0 Table 1)")
+  if (anyNA(rppi$value)) {
+    stop("Dwelling price index has NA values: the fixed base quarter ",
+         format(DWELLING_PRICE_INDEX_BASE_QUARTER), " is missing for at least ",
+         "one geography in 6432.0 Table 1.", call. = FALSE)
+  }
 
   all_series$rppi <- rppi
   cat("    ", nrow(rppi), "state mean dwelling price index observations\n")
 }
 
-# Also store a single national "RPPI" series (non-indexed) for the derive script.
+# Also store the single national mean-price series (non-indexed, $'000) for
+# the derive script. Historically mislabelled "RPPI" - the actual RPPI
+# (6416.0) was discontinued in 2021 and this is the 6432.0 mean dwelling
+# price, so it is now labelled as what it measures (review PIPE-11).
 # Select by series ID: A83728647F is "Mean price of residential dwellings ;
 # Australia ;". The previous regex (".*Australia ;") also matched the South
 # Australia and Western Australia series, and the silent first-match dedup
@@ -74,14 +88,16 @@ if (nrow(rppi_raw) > 0) {
 if (nrow(rppi_raw) > 0) {
   rppi_national <- rppi_raw %>%
     filter(series_id == "A83728647F") %>%
-    normalize_abs(label = "RPPI", category = "House Prices",
+    normalize_abs(label = "Mean Dwelling Price ; Australia ;",
+                  category = "House Prices",
                   units = "AUD", freq_hint = "Quarter")
   assert_selection_nonempty(
     rppi_national,
     "national mean dwelling price (6432.0 Table 1 series A83728647F, Australia)"
   )
   all_series$rppi_national <- rppi_national
-  cat("    ", nrow(rppi_national), "RPPI national (mean price AUD) observations\n")
+  cat("    ", nrow(rppi_national),
+      "national mean dwelling price ($'000) observations\n")
 }
 
 # ==============================================================================
@@ -134,12 +150,19 @@ api_region_to_city <- c(
 # --- Source 1: Quarterly national via ABS SDMX API ---
 cat("  Fetching quarterly CPI Rents via ABS data API...\n")
 cpi_rents_qtr <- safe_read({
-  resp <- httr::GET(
-    "https://data.api.abs.gov.au/rest/data/CPI/1.115522.10.50.Q",
-    httr::add_headers(Accept = "text/csv"))
-  if (httr::status_code(resp) != 200) stop("ABS API returned ", httr::status_code(resp))
-  d <- readr::read_csv(I(httr::content(resp, as = "text", encoding = "UTF-8")),
-                        show_col_types = FALSE)
+  d <- abs_sdmx_csv(
+    ABS_SDMX_CPI_FLOW, ABS_SDMX_CPI_RENTS_KEY, "CPI Rents quarterly (API)",
+    required_columns = c("TIME_PERIOD", "OBS_VALUE", "REGION", "INDEX")
+  )
+  if (!all(as.character(d$INDEX) == "115522")) {
+    stop("CPI Rents API returned INDEX codes other than 115522 (Rents).")
+  }
+  unmapped_regions <- setdiff(unique(as.character(d$REGION)),
+                              names(api_region_to_city))
+  if (length(unmapped_regions) > 0) {
+    stop("CPI Rents API returned unmapped REGION codes: ",
+         paste(unmapped_regions, collapse = ", "))
+  }
   # Convert TIME_PERIOD "2024-Q3" → Date (first day of quarter)
   d %>%
     transmute(
@@ -269,17 +292,14 @@ if (nrow(cpi_groups) > 0) {
 # CPI All Groups via ABS SDMX API
 cat("  Fetching CPI All Groups via ABS data API...\n")
 cpi_all <- safe_read({
-  resp <- httr::GET(
-    "https://data.api.abs.gov.au/rest/data/CPI/1.10001.10.50.Q",
-    httr::add_headers(Accept = "text/csv")
+  d <- abs_sdmx_csv(
+    ABS_SDMX_CPI_FLOW, ABS_SDMX_CPI_ALL_GROUPS_KEY,
+    "CPI All Groups quarterly (API)",
+    required_columns = c("TIME_PERIOD", "OBS_VALUE", "INDEX")
   )
-  if (httr::status_code(resp) != 200) {
-    stop("ABS API returned ", httr::status_code(resp))
+  if (!all(as.character(d$INDEX) == "10001")) {
+    stop("CPI All Groups API returned INDEX codes other than 10001 (All groups CPI).")
   }
-  d <- readr::read_csv(
-    I(httr::content(resp, as = "text", encoding = "UTF-8")),
-    show_col_types = FALSE
-  )
   d %>%
     transmute(
       date = as.Date(paste0(
@@ -403,20 +423,18 @@ if (nrow(na_table2) > 0) {
 # 6. Labour Force — ABS 6202.0
 # ==============================================================================
 fetch_abs_lf_series <- function(dataflow, measure_key, label) {
-  endpoint <- paste0(
-    "https://data.api.abs.gov.au/rest/data/",
+  # series_id keeps the bare dataflow name ("ABS:LF/<key>"); the pinned
+  # dataflow version used for the request lives in pipeline/00_config.R.
+  flow <- switch(
     dataflow,
-    "/",
-    measure_key
+    "LF" = ABS_SDMX_LF_FLOW,
+    "LF_UNDER" = ABS_SDMX_LF_UNDER_FLOW,
+    stop("No pinned SDMX dataflow version for '", dataflow, "'.", call. = FALSE)
   )
   safe_read({
-    resp <- httr::GET(endpoint, httr::add_headers(Accept = "text/csv"))
-    if (httr::status_code(resp) != 200) {
-      stop("ABS API returned ", httr::status_code(resp))
-    }
-    readr::read_csv(
-      I(httr::content(resp, as = "text", encoding = "UTF-8")),
-      show_col_types = FALSE
+    abs_sdmx_csv(
+      flow, measure_key, label,
+      required_columns = c("TIME_PERIOD", "OBS_VALUE", "REGION")
     ) %>%
       transmute(
         date = as.Date(paste0(TIME_PERIOD, "-01")),
@@ -466,7 +484,7 @@ cat("    Unemployment:", nrow(unemployment), "obs |",
     "Underutilisation:", nrow(underutilisation), "obs\n")
 
 # ==============================================================================
-# 7. RPPI by dwelling type — ABS 6432.0 Table 2 median transfer prices
+# 7. Median transfer prices by dwelling type — ABS 6432.0 Table 2
 # ==============================================================================
 # 6432.0 Table 2 has "Median Price of Established House Transfers" and
 # "Median Price of Attached Dwelling Transfers" by capital city.
@@ -486,11 +504,11 @@ if (nrow(rppi_type_raw) > 0) {
     mutate(series = str_replace(series,
       regex("Median Price of Established House Transfers \\(Unstratified\\)",
             ignore_case = TRUE),
-      "RPPI Established Houses")) %>%
+      "Median Price Established Houses")) %>%
     normalize_abs(category = "House Prices", units = "AUD",
                   freq_hint = "Quarter")
   all_series$rppi_houses <- rppi_houses
-  cat("    RPPI Houses (median price):", nrow(rppi_houses), "obs\n")
+  cat("    Established house median prices:", nrow(rppi_houses), "obs\n")
 
   # Attached Dwellings — median transfer price by capital city
   rppi_units <- rppi_type_raw %>%
@@ -499,11 +517,11 @@ if (nrow(rppi_type_raw) > 0) {
     mutate(series = str_replace(series,
       regex("Median Price of Attached Dwelling Transfers \\(Unstratified\\)",
             ignore_case = TRUE),
-      "RPPI Attached Dwellings")) %>%
+      "Median Price Attached Dwellings")) %>%
     normalize_abs(category = "House Prices", units = "AUD",
                   freq_hint = "Quarter")
   all_series$rppi_units <- rppi_units
-  cat("    RPPI Attached Dwellings (median price):", nrow(rppi_units), "obs\n")
+  cat("    Attached dwelling median prices:", nrow(rppi_units), "obs\n")
 }
 
 # ==============================================================================

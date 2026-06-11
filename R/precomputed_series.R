@@ -58,14 +58,14 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
     )
 
   rppi_houses <- abs_ts %>%
-    filter(str_detect(series, "RPPI Established Houses")) %>%
+    filter(str_detect(series, "Median Price Established Houses")) %>%
     mutate(
       city = extract_city(series),
       dwelling_type = "Houses"
     )
 
   rppi_units <- abs_ts %>%
-    filter(str_detect(series, "RPPI Attached Dwellings")) %>%
+    filter(str_detect(series, "Median Price Attached Dwellings")) %>%
     mutate(
       city = extract_city(series),
       dwelling_type = "Units"
@@ -77,7 +77,7 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
     select(date, value, city)
 
   national_mean_price <- abs_ts %>%
-    filter(series == "RPPI") %>%
+    filter(series == "Mean Dwelling Price ; Australia ;") %>%
     select(date, value) %>%
     mutate(city = "National Avg")
 
@@ -92,7 +92,7 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
     rename(date = qtr)
 
   rppi_national_ts <- abs_ts %>%
-    filter(series == "RPPI") %>%
+    filter(series == "Mean Dwelling Price ; Australia ;") %>%
     select(date, price_k = value) %>%
     mutate(qtr = lubridate::floor_date(date, "quarter")) %>%
     group_by(qtr) %>%
