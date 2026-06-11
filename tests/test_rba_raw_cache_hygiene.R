@@ -53,13 +53,16 @@ test_that("rba_raw_cache_hygiene contracts", {
   # Raw caches are download artefacts and must NOT be tracked: committed caches
   # froze CI refreshes because actions/checkout resets file mtimes, so the 24h
   # cache-validity check always passed and the download branch never ran.
-  tracked_cache_files <- system2(
+  # No glob pathspec: system2() goes through sh on unix, which would expand
+  # the pattern in the runner's working directory before git sees it.
+  tracked_files <- system2(
     "git",
-    c("ls-files", "data/rba_*_raw.csv", "data/rba_*_raw.xlsx"),
+    c("-C", repo_root, "ls-files"),
     stdout = TRUE,
     stderr = TRUE
   )
-  tracked_cache_files <- tracked_cache_files[nzchar(tracked_cache_files)]
+  tracked_cache_files <- grep("^data/rba_.*_raw\\.(csv|xlsx)$",
+                              tracked_files, value = TRUE)
   check(length(tracked_cache_files) == 0,
         paste("RBA raw caches must not be git-tracked:",
               paste(tracked_cache_files, collapse = ", ")))

@@ -83,9 +83,12 @@ test_that("public_release_hygiene contracts", {
   check(length(ignored_tracked) == 0,
         paste("Tracked files are ignored:", paste(ignored_tracked, collapse = ", ")))
 
-  tracked_r_files <- system2("git", c("-C", repo_root, "ls-files", "*.R"),
-                             stdout = TRUE)
-  tracked_r_files <- tracked_r_files[nzchar(tracked_r_files)]
+  # No glob pathspec here: system2() goes through sh on unix, which expands
+  # an unquoted *.R in the runner's working directory (tests/ under test_dir)
+  # before git ever sees it. List everything and filter in R instead.
+  tracked_files <- system2("git", c("-C", repo_root, "ls-files"),
+                           stdout = TRUE)
+  tracked_r_files <- grep("\\.R$", tracked_files, value = TRUE)
   check("_check_cpi.R" %in% tracked_r_files,
         "_check_cpi.R must remain tracked and parse-valid")
 
