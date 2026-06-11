@@ -1,7 +1,16 @@
-# National Housing Affordability Score v1 helpers.
+# National Housing Affordability Score v2 helpers.
 
-NATIONAL_AFFORDABILITY_SCORE_VERSION <- "national_affordability_score_v1"
+NATIONAL_AFFORDABILITY_SCORE_VERSION <- "national_affordability_score_v2"
 NATIONAL_AFFORDABILITY_SCORE_START_DATE <- as.Date("2012-07-01")
+
+# v2: percentile normalisation is frozen to a fixed reference window
+# (START_DATE..REFERENCE_END). Observations after REFERENCE_END are scored
+# against that frozen distribution, so published history no longer mutates as
+# new quarters arrive and no quarter's score depends on later data. Extending
+# the reference window requires a methodology version bump (the methodology
+# doc's fixed-window rule). Residual revision channel: upstream ABS/RBA input
+# revisions can still move reference values; this is disclosed in-app.
+NATIONAL_AFFORDABILITY_SCORE_REFERENCE_END <- as.Date("2025-12-31")
 
 national_affordability_score_weights <- function() {
   data.frame(
@@ -75,31 +84,55 @@ national_affordability_score_metadata_note <- function() {
   paste(
     "Modelled national market-entry score. Higher means more affordable.",
     "Combines mortgage serviceability, rental entry pressure and deposit",
-    "barriers using fixed v1 weights of 40, 35 and 25 per cent.",
+    "barriers using fixed weights of 40, 35 and 25 per cent (unchanged in",
+    "v2). Scored against a frozen 2012-2025 reference window.",
     "Not an official ABS/NHHA statistic or lender assessment."
   )
 }
 
-score_winsorise <- function(values, probs = c(0.05, 0.95)) {
+score_winsorise <- function(values, probs = c(0.05, 0.95),
+                            reference_values = values) {
   if (length(values) == 0) {
     return(values)
   }
-  bounds <- stats::quantile(values, probs = probs, na.rm = TRUE,
+  if (length(reference_values) == 0) {
+    reference_values <- values
+  }
+  bounds <- stats::quantile(reference_values, probs = probs, na.rm = TRUE,
                             names = FALSE, type = 7)
   pmin(pmax(values, bounds[[1]]), bounds[[2]])
 }
 
-score_percentile_affordability <- function(burden_values) {
+# Percentile affordability score against a (possibly frozen) reference
+# distribution. Winsorisation bounds and percentile ranks come from
+# reference_values only; observations are ranked against the reference with
+# average tie handling and clamped to [0, 100] beyond its range. When
+# reference_values == burden_values this reproduces the v1 full-sample
+# (rank - 1) / (n - 1) behaviour exactly.
+score_percentile_affordability <- function(burden_values,
+                                           reference_values = burden_values) {
   if (length(burden_values) == 0) {
     return(numeric())
   }
-  if (length(burden_values) == 1) {
-    return(50)
+  reference_values <- reference_values[!is.na(reference_values)]
+  if (length(reference_values) == 0) {
+    reference_values <- burden_values[!is.na(burden_values)]
+  }
+  if (length(reference_values) <= 1) {
+    return(rep(50, length(burden_values)))
   }
 
-  burden_values <- score_winsorise(burden_values)
-  percentile_rank <- (rank(burden_values, ties.method = "average") - 1) /
-    (length(burden_values) - 1)
+  reference <- score_winsorise(reference_values,
+                               reference_values = reference_values)
+  values <- score_winsorise(burden_values,
+                            reference_values = reference_values)
+
+  n_reference <- length(reference)
+  rank_in_reference <- vapply(values, function(v) {
+    sum(reference < v) + (sum(reference == v) + 1) / 2
+  }, numeric(1))
+  percentile_rank <- (rank_in_reference - 1) / (n_reference - 1)
+  percentile_rank <- pmin(pmax(percentile_rank, 0), 1)
   score <- 100 * (1 - percentile_rank)
   pmin(pmax(score, 0), 100)
 }
@@ -189,9 +222,19 @@ calculate_national_affordability_score <- function(
     ))
   }
 
+  reference_mask <- wide$date <= NATIONAL_AFFORDABILITY_SCORE_REFERENCE_END
   for (component in weights$component) {
     score_col <- paste0(component, "_score")
-    wide[[score_col]] <- score_percentile_affordability(wide[[component]])
+    reference_values <- wide[[component]][reference_mask]
+    if (length(reference_values) == 0) {
+      # No observations inside the frozen window (e.g. synthetic future-dated
+      # samples): fall back to the v1 full-sample behaviour.
+      reference_values <- wide[[component]]
+    }
+    wide[[score_col]] <- score_percentile_affordability(
+      wide[[component]],
+      reference_values = reference_values
+    )
   }
 
   weighted_values <- numeric(nrow(wide))

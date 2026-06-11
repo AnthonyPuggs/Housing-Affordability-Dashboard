@@ -6,7 +6,8 @@
 #
 # Indicators:
 #   1. Price-to-Income Ratio (RPPI / WPI, indexed)
-#   2. Mortgage Serviceability Index (RPPI × mortgage_rate / WPI, indexed)
+#   2. Mortgage Serviceability Index (annuity P&I repayments at the spliced
+#      F6 new-loan rate / WPI, indexed) — v2
 #   3. Rental Affordability Index (CPI Rents / WPI, indexed)
 #   4. Deposit Gap in years
 #   5. Real House Price Growth (RPPI deflated by CPI, YoY %)
@@ -145,6 +146,16 @@ if (nrow(rba_ts) > 0) {
   )
 }
 
+# Effective new-loan rate: F6 actual new-loan owner-occupier rates spliced
+# onto level-adjusted F5 history (see rba_new_loan_rate_spliced). Loud on
+# missing source series or insufficient splice overlap.
+new_loan_rate <- tibble()
+if (nrow(rba_ts) > 0) {
+  new_loan_rate <- rba_new_loan_rate_spliced(rba_ts)
+  cat("    Spliced new-loan rate:", nrow(new_loan_rate), "obs, wedge",
+      round(attr(new_loan_rate, "splice_wedge"), 3), "pp\n")
+}
+
 cash_rate <- tibble()
 if (nrow(rba_ts) > 0) {
   cash_rate <- rba_ts %>%
@@ -177,28 +188,35 @@ if (nrow(rppi) > 0 && nrow(wpi) > 0) {
 # ==============================================================================
 cat("  Computing Mortgage Serviceability Index...\n")
 
-if (nrow(rppi) > 0 && nrow(wpi) > 0 && nrow(mortgage_rate) > 0) {
-  # Align RPPI and WPI quarterly
-  rppi_wpi <- align_quarterly(rppi, wpi, "rppi", "wpi")
+if (nrow(rppi) > 0 && nrow(wpi) > 0 && nrow(new_loan_rate) > 0) {
+  # v2 (affordability_indices_v2): indexed annuity principal-and-interest
+  # repayment burden. A 30-year monthly annuity payment on an 80% LVR loan
+  # against the national mean dwelling price, at the spliced F6 new-loan
+  # owner-occupier rate, deflated by WPI as the income-growth proxy.
+  # (v1 was interest-only price×rate/WPI, which overstated rate swings and
+  # contradicted the methodology doc's own P&I definition - review ECON-02.)
+  price_wpi <- align_quarterly(rppi, wpi, "price_k", "wpi")
 
-  # Align mortgage rate to quarterly
-  mr_qtr <- mortgage_rate %>%
+  rate_qtr <- new_loan_rate %>%
     mutate(qtr = floor_date(date, "quarter")) %>%
     group_by(qtr) %>%
-    summarise(mortgage_rate = mean(value, na.rm = TRUE), .groups = "drop") %>%
+    summarise(rate = mean(value, na.rm = TRUE), .groups = "drop") %>%
     rename(date = qtr)
 
-  msi <- rppi_wpi %>%
-    inner_join(mr_qtr, by = "date") %>%
+  msi <- price_wpi %>%
+    inner_join(rate_qtr, by = "date") %>%
     mutate(
-      rppi_idx = index_to_base(rppi),
-      wpi_idx  = index_to_base(wpi),
-      # Multiplicative: (price × rate) / wages
-      value = (rppi_idx * mortgage_rate / 100) / wpi_idx * 100
+      loan = 0.80 * price_k * 1000,
+      monthly_rate = rate / 100 / 12,
+      n_payments = 30 * 12,
+      monthly_pmt = ifelse(
+        monthly_rate == 0,
+        loan / n_payments,
+        loan * monthly_rate / (1 - (1 + monthly_rate)^(-n_payments))
+      ),
+      burden = monthly_pmt / wpi,
+      value = index_to_base(burden)
     )
-
-  # Re-index MSI to base=100 at start
-  msi$value <- index_to_base(msi$value)
 
   all_indicators$mortgage_serviceability <- indicator_output(msi, "Mortgage Serviceability Index")
   cat("    ", nrow(msi), "observations\n")

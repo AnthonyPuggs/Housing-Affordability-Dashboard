@@ -74,11 +74,15 @@ if (file.exists(registry_path)) {
     "AWE (AWOTE, Persons)",
     "CPI Rents ; Weighted average of eight capital cities ;"
   )
-  required_rba_sources <- "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier"
+  required_rba_sources <- c(
+    "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier",
+    "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions"
+  )
   check(identical(sort(indicator_registry_required_abs_sources()), sort(required_abs_sources)),
         "ABS source constants do not match required source labels")
-  check(identical(indicator_registry_required_rba_sources(), required_rba_sources),
-        "RBA source constants do not match required source label")
+  check(identical(sort(indicator_registry_required_rba_sources()),
+                  sort(required_rba_sources)),
+        "RBA source constants do not match required source labels")
 
   required_labels <- c(
     "Price-to-Income Cost Pressure",
@@ -154,8 +158,8 @@ if (file.exists(registry_path)) {
     check(all(score_registry$measure_class == "stylised_scenario"),
           "Score registry rows must use stylised_scenario measure_class")
     check(all(score_registry$methodology_version ==
-                "national_affordability_score_v1"),
-          "Score registry rows must use the v1 score methodology version")
+                "national_affordability_score_v2"),
+          "Score registry rows must use the v2 score methodology version")
     score_formula_text <- paste(score_registry$formula, collapse = "\n")
     required_score_formula_text <- c(
       "40 per cent",

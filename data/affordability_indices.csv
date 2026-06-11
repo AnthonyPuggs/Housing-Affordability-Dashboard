@@ -57,119 +57,119 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,11.01144359571326,Deposit Gap (Years),National,Years,Quarter
 2025-04-01,11.065186886082408,Deposit Gap (Years),National,Years,Quarter
 2025-10-01,11.73479146274232,Deposit Gap (Years),National,Years,Quarter
-2012-10-01,26.923076923076927,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2013-04-01,30.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2013-10-01,46.15384615384615,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2014-04-01,42.307692307692314,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2012-10-01,34.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2013-04-01,42.307692307692314,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2013-10-01,50,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2014-04-01,46.15384615384615,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2014-10-01,38.46153846153846,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2015-04-01,61.53846153846154,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2015-10-01,50,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2016-04-01,57.692307692307686,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2016-10-01,80.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2017-04-01,76.92307692307692,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2017-10-01,69.23076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2018-04-01,73.07692307692308,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2015-04-01,76.92307692307692,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2015-10-01,57.692307692307686,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2016-04-01,73.07692307692308,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2016-10-01,84.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2017-04-01,80.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2017-10-01,61.53846153846154,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2018-04-01,69.23076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2018-10-01,53.84615384615385,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2019-04-01,65.38461538461539,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2019-10-01,88.46153846153845,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2019-10-01,92.3076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2020-04-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2020-10-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2021-04-01,92.3076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2021-10-01,84.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2022-04-01,34.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2021-04-01,88.46153846153845,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2021-10-01,30.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2022-04-01,26.923076923076927,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2022-10-01,23.076923076923073,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2023-04-01,19.23076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2023-10-01,7.692307692307687,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2024-04-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2023-10-01,15.384615384615385,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2024-04-01,11.538461538461542,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2024-10-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2025-04-01,15.384615384615385,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2025-10-01,11.538461538461542,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2025-04-01,7.692307692307687,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2025-10-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2011-07-01,100,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2011-10-01,96.72551679358334,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-01-01,92.60034619097526,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-04-01,88.42690662145526,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-07-01,82.7440528135369,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-10-01,78.14606664331552,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2013-01-01,76.55462619847351,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2013-04-01,73.31426492723796,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2013-07-01,69.76735473555684,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2013-10-01,70.56815263929882,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2014-01-01,71.09819035280172,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2014-04-01,70.83259796548901,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2014-07-01,70.02272206235227,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2014-10-01,71.49211575755362,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2015-01-01,69.14015399340325,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2015-04-01,65.68331455867637,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2015-07-01,65.4972201243605,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2015-10-01,67.35882447927705,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2016-01-01,68.49986591882484,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2016-04-01,65.75169599237292,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2016-07-01,63.231239665765834,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2016-10-01,64.25192323193838,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2017-01-01,64.969212307978,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2017-04-01,64.47442610814427,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2017-07-01,64.01229411917602,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2017-10-01,65.00526400752503,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2018-01-01,65.54073860511981,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2018-04-01,64.80851701700772,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2018-07-01,65.02350267925843,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2018-10-01,67.33695041252047,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2019-01-01,67.26155346621206,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2019-04-01,65.47908465663286,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2019-07-01,59.63635410983117,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2019-10-01,60.24848952591445,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2020-01-01,58.20215619453134,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2020-04-01,54.77113119780122,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2020-07-01,53.86025273008293,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2020-10-01,55.87933751184922,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2021-01-01,57.40227811886878,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2021-04-01,58.90394332485881,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2021-07-01,60.031715951559626,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2021-10-01,63.51720935534526,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2022-01-01,65.85906243723402,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2022-04-01,72.42238012434584,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2022-07-01,97.6222596242771,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2022-10-01,111.78008588575588,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2023-01-01,117.27451542618599,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2023-04-01,133.2404601671349,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2023-07-01,138.5839408001281,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2023-10-01,146.99228737673494,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2024-01-01,153.6126821278493,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2024-04-01,152.21041541344883,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2024-07-01,155.31665275717663,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2024-10-01,159.76061091138197,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-01-01,154.9301403323894,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-04-01,146.28176769091868,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-07-01,142.81403169553454,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-10-01,146.384446044328,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2026-01-01,157.12844146209326,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-10-01,42.01923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
-2013-04-01,37.5,National Housing Affordability Score,National,Score (0-100),Quarter
-2013-10-01,43.26923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
-2014-04-01,38.75,National Housing Affordability Score,National,Score (0-100),Quarter
+2011-10-01,97.61124064844654,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-01-01,93.88176827190897,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-04-01,90.67923763529122,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-07-01,86.07822605559276,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-10-01,82.61978212405371,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2013-01-01,81.65577374739826,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2013-04-01,79.22952180103013,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2013-07-01,76.83022988549516,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2013-10-01,78.23900860588454,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2014-01-01,78.8669220796498,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2014-04-01,78.57230903800698,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2014-07-01,77.67393990329447,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2014-10-01,79.30389078514847,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2015-01-01,77.75942936187921,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2015-04-01,75.19810752728193,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2015-07-01,75.23465137536166,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2015-10-01,76.61721984778961,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2016-01-01,77.53567419125682,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2016-04-01,75.48104952485694,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2016-07-01,73.61901352667483,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2016-10-01,74.88021740446992,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2017-01-01,75.66701222221103,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2017-04-01,75.09075475963441,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2017-07-01,74.89509255494596,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2017-10-01,75.95660548613101,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2018-01-01,76.38222342209022,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2018-04-01,75.52888069010446,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2018-07-01,75.51102948160761,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2018-10-01,77.44241546547872,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2019-01-01,77.14417758559678,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2019-04-01,75.60888164206655,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2019-07-01,73.30337029233219,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2019-10-01,73.96379182223858,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2020-01-01,71.63781712341041,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2020-04-01,68.70617678083892,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2020-07-01,69.9172690769049,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2020-10-01,71.91062187764837,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2021-01-01,72.59050185762645,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2021-04-01,74.74166425926822,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2021-07-01,78.13139095867498,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2021-10-01,84.23623551636675,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2022-01-01,88.11299911020066,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2022-04-01,91.48865318815683,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2022-07-01,104.70209577722542,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2022-10-01,116.515320376833,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2023-01-01,121.20451793260291,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2023-04-01,132.7594659465058,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2023-07-01,136.99149488359222,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2023-10-01,144.50419024069745,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2024-01-01,151.94792944973543,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2024-04-01,154.57863532186792,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2024-07-01,158.4751269160634,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2024-10-01,161.67688324014202,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-01-01,158.4174773820284,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-04-01,157.6387423206118,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-07-01,156.15629309330222,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-10-01,160.48707738461923,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2026-01-01,169.1046347846558,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-10-01,45.09615384615384,National Housing Affordability Score,National,Score (0-100),Quarter
+2013-04-01,42.11538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
+2013-10-01,44.80769230769231,National Housing Affordability Score,National,Score (0-100),Quarter
+2014-04-01,40.28846153846154,National Housing Affordability Score,National,Score (0-100),Quarter
 2014-10-01,37.69230769230769,National Housing Affordability Score,National,Score (0-100),Quarter
-2015-04-01,49.230769230769226,National Housing Affordability Score,National,Score (0-100),Quarter
-2015-10-01,44.42307692307692,National Housing Affordability Score,National,Score (0-100),Quarter
-2016-04-01,49.80769230769231,National Housing Affordability Score,National,Score (0-100),Quarter
-2016-10-01,58.46153846153847,National Housing Affordability Score,National,Score (0-100),Quarter
-2017-04-01,56.34615384615385,National Housing Affordability Score,National,Score (0-100),Quarter
-2017-10-01,51.73076923076923,National Housing Affordability Score,National,Score (0-100),Quarter
-2018-04-01,58.46153846153846,National Housing Affordability Score,National,Score (0-100),Quarter
+2015-04-01,55.38461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
+2015-10-01,47.5,National Housing Affordability Score,National,Score (0-100),Quarter
+2016-04-01,55.96153846153847,National Housing Affordability Score,National,Score (0-100),Quarter
+2016-10-01,60,National Housing Affordability Score,National,Score (0-100),Quarter
+2017-04-01,57.88461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
+2017-10-01,48.65384615384616,National Housing Affordability Score,National,Score (0-100),Quarter
+2018-04-01,56.92307692307692,National Housing Affordability Score,National,Score (0-100),Quarter
 2018-10-01,51.92307692307693,National Housing Affordability Score,National,Score (0-100),Quarter
 2019-04-01,67.88461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
-2019-10-01,72.11538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
+2019-10-01,73.65384615384616,National Housing Affordability Score,National,Score (0-100),Quarter
 2020-04-01,89.23076923076923,National Housing Affordability Score,National,Score (0-100),Quarter
 2020-10-01,78.46153846153845,National Housing Affordability Score,National,Score (0-100),Quarter
-2021-04-01,76.53846153846155,National Housing Affordability Score,National,Score (0-100),Quarter
-2021-10-01,75.86538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
-2022-04-01,53.942307692307686,National Housing Affordability Score,National,Score (0-100),Quarter
+2021-04-01,75,National Housing Affordability Score,National,Score (0-100),Quarter
+2021-10-01,54.32692307692307,National Housing Affordability Score,National,Score (0-100),Quarter
+2022-04-01,50.86538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
 2022-10-01,48.26923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
 2023-04-01,40.76923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
-2023-10-01,32.5,National Housing Affordability Score,National,Score (0-100),Quarter
-2024-04-01,26.53846153846154,National Housing Affordability Score,National,Score (0-100),Quarter
+2023-10-01,35.57692307692307,National Housing Affordability Score,National,Score (0-100),Quarter
+2024-04-01,30.384615384615387,National Housing Affordability Score,National,Score (0-100),Quarter
 2024-10-01,22.884615384615383,National Housing Affordability Score,National,Score (0-100),Quarter
-2025-04-01,22.78846153846154,National Housing Affordability Score,National,Score (0-100),Quarter
-2025-10-01,22.59615384615385,National Housing Affordability Score,National,Score (0-100),Quarter
+2025-04-01,19.71153846153846,National Housing Affordability Score,National,Score (0-100),Quarter
+2025-10-01,18.750000000000004,National Housing Affordability Score,National,Score (0-100),Quarter
 2011-07-01,100,Price-to-Income Ratio,National,Index (base=100),Quarter
 2011-10-01,100.24108076348766,Price-to-Income Ratio,National,Index (base=100),Quarter
 2012-01-01,97.64454295999893,Price-to-Income Ratio,National,Index (base=100),Quarter

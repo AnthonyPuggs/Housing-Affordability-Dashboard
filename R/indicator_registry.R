@@ -13,6 +13,70 @@ INDICATOR_SOURCE_CPI_RENTS_NATIONAL <- "CPI Rents ; Weighted average of eight ca
 INDICATOR_SOURCE_CPI_INFLATION_YOY <- "CPI Inflation YoY"
 INDICATOR_SOURCE_AWE <- "AWE (AWOTE, Persons)"
 INDICATOR_SOURCE_RBA_MORTGAGE_RATE <- "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier"
+INDICATOR_SOURCE_RBA_NEW_LOAN_RATE <- "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions"
+
+# Fixed estimation window for the F5-to-F6 splice wedge. Fixed (not growing)
+# so the spliced history does not mutate as new observations arrive; changing
+# the window requires a methodology version bump.
+RBA_NEW_LOAN_SPLICE_WINDOW_START <- as.Date("2019-07-01")
+RBA_NEW_LOAN_SPLICE_WINDOW_END <- as.Date("2021-06-30")
+
+# Effective new-loan owner-occupier mortgage rate.
+# RBA F6 (rates on new loans actually funded) starts 2019-07; the advertised
+# F5 discounted variable rate has sat well above rates actually paid since the
+# mid-2010s. For history before F6 exists, the F5 discounted series is level-
+# adjusted down by the mean F5-F6 wedge over the fixed overlap window above,
+# then spliced onto F6. Returns a monthly date/value frame ordered by date,
+# with the estimated wedge attached as attribute "splice_wedge".
+rba_new_loan_rate_spliced <- function(rba_rates) {
+  required_columns <- c("date", "value", "series")
+  missing_columns <- setdiff(required_columns, names(rba_rates))
+  if (length(missing_columns) > 0) {
+    stop("rba_rates is missing columns: ",
+         paste(missing_columns, collapse = ", "), call. = FALSE)
+  }
+
+  extract_series <- function(series_name) {
+    rows <- rba_rates[rba_rates$series == series_name,
+                      c("date", "value"), drop = FALSE]
+    rows$date <- as.Date(rows$date)
+    rows <- rows[!is.na(rows$date) & !is.na(rows$value), , drop = FALSE]
+    if (nrow(rows) == 0) {
+      stop("rba_rates is missing required series '", series_name,
+           "' for the spliced new-loan rate.", call. = FALSE)
+    }
+    rows[order(rows$date), , drop = FALSE]
+  }
+
+  f6 <- extract_series(INDICATOR_SOURCE_RBA_NEW_LOAN_RATE)
+  f5 <- extract_series(INDICATOR_SOURCE_RBA_MORTGAGE_RATE)
+
+  in_window <- function(d) {
+    d >= RBA_NEW_LOAN_SPLICE_WINDOW_START & d <= RBA_NEW_LOAN_SPLICE_WINDOW_END
+  }
+  f5_window <- f5[in_window(f5$date), , drop = FALSE]
+  f6_window <- f6[in_window(f6$date), , drop = FALSE]
+  f5_window$month <- format(f5_window$date, "%Y-%m")
+  f6_window$month <- format(f6_window$date, "%Y-%m")
+  overlap <- merge(f5_window, f6_window, by = "month",
+                   suffixes = c("_f5", "_f6"))
+  if (nrow(overlap) < 12) {
+    stop("Insufficient F5/F6 overlap (", nrow(overlap),
+         " months) in the fixed splice window to estimate the wedge.",
+         call. = FALSE)
+  }
+  wedge <- mean(overlap$value_f5 - overlap$value_f6)
+
+  f6_start <- min(f6$date)
+  pre <- f5[f5$date < f6_start, , drop = FALSE]
+  pre$value <- pre$value - wedge
+
+  spliced <- rbind(pre[, c("date", "value")], f6[, c("date", "value")])
+  spliced <- spliced[order(spliced$date), , drop = FALSE]
+  rownames(spliced) <- NULL
+  attr(spliced, "splice_wedge") <- wedge
+  spliced
+}
 
 indicator_source_series_constants <- function() {
   c(
@@ -22,7 +86,8 @@ indicator_source_series_constants <- function() {
     cpi_rents_national = INDICATOR_SOURCE_CPI_RENTS_NATIONAL,
     cpi_inflation_yoy = INDICATOR_SOURCE_CPI_INFLATION_YOY,
     awe = INDICATOR_SOURCE_AWE,
-    rba_mortgage_rate = INDICATOR_SOURCE_RBA_MORTGAGE_RATE
+    rba_mortgage_rate = INDICATOR_SOURCE_RBA_MORTGAGE_RATE,
+    rba_new_loan_rate = INDICATOR_SOURCE_RBA_NEW_LOAN_RATE
   )
 }
 
@@ -92,7 +157,7 @@ indicator_registry <- function() {
     ),
     formula = c(
       "Indexed RPPI divided by indexed WPI, multiplied by 100.",
-      "Indexed RPPI multiplied by the RBA owner-occupier discounted variable mortgage rate, divided by indexed WPI, then indexed to 100.",
+      "Indexed 30-year annuity principal-and-interest repayments on an 80 per cent LVR loan against the ABS 6432.0 national mean dwelling price, at the RBA F6 new-loan owner-occupier rate (spliced onto level-adjusted F5 history before July 2019), divided by WPI as the income-growth proxy, then indexed to 100.",
       "Indexed national CPI rents divided by indexed WPI, multiplied by 100.",
       "Twenty per cent of the ABS 6432.0 national mean dwelling price divided by annual savings assumed at 15 per cent of gross income, with income proxied by AWE individual earnings.",
       "Year-ended percentage change in RPPI deflated by CPI All Groups.",
@@ -116,6 +181,7 @@ indicator_registry <- function() {
     source_series = c(
       join_sources(INDICATOR_SOURCE_RPPI, INDICATOR_SOURCE_WPI),
       join_sources(INDICATOR_SOURCE_RPPI, INDICATOR_SOURCE_WPI,
+                   INDICATOR_SOURCE_RBA_NEW_LOAN_RATE,
                    INDICATOR_SOURCE_RBA_MORTGAGE_RATE),
       join_sources(INDICATOR_SOURCE_CPI_RENTS_NATIONAL,
                    INDICATOR_SOURCE_WPI),
@@ -147,12 +213,14 @@ indicator_registry <- function() {
       rep("stylised_scenario", 4)
     ),
     methodology_version = c(
-      rep("affordability_indices_v1", 7),
-      rep("national_affordability_score_v1", 4)
+      "affordability_indices_v1",
+      "affordability_indices_v2",
+      rep("affordability_indices_v1", 5),
+      rep("national_affordability_score_v2", 4)
     ),
     primary_source = c(
       "ABS 6432.0 mean dwelling prices and ABS WPI",
-      "ABS 6432.0 mean dwelling prices, ABS WPI and RBA owner-occupier mortgage rates",
+      "ABS 6432.0 mean dwelling prices, ABS WPI and RBA F6 new-loan owner-occupier rates (F5-spliced history)",
       "ABS CPI rents and ABS WPI",
       "ABS mean dwelling prices and AWE with fixed deposit and savings assumptions",
       "ABS mean dwelling prices and CPI All Groups",
@@ -165,7 +233,7 @@ indicator_registry <- function() {
     ),
     quality_note = c(
       "Derived dashboard index from public ABS time series; no SIH sampling-error interval applies.",
-      "Derived dashboard index from public ABS/RBA time series; no SIH sampling-error interval applies.",
+      "Derived dashboard index from public ABS/RBA time series using stylised 80 per cent LVR and 30-year-term loan assumptions; no SIH sampling-error interval applies.",
       "Derived dashboard index from public ABS CPI and wage series; no SIH sampling-error interval applies.",
       "Stylised scenario using fixed deposit and savings assumptions; not an official ABS or lender measure.",
       "Context series derived from public ABS price and CPI inputs.",
@@ -179,7 +247,7 @@ indicator_registry <- function() {
     vintage_dataset = rep("affordability_indices", 11),
     public_caveat = c(
       "Cost-pressure index, higher = less affordable.",
-      "Modelled mortgage cost-pressure index, higher = less affordable.",
+      "Modelled principal-and-interest repayment-burden index (80 per cent LVR, 30-year term, actual new-loan rates; pre-2019 rates are level-adjusted F5 history), higher = less affordable.",
       "Rent cost-pressure index, higher = less affordable.",
       "Stylised years-to-save estimate: 20 per cent deposit on the ABS 6432.0 national mean dwelling price, saving 15 per cent of gross income proxied by AWE individual earnings (not household income); not an official ABS measure or lender assessment.",
       "Context series, not a household burden measure.",
@@ -208,7 +276,10 @@ indicator_registry_required_abs_sources <- function() {
 }
 
 indicator_registry_required_rba_sources <- function() {
-  unname(INDICATOR_SOURCE_RBA_MORTGAGE_RATE)
+  unname(c(
+    INDICATOR_SOURCE_RBA_MORTGAGE_RATE,
+    INDICATOR_SOURCE_RBA_NEW_LOAN_RATE
+  ))
 }
 
 indicator_metadata <- function(indicator) {

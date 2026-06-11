@@ -120,9 +120,11 @@ if ("series" %in% names(abs_ts)) {
 
 required_rba_series <- indicator_registry_required_rba_sources()
 if ("series" %in% names(rba_rates)) {
+  missing_rba <- setdiff(required_rba_series, unique(rba_rates$series))
   check(
-    required_rba_series %in% unique(rba_rates$series),
-    paste("rba_rates.csv is missing required series:", required_rba_series)
+    length(missing_rba) == 0,
+    paste("rba_rates.csv is missing required series:",
+          paste(missing_rba, collapse = ", "))
   )
 }
 

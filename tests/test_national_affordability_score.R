@@ -185,6 +185,51 @@ if (file.exists(helper_path)) {
     check(grepl("historical-relative", diagnostics$interpretation_warning,
                 fixed = TRUE),
           "Diagnostics warning must describe the score as historical-relative")
+
+    # --- v2 frozen reference window ------------------------------------------
+    # Appending observations dated after NATIONAL_AFFORDABILITY_SCORE_REFERENCE_END
+    # must not change any previously published score (the v1 growing-sample
+    # normalisation silently re-ranked all history on every refresh), and the
+    # new observation must be scored against the frozen distribution.
+    check(exists("NATIONAL_AFFORDABILITY_SCORE_REFERENCE_END"),
+          "v2 must define a frozen reference window end constant")
+
+    future_date <- as.Date("2026-04-01")
+    check(future_date > NATIONAL_AFFORDABILITY_SCORE_REFERENCE_END,
+          "Test future date must fall outside the frozen reference window")
+    extreme_future <- rbind(
+      data.frame(date = future_date, value = 500,
+                 indicator = "Mortgage Serviceability Index"),
+      data.frame(date = future_date, value = 500,
+                 indicator = "Rental Affordability Index"),
+      data.frame(date = future_date, value = 50,
+                 indicator = "Deposit Gap (Years)")
+    )
+    extreme_future$geography <- "National"
+    extreme_future$unit <- "Input"
+    extreme_future$frequency <- "Quarter"
+    extended_input <- rbind(complete_input, extreme_future)
+
+    baseline_score <- calculate_national_affordability_score(complete_input)
+    extended_score <- calculate_national_affordability_score(extended_input)
+    common <- merge(
+      baseline_score[, c("date", "indicator", "value")],
+      extended_score[, c("date", "indicator", "value")],
+      by = c("date", "indicator"),
+      suffixes = c("_baseline", "_extended")
+    )
+    check(nrow(common) == nrow(baseline_score),
+          "Extended sample must retain all baseline score rows")
+    check(isTRUE(all.equal(common$value_baseline, common$value_extended)),
+          "Scores inside the frozen reference window must not change when later observations arrive")
+
+    future_headline <- extended_score[
+      extended_score$date == future_date &
+        extended_score$indicator == "National Housing Affordability Score",
+      "value"
+    ]
+    check(length(future_headline) == 1 && future_headline == 0,
+          "An extreme post-reference burden must score 0 against the frozen distribution")
   }
 }
 

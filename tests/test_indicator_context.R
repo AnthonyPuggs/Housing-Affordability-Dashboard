@@ -79,7 +79,7 @@ if (all(file.exists(c(registry_path, context_path, vintage_path,
     note <- indicator_confidence_note("National Housing Affordability Score")
     required_note_text <- c(
       "Stylised scenario",
-      "national_affordability_score_v1",
+      "national_affordability_score_v2",
       "Latest observation"
     )
     missing_note_text <- required_note_text[
