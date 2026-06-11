@@ -19,6 +19,7 @@ renv/cellar/
 .RData
 CLAUDE.md
 AGENTS.md
+NEWS.md
 CHART_BUILDER_WORKFLOW.md
 data/rba_f1_raw.csv
 data/rba_f5_raw.csv
