@@ -1,7 +1,50 @@
 # National Housing Affordability Score Methodology Specification
 
-Date: 2026-05-03
-Status: v1 implemented in the dashboard pipeline and Overview page. The score is saved in `data/affordability_indices.csv` alongside its three component scores.
+Date: 2026-05-03 (v1) · 2026-06-11 (v2)
+Status: v2 implemented in the dashboard pipeline and Overview page. The score is saved in `data/affordability_indices.csv` alongside its three component scores.
+
+## V2 Changes (2026-06-11)
+
+Version string: `national_affordability_score_v2` (`R/national_affordability_score.R`); the mortgage serviceability input is versioned `affordability_indices_v2` in `R/indicator_registry.R`. Weights are **unchanged** at 40/35/25. Three methodology changes, each resolving a finding of the 2026-06-10 code review (`docs/code_review_2026-06-10.md`):
+
+### 1. Mortgage serviceability input is now a principal-and-interest annuity burden (ECON-02, STAT-10)
+
+v1 used `indexed price × rate / indexed WPI` — an interest-only construction that this document's own component definition (P&I repayments / income) did not match, and which overstates rate swings (a 3%→6% rate doubles the v1 input; true P&I repayments rise roughly 40%).
+
+v2 input, quarterly:
+
+```text
+loan_t        = 0.80 × national mean dwelling price_t          (ABS 6432.0 Table 1, dollars)
+payment_t     = 30-year monthly annuity payment on loan_t at new_loan_rate_t
+burden_t      = payment_t / WPI_t                              (WPI as the income-growth proxy)
+MSI_v2_t      = 100 × burden_t / burden_base                   (indexed at first observation)
+```
+
+The 80 per cent LVR and 30-year term are stylised loan assumptions, disclosed in the indicator registry. WPI remains the income denominator (consistent with v1 and the rental component); the score is rank-based, so only the burden's shape matters, and the annuity shape is the correction.
+
+### 2. Rate source: actual new-loan rates, spliced (ECON-06)
+
+v1 used the RBA F5 *advertised discounted* variable owner-occupier rate, which has sat well above rates actually paid since the mid-2010s. v2 uses the RBA F6 series **"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions"** — rates on loans actually funded.
+
+F6 begins 2019-07. To preserve the 2012-onward score history, pre-2019-07 history uses the F5 discounted series level-adjusted down by the mean F5−F6 gap over the **fixed** overlap window 2019-07 to 2021-06 (estimated wedge ≈ 1.0 percentage point at implementation). The window is fixed so the spliced history does not mutate as new data arrives; changing it requires a version bump. Implementation: `rba_new_loan_rate_spliced()` in `R/indicator_registry.R`, also used by the Overview serviceability chart. Caveat: the advertised-vs-actual wedge was not constant over the 2010s, so pre-2019 levels are an approximation; within-segment dynamics are F5's.
+
+### 3. Frozen percentile reference window (ECON-04, STAT-04)
+
+v1 re-ranked and re-winsorised the full growing sample on every data refresh: previously published scores mutated silently, and a quarter's score depended on data that arrived later — contradicting this document's fixed-window rule.
+
+v2 freezes the normalisation reference to the window **2012-07-01 to 2025-12-31** (`NATIONAL_AFFORDABILITY_SCORE_REFERENCE_END`). Winsorisation bounds (5th/95th percentiles) and percentile ranks are computed from reference-window observations only; quarters after the window are scored against that frozen distribution and clamp to 0/100 beyond its range. Consequences:
+
+- Published score history no longer changes when new quarters arrive, and no quarter's score depends on later data.
+- Post-window scores are interpretable as "relative to 2012–2025 conditions"; the Overview card states this basis.
+- **Revision policy:** extending or changing the reference window requires a methodology version bump. Residual revision channel: upstream ABS/RBA revisions to input history can still move reference values; this is disclosed on the methodology page.
+
+### One-time v1→v2 history break
+
+Switching the mortgage input necessarily revises the published score history once at the v2 release (quantified in the implementing commit message). The rental-entry and deposit-barrier burden inputs are unchanged; their component scores move only where the complete-case sample interacts with the frozen window.
+
+### Income denominator evaluation (FR-P1-6 — evaluated, deferred)
+
+The preferred denominator remains median household disposable income. Evaluation findings: ABS 5206.0 provides only Compensation of Employees as an aggregate proxy (the pipeline's stage 02 already notes that household disposable income lives in the 5220.0 household income account, which is not fetched); converting any aggregate to a per-household measure requires a household-count divisor, and no clean quarterly ABS household-count series exists — it would need interpolation from ERP and household projections. That is a substantive, separately-versioned change. v2 therefore retains the WPI/AWE proxies with explicit labelling, as sanctioned by the v1 practical-proxy column in the component table below.
 
 ## Executive Decision
 
@@ -256,7 +299,7 @@ Plain-English dashboard interpretation:
 
 ## Implementation Surface
 
-The implemented v1 score is versioned as `national_affordability_score_v1` in `R/national_affordability_score.R`. It is derived by `pipeline/04_derive_indicators.R`, stored in `data/affordability_indices.csv`, exposed through `R/indicator_registry.R`, and shown on the Overview page as a lead panel with headline score, YoY movement, trend line and component bars.
+The implemented score is versioned as `national_affordability_score_v2` in `R/national_affordability_score.R` (see "V2 Changes" above). It is derived by `pipeline/04_derive_indicators.R`, stored in `data/affordability_indices.csv`, exposed through `R/indicator_registry.R`, and shown on the Overview page as a lead panel with headline score, YoY movement, trend line and component bars.
 
 Saved score rows are:
 
