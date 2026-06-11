@@ -1,7 +1,7 @@
 # Graph Report - Housing-Affordability-Dashboard  (2026-06-11)
 
 ## Corpus Check
-- 124 files · ~184,058 words
+- 126 files · ~185,675 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ae3c42d6`
+- Built from commit: `5b149604`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -98,12 +98,12 @@
 - [[_COMMUNITY_Community 85|Community 85]]
 - [[_COMMUNITY_Community 86|Community 86]]
 - [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
 - [[_COMMUNITY_Community 89|Community 89]]
 - [[_COMMUNITY_Community 91|Community 91]]
 - [[_COMMUNITY_Community 92|Community 92]]
 - [[_COMMUNITY_Community 93|Community 93]]
 - [[_COMMUNITY_Community 94|Community 94]]
-- [[_COMMUNITY_Community 96|Community 96]]
 - [[_COMMUNITY_Community 97|Community 97]]
 - [[_COMMUNITY_Community 98|Community 98]]
 - [[_COMMUNITY_Community 99|Community 99]]
@@ -340,8 +340,8 @@ Cohesion: 0.13
 Nodes (14): bioconductor.version, external.libraries, ignored.packages, package.dependency.fields, ppm.enabled, ppm.ignored.urls, r.version, snapshot.dev (+6 more)
 
 ### Community 80 - "Community 80"
-Cohesion: 0.29
-Nodes (7): Repository, Source, packages, askpass, R6, Repository, Source
+Cohesion: 0.67
+Nodes (3): Repository, Source, askpass
 
 ### Community 81 - "Community 81"
 Cohesion: 0.14
@@ -352,8 +352,8 @@ Cohesion: 0.15
 Nodes (12): 1. Executive summary, 2. Prior-findings ledger (status of internal review backlogs), 3.1 Economics / methodology (ECON), 3.2 Statistics (STAT), 3.3 Data pipeline (PIPE), 3.4 R/Shiny engineering (SHINY), 3.5 UX / accessibility (UX) — delta-only, 3.6 Testing / CI / release (TEST) (+4 more)
 
 ### Community 83 - "Community 83"
-Cohesion: 0.67
-Nodes (3): Rcpp, Repository, Source
+Cohesion: 0.29
+Nodes (7): Repository, Source, packages, bit, Rcpp, Repository, Source
 
 ### Community 85 - "Community 85"
 Cohesion: 0.20
@@ -366,6 +366,10 @@ Nodes (8): Architecture, Cautions, Chart Builder Workflow, Current Builder Cover
 ### Community 87 - "Community 87"
 Cohesion: 0.25
 Nodes (7): Australian Housing Affordability Dashboard, Data Model, Methodology Metadata, Notes, Refresh The Data, Run The App, Verification
+
+### Community 88 - "Community 88"
+Cohesion: 0.67
+Nodes (3): R6, Repository, Source
 
 ### Community 89 - "Community 89"
 Cohesion: 0.67
@@ -382,10 +386,6 @@ Nodes (5): Desktop Pass, Start The App, Static Guard, Theme And Mobile Pass, UI 
 ### Community 94 - "Community 94"
 Cohesion: 0.67
 Nodes (3): Repository, Source, base64enc
-
-### Community 96 - "Community 96"
-Cohesion: 0.67
-Nodes (3): Repository, Source, bit
 
 ### Community 97 - "Community 97"
 Cohesion: 0.67
