@@ -282,8 +282,7 @@ overviewPageUI <- function(id) {
                     class = "overview-affordability-indices-title"),
           policy_info_icon(
             "Affordability indices note",
-            overview_affordability_indices_note,
-            class = "policy-info-icon-left-aligned"
+            overview_affordability_indices_note
           )
         ),
         fill = FALSE,

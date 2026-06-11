@@ -24,6 +24,17 @@ test_that("ui_smoke_contracts contracts", {
   check(file.exists(readme_path), "README.md does not exist")
 
   app_text <- if (file.exists(app_path)) read_text(app_path) else ""
+  # Theme CSS/JS live in www/ (SHINY-08); fold them into the UI text so the
+  # class/script fragment contracts keep working.
+  css_path <- file.path(repo_root, "www", "dashboard.css")
+  js_path <- file.path(repo_root, "www", "dashboard.js")
+  check(file.exists(css_path), "www/dashboard.css does not exist")
+  check(file.exists(js_path), "www/dashboard.js does not exist")
+  app_text <- paste(c(
+    app_text,
+    if (file.exists(css_path)) read_text(css_path),
+    if (file.exists(js_path)) read_text(js_path)
+  ), collapse = "\n")
   module_text <- vapply(module_paths, read_text, character(1))
   all_ui_text <- paste(c(app_text, module_text), collapse = "\n")
 

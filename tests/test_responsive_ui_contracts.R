@@ -20,6 +20,18 @@ test_that("responsive_ui_contracts contracts", {
   check(file.exists(description_path), "DESCRIPTION does not exist")
   check(file.exists(readme_path), "README.md does not exist")
 
+  # Theme CSS/JS live in www/ (SHINY-08); fragment checks read them there.
+  css_path <- file.path(repo_root, "www", "dashboard.css")
+  js_path <- file.path(repo_root, "www", "dashboard.js")
+  check(file.exists(css_path), "www/dashboard.css does not exist")
+  check(file.exists(js_path), "www/dashboard.js does not exist")
+  css_text <- if (file.exists(css_path)) {
+    paste(readLines(css_path, warn = FALSE), collapse = "\n")
+  } else ""
+  js_text <- if (file.exists(js_path)) {
+    paste(readLines(js_path, warn = FALSE), collapse = "\n")
+  } else ""
+
   if (file.exists(app_path)) {
     app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
     responsive_source_text <- paste(c(
@@ -44,7 +56,7 @@ test_that("responsive_ui_contracts contracts", {
       "main_nav"
     )
     missing_nav_script <- required_nav_script[
-      !vapply(required_nav_script, grepl, logical(1), app_text, fixed = TRUE)
+      !vapply(required_nav_script, grepl, logical(1), js_text, fixed = TRUE)
     ]
     check(length(missing_nav_script) == 0,
           paste("Mobile navbar collapse script missing:",
@@ -69,18 +81,18 @@ test_that("responsive_ui_contracts contracts", {
       ".rental-market-chart"
     )
     missing_mobile_css <- required_mobile_css[
-      !vapply(required_mobile_css, grepl, logical(1), app_text, fixed = TRUE)
+      !vapply(required_mobile_css, grepl, logical(1), css_text, fixed = TRUE)
     ]
     check(length(missing_mobile_css) == 0,
           paste("Responsive mobile CSS missing:",
                 paste(missing_mobile_css, collapse = ", ")))
 
-    tablet_start <- regexpr("@media (max-width: 1024px)", app_text,
+    tablet_start <- regexpr("@media (max-width: 1024px)", css_text,
                             fixed = TRUE)
     tablet_segment <- if (tablet_start[1] == -1L) {
       ""
     } else {
-      substr(app_text, tablet_start[1], nchar(app_text))
+      substr(css_text, tablet_start[1], nchar(css_text))
     }
     required_tablet_css <- c(
       "@media (max-width: 1024px)",

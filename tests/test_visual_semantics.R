@@ -69,7 +69,14 @@ test_that("visual_semantics contracts", {
   }
 
   if (file.exists(app_path)) {
-    app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
+    # Theme CSS lives in www/dashboard.css (SHINY-08); the class rules are
+    # checked there, the source() wiring in app.R itself.
+    css_path <- file.path(repo_root, "www", "dashboard.css")
+    check(file.exists(css_path), "www/dashboard.css does not exist")
+    app_text <- paste(c(
+      readLines(app_path, warn = FALSE),
+      if (file.exists(css_path)) readLines(css_path, warn = FALSE)
+    ), collapse = "\n")
     required_app_text <- c(
       'source(project_path("R", "visual_semantics.R"), local = TRUE)',
       ".kpi-change-better",
@@ -82,7 +89,7 @@ test_that("visual_semantics contracts", {
       !vapply(required_app_text, grepl, logical(1), app_text, fixed = TRUE)
     ]
     check(length(missing_app_text) == 0,
-          paste("app.R missing semantic colour wiring:",
+          paste("app.R/www/dashboard.css missing semantic colour wiring:",
                 paste(missing_app_text, collapse = "; ")))
   }
 

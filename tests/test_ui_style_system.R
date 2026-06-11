@@ -96,8 +96,10 @@ test_that("ui_style_system contracts", {
     ), collapse = "\n")
     check(grepl("policy-info-icon", info_icon_html, fixed = TRUE),
           "policy_info_icon() must render the policy info-icon class")
-    check(grepl("data-tooltip=\"Tooltip content\"", info_icon_html, fixed = TRUE),
-          "policy_info_icon() must expose tooltip text through data-tooltip")
+    check(grepl("bslib-tooltip", info_icon_html, fixed = TRUE),
+          "policy_info_icon() must wrap the icon in a bslib::tooltip() (dismissible, WCAG 1.4.13)")
+    check(grepl("Tooltip content", info_icon_html, fixed = TRUE),
+          "policy_info_icon() must carry the tooltip text")
     check(grepl("aria-label=\"Affordability index note: Tooltip content\"",
                 info_icon_html, fixed = TRUE),
           "policy_info_icon() must expose tooltip text through an accessible label")
@@ -121,6 +123,16 @@ test_that("ui_style_system contracts", {
                     app_text, fixed = TRUE)[1],
           "app.R must source the UI style system before page modules")
 
+    # Theme CSS lives in www/dashboard.css (SHINY-08); app.R only links it.
+    css_path <- file.path(repo_root, "www", "dashboard.css")
+    check(file.exists(css_path), "www/dashboard.css does not exist")
+    check(grepl('tags$link(rel = "stylesheet", href = "dashboard.css")',
+                app_text, fixed = TRUE),
+          "app.R must link www/dashboard.css")
+    check(grepl('tags$script(src = "dashboard.js")', app_text, fixed = TRUE),
+          "app.R must load www/dashboard.js")
+    css_text <- if (file.exists(css_path)) read_text(css_path) else ""
+
     required_css <- c(
       "--policy-accent",
       "--policy-surface",
@@ -129,26 +141,23 @@ test_that("ui_style_system contracts", {
       ".policy-chart-card",
       ".overview-affordability-indices-title-wrap",
       ".policy-info-icon",
-      ".policy-info-icon-left-aligned",
-      ".policy-info-icon:hover::after",
-      ".policy-info-icon:focus::after",
-      ".policy-info-icon-left-aligned:hover::after",
-      ".policy-info-icon-left-aligned:focus::after",
-      ".policy-info-icon-left-aligned {",
-      "position: static",
-      "left: calc(100% - 0.75rem)",
-      "max-width: calc(100vw - 4rem)",
+      # Tooltips are bslib::tooltip() Bootstrap tooltips (UX-12); the old
+      # CSS-pseudo ::after/::before tooltip rules must stay deleted.
+      ".tooltip .tooltip-inner",
+      "max-width: min(28rem, calc(100vw - 2rem))",
       "overflow-wrap: anywhere",
       ".policy-card-body-with-note",
       ".policy-source-note",
       ".bslib-sidebar-layout > .sidebar"
     )
     missing_css <- required_css[
-      !vapply(required_css, grepl, logical(1), app_text, fixed = TRUE)
+      !vapply(required_css, grepl, logical(1), css_text, fixed = TRUE)
     ]
     check(length(missing_css) == 0,
-          paste("app.R missing public-policy CSS:",
+          paste("www/dashboard.css missing public-policy CSS:",
                 paste(missing_css, collapse = ", ")))
+    check(!grepl("content: attr(data-tooltip)", css_text, fixed = TRUE),
+          "www/dashboard.css must not reintroduce the CSS-pseudo data-tooltip pattern")
 
     check(!grepl("font_google\\s*\\(", app_text, perl = TRUE),
           "app.R must not use Google-hosted fonts")

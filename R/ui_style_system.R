@@ -26,13 +26,19 @@ policy_source_note <- function(...) {
   tags$p(..., class = "source-note policy-source-note")
 }
 
+# Bootstrap tooltip via bslib::tooltip() (UX-12): dismissible and positioned
+# by Popper, replacing the old CSS ::before/::after hover tooltip that could
+# not be dismissed without moving the pointer (WCAG 1.4.13).
 policy_info_icon <- function(label, tooltip, class = NULL) {
-  tags$span(
-    class = policy_compact_class("policy-info-icon", class),
-    tabindex = "0",
-    `aria-label` = paste0(label, ": ", tooltip),
-    `data-tooltip` = tooltip,
-    tags$i(class = "fa-solid fa-circle-info", `aria-hidden` = "true")
+  bslib::tooltip(
+    tags$span(
+      class = policy_compact_class("policy-info-icon", class),
+      tabindex = "0",
+      `aria-label` = paste0(label, ": ", tooltip),
+      tags$i(class = "fa-solid fa-circle-info", `aria-hidden` = "true")
+    ),
+    tooltip,
+    placement = "bottom"
   )
 }
 

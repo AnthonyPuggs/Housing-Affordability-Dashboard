@@ -4222,13 +4222,13 @@
       "checksum": "def5b4522d0687fc867e1780dfdb1c98"
     },
     ".Rprofile": {
-      "checksum": "1043791f10a763d1fa497860a3e0c9d1"
+      "checksum": "93046acda5cceee720a3a2ed39d82b46"
     },
     ".rscignore": {
       "checksum": "177242fce7b0810419d56f203e92f4b5"
     },
     "app.R": {
-      "checksum": "9179898737608a4ee3bd48bb05630ff0"
+      "checksum": "283e4fe9b0ddd31e8cf0d92dddb9e258"
     },
     "assets/banner.svg": {
       "checksum": "d27aaa8a356f5bb603d8cbf4d37bd7f5"
@@ -4285,13 +4285,13 @@
       "checksum": "04809e160aff35a8716577b5fce94bb1"
     },
     "graphify-out/graph.json": {
-      "checksum": "019d3532cd1871c2b86d321502fae3b1"
+      "checksum": "886484be637a67bf93f61bd20bc0c333"
     },
     "graphify-out/GRAPH_REPORT.md": {
-      "checksum": "b45d5120f5d9186d0b1c3313bac48579"
+      "checksum": "f4b92a60418ed10be4e10ae8152d4a04"
     },
     "manifest.json": {
-      "checksum": "4da41a8e91aa7d5e309c87bbe745cc62"
+      "checksum": "91fa3efbadcfb224a7a665f497386bac"
     },
     "pipeline/00_config.R": {
       "checksum": "d731873e04bfbac9c990251889caebd0"
@@ -4381,7 +4381,7 @@
       "checksum": "23aae1cd2744df6bfe1d4c44fc2c4e52"
     },
     "R/overview_module.R": {
-      "checksum": "ab4e66b71ff8a9c7a156b6d1ccce2a22"
+      "checksum": "953990a25523f9e2ccf253ab19eb1f2a"
     },
     "R/pipeline_contracts.R": {
       "checksum": "1847e2113d0759251c5a2bcc24714f3b"
@@ -4426,7 +4426,7 @@
       "checksum": "619f7e6477816cf121df333780acc70f"
     },
     "R/ui_style_system.R": {
-      "checksum": "02fb53ef9967415ee79650f7fa84d81b"
+      "checksum": "c74a6360804fb15b56d47a486980c133"
     },
     "R/visual_semantics.R": {
       "checksum": "a5f806bc7c1d68301d1aedf6f3d00985"
@@ -4439,6 +4439,12 @@
     },
     "run_app.R": {
       "checksum": "e62bc6fbe4f9d2488d05999a71be306e"
+    },
+    "www/dashboard.css": {
+      "checksum": "6c7903e2fd6603573dd3603fdd08986a"
+    },
+    "www/dashboard.js": {
+      "checksum": "76d26726acccc3812bf36c8c8246b2cc"
     }
   },
   "users": null

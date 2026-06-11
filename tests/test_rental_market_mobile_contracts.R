@@ -98,7 +98,16 @@ test_that("rental_market_mobile_contracts contracts", {
   }
 
   if (file.exists(app_path)) {
-    app_text <- paste(readLines(app_path, warn = FALSE), collapse = "\n")
+    # Theme CSS/JS live in www/ (SHINY-08); fragment checks read them there.
+    css_path <- file.path(repo_root, "www", "dashboard.css")
+    js_path <- file.path(repo_root, "www", "dashboard.js")
+    check(file.exists(css_path), "www/dashboard.css does not exist")
+    check(file.exists(js_path), "www/dashboard.js does not exist")
+    app_text <- paste(c(
+      readLines(app_path, warn = FALSE),
+      if (file.exists(css_path)) readLines(css_path, warn = FALSE),
+      if (file.exists(js_path)) readLines(js_path, warn = FALSE)
+    ), collapse = "\n")
     required_css <- c(
       "max-height: 52vh",
       "padding-top: 0.48rem",
