@@ -99,8 +99,10 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
     summarise(price_k = mean(price_k, na.rm = TRUE), .groups = "drop") %>%
     rename(date = qtr)
 
-  mortgage_rate_qtr <- rba_rates %>%
-    filter(str_detect(series, "Variable; Discounted; Owner-occupier")) %>%
+  # Effective new-loan owner-occupier rate: RBA F6 actual new-loan rates with
+  # level-adjusted F5 history (helper in R/indicator_registry.R). Advertised
+  # discounted rates sat ~1pp above rates actually paid since the mid-2010s.
+  mortgage_rate_qtr <- rba_new_loan_rate_spliced(rba_rates) %>%
     select(date, rate = value) %>%
     mutate(qtr = lubridate::floor_date(date, "quarter")) %>%
     group_by(qtr) %>%

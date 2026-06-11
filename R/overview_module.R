@@ -36,7 +36,7 @@ overview_cost_pressure_colours <- stats::setNames(
   indicator_chart_label(overview_cost_pressure_indicators)
 )
 
-overview_affordability_indices_note <- "Cost-pressure indexes are burden measures where higher = less affordable. The National Housing Affordability Score above is the reverse: higher = more affordable. Rent uses ABS CPI rents/WPI, mortgage uses price\u00d7rate/WPI, deposit uses price/income, and price-to-income uses national dwelling prices/WPI."
+overview_affordability_indices_note <- "Cost-pressure indexes are burden measures where higher = less affordable. The National Housing Affordability Score above is the reverse: higher = more affordable. Rent uses ABS CPI rents/WPI, mortgage indexes 30-year principal-and-interest repayments at actual new-loan rates against WPI, deposit uses price/income, and price-to-income uses national dwelling prices/WPI."
 
 score_component_short_labels <- c(
   mortgage_serviceability = "Mortgage",
@@ -173,7 +173,7 @@ overviewPageUI <- function(id) {
             uiOutput(ns("vb_afford_score_change")),
             tags$p(
               class = "affordability-score-note",
-              "Modelled national score for entering ownership or renting. It combines mortgage serviceability, rental cost pressure and deposit barriers. Not an official ABS/NHHA statistic or lender assessment. The score is published only for quarters with all three components, so it can lag the semiannual AWE wage input."
+              "Modelled national score for entering ownership or renting. It combines mortgage serviceability, rental cost pressure and deposit barriers. Component weights are judgement weights, not causal estimates. Not an official ABS/NHHA statistic or lender assessment. The score is published only for quarters with all three components, so it can lag the semiannual AWE wage input."
             ),
             actionButton(
               ns("reset_afford_score_date"),
@@ -354,12 +354,14 @@ overviewPageServer <- function(id, is_dark) {
     })
     output$vb_afford_score_basis <- renderText({
       if (length(score_dates) == 0) return("")
+      # v2: scores are normalised against a frozen reference window, so the
+      # basis reflects the window constants, not the growing score sample.
       paste0(
-        "Relative to ",
-        format(min(score_dates), "%Y"),
+        "Relative to the frozen ",
+        format(NATIONAL_AFFORDABILITY_SCORE_START_DATE, "%Y"),
         "-",
-        format(max(score_dates), "%Y"),
-        " history"
+        format(NATIONAL_AFFORDABILITY_SCORE_REFERENCE_END, "%Y"),
+        " reference window"
       )
     })
     output$vb_afford_score_change <- renderUI({
