@@ -26,7 +26,9 @@ Production R/Shiny dashboard for Australian housing affordability analysis, depl
 - **Indicator registry is the source of truth**: `R/indicator_registry.R` defines formula text, units, interpretation direction, official/stylised class and public caveats for every derived indicator. The Methodology page renders it. Update the registry whenever a derivation changes.
 - **Schema contracts**: time series use `date | value | series | series_id | category | unit | frequency`; derived indices use `date | value | indicator | geography | unit | frequency`; SIH outputs use `survey_year | value | metric | tenure | breakdown_var | breakdown_val | geography | stat_type`. Preserve these when adding sources.
 - **Official vs stylised separation**: SIH/NHHA estimates are official pass-through cells; serviceability/deposit/score outputs are stylised scenarios and must always be labelled as such (never as official ABS measures or lender assessments).
-- **Fail-loud selection**: stage 04 selects required series via `get_series_exact()`; prefer exact series IDs/names with loud errors over regex fallbacks when adding pipeline series.
+- **Fail-loud selection**: stage 04 selects required series via `get_series_exact()`; name-regex selections must be followed by `assert_selection_nonempty()`, and stage combine steps use `combine_series_unique()` (errors on cross-source name collisions) — never `distinct(date, series)`. Prefer exact series IDs with loud errors over regex fallbacks when adding pipeline series.
+- **Strict pipeline mode**: the driver (and CI) set `PIPELINE_STRICT <- TRUE`, which promotes parser/write-lock warnings to errors via `pipeline_problem()`; the driver also asserts every stage output was rewritten by the current run (`validate_pipeline_stage_freshness()`).
+- **App data loading**: `load_dashboard_csvs()` returns typed empty tibbles with a warning for broken/missing CSVs and `assert_dashboard_data()` refuses startup with a message naming every problem file.
 
 ## Commands
 
