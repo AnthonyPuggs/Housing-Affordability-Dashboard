@@ -3,8 +3,9 @@ name: Refresh dashboard data
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 7 * * 1-5'
-      timezone: Australia/Brisbane
+    # GitHub Actions schedules are UTC-only. 21:00 UTC Sun-Thu is
+    # 07:00 Australia/Brisbane Mon-Fri (Brisbane has no DST).
+    - cron: '0 21 * * 0-4'
 
 permissions:
   contents: write
@@ -46,8 +47,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain -- data/*.csv)" ]; then
-            git add data/*.csv
+          # data_vintage.csv embeds run timestamps, so it changes every run;
+          # excluding it from the change gate stops daily no-op commits. It is
+          # still committed alongside real data changes.
+          if [ -n "$(git status --porcelain -- 'data/*.csv' ':(exclude)data/data_vintage.csv')" ]; then
+            git add -- 'data/*.csv'
             git commit -m "data: refresh dashboard inputs"
             git push
           else

@@ -20,8 +20,8 @@ workflow_text <- if (file.exists(workflow_path)) {
 required_workflow_text <- c(
   "workflow_dispatch:",
   "schedule:",
-  "cron: '0 7 * * 1-5'",
-  "timezone: Australia/Brisbane",
+  "cron: '0 21 * * 0-4'",
+  "':(exclude)data/data_vintage.csv'",
   "permissions:",
   "contents: write",
   "concurrency:",
@@ -56,6 +56,11 @@ present_forbidden <- forbidden_text[
 check(length(present_forbidden) == 0,
       paste("data-refresh workflow must not embed deployment secrets or manual deployment:",
             paste(present_forbidden, collapse = "; ")))
+
+# 'timezone:' is not a GitHub Actions schedule key (schedules are UTC-only);
+# a stray key silently shifts the run to the wrong local time.
+check(!grepl("timezone:", workflow_text, fixed = TRUE),
+      "data-refresh workflow must not use the invalid 'timezone:' schedule key (Actions schedules are UTC-only)")
 
 if (length(failures) > 0) {
   stop(
