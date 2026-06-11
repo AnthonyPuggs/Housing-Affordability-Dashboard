@@ -26,6 +26,31 @@ test_that("derivation_helpers unit checks (hand-computed)", {
   check(nrow(aligned) == 1 && aligned$m == 110 && aligned$q == 50,
         "align_quarterly() must average monthly values within the quarter")
 
+  # --- complete-quarter rule (STAT-07): partial quarters must be dropped ------
+  monthly_partial <- data.frame(
+    date = q("2024-01-31", "2024-02-29", "2024-03-31",
+             "2024-04-30", "2024-05-31", "2024-06-30",
+             "2024-07-31"),
+    value = c(100, 110, 120, 130, 140, 150, 999)
+  )
+  quarterly_3q <- data.frame(
+    date = q("2024-01-01", "2024-04-01", "2024-07-01"),
+    value = c(50, 60, 70)
+  )
+  aligned_partial <- align_quarterly(monthly_partial, quarterly_3q, "m", "q")
+  check(nrow(aligned_partial) == 2 &&
+          !as.Date("2024-07-01") %in% aligned_partial$date,
+        "align_quarterly() must drop a partial quarter of a monthly series")
+  check(isTRUE(all.equal(aligned_partial$m, c(110, 140))),
+        "align_quarterly() complete quarters must average all three months")
+  qm_partial <- quarterly_mean(monthly_partial, "v")
+  check(nrow(qm_partial) == 2 && !as.Date("2024-07-01") %in% qm_partial$date,
+        "quarterly_mean() must drop a partial quarter of a monthly series")
+  # A genuinely quarterly series (one observation per quarter) passes through.
+  qm_quarterly <- quarterly_mean(quarterly_3q, "v")
+  check(nrow(qm_quarterly) == 3,
+        "quarterly_mean() must keep all quarters of a quarterly series")
+
   # --- index_to_base ------------------------------------------------------------
   check(isTRUE(all.equal(index_to_base(c(50, 75, 100)), c(100, 150, 200))),
         "index_to_base() must rebase at the first value")

@@ -7,21 +7,35 @@
 
 # --- Alignment and indexing -----------------------------------------------------
 
-# Align two date/value series to common quarterly dates (mean within quarter).
+# Complete-quarter rule (review STAT-07): a quarter of a higher-frequency
+# series only enters a quarterly mean when it has as many observations as
+# the series' typical (modal) per-quarter count. Without this, the partial
+# latest quarter of a monthly input is averaged from one or two months,
+# moves the derived indicator, and then silently revises once the missing
+# months arrive. Quarterly inputs (modal count 1) pass through unchanged;
+# ties resolve to the larger count so ambiguous partials are dropped.
+complete_quarter_mean <- function(df, value_name = "value") {
+  with_qtr <- df %>%
+    mutate(qtr = floor_date(date, "quarter"))
+  per_quarter <- with_qtr %>% count(qtr, name = "n_obs")
+  count_freq <- table(per_quarter$n_obs)
+  modal_n <- max(as.integer(names(count_freq)[count_freq == max(count_freq)]))
+
+  with_qtr %>%
+    group_by(qtr) %>%
+    filter(dplyr::n() >= modal_n) %>%
+    summarise(!!value_name := mean(value, na.rm = TRUE), .groups = "drop") %>%
+    rename(date = qtr)
+}
+
+# Align two date/value series to common quarterly dates (mean within each
+# complete quarter; see complete_quarter_mean).
 align_quarterly <- function(df1, df2, name1 = "v1", name2 = "v2") {
-  df1 <- df1 %>%
-    mutate(qtr = floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(!!name1 := mean(value, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
-
-  df2 <- df2 %>%
-    mutate(qtr = floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(!!name2 := mean(value, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
-
-  inner_join(df1, df2, by = "date") %>%
+  inner_join(
+    complete_quarter_mean(df1, name1),
+    complete_quarter_mean(df2, name2),
+    by = "date"
+  ) %>%
     arrange(date)
 }
 
@@ -32,13 +46,10 @@ index_to_base <- function(values, base_idx = 1, base_value = 100) {
   values / base * base_value
 }
 
-# Quarterly mean of a (typically monthly) date/value series.
+# Quarterly mean of a (typically monthly) date/value series, complete
+# quarters only (see complete_quarter_mean).
 quarterly_mean <- function(df, value_name = "value") {
-  df %>%
-    mutate(qtr = floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(!!value_name := mean(value, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
+  complete_quarter_mean(df, value_name)
 }
 
 # --- Loud series selection -------------------------------------------------------
