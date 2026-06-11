@@ -253,6 +253,7 @@ overviewPageUI <- function(id) {
       policy_chart_card(
         title = "Capital City Median House Prices",
         fill = FALSE,
+        note = "City lines are ABS 6432.0 capital-city median established-house transfer prices; the dashed national line is the whole-of-Australia mean price across all dwelling types. Mean and median levels are not directly comparable - read the national line as context, not as another city.",
         uiOutput(ns("overview_price_subtitle")),
         plotlyOutput(ns("overview_median_prices"), height = "480px"),
         footer = card_footer(
@@ -264,7 +265,7 @@ overviewPageUI <- function(id) {
                       width = "100%", timeFormat = "%b %Y"),
           radioButtons(ns("overview_price_transform"), NULL,
                        choices = c("Nominal ($)" = "nominal",
-                                   "Index (start = 100)" = "index"),
+                                   "Index (common start = 100)" = "index"),
                        selected = "nominal", inline = TRUE)
         )
       )
@@ -584,7 +585,7 @@ overviewPageServer <- function(id, is_dark) {
 
     output$overview_price_subtitle <- renderUI({
       txt <- if (identical(input$overview_price_transform, "index")) {
-        "Indexed to 100 at start of selected date range"
+        "Indexed to 100 at the first quarter all series cover within the selected range"
       } else {
         "Nominal values (in thousands AUD)"
       }

@@ -13,24 +13,19 @@ cat("--- Fetching ABS time series ---\n")
 all_series <- list()
 
 # ==============================================================================
-# 1. Residential Property Price Index (RPPI) — ABS 6432.0 Mean Dwelling Price
+# 1. Dwelling price series — ABS 6432.0 Mean Dwelling Price
 # ==============================================================================
-# NOTE: ABS 6416.0 (RPPI) was discontinued after Dec 2021. We now construct a
-# proxy RPPI from "Mean price of residential dwellings" in ABS 6432.0 Table 1.
-# The mean price series is indexed to base=100 and relabelled to match the old
-# "Residential Property Price Index ; <city> ;" format for app compatibility.
-
-# State-to-capital-city mapping for relabelling
-state_to_city <- c(
-  "Australia"                        = "Weighted average of eight capital cities",
-  "New South Wales"                  = "Sydney",
-  "Victoria"                         = "Melbourne",
-  "Queensland"                       = "Brisbane",
-  "South Australia"                  = "Adelaide",
-  "Western Australia"                = "Perth",
-  "Tasmania"                         = "Hobart",
-  "Northern Territory"               = "Darwin",
-  "Australian Capital Territory"     = "Canberra"
+# NOTE: ABS 6416.0 (RPPI) was discontinued after Dec 2021. These are
+# whole-of-state/territory mean dwelling prices from ABS 6432.0 Table 1,
+# indexed to base=100 per geography. They are labelled with their TRUE
+# geography: a previous version relabelled them as capital cities ("Sydney"
+# showed all-of-NSW price dynamics, diluted by regional areas - review
+# STAT-01). Genuine capital-city median transfer prices come from Table 2
+# below.
+allowed_price_geographies <- c(
+  "Australia", "New South Wales", "Victoria", "Queensland",
+  "South Australia", "Western Australia", "Tasmania",
+  "Northern Territory", "Australian Capital Territory"
 )
 
 cat("  Fetching mean dwelling prices (6432.0 Table 1)...\n")
@@ -49,25 +44,24 @@ if (nrow(rppi_raw) > 0) {
     mutate(
       # Extract state/territory name from series string
       state = str_trim(str_extract(series, ";\\s*([^;]+)\\s*;?$") %>%
-                str_remove_all(";") %>% str_trim()),
-      # Map state to capital city name
-      city = state_to_city[state]
+                str_remove_all(";") %>% str_trim())
     ) %>%
-    filter(!is.na(city)) %>%
-    # Convert mean price to base=100 index (per city)
-    group_by(city) %>%
+    filter(state %in% allowed_price_geographies) %>%
+    # Convert mean price to base=100 index (per geography)
+    group_by(state) %>%
     arrange(date) %>%
     mutate(value = value / first(value) * 100) %>%
     ungroup() %>%
-    # Label as "Dwelling Price Index ; <city> ;" (distinct from "RPPI" used by derive script)
-    mutate(series = paste0("Dwelling Price Index ;  ", city, " ;")) %>%
+    # Honest label: the geography is the state/territory, not its capital
+    mutate(series = paste0("Dwelling Price Index ;  ", state, " ;")) %>%
     # Drop raw unit column so normalize_abs uses our "Index" specification
     select(-any_of("unit")) %>%
     normalize_abs(category = "House Prices", units = "Index",
                   freq_hint = "Quarter")
+  assert_selection_nonempty(rppi, "state mean dwelling price indexes (6432.0 Table 1)")
 
   all_series$rppi <- rppi
-  cat("    ", nrow(rppi), "RPPI (mean dwelling price proxy) observations\n")
+  cat("    ", nrow(rppi), "state mean dwelling price index observations\n")
 }
 
 # Also store a single national "RPPI" series (non-indexed) for the derive script.

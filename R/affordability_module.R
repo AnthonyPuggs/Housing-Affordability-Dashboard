@@ -148,13 +148,14 @@ affordabilityPageUI <- function(id) {
             selectInput(ns("stress_breakdown"), "Breakdown By",
                         choices = c("Age Group" = "age_group",
                                     "Family Type" = "family_type",
-                                    "Income Quintile" = "equiv_income_quintile",
+                                    "Equivalised Income Quintile" = "equiv_income_quintile",
                                     "Dwelling Structure" = "dwelling_structure",
                                     "By Tenure (Owners)" = "owner",
                                     "By Tenure (Renters)" = "renter")),
             radioButtons(ns("stress_population"), "Population",
                          choices = c("All Households" = "all_households",
-                                     "Lower Income (Bottom 40%)" = "lower_income"))
+                                     "Lower income (3rd-40th percentile, equivalised)" = "lower_income")),
+            source_note("Lower income here means the 3rd to 40th percentile of equivalised disposable household income (ABS SIH Files 5/8). The NHHA rental-stress measure uses a different basis: the bottom 40% of equivalised income excluding Commonwealth Rent Assistance.")
           ),
           policy_chart_card(
             "Housing Cost Stress Bands (2019-20)",
@@ -172,7 +173,7 @@ affordabilityPageUI <- function(id) {
             selectInput(ns("burden_breakdown"), "Breakdown By",
                         choices = c("Age Group" = "age_group",
                                     "Family Type" = "family_type",
-                                    "Income Quintile" = "equiv_income_quintile")),
+                                    "Equivalised Income Quintile" = "equiv_income_quintile")),
             radioButtons(ns("burden_stat"), "Statistic",
                          choices = c("Mean" = "mean", "Median" = "median"))
           ),
@@ -204,11 +205,11 @@ affordabilityPageUI <- function(id) {
                         selected = "renter_lower_income"),
             selectInput(ns("dist_group"), "Group",
                         choices = c("State/Territory" = "state",
-                                    "Income quintile" = "equiv_income_quintile",
+                                    "Equivalised income quintile" = "equiv_income_quintile",
                                     "Age group" = "age_group",
                                     "Family type" = "family_type"),
                         selected = "state"),
-            source_note("Official SIH/NHHA burden measure. These estimates are not modelled market-entry indexes.")
+            source_note("Official SIH/NHHA burden measure. These estimates are not modelled market-entry indexes. Note the two lower-income bases: NHHA uses the bottom 40% of equivalised income excluding Rent Assistance; the SIH lower-income measures use the 3rd-40th percentile of equivalised income - tiles are not directly comparable across the two.")
           ),
           policy_chart_card(
             "Distributional Stress Explorer",

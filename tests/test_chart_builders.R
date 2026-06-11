@@ -97,6 +97,24 @@ if (exists("price_series_transform", mode = "function")) {
   check(isTRUE(all.equal(syd_index, c(100, 110, 120, 130, 150),
                          tolerance = 1e-8)),
         "price_series_transform('index') must index each city to its first value")
+
+  # Staggered coverage: every series must rebase at the first COMMON quarter,
+  # not each at its own start (review STAT-09).
+  staggered <- data.frame(
+    date = as.Date(c("2020-01-01", "2020-04-01", "2020-07-01",
+                     "2020-04-01", "2020-07-01")),
+    value = c(100, 110, 121, 200, 240),
+    city = c("Sydney", "Sydney", "Sydney", "Brisbane", "Brisbane"),
+    stringsAsFactors = FALSE
+  )
+  staggered_index <- price_series_transform(staggered, "index")
+  check(min(staggered_index$date) == as.Date("2020-04-01"),
+        "price_series_transform('index') must drop quarters before common coverage")
+  syd_common <- staggered_index$value[staggered_index$city == "Sydney"]
+  bne_common <- staggered_index$value[staggered_index$city == "Brisbane"]
+  check(isTRUE(all.equal(syd_common, c(100, 110), tolerance = 1e-8)) &&
+          isTRUE(all.equal(bne_common, c(100, 120), tolerance = 1e-8)),
+        "price_series_transform('index') must rebase all series at the common start")
 }
 
 rent_fixture <- price_fixture
@@ -131,8 +149,8 @@ if (exists("build_rent_cpi_plot", mode = "function")) {
     dark = FALSE,
     view = "national"
   )
-  check(grepl("national long-run", p_national$labels$title, fixed = TRUE),
-        "build_rent_cpi_plot() must label national long-run Rent CPI views")
+  check(grepl("eight-capital-city average", p_national$labels$title, fixed = TRUE),
+        "build_rent_cpi_plot() must label the weighted-average view as eight-capital-city, not national")
 
   p_city <- build_rent_cpi_plot(
     rent_fixture,

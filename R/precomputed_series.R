@@ -172,7 +172,16 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
 
   rppi_combined <- bind_rows(rppi_all, rppi_houses, rppi_units)
 
-  rppi_cities <- sort(unique(rppi_all$city))
+  # The all-dwellings mean-price indexes are whole-of-state/territory series
+  # and are labelled with their true geography (review STAT-01); the genuine
+  # capital-city series are the houses/units median transfer prices.
+  rppi_states <- sort(unique(rppi_all$city))
+  rppi_states <- c(
+    rppi_states[rppi_states == "Australia"],
+    rppi_states[rppi_states != "Australia"]
+  )
+
+  rppi_cities <- sort(unique(c(rppi_houses$city, rppi_units$city)))
   rppi_cities <- c(
     rppi_cities[rppi_cities == "Weighted average of eight capital cities"],
     rppi_cities[rppi_cities != "Weighted average of eight capital cities"]
@@ -238,6 +247,7 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
       national_affordability_score_diagnostics_data,
     rppi_combined = rppi_combined,
     rppi_cities = rppi_cities,
+    rppi_states = rppi_states,
     rent_cpi_combined = rent_cpi_combined,
     rent_cpi_cities = rent_cpi_cities,
     rent_cpi_city_cities = rent_cpi_city_cities,

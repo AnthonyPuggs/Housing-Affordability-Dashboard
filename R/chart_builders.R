@@ -12,7 +12,16 @@ price_series_transform <- function(data, transform = c("levels", "yoy", "index")
       filter(!is.na(value)) %>%
       ungroup()
   } else if (identical(transform, "index")) {
+    # Rebase every selected series at the first quarter they all cover, so
+    # indexed lines are comparable. Previously each series rebased at its own
+    # first in-window date (review STAT-09).
+    common_start <- data %>%
+      group_by(city) %>%
+      summarise(start = min(date), .groups = "drop") %>%
+      pull(start) %>%
+      max()
     data %>%
+      filter(date >= common_start) %>%
       group_by(city) %>%
       arrange(date) %>%
       mutate(value = 100 * value / first(value)) %>%
@@ -23,12 +32,16 @@ price_series_transform <- function(data, transform = c("levels", "yoy", "index")
 }
 
 build_dwelling_price_plot <- function(data, transform = c("levels", "yoy", "index"),
-                                      dark = FALSE) {
+                                      dark = FALSE, value_label = NULL) {
   transform <- match.arg(transform)
-  y_lab <- switch(transform,
-                  levels = "Index",
-                  yoy = "YoY %",
-                  index = "Index (start=100)")
+  y_lab <- if (!is.null(value_label)) {
+    value_label
+  } else {
+    switch(transform,
+           levels = "Index",
+           yoy = "YoY %",
+           index = "Index (common start = 100)")
+  }
 
   ggplot(data, aes(x = date, y = value, color = city)) +
     geom_line(linewidth = 1, alpha = 0.9) +
@@ -80,7 +93,7 @@ build_rent_cpi_plot <- function(data, data_type = c("index", "yoy", "qoq"),
   date_range_label <- paste(
     format(min(data$date), "%b %Y"), "to", format(max(data$date), "%b %Y"))
   view_label <- switch(view,
-                       national = "national long-run",
+                       national = "eight-capital-city average",
                        city = "capital-city comparison")
 
   ggplot(data, aes(x = date, y = value, color = city)) +
@@ -413,7 +426,15 @@ overview_price_series_transform <- function(data,
   if (nrow(data) == 0) return(data)
 
   if (identical(transform, "index")) {
+    # Common-window rebase (review STAT-09): all series indexed at the first
+    # quarter every selected series covers, not each at its own start.
+    common_start <- data %>%
+      group_by(city) %>%
+      summarise(start = min(date), .groups = "drop") %>%
+      pull(start) %>%
+      max()
     data %>%
+      filter(date >= common_start) %>%
       group_by(city) %>%
       arrange(date) %>%
       mutate(plot_value = 100 * value / first(value)) %>%

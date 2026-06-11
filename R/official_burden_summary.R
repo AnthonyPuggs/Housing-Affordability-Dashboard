@@ -142,21 +142,21 @@ official_burden_summary <- function(sih_nhha, sih_stress,
       "nhha_lower_income_renter_stress",
       "Lower-income renter stress",
       nhha,
-      "Official NHHA/SIH: lower-income renters paying more than 30% of income.",
+      "Official NHHA/SIH: lower-income renters (bottom 40% of equivalised income, excluding Rent Assistance) paying more than 30% of income.",
       "ABS SIH File 13"
     ),
     official_pct_row(
       "lower_income_over_30",
       "Lower-income households >30%",
       lower_income,
-      "Official SIH: lower-income households with housing costs above 30% of income.",
+      "Official SIH: lower-income households (3rd-40th percentile of equivalised income) with housing costs above 30% of income.",
       "ABS SIH File 5"
     ),
     official_pct_row(
       "mortgage_owner_over_30",
       "Mortgage owners >30%",
       mortgage_owner,
-      "Official SIH: lower-income owner-with-mortgage households above 30% of income.",
+      "Official SIH: lower-income (3rd-40th percentile, equivalised) owner-with-mortgage households above 30% of income.",
       "ABS SIH File 5"
     ),
     official_pct_row(

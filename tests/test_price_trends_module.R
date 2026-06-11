@@ -42,6 +42,7 @@ if (all(file.exists(c(helper_path, chart_builder_path, module_path)))) {
   source(chart_builder_path)
 
   rppi_cities <- c("Sydney", "Melbourne", "Weighted average of eight capital cities")
+  rppi_states <- c("Australia", "New South Wales", "Victoria", "Queensland")
   rent_cpi_national_city <- "Weighted average of eight capital cities"
   rent_cpi_cities <- c(
     rent_cpi_national_city, "Brisbane", "Melbourne", "Perth", "Sydney"
@@ -79,11 +80,15 @@ if (all(file.exists(c(helper_path, chart_builder_path, module_path)))) {
     "Dwelling Price Index",
     "Rent CPI",
     "Capital Cities",
+    "States &amp; Territories",
     "Dwelling Type",
+    "state means",
+    "city medians",
+    "whole-of-state mean-price indexes",
     "Transform",
     "Data Type",
     "Rent CPI View",
-    "National long-run",
+    "Eight-capital-city average (long run)",
     "Capital-city comparison",
     "Include weighted-average reference",
     "City CPI rent series in the saved data are post-rebase and available only from July 2022",
@@ -120,6 +125,11 @@ if (file.exists(module_path)) {
     "input$rent_cpi_view",
     "updateSliderInput",
     "updateRadioButtons",
+    # Geography choices must swap with the dwelling-type view (state means
+    # vs genuine capital-city medians - review STAT-01).
+    "price_geography_choices(",
+    "price_geography_default(",
+    "updateSelectizeInput",
     "price_series_transform(",
     "rent_cpi_series_transform(",
     "build_dwelling_price_plot(",

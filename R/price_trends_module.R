@@ -19,6 +19,45 @@ rent_cpi_view_default_dates <- function(view) {
   rent_cpi_default_national_dates()
 }
 
+# Geography choices and defaults per dwelling-type view. "Total" shows
+# whole-of-state/territory mean-price indexes (ABS 6432.0 Table 1) under
+# their true geography; "Houses"/"Units" show genuine capital-city median
+# transfer prices (Table 2). See review STAT-01.
+price_geography_choices <- function(dwelling_type) {
+  if (identical(dwelling_type, "Total")) rppi_states else rppi_cities
+}
+
+price_geography_default <- function(dwelling_type) {
+  if (identical(dwelling_type, "Total")) {
+    intersect(c("New South Wales", "Victoria", "Queensland", "Australia"),
+              rppi_states)
+  } else {
+    intersect(c("Sydney", "Melbourne", "Brisbane"), rppi_cities)
+  }
+}
+
+price_geography_label <- function(dwelling_type) {
+  if (identical(dwelling_type, "Total")) {
+    "States & Territories"
+  } else {
+    "Capital Cities"
+  }
+}
+
+price_value_label <- function(dwelling_type, transform) {
+  if (identical(transform, "yoy")) {
+    return("YoY %")
+  }
+  if (identical(transform, "index")) {
+    return("Index (common start = 100)")
+  }
+  if (identical(dwelling_type, "Total")) {
+    "State mean price index (start = 100)"
+  } else {
+    "Median transfer price ($'000)"
+  }
+}
+
 priceTrendsPageUI <- function(id) {
   ns <- NS(id)
 
@@ -26,7 +65,7 @@ priceTrendsPageUI <- function(id) {
     "Price Trends",
     policy_page_header(
       "Price Trends",
-      "Capital-city dwelling price indexes and ABS rent CPI movements."
+      "State mean dwelling price indexes, capital-city median prices and ABS rent CPI movements."
     ),
     navset_card_tab(
       nav_panel(
@@ -34,14 +73,17 @@ priceTrendsPageUI <- function(id) {
         layout_sidebar(
           sidebar = sidebar(
             width = 300, open = "desktop",
-            selectizeInput(ns("price_cities"), "Capital Cities",
-                           choices = rppi_cities,
-                           selected = c("Sydney", "Melbourne", "Brisbane",
-                                        "Weighted average of eight capital cities"),
-                           multiple = TRUE),
             radioButtons(ns("price_dwelling"), "Dwelling Type",
-                         choices = c("Total", "Houses", "Units"),
+                         choices = c(
+                           "All dwellings - state means" = "Total",
+                           "Houses - city medians" = "Houses",
+                           "Units - city medians" = "Units"
+                         ),
                          selected = "Total"),
+            selectizeInput(ns("price_cities"), "States & Territories",
+                           choices = rppi_states,
+                           selected = price_geography_default("Total"),
+                           multiple = TRUE),
             dateRangeInput(ns("price_dates"), "Date Range",
                            start = as.Date("2003-01-01"),
                            end = Sys.Date(),
@@ -49,12 +91,13 @@ priceTrendsPageUI <- function(id) {
             radioButtons(ns("price_transform"), "Transform",
                          choices = c("Levels" = "levels",
                                      "YoY %" = "yoy",
-                                     "Index (start=100)" = "index"),
-                         selected = "levels")
+                                     "Index (common start = 100)" = "index"),
+                         selected = "levels"),
+            source_note("The all-dwellings view shows whole-of-state mean-price indexes (ABS 6432.0 Table 1); capital-city growth can differ from its state. The houses/units views show capital-city median transfer prices (Table 2).")
           ),
           policy_chart_card(
-            "Dwelling Price Index by Capital City",
-            note = "ABS dwelling price data. Price indexes describe market price movements, not household affordability or borrowing capacity.",
+            "Dwelling Prices by Geography",
+            note = "ABS dwelling price data. Price series describe market price movements, not household affordability or borrowing capacity. Index transform rebases every selected series at the first quarter they all cover.",
             div(class = "chart-wide",
                 plotlyOutput(ns("price_chart"), height = "100%", width = "100%"))
           )
@@ -66,7 +109,7 @@ priceTrendsPageUI <- function(id) {
           sidebar = sidebar(
             width = 300, open = "desktop",
             radioButtons(ns("rent_cpi_view"), "Rent CPI View",
-                         choices = c("National long-run" = "national",
+                         choices = c("Eight-capital-city average (long run)" = "national",
                                      "Capital-city comparison" = "city"),
                          selected = "national"),
             conditionalPanel(
@@ -81,7 +124,7 @@ priceTrendsPageUI <- function(id) {
                             value = FALSE)
             ),
             tags$p(
-              "City CPI rent series in the saved data are post-rebase and available only from July 2022. The national weighted average has longer ABS SDMX history.",
+              "City CPI rent series in the saved data are post-rebase and available only from July 2022. The weighted average of the eight capital cities (rest-of-state areas are not covered) has longer ABS SDMX history.",
               class = "source-note small mb-3"
             ),
             radioButtons(ns("rent_cpi_datatype"), "Data Type",
@@ -113,6 +156,18 @@ priceTrendsPageUI <- function(id) {
 
 priceTrendsPageServer <- function(id, is_dark) {
   moduleServer(id, function(input, output, session) {
+    # Swap geography choices when the dwelling-type view changes: state
+    # mean-price indexes vs genuine capital-city medians.
+    observeEvent(input$price_dwelling, {
+      updateSelectizeInput(
+        session,
+        "price_cities",
+        label = price_geography_label(input$price_dwelling),
+        choices = price_geography_choices(input$price_dwelling),
+        selected = price_geography_default(input$price_dwelling)
+      )
+    }, ignoreInit = TRUE)
+
     price_data <- reactive({
       req(input$price_cities)
       d <- rppi_combined %>%
@@ -128,9 +183,15 @@ priceTrendsPageServer <- function(id, is_dark) {
     output$price_chart <- renderPlotly({
       d <- price_data()
       validate(need(nrow(d) > 0,
-        "No data for selected cities/dwelling type. Try 'Total' or check dates."))
+        "No data for the selected geographies/dwelling type. Check the dates or selection."))
 
-      p <- build_dwelling_price_plot(d, input$price_transform, is_dark())
+      p <- build_dwelling_price_plot(
+        d,
+        input$price_transform,
+        is_dark(),
+        value_label = price_value_label(input$price_dwelling,
+                                        input$price_transform)
+      )
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%

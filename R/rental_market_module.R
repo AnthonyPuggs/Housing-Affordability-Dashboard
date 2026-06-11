@@ -83,7 +83,7 @@ rentalMarketPageUI <- function(id) {
           selectInput(ns("rental_cost_breakdown"), "Rental Costs By",
                       choices = c("Age Group" = "age_group",
                                   "Family Type" = "family_type",
-                                  "Income Quintile" = "equiv_income_quintile"))
+                                  "Equivalised Income Quintile" = "equiv_income_quintile"))
         ),
         div(class = "rental-market-grid",
           layout_column_wrap(

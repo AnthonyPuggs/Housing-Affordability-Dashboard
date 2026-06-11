@@ -148,16 +148,28 @@ city_colours <- c(
   "Hobart" = "#a65628",
   "Darwin" = "#f781bf",
   "Canberra" = "#999999",
-  "Weighted average of eight capital cities" = "#000000"
+  "Weighted average of eight capital cities" = "#000000",
+  # State/territory series (all-dwellings mean-price indexes) reuse their
+  # capital's hue so the palette stays stable across dwelling-type views.
+  "New South Wales" = "#e41a1c",
+  "Victoria" = "#377eb8",
+  "Queensland" = "#4daf4a",
+  "South Australia" = "#984ea3",
+  "Western Australia" = "#ff7f00",
+  "Tasmania" = "#a65628",
+  "Northern Territory" = "#f781bf",
+  "Australian Capital Territory" = "#999999",
+  "Australia" = "#000000"
 )
 
-# Theme-aware city palette: the eight-capitals weighted average is pure black,
+# Theme-aware city palette: the national reference lines are pure black,
 # which is invisible against the dark panel background (~1.2:1 contrast), so
-# dark mode swaps it for a light tone. Chart builders pass their dark flag in.
+# dark mode swaps them for a light tone. Chart builders pass their dark flag.
 city_palette <- function(dark = FALSE) {
   colours <- city_colours
   if (isTRUE(dark)) {
     colours[["Weighted average of eight capital cities"]] <- "#E8EEF7"
+    colours[["Australia"]] <- "#E8EEF7"
   }
   colours
 }

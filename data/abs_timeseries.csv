@@ -103,537 +103,537 @@ date,value,series,series_id,category,unit,frequency
 2026-02-01,101.62,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
 2026-03-01,102.11,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
 2026-04-01,102.84,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
-2011-09-01,100,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2011-12-01,101.15819952619111,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2012-03-01,99.34193208739141,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2012-06-01,99.52619110292183,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2012-09-01,98.8418004738089,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2012-12-01,98.86812319031326,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2013-03-01,99.94735456699132,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2013-06-01,99.86838641747828,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2013-09-01,100.94761779415636,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2013-12-01,104.44853908923402,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2014-03-01,106.00157936299026,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2014-06-01,106.05422479599895,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2014-09-01,105.81732034745986,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2014-12-01,108.58120558041591,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2015-03-01,109.08133719399842,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2015-06-01,108.6338510134246,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2015-09-01,110.08160042116346,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2015-12-01,111.05554093182417,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2016-03-01,111.97683600947619,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2016-06-01,111.52934982890234,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2016-09-01,111.71360884443276,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2016-12-01,114.13529876283232,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2017-03-01,115.60937088707554,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2017-06-01,115.18820742300606,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2017-09-01,116.47802053171887,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2017-12-01,118.39957883653594,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2018-03-01,119.13661489865754,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2018-06-01,118.26796525401421,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2018-09-01,118.89971045011845,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2018-12-01,120.95288233745723,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2019-03-01,120.5053961568834,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2019-06-01,119.63674651224008,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2019-09-01,119.18926033166623,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2019-12-01,123.87470386943933,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2020-03-01,122.47959989470914,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2020-06-01,123.03237694130034,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2020-09-01,126.95446170044751,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2020-12-01,132.40326401684655,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2021-03-01,136.72018952355884,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2021-06-01,143.06396420110556,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2021-09-01,150.98710186891287,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2021-12-01,163.01658331139774,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2022-03-01,169.88681231903132,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2022-06-01,171.4661753092919,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2022-09-01,170.93972097920508,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2022-12-01,174.44064227428274,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2023-03-01,174.59857857330877,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2023-06-01,182.73229797315085,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2023-09-01,186.3121874177415,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2023-12-01,194.49855225059227,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2024-03-01,202.15846275335613,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2024-06-01,206.89655172413794,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2024-09-01,215.2145301395104,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2024-12-01,223.34824953935248,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2025-03-01,222.47959989470917,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2025-06-01,228.32324295867332,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2025-09-01,236.1410897604633,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2025-12-01,247.0913398262701,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2026-03-01,256.14635430376416,Dwelling Price Index ;  Adelaide ;,A83728622K,House Prices,Index,Quarter
-2011-09-01,100,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2011-12-01,99.27705223880596,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2012-03-01,98.50746268656717,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2012-06-01,98.69402985074626,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2012-09-01,99.37033582089553,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2012-12-01,99.37033582089553,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2013-03-01,99.580223880597,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2013-06-01,100.51305970149254,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2013-09-01,100.34981343283582,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2013-12-01,102.49533582089552,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2014-03-01,104.10447761194028,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2014-06-01,105.17723880597015,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2014-09-01,105.99347014925374,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2014-12-01,107.50932835820895,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2015-03-01,107.6492537313433,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2015-06-01,109.11847014925374,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2015-09-01,110.21455223880596,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2015-12-01,111.68376865671641,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2016-03-01,110.47108208955223,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2016-06-01,112.3367537313433,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2016-09-01,112.56996268656717,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2016-12-01,114.8554104477612,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2017-03-01,115.20522388059702,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2017-06-01,115.74160447761194,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2017-09-01,117.07089552238806,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2017-12-01,118.12033582089552,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2018-03-01,118.81996268656717,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2018-06-01,119.28638059701493,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2018-09-01,120.33582089552239,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2018-12-01,119.00652985074626,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2019-03-01,116.83768656716418,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2019-06-01,118.16697761194028,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2019-09-01,119.89272388059702,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2019-12-01,121.40858208955223,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2020-03-01,122.41138059701491,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2020-06-01,122.38805970149251,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2020-09-01,126.25932835820895,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2020-12-01,131.18003731343285,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2021-03-01,138.3162313432836,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2021-06-01,148.4141791044776,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2021-09-01,157.25279850746267,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2021-12-01,171.36194029850745,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2022-03-01,179.29104477611938,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2022-06-01,181.2266791044776,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2022-09-01,177.07555970149252,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2022-12-01,175.1865671641791,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2023-03-01,176.5625,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2023-06-01,181.34328358208955,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2023-09-01,187.77985074626866,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2023-12-01,193.72667910447763,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2024-03-01,200.27985074626864,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2024-06-01,209.30503731343282,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2024-09-01,213.19962686567163,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2024-12-01,218.35354477611938,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2025-03-01,223.34421641791047,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2025-06-01,228.49813432835816,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2025-09-01,238.03638059701493,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2025-12-01,250.4430970149254,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2026-03-01,262.05690298507466,Dwelling Price Index ;  Brisbane ;,A83728617T,House Prices,Index,Quarter
-2011-09-01,100,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2011-12-01,102.55707762557078,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2012-03-01,101.00456621004565,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2012-06-01,100.85844748858447,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2012-09-01,99.12328767123289,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2012-12-01,103.03196347031964,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2013-03-01,99.324200913242,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2013-06-01,103.10502283105023,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2013-09-01,100.49315068493152,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2013-12-01,104.65753424657534,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2014-03-01,102.83105022831049,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2014-06-01,103.81735159817352,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2014-09-01,104.09132420091325,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2014-12-01,106.41095890410959,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2015-03-01,107.19634703196346,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2015-06-01,107.99999999999999,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2015-09-01,108.42009132420091,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2015-12-01,111.7442922374429,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2016-03-01,108.78538812785388,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2016-06-01,111.65296803652967,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2016-09-01,111.7442922374429,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2016-12-01,117.2420091324201,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2017-03-01,117.71689497716895,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2017-06-01,118.68493150684931,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2017-09-01,118.1552511415525,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2017-12-01,122.39269406392694,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2018-03-01,123.12328767123289,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2018-06-01,124.18264840182648,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2018-09-01,123.17808219178082,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2018-12-01,123.8904109589041,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2019-03-01,122.53881278538812,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2019-06-01,122.10045662100457,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2019-09-01,123.05022831050229,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2019-12-01,129.1324200913242,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2020-03-01,128.05479452054794,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2020-06-01,131.12328767123287,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2020-09-01,133.88127853881278,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2020-12-01,139.54337899543378,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2021-03-01,149.44292237442923,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2021-06-01,161.75342465753425,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2021-09-01,165.60730593607306,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2021-12-01,182.5570776255708,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2022-03-01,179.70776255707761,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2022-06-01,182.53881278538813,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2022-09-01,172.9497716894977,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2022-12-01,175.8538812785388,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2023-03-01,171.83561643835617,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2023-06-01,172,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2023-09-01,173.02283105022832,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2023-12-01,172.89497716894977,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2024-03-01,173.84474885844747,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2024-06-01,176.1826484018265,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2024-09-01,175.78082191780823,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2024-12-01,172.69406392694066,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2025-03-01,171.52511415525115,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2025-06-01,174.11872146118722,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2025-09-01,173.31506849315068,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2025-12-01,183.4337899543379,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2026-03-01,185.93607305936072,Dwelling Price Index ;  Canberra ;,A83728642V,House Prices,Index,Quarter
-2011-09-01,100,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2011-12-01,90.39602066194757,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2012-03-01,88.88463745934571,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2012-06-01,87.48804285440978,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2012-09-01,89.19074038645493,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2012-12-01,95.88674191696957,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2013-03-01,93.47618136598432,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2013-06-01,94.1649129519801,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2013-09-01,95.33193036158407,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2013-12-01,99.84694853644537,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2014-03-01,98.58427396211975,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2014-06-01,100.32523436005356,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2014-09-01,95.96326764874689,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2014-12-01,98.90950832217332,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2015-03-01,93.13181557298641,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2015-06-01,95.38932466041706,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2015-09-01,99.90434283527836,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2015-12-01,92.46221541993495,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2016-03-01,93.70575856131623,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2016-06-01,92.21350679165869,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2016-09-01,89.24813468528792,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2016-12-01,87.54543715324277,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2017-03-01,87.0862827625789,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2017-06-01,86.85670556724699,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2017-09-01,86.58886550602641,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2017-12-01,84.38875071742874,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2018-03-01,85.91926535297493,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2018-06-01,84.42701358331739,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2018-09-01,79.79720681079013,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2018-12-01,85.57489955997704,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2019-03-01,82.55213315477329,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2019-06-01,84.12091065620814,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2019-09-01,84.04438492443084,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2019-12-01,78.80237229768508,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2020-03-01,79.56762961545819,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2020-06-01,81.6529558063899,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2020-09-01,80.37114979911996,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2020-12-01,87.67935718385307,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2021-03-01,85.53663669408839,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2021-06-01,89.97512913717237,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2021-09-01,92.61526688348957,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2021-12-01,96.26937057585612,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2022-03-01,101.83661756265543,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2022-06-01,96.30763344174478,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2022-09-01,94.01186148842548,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2022-12-01,97.58943944901472,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2023-03-01,98.98603405395063,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2023-06-01,99.08169121867226,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2023-09-01,93.76315286014922,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2023-12-01,97.05375932657356,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2024-03-01,101.47312033671321,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2024-06-01,102.67840061220585,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2024-09-01,95.84847905108091,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2024-12-01,96.44155347235508,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2025-03-01,96.09718767935718,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2025-06-01,102.48708628276258,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2025-09-01,106.27511000573942,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2025-12-01,110.73273388176771,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2026-03-01,114.27204897646833,Dwelling Price Index ;  Darwin ;,A83728637A,House Prices,Index,Quarter
-2011-09-01,100,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2011-12-01,101.60603080957063,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2012-03-01,99.86889544411667,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2012-06-01,96.75516224188789,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2012-09-01,95.41134054408391,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2012-12-01,97.60734185512946,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2013-03-01,96.26352015732546,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2013-06-01,97.54178957718781,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2013-09-01,97.50901343821697,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2013-12-01,100.49164208456244,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2014-03-01,100.65552277941659,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2014-06-01,100.91773189118321,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2014-09-01,101.86823992133726,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2014-12-01,101.5732546705998,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2015-03-01,102.49098656178302,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2015-06-01,105.27695837430349,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2015-09-01,105.30973451327432,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2015-12-01,107.66961651917404,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2016-03-01,105.63749590298261,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2016-06-01,109.50508030154047,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2016-09-01,110.94723041625696,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2016-12-01,114.88036709275646,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2017-03-01,116.68305473615209,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2017-06-01,118.45296624057684,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2017-09-01,122.81219272369714,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2017-12-01,126.02425434283839,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2018-03-01,130.67846607669617,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2018-06-01,131.66175024582103,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2018-09-01,134.61160275319565,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2018-12-01,136.38151425762044,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2019-03-01,134.8738118649623,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2019-06-01,138.70862012454933,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2019-09-01,138.87250081940346,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2019-12-01,145.55883316945264,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2020-03-01,150.8030154047853,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2020-06-01,150.86856768272696,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2020-09-01,151.29465748934777,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2020-12-01,164.1429039659128,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2021-03-01,178.99049491969845,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2021-06-01,187.08620124549324,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2021-09-01,200.49164208456241,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2021-12-01,225.56538839724683,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2022-03-01,227.53195673549658,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2022-06-01,225.17207472959683,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2022-09-01,222.0255653883972,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2022-12-01,218.09242871189772,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2023-03-01,219.69845952146835,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2023-06-01,217.66633890527694,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2023-09-01,216.3880694854146,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2023-12-01,216.3880694854146,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2024-03-01,219.63290724352672,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2024-06-01,216.19141265158964,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2024-09-01,211.96329072435267,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2024-12-01,219.69845952146835,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2025-03-01,221.63225172074726,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2025-06-01,220.78007210750573,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2025-09-01,226.05703048180925,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2025-12-01,236.6764995083579,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2026-03-01,245.91937069813176,Dwelling Price Index ;  Hobart ;,A83728632R,House Prices,Index,Quarter
-2011-09-01,100,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2011-12-01,98.82949668357394,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2012-03-01,97.54194303550527,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2012-06-01,97.58095981271946,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2012-09-01,95.92274678111588,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2012-12-01,97.87358564182598,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2013-03-01,98.86851346078814,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2013-06-01,99.76589933671478,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2013-09-01,102.08739758095979,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2013-12-01,104.97463909481077,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2014-03-01,106.22317596566523,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2014-06-01,106.69137729223566,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2014-09-01,107.47171283651969,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2014-12-01,110.59305501365586,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2015-03-01,113.44127975029261,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2015-06-01,118.31837690206788,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2015-09-01,120.26921576277797,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2015-12-01,121.49824424502536,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2016-03-01,122.00546234880998,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2016-06-01,123.8197424892704,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2016-09-01,126.16074912212252,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2016-12-01,131.52555598907531,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2017-03-01,135.70035115099492,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2017-06-01,141.2017167381974,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2017-09-01,139.99219664455717,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2017-12-01,145.70815450643775,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2018-03-01,145.08388607101054,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2018-06-01,143.91338275458446,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2018-09-01,139.95317986734295,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2018-12-01,138.23644166991807,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2019-03-01,133.2422941865002,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2019-06-01,134.78345688646115,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2019-09-01,139.58252048380803,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2019-12-01,146.13733905579397,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2020-03-01,148.4978540772532,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2020-06-01,146.03979711275846,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2020-09-01,147.73702692157627,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2020-12-01,154.58447132266872,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2021-03-01,162.29028482247367,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2021-06-01,170.65938353492,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2021-09-01,175.75107296137338,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2021-12-01,183.73000390167772,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2022-03-01,183.80803745610612,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2022-06-01,181.11587982832617,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2022-09-01,175.7900897385876,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2022-12-01,175.82910651580178,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2023-03-01,175.26336324619584,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2023-06-01,176.14124073351542,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2023-09-01,176.4143581740148,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2023-12-01,179.6137339055794,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2024-03-01,177.87748731954738,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2024-06-01,177.29223566133436,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2024-09-01,174.2489270386266,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2024-12-01,176.02419040187277,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2025-03-01,177.56535310183378,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2025-06-01,179.12602419040186,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2025-09-01,180.82325399921965,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2025-12-01,185.23214982442448,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2026-03-01,184.76394849785407,Dwelling Price Index ;  Melbourne ;,A83728612F,House Prices,Index,Quarter
-2011-09-01,100,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2011-12-01,99.35213414634147,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2012-03-01,101.44817073170734,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2012-06-01,101.06707317073172,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2012-09-01,102.45807926829269,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2012-12-01,104.85899390243902,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2013-03-01,106.87881097560977,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2013-06-01,109.12728658536588,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2013-09-01,109.07012195121952,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2013-12-01,111.66158536585367,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2014-03-01,111.83307926829269,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2014-06-01,112.86204268292683,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2014-09-01,111.56631097560977,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2014-12-01,112.08079268292686,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2015-03-01,110.21341463414636,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2015-06-01,109.75609756097562,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2015-09-01,106.63109756097562,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2015-12-01,105.20198170731709,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2016-03-01,103.3346036585366,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2016-06-01,101.23856707317074,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2016-09-01,99.50457317073173,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2016-12-01,102.57240853658536,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2017-03-01,100.03810975609757,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2017-06-01,99.16158536585367,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2017-09-01,99.31402439024392,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2017-12-01,101.0861280487805,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2018-03-01,101.02896341463416,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2018-06-01,98.38033536585365,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2018-09-01,98.62804878048782,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2018-12-01,97.21798780487806,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2019-03-01,96.41768292682927,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2019-06-01,95.35060975609755,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2019-09-01,95.99847560975611,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2019-12-01,95.14100609756099,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2020-03-01,95.5221036585366,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2020-06-01,95.10289634146343,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2020-09-01,99.73323170731709,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2020-12-01,105.33536585365854,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2021-03-01,110.95655487804879,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2021-06-01,111.20426829268295,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2021-09-01,113.5861280487805,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2021-12-01,118.00685975609757,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2022-03-01,119.7408536585366,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2022-06-01,122.65625000000003,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2022-09-01,119.7408536585366,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2022-12-01,122.9611280487805,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2023-03-01,124.54268292682929,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2023-06-01,126.92454268292686,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2023-09-01,132.3551829268293,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2023-12-01,139.7675304878049,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2024-03-01,146.53201219512198,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2024-06-01,157.79344512195124,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2024-09-01,159.92759146341464,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2024-12-01,165.47256097560975,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2025-03-01,167.66387195121953,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2025-06-01,174.25685975609758,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2025-09-01,179.9733231707317,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2025-12-01,196.22713414634148,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2026-03-01,210.27057926829272,Dwelling Price Index ;  Perth ;,A83728627W,House Prices,Index,Quarter
-2011-09-01,100,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2011-12-01,98.98298816568047,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2012-03-01,101.16494082840237,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2012-06-01,102.1079881656805,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2012-09-01,100.68417159763314,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2012-12-01,103.92011834319528,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2013-03-01,105.26997041420118,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2013-06-01,107.24852071005917,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2013-09-01,109.83727810650889,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2013-12-01,114.75591715976333,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2014-03-01,116.71597633136098,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2014-06-01,120.17381656804736,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2014-09-01,123.24334319526629,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2014-12-01,128.23594674556213,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2015-03-01,132.80325443786984,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2015-06-01,140.69896449704143,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2015-09-01,145.728550295858,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2015-12-01,144.56360946745562,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2016-03-01,144.10133136094674,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2016-06-01,148.29881656804736,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2016-09-01,152.3113905325444,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2016-12-01,158.78328402366867,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2017-03-01,163.79437869822488,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2017-06-01,167.69600591715977,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2017-09-01,166.03180473372782,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2017-12-01,167.65902366863907,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2018-03-01,166.38313609467457,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2018-06-01,163.84985207100593,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2018-09-01,160.59541420118344,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2018-12-01,156.30547337278108,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2019-03-01,152.6812130177515,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2019-06-01,153.0140532544379,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2019-09-01,159.72633136094677,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2019-12-01,163.4060650887574,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2020-03-01,165.64349112426035,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2020-06-01,164.20118343195267,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2020-09-01,168.80547337278108,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2020-12-01,176.14644970414204,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2021-03-01,186.03920118343197,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2021-06-01,193.1028106508876,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2021-09-01,212.3335798816568,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2021-12-01,223.53920118343197,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2022-03-01,225.81360946745565,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2022-06-01,220.2847633136095,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2022-09-01,210.09615384615387,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2022-12-01,209.57840236686397,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2023-03-01,208.8757396449704,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2023-06-01,217.95488165680473,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2023-09-01,218.3431952662722,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2023-12-01,223.3542899408284,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2024-03-01,225.14792899408286,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2024-06-01,228.47633136094677,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2024-09-01,227.90310650887577,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2024-12-01,232.23002958579886,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2025-03-01,230.82470414201185,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2025-06-01,236.7233727810651,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2025-09-01,239.55251479289942,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2025-12-01,243.9903846153846,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2026-03-01,244.97041420118344,Dwelling Price Index ;  Sydney ;,A83728607L,House Prices,Index,Quarter
-2011-09-01,100,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2011-12-01,99.20537897310513,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2012-03-01,99.5517522412388,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2012-06-01,99.81662591687041,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2012-09-01,99.08312958435208,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2012-12-01,101.14099429502852,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2013-03-01,102.09861450692748,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2013-06-01,103.52485737571313,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2013-09-01,105.03259983700082,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2013-12-01,108.53708231458843,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2014-03-01,109.88182559087203,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2014-06-01,111.5525672371638,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2014-09-01,112.77506112469437,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2014-12-01,115.8720456397718,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2015-03-01,118.03178484107579,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2015-06-01,122.26976365118173,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2015-09-01,124.49062754686227,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2015-12-01,124.61287693561532,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2016-03-01,124.1442542787286,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2016-06-01,126.22249388753055,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2016-09-01,128.0766096169519,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2016-12-01,132.76283618581908,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2017-03-01,135.49307253463732,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2017-06-01,138.3048084759576,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2017-09-01,137.81581092094538,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2017-12-01,140.52567237163817,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2018-03-01,140.1792991035045,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2018-06-01,138.77343113284434,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2018-09-01,136.85819070904645,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2018-12-01,134.75957620211898,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2019-03-01,131.62184189079053,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2019-06-01,132.29421352893235,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2019-09-01,136.26731866340666,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2019-12-01,139.93480032599837,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2020-03-01,141.54441727791362,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2020-06-01,140.4645476772616,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2020-09-01,143.98940505297475,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2020-12-01,150.55012224938875,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2021-03-01,158.5778321108394,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2021-06-01,165.83129584352076,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2021-09-01,176.38549307253464,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2021-12-01,186.79706601466992,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2022-03-01,189.6088019559902,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2022-06-01,187.69356153219235,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2022-09-01,181.43846780766094,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2022-12-01,181.5403422982885,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2023-03-01,181.51996740016298,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2023-06-01,186.40994295028523,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2023-09-01,188.5085574572127,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2023-12-01,193.43928280358597,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2024-03-01,196.02689486552566,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2024-06-01,200.12224938875306,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2024-09-01,200.34637326813365,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2024-12-01,204.3398533007335,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2025-03-01,205.33822330888344,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2025-06-01,209.84107579462105,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2025-09-01,214.119804400978,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2025-12-01,221.84189079054605,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2026-03-01,226.3854930725346,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2011-12-01,99.20537897310513,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2012-03-01,99.5517522412388,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2012-06-01,99.81662591687041,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2012-09-01,99.08312958435208,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2012-12-01,101.14099429502852,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2013-03-01,102.09861450692748,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2013-06-01,103.52485737571313,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2013-09-01,105.03259983700082,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2013-12-01,108.53708231458843,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2014-03-01,109.88182559087203,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2014-06-01,111.5525672371638,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2014-09-01,112.77506112469437,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2014-12-01,115.8720456397718,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2015-03-01,118.03178484107579,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2015-06-01,122.26976365118173,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2015-09-01,124.49062754686227,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2015-12-01,124.61287693561532,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2016-03-01,124.1442542787286,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2016-06-01,126.22249388753055,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2016-09-01,128.0766096169519,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2016-12-01,132.76283618581908,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2017-03-01,135.49307253463732,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2017-06-01,138.3048084759576,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2017-09-01,137.81581092094538,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2017-12-01,140.52567237163817,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2018-03-01,140.1792991035045,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2018-06-01,138.77343113284434,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2018-09-01,136.85819070904645,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2018-12-01,134.75957620211898,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2019-03-01,131.62184189079053,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2019-06-01,132.29421352893235,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2019-09-01,136.26731866340666,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2019-12-01,139.93480032599837,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2020-03-01,141.54441727791362,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2020-06-01,140.4645476772616,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2020-09-01,143.98940505297475,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2020-12-01,150.55012224938875,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2021-03-01,158.5778321108394,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2021-06-01,165.83129584352076,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2021-09-01,176.38549307253464,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2021-12-01,186.79706601466992,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2022-03-01,189.6088019559902,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2022-06-01,187.69356153219235,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2022-09-01,181.43846780766094,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2022-12-01,181.5403422982885,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2023-03-01,181.51996740016298,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2023-06-01,186.40994295028523,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2023-09-01,188.5085574572127,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2023-12-01,193.43928280358597,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2024-03-01,196.02689486552566,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2024-06-01,200.12224938875306,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2024-09-01,200.34637326813365,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2024-12-01,204.3398533007335,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2025-03-01,205.33822330888344,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2025-06-01,209.84107579462105,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2025-09-01,214.119804400978,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2025-12-01,221.84189079054605,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2026-03-01,226.3854930725346,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2011-12-01,102.55707762557078,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2012-03-01,101.00456621004565,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2012-06-01,100.85844748858447,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2012-09-01,99.12328767123289,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2012-12-01,103.03196347031964,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2013-03-01,99.324200913242,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2013-06-01,103.10502283105023,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2013-09-01,100.49315068493152,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2013-12-01,104.65753424657534,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2014-03-01,102.83105022831049,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2014-06-01,103.81735159817352,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2014-09-01,104.09132420091325,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2014-12-01,106.41095890410959,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2015-03-01,107.19634703196346,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2015-06-01,107.99999999999999,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2015-09-01,108.42009132420091,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2015-12-01,111.7442922374429,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2016-03-01,108.78538812785388,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2016-06-01,111.65296803652967,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2016-09-01,111.7442922374429,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2016-12-01,117.2420091324201,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2017-03-01,117.71689497716895,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2017-06-01,118.68493150684931,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2017-09-01,118.1552511415525,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2017-12-01,122.39269406392694,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2018-03-01,123.12328767123289,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2018-06-01,124.18264840182648,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2018-09-01,123.17808219178082,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2018-12-01,123.8904109589041,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2019-03-01,122.53881278538812,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2019-06-01,122.10045662100457,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2019-09-01,123.05022831050229,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2019-12-01,129.1324200913242,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2020-03-01,128.05479452054794,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2020-06-01,131.12328767123287,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2020-09-01,133.88127853881278,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2020-12-01,139.54337899543378,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2021-03-01,149.44292237442923,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2021-06-01,161.75342465753425,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2021-09-01,165.60730593607306,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2021-12-01,182.5570776255708,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2022-03-01,179.70776255707761,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2022-06-01,182.53881278538813,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2022-09-01,172.9497716894977,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2022-12-01,175.8538812785388,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2023-03-01,171.83561643835617,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2023-06-01,172,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2023-09-01,173.02283105022832,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2023-12-01,172.89497716894977,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2024-03-01,173.84474885844747,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2024-06-01,176.1826484018265,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2024-09-01,175.78082191780823,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2024-12-01,172.69406392694066,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2025-03-01,171.52511415525115,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2025-06-01,174.11872146118722,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2025-09-01,173.31506849315068,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2025-12-01,183.4337899543379,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2026-03-01,185.93607305936072,Dwelling Price Index ;  Australian Capital Territory ;,A83728642V,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2011-12-01,98.98298816568047,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2012-03-01,101.16494082840237,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2012-06-01,102.1079881656805,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2012-09-01,100.68417159763314,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2012-12-01,103.92011834319528,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2013-03-01,105.26997041420118,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2013-06-01,107.24852071005917,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2013-09-01,109.83727810650889,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2013-12-01,114.75591715976333,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2014-03-01,116.71597633136098,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2014-06-01,120.17381656804736,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2014-09-01,123.24334319526629,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2014-12-01,128.23594674556213,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2015-03-01,132.80325443786984,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2015-06-01,140.69896449704143,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2015-09-01,145.728550295858,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2015-12-01,144.56360946745562,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2016-03-01,144.10133136094674,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2016-06-01,148.29881656804736,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2016-09-01,152.3113905325444,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2016-12-01,158.78328402366867,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2017-03-01,163.79437869822488,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2017-06-01,167.69600591715977,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2017-09-01,166.03180473372782,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2017-12-01,167.65902366863907,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2018-03-01,166.38313609467457,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2018-06-01,163.84985207100593,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2018-09-01,160.59541420118344,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2018-12-01,156.30547337278108,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2019-03-01,152.6812130177515,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2019-06-01,153.0140532544379,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2019-09-01,159.72633136094677,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2019-12-01,163.4060650887574,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2020-03-01,165.64349112426035,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2020-06-01,164.20118343195267,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2020-09-01,168.80547337278108,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2020-12-01,176.14644970414204,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2021-03-01,186.03920118343197,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2021-06-01,193.1028106508876,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2021-09-01,212.3335798816568,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2021-12-01,223.53920118343197,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2022-03-01,225.81360946745565,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2022-06-01,220.2847633136095,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2022-09-01,210.09615384615387,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2022-12-01,209.57840236686397,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2023-03-01,208.8757396449704,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2023-06-01,217.95488165680473,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2023-09-01,218.3431952662722,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2023-12-01,223.3542899408284,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2024-03-01,225.14792899408286,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2024-06-01,228.47633136094677,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2024-09-01,227.90310650887577,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2024-12-01,232.23002958579886,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2025-03-01,230.82470414201185,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2025-06-01,236.7233727810651,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2025-09-01,239.55251479289942,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2025-12-01,243.9903846153846,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2026-03-01,244.97041420118344,Dwelling Price Index ;  New South Wales ;,A83728607L,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2011-12-01,90.39602066194757,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2012-03-01,88.88463745934571,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2012-06-01,87.48804285440978,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2012-09-01,89.19074038645493,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2012-12-01,95.88674191696957,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2013-03-01,93.47618136598432,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2013-06-01,94.1649129519801,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2013-09-01,95.33193036158407,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2013-12-01,99.84694853644537,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2014-03-01,98.58427396211975,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2014-06-01,100.32523436005356,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2014-09-01,95.96326764874689,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2014-12-01,98.90950832217332,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2015-03-01,93.13181557298641,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2015-06-01,95.38932466041706,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2015-09-01,99.90434283527836,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2015-12-01,92.46221541993495,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2016-03-01,93.70575856131623,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2016-06-01,92.21350679165869,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2016-09-01,89.24813468528792,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2016-12-01,87.54543715324277,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2017-03-01,87.0862827625789,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2017-06-01,86.85670556724699,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2017-09-01,86.58886550602641,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2017-12-01,84.38875071742874,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2018-03-01,85.91926535297493,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2018-06-01,84.42701358331739,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2018-09-01,79.79720681079013,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2018-12-01,85.57489955997704,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2019-03-01,82.55213315477329,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2019-06-01,84.12091065620814,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2019-09-01,84.04438492443084,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2019-12-01,78.80237229768508,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2020-03-01,79.56762961545819,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2020-06-01,81.6529558063899,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2020-09-01,80.37114979911996,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2020-12-01,87.67935718385307,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2021-03-01,85.53663669408839,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2021-06-01,89.97512913717237,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2021-09-01,92.61526688348957,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2021-12-01,96.26937057585612,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2022-03-01,101.83661756265543,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2022-06-01,96.30763344174478,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2022-09-01,94.01186148842548,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2022-12-01,97.58943944901472,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2023-03-01,98.98603405395063,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2023-06-01,99.08169121867226,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2023-09-01,93.76315286014922,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2023-12-01,97.05375932657356,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2024-03-01,101.47312033671321,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2024-06-01,102.67840061220585,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2024-09-01,95.84847905108091,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2024-12-01,96.44155347235508,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2025-03-01,96.09718767935718,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2025-06-01,102.48708628276258,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2025-09-01,106.27511000573942,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2025-12-01,110.73273388176771,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2026-03-01,114.27204897646833,Dwelling Price Index ;  Northern Territory ;,A83728637A,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2011-12-01,99.27705223880596,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2012-03-01,98.50746268656717,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2012-06-01,98.69402985074626,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2012-09-01,99.37033582089553,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2012-12-01,99.37033582089553,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2013-03-01,99.580223880597,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2013-06-01,100.51305970149254,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2013-09-01,100.34981343283582,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2013-12-01,102.49533582089552,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2014-03-01,104.10447761194028,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2014-06-01,105.17723880597015,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2014-09-01,105.99347014925374,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2014-12-01,107.50932835820895,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2015-03-01,107.6492537313433,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2015-06-01,109.11847014925374,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2015-09-01,110.21455223880596,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2015-12-01,111.68376865671641,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2016-03-01,110.47108208955223,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2016-06-01,112.3367537313433,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2016-09-01,112.56996268656717,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2016-12-01,114.8554104477612,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2017-03-01,115.20522388059702,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2017-06-01,115.74160447761194,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2017-09-01,117.07089552238806,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2017-12-01,118.12033582089552,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2018-03-01,118.81996268656717,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2018-06-01,119.28638059701493,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2018-09-01,120.33582089552239,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2018-12-01,119.00652985074626,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2019-03-01,116.83768656716418,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2019-06-01,118.16697761194028,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2019-09-01,119.89272388059702,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2019-12-01,121.40858208955223,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2020-03-01,122.41138059701491,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2020-06-01,122.38805970149251,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2020-09-01,126.25932835820895,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2020-12-01,131.18003731343285,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2021-03-01,138.3162313432836,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2021-06-01,148.4141791044776,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2021-09-01,157.25279850746267,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2021-12-01,171.36194029850745,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2022-03-01,179.29104477611938,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2022-06-01,181.2266791044776,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2022-09-01,177.07555970149252,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2022-12-01,175.1865671641791,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2023-03-01,176.5625,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2023-06-01,181.34328358208955,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2023-09-01,187.77985074626866,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2023-12-01,193.72667910447763,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2024-03-01,200.27985074626864,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2024-06-01,209.30503731343282,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2024-09-01,213.19962686567163,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2024-12-01,218.35354477611938,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2025-03-01,223.34421641791047,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2025-06-01,228.49813432835816,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2025-09-01,238.03638059701493,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2025-12-01,250.4430970149254,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2026-03-01,262.05690298507466,Dwelling Price Index ;  Queensland ;,A83728617T,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2011-12-01,101.15819952619111,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2012-03-01,99.34193208739141,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2012-06-01,99.52619110292183,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2012-09-01,98.8418004738089,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2012-12-01,98.86812319031326,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2013-03-01,99.94735456699132,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2013-06-01,99.86838641747828,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2013-09-01,100.94761779415636,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2013-12-01,104.44853908923402,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2014-03-01,106.00157936299026,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2014-06-01,106.05422479599895,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2014-09-01,105.81732034745986,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2014-12-01,108.58120558041591,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2015-03-01,109.08133719399842,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2015-06-01,108.6338510134246,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2015-09-01,110.08160042116346,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2015-12-01,111.05554093182417,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2016-03-01,111.97683600947619,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2016-06-01,111.52934982890234,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2016-09-01,111.71360884443276,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2016-12-01,114.13529876283232,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2017-03-01,115.60937088707554,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2017-06-01,115.18820742300606,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2017-09-01,116.47802053171887,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2017-12-01,118.39957883653594,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2018-03-01,119.13661489865754,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2018-06-01,118.26796525401421,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2018-09-01,118.89971045011845,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2018-12-01,120.95288233745723,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2019-03-01,120.5053961568834,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2019-06-01,119.63674651224008,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2019-09-01,119.18926033166623,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2019-12-01,123.87470386943933,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2020-03-01,122.47959989470914,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2020-06-01,123.03237694130034,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2020-09-01,126.95446170044751,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2020-12-01,132.40326401684655,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2021-03-01,136.72018952355884,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2021-06-01,143.06396420110556,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2021-09-01,150.98710186891287,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2021-12-01,163.01658331139774,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2022-03-01,169.88681231903132,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2022-06-01,171.4661753092919,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2022-09-01,170.93972097920508,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2022-12-01,174.44064227428274,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2023-03-01,174.59857857330877,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2023-06-01,182.73229797315085,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2023-09-01,186.3121874177415,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2023-12-01,194.49855225059227,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2024-03-01,202.15846275335613,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2024-06-01,206.89655172413794,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2024-09-01,215.2145301395104,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2024-12-01,223.34824953935248,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2025-03-01,222.47959989470917,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2025-06-01,228.32324295867332,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2025-09-01,236.1410897604633,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2025-12-01,247.0913398262701,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2026-03-01,256.14635430376416,Dwelling Price Index ;  South Australia ;,A83728622K,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2011-12-01,101.60603080957063,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2012-03-01,99.86889544411667,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2012-06-01,96.75516224188789,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2012-09-01,95.41134054408391,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2012-12-01,97.60734185512946,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2013-03-01,96.26352015732546,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2013-06-01,97.54178957718781,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2013-09-01,97.50901343821697,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2013-12-01,100.49164208456244,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2014-03-01,100.65552277941659,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2014-06-01,100.91773189118321,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2014-09-01,101.86823992133726,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2014-12-01,101.5732546705998,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2015-03-01,102.49098656178302,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2015-06-01,105.27695837430349,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2015-09-01,105.30973451327432,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2015-12-01,107.66961651917404,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2016-03-01,105.63749590298261,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2016-06-01,109.50508030154047,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2016-09-01,110.94723041625696,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2016-12-01,114.88036709275646,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2017-03-01,116.68305473615209,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2017-06-01,118.45296624057684,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2017-09-01,122.81219272369714,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2017-12-01,126.02425434283839,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2018-03-01,130.67846607669617,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2018-06-01,131.66175024582103,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2018-09-01,134.61160275319565,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2018-12-01,136.38151425762044,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2019-03-01,134.8738118649623,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2019-06-01,138.70862012454933,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2019-09-01,138.87250081940346,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2019-12-01,145.55883316945264,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2020-03-01,150.8030154047853,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2020-06-01,150.86856768272696,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2020-09-01,151.29465748934777,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2020-12-01,164.1429039659128,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2021-03-01,178.99049491969845,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2021-06-01,187.08620124549324,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2021-09-01,200.49164208456241,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2021-12-01,225.56538839724683,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2022-03-01,227.53195673549658,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2022-06-01,225.17207472959683,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2022-09-01,222.0255653883972,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2022-12-01,218.09242871189772,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2023-03-01,219.69845952146835,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2023-06-01,217.66633890527694,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2023-09-01,216.3880694854146,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2023-12-01,216.3880694854146,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2024-03-01,219.63290724352672,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2024-06-01,216.19141265158964,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2024-09-01,211.96329072435267,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2024-12-01,219.69845952146835,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2025-03-01,221.63225172074726,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2025-06-01,220.78007210750573,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2025-09-01,226.05703048180925,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2025-12-01,236.6764995083579,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2026-03-01,245.91937069813176,Dwelling Price Index ;  Tasmania ;,A83728632R,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2011-12-01,98.82949668357394,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2012-03-01,97.54194303550527,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2012-06-01,97.58095981271946,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2012-09-01,95.92274678111588,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2012-12-01,97.87358564182598,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2013-03-01,98.86851346078814,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2013-06-01,99.76589933671478,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2013-09-01,102.08739758095979,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2013-12-01,104.97463909481077,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2014-03-01,106.22317596566523,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2014-06-01,106.69137729223566,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2014-09-01,107.47171283651969,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2014-12-01,110.59305501365586,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2015-03-01,113.44127975029261,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2015-06-01,118.31837690206788,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2015-09-01,120.26921576277797,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2015-12-01,121.49824424502536,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2016-03-01,122.00546234880998,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2016-06-01,123.8197424892704,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2016-09-01,126.16074912212252,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2016-12-01,131.52555598907531,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2017-03-01,135.70035115099492,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2017-06-01,141.2017167381974,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2017-09-01,139.99219664455717,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2017-12-01,145.70815450643775,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2018-03-01,145.08388607101054,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2018-06-01,143.91338275458446,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2018-09-01,139.95317986734295,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2018-12-01,138.23644166991807,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2019-03-01,133.2422941865002,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2019-06-01,134.78345688646115,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2019-09-01,139.58252048380803,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2019-12-01,146.13733905579397,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2020-03-01,148.4978540772532,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2020-06-01,146.03979711275846,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2020-09-01,147.73702692157627,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2020-12-01,154.58447132266872,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2021-03-01,162.29028482247367,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2021-06-01,170.65938353492,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2021-09-01,175.75107296137338,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2021-12-01,183.73000390167772,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2022-03-01,183.80803745610612,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2022-06-01,181.11587982832617,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2022-09-01,175.7900897385876,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2022-12-01,175.82910651580178,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2023-03-01,175.26336324619584,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2023-06-01,176.14124073351542,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2023-09-01,176.4143581740148,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2023-12-01,179.6137339055794,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2024-03-01,177.87748731954738,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2024-06-01,177.29223566133436,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2024-09-01,174.2489270386266,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2024-12-01,176.02419040187277,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2025-03-01,177.56535310183378,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2025-06-01,179.12602419040186,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2025-09-01,180.82325399921965,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2025-12-01,185.23214982442448,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2026-03-01,184.76394849785407,Dwelling Price Index ;  Victoria ;,A83728612F,House Prices,Index,Quarter
+2011-09-01,100,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2011-12-01,99.35213414634147,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2012-03-01,101.44817073170734,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2012-06-01,101.06707317073172,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2012-09-01,102.45807926829269,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2012-12-01,104.85899390243902,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2013-03-01,106.87881097560977,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2013-06-01,109.12728658536588,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2013-09-01,109.07012195121952,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2013-12-01,111.66158536585367,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2014-03-01,111.83307926829269,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2014-06-01,112.86204268292683,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2014-09-01,111.56631097560977,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2014-12-01,112.08079268292686,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2015-03-01,110.21341463414636,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2015-06-01,109.75609756097562,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2015-09-01,106.63109756097562,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2015-12-01,105.20198170731709,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2016-03-01,103.3346036585366,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2016-06-01,101.23856707317074,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2016-09-01,99.50457317073173,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2016-12-01,102.57240853658536,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2017-03-01,100.03810975609757,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2017-06-01,99.16158536585367,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2017-09-01,99.31402439024392,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2017-12-01,101.0861280487805,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2018-03-01,101.02896341463416,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2018-06-01,98.38033536585365,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2018-09-01,98.62804878048782,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2018-12-01,97.21798780487806,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2019-03-01,96.41768292682927,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2019-06-01,95.35060975609755,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2019-09-01,95.99847560975611,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2019-12-01,95.14100609756099,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2020-03-01,95.5221036585366,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2020-06-01,95.10289634146343,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2020-09-01,99.73323170731709,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2020-12-01,105.33536585365854,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2021-03-01,110.95655487804879,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2021-06-01,111.20426829268295,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2021-09-01,113.5861280487805,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2021-12-01,118.00685975609757,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2022-03-01,119.7408536585366,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2022-06-01,122.65625000000003,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2022-09-01,119.7408536585366,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2022-12-01,122.9611280487805,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2023-03-01,124.54268292682929,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2023-06-01,126.92454268292686,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2023-09-01,132.3551829268293,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2023-12-01,139.7675304878049,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2024-03-01,146.53201219512198,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2024-06-01,157.79344512195124,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2024-09-01,159.92759146341464,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2024-12-01,165.47256097560975,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2025-03-01,167.66387195121953,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2025-06-01,174.25685975609758,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2025-09-01,179.9733231707317,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2025-12-01,196.22713414634148,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
+2026-03-01,210.27057926829272,Dwelling Price Index ;  Western Australia ;,A83728627W,House Prices,Index,Quarter
 2011-09-01,490.8,RPPI,A83728647F,House Prices,$'000,Quarter
 2011-12-01,486.9,RPPI,A83728647F,House Prices,$'000,Quarter
 2012-03-01,488.6,RPPI,A83728647F,House Prices,$'000,Quarter

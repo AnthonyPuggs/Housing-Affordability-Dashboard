@@ -158,7 +158,7 @@ indicator_registry <- function() {
     formula = c(
       "Indexed RPPI divided by indexed WPI, multiplied by 100.",
       "Indexed 30-year annuity principal-and-interest repayments on an 80 per cent LVR loan against the ABS 6432.0 national mean dwelling price, at the RBA F6 new-loan owner-occupier rate (spliced onto level-adjusted F5 history before July 2019), divided by WPI as the income-growth proxy, then indexed to 100.",
-      "Indexed national CPI rents divided by indexed WPI, multiplied by 100.",
+      "Indexed eight-capital-city CPI rents (ABS weighted average of the eight capital cities; rest-of-state areas are not covered) divided by indexed WPI, multiplied by 100.",
       "Twenty per cent of the ABS 6432.0 national mean dwelling price divided by annual savings assumed at 15 per cent of gross income, with income proxied by AWE individual earnings.",
       "Year-ended percentage change in RPPI deflated by CPI All Groups.",
       "Year-ended percentage change in WPI deflated by CPI All Groups.",
@@ -248,7 +248,7 @@ indicator_registry <- function() {
     public_caveat = c(
       "Cost-pressure index, higher = less affordable.",
       "Modelled principal-and-interest repayment-burden index (80 per cent LVR, 30-year term, actual new-loan rates; pre-2019 rates are level-adjusted F5 history), higher = less affordable.",
-      "Rent cost-pressure index, higher = less affordable.",
+      "Rent cost-pressure index from eight-capital-city CPI rents (rest-of-state areas not covered), higher = less affordable.",
       "Stylised years-to-save estimate: 20 per cent deposit on the ABS 6432.0 national mean dwelling price, saving 15 per cent of gross income proxied by AWE individual earnings (not household income); not an official ABS measure or lender assessment.",
       "Context series, not a household burden measure.",
       "Context series, not a household distribution measure.",
