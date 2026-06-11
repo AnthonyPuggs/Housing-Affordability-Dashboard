@@ -10,7 +10,7 @@ Production R/Shiny dashboard for Australian housing affordability analysis, depl
 
 | Path | Role |
 |------|------|
-| `app.R` | Shiny entrypoint: UI shell (`bslib::page_navbar`), theme CSS/JS, server wiring for 8 page modules |
+| `app.R` | Shiny entrypoint: UI shell (`bslib::page_navbar`), theme CSS/JS, server wiring for 9 page modules |
 | `plot_setup.R` | Compatibility entrypoint sourcing data loading, formatting, theme and precomputed-series helpers |
 | `R/` | ~36 modules: page modules (`*_module.R`), chart builders, indicator registry, score, helpers, release checklist |
 | `pipeline/` | Data pipeline stages `00_config` → `01_process_sih` → `02/02b_fetch_abs` → `03_fetch_rba` → `04_derive_indicators` → `05_driver` (runner) → `06_validate_outputs` → `07_write_data_vintage` |

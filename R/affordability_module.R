@@ -39,19 +39,6 @@ if (!exists("join_sih_quality", mode = "function", inherits = TRUE)) {
   source(sih_quality_helper_path, local = environment())
 }
 
-if (!exists("normalise_recent_buyers", mode = "function", inherits = TRUE)) {
-  recent_buyers_helper_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
-    project_path("R", "recent_buyers_helpers.R")
-  } else {
-    file.path("R", "recent_buyers_helpers.R")
-  }
-  if (!file.exists(recent_buyers_helper_path)) {
-    stop("Could not locate R/recent_buyers_helpers.R for affordability module.",
-         call. = FALSE)
-  }
-  source(recent_buyers_helper_path, local = environment())
-}
-
 affordability_ui_indicators <- c(
   "Price-to-Income Ratio",
   "Mortgage Serviceability Index",
@@ -229,31 +216,6 @@ affordabilityPageUI <- function(id) {
             div(class = "chart-square",
                 plotlyOutput(ns("distributional_stress"),
                              height = "100%", width = "100%"))
-          )
-        )
-      ),
-      nav_panel(
-        "Recent Buyers",
-        layout_sidebar(
-          sidebar = sidebar(
-            width = 300, open = "desktop",
-            selectInput(ns("recent_buyers_metric"), "Metric",
-                        choices = recent_buyers_metric_choices(),
-                        selected = "mean_dwelling_value"),
-            checkboxGroupInput(ns("recent_buyers_dwelling"), "Dwelling type",
-                               choices = c("New" = "new",
-                                           "Established" = "established",
-                                           "Total" = "total"),
-                               selected = c("new", "established", "total")),
-            source_note("2019-20 SIH recent home buyer households. Empirical Recent Buyer Evidence, not a live market-entry index.")
-          ),
-          uiOutput(ns("recent_buyers_summary")),
-          policy_chart_card(
-            "Empirical Recent Buyer Evidence",
-            note = policy_source_note("ABS Survey of Income and Housing File 9. Values describe 2019-20 recent buyer households and should be read separately from stylised deposit/serviceability scenarios. ", sih_sampling_error_note),
-            div(class = "chart-wide",
-                plotlyOutput(ns("recent_buyers_chart"), height = "100%",
-                             width = "100%"))
           )
         )
       ),
@@ -522,61 +484,6 @@ affordabilityPageServer <- function(id, is_dark) {
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "color"))
     }) %>%
       bindCache(input$afford_indices, input$afford_dates, input$serviceability_deposit_pct, input$serviceability_term, input$serviceability_buffer, is_dark())
-
-    recent_buyers_data <- reactive({
-      raw <- if (exists("sih_recent_buyers", inherits = TRUE)) {
-        sih_recent_buyers
-      } else {
-        data.frame()
-      }
-      normalise_recent_buyers(raw)
-    })
-
-    output$recent_buyers_summary <- renderUI({
-      d <- recent_buyers_summary(recent_buyers_data())
-      validate(need(nrow(d) > 0, "No recent buyer summary data available."))
-
-      accents <- c("blue", "teal", "navy", "purple")
-      boxes <- lapply(seq_len(nrow(d)), function(i) {
-        row <- d[i, ]
-        policy_kpi_box(
-          title = row$title,
-          value = tags$span(row$formatted_value),
-          subtitle = tags$p(row$subtitle, class = "kpi-subtitle"),
-          accent = accents[((i - 1) %% length(accents)) + 1]
-        )
-      })
-      do.call(layout_column_wrap, c(list(width = 1/4, fill = FALSE), boxes))
-    })
-
-    output$recent_buyers_chart <- renderPlotly({
-      req(input$recent_buyers_metric, input$recent_buyers_dwelling)
-      d <- recent_buyers_data() %>%
-        filter(
-          metric_id == input$recent_buyers_metric,
-          dwelling_type %in% input$recent_buyers_dwelling,
-          buyer_type %in% c("first_home", "changeover", "all_recent")
-        ) %>%
-        mutate(
-          hover_text = paste0(
-            buyer_type_label,
-            "<br>Dwelling type: ", dwelling_type_label,
-            "<br>", metric_label, ": ", formatted_value,
-            "<br>Survey year: ", survey_year,
-            "<br>Official SIH File 9 recent buyer evidence."
-          )
-        )
-      validate(need(nrow(d) > 0, "No recent buyer data for selected filters."))
-
-      metric_label <- unique(d$metric_label)[[1]]
-      p <- build_recent_buyers_plot(d, metric_label = metric_label,
-                                    dark = is_dark())
-
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = "text",
-                         hovermode = "closest")
-    }) %>%
-      bindCache(input$recent_buyers_metric, input$recent_buyers_dwelling,
-                is_dark())
 
     calc_vals <- reactive({
       tryCatch(

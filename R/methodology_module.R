@@ -76,7 +76,7 @@ methodologyPageUI <- function(id) {
           ),
           policy_card(
             "Recent buyer empirical evidence",
-            tags$p("The Recent Buyers tab uses data/sih_recent_buyers_2020.csv from SIH File 9 to describe 2019-20 first-home, changeover and all recent buyer households."),
+            tags$p("The Recent Buyers page uses data/sih_recent_buyers_2020.csv from SIH File 9 to describe 2019-20 first-home, changeover and all recent buyer households."),
             tags$p("These survey estimates ground the deposit and serviceability discussion, but they are not live market-entry indexes."),
             tags$p("Rental entry calculator pathway outputs are stylised cash-flow scenarios, not official ABS/NHHA stress measures or tenancy eligibility assessments.")
           ),

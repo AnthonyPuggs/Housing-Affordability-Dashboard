@@ -114,6 +114,96 @@ normalise_recent_buyers <- function(data) {
     select(-.row_id)
 }
 
+# Household profile dimensions published in SIH File 9 as proportions of
+# recent buyer households (each dimension sums to ~100% per buyer type).
+recent_buyers_profile_map <- function() {
+  data.frame(
+    profile_value = c(
+      "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64",
+      "65 and over",
+      "25% or less", "More than 25% to 30%", "More than 30% to 50%",
+      "More than 50%",
+      "Couple family with dependent children", "Couple only",
+      "One parent family with dependent children", "Other one family households",
+      "Lone person households", "Group households",
+      "Multiple family households",
+      "Lowest quintile", "Second quintile", "Third quintile",
+      "Fourth quintile", "Highest quintile",
+      "Separate house", "Semi-detached, row or terrace house, townhouse",
+      "Flat or apartment"
+    ),
+    profile_dimension = c(
+      rep("age_band", 6),
+      rep("cost_income_band", 4),
+      rep("family_type", 7),
+      rep("income_quintile", 5),
+      rep("dwelling_structure", 3)
+    ),
+    profile_order = c(
+      seq_len(6), seq_len(4), seq_len(7), seq_len(5), seq_len(3)
+    ),
+    stringsAsFactors = FALSE
+  )
+}
+
+recent_buyers_profile_choices <- function() {
+  c(
+    "Age of reference person" = "age_band",
+    "Housing cost-to-income band" = "cost_income_band",
+    "Family type" = "family_type",
+    "Equivalised income quintile" = "income_quintile",
+    "Dwelling structure" = "dwelling_structure"
+  )
+}
+
+recent_buyers_profile_dimension_label <- function(dimension) {
+  choices <- recent_buyers_profile_choices()
+  labels <- stats::setNames(names(choices), unname(choices))
+  out <- unname(labels[dimension])
+  out[is.na(out)] <- dimension[is.na(out)]
+  out
+}
+
+# Proportion-of-households profile rows by buyer type (dwelling type = total).
+# Like normalise_recent_buyers(), keeps the first row per key as a workaround
+# for the known SIH parser duplicate-row artifact (see pipeline ratchet gate).
+normalise_recent_buyers_profile <- function(data) {
+  if (!is.data.frame(data) || nrow(data) == 0) {
+    return(data.frame())
+  }
+
+  profile_map <- recent_buyers_profile_map()
+  buyer_labels <- c(
+    first_home = "First-home buyers",
+    changeover = "Changeover buyers",
+    all_recent = "All recent buyers"
+  )
+
+  data %>%
+    mutate(.row_id = row_number()) %>%
+    filter(
+      stat_type == "proportion",
+      metric %in% profile_map$profile_value,
+      grepl("^buyer_(first_home|changeover|all_recent)_total$", breakdown_var)
+    ) %>%
+    group_by(survey_year, metric, breakdown_var, geography) %>%
+    arrange(.row_id, .by_group = TRUE) %>%
+    slice(1) %>%
+    ungroup() %>%
+    mutate(
+      buyer_type = sub("^buyer_(.*)_total$", "\\1", breakdown_var),
+      buyer_type_label = unname(buyer_labels[buyer_type])
+    ) %>%
+    left_join(profile_map, by = c("metric" = "profile_value")) %>%
+    mutate(
+      profile_label = metric,
+      measure_class = "official_survey",
+      source = "ABS SIH File 9"
+    ) %>%
+    arrange(profile_dimension, profile_order, buyer_type) %>%
+    select(-.row_id)
+}
+
 recent_buyers_summary <- function(data) {
   if (!is.data.frame(data) || nrow(data) == 0) {
     return(data.frame())

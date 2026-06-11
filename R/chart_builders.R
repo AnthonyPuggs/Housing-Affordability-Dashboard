@@ -579,8 +579,8 @@ build_market_entry_sensitivity_plot <- function(data, dark = FALSE) {
 }
 
 build_recent_buyers_plot <- function(data, metric_label, dark = FALSE) {
-  ggplot(data, aes(x = buyer_type_label, y = value,
-                   fill = dwelling_type_label, text = hover_text)) +
+  p <- ggplot(data, aes(x = buyer_type_label, y = value,
+                        fill = dwelling_type_label, text = hover_text)) +
     geom_col(position = position_dodge(width = 0.72),
              width = 0.64, alpha = 0.88) +
     scale_fill_manual(values = c(
@@ -593,6 +593,58 @@ build_recent_buyers_plot <- function(data, metric_label, dark = FALSE) {
     labs(x = NULL, y = metric_label, fill = NULL) +
     theme_afford(dark) +
     theme(legend.position = "bottom")
+
+  # SIH reliability markers where quality metadata exists (File 9 currently
+  # publishes none, so this layer is dormant until metadata arrives).
+  if ("reliability_marker" %in% names(data) &&
+      any(nzchar(data$reliability_marker))) {
+    p <- p + geom_text(
+      data = data %>% filter(nzchar(reliability_marker)),
+      aes(label = reliability_marker, group = dwelling_type_label),
+      position = position_dodge(width = 0.72),
+      vjust = -0.4, size = 4, fontface = "bold",
+      color = if (dark) "#E3EBF4" else "#172033",
+      show.legend = FALSE
+    )
+  }
+  p
+}
+
+build_recent_buyers_profile_plot <- function(data, dimension_label,
+                                             dark = FALSE) {
+  data <- data %>%
+    mutate(profile_label = factor(profile_label,
+                                  levels = rev(unique(profile_label))))
+
+  p <- ggplot(data, aes(x = profile_label, y = value,
+                        fill = buyer_type_label, text = hover_text)) +
+    geom_col(position = position_dodge(width = 0.78),
+             width = 0.7, alpha = 0.88) +
+    scale_fill_manual(values = c(
+      "First-home buyers" = semantic_colour("categorical_teal"),
+      "Changeover buyers" = semantic_colour("categorical_navy"),
+      "All recent buyers" = semantic_colour("reference")
+    ), na.value = "grey60") +
+    scale_y_continuous(labels = label_number(suffix = "%", accuracy = 1),
+                       expand = expansion(mult = c(0, 0.08))) +
+    labs(x = NULL, y = paste0("% of buyer households (", dimension_label, ")"),
+         fill = NULL) +
+    coord_flip() +
+    theme_afford(dark) +
+    theme(legend.position = "bottom")
+
+  if ("reliability_marker" %in% names(data) &&
+      any(nzchar(data$reliability_marker))) {
+    p <- p + geom_text(
+      data = data %>% filter(nzchar(reliability_marker)),
+      aes(label = reliability_marker, group = buyer_type_label),
+      position = position_dodge(width = 0.78),
+      hjust = -0.4, size = 4, fontface = "bold",
+      color = if (dark) "#E3EBF4" else "#172033",
+      show.legend = FALSE
+    )
+  }
+  p
 }
 
 build_housing_stress_bands_plot <- function(data, dark = FALSE) {

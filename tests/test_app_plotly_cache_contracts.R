@@ -48,6 +48,7 @@ if (file.exists(app_path)) {
     "afford_indices_chart",
     "afford_serviceability",
     "recent_buyers_chart",
+    "recent_buyers_profile_chart",
     "calc_sensitivity",
     "stress_chart",
     "burden_heatmap",

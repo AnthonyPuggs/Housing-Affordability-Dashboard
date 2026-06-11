@@ -42,18 +42,19 @@ Two kinds of number, never mixed:
 
 ## The dashboard
 
-Eight focused pages:
+Nine focused pages:
 
 | # | Page | What it shows |
 | :-: | --- | --- |
 | 1 | **Overview** | Headline affordability score, component contributions and an official SIH burden snapshot. |
 | 2 | **Price Trends** | Capital-city dwelling price indexes and ABS rent CPI movements. |
 | 3 | **Affordability** | Official SIH burden bands, market-entry scenarios and a serviceability calculator. |
-| 4 | **Geographic Affordability** | SIH-only, geography-aligned cost-to-income comparisons across states and capitals. |
-| 5 | **Market Context** | Labour spare capacity, residential mortgage rates and population-demand drivers. |
-| 6 | **Housing Supply** | Building approvals by state, type and sector, plus construction-cost pressure. |
-| 7 | **Rental Market** | NHHA rental stress, rental cost pressure and SIH rental-cost estimates. |
-| 8 | **Methodology** | Registry-backed indicator formulas, source series and interpretation caveats. |
+| 4 | **Recent Buyers** | Official SIH File 9 evidence: dwelling values, mortgages, equity and household profiles of recent buyers. |
+| 5 | **Geographic Affordability** | SIH-only, geography-aligned cost-to-income comparisons across states and capitals. |
+| 6 | **Market Context** | Labour spare capacity, residential mortgage rates and population-demand drivers. |
+| 7 | **Housing Supply** | Building approvals by state, type and sector, plus construction-cost pressure. |
+| 8 | **Rental Market** | NHHA rental stress, rental cost pressure and SIH rental-cost estimates. |
+| 9 | **Methodology** | Registry-backed indicator formulas, source series and interpretation caveats. |
 
 ### The score
 
@@ -194,7 +195,7 @@ The National Housing Affordability Score is a modelled national market-entry com
 
 The Shiny app includes a Methodology page backed by this registry. It shows the formula, source series, interpretation direction and official/stylised status for each derived affordability indicator.
 
-`R/methodology_module.R`, `R/affordability_module.R`, `R/rental_market_module.R`, `R/housing_supply_module.R`, `R/price_trends_module.R`, `R/geographic_affordability_module.R`, `R/market_context_module.R` and `R/overview_module.R` are the Shiny page modules. They keep the registry-backed methodology/provenance page, Affordability page, Rental Market page, Housing Supply page, Price Trends page, Geographic Affordability page, Market Context page and Overview page isolated while broader component-level refactors remain incremental.
+`R/methodology_module.R`, `R/affordability_module.R`, `R/recent_buyers_module.R`, `R/rental_market_module.R`, `R/housing_supply_module.R`, `R/price_trends_module.R`, `R/geographic_affordability_module.R`, `R/market_context_module.R` and `R/overview_module.R` are the Shiny page modules. They keep the registry-backed methodology/provenance page, Affordability page, Recent Buyers page, Rental Market page, Housing Supply page, Price Trends page, Geographic Affordability page, Market Context page and Overview page isolated while broader component-level refactors remain incremental.
 
 `plot_setup.R` is a thin compatibility entrypoint over focused support modules for CSV loading, dashboard formatting, theme helpers and app-ready precomputed series. It keeps the existing global object names available to page modules while reducing the setup file's direct responsibility.
 
@@ -226,6 +227,7 @@ Rscript tests/test_app_method_text.R
 Rscript tests/test_methodology_page.R
 Rscript tests/test_methodology_module.R
 Rscript tests/test_affordability_module.R
+Rscript tests/test_recent_buyers_module.R
 Rscript tests/test_rental_market_module.R
 Rscript tests/test_housing_supply_module.R
 Rscript tests/test_housing_supply_legend_contracts.R

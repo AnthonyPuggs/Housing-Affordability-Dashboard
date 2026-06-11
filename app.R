@@ -56,6 +56,7 @@ source(project_path("R", "provenance_report.R"), local = TRUE)
 source(project_path("R", "release_checklist.R"), local = TRUE)
 source(project_path("R", "methodology_module.R"), local = TRUE)
 source(project_path("R", "affordability_module.R"), local = TRUE)
+source(project_path("R", "recent_buyers_module.R"), local = TRUE)
 source(project_path("R", "rental_market_module.R"), local = TRUE)
 source(project_path("R", "housing_supply_module.R"), local = TRUE)
 source(project_path("R", "price_trends_module.R"), local = TRUE)
@@ -893,27 +894,32 @@ ui <- page_navbar(
   affordabilityPageUI("affordability"),
 
   # ============================================================================
-  # PAGE 4: GEOGRAPHIC AFFORDABILITY
+  # PAGE 4: RECENT BUYERS (official SIH File 9 evidence)
+  # ============================================================================
+  recentBuyersPageUI("recent_buyers"),
+
+  # ============================================================================
+  # PAGE 5: GEOGRAPHIC AFFORDABILITY
   # ============================================================================
   geographicAffordabilityPageUI("geographic_affordability"),
 
   # ============================================================================
-  # PAGE 5: MARKET CONTEXT (Labour & Demographics)
+  # PAGE 6: MARKET CONTEXT (Labour & Demographics)
   # ============================================================================
   marketContextPageUI("market_context"),
 
   # ============================================================================
-  # PAGE 6: HOUSING SUPPLY
+  # PAGE 7: HOUSING SUPPLY
   # ============================================================================
   housingSupplyPageUI("housing_supply"),
 
   # ============================================================================
-  # PAGE 7: RENTAL MARKET
+  # PAGE 8: RENTAL MARKET
   # ============================================================================
   rentalMarketPageUI("rental_market"),
 
   # ============================================================================
-  # PAGE 8: METHODOLOGY
+  # PAGE 9: METHODOLOGY
   # ============================================================================
   methodologyPageUI("methodology")
 )
@@ -933,6 +939,7 @@ server <- function(input, output, session) {
 
   methodologyPageServer("methodology")
   affordabilityPageServer("affordability", is_dark = is_dark)
+  recentBuyersPageServer("recent_buyers", is_dark = is_dark)
   rentalMarketPageServer("rental_market", is_dark = is_dark)
   housingSupplyPageServer("housing_supply", is_dark = is_dark)
   priceTrendsPageServer("price_trends", is_dark = is_dark)

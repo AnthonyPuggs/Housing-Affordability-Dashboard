@@ -98,6 +98,54 @@ if (file.exists(helper_path)) {
     summary$metric_id == "first_home_cost_income_ratio"
   ] == "15.5%",
   "recent_buyers_summary() must format cost-to-income ratios as percentages")
+
+  # --- Household profile helpers ----------------------------------------------
+  check(exists("normalise_recent_buyers_profile", mode = "function") &&
+          exists("recent_buyers_profile_choices", mode = "function") &&
+          exists("recent_buyers_profile_map", mode = "function"),
+        "Profile helper functions must be defined")
+
+  profile_raw <- data.frame(
+    survey_year = "2019-20",
+    value = c(56.1, 56.1, 25.6, 19.8, 68.1),
+    metric = c("25 to 34", "25 to 34", "35 to 44", "25 to 34", "25% or less"),
+    tenure = "owner_mortgage",
+    breakdown_var = c(
+      "buyer_first_home_total",
+      "buyer_first_home_total",
+      "buyer_first_home_total",
+      "buyer_changeover_total",
+      "buyer_first_home_total"
+    ),
+    breakdown_val = c("25 to 34", "25 to 34", "35 to 44", "25 to 34",
+                      "25% or less"),
+    geography = "National",
+    stat_type = "proportion",
+    stringsAsFactors = FALSE
+  )
+  profile <- normalise_recent_buyers_profile(profile_raw)
+  check(nrow(profile) == 4,
+        "normalise_recent_buyers_profile() must keep one row per profile band and buyer type")
+  check(all(c("profile_dimension", "profile_order", "profile_label",
+              "buyer_type", "buyer_type_label") %in% names(profile)),
+        "normalise_recent_buyers_profile() missing expected columns")
+  check(all(profile$profile_dimension[profile$metric == "25 to 34"] ==
+              "age_band"),
+        "Age bands must map to the age_band profile dimension")
+  check(all(profile$profile_dimension[profile$metric == "25% or less"] ==
+              "cost_income_band"),
+        "Cost bands must map to the cost_income_band profile dimension")
+  check("First-home buyers" %in% profile$buyer_type_label &&
+          "Changeover buyers" %in% profile$buyer_type_label,
+        "Profile rows must parse buyer types from breakdown_var")
+
+  profile_choices <- recent_buyers_profile_choices()
+  check("Age of reference person" %in% names(profile_choices) &&
+          unname(profile_choices[["Age of reference person"]]) == "age_band",
+        "recent_buyers_profile_choices() must map display labels to dimensions")
+  check(identical(recent_buyers_profile_dimension_label("age_band"),
+                  "Age of reference person"),
+        "recent_buyers_profile_dimension_label() must invert the choice map")
 }
 
 if (length(failures) > 0) {
