@@ -4222,10 +4222,10 @@
       "checksum": "def5b4522d0687fc867e1780dfdb1c98"
     },
     ".Rprofile": {
-      "checksum": "cd9d52e8bb2188f68012f8428ca5d739"
+      "checksum": "1043791f10a763d1fa497860a3e0c9d1"
     },
     ".rscignore": {
-      "checksum": "6b8d3647a92908551f091c1a1e37a198"
+      "checksum": "177242fce7b0810419d56f203e92f4b5"
     },
     "app.R": {
       "checksum": "9179898737608a4ee3bd48bb05630ff0"
@@ -4237,91 +4237,91 @@
       "checksum": "6748021e465a995f953738903227b41b"
     },
     "data/abs_timeseries.csv": {
-      "checksum": "d5842e17b58aa8eba6870286f245a3b8"
+      "checksum": "b21b04688b2df3b987d29ca646f4fe52"
     },
     "data/affordability_indices.csv": {
-      "checksum": "62746b11756242531b8627ecec195178"
+      "checksum": "e6af848ae9996e55553f03e38d42ca0e"
     },
     "data/data_vintage.csv": {
-      "checksum": "1a3b500aa2551c39d74c42f7bf3a69cf"
+      "checksum": "1651a1a75d57e8deb3707294d7506d06"
     },
     "data/rba_rates.csv": {
-      "checksum": "62bc5bf5157c9e0a6085ee4c34f612b4"
+      "checksum": "d8b4883279286fdb2ca87e31aaa888e7"
     },
     "data/sih_age_tenure_2020.csv": {
-      "checksum": "1005d78abea02b18b640bfecaf865f61"
+      "checksum": "d4bbd52824c1ae43527f39bcdea8befd"
     },
     "data/sih_cost_ratios_2020.csv": {
-      "checksum": "8004dafdd52b597f8d5ecbef23a0a6ee"
+      "checksum": "9f970129d7936c5886a9202cbf5448e3"
     },
     "data/sih_costs_2020.csv": {
-      "checksum": "eacf9eb08f2442bd1306e2ae6239f66e"
+      "checksum": "a93f9f6232bc6d1738f039984dbe218a"
     },
     "data/sih_estimate_quality.csv": {
-      "checksum": "509317038832af845a1ea6efad8802c4"
+      "checksum": "4a3a0ca7c1daa6184d5b50bd4efb0b3f"
     },
     "data/sih_geographic_2020.csv": {
-      "checksum": "2f2762a0967a8f8bf10393b214807a90"
+      "checksum": "166a31d8fa43caff3a4f8c473c81d1c6"
     },
     "data/sih_lower_income_states.csv": {
-      "checksum": "234a195a7e806f2ed07e307ef5bd57d1"
+      "checksum": "db8878b4244974080c573280899d3c92"
     },
     "data/sih_nhha_rental_stress.csv": {
-      "checksum": "3dec5b14ae7ba9caf3a9829ed9de5e32"
+      "checksum": "d68e8b1e483cf162a74763e7b8950008"
     },
     "data/sih_recent_buyers_2020.csv": {
-      "checksum": "8d56bb9696e2cfd4cebd199359f96640"
+      "checksum": "3e5f30510d7619ea552265dc8d332a2a"
     },
     "data/sih_state_timeseries.csv": {
-      "checksum": "d903988944393988697711221b1ff1f7"
+      "checksum": "0c98b712d21a0941b324bd6d635df89b"
     },
     "data/sih_stress_bands_2020.csv": {
-      "checksum": "391c5bad755da89ee4baea5b860f8b15"
+      "checksum": "9c95bdac326aaadeaf245689393eb4a7"
     },
     "data/sih_timeseries_national.csv": {
       "checksum": "7bcd3d9dd387af147191c03a4c277ac9"
     },
     "DESCRIPTION": {
-      "checksum": "1159e9bc0352a83b9326e5175cf544c8"
+      "checksum": "04809e160aff35a8716577b5fce94bb1"
     },
     "graphify-out/graph.json": {
-      "checksum": "1da4797db8365e44c92ee0ceef89f51b"
+      "checksum": "019d3532cd1871c2b86d321502fae3b1"
     },
     "graphify-out/GRAPH_REPORT.md": {
-      "checksum": "9081c95131b456b988f97124e6b61afe"
+      "checksum": "b45d5120f5d9186d0b1c3313bac48579"
     },
     "manifest.json": {
-      "checksum": "bd94e2e5ae5ef21ee8cab64f3d20bd92"
+      "checksum": "4da41a8e91aa7d5e309c87bbe745cc62"
     },
     "pipeline/00_config.R": {
-      "checksum": "f291722777ca73e61664ead5cf6aa733"
+      "checksum": "d731873e04bfbac9c990251889caebd0"
     },
     "pipeline/01_process_sih.R": {
       "checksum": "01ef5daff226dcbf40e9043b737f4d4f"
     },
     "pipeline/02_fetch_abs_timeseries.R": {
-      "checksum": "f51c52a66f0e8a0f42f90fdb353e95d4"
+      "checksum": "732688240ed1e4bd0cad657fbe26533f"
     },
     "pipeline/02b_fetch_abs_supply.R": {
       "checksum": "ddf1130d68d9380979c028295ec5ede9"
     },
     "pipeline/03_fetch_rba.R": {
-      "checksum": "9008ff325b4eb29a8146d586d0efac7c"
+      "checksum": "b79d5116a09dc60c7973686d9c7752e3"
     },
     "pipeline/04_derive_indicators.R": {
-      "checksum": "9bed856bc237d5dbc050a41322a817c2"
+      "checksum": "c94bbb65a307960613c6e5ce3ae9d22c"
     },
     "pipeline/05_driver.R": {
       "checksum": "7859e67fb7b0174a85101485ae8e8a7f"
     },
     "pipeline/06_validate_outputs.R": {
-      "checksum": "094e28f0609211c9b95c2c310cbe4695"
+      "checksum": "6af8dca8234f6460c2e55da57f24612e"
     },
     "pipeline/07_write_data_vintage.R": {
       "checksum": "9a610e20980c90efbf95f3d5f02a8e69"
     },
     "plot_setup.R": {
-      "checksum": "614d5227ec547fa20da870ca8e46abe5"
+      "checksum": "7a2736368030467be32d70813d2e1859"
     },
     "R/affordability_module.R": {
       "checksum": "f1496f1fa26195f520778a94e08bd37d"
@@ -4330,7 +4330,7 @@
       "checksum": "59fc1bd993f72d9f37a561bad6979954"
     },
     "R/chart_builders.R": {
-      "checksum": "73671ffc3813396cc253665b15c8a19d"
+      "checksum": "a016a9635ab09621452d5c50fc16113d"
     },
     "R/contextual_kpi_helpers.R": {
       "checksum": "3f5f5173673b8c8049bd65984fcce181"
@@ -4347,6 +4347,9 @@
     "R/data_vintage.R": {
       "checksum": "18bd51b3e29716f074798f97d00518c8"
     },
+    "R/derivation_helpers.R": {
+      "checksum": "c98e1f1178b44bd583c622ee24bf8f88"
+    },
     "R/feature_metadata.R": {
       "checksum": "08f667933f4e0cdac57b7b162dad6b3f"
     },
@@ -4354,22 +4357,22 @@
       "checksum": "7a0341a97cf7412dea96eca6d4a12e62"
     },
     "R/housing_supply_module.R": {
-      "checksum": "8554a3e1edd490a0c15e52f497005429"
+      "checksum": "23a322396949933c59a66da0df7b1008"
     },
     "R/indicator_context.R": {
-      "checksum": "66dc4a727db4fe7461d3558acf1c7bb7"
+      "checksum": "a84bcb818665e0093ea0b16d65090721"
     },
     "R/indicator_registry.R": {
-      "checksum": "e0989f81601abe74f59b2961d3d110be"
+      "checksum": "044a4c84bf7fd70c1dddaac0e6b5db6f"
     },
     "R/market_context_module.R": {
-      "checksum": "18b8282c02d2640b234e32a9b5a2d019"
+      "checksum": "58da71dcd089d87523722911047b951f"
     },
     "R/market_entry_scenarios.R": {
       "checksum": "6d194d71198b9d11c137bf265ec371f8"
     },
     "R/methodology_module.R": {
-      "checksum": "70fa4998776c1354823abfc2276cdb80"
+      "checksum": "08b5994e5364aa3ac8f872a79642061b"
     },
     "R/national_affordability_score.R": {
       "checksum": "a632e2f50cca4a420081c2a1f7995708"
@@ -4378,16 +4381,16 @@
       "checksum": "23aae1cd2744df6bfe1d4c44fc2c4e52"
     },
     "R/overview_module.R": {
-      "checksum": "321f82b5d97302ed8b0350590678e0cb"
+      "checksum": "ab4e66b71ff8a9c7a156b6d1ccce2a22"
     },
     "R/pipeline_contracts.R": {
-      "checksum": "e0c0dfd0799d3f4a4a92448039668abb"
+      "checksum": "1847e2113d0759251c5a2bcc24714f3b"
     },
     "R/plotly_helpers.R": {
       "checksum": "aa7021082156f263034aefc56e9689e7"
     },
     "R/precomputed_series.R": {
-      "checksum": "d6761e523df0ca51a275c574178e977d"
+      "checksum": "3ae43400224c104c458d045125a9fbd8"
     },
     "R/price_trends_module.R": {
       "checksum": "ffd583646db8ccce221f4ded3e0037a6"
@@ -4402,7 +4405,7 @@
       "checksum": "f0082bd33ff1e328f3d3fdd291b16f1f"
     },
     "R/recent_buyers_module.R": {
-      "checksum": "57dadd5ad08de6facde59226dbf6a567"
+      "checksum": "39fc3fcc5cb37ea7a4b97f1ca47adf6d"
     },
     "R/release_checklist.R": {
       "checksum": "3264a41afc8f6c11b2d3284fc3ad6269"
@@ -4411,7 +4414,7 @@
       "checksum": "a66f5f5e4a7c6fbbc5aac8df95d3aea3"
     },
     "R/rental_market_module.R": {
-      "checksum": "76f2f1b86350f54160bbf085f0d0b248"
+      "checksum": "cb60ce8bbc47c9692def0ff87b4e2098"
     },
     "R/sih_benchmarks.R": {
       "checksum": "944f046aed52e8fd9252280f7df4befc"
@@ -4429,7 +4432,7 @@
       "checksum": "a5f806bc7c1d68301d1aedf6f3d00985"
     },
     "README.md": {
-      "checksum": "59fb77fccf4976f296a43067e7fba05e"
+      "checksum": "12aa7cf8ac237665654a9401a7e46f1f"
     },
     "renv.lock": {
       "checksum": "28f416b3bc3ef7ba4ab31b111f880b56"

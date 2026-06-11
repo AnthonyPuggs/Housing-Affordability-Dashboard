@@ -2014,6 +2014,66 @@
       "norm_label": "graphify"
     },
     {
+      "label": "NEWS.md",
+      "file_type": "document",
+      "source_file": "NEWS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "news",
+      "community": 59,
+      "norm_label": "news.md"
+    },
+    {
+      "label": "HousingAffordabilityDashboard news",
+      "file_type": "document",
+      "source_file": "NEWS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "news_housingaffordabilitydashboard_news",
+      "community": 59,
+      "norm_label": "housingaffordabilitydashboard news"
+    },
+    {
+      "label": "0.4.0 (in development \u2014 Track 3 hygiene)",
+      "file_type": "document",
+      "source_file": "NEWS.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "news_0_4_0_in_development_track_3_hygiene",
+      "community": 59,
+      "norm_label": "0.4.0 (in development \u2014 track 3 hygiene)"
+    },
+    {
+      "label": "0.3.0 (2026-06-12) \u2014 roadmap Track 2",
+      "file_type": "document",
+      "source_file": "NEWS.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "news_0_3_0_2026_06_12_roadmap_track_2",
+      "community": 59,
+      "norm_label": "0.3.0 (2026-06-12) \u2014 roadmap track 2"
+    },
+    {
+      "label": "0.2.0 (2026-06-11) \u2014 roadmap Track 1",
+      "file_type": "document",
+      "source_file": "NEWS.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "news_0_2_0_2026_06_11_roadmap_track_1",
+      "community": 59,
+      "norm_label": "0.2.0 (2026-06-11) \u2014 roadmap track 1"
+    },
+    {
+      "label": "0.1.0 \u2014 baseline",
+      "file_type": "document",
+      "source_file": "NEWS.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "news_0_1_0_baseline",
+      "community": 59,
+      "norm_label": "0.1.0 \u2014 baseline"
+    },
+    {
       "label": "README.md",
       "file_type": "document",
       "source_file": "README.md",
@@ -2196,81 +2256,81 @@
     {
       "label": "README_old.md",
       "file_type": "document",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_old",
-      "community": 87,
+      "id": "archive_readme_old",
+      "community": 32,
       "norm_label": "readme_old.md"
     },
     {
       "label": "Australian Housing Affordability Dashboard",
       "file_type": "document",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_old_australian_housing_affordability_dashboard",
-      "community": 87,
+      "id": "archive_readme_old_australian_housing_affordability_dashboard",
+      "community": 32,
       "norm_label": "australian housing affordability dashboard"
     },
     {
       "label": "Run The App",
       "file_type": "document",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "readme_old_run_the_app",
-      "community": 87,
+      "id": "archive_readme_old_run_the_app",
+      "community": 32,
       "norm_label": "run the app"
     },
     {
       "label": "Refresh The Data",
       "file_type": "document",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L45",
       "_origin": "ast",
-      "id": "readme_old_refresh_the_data",
-      "community": 87,
+      "id": "archive_readme_old_refresh_the_data",
+      "community": 32,
       "norm_label": "refresh the data"
     },
     {
       "label": "Data Model",
       "file_type": "document",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L57",
       "_origin": "ast",
-      "id": "readme_old_data_model",
-      "community": 87,
+      "id": "archive_readme_old_data_model",
+      "community": 32,
       "norm_label": "data model"
     },
     {
       "label": "Methodology Metadata",
       "file_type": "document",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L75",
       "_origin": "ast",
-      "id": "readme_old_methodology_metadata",
-      "community": 87,
+      "id": "archive_readme_old_methodology_metadata",
+      "community": 32,
       "norm_label": "methodology metadata"
     },
     {
       "label": "Verification",
       "file_type": "document",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L105",
       "_origin": "ast",
-      "id": "readme_old_verification",
-      "community": 87,
+      "id": "archive_readme_old_verification",
+      "community": 32,
       "norm_label": "verification"
     },
     {
       "label": "Notes",
       "file_type": "document",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L162",
       "_origin": "ast",
-      "id": "readme_old_notes",
-      "community": 87,
+      "id": "archive_readme_old_notes",
+      "community": 32,
       "norm_label": "notes"
     },
     {
@@ -2402,6 +2462,46 @@
       "id": "docs_code_review_2026_06_10_5_appendix_method_coverage",
       "community": 82,
       "norm_label": "5. appendix \u2014 method & coverage"
+    },
+    {
+      "label": "deploying.md",
+      "file_type": "document",
+      "source_file": "docs/deploying.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_deploying",
+      "community": 87,
+      "norm_label": "deploying.md"
+    },
+    {
+      "label": "Deploying to Posit Connect Cloud",
+      "file_type": "document",
+      "source_file": "docs/deploying.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_deploying_deploying_to_posit_connect_cloud",
+      "community": 87,
+      "norm_label": "deploying to posit connect cloud"
+    },
+    {
+      "label": "Procedure",
+      "file_type": "document",
+      "source_file": "docs/deploying.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_deploying_procedure",
+      "community": 87,
+      "norm_label": "procedure"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/deploying.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "docs_deploying_notes",
+      "community": 87,
+      "norm_label": "notes"
     },
     {
       "label": "feature_review_2026-05-31.md",
@@ -3084,6 +3184,86 @@
       "norm_label": "reconciliation with the 2026-05-31 recommended order"
     },
     {
+      "label": "track3_plan.md",
+      "file_type": "document",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_track3_plan",
+      "community": 58,
+      "norm_label": "track3_plan.md"
+    },
+    {
+      "label": "Track 3 \u2014 Hygiene: Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_track3_plan_track_3_hygiene_implementation_plan",
+      "community": 58,
+      "norm_label": "track 3 \u2014 hygiene: implementation plan"
+    },
+    {
+      "label": "Batch 1 \u2014 Quick wins (S items) \u2014 [ ]",
+      "file_type": "document",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_track3_plan_batch_1_quick_wins_s_items",
+      "community": 58,
+      "norm_label": "batch 1 \u2014 quick wins (s items) \u2014 [ ]"
+    },
+    {
+      "label": "Batch 2 \u2014 CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) \u2014 [ ]",
+      "file_type": "document",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "docs_track3_plan_batch_2_css_js_to_www_real_tooltips_shiny_08_ux_12",
+      "community": 58,
+      "norm_label": "batch 2 \u2014 css/js to `www/` + real tooltips (shiny-08, ux-12) \u2014 [ ]"
+    },
+    {
+      "label": "Batch 3 \u2014 SIH header-anchored parser rewrite (PIPE-12, priority) \u2014 [ ]",
+      "file_type": "document",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "docs_track3_plan_batch_3_sih_header_anchored_parser_rewrite_pipe_12_priority",
+      "community": 58,
+      "norm_label": "batch 3 \u2014 sih header-anchored parser rewrite (pipe-12, priority) \u2014 [ ]"
+    },
+    {
+      "label": "Batch 4 \u2014 Refresh-workflow hardening (TEST-06/07, PIPE-08) \u2014 [ ]",
+      "file_type": "document",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08",
+      "community": 58,
+      "norm_label": "batch 4 \u2014 refresh-workflow hardening (test-06/07, pipe-08) \u2014 [ ]"
+    },
+    {
+      "label": "Batch 5 \u2014 Polish (opportunistic) \u2014 [ ]",
+      "file_type": "document",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "docs_track3_plan_batch_5_polish_opportunistic",
+      "community": 58,
+      "norm_label": "batch 5 \u2014 polish (opportunistic) \u2014 [ ]"
+    },
+    {
+      "label": "Verification (every batch)",
+      "file_type": "document",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "docs_track3_plan_verification_every_batch",
+      "community": 58,
+      "norm_label": "verification (every batch)"
+    },
+    {
       "label": "ui_review_2026-05-21.md",
       "file_type": "document",
       "source_file": "docs/ui_review_2026-05-21.md",
@@ -3382,94 +3562,6 @@
       "id": "docs_ui_smoke_checklist_static_guard",
       "community": 92,
       "norm_label": "static guard"
-    },
-    {
-      "label": "project_plan.md",
-      "file_type": "document",
-      "source_file": "project_plan.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "project_plan",
-      "community": 109,
-      "norm_label": "project_plan.md"
-    },
-    {
-      "label": "Legacy CPI Rent Series Diagnostic",
-      "file_type": "code",
-      "source_file": "_check_cpi.R",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 58,
-      "norm_label": "legacy cpi rent series diagnostic",
-      "id": "check_cpi_legacy_diagnostic"
-    },
-    {
-      "label": "Static Plot Export Script",
-      "file_type": "code",
-      "source_file": "save_plots.R",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 59,
-      "norm_label": "static plot export script",
-      "id": "save_plots_static_export"
-    },
-    {
-      "label": "Legacy Macro Dashboard",
-      "file_type": "code",
-      "source_file": "app_old.R",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 32,
-      "norm_label": "legacy macro dashboard",
-      "id": "app_old_legacy_macro_dashboard"
-    },
-    {
-      "label": "Legacy ABS Normalisation Pattern",
-      "file_type": "code",
-      "source_file": "app_old.R",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 32,
-      "norm_label": "legacy abs normalisation pattern",
-      "id": "app_old_abs_normalisation_pattern"
-    },
-    {
-      "label": "Legacy Macro Data Fetch Function",
-      "file_type": "code",
-      "source_file": "app_old.R",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 32,
-      "norm_label": "legacy macro data fetch function",
-      "id": "app_old_macro_data_fetch"
-    },
-    {
-      "label": "Legacy Transform and Plot Pipeline",
-      "file_type": "code",
-      "source_file": "app_old.R",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 32,
-      "norm_label": "legacy transform and plot pipeline",
-      "id": "app_old_transform_and_plot"
     },
     {
       "label": "Fail-fast Pipeline Output Validation",
@@ -11281,9 +11373,9 @@
       "source_file": "manifest.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest",
-      "target": "manifest_environment",
-      "confidence_score": 1.0
+      "target": "manifest_environment"
     },
     {
       "relation": "contains",
@@ -11391,9 +11483,9 @@
       "source_file": "manifest.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_environment",
-      "target": "manifest_environment_r",
-      "confidence_score": 1.0
+      "target": "manifest_environment_r"
     },
     {
       "relation": "contains",
@@ -11401,9 +11493,9 @@
       "source_file": "manifest.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_environment_r",
-      "target": "manifest_r_requires",
-      "confidence_score": 1.0
+      "target": "manifest_r_requires"
     },
     {
       "relation": "contains",
@@ -11411,9 +11503,9 @@
       "source_file": "manifest.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages",
-      "target": "manifest_packages_asioheaders",
-      "confidence_score": 1.0
+      "target": "manifest_packages_asioheaders"
     },
     {
       "relation": "contains",
@@ -11431,9 +11523,9 @@
       "source_file": "manifest.json",
       "source_location": "L217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages",
-      "target": "manifest_packages_backports",
-      "confidence_score": 1.0
+      "target": "manifest_packages_backports"
     },
     {
       "relation": "contains",
@@ -11471,9 +11563,9 @@
       "source_file": "manifest.json",
       "source_location": "L352",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages",
-      "target": "manifest_packages_brio",
-      "confidence_score": 1.0
+      "target": "manifest_packages_brio"
     },
     {
       "relation": "contains",
@@ -11501,9 +11593,9 @@
       "source_file": "manifest.json",
       "source_location": "L458",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages",
-      "target": "manifest_packages_callr",
-      "confidence_score": 1.0
+      "target": "manifest_packages_callr"
     },
     {
       "relation": "contains",
@@ -11521,9 +11613,9 @@
       "source_file": "manifest.json",
       "source_location": "L529",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages",
-      "target": "manifest_packages_checkmate",
-      "confidence_score": 1.0
+      "target": "manifest_packages_checkmate"
     },
     {
       "relation": "contains",
@@ -11571,9 +11663,9 @@
       "source_file": "manifest.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_asioheaders",
-      "target": "manifest_asioheaders_description",
-      "confidence_score": 1.0
+      "target": "manifest_asioheaders_description"
     },
     {
       "relation": "contains",
@@ -11581,9 +11673,9 @@
       "source_file": "manifest.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_asioheaders",
-      "target": "manifest_asioheaders_repository",
-      "confidence_score": 1.0
+      "target": "manifest_asioheaders_repository"
     },
     {
       "relation": "contains",
@@ -11591,9 +11683,9 @@
       "source_file": "manifest.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_asioheaders",
-      "target": "manifest_asioheaders_source",
-      "confidence_score": 1.0
+      "target": "manifest_asioheaders_source"
     },
     {
       "relation": "contains",
@@ -11601,9 +11693,9 @@
       "source_file": "manifest.json",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_author",
-      "confidence_score": 1.0
+      "target": "manifest_description_author"
     },
     {
       "relation": "contains",
@@ -11611,9 +11703,9 @@
       "source_file": "manifest.json",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_authors_r",
-      "confidence_score": 1.0
+      "target": "manifest_description_authors_r"
     },
     {
       "relation": "contains",
@@ -11621,9 +11713,9 @@
       "source_file": "manifest.json",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_bugreports",
-      "confidence_score": 1.0
+      "target": "manifest_description_bugreports"
     },
     {
       "relation": "contains",
@@ -11631,9 +11723,9 @@
       "source_file": "manifest.json",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_built",
-      "confidence_score": 1.0
+      "target": "manifest_description_built"
     },
     {
       "relation": "contains",
@@ -11641,9 +11733,9 @@
       "source_file": "manifest.json",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_copyright",
-      "confidence_score": 1.0
+      "target": "manifest_description_copyright"
     },
     {
       "relation": "contains",
@@ -11651,9 +11743,9 @@
       "source_file": "manifest.json",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_date",
-      "confidence_score": 1.0
+      "target": "manifest_description_date"
     },
     {
       "relation": "contains",
@@ -11661,9 +11753,9 @@
       "source_file": "manifest.json",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_date_publication",
-      "confidence_score": 1.0
+      "target": "manifest_description_date_publication"
     },
     {
       "relation": "contains",
@@ -11671,9 +11763,9 @@
       "source_file": "manifest.json",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_description",
-      "confidence_score": 1.0
+      "target": "manifest_description_description"
     },
     {
       "relation": "contains",
@@ -11681,9 +11773,9 @@
       "source_file": "manifest.json",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_license",
-      "confidence_score": 1.0
+      "target": "manifest_description_license"
     },
     {
       "relation": "contains",
@@ -11691,9 +11783,9 @@
       "source_file": "manifest.json",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_maintainer",
-      "confidence_score": 1.0
+      "target": "manifest_description_maintainer"
     },
     {
       "relation": "contains",
@@ -11701,9 +11793,9 @@
       "source_file": "manifest.json",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_needscompilation",
-      "confidence_score": 1.0
+      "target": "manifest_description_needscompilation"
     },
     {
       "relation": "contains",
@@ -11711,9 +11803,9 @@
       "source_file": "manifest.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_package",
-      "confidence_score": 1.0
+      "target": "manifest_description_package"
     },
     {
       "relation": "contains",
@@ -11721,9 +11813,9 @@
       "source_file": "manifest.json",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_packaged",
-      "confidence_score": 1.0
+      "target": "manifest_description_packaged"
     },
     {
       "relation": "contains",
@@ -11731,9 +11823,9 @@
       "source_file": "manifest.json",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_remotepkgplatform",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotepkgplatform"
     },
     {
       "relation": "contains",
@@ -11741,9 +11833,9 @@
       "source_file": "manifest.json",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_remotepkgref",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotepkgref"
     },
     {
       "relation": "contains",
@@ -11751,9 +11843,9 @@
       "source_file": "manifest.json",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_remoteref",
-      "confidence_score": 1.0
+      "target": "manifest_description_remoteref"
     },
     {
       "relation": "contains",
@@ -11761,9 +11853,9 @@
       "source_file": "manifest.json",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_remoterepos",
-      "confidence_score": 1.0
+      "target": "manifest_description_remoterepos"
     },
     {
       "relation": "contains",
@@ -11771,9 +11863,9 @@
       "source_file": "manifest.json",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_remotereposname",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotereposname"
     },
     {
       "relation": "contains",
@@ -11781,9 +11873,9 @@
       "source_file": "manifest.json",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_remotesha",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotesha"
     },
     {
       "relation": "contains",
@@ -11791,9 +11883,9 @@
       "source_file": "manifest.json",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_remotetype",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotetype"
     },
     {
       "relation": "contains",
@@ -11801,9 +11893,9 @@
       "source_file": "manifest.json",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_repository",
-      "confidence_score": 1.0
+      "target": "manifest_description_repository"
     },
     {
       "relation": "contains",
@@ -11811,9 +11903,9 @@
       "source_file": "manifest.json",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_title",
-      "confidence_score": 1.0
+      "target": "manifest_description_title"
     },
     {
       "relation": "contains",
@@ -11821,9 +11913,9 @@
       "source_file": "manifest.json",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_type",
-      "confidence_score": 1.0
+      "target": "manifest_description_type"
     },
     {
       "relation": "contains",
@@ -11831,9 +11923,9 @@
       "source_file": "manifest.json",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_url",
-      "confidence_score": 1.0
+      "target": "manifest_description_url"
     },
     {
       "relation": "contains",
@@ -11841,9 +11933,9 @@
       "source_file": "manifest.json",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_asioheaders_description",
-      "target": "manifest_description_version",
-      "confidence_score": 1.0
+      "target": "manifest_description_version"
     },
     {
       "relation": "contains",
@@ -11861,9 +11953,9 @@
       "source_file": "manifest.json",
       "source_location": "L221",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_package",
-      "confidence_score": 1.0
+      "target": "manifest_description_package"
     },
     {
       "relation": "contains",
@@ -11901,9 +11993,9 @@
       "source_file": "manifest.json",
       "source_location": "L356",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_package",
-      "confidence_score": 1.0
+      "target": "manifest_description_package"
     },
     {
       "relation": "contains",
@@ -11931,9 +12023,9 @@
       "source_file": "manifest.json",
       "source_location": "L462",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_package",
-      "confidence_score": 1.0
+      "target": "manifest_description_package"
     },
     {
       "relation": "contains",
@@ -11951,9 +12043,9 @@
       "source_file": "manifest.json",
       "source_location": "L533",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_checkmate_description",
-      "target": "manifest_description_package",
-      "confidence_score": 1.0
+      "target": "manifest_description_package"
     },
     {
       "relation": "contains",
@@ -12011,9 +12103,9 @@
       "source_file": "manifest.json",
       "source_location": "L222",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_type",
-      "confidence_score": 1.0
+      "target": "manifest_description_type"
     },
     {
       "relation": "contains",
@@ -12021,9 +12113,9 @@
       "source_file": "manifest.json",
       "source_location": "L534",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_checkmate_description",
-      "target": "manifest_description_type",
-      "confidence_score": 1.0
+      "target": "manifest_description_type"
     },
     {
       "relation": "contains",
@@ -12041,9 +12133,9 @@
       "source_file": "manifest.json",
       "source_location": "L223",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_title",
-      "confidence_score": 1.0
+      "target": "manifest_description_title"
     },
     {
       "relation": "contains",
@@ -12081,9 +12173,9 @@
       "source_file": "manifest.json",
       "source_location": "L357",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_title",
-      "confidence_score": 1.0
+      "target": "manifest_description_title"
     },
     {
       "relation": "contains",
@@ -12111,9 +12203,9 @@
       "source_file": "manifest.json",
       "source_location": "L463",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_title",
-      "confidence_score": 1.0
+      "target": "manifest_description_title"
     },
     {
       "relation": "contains",
@@ -12181,9 +12273,9 @@
       "source_file": "manifest.json",
       "source_location": "L224",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_version",
-      "confidence_score": 1.0
+      "target": "manifest_description_version"
     },
     {
       "relation": "contains",
@@ -12221,9 +12313,9 @@
       "source_file": "manifest.json",
       "source_location": "L358",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_version",
-      "confidence_score": 1.0
+      "target": "manifest_description_version"
     },
     {
       "relation": "contains",
@@ -12251,9 +12343,9 @@
       "source_file": "manifest.json",
       "source_location": "L464",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_version",
-      "confidence_score": 1.0
+      "target": "manifest_description_version"
     },
     {
       "relation": "contains",
@@ -12341,9 +12433,9 @@
       "source_file": "manifest.json",
       "source_location": "L225",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_authors_r",
-      "confidence_score": 1.0
+      "target": "manifest_description_authors_r"
     },
     {
       "relation": "contains",
@@ -12381,9 +12473,9 @@
       "source_file": "manifest.json",
       "source_location": "L359",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_authors_r",
-      "confidence_score": 1.0
+      "target": "manifest_description_authors_r"
     },
     {
       "relation": "contains",
@@ -12411,9 +12503,9 @@
       "source_file": "manifest.json",
       "source_location": "L465",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_authors_r",
-      "confidence_score": 1.0
+      "target": "manifest_description_authors_r"
     },
     {
       "relation": "contains",
@@ -12481,9 +12573,9 @@
       "source_file": "manifest.json",
       "source_location": "L227",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_description",
-      "confidence_score": 1.0
+      "target": "manifest_description_description"
     },
     {
       "relation": "contains",
@@ -12521,9 +12613,9 @@
       "source_file": "manifest.json",
       "source_location": "L360",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_description",
-      "confidence_score": 1.0
+      "target": "manifest_description_description"
     },
     {
       "relation": "contains",
@@ -12551,9 +12643,9 @@
       "source_file": "manifest.json",
       "source_location": "L466",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_description",
-      "confidence_score": 1.0
+      "target": "manifest_description_description"
     },
     {
       "relation": "contains",
@@ -12621,9 +12713,9 @@
       "source_file": "manifest.json",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_license",
-      "confidence_score": 1.0
+      "target": "manifest_description_license"
     },
     {
       "relation": "contains",
@@ -12661,9 +12753,9 @@
       "source_file": "manifest.json",
       "source_location": "L361",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_license",
-      "confidence_score": 1.0
+      "target": "manifest_description_license"
     },
     {
       "relation": "contains",
@@ -12691,9 +12783,9 @@
       "source_file": "manifest.json",
       "source_location": "L467",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_license",
-      "confidence_score": 1.0
+      "target": "manifest_description_license"
     },
     {
       "relation": "contains",
@@ -12761,9 +12853,9 @@
       "source_file": "manifest.json",
       "source_location": "L228",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_url",
-      "confidence_score": 1.0
+      "target": "manifest_description_url"
     },
     {
       "relation": "contains",
@@ -12801,9 +12893,9 @@
       "source_file": "manifest.json",
       "source_location": "L362",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_url",
-      "confidence_score": 1.0
+      "target": "manifest_description_url"
     },
     {
       "relation": "contains",
@@ -12831,9 +12923,9 @@
       "source_file": "manifest.json",
       "source_location": "L468",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_url",
-      "confidence_score": 1.0
+      "target": "manifest_description_url"
     },
     {
       "relation": "contains",
@@ -12891,9 +12983,9 @@
       "source_file": "manifest.json",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_bugreports",
-      "confidence_score": 1.0
+      "target": "manifest_description_bugreports"
     },
     {
       "relation": "contains",
@@ -12911,9 +13003,9 @@
       "source_file": "manifest.json",
       "source_location": "L363",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_bugreports",
-      "confidence_score": 1.0
+      "target": "manifest_description_bugreports"
     },
     {
       "relation": "contains",
@@ -12931,9 +13023,9 @@
       "source_file": "manifest.json",
       "source_location": "L469",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_bugreports",
-      "confidence_score": 1.0
+      "target": "manifest_description_bugreports"
     },
     {
       "relation": "contains",
@@ -12991,9 +13083,9 @@
       "source_file": "manifest.json",
       "source_location": "L231",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_needscompilation",
-      "confidence_score": 1.0
+      "target": "manifest_description_needscompilation"
     },
     {
       "relation": "contains",
@@ -13031,9 +13123,9 @@
       "source_file": "manifest.json",
       "source_location": "L370",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_needscompilation",
-      "confidence_score": 1.0
+      "target": "manifest_description_needscompilation"
     },
     {
       "relation": "contains",
@@ -13061,9 +13153,9 @@
       "source_file": "manifest.json",
       "source_location": "L479",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_needscompilation",
-      "confidence_score": 1.0
+      "target": "manifest_description_needscompilation"
     },
     {
       "relation": "contains",
@@ -13131,9 +13223,9 @@
       "source_file": "manifest.json",
       "source_location": "L236",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_packaged",
-      "confidence_score": 1.0
+      "target": "manifest_description_packaged"
     },
     {
       "relation": "contains",
@@ -13171,9 +13263,9 @@
       "source_file": "manifest.json",
       "source_location": "L371",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_packaged",
-      "confidence_score": 1.0
+      "target": "manifest_description_packaged"
     },
     {
       "relation": "contains",
@@ -13201,9 +13293,9 @@
       "source_file": "manifest.json",
       "source_location": "L480",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_packaged",
-      "confidence_score": 1.0
+      "target": "manifest_description_packaged"
     },
     {
       "relation": "contains",
@@ -13271,9 +13363,9 @@
       "source_file": "manifest.json",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_author",
-      "confidence_score": 1.0
+      "target": "manifest_description_author"
     },
     {
       "relation": "contains",
@@ -13311,9 +13403,9 @@
       "source_file": "manifest.json",
       "source_location": "L372",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_author",
-      "confidence_score": 1.0
+      "target": "manifest_description_author"
     },
     {
       "relation": "contains",
@@ -13341,9 +13433,9 @@
       "source_file": "manifest.json",
       "source_location": "L481",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_author",
-      "confidence_score": 1.0
+      "target": "manifest_description_author"
     },
     {
       "relation": "contains",
@@ -13411,9 +13503,9 @@
       "source_file": "manifest.json",
       "source_location": "L226",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_maintainer",
-      "confidence_score": 1.0
+      "target": "manifest_description_maintainer"
     },
     {
       "relation": "contains",
@@ -13451,9 +13543,9 @@
       "source_file": "manifest.json",
       "source_location": "L373",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_maintainer",
-      "confidence_score": 1.0
+      "target": "manifest_description_maintainer"
     },
     {
       "relation": "contains",
@@ -13481,9 +13573,9 @@
       "source_file": "manifest.json",
       "source_location": "L482",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_maintainer",
-      "confidence_score": 1.0
+      "target": "manifest_description_maintainer"
     },
     {
       "relation": "contains",
@@ -13551,9 +13643,9 @@
       "source_file": "manifest.json",
       "source_location": "L238",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_repository",
-      "confidence_score": 1.0
+      "target": "manifest_description_repository"
     },
     {
       "relation": "contains",
@@ -13591,9 +13683,9 @@
       "source_file": "manifest.json",
       "source_location": "L374",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_repository",
-      "confidence_score": 1.0
+      "target": "manifest_description_repository"
     },
     {
       "relation": "contains",
@@ -13621,9 +13713,9 @@
       "source_file": "manifest.json",
       "source_location": "L483",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_repository",
-      "confidence_score": 1.0
+      "target": "manifest_description_repository"
     },
     {
       "relation": "contains",
@@ -13691,9 +13783,9 @@
       "source_file": "manifest.json",
       "source_location": "L239",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_date_publication",
-      "confidence_score": 1.0
+      "target": "manifest_description_date_publication"
     },
     {
       "relation": "contains",
@@ -13731,9 +13823,9 @@
       "source_file": "manifest.json",
       "source_location": "L375",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_date_publication",
-      "confidence_score": 1.0
+      "target": "manifest_description_date_publication"
     },
     {
       "relation": "contains",
@@ -13761,9 +13853,9 @@
       "source_file": "manifest.json",
       "source_location": "L484",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_date_publication",
-      "confidence_score": 1.0
+      "target": "manifest_description_date_publication"
     },
     {
       "relation": "contains",
@@ -13831,9 +13923,9 @@
       "source_file": "manifest.json",
       "source_location": "L240",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_built",
-      "confidence_score": 1.0
+      "target": "manifest_description_built"
     },
     {
       "relation": "contains",
@@ -13871,9 +13963,9 @@
       "source_file": "manifest.json",
       "source_location": "L376",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_built",
-      "confidence_score": 1.0
+      "target": "manifest_description_built"
     },
     {
       "relation": "contains",
@@ -13901,9 +13993,9 @@
       "source_file": "manifest.json",
       "source_location": "L485",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_built",
-      "confidence_score": 1.0
+      "target": "manifest_description_built"
     },
     {
       "relation": "contains",
@@ -13971,9 +14063,9 @@
       "source_file": "manifest.json",
       "source_location": "L242",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_remotetype",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotetype"
     },
     {
       "relation": "contains",
@@ -14011,9 +14103,9 @@
       "source_file": "manifest.json",
       "source_location": "L378",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_remotetype",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotetype"
     },
     {
       "relation": "contains",
@@ -14041,9 +14133,9 @@
       "source_file": "manifest.json",
       "source_location": "L486",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_remotetype",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotetype"
     },
     {
       "relation": "contains",
@@ -14111,9 +14203,9 @@
       "source_file": "manifest.json",
       "source_location": "L243",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_remoteref",
-      "confidence_score": 1.0
+      "target": "manifest_description_remoteref"
     },
     {
       "relation": "contains",
@@ -14151,9 +14243,9 @@
       "source_file": "manifest.json",
       "source_location": "L379",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_remoteref",
-      "confidence_score": 1.0
+      "target": "manifest_description_remoteref"
     },
     {
       "relation": "contains",
@@ -14181,9 +14273,9 @@
       "source_file": "manifest.json",
       "source_location": "L487",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_remoteref",
-      "confidence_score": 1.0
+      "target": "manifest_description_remoteref"
     },
     {
       "relation": "contains",
@@ -14251,9 +14343,9 @@
       "source_file": "manifest.json",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_remotepkgref",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotepkgref"
     },
     {
       "relation": "contains",
@@ -14291,9 +14383,9 @@
       "source_file": "manifest.json",
       "source_location": "L380",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_remotepkgref",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotepkgref"
     },
     {
       "relation": "contains",
@@ -14321,9 +14413,9 @@
       "source_file": "manifest.json",
       "source_location": "L488",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_remotepkgref",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotepkgref"
     },
     {
       "relation": "contains",
@@ -14391,9 +14483,9 @@
       "source_file": "manifest.json",
       "source_location": "L245",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_remoterepos",
-      "confidence_score": 1.0
+      "target": "manifest_description_remoterepos"
     },
     {
       "relation": "contains",
@@ -14431,9 +14523,9 @@
       "source_file": "manifest.json",
       "source_location": "L381",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_remoterepos",
-      "confidence_score": 1.0
+      "target": "manifest_description_remoterepos"
     },
     {
       "relation": "contains",
@@ -14461,9 +14553,9 @@
       "source_file": "manifest.json",
       "source_location": "L489",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_remoterepos",
-      "confidence_score": 1.0
+      "target": "manifest_description_remoterepos"
     },
     {
       "relation": "contains",
@@ -14521,9 +14613,9 @@
       "source_file": "manifest.json",
       "source_location": "L246",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_remotereposname",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotereposname"
     },
     {
       "relation": "contains",
@@ -14541,9 +14633,9 @@
       "source_file": "manifest.json",
       "source_location": "L382",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_remotereposname",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotereposname"
     },
     {
       "relation": "contains",
@@ -14551,9 +14643,9 @@
       "source_file": "manifest.json",
       "source_location": "L490",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_remotereposname",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotereposname"
     },
     {
       "relation": "contains",
@@ -14591,9 +14683,9 @@
       "source_file": "manifest.json",
       "source_location": "L247",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_remotepkgplatform",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotepkgplatform"
     },
     {
       "relation": "contains",
@@ -14611,9 +14703,9 @@
       "source_file": "manifest.json",
       "source_location": "L383",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_remotepkgplatform",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotepkgplatform"
     },
     {
       "relation": "contains",
@@ -14621,9 +14713,9 @@
       "source_file": "manifest.json",
       "source_location": "L491",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_remotepkgplatform",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotepkgplatform"
     },
     {
       "relation": "contains",
@@ -14671,9 +14763,9 @@
       "source_file": "manifest.json",
       "source_location": "L248",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_remotesha",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotesha"
     },
     {
       "relation": "contains",
@@ -14711,9 +14803,9 @@
       "source_file": "manifest.json",
       "source_location": "L384",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_remotesha",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotesha"
     },
     {
       "relation": "contains",
@@ -14741,9 +14833,9 @@
       "source_file": "manifest.json",
       "source_location": "L492",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_remotesha",
-      "confidence_score": 1.0
+      "target": "manifest_description_remotesha"
     },
     {
       "relation": "contains",
@@ -14891,9 +14983,9 @@
       "source_file": "manifest.json",
       "source_location": "L233",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_depends",
-      "confidence_score": 1.0
+      "target": "manifest_description_depends"
     },
     {
       "relation": "contains",
@@ -14931,9 +15023,9 @@
       "source_file": "manifest.json",
       "source_location": "L364",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_depends",
-      "confidence_score": 1.0
+      "target": "manifest_description_depends"
     },
     {
       "relation": "contains",
@@ -14951,9 +15043,9 @@
       "source_file": "manifest.json",
       "source_location": "L470",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_depends",
-      "confidence_score": 1.0
+      "target": "manifest_description_depends"
     },
     {
       "relation": "contains",
@@ -15031,9 +15123,9 @@
       "source_file": "manifest.json",
       "source_location": "L365",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_suggests",
-      "confidence_score": 1.0
+      "target": "manifest_description_suggests"
     },
     {
       "relation": "contains",
@@ -15061,9 +15153,9 @@
       "source_file": "manifest.json",
       "source_location": "L472",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_suggests",
-      "confidence_score": 1.0
+      "target": "manifest_description_suggests"
     },
     {
       "relation": "contains",
@@ -15111,9 +15203,9 @@
       "source_file": "manifest.json",
       "source_location": "L366",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_config_needs_website",
-      "confidence_score": 1.0
+      "target": "manifest_description_config_needs_website"
     },
     {
       "relation": "contains",
@@ -15141,9 +15233,9 @@
       "source_file": "manifest.json",
       "source_location": "L473",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_config_needs_website",
-      "confidence_score": 1.0
+      "target": "manifest_description_config_needs_website"
     },
     {
       "relation": "contains",
@@ -15181,9 +15273,9 @@
       "source_file": "manifest.json",
       "source_location": "L367",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_config_testthat_edition",
-      "confidence_score": 1.0
+      "target": "manifest_description_config_testthat_edition"
     },
     {
       "relation": "contains",
@@ -15201,9 +15293,9 @@
       "source_file": "manifest.json",
       "source_location": "L474",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_config_testthat_edition",
-      "confidence_score": 1.0
+      "target": "manifest_description_config_testthat_edition"
     },
     {
       "relation": "contains",
@@ -15231,9 +15323,9 @@
       "source_file": "manifest.json",
       "source_location": "L234",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_encoding",
-      "confidence_score": 1.0
+      "target": "manifest_description_encoding"
     },
     {
       "relation": "contains",
@@ -15261,9 +15353,9 @@
       "source_file": "manifest.json",
       "source_location": "L368",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_encoding",
-      "confidence_score": 1.0
+      "target": "manifest_description_encoding"
     },
     {
       "relation": "contains",
@@ -15291,9 +15383,9 @@
       "source_file": "manifest.json",
       "source_location": "L476",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_encoding",
-      "confidence_score": 1.0
+      "target": "manifest_description_encoding"
     },
     {
       "relation": "contains",
@@ -15331,9 +15423,9 @@
       "source_file": "manifest.json",
       "source_location": "L235",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_roxygennote",
-      "confidence_score": 1.0
+      "target": "manifest_description_roxygennote"
     },
     {
       "relation": "contains",
@@ -15361,9 +15453,9 @@
       "source_file": "manifest.json",
       "source_location": "L369",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_roxygennote",
-      "confidence_score": 1.0
+      "target": "manifest_description_roxygennote"
     },
     {
       "relation": "contains",
@@ -15561,9 +15653,9 @@
       "source_file": "manifest.json",
       "source_location": "L471",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_imports",
-      "confidence_score": 1.0
+      "target": "manifest_description_imports"
     },
     {
       "relation": "contains",
@@ -15631,9 +15723,9 @@
       "source_file": "manifest.json",
       "source_location": "L241",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_archs",
-      "confidence_score": 1.0
+      "target": "manifest_description_archs"
     },
     {
       "relation": "contains",
@@ -15671,9 +15763,9 @@
       "source_file": "manifest.json",
       "source_location": "L377",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_brio_description",
-      "target": "manifest_description_archs",
-      "confidence_score": 1.0
+      "target": "manifest_description_archs"
     },
     {
       "relation": "contains",
@@ -15821,9 +15913,9 @@
       "source_file": "manifest.json",
       "source_location": "L477",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_language",
-      "confidence_score": 1.0
+      "target": "manifest_description_language"
     },
     {
       "relation": "contains",
@@ -15831,9 +15923,9 @@
       "source_file": "manifest.json",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_backports",
-      "target": "manifest_backports_description",
-      "confidence_score": 1.0
+      "target": "manifest_backports_description"
     },
     {
       "relation": "contains",
@@ -15841,9 +15933,9 @@
       "source_file": "manifest.json",
       "source_location": "L219",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_backports",
-      "target": "manifest_backports_repository",
-      "confidence_score": 1.0
+      "target": "manifest_backports_repository"
     },
     {
       "relation": "contains",
@@ -15851,9 +15943,9 @@
       "source_file": "manifest.json",
       "source_location": "L218",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_backports",
-      "target": "manifest_backports_source",
-      "confidence_score": 1.0
+      "target": "manifest_backports_source"
     },
     {
       "relation": "contains",
@@ -15861,9 +15953,9 @@
       "source_file": "manifest.json",
       "source_location": "L232",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_backports_description",
-      "target": "manifest_description_bytecompile",
-      "confidence_score": 1.0
+      "target": "manifest_description_bytecompile"
     },
     {
       "relation": "contains",
@@ -16031,9 +16123,9 @@
       "source_file": "manifest.json",
       "source_location": "L355",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_brio",
-      "target": "manifest_brio_description",
-      "confidence_score": 1.0
+      "target": "manifest_brio_description"
     },
     {
       "relation": "contains",
@@ -16041,9 +16133,9 @@
       "source_file": "manifest.json",
       "source_location": "L354",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_brio",
-      "target": "manifest_brio_repository",
-      "confidence_score": 1.0
+      "target": "manifest_brio_repository"
     },
     {
       "relation": "contains",
@@ -16051,9 +16143,9 @@
       "source_file": "manifest.json",
       "source_location": "L353",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_brio",
-      "target": "manifest_brio_source",
-      "confidence_score": 1.0
+      "target": "manifest_brio_source"
     },
     {
       "relation": "contains",
@@ -16161,9 +16253,9 @@
       "source_file": "manifest.json",
       "source_location": "L461",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_callr",
-      "target": "manifest_callr_description",
-      "confidence_score": 1.0
+      "target": "manifest_callr_description"
     },
     {
       "relation": "contains",
@@ -16171,9 +16263,9 @@
       "source_file": "manifest.json",
       "source_location": "L460",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_callr",
-      "target": "manifest_callr_repository",
-      "confidence_score": 1.0
+      "target": "manifest_callr_repository"
     },
     {
       "relation": "contains",
@@ -16181,9 +16273,9 @@
       "source_file": "manifest.json",
       "source_location": "L459",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_callr",
-      "target": "manifest_callr_source",
-      "confidence_score": 1.0
+      "target": "manifest_callr_source"
     },
     {
       "relation": "contains",
@@ -16191,9 +16283,9 @@
       "source_file": "manifest.json",
       "source_location": "L478",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_config_roxygen2_version",
-      "confidence_score": 1.0
+      "target": "manifest_description_config_roxygen2_version"
     },
     {
       "relation": "contains",
@@ -16201,9 +16293,9 @@
       "source_file": "manifest.json",
       "source_location": "L475",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_callr_description",
-      "target": "manifest_description_config_usethis_last_upkeep",
-      "confidence_score": 1.0
+      "target": "manifest_description_config_usethis_last_upkeep"
     },
     {
       "relation": "contains",
@@ -16251,9 +16343,9 @@
       "source_file": "manifest.json",
       "source_location": "L532",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_checkmate",
-      "target": "manifest_checkmate_description",
-      "confidence_score": 1.0
+      "target": "manifest_checkmate_description"
     },
     {
       "relation": "contains",
@@ -16261,9 +16353,9 @@
       "source_file": "manifest.json",
       "source_location": "L531",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_checkmate",
-      "target": "manifest_checkmate_repository",
-      "confidence_score": 1.0
+      "target": "manifest_checkmate_repository"
     },
     {
       "relation": "contains",
@@ -16271,9 +16363,9 @@
       "source_file": "manifest.json",
       "source_location": "L530",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manifest_packages_checkmate",
-      "target": "manifest_checkmate_source",
-      "confidence_score": 1.0
+      "target": "manifest_checkmate_source"
     },
     {
       "relation": "contains",
@@ -16638,6 +16730,56 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "NEWS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "news",
+      "target": "news_housingaffordabilitydashboard_news",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NEWS.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "news_housingaffordabilitydashboard_news",
+      "target": "news_0_1_0_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NEWS.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "news_housingaffordabilitydashboard_news",
+      "target": "news_0_2_0_2026_06_11_roadmap_track_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NEWS.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "news_housingaffordabilitydashboard_news",
+      "target": "news_0_3_0_2026_06_12_roadmap_track_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NEWS.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "news_housingaffordabilitydashboard_news",
+      "target": "news_0_4_0_in_development_track_3_hygiene",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "README.md",
       "source_location": "L131",
       "weight": 1.0,
@@ -16808,72 +16950,72 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_old",
-      "target": "readme_old_australian_housing_affordability_dashboard"
+      "source": "archive_readme_old",
+      "target": "archive_readme_old_australian_housing_affordability_dashboard",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L57",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_old_australian_housing_affordability_dashboard",
-      "target": "readme_old_data_model"
+      "source": "archive_readme_old_australian_housing_affordability_dashboard",
+      "target": "archive_readme_old_data_model",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L75",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_old_australian_housing_affordability_dashboard",
-      "target": "readme_old_methodology_metadata"
+      "source": "archive_readme_old_australian_housing_affordability_dashboard",
+      "target": "archive_readme_old_methodology_metadata",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L162",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_old_australian_housing_affordability_dashboard",
-      "target": "readme_old_notes"
+      "source": "archive_readme_old_australian_housing_affordability_dashboard",
+      "target": "archive_readme_old_notes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L45",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_old_australian_housing_affordability_dashboard",
-      "target": "readme_old_refresh_the_data"
+      "source": "archive_readme_old_australian_housing_affordability_dashboard",
+      "target": "archive_readme_old_refresh_the_data",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_old_australian_housing_affordability_dashboard",
-      "target": "readme_old_run_the_app"
+      "source": "archive_readme_old_australian_housing_affordability_dashboard",
+      "target": "archive_readme_old_run_the_app",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README_old.md",
+      "source_file": "archive/README_old.md",
       "source_location": "L105",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_old_australian_housing_affordability_dashboard",
-      "target": "readme_old_verification"
+      "source": "archive_readme_old_australian_housing_affordability_dashboard",
+      "target": "archive_readme_old_verification",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16994,6 +17136,36 @@
       "confidence_score": 1.0,
       "source": "docs_code_review_2026_06_10_3_findings_by_lens",
       "target": "docs_code_review_2026_06_10_3_6_testing_ci_release_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/deploying.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_deploying",
+      "target": "docs_deploying_deploying_to_posit_connect_cloud",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/deploying.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "docs_deploying_deploying_to_posit_connect_cloud",
+      "target": "docs_deploying_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/deploying.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_deploying_deploying_to_posit_connect_cloud",
+      "target": "docs_deploying_procedure",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17638,6 +17810,76 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_track3_plan",
+      "target": "docs_track3_plan_track_3_hygiene_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
+      "target": "docs_track3_plan_batch_1_quick_wins_s_items",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
+      "target": "docs_track3_plan_batch_2_css_js_to_www_real_tooltips_shiny_08_ux_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
+      "target": "docs_track3_plan_batch_3_sih_header_anchored_parser_rewrite_pipe_12_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
+      "target": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
+      "target": "docs_track3_plan_batch_5_polish_opportunistic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/track3_plan.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
+      "target": "docs_track3_plan_verification_every_batch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/ui_review_2026-05-21.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -17914,46 +18156,6 @@
       "confidence_score": 1.0,
       "source": "docs_ui_smoke_checklist_ui_smoke_checklist",
       "target": "docs_ui_smoke_checklist_theme_and_mobile_pass"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app_old.R",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "app_old_legacy_macro_dashboard",
-      "target": "app_old_abs_normalisation_pattern"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app_old.R",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "app_old_legacy_macro_dashboard",
-      "target": "app_old_macro_data_fetch"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app_old.R",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "app_old_legacy_macro_dashboard",
-      "target": "app_old_transform_and_plot"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app_old.R",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "app_old_macro_data_fetch",
-      "target": "app_old_abs_normalisation_pattern"
     },
     {
       "relation": "references",
@@ -25645,5 +25847,5 @@
       "source_file": "docs/national_affordability_score_methodology.md"
     }
   ],
-  "built_at_commit": "18e198ed89543dfabbb8508282b8e7397f00b03e"
+  "built_at_commit": "66bd763b633b39be22b5bf7d06f03e26257c4aca"
 }

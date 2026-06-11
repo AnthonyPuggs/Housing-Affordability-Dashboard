@@ -1,16 +1,16 @@
-# Graph Report - Housing-Affordability-Dashboard  (2026-06-11)
+# Graph Report - Housing-Affordability-Dashboard  (2026-06-12)
 
 ## Corpus Check
-- 132 files · ~192,644 words
+- 134 files · ~197,914 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 911 nodes · 1412 edges · 96 communities (61 shown, 35 thin omitted)
+- 922 nodes · 1423 edges · 95 communities (62 shown, 33 thin omitted)
 - Extraction: 88% EXTRACTED · 11% INFERRED · 1% AMBIGUOUS · INFERRED: 156 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `18e198ed`
+- Built from commit: `66bd763b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -155,7 +155,7 @@
 - **National Affordability Score v1 Components (40/35/25)** — national_affordability_score, mortgage_serviceability, rental_entry_affordability, deposit_barrier [INFERRED 0.95]
 - **30/40 Housing Stress Rule Concepts** — thirty_forty_rule, equivalised_disposable_income, housing_cost_burden, nhha_rental_affordability [INFERRED 0.85]
 
-## Communities (96 total, 35 thin omitted)
+## Communities (95 total, 33 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.18
@@ -282,8 +282,8 @@ Cohesion: 0.40
 Nodes (5): Package Retrieval in CI, Global Package Cache Configuration, Global Package Cache Compared With Packrat, JSON Lockfile Compared With Packrat, Packrat to renv Migration
 
 ### Community 32 - "Community 32"
-Cohesion: 0.67
-Nodes (4): Legacy ABS Normalisation Pattern, Legacy Macro Dashboard, Legacy Macro Data Fetch Function, Legacy Transform and Plot Pipeline
+Cohesion: 0.25
+Nodes (7): Australian Housing Affordability Dashboard, Data Model, Methodology Metadata, Notes, Refresh The Data, Run The App, Verification
 
 ### Community 33 - "Community 33"
 Cohesion: 0.50
@@ -312,6 +312,14 @@ Nodes (23): Affordability, Core Economic Validity Fixes, Do Not Overbuild, Evide
 ### Community 57 - "Community 57"
 Cohesion: 0.08
 Nodes (23): Affordability, Complete UI Review - 21 May 2026, Evidence Base, Findings, Geographic Affordability, Housing Supply, Interaction Checks, Market Context (+15 more)
+
+### Community 58 - "Community 58"
+Cohesion: 0.25
+Nodes (7): Batch 1 — Quick wins (S items) — [ ], Batch 2 — CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) — [ ], Batch 3 — SIH header-anchored parser rewrite (PIPE-12, priority) — [ ], Batch 4 — Refresh-workflow hardening (TEST-06/07, PIPE-08) — [ ], Batch 5 — Polish (opportunistic) — [ ], Track 3 — Hygiene: Implementation Plan, Verification (every batch)
+
+### Community 59 - "Community 59"
+Cohesion: 0.33
+Nodes (5): 0.1.0 — baseline, 0.2.0 (2026-06-11) — roadmap Track 1, 0.3.0 (2026-06-12) — roadmap Track 2, 0.4.0 (in development — Track 3 hygiene), HousingAffordabilityDashboard news
 
 ### Community 66 - "Community 66"
 Cohesion: 0.08
@@ -354,8 +362,8 @@ Cohesion: 0.22
 Nodes (8): Architecture, Cautions, Chart Builder Workflow, Current Builder Coverage, File Responsibilities, Quick Local Plot Test, Testing Chart Builder Changes, When To Edit Each Surface
 
 ### Community 87 - "Community 87"
-Cohesion: 0.25
-Nodes (7): Australian Housing Affordability Dashboard, Data Model, Methodology Metadata, Notes, Refresh The Data, Run The App, Verification
+Cohesion: 0.50
+Nodes (3): Deploying to Posit Connect Cloud, Notes, Procedure
 
 ### Community 88 - "Community 88"
 Cohesion: 0.24
@@ -404,9 +412,9 @@ Nodes (5): Desktop Pass, Start The App, Static Guard, Theme And Mobile Pass, UI 
   plots/rental_costs_demo.png · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **343 isolated node(s):** `PreToolUse`, `version`, `tasks`, `version`, `locale` (+338 more)
+- **352 isolated node(s):** `PreToolUse`, `version`, `tasks`, `version`, `locale` (+347 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
