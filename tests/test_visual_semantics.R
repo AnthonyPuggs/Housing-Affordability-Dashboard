@@ -99,7 +99,7 @@ semantic_consumer_text <- paste(module_text, chart_builder_text, sep = "\n")
 required_module_text <- c(
   'kpi_change_class(ch$change, favourable = "decrease")',
   'kpi_change_class(diff_val, favourable = "decrease")',
-  'kpi_change_class(diff_val, favourable = "increase")',
+  'kpi_change_class(ch$change, favourable = "increase")',
   'kpi_change_class(pct, favourable = "increase")',
   'kpi_change_class(pct, favourable = "neutral")',
   'kpi_change_class(diff_pp, favourable = "neutral")',

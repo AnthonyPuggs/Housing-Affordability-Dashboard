@@ -31,8 +31,12 @@ if (file.exists(paths_file)) {
 old_wd <- getwd()
 on.exit(setwd(old_wd), add = TRUE)
 
+# A working directory outside the repository, valid on any platform
+# (the previous hard-coded "/private/tmp" only exists on macOS).
+neutral_wd <- normalizePath(tempdir(), winslash = "/", mustWork = TRUE)
+
 plot_env <- new.env(parent = globalenv())
-setwd("/private/tmp")
+setwd(neutral_wd)
 plot_result <- tryCatch(
   {
     source(file.path(repo_root, "plot_setup.R"), local = plot_env)
@@ -41,7 +45,7 @@ plot_result <- tryCatch(
   error = function(e) conditionMessage(e)
 )
 check(identical(plot_result, TRUE),
-      paste("plot_setup.R failed when sourced from /private/tmp:", plot_result))
+      paste("plot_setup.R failed when sourced from a neutral cwd:", plot_result))
 
 if (identical(plot_result, TRUE)) {
   check(exists("abs_ts", envir = plot_env), "plot_setup.R did not create abs_ts")
@@ -59,7 +63,7 @@ if (identical(plot_result, TRUE)) {
 }
 
 app_env <- new.env(parent = globalenv())
-setwd("/private/tmp")
+setwd(neutral_wd)
 app_result <- tryCatch(
   {
     source(file.path(repo_root, "app.R"), local = app_env)
@@ -68,12 +72,12 @@ app_result <- tryCatch(
   error = function(e) conditionMessage(e)
 )
 check(identical(app_result, TRUE),
-      paste("app.R failed when sourced from /private/tmp:", app_result))
-check(exists("ui", envir = app_env), "app.R did not create ui when sourced from /private/tmp")
-check(exists("server", envir = app_env), "app.R did not create server when sourced from /private/tmp")
+      paste("app.R failed when sourced from a neutral cwd:", app_result))
+check(exists("ui", envir = app_env), "app.R did not create ui when sourced from a neutral cwd")
+check(exists("server", envir = app_env), "app.R did not create server when sourced from a neutral cwd")
 
 config_env <- new.env(parent = globalenv())
-setwd("/private/tmp")
+setwd(neutral_wd)
 config_result <- tryCatch(
   {
     source(file.path(repo_root, "pipeline", "00_config.R"), local = config_env)
@@ -82,7 +86,7 @@ config_result <- tryCatch(
   error = function(e) conditionMessage(e)
 )
 check(identical(config_result, TRUE),
-      paste("pipeline/00_config.R failed when sourced from /private/tmp:", config_result))
+      paste("pipeline/00_config.R failed when sourced from a neutral cwd:", config_result))
 
 if (identical(config_result, TRUE)) {
   data_dir <- normalizePath(get("DATA_DIR", envir = config_env), winslash = "/", mustWork = TRUE)

@@ -85,7 +85,7 @@ if (file.exists(module_path)) {
     "bindCache(input$rental_year, input$rental_states, is_dark())",
     "bindCache(input$rental_states, is_dark())",
     "bindCache(is_dark())",
-    "bindCache(input$rental_cost_breakdown, is_dark())"
+    "bindCache(input$rental_cost_measure, input$rental_cost_breakdown, is_dark())"
   )
   missing_module_text <- required_module_text[
     !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)
