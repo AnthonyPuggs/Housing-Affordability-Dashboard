@@ -48,21 +48,28 @@ if (all(vapply(required_helpers, exists, logical(1), mode = "function"))) {
         "normalise_rba_csv_cache() should be idempotent")
 }
 
-raw_cache_files <- system2(
+# Raw caches are download artefacts and must NOT be tracked: committed caches
+# froze CI refreshes because actions/checkout resets file mtimes, so the 24h
+# cache-validity check always passed and the download branch never ran.
+tracked_cache_files <- system2(
   "git",
-  c("ls-files", "data/rba_*_raw.csv"),
+  c("ls-files", "data/rba_*_raw.csv", "data/rba_*_raw.xlsx"),
   stdout = TRUE,
   stderr = TRUE
 )
-raw_cache_files <- raw_cache_files[nzchar(raw_cache_files)]
-check(length(raw_cache_files) > 0,
-      "No tracked RBA raw cache files found")
+tracked_cache_files <- tracked_cache_files[nzchar(tracked_cache_files)]
+check(length(tracked_cache_files) == 0,
+      paste("RBA raw caches must not be git-tracked:",
+            paste(tracked_cache_files, collapse = ", ")))
 
+# Locally present caches (downloaded by a pipeline run) must stay rectangular.
+local_cache_files <- Sys.glob(file.path(repo_root, "data", "rba_*_raw.csv"))
 if (exists("rba_csv_parse_problem_count", mode = "function")) {
-  for (cache_file in raw_cache_files) {
-    problem_count <- rba_csv_parse_problem_count(file.path(repo_root, cache_file))
+  for (cache_file in local_cache_files) {
+    problem_count <- rba_csv_parse_problem_count(cache_file)
     check(identical(problem_count, 0L),
-          paste(cache_file, "has", problem_count, "readr parse problems"))
+          paste(basename(cache_file), "has", problem_count,
+                "readr parse problems"))
   }
 }
 

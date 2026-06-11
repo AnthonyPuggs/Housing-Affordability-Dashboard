@@ -174,7 +174,7 @@ Main dashboard CSVs live in `data/`:
 
 - `abs_timeseries.csv`: long-format ABS macro, CPI, price, labour and supply series using `date | value | series | series_id | category | unit | frequency`.
 - `rba_rates.csv`: long-format RBA cash and mortgage-rate inputs using the same time-series schema.
-- `rba_*_raw.csv`: normalised RBA source-cache artefacts kept rectangular for reproducible parsing; `rba_rates.csv` is the dashboard-ready RBA output.
+- `rba_*_raw.csv`: normalised RBA source-cache artefacts kept rectangular for reproducible parsing; `rba_rates.csv` is the dashboard-ready RBA output. The raw caches are gitignored download artefacts created by pipeline runs, not committed outputs.
 - `affordability_indices.csv`: derived cost-pressure indicators and the National Housing Affordability Score using `date | value | indicator | geography | unit | frequency`.
 - `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental-stress measures.
 - `sih_estimate_quality.csv`: SIH sampling-error metadata for selected workbook tables, including 95% margin of error values and relative standard error flags. Users should interpret with caution when estimates have RSE from 25% to 50%; estimates above 50% are too unreliable for general use.

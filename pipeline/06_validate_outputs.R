@@ -116,6 +116,25 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
     )
   }
 
+  # Freshness gate: RBA F-tables publish at least monthly, so a latest
+  # observation older than 45 days means the refresh is silently serving a
+  # stale cache (the failure mode behind the May-June 2026 freeze, when CI
+  # checkout reset cache mtimes and the download branch never ran).
+  if ("date" %in% names(rba_rates) && nrow(rba_rates) > 0) {
+    rba_max_date <- suppressWarnings(max(as.Date(rba_rates$date), na.rm = TRUE))
+    rba_age_days <- if (is.finite(rba_max_date)) {
+      as.integer(Sys.Date() - rba_max_date)
+    } else {
+      NA_integer_
+    }
+    check(
+      is.finite(rba_max_date) && rba_age_days <= 45,
+      paste0("rba_rates.csv latest observation (", format(rba_max_date),
+             ") is ", rba_age_days,
+             " days old; the RBA refresh appears stale - check the raw-cache/download path")
+    )
+  }
+
   rba_raw_files <- Sys.glob(file.path(data_dir, "rba_*_raw.csv"))
   for (raw_file in rba_raw_files) {
     problem_count <- tryCatch(

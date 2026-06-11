@@ -1,3 +1,9 @@
+# RBA download caches: pipeline artefacts, not outputs. Committing them froze
+# CI refreshes (checkout resets mtimes, so the 24h cache check always passed
+# and the download branch never ran). rba_rates.csv is the tracked output.
+data/rba_*_raw.csv
+data/rba_*_raw.xlsx
+
 # Local OS and editor artefacts
 .DS_Store
 .Rhistory
