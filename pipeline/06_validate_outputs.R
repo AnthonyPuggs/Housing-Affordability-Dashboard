@@ -56,6 +56,7 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
   abs_ts <- read_required_csv("abs_timeseries.csv")
   rba_rates <- read_required_csv("rba_rates.csv")
   afford_idx <- read_required_csv("affordability_indices.csv")
+  abs_supply <- read_required_csv("abs_supply_demand.csv")
   sih_nhha <- read_required_csv("sih_nhha_rental_stress.csv")
   sih_quality <- read_required_csv("sih_estimate_quality.csv")
   sih_estimate_files <- c(
@@ -135,6 +136,127 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
              ") is ", rba_age_days,
              " days old; the RBA refresh appears stale - check the raw-cache/download path")
     )
+  }
+
+  # Range sanity: every rba_rates series is an interest rate or rate change
+  # in per cent; values outside (-25, 50) indicate a parsing/unit failure.
+  if ("value" %in% names(rba_rates) && nrow(rba_rates) > 0) {
+    bad_rates <- sum(!is.finite(rba_rates$value) |
+                       rba_rates$value < -25 | rba_rates$value > 50)
+    check(
+      bad_rates == 0,
+      paste("rba_rates.csv has", bad_rates,
+            "values outside the plausible (-25, 50) per cent range")
+    )
+  }
+
+  # Quarterly ABS series publish with up to a ~3 month lag; older than 150
+  # days means the live fetch is silently failing or serving stale data.
+  freshness_gate <- function(df, filename, max_age_days) {
+    if (!"date" %in% names(df) || nrow(df) == 0) {
+      return(invisible(NULL))
+    }
+    max_date <- suppressWarnings(max(as.Date(df$date), na.rm = TRUE))
+    age_days <- if (is.finite(max_date)) {
+      as.integer(Sys.Date() - max_date)
+    } else {
+      NA_integer_
+    }
+    check(
+      is.finite(max_date) && age_days <= max_age_days,
+      paste0(filename, " latest observation (", format(max_date), ") is ",
+             age_days, " days old (limit ", max_age_days,
+             "); the live fetch appears stale")
+    )
+  }
+  freshness_gate(abs_ts, "abs_timeseries.csv", 150)
+  freshness_gate(abs_supply, "abs_supply_demand.csv", 150)
+
+  # abs_supply_demand.csv previously had no validation at all beyond the
+  # structural stage gate.
+  required_columns(
+    abs_supply,
+    "abs_supply_demand.csv",
+    c("date", "value", "series", "series_id", "category", "unit", "frequency")
+  )
+  if (all(c("date", "series") %in% names(abs_supply))) {
+    dup_supply <- duplicate_count(abs_supply, c("date", "series"))
+    check(
+      !is.na(dup_supply) && dup_supply == 0,
+      paste("abs_supply_demand.csv has", dup_supply, "duplicate (date, series) rows")
+    )
+    check(
+      all(is.finite(abs_supply$value)),
+      "abs_supply_demand.csv contains non-finite values"
+    )
+  }
+  if (all(c("date", "series") %in% names(abs_ts))) {
+    dup_abs <- duplicate_count(abs_ts, c("date", "series"))
+    check(
+      !is.na(dup_abs) && dup_abs == 0,
+      paste("abs_timeseries.csv has", dup_abs, "duplicate (date, series) rows")
+    )
+  }
+
+  # Derived indicator range sanity.
+  if (all(c("indicator", "value") %in% names(afford_idx))) {
+    deposit_gap_values <- afford_idx$value[
+      afford_idx$indicator == "Deposit Gap (Years)"
+    ]
+    check(
+      all(deposit_gap_values > 0 & deposit_gap_values < 60),
+      "Deposit Gap (Years) has values outside the plausible (0, 60) year range"
+    )
+    score_values <- afford_idx$value[
+      grepl("Score", afford_idx$indicator, fixed = TRUE)
+    ]
+    check(
+      all(score_values >= 0 & score_values <= 100),
+      "Score indicators have values outside the 0-100 range"
+    )
+  }
+
+  # SIH outputs that previously had structure-only stage-gate checks.
+  #
+  # KNOWN PARSER ARTIFACT (Track 3 / review PIPE-12): the positional SIH
+  # parser emits duplicate key rows for these four files (overlapping panel
+  # parses; e.g. a cost-to-income panel lands under a dollar-cost metric, and
+  # some cells are emitted more than once). The app works around it with
+  # keep-largest-estimate slices (geo_keep_largest_estimate). Until the
+  # header-anchored parser rewrite, this gate RATCHETS: duplicate counts may
+  # shrink but must never exceed the measured 2026-06 baseline, so a parser
+  # regression fails loudly instead of growing silently.
+  sih_duplicate_baseline <- c(
+    "sih_timeseries_national.csv" = 1936L,
+    "sih_state_timeseries.csv" = 15337L,
+    "sih_recent_buyers_2020.csv" = 216L,
+    "sih_geographic_2020.csv" = 2858L
+  )
+  sih_key_columns <- c(
+    "survey_year", "metric", "tenure", "breakdown_var", "breakdown_val",
+    "geography", "stat_type"
+  )
+  for (sih_file in names(sih_duplicate_baseline)) {
+    sih_df <- read_required_csv(sih_file)
+    required_columns(
+      sih_df, sih_file,
+      c("survey_year", "value", "metric", "tenure", "breakdown_var",
+        "breakdown_val", "geography", "stat_type")
+    )
+    if (all(sih_key_columns %in% names(sih_df)) && nrow(sih_df) > 0) {
+      dup_sih <- duplicate_count(sih_df, sih_key_columns)
+      baseline <- sih_duplicate_baseline[[sih_file]]
+      check(
+        !is.na(dup_sih) && dup_sih <= baseline,
+        paste0(sih_file, " has ", dup_sih,
+               " duplicate key rows, above the known parser-artifact baseline of ",
+               baseline, " - a parser change has made duplication worse")
+      )
+      check(
+        all(is.finite(sih_df$value)),
+        paste(sih_file, "contains non-finite values")
+      )
+    }
   }
 
   rba_raw_files <- Sys.glob(file.path(data_dir, "rba_*_raw.csv"))

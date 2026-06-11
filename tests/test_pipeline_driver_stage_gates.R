@@ -25,7 +25,16 @@ required_stage_gates <- c(
   'validate_pipeline_stage_outputs("abs_timeseries", fail = TRUE)',
   'validate_pipeline_stage_outputs("abs_supply", fail = TRUE)',
   'validate_pipeline_stage_outputs("rba", fail = TRUE)',
-  'validate_pipeline_stage_outputs("indicators", fail = TRUE)'
+  'validate_pipeline_stage_outputs("indicators", fail = TRUE)',
+  # Run-freshness manifest: each stage's outputs must be rewritten by the
+  # current run, not just exist from the checkout.
+  'validate_pipeline_stage_freshness("sih", start_time)',
+  'validate_pipeline_stage_freshness("abs_timeseries", start_time)',
+  'validate_pipeline_stage_freshness("abs_supply", start_time)',
+  'validate_pipeline_stage_freshness("rba", start_time)',
+  'validate_pipeline_stage_freshness("indicators", start_time)',
+  # Driver runs promote downgraded warnings (parser/write-lock) to errors.
+  'PIPELINE_STRICT <- TRUE'
 )
 missing_stage_gates <- required_stage_gates[
   !vapply(required_stage_gates, grepl, logical(1), driver_text, fixed = TRUE)

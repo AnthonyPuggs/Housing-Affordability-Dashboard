@@ -70,13 +70,22 @@ if (nrow(rppi_raw) > 0) {
   cat("    ", nrow(rppi), "RPPI (mean dwelling price proxy) observations\n")
 }
 
-# Also store a single national "RPPI" series (non-indexed) for the derive script
+# Also store a single national "RPPI" series (non-indexed) for the derive script.
+# Select by series ID: A83728647F is "Mean price of residential dwellings ;
+# Australia ;". The previous regex (".*Australia ;") also matched the South
+# Australia and Western Australia series, and the silent first-match dedup
+# shipped SOUTH AUSTRALIA's mean price as the national series - a wrong-number
+# bug affecting every price-derived indicator, caught by the fail-loud
+# combine guard on 2026-06-11.
 if (nrow(rppi_raw) > 0) {
   rppi_national <- rppi_raw %>%
-    filter(str_detect(series, regex("^Mean price of residential dwellings.*Australia ;",
-                                    ignore_case = TRUE))) %>%
+    filter(series_id == "A83728647F") %>%
     normalize_abs(label = "RPPI", category = "House Prices",
                   units = "AUD", freq_hint = "Quarter")
+  assert_selection_nonempty(
+    rppi_national,
+    "national mean dwelling price (6432.0 Table 1 series A83728647F, Australia)"
+  )
   all_series$rppi_national <- rppi_national
   cat("    ", nrow(rppi_national), "RPPI national (mean price AUD) observations\n")
 }
@@ -298,20 +307,18 @@ wpi_raw <- safe_read(
 )
 
 if (nrow(wpi_raw) > 0) {
-  # Total hourly rates of pay, all sectors
-  wpi <- select_series(
-    wpi_raw,
-    "Total hourly rates of pay.*All sectors|Percentage Change.*Original.*All sectors",
-    "WPI Total Hourly Rates", "Income", units = "Index"
+  # Select by series ID: A2603039T is the quarterly total-hourly-rates-of-pay
+  # index (all sectors, Australia). The previous name-regex never matched and
+  # a broad "index|total" fallback picked this series by luck; if the ABS
+  # renumbers the series, fail loudly instead of grabbing a different one.
+  wpi <- wpi_raw %>%
+    filter(series_id == "A2603039T") %>%
+    normalize_abs(label = "WPI", category = "Income",
+                  units = "Index", freq_hint = "Quarter")
+  assert_selection_nonempty(
+    wpi,
+    "WPI (6345.0 series A2603039T, total hourly rates of pay index)"
   )
-
-  if (nrow(wpi) == 0) {
-    # Fallback: take index series
-    wpi <- wpi_raw %>%
-      filter(str_detect(series, regex("index|total", ignore_case = TRUE))) %>%
-      normalize_abs(label = "WPI", category = "Income",
-                    units = "Index", freq_hint = "Quarter")
-  }
 
   all_series$wpi <- wpi
   cat("    WPI:", nrow(wpi), "obs\n")
@@ -355,25 +362,20 @@ if (nrow(na_table2) > 0) {
 
   hdi <- tibble()
   if (nrow(hdi_raw) > 0) {
-    # "Compensation of employees" is the broadest measure of labour income
-    hdi <- select_series(
-      hdi_raw,
-      "^Compensation of employees ;$|^Compensation of employees$",
-      "Compensation of Employees", "Income", units = "AUD millions"
+    # "Compensation of employees" is the broadest measure of labour income.
+    # Select the seasonally adjusted variant by ID (A2303359K): Table 7 also
+    # publishes Original (A2302401K) and Trend (A2303556W) under the same
+    # series name, and the previous name-regex + distinct() combination
+    # shipped an undisclosed Trend-until-2019/Seasonally-Adjusted-after
+    # splice (review PIPE-05's predicted failure, observed live).
+    hdi <- hdi_raw %>%
+      filter(series_id == "A2303359K") %>%
+      normalize_abs(label = "Compensation of Employees", category = "Income",
+                    units = "AUD millions")
+    assert_selection_nonempty(
+      hdi,
+      "Compensation of Employees (5206.0 Table 7 series A2303359K, seasonally adjusted)"
     )
-    # If exact match fails, try broader
-    if (nrow(hdi) == 0) {
-      hdi <- select_series(
-        hdi_raw,
-        "Compensation of employees",
-        "Compensation of Employees", "Income", units = "AUD millions"
-      )
-      # Take only the level series (not percentage changes)
-      if (nrow(hdi) > 0) {
-        hdi <- hdi %>%
-          filter(!str_detect(series, regex("percentage|change", ignore_case = TRUE)))
-      }
-    }
   }
 
   all_series$hdi <- hdi
@@ -490,9 +492,7 @@ if (nrow(rppi_type_raw) > 0) {
 # ==============================================================================
 # Combine and write
 # ==============================================================================
-abs_timeseries <- bind_rows(all_series) %>%
-  distinct(date, series, .keep_all = TRUE) %>%
-  arrange(category, series, date)
+abs_timeseries <- combine_series_unique(all_series, "abs_timeseries")
 
 write_pipeline_csv(abs_timeseries, "abs_timeseries.csv")
 

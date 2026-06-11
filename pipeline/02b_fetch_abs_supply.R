@@ -80,6 +80,10 @@ approvals_raw <- safe_read(
 )
 
 if (nrow(approvals_raw) > 0) {
+  # One adjustment variant per series, by fixed preference, instead of
+  # whichever variant bind_rows happened to order first.
+  approvals_raw <- prefer_series_type(approvals_raw)
+
   # Total dwellings approved
   approvals_total <- approvals_raw %>%
     filter(str_detect(series, regex("total.*dwell|number of dwelling",
@@ -89,23 +93,11 @@ if (nrow(approvals_raw) > 0) {
   supply_series$approvals_total <- approvals_total
   cat("    Total approvals:", nrow(approvals_total), "obs\n")
 
-  # Houses
-  approvals_houses <- approvals_raw %>%
-    filter(str_detect(series, regex("house", ignore_case = TRUE)),
-           !str_detect(series, regex("total|other|value", ignore_case = TRUE))) %>%
-    normalize_abs(category = "Building Approvals", units = "Number",
-                  freq_hint = "Month")
-  supply_series$approvals_houses <- approvals_houses
-
-  # Other residential (apartments/units)
-  approvals_other <- approvals_raw %>%
-    filter(str_detect(series, regex("other residential|dwelling units excluding",
-                                    ignore_case = TRUE))) %>%
-    normalize_abs(category = "Building Approvals", units = "Number",
-                  freq_hint = "Month")
-  supply_series$approvals_other <- approvals_other
-  cat("    Houses:", nrow(approvals_houses), "obs |",
-      "Other:", nrow(approvals_other), "obs\n")
+  # NOTE: previous "Houses" and "Other residential" selections from this
+  # table were self-contradictory (every series name contains "Total
+  # Sectors", which the total-exclusion regex removed) and had shipped zero
+  # rows since inception - exposed by the selection assertions below and
+  # removed. The dashboard's by-type approvals come from the state series.
 }
 
 # Table 2: Value of building work approved by state (if available)
@@ -117,6 +109,7 @@ approvals_state_raw <- safe_read(
 )
 
 if (nrow(approvals_state_raw) > 0) {
+  approvals_state_raw <- prefer_series_type(approvals_state_raw)
   approvals_state <- approvals_state_raw %>%
     filter(str_detect(series, regex("number.*dwell|dwell.*number",
                                     ignore_case = TRUE)),
@@ -130,9 +123,16 @@ if (nrow(approvals_state_raw) > 0) {
 # ==============================================================================
 # Combine and write
 # ==============================================================================
-abs_supply <- bind_rows(supply_series) %>%
-  distinct(date, series, .keep_all = TRUE) %>%
-  arrange(category, series, date)
+# Every selection above is a name-regex over a live ABS table: a renamed
+# series must fail here, not ship an empty or partial file past the gate.
+required_supply_selections <- c(
+  "pop_erp", "pop_nom", "approvals_total", "approvals_state"
+)
+for (selection in required_supply_selections) {
+  assert_selection_nonempty(supply_series[[selection]], selection)
+}
+
+abs_supply <- combine_series_unique(supply_series, "abs_supply_demand")
 
 write_pipeline_csv(abs_supply, "abs_supply_demand.csv")
 

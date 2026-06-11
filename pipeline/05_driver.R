@@ -59,6 +59,11 @@ run_step <- function(label, path) {
   )
 }
 
+# Driver runs are strict: problems that standalone stage runs may downgrade
+# to warnings (parser failures, write locks) become hard errors here, so a
+# failed stage cannot ship stale or partial outputs behind a green gate.
+PIPELINE_STRICT <- TRUE
+
 # --- Step 0: Config ---
 cat("=== Step 0: Loading configuration ===\n")
 run_step("Step 0", project_path("pipeline", "00_config.R"))
@@ -69,30 +74,35 @@ cat("\n")
 cat("=== Step 1: Processing SIH workbooks ===\n")
 run_step("Step 1", project_path("pipeline", "01_process_sih.R"))
 invisible(validate_pipeline_stage_outputs("sih", fail = TRUE))
+invisible(validate_pipeline_stage_freshness("sih", start_time))
 cat("\n")
 
 # --- Step 2: ABS time series ---
 cat("=== Step 2: Fetching ABS time series ===\n")
 run_step("Step 2", project_path("pipeline", "02_fetch_abs_timeseries.R"))
 invisible(validate_pipeline_stage_outputs("abs_timeseries", fail = TRUE))
+invisible(validate_pipeline_stage_freshness("abs_timeseries", start_time))
 cat("\n")
 
 # --- Step 2b: ABS supply & demand ---
 cat("=== Step 2b: Fetching ABS supply & demand ===\n")
 run_step("Step 2b", project_path("pipeline", "02b_fetch_abs_supply.R"))
 invisible(validate_pipeline_stage_outputs("abs_supply", fail = TRUE))
+invisible(validate_pipeline_stage_freshness("abs_supply", start_time))
 cat("\n")
 
 # --- Step 3: RBA ---
 cat("=== Step 3: Fetching RBA data ===\n")
 run_step("Step 3", project_path("pipeline", "03_fetch_rba.R"))
 invisible(validate_pipeline_stage_outputs("rba", fail = TRUE))
+invisible(validate_pipeline_stage_freshness("rba", start_time))
 cat("\n")
 
 # --- Step 4: Derived indicators ---
 cat("=== Step 4: Deriving affordability indicators ===\n")
 run_step("Step 4", project_path("pipeline", "04_derive_indicators.R"))
 invisible(validate_pipeline_stage_outputs("indicators", fail = TRUE))
+invisible(validate_pipeline_stage_freshness("indicators", start_time))
 cat("\n")
 
 # --- Step 5: Validation ---

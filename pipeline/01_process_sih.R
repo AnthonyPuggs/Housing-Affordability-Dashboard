@@ -574,7 +574,7 @@ f1_result <- tryCatch({
 
   bind_rows(t1_1, t1_2, t1_3)
 }, error = function(e) {
-  warning("Error processing File 1: ", conditionMessage(e))
+  pipeline_problem("Error processing File 1: ", conditionMessage(e))
   tibble()
 })
 
@@ -650,7 +650,7 @@ f3_result <- tryCatch({
                                  "weekly_housing_cost", "median")
   bind_rows(t3_1, t3_2)
 }, error = function(e) {
-  warning("Error processing File 3: ", conditionMessage(e))
+  pipeline_problem("Error processing File 3: ", conditionMessage(e))
   tibble()
 })
 
@@ -670,7 +670,7 @@ f4_result <- tryCatch({
                                  "cost_income_ratio", "median")
   bind_rows(t4_1, t4_2)
 }, error = function(e) {
-  warning("Error processing File 4: ", conditionMessage(e))
+  pipeline_problem("Error processing File 4: ", conditionMessage(e))
   tibble()
 })
 
@@ -739,7 +739,7 @@ f5_result <- tryCatch({
   t5_2 <- parse_stress_bands(sih_files$f5, "Table 5.2", "lower_income")
   bind_rows(t5_1, t5_2)
 }, error = function(e) {
-  warning("Error processing File 5: ", conditionMessage(e))
+  pipeline_problem("Error processing File 5: ", conditionMessage(e))
   tibble()
 })
 
@@ -821,7 +821,7 @@ f6_result <- tryCatch({
 
   bind_rows(results)
 }, error = function(e) {
-  warning("Error processing File 6: ", conditionMessage(e))
+  pipeline_problem("Error processing File 6: ", conditionMessage(e))
   tibble()
 })
 
@@ -908,7 +908,7 @@ f8_result <- tryCatch({
 
   bind_rows(results)
 }, error = function(e) {
-  warning("Error processing File 8: ", conditionMessage(e))
+  pipeline_problem("Error processing File 8: ", conditionMessage(e))
   tibble()
 })
 
@@ -982,7 +982,7 @@ f9_result <- tryCatch({
 
   bind_rows(results)
 }, error = function(e) {
-  warning("Error processing File 9: ", conditionMessage(e))
+  pipeline_problem("Error processing File 9: ", conditionMessage(e))
   tibble()
 })
 
@@ -1069,7 +1069,7 @@ f11_result <- tryCatch({
     bind_rows(results)
   })
 }, error = function(e) {
-  warning("Error processing File 11: ", conditionMessage(e))
+  pipeline_problem("Error processing File 11: ", conditionMessage(e))
   tibble()
 })
 
@@ -1107,7 +1107,7 @@ f12_result <- tryCatch({
     )
   })
 }, error = function(e) {
-  warning("Error processing File 12: ", conditionMessage(e))
+  pipeline_problem("Error processing File 12: ", conditionMessage(e))
   tibble()
 })
 
@@ -1188,7 +1188,7 @@ f13_result <- tryCatch({
 
   bind_rows(results)
 }, error = function(e) {
-  warning("Error processing File 13: ", conditionMessage(e))
+  pipeline_problem("Error processing File 13: ", conditionMessage(e))
   tibble()
 })
 
@@ -1208,7 +1208,7 @@ sih_quality_result <- tryCatch({
     select(all_of(sih_estimate_quality_columns)) %>%
     distinct()
 }, error = function(e) {
-  warning("Error processing SIH sampling-error metadata: ", conditionMessage(e))
+  pipeline_problem("Error processing SIH sampling-error metadata: ", conditionMessage(e))
   empty_sih_estimate_quality()
 })
 

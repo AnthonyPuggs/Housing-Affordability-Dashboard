@@ -214,3 +214,54 @@ validate_pipeline_stage_outputs <- function(stage_id,
 
   failures
 }
+
+# Run-freshness manifest: the structural gate above validates whatever file is
+# on disk, so a stage that wrote nothing still passes against the checked-out
+# copy. This gate asserts every required output was actually (re)written by
+# the current pipeline run.
+validate_pipeline_stage_freshness <- function(stage_id,
+                                              run_started_at,
+                                              data_dir = project_path("data"),
+                                              fail = TRUE) {
+  contracts <- pipeline_stage_contracts()
+  if (!stage_id %in% contracts$stage_id) {
+    stop("Unknown pipeline stage ID: ", stage_id, call. = FALSE)
+  }
+  run_started_at <- as.POSIXct(run_started_at)
+
+  contract <- contracts[contracts$stage_id == stage_id, , drop = FALSE]
+  required_outputs <- contract$required_outputs[[1]]
+  failures <- character()
+
+  for (filename in required_outputs) {
+    path <- file.path(data_dir, filename)
+    rel <- file.path("data", filename)
+    if (!file.exists(path)) {
+      failures <- c(failures, paste(rel, "is missing"))
+      next
+    }
+    modified_at <- file.mtime(path)
+    # 5s tolerance for filesystem timestamp resolution.
+    if (modified_at < run_started_at - 5) {
+      failures <- c(
+        failures,
+        paste0(rel, " was not rewritten by this run (modified ",
+               format(modified_at), ", run started ",
+               format(run_started_at),
+               ") - the stage likely failed before writing it")
+      )
+    }
+  }
+
+  if (isTRUE(fail) && length(failures) > 0) {
+    stop(
+      paste(c(paste0("Pipeline stage '", stage_id,
+                     "' outputs are stale for this run:"),
+              paste0("- ", failures)),
+            collapse = "\n"),
+      call. = FALSE
+    )
+  }
+
+  failures
+}

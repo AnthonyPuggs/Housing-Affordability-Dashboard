@@ -237,7 +237,9 @@ if (!is.null(f1_file) && file.exists(f1_file)) {
     cash_rate <- f1_data %>%
       filter(str_detect(series, regex("cash rate|interbank", ignore_case = TRUE)))
 
-    if (nrow(cash_rate) == 0) cash_rate <- f1_data
+    # No broadening fallback: a filter miss means the table layout changed,
+    # and silently shipping the entire F1 table would relabel the data.
+    assert_selection_nonempty(cash_rate, "RBA F1 cash/interbank rate series")
 
     all_rba$f1 <- cash_rate
     cat("    F1:", nrow(cash_rate), "obs,",
@@ -265,7 +267,7 @@ if (!is.null(f5_file) && file.exists(f5_file)) {
         ignore_case = TRUE
       )))
 
-    if (nrow(mortgage_rates) == 0) mortgage_rates <- f5_data
+    assert_selection_nonempty(mortgage_rates, "RBA F5 housing lending rate series")
 
     all_rba$f5 <- mortgage_rates
     cat("    F5:", nrow(mortgage_rates), "obs,",
@@ -293,7 +295,7 @@ if (!is.null(f6_file) && file.exists(f6_file)) {
         ignore_case = TRUE
       )))
 
-    if (nrow(housing_finance) == 0) housing_finance <- f6_data
+    assert_selection_nonempty(housing_finance, "RBA F6 new-loan rate series")
 
     all_rba$f6 <- housing_finance
     cat("    F6:", nrow(housing_finance), "obs,",
@@ -304,9 +306,7 @@ if (!is.null(f6_file) && file.exists(f6_file)) {
 # ==============================================================================
 # Combine and write
 # ==============================================================================
-rba_rates <- bind_rows(all_rba) %>%
-  distinct(date, series, .keep_all = TRUE) %>%
-  arrange(category, series, date)
+rba_rates <- combine_series_unique(all_rba, "rba_rates")
 
 if (nrow(rba_rates) > 0) {
   write_pipeline_csv(rba_rates, "rba_rates.csv")

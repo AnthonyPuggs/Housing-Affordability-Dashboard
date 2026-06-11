@@ -333,6 +333,80 @@ fetch_rba_table <- function(table_id, cache_dir = DATA_DIR) {
   cache_file
 }
 
+# --- Strict mode ---------------------------------------------------------------
+# Under the driver and in CI, problems that used to be downgraded to warnings
+# (parser failures, write locks) become hard errors so a failed stage cannot
+# ship stale or partial outputs behind a green gate. Standalone interactive
+# stage runs keep warnings unless CI is set.
+if (!exists("PIPELINE_STRICT")) {
+  PIPELINE_STRICT <- nzchar(Sys.getenv("CI"))
+}
+
+pipeline_problem <- function(...) {
+  message_text <- paste0(...)
+  if (isTRUE(PIPELINE_STRICT)) {
+    stop(message_text, call. = FALSE)
+  }
+  warning(message_text, call. = FALSE)
+}
+
+# --- Fail-loud series selection helpers ----------------------------------------
+
+# Keep one seasonal-adjustment variant per series name, by fixed preference,
+# so the published variant is a deliberate choice rather than bind_rows order.
+prefer_series_type <- function(df, prefer = c("Seasonally Adjusted", "Trend",
+                                              "Original")) {
+  if (is.null(df) || nrow(df) == 0 || !"series_type" %in% names(df)) {
+    return(df)
+  }
+  df %>%
+    group_by(series) %>%
+    filter({
+      present <- intersect(prefer, unique(series_type))
+      if (length(present) == 0) rep(TRUE, dplyr::n())
+      else series_type == present[[1]]
+    }) %>%
+    ungroup()
+}
+
+# Loud guard for regex/name-based selections: a renamed ABS series must fail
+# the pipeline, not write an empty or partial file that passes the stage gate.
+assert_selection_nonempty <- function(df, what) {
+  if (is.null(df) || nrow(df) == 0) {
+    stop("Series selection for '", what,
+         "' matched nothing - the source table layout or series names may have changed.",
+         call. = FALSE)
+  }
+  invisible(df)
+}
+
+# Deterministic combine: collapse exact repeats on (date, series, series_id) -
+# the same source series may be deliberately republished under different names
+# (e.g. the 6432.0 mean price ships as both "RPPI" and a city index) - then
+# fail loudly if distinct source series still share a (date, series) cell.
+# Previously distinct(date, series) silently kept whichever variant bind_rows
+# ordered first.
+combine_series_unique <- function(series_list, dataset) {
+  combined <- bind_rows(series_list)
+  if (nrow(combined) == 0) {
+    return(combined)
+  }
+  combined <- combined %>% distinct(date, series, series_id, .keep_all = TRUE)
+  dup <- combined %>%
+    count(date, series, name = "n") %>%
+    filter(n > 1)
+  if (nrow(dup) > 0) {
+    stop(
+      dataset, " has ", nrow(dup),
+      " duplicate (date, series) observations from different source series",
+      " (first: '", dup$series[[1]], "' at ", dup$date[[1]],
+      "). Select one variant explicitly instead of relying on row order.",
+      call. = FALSE
+    )
+  }
+  combined %>% arrange(category, series, date)
+}
+
 # --- CSV output helper --------------------------------------------------------
 
 write_pipeline_csv <- function(df, filename) {
@@ -342,8 +416,10 @@ write_pipeline_csv <- function(df, filename) {
     cat("  Wrote", nrow(df), "rows to", filename, "\n")
   }, error = function(e) {
     if (str_detect(conditionMessage(e), "open|permission|access|lock")) {
-      warning("Cannot write ", filename, " — file may be open in another program. ",
-              "Close it and re-run the pipeline.")
+      pipeline_problem(
+        "Cannot write ", filename,
+        " - file may be open in another program. Close it and re-run the pipeline."
+      )
     } else {
       stop(e)
     }
