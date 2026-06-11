@@ -71,6 +71,7 @@ methodologyPageUI <- function(id) {
             tags$p("ABS Survey of Income and Housing measures describe observed household housing costs, gross-income cost ratios and NHHA lower-income renter stress."),
             tags$p("These are official survey burden and stress measures, separate from price-index or market-entry proxy indicators."),
             tags$p("The Overview official burden snapshot surfaces selected SIH/NHHA measures beside the stylised market-entry score."),
+            tags$p("SIH 2019-20 remains the latest official cross-section because the ABS cancelled the SIH 2023-24 release on data-quality grounds (renter households were under-represented in the sample); the next cycle, SIH 2025-26, is in the field with results expected around 2027."),
             tags$p(sih_sampling_error_note)
           ),
           policy_card(
@@ -88,7 +89,8 @@ methodologyPageUI <- function(id) {
             "National Housing Affordability Score",
             tags$p("The National Housing Affordability Score is a descriptive composite indicator for national market-entry affordability."),
             tags$p("The v1 score uses fixed 40/35/25 weights for mortgage serviceability, rental entry and deposit barrier component scores."),
-            tags$p("Higher values mean more affordable relative to the score history; it is not an official ABS/NHHA statistic or lender assessment.")
+            tags$p("Higher values mean more affordable relative to the score history; it is not an official ABS/NHHA statistic or lender assessment."),
+            tags$p("The score is published only for quarters where all three components are available. Average Weekly Earnings is released twice a year, so the latest score can sit one or two quarters behind the most recent component data; the Overview card shows the score's own as-at date.")
           ),
           policy_card(
             "Plain English Interpretation",
@@ -100,6 +102,7 @@ methodologyPageUI <- function(id) {
           policy_card(
             "Stylised scenario calculators",
             tags$p("Serviceability, deposit-gap and calculator outputs use fixed modelling assumptions for a stylised household."),
+            tags$p("The deposit-gap series assumes a 20 per cent deposit on the ABS 6432.0 national mean dwelling price, saved at 15 per cent of gross income, with income proxied by AWE individual earnings rather than household income."),
             tags$p("These stylised scenarios are not official ABS measures or lender assessments."),
             tags$p("R/market_entry_scenarios.R defines the app-only market-entry scenarios used by the calculator and assessed-rate sensitivity chart."),
             tags$p("The calculator now separates ownership serviceability from the rental entry calculator pathway so rent, bond and upfront moving costs are not presented as mortgage calculations."),
