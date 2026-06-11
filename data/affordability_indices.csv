@@ -1,289 +1,289 @@
 date,value,indicator,geography,unit,frequency
 2012-10-01,98.07692307692307,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2013-04-01,98.07692307692307,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2013-10-01,88.46153846153845,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2014-04-01,84.61538461538461,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2014-10-01,73.07692307692308,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2015-04-01,76.92307692307692,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2015-10-01,65.38461538461539,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2016-04-01,69.23076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2016-10-01,61.53846153846154,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2017-04-01,53.84615384615385,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2013-10-01,92.3076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2014-04-01,88.46153846153845,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2014-10-01,84.61538461538461,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2015-04-01,73.07692307692308,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2015-10-01,69.23076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2016-04-01,65.38461538461539,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2016-10-01,53.84615384615385,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2017-04-01,38.46153846153846,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2017-10-01,42.307692307692314,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2018-04-01,57.692307692307686,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2018-10-01,46.15384615384615,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2018-04-01,50,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2018-10-01,61.53846153846154,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2019-04-01,80.76923076923077,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2019-10-01,50,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2020-04-01,92.3076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2020-10-01,38.46153846153846,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2019-10-01,57.692307692307686,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2020-04-01,76.92307692307692,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2020-10-01,46.15384615384615,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2021-04-01,34.61538461538461,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2021-10-01,30.76923076923077,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2022-04-01,23.076923076923073,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2022-10-01,26.923076923076927,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2023-04-01,19.23076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2023-10-01,15.384615384615385,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2024-04-01,11.538461538461542,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2024-10-01,7.692307692307687,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2025-04-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2021-10-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2022-04-01,7.692307692307687,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2022-10-01,30.76923076923077,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2023-04-01,26.923076923076927,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2023-10-01,23.076923076923073,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2024-04-01,15.384615384615385,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2024-10-01,19.23076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2025-04-01,11.538461538461542,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2025-10-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2011-07-01,7.358937554601225,Deposit Gap (Years),National,Years,Quarter
-2011-10-01,7.402784279052027,Deposit Gap (Years),National,Years,Quarter
-2012-01-01,7.187791039829963,Deposit Gap (Years),National,Years,Quarter
-2012-04-01,7.185644674526975,Deposit Gap (Years),National,Years,Quarter
-2012-10-01,6.89883182719859,Deposit Gap (Years),National,Years,Quarter
-2013-04-01,6.846509344925841,Deposit Gap (Years),National,Years,Quarter
-2013-10-01,7.080277643951965,Deposit Gap (Years),National,Years,Quarter
-2014-04-01,7.104579623663593,Deposit Gap (Years),National,Years,Quarter
-2014-10-01,7.161085360137492,Deposit Gap (Years),National,Years,Quarter
-2015-04-01,7.135089530073012,Deposit Gap (Years),National,Years,Quarter
-2015-10-01,7.209562624424337,Deposit Gap (Years),National,Years,Quarter
-2016-04-01,7.1662945673499765,Deposit Gap (Years),National,Years,Quarter
-2016-10-01,7.2505208803630605,Deposit Gap (Years),National,Years,Quarter
-2017-04-01,7.270938841700894,Deposit Gap (Years),National,Years,Quarter
-2017-10-01,7.347944274549779,Deposit Gap (Years),National,Years,Quarter
-2018-04-01,7.267086873470524,Deposit Gap (Years),National,Years,Quarter
-2018-10-01,7.338555765836987,Deposit Gap (Years),National,Years,Quarter
-2019-04-01,7.128606651484068,Deposit Gap (Years),National,Years,Quarter
-2019-10-01,7.276089403441067,Deposit Gap (Years),National,Years,Quarter
-2020-04-01,6.992598975795195,Deposit Gap (Years),National,Years,Quarter
-2020-10-01,7.535309591864862,Deposit Gap (Years),National,Years,Quarter
-2021-04-01,8.022507302917182,Deposit Gap (Years),National,Years,Quarter
-2021-10-01,9.08229648792449,Deposit Gap (Years),National,Years,Quarter
-2022-04-01,9.43754328317556,Deposit Gap (Years),National,Years,Quarter
-2022-10-01,9.39996000017021,Deposit Gap (Years),National,Years,Quarter
-2023-04-01,9.68391273597737,Deposit Gap (Years),National,Years,Quarter
-2023-10-01,10.03078877920047,Deposit Gap (Years),National,Years,Quarter
-2024-04-01,10.478239655737836,Deposit Gap (Years),National,Years,Quarter
-2024-10-01,11.01144359571326,Deposit Gap (Years),National,Years,Quarter
-2025-04-01,11.065186886082408,Deposit Gap (Years),National,Years,Quarter
-2025-10-01,11.73479146274232,Deposit Gap (Years),National,Years,Quarter
-2012-10-01,34.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2013-04-01,42.307692307692314,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2013-10-01,50,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2014-04-01,46.15384615384615,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2014-10-01,38.46153846153846,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2015-04-01,76.92307692307692,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2011-07-01,9.507150702285552,Deposit Gap (Years),National,Years,Quarter
+2011-10-01,9.379171650976925,Deposit Gap (Years),National,Years,Quarter
+2012-01-01,9.305656338264228,Deposit Gap (Years),National,Years,Quarter
+2012-04-01,9.310360555542886,Deposit Gap (Years),National,Years,Quarter
+2012-10-01,9.117625450003674,Deposit Gap (Years),National,Years,Quarter
+2013-04-01,9.168981017809225,Deposit Gap (Years),National,Years,Quarter
+2013-10-01,9.50520136323894,Deposit Gap (Years),National,Years,Quarter
+2014-04-01,9.654398967376068,Deposit Gap (Years),National,Years,Quarter
+2014-10-01,9.872749683176224,Deposit Gap (Years),National,Years,Quarter
+2015-04-01,10.375011453832842,Deposit Gap (Years),National,Years,Quarter
+2015-10-01,10.4512171156623,Deposit Gap (Years),National,Years,Quarter
+2016-04-01,10.477978485894054,Deposit Gap (Years),National,Years,Quarter
+2016-10-01,10.895847337741168,Deposit Gap (Years),National,Years,Quarter
+2017-04-01,11.27859525993274,Deposit Gap (Years),National,Years,Quarter
+2017-10-01,11.26695679447973,Deposit Gap (Years),National,Years,Quarter
+2018-04-01,11.016276139596648,Deposit Gap (Years),National,Years,Quarter
+2018-10-01,10.563048495156872,Deposit Gap (Years),National,Years,Quarter
+2019-04-01,10.183947852164149,Deposit Gap (Years),National,Years,Quarter
+2019-10-01,10.618823209271834,Deposit Gap (Years),National,Years,Quarter
+2020-04-01,10.313859079831424,Deposit Gap (Years),National,Years,Quarter
+2020-10-01,11.069264925306056,Deposit Gap (Years),National,Years,Quarter
+2021-04-01,12.01383384331977,Deposit Gap (Years),National,Years,Quarter
+2021-10-01,13.4452598419654,Deposit Gap (Years),National,Years,Quarter
+2022-04-01,13.346430568715574,Deposit Gap (Years),National,Years,Quarter
+2022-10-01,12.638244092578327,Deposit Gap (Years),National,Years,Quarter
+2023-04-01,12.762621380215636,Deposit Gap (Years),National,Years,Quarter
+2023-10-01,12.888389317868354,Deposit Gap (Years),National,Years,Quarter
+2024-04-01,13.093800241559418,Deposit Gap (Years),National,Years,Quarter
+2024-10-01,13.015175936524253,Deposit Gap (Years),National,Years,Quarter
+2025-04-01,13.138155376961349,Deposit Gap (Years),National,Years,Quarter
+2025-10-01,13.611207994709533,Deposit Gap (Years),National,Years,Quarter
+2012-10-01,73.07692307692308,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2013-04-01,88.46153846153845,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2013-10-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2014-04-01,84.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2014-10-01,69.23076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2015-04-01,65.38461538461539,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2015-10-01,57.692307692307686,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2016-04-01,73.07692307692308,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2016-10-01,84.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2017-04-01,80.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2017-10-01,61.53846153846154,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2018-04-01,69.23076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2016-04-01,61.53846153846154,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2016-10-01,46.15384615384615,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2017-04-01,34.61538461538461,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2017-10-01,38.46153846153846,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2018-04-01,42.307692307692314,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2018-10-01,53.84615384615385,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2019-04-01,65.38461538461539,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2019-10-01,92.3076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2019-04-01,76.92307692307692,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2019-10-01,80.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2020-04-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2020-10-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2021-04-01,88.46153846153845,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2020-10-01,92.3076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2021-04-01,50,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2021-10-01,30.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2022-04-01,26.923076923076927,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2022-10-01,23.076923076923073,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2023-04-01,19.23076923076923,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2023-10-01,15.384615384615385,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2024-04-01,11.538461538461542,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2024-04-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2024-10-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2025-04-01,7.692307692307687,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
-2025-10-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2025-10-01,11.538461538461542,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2011-07-01,100,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2011-10-01,97.61124064844654,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-01-01,93.88176827190897,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-04-01,90.67923763529122,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-07-01,86.07822605559276,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-10-01,82.61978212405371,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2013-01-01,81.65577374739826,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2013-04-01,79.22952180103013,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2013-07-01,76.83022988549516,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2013-10-01,78.23900860588454,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2014-01-01,78.8669220796498,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2014-04-01,78.57230903800698,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2014-07-01,77.67393990329447,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2014-10-01,79.30389078514847,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2015-01-01,77.75942936187921,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2015-04-01,75.19810752728193,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2015-07-01,75.23465137536166,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2015-10-01,76.61721984778961,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2016-01-01,77.53567419125682,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2016-04-01,75.48104952485694,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2016-07-01,73.61901352667483,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2016-10-01,74.88021740446992,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2017-01-01,75.66701222221103,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2017-04-01,75.09075475963441,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2017-07-01,74.89509255494596,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2017-10-01,75.95660548613101,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2018-01-01,76.38222342209022,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2018-04-01,75.52888069010446,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2018-07-01,75.51102948160761,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2018-10-01,77.44241546547872,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2019-01-01,77.14417758559678,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2019-04-01,75.60888164206655,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2019-07-01,73.30337029233219,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2019-10-01,73.96379182223858,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2020-01-01,71.63781712341041,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2020-04-01,68.70617678083892,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2020-07-01,69.9172690769049,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2020-10-01,71.91062187764837,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2021-01-01,72.59050185762645,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2021-04-01,74.74166425926822,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2021-07-01,78.13139095867498,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2021-10-01,84.23623551636675,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2022-01-01,88.11299911020066,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2022-04-01,91.48865318815683,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2022-07-01,104.70209577722542,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2022-10-01,116.515320376833,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2023-01-01,121.20451793260291,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2023-04-01,132.7594659465058,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2023-07-01,136.99149488359222,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2023-10-01,144.50419024069745,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2024-01-01,151.94792944973543,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2024-04-01,154.57863532186792,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2024-07-01,158.4751269160634,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2024-10-01,161.67688324014202,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-01-01,158.4174773820284,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-04-01,157.6387423206118,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-07-01,156.15629309330222,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-10-01,160.48707738461923,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2026-01-01,169.1046347846558,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2012-10-01,45.09615384615384,National Housing Affordability Score,National,Score (0-100),Quarter
-2013-04-01,42.11538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
-2013-10-01,44.80769230769231,National Housing Affordability Score,National,Score (0-100),Quarter
-2014-04-01,40.28846153846154,National Housing Affordability Score,National,Score (0-100),Quarter
-2014-10-01,37.69230769230769,National Housing Affordability Score,National,Score (0-100),Quarter
-2015-04-01,55.38461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
-2015-10-01,47.5,National Housing Affordability Score,National,Score (0-100),Quarter
-2016-04-01,55.96153846153847,National Housing Affordability Score,National,Score (0-100),Quarter
-2016-10-01,60,National Housing Affordability Score,National,Score (0-100),Quarter
-2017-04-01,57.88461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
-2017-10-01,48.65384615384616,National Housing Affordability Score,National,Score (0-100),Quarter
-2018-04-01,56.92307692307692,National Housing Affordability Score,National,Score (0-100),Quarter
-2018-10-01,51.92307692307693,National Housing Affordability Score,National,Score (0-100),Quarter
-2019-04-01,67.88461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
-2019-10-01,73.65384615384616,National Housing Affordability Score,National,Score (0-100),Quarter
-2020-04-01,89.23076923076923,National Housing Affordability Score,National,Score (0-100),Quarter
-2020-10-01,78.46153846153845,National Housing Affordability Score,National,Score (0-100),Quarter
-2021-04-01,75,National Housing Affordability Score,National,Score (0-100),Quarter
-2021-10-01,54.32692307692307,National Housing Affordability Score,National,Score (0-100),Quarter
-2022-04-01,50.86538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
-2022-10-01,48.26923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
-2023-04-01,40.76923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
-2023-10-01,35.57692307692307,National Housing Affordability Score,National,Score (0-100),Quarter
-2024-04-01,30.384615384615387,National Housing Affordability Score,National,Score (0-100),Quarter
-2024-10-01,22.884615384615383,National Housing Affordability Score,National,Score (0-100),Quarter
-2025-04-01,19.71153846153846,National Housing Affordability Score,National,Score (0-100),Quarter
-2025-10-01,18.750000000000004,National Housing Affordability Score,National,Score (0-100),Quarter
+2011-10-01,95.72689278694513,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-01-01,94.08005601051413,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-04-01,90.94385549336207,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-07-01,86.28839201403899,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-10-01,84.51912146021328,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2013-01-01,83.41332696817437,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2013-04-01,82.1303441322258,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2013-07-01,79.93926917030359,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2013-10-01,81.3016035582251,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2014-01-01,81.75388922432096,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2014-04-01,82.64586162221569,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2014-07-01,82.78118640338586,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2014-10-01,84.62886374624654,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2015-01-01,84.1398214571129,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2015-04-01,84.63710665325394,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2015-07-01,85.08242001528477,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2015-10-01,85.97042622036027,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2016-01-01,85.96071112115955,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2016-04-01,85.42510403666549,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2016-07-01,84.40219372888808,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2016-10-01,87.10109969997731,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2017-01-01,88.68101172799896,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2017-04-01,90.16037915416071,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2017-07-01,88.6152414622153,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2017-10-01,90.15110663309271,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2018-01-01,89.87334878017033,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2018-04-01,88.624184076197,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2018-07-01,86.91613153898967,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2018-10-01,86.28241747129027,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2019-01-01,84.26061461801591,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2019-04-01,83.60823763805676,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2019-07-01,83.8066591816334,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2019-10-01,83.55304284648307,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2020-01-01,82.7887508492171,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2020-04-01,78.44099483470902,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2020-07-01,79.29887490733853,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2020-10-01,81.76651078127536,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2021-01-01,84.19564408544589,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2021-04-01,86.63612186918577,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2021-07-01,91.27431249494245,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2021-10-01,96.52442301848858,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2022-01-01,98.34194879506136,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2022-04-01,100.14704722779317,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2022-07-01,111.13267136069418,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2022-10-01,121.25747112846665,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2023-01-01,126.00927409406692,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2023-04-01,135.43136461204415,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2023-07-01,138.6064403103778,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2023-10-01,143.71719788566364,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2024-01-01,147.339272299562,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2024-04-01,149.51735033893715,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2024-07-01,147.52682781343327,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2024-10-01,147.91712346771504,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-01-01,146.2118925155192,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-04-01,144.87829993486724,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-07-01,141.5939723452476,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-10-01,144.0874322810541,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2026-01-01,149.4568846417215,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2012-10-01,60.48076923076923,National Housing Affordability Score,National,Score (0-100),Quarter
+2013-04-01,60.57692307692307,National Housing Affordability Score,National,Score (0-100),Quarter
+2013-10-01,65,National Housing Affordability Score,National,Score (0-100),Quarter
+2014-04-01,56.63461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
+2014-10-01,52.88461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
+2015-04-01,49.80769230769231,National Housing Affordability Score,National,Score (0-100),Quarter
+2015-10-01,48.46153846153846,National Housing Affordability Score,National,Score (0-100),Quarter
+2016-04-01,50.38461538461539,National Housing Affordability Score,National,Score (0-100),Quarter
+2016-10-01,42.69230769230769,National Housing Affordability Score,National,Score (0-100),Quarter
+2017-04-01,35.57692307692307,National Housing Affordability Score,National,Score (0-100),Quarter
+2017-10-01,39.42307692307693,National Housing Affordability Score,National,Score (0-100),Quarter
+2018-04-01,44.23076923076923,National Housing Affordability Score,National,Score (0-100),Quarter
+2018-10-01,55.769230769230774,National Housing Affordability Score,National,Score (0-100),Quarter
+2019-04-01,72.5,National Housing Affordability Score,National,Score (0-100),Quarter
+2019-10-01,70.96153846153847,National Housing Affordability Score,National,Score (0-100),Quarter
+2020-04-01,85.38461538461537,National Housing Affordability Score,National,Score (0-100),Quarter
+2020-10-01,78.07692307692308,National Housing Affordability Score,National,Score (0-100),Quarter
+2021-04-01,59.615384615384606,National Housing Affordability Score,National,Score (0-100),Quarter
+2021-10-01,47.11538461538461,National Housing Affordability Score,National,Score (0-100),Quarter
+2022-04-01,47.01923076923077,National Housing Affordability Score,National,Score (0-100),Quarter
+2022-10-01,49.230769230769226,National Housing Affordability Score,National,Score (0-100),Quarter
+2023-04-01,42.69230769230769,National Housing Affordability Score,National,Score (0-100),Quarter
+2023-10-01,37.5,National Housing Affordability Score,National,Score (0-100),Quarter
+2024-04-01,27.5,National Housing Affordability Score,National,Score (0-100),Quarter
+2024-10-01,25.769230769230766,National Housing Affordability Score,National,Score (0-100),Quarter
+2025-04-01,22.115384615384613,National Housing Affordability Score,National,Score (0-100),Quarter
+2025-10-01,22.59615384615385,National Housing Affordability Score,National,Score (0-100),Quarter
 2011-07-01,100,Price-to-Income Ratio,National,Index (base=100),Quarter
-2011-10-01,100.24108076348766,Price-to-Income Ratio,National,Index (base=100),Quarter
-2012-01-01,97.64454295999893,Price-to-Income Ratio,National,Index (base=100),Quarter
-2012-04-01,97.12689899597639,Price-to-Income Ratio,National,Index (base=100),Quarter
-2012-07-01,95.3522399981228,Price-to-Income Ratio,National,Index (base=100),Quarter
-2012-10-01,94.70890328397229,Price-to-Income Ratio,National,Index (base=100),Quarter
-2013-01-01,95.24189933890278,Price-to-Income Ratio,National,Index (base=100),Quarter
-2013-04-01,94.67141921448723,Price-to-Income Ratio,National,Index (base=100),Quarter
-2013-07-01,94.79016000774304,Price-to-Income Ratio,National,Index (base=100),Quarter
-2013-10-01,97.57457540558357,Price-to-Income Ratio,National,Index (base=100),Quarter
-2014-01-01,98.43647089528322,Price-to-Income Ratio,National,Index (base=100),Quarter
-2014-04-01,98.06875440103795,Price-to-Income Ratio,National,Index (base=100),Quarter
-2014-07-01,96.94746952202317,Price-to-Income Ratio,National,Index (base=100),Quarter
-2014-10-01,98.98186630474945,Price-to-Income Ratio,National,Index (base=100),Quarter
-2015-01-01,99.10715008565275,Price-to-Income Ratio,National,Index (base=100),Quarter
-2015-04-01,98.29205228284196,Price-to-Income Ratio,National,Index (base=100),Quarter
-2015-07-01,98.78422763574028,Price-to-Income Ratio,National,Index (base=100),Quarter
-2015-10-01,99.2507818793817,Price-to-Income Ratio,National,Index (base=100),Quarter
-2016-01-01,99.74790689352685,Price-to-Income Ratio,National,Index (base=100),Quarter
-2016-04-01,99.0264657700977,Price-to-Income Ratio,National,Index (base=100),Quarter
-2016-07-01,98.39079328522561,Price-to-Income Ratio,National,Index (base=100),Quarter
-2016-10-01,100.20070807050259,Price-to-Income Ratio,National,Index (base=100),Quarter
-2017-01-01,101.16976971943438,Price-to-Income Ratio,National,Index (base=100),Quarter
-2017-04-01,100.39929083998854,Price-to-Income Ratio,National,Index (base=100),Quarter
-2017-07-01,100.72031364016512,Price-to-Income Ratio,National,Index (base=100),Quarter
-2017-10-01,101.9785182571582,Price-to-Income Ratio,National,Index (base=100),Quarter
-2018-01-01,102.21061231101464,Price-to-Income Ratio,National,Index (base=100),Quarter
-2018-04-01,101.06871463849689,Price-to-Income Ratio,National,Index (base=100),Quarter
-2018-07-01,100.58621015633085,Price-to-Income Ratio,National,Index (base=100),Quarter
-2018-10-01,101.85015438739656,Price-to-Income Ratio,National,Index (base=100),Quarter
-2019-01-01,101.0839585567717,Price-to-Income Ratio,National,Index (base=100),Quarter
-2019-04-01,99.97168496779693,Price-to-Income Ratio,National,Index (base=100),Quarter
-2019-07-01,98.69231935038727,Price-to-Income Ratio,National,Index (base=100),Quarter
-2019-10-01,102.1078818471321,Price-to-Income Ratio,National,Index (base=100),Quarter
-2020-01-01,100.57866467687235,Price-to-Income Ratio,National,Index (base=100),Quarter
-2020-04-01,101.10856240364005,Price-to-Income Ratio,National,Index (base=100),Quarter
-2020-07-01,103.7855098269178,Price-to-Income Ratio,National,Index (base=100),Quarter
-2020-10-01,107.67616634703367,Price-to-Income Ratio,National,Index (base=100),Quarter
-2021-01-01,110.61078249389328,Price-to-Income Ratio,National,Index (base=100),Quarter
-2021-04-01,115.4014117135117,Price-to-Income Ratio,National,Index (base=100),Quarter
-2021-07-01,120.63516253122934,Price-to-Income Ratio,National,Index (base=100),Quarter
-2021-10-01,129.48919008674252,Price-to-Income Ratio,National,Index (base=100),Quarter
-2022-01-01,134.2634026498201,Price-to-Income Ratio,National,Index (base=100),Quarter
-2022-04-01,134.63543794041385,Price-to-Income Ratio,National,Index (base=100),Quarter
-2022-07-01,132.04036397899023,Price-to-Income Ratio,National,Index (base=100),Quarter
-2022-10-01,133.7052047726445,Price-to-Income Ratio,National,Index (base=100),Quarter
-2023-01-01,132.89432199207974,Price-to-Income Ratio,National,Index (base=100),Quarter
-2023-04-01,138.2189631035667,Price-to-Income Ratio,National,Index (base=100),Quarter
-2023-07-01,138.0604887102315,Price-to-Income Ratio,National,Index (base=100),Quarter
-2023-10-01,143.05983688418394,Price-to-Income Ratio,National,Index (base=100),Quarter
-2024-01-01,147.79879584576472,Price-to-Income Ratio,National,Index (base=100),Quarter
-2024-04-01,150.3576669112252,Price-to-Income Ratio,National,Index (base=100),Quarter
-2024-07-01,154.1477597919298,Price-to-Income Ratio,National,Index (base=100),Quarter
-2024-10-01,158.93205517351058,Price-to-Income Ratio,National,Index (base=100),Quarter
-2025-01-01,157.39171694816642,Price-to-Income Ratio,National,Index (base=100),Quarter
-2025-04-01,160.5902860706756,Price-to-Income Ratio,National,Index (base=100),Quarter
-2025-07-01,163.77043852042283,Price-to-Income Ratio,National,Index (base=100),Quarter
-2025-10-01,170.17695931324087,Price-to-Income Ratio,National,Index (base=100),Quarter
-2026-01-01,175.41852459524702,Price-to-Income Ratio,National,Index (base=100),Quarter
-2012-07-01,-3.0458276297367415,Real House Price Growth YoY,National,Per cent,Quarter
-2012-10-01,-4.373864825118234,Real House Price Growth YoY,National,Per cent,Quarter
-2013-01-01,-1.838244143868395,Real House Price Growth YoY,National,Per cent,Quarter
-2013-04-01,-1.961637536905192,Real House Price Growth YoY,National,Per cent,Quarter
-2013-07-01,-0.074677822879754,Real House Price Growth YoY,National,Per cent,Quarter
-2013-10-01,2.8859655708394882,Real House Price Growth YoY,National,Per cent,Quarter
-2014-01-01,3.0292717431506855,Real House Price Growth YoY,National,Per cent,Quarter
-2014-04-01,3.0328536454940824,Real House Price Growth YoY,National,Per cent,Quarter
-2014-07-01,2.5112783759421164,Real House Price Growth YoY,National,Per cent,Quarter
-2014-10-01,2.2011031510664303,Real House Price Growth YoY,National,Per cent,Quarter
-2015-01-01,1.573280036131508,Real House Price Growth YoY,National,Per cent,Quarter
-2015-04-01,0.8963598726477562,Real House Price Growth YoY,National,Per cent,Quarter
-2015-07-01,2.5036726211566718,Real House Price Growth YoY,National,Per cent,Quarter
-2015-10-01,0.5802561284426355,Real House Price Growth YoY,National,Per cent,Quarter
-2016-01-01,1.3425623249904373,Real House Price Growth YoY,National,Per cent,Quarter
-2016-04-01,1.631236729529939,Real House Price Growth YoY,National,Per cent,Quarter
-2016-07-01,0.14689611615934517,Real House Price Growth YoY,National,Per cent,Quarter
-2016-10-01,1.2796076254746325,Real House Price Growth YoY,National,Per cent,Quarter
-2017-01-01,1.077671103977318,Real House Price Growth YoY,National,Per cent,Quarter
-2017-04-01,1.3595605042246106,Real House Price Growth YoY,National,Per cent,Quarter
-2017-07-01,2.4181368335052467,Real House Price Growth YoY,National,Per cent,Quarter
-2017-10-01,1.751227445496495,Real House Price Growth YoY,National,Per cent,Quarter
-2018-01-01,1.1009253262141527,Real House Price Growth YoY,National,Per cent,Quarter
-2018-04-01,0.5676150130793589,Real House Price Growth YoY,National,Per cent,Quarter
-2018-07-01,0.16260407327217674,Real House Price Growth YoY,National,Per cent,Quarter
-2018-10-01,0.39030471560750346,Real House Price Growth YoY,National,Per cent,Quarter
-2019-01-01,-0.15326483376874034,Real House Price Growth YoY,National,Per cent,Quarter
-2019-04-01,-0.378408236316885,Real House Price Growth YoY,National,Per cent,Quarter
-2019-07-01,-1.4073982104895078,Real House Price Growth YoY,National,Per cent,Quarter
-2019-10-01,0.5627958842176595,Real House Price Growth YoY,National,Per cent,Quarter
-2020-01-01,-0.5827144313382826,Real House Price Growth YoY,National,Per cent,Quarter
-2020-04-01,3.1748643142260224,Real House Price Growth YoY,National,Per cent,Quarter
-2020-07-01,5.828420305909754,Real House Price Growth YoY,National,Per cent,Quarter
-2020-10-01,5.965670882797958,Real House Price Growth YoY,National,Per cent,Quarter
-2021-01-01,10.440692525939244,Real House Price Growth YoY,National,Per cent,Quarter
-2021-04-01,12.009299526664918,Real House Price Growth YoY,National,Per cent,Quarter
-2021-07-01,15.355215858163906,Real House Price Growth YoY,National,Per cent,Quarter
-2021-10-01,18.984584715380983,Real House Price Growth YoY,National,Per cent,Quarter
-2022-01-01,18.222715746972142,Real House Price Growth YoY,National,Per cent,Quarter
-2022-04-01,12.846910624088782,Real House Price Growth YoY,National,Per cent,Quarter
-2022-07-01,5.5613628972237095,Real House Price Growth YoY,National,Per cent,Quarter
-2022-10-01,-0.7894723044223784,Real House Price Growth YoY,National,Per cent,Quarter
-2023-01-01,-3.9568047159649122,Real House Price Growth YoY,National,Per cent,Quarter
-2023-04-01,0.5115420286177175,Real House Price Growth YoY,National,Per cent,Quarter
-2023-07-01,3.4933804047285966,Real House Price Growth YoY,National,Per cent,Quarter
-2023-10-01,7.15784465012077,Real House Price Growth YoY,National,Per cent,Quarter
-2024-01-01,11.743594535066372,Real House Price Growth YoY,National,Per cent,Quarter
-2024-04-01,9.066480603537364,Real House Price Growth YoY,National,Per cent,Quarter
-2024-07-01,12.308815587659726,Real House Price Growth YoY,National,Per cent,Quarter
-2024-10-01,12.12839813350801,Real House Price Growth YoY,National,Per cent,Quarter
-2025-01-01,7.472561625725027,Real House Price Growth YoY,National,Per cent,Quarter
-2025-04-01,8.091481553002989,Real House Price Growth YoY,National,Per cent,Quarter
-2025-07-01,6.301939404690127,Real House Price Growth YoY,National,Per cent,Quarter
-2025-10-01,6.759779430630486,Real House Price Growth YoY,National,Per cent,Quarter
-2026-01-01,10.604193918715477,Real House Price Growth YoY,National,Per cent,Quarter
+2011-10-01,98.30596483916945,Price-to-Income Ratio,National,Index (base=100),Quarter
+2012-01-01,97.85077805726078,Price-to-Income Ratio,National,Index (base=100),Quarter
+2012-04-01,97.4103322563744,Price-to-Income Ratio,National,Index (base=100),Quarter
+2012-07-01,95.58504910476331,Price-to-Income Ratio,National,Index (base=100),Quarter
+2012-10-01,96.88615842635072,Price-to-Income Ratio,National,Index (base=100),Quarter
+2013-01-01,97.29187938628745,Price-to-Income Ratio,National,Index (base=100),Quarter
+2013-04-01,98.13761414714178,Price-to-Income Ratio,National,Index (base=100),Quarter
+2013-07-01,98.62597218371296,Price-to-Income Ratio,National,Index (base=100),Quarter
+2013-10-01,101.39404356397021,Price-to-Income Ratio,National,Index (base=100),Quarter
+2014-01-01,102.03979215872823,Price-to-Income Ratio,National,Index (base=100),Quarter
+2014-04-01,103.15309305433166,Price-to-Income Ratio,National,Index (base=100),Quarter
+2014-07-01,103.32199648725144,Price-to-Income Ratio,National,Index (base=100),Quarter
+2014-10-01,105.62814502441249,Price-to-Income Ratio,National,Index (base=100),Quarter
+2015-01-01,107.23918606092752,Price-to-Income Ratio,National,Index (base=100),Quarter
+2015-04-01,110.62984409829606,Price-to-Income Ratio,National,Index (base=100),Quarter
+2015-07-01,111.71449581996752,Price-to-Income Ratio,National,Index (base=100),Quarter
+2015-10-01,111.36702738399636,Price-to-Income Ratio,National,Index (base=100),Quarter
+2016-01-01,110.58652805757974,Price-to-Income Ratio,National,Index (base=100),Quarter
+2016-04-01,112.07244989364004,Price-to-Income Ratio,National,Index (base=100),Quarter
+2016-07-01,112.80236447327027,Price-to-Income Ratio,National,Index (base=100),Quarter
+2016-10-01,116.55404012136566,Price-to-Income Ratio,National,Index (base=100),Quarter
+2017-01-01,118.56999862318543,Price-to-Income Ratio,National,Index (base=100),Quarter
+2017-04-01,120.54797102410019,Price-to-Income Ratio,National,Index (base=100),Quarter
+2017-07-01,119.17142510806431,Price-to-Income Ratio,National,Index (base=100),Quarter
+2017-10-01,121.03590220819582,Price-to-Income Ratio,National,Index (base=100),Quarter
+2018-01-01,120.263715792881,Price-to-Income Ratio,National,Index (base=100),Quarter
+2018-04-01,118.59215029569887,Price-to-Income Ratio,National,Index (base=100),Quarter
+2018-07-01,115.77863966330322,Price-to-Income Ratio,National,Index (base=100),Quarter
+2018-10-01,113.47628412089061,Price-to-Income Ratio,National,Index (base=100),Quarter
+2019-01-01,110.40880520846817,Price-to-Income Ratio,National,Index (base=100),Quarter
+2019-04-01,110.5486050360268,Price-to-Income Ratio,National,Index (base=100),Quarter
+2019-07-01,112.83346916598747,Price-to-Income Ratio,National,Index (base=100),Quarter
+2019-10-01,115.34595532150544,Price-to-Income Ratio,National,Index (base=100),Quarter
+2020-01-01,116.23444634467288,Price-to-Income Ratio,National,Index (base=100),Quarter
+2020-04-01,115.43439895582475,Price-to-Income Ratio,National,Index (base=100),Quarter
+2020-07-01,117.71160787053208,Price-to-Income Ratio,National,Index (base=100),Quarter
+2020-10-01,122.43399078763532,Price-to-Income Ratio,National,Index (base=100),Quarter
+2021-01-01,128.29427868034605,Price-to-Income Ratio,National,Index (base=100),Quarter
+2021-04-01,133.7664991564341,Price-to-Income Ratio,National,Index (base=100),Quarter
+2021-07-01,140.92788298850903,Price-to-Income Ratio,National,Index (base=100),Quarter
+2021-10-01,148.3787740945016,Price-to-Income Ratio,National,Index (base=100),Quarter
+2022-01-01,149.84990639038125,Price-to-Income Ratio,National,Index (base=100),Quarter
+2022-04-01,147.37720025480334,Price-to-Income Ratio,National,Index (base=100),Quarter
+2022-07-01,140.1499966881791,Price-to-Income Ratio,National,Index (base=100),Quarter
+2022-10-01,139.1469804572436,Price-to-Income Ratio,National,Index (base=100),Quarter
+2023-01-01,138.16248215068117,Price-to-Income Ratio,National,Index (base=100),Quarter
+2023-04-01,141.0007388544372,Price-to-Income Ratio,National,Index (base=100),Quarter
+2023-07-01,139.6880361360905,Price-to-Income Ratio,National,Index (base=100),Quarter
+2023-10-01,142.28071070277218,Price-to-Income Ratio,National,Index (base=100),Quarter
+2024-01-01,143.31598400536424,Price-to-Income Ratio,National,Index (base=100),Quarter
+2024-04-01,145.4345868230765,Price-to-Income Ratio,National,Index (base=100),Quarter
+2024-07-01,143.49841807475104,Price-to-Income Ratio,National,Index (base=100),Quarter
+2024-10-01,145.40589821464954,Price-to-Income Ratio,National,Index (base=100),Quarter
+2025-01-01,145.26516380363083,Price-to-Income Ratio,National,Index (base=100),Quarter
+2025-04-01,147.59092396622958,Price-to-Income Ratio,National,Index (base=100),Quarter
+2025-07-01,148.49806231616049,Price-to-Income Ratio,National,Index (base=100),Quarter
+2025-10-01,152.78713713551787,Price-to-Income Ratio,National,Index (base=100),Quarter
+2026-01-01,155.03718291245636,Price-to-Income Ratio,National,Index (base=100),Quarter
+2012-07-01,-2.8091072941155204,Real House Price Growth YoY,National,Per cent,Quarter
+2012-10-01,-0.24988550742013338,Real House Price Growth YoY,National,Per cent,Quarter
+2013-01-01,0.06323906629297493,Real House Price Growth YoY,National,Per cent,Quarter
+2013-04-01,1.332126094774888,Real House Price Growth YoY,National,Per cent,Quarter
+2013-07-01,3.7157065533329536,Real House Price Growth YoY,National,Per cent,Quarter
+2013-10-01,4.510754192588751,Real House Price Growth YoY,National,Per cent,Quarter
+2014-01-01,4.550379874658228,Real House Price Growth YoY,National,Per cent,Quarter
+2014-04-01,4.546793220722756,Real House Price Growth YoY,National,Per cent,Quarter
+2014-07-01,5.002567930694224,Real House Price Growth YoY,National,Per cent,Quarter
+2014-10-01,4.9551673942176855,Real House Price Growth YoY,National,Per cent,Quarter
+2015-01-01,6.026510453140466,Real House Price Growth YoY,National,Per cent,Quarter
+2015-04-01,7.963709970771116,Real House Price Growth YoY,National,Per cent,Quarter
+2015-07-01,8.768974948574071,Real House Price Growth YoY,National,Per cent,Quarter
+2015-10-01,5.75755776946385,Real House Price Growth YoY,National,Per cent,Quarter
+2016-01-01,3.8345276247801596,Real House Price Growth YoY,National,Per cent,Quarter
+2016-04-01,2.1929413354897953,Real House Price Growth YoY,National,Per cent,Quarter
+2016-07-01,1.526476301585089,Real House Price Growth YoY,National,Per cent,Quarter
+2016-10-01,4.991915915243217,Real House Price Growth YoY,National,Per cent,Quarter
+2017-01-01,6.851555355690686,Real House Price Growth YoY,National,Per cent,Quarter
+2017-04-01,7.534146482805193,Real House Price Growth YoY,National,Per cent,Quarter
+2017-07-01,5.698346496385098,Real House Price Growth YoY,National,Per cent,Quarter
+2017-10-01,3.8218180605585017,Real House Price Growth YoY,National,Per cent,Quarter
+2018-01-01,1.5008560911292657,Real House Price Growth YoY,National,Per cent,Quarter
+2018-04-01,-1.7193336843408291,Real House Price Growth YoY,National,Per cent,Quarter
+2018-07-01,-2.559267324238512,Real House Price Growth YoY,National,Per cent,Quarter
+2018-10-01,-5.761216257944756,Real House Price Growth YoY,National,Per cent,Quarter
+2019-01-01,-7.313451564329965,Real House Price Growth YoY,National,Per cent,Quarter
+2019-04-01,-6.11622795584752,Real House Price Growth YoY,National,Per cent,Quarter
+2019-07-01,-2.0715420162303655,Real House Price Growth YoY,National,Per cent,Quarter
+2019-10-01,1.9616906648021404,Real House Price Growth YoY,National,Per cent,Quarter
+2020-01-01,5.1887799564270365,Real House Price Growth YoY,National,Per cent,Quarter
+2020-04-01,6.523385863372266,Real House Price Growth YoY,National,Per cent,Quarter
+2020-07-01,4.9857358646455685,Real House Price Growth YoY,National,Per cent,Quarter
+2020-10-01,6.660719728570608,Real House Price Growth YoY,National,Per cent,Quarter
+2021-01-01,10.843430943905851,Real House Price Growth YoY,National,Per cent,Quarter
+2021-04-01,13.721612827957696,Real House Price Growth YoY,National,Per cent,Quarter
+2021-07-01,18.816753484345927,Real House Price Growth YoY,National,Per cent,Quarter
+2021-10-01,19.90755355444844,Real House Price Growth YoY,National,Per cent,Quarter
+2022-01-01,13.760091703016686,Real House Price Growth YoY,National,Per cent,Quarter
+2022-04-01,6.567394825782258,Real House Price Growth YoY,National,Per cent,Quarter
+2022-07-01,-4.089014514809808,Real House Price Growth YoY,National,Per cent,Quarter
+2022-10-01,-9.895813823487865,Real House Price Growth YoY,National,Per cent,Quarter
+2023-01-01,-10.535348447224347,Real House Price Growth YoY,National,Per cent,Quarter
+2023-04-01,-6.330375532291265,Real House Price Growth YoY,National,Per cent,Quarter
+2023-07-01,-1.345704672257253,Real House Price Growth YoY,National,Per cent,Quarter
+2023-10-01,2.406328764804,Real House Price Growth YoY,National,Per cent,Quarter
+2024-01-01,4.222784149164616,Real House Price Growth YoY,National,Per cent,Quarter
+2024-04-01,3.4140781388155794,Real House Price Growth YoY,National,Per cent,Quarter
+2024-07-01,3.331786453015484,Real House Price Growth YoY,National,Per cent,Quarter
+2024-10-01,3.1472946330691975,Real House Price Growth YoY,National,Per cent,Quarter
+2025-01-01,2.2947797258151326,Real House Price Growth YoY,National,Per cent,Quarter
+2025-04-01,2.7045599417265143,Real House Price Growth YoY,National,Per cent,Quarter
+2025-07-01,3.542004171968105,Real House Price Growth YoY,National,Per cent,Quarter
+2025-10-01,4.766679023177289,Real House Price Growth YoY,National,Per cent,Quarter
+2026-01-01,5.913764475829919,Real House Price Growth YoY,National,Per cent,Quarter
 2004-04-01,4.118377883559125,Real Mortgage Rate,National,Per cent,Quarter
 2004-07-01,4.277966502821766,Real Mortgage Rate,National,Per cent,Quarter
 2004-10-01,4.036577327055417,Real Mortgage Rate,National,Per cent,Quarter

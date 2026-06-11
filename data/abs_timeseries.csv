@@ -634,65 +634,65 @@ date,value,series,series_id,category,unit,frequency
 2025-09-01,214.119804400978,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
 2025-12-01,221.84189079054605,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
 2026-03-01,226.3854930725346,Dwelling Price Index ;  Weighted average of eight capital cities ;,A83728647F,House Prices,Index,Quarter
-2011-09-01,379.9,RPPI,A83728622K,House Prices,$'000,Quarter
-2011-12-01,384.3,RPPI,A83728622K,House Prices,$'000,Quarter
-2012-03-01,377.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2012-06-01,378.1,RPPI,A83728622K,House Prices,$'000,Quarter
-2012-09-01,375.5,RPPI,A83728622K,House Prices,$'000,Quarter
-2012-12-01,375.6,RPPI,A83728622K,House Prices,$'000,Quarter
-2013-03-01,379.7,RPPI,A83728622K,House Prices,$'000,Quarter
-2013-06-01,379.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2013-09-01,383.5,RPPI,A83728622K,House Prices,$'000,Quarter
-2013-12-01,396.8,RPPI,A83728622K,House Prices,$'000,Quarter
-2014-03-01,402.7,RPPI,A83728622K,House Prices,$'000,Quarter
-2014-06-01,402.9,RPPI,A83728622K,House Prices,$'000,Quarter
-2014-09-01,402,RPPI,A83728622K,House Prices,$'000,Quarter
-2014-12-01,412.5,RPPI,A83728622K,House Prices,$'000,Quarter
-2015-03-01,414.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2015-06-01,412.7,RPPI,A83728622K,House Prices,$'000,Quarter
-2015-09-01,418.2,RPPI,A83728622K,House Prices,$'000,Quarter
-2015-12-01,421.9,RPPI,A83728622K,House Prices,$'000,Quarter
-2016-03-01,425.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2016-06-01,423.7,RPPI,A83728622K,House Prices,$'000,Quarter
-2016-09-01,424.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2016-12-01,433.6,RPPI,A83728622K,House Prices,$'000,Quarter
-2017-03-01,439.2,RPPI,A83728622K,House Prices,$'000,Quarter
-2017-06-01,437.6,RPPI,A83728622K,House Prices,$'000,Quarter
-2017-09-01,442.5,RPPI,A83728622K,House Prices,$'000,Quarter
-2017-12-01,449.8,RPPI,A83728622K,House Prices,$'000,Quarter
-2018-03-01,452.6,RPPI,A83728622K,House Prices,$'000,Quarter
-2018-06-01,449.3,RPPI,A83728622K,House Prices,$'000,Quarter
-2018-09-01,451.7,RPPI,A83728622K,House Prices,$'000,Quarter
-2018-12-01,459.5,RPPI,A83728622K,House Prices,$'000,Quarter
-2019-03-01,457.8,RPPI,A83728622K,House Prices,$'000,Quarter
-2019-06-01,454.5,RPPI,A83728622K,House Prices,$'000,Quarter
-2019-09-01,452.8,RPPI,A83728622K,House Prices,$'000,Quarter
-2019-12-01,470.6,RPPI,A83728622K,House Prices,$'000,Quarter
-2020-03-01,465.3,RPPI,A83728622K,House Prices,$'000,Quarter
-2020-06-01,467.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2020-09-01,482.3,RPPI,A83728622K,House Prices,$'000,Quarter
-2020-12-01,503,RPPI,A83728622K,House Prices,$'000,Quarter
-2021-03-01,519.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2021-06-01,543.5,RPPI,A83728622K,House Prices,$'000,Quarter
-2021-09-01,573.6,RPPI,A83728622K,House Prices,$'000,Quarter
-2021-12-01,619.3,RPPI,A83728622K,House Prices,$'000,Quarter
-2022-03-01,645.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2022-06-01,651.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2022-09-01,649.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2022-12-01,662.7,RPPI,A83728622K,House Prices,$'000,Quarter
-2023-03-01,663.3,RPPI,A83728622K,House Prices,$'000,Quarter
-2023-06-01,694.2,RPPI,A83728622K,House Prices,$'000,Quarter
-2023-09-01,707.8,RPPI,A83728622K,House Prices,$'000,Quarter
-2023-12-01,738.9,RPPI,A83728622K,House Prices,$'000,Quarter
-2024-03-01,768,RPPI,A83728622K,House Prices,$'000,Quarter
-2024-06-01,786,RPPI,A83728622K,House Prices,$'000,Quarter
-2024-09-01,817.6,RPPI,A83728622K,House Prices,$'000,Quarter
-2024-12-01,848.5,RPPI,A83728622K,House Prices,$'000,Quarter
-2025-03-01,845.2,RPPI,A83728622K,House Prices,$'000,Quarter
-2025-06-01,867.4,RPPI,A83728622K,House Prices,$'000,Quarter
-2025-09-01,897.1,RPPI,A83728622K,House Prices,$'000,Quarter
-2025-12-01,938.7,RPPI,A83728622K,House Prices,$'000,Quarter
-2026-03-01,973.1,RPPI,A83728622K,House Prices,$'000,Quarter
+2011-09-01,490.8,RPPI,A83728647F,House Prices,$'000,Quarter
+2011-12-01,486.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2012-03-01,488.6,RPPI,A83728647F,House Prices,$'000,Quarter
+2012-06-01,489.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2012-09-01,486.3,RPPI,A83728647F,House Prices,$'000,Quarter
+2012-12-01,496.4,RPPI,A83728647F,House Prices,$'000,Quarter
+2013-03-01,501.1,RPPI,A83728647F,House Prices,$'000,Quarter
+2013-06-01,508.1,RPPI,A83728647F,House Prices,$'000,Quarter
+2013-09-01,515.5,RPPI,A83728647F,House Prices,$'000,Quarter
+2013-12-01,532.7,RPPI,A83728647F,House Prices,$'000,Quarter
+2014-03-01,539.3,RPPI,A83728647F,House Prices,$'000,Quarter
+2014-06-01,547.5,RPPI,A83728647F,House Prices,$'000,Quarter
+2014-09-01,553.5,RPPI,A83728647F,House Prices,$'000,Quarter
+2014-12-01,568.7,RPPI,A83728647F,House Prices,$'000,Quarter
+2015-03-01,579.3,RPPI,A83728647F,House Prices,$'000,Quarter
+2015-06-01,600.1,RPPI,A83728647F,House Prices,$'000,Quarter
+2015-09-01,611,RPPI,A83728647F,House Prices,$'000,Quarter
+2015-12-01,611.6,RPPI,A83728647F,House Prices,$'000,Quarter
+2016-03-01,609.3,RPPI,A83728647F,House Prices,$'000,Quarter
+2016-06-01,619.5,RPPI,A83728647F,House Prices,$'000,Quarter
+2016-09-01,628.6,RPPI,A83728647F,House Prices,$'000,Quarter
+2016-12-01,651.6,RPPI,A83728647F,House Prices,$'000,Quarter
+2017-03-01,665,RPPI,A83728647F,House Prices,$'000,Quarter
+2017-06-01,678.8,RPPI,A83728647F,House Prices,$'000,Quarter
+2017-09-01,676.4,RPPI,A83728647F,House Prices,$'000,Quarter
+2017-12-01,689.7,RPPI,A83728647F,House Prices,$'000,Quarter
+2018-03-01,688,RPPI,A83728647F,House Prices,$'000,Quarter
+2018-06-01,681.1,RPPI,A83728647F,House Prices,$'000,Quarter
+2018-09-01,671.7,RPPI,A83728647F,House Prices,$'000,Quarter
+2018-12-01,661.4,RPPI,A83728647F,House Prices,$'000,Quarter
+2019-03-01,646,RPPI,A83728647F,House Prices,$'000,Quarter
+2019-06-01,649.3,RPPI,A83728647F,House Prices,$'000,Quarter
+2019-09-01,668.8,RPPI,A83728647F,House Prices,$'000,Quarter
+2019-12-01,686.8,RPPI,A83728647F,House Prices,$'000,Quarter
+2020-03-01,694.7,RPPI,A83728647F,House Prices,$'000,Quarter
+2020-06-01,689.4,RPPI,A83728647F,House Prices,$'000,Quarter
+2020-09-01,706.7,RPPI,A83728647F,House Prices,$'000,Quarter
+2020-12-01,738.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2021-03-01,778.3,RPPI,A83728647F,House Prices,$'000,Quarter
+2021-06-01,813.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2021-09-01,865.7,RPPI,A83728647F,House Prices,$'000,Quarter
+2021-12-01,916.8,RPPI,A83728647F,House Prices,$'000,Quarter
+2022-03-01,930.6,RPPI,A83728647F,House Prices,$'000,Quarter
+2022-06-01,921.2,RPPI,A83728647F,House Prices,$'000,Quarter
+2022-09-01,890.5,RPPI,A83728647F,House Prices,$'000,Quarter
+2022-12-01,891,RPPI,A83728647F,House Prices,$'000,Quarter
+2023-03-01,890.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2023-06-01,914.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2023-09-01,925.2,RPPI,A83728647F,House Prices,$'000,Quarter
+2023-12-01,949.4,RPPI,A83728647F,House Prices,$'000,Quarter
+2024-03-01,962.1,RPPI,A83728647F,House Prices,$'000,Quarter
+2024-06-01,982.2,RPPI,A83728647F,House Prices,$'000,Quarter
+2024-09-01,983.3,RPPI,A83728647F,House Prices,$'000,Quarter
+2024-12-01,1002.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2025-03-01,1007.8,RPPI,A83728647F,House Prices,$'000,Quarter
+2025-06-01,1029.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2025-09-01,1050.9,RPPI,A83728647F,House Prices,$'000,Quarter
+2025-12-01,1088.8,RPPI,A83728647F,House Prices,$'000,Quarter
+2026-03-01,1111.1,RPPI,A83728647F,House Prices,$'000,Quarter
 2003-09-01,182.5,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
 2003-12-01,191,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
 2004-03-01,193.5,RPPI Attached Dwellings ;  Adelaide ;,A83728558C,House Prices,$'000,Quarter
@@ -3613,245 +3613,245 @@ date,value,series,series_id,category,unit,frequency
 2024-11-15,1975.8,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 2025-05-15,2010,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 2025-11-15,2051.1,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
-1959-09-01,1848,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1959-12-01,1905,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1960-03-01,1966,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1960-06-01,2030,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1960-09-01,2080,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1960-12-01,2101,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1961-03-01,2104,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1961-06-01,2103,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1961-09-01,2115,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1961-12-01,2149,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1962-03-01,2190,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1962-06-01,2221,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1962-09-01,2244,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1962-12-01,2270,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1963-03-01,2311,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1963-06-01,2370,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1963-09-01,2428,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1963-12-01,2481,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1964-03-01,2532,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1964-06-01,2598,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1964-09-01,2688,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1964-12-01,2783,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1965-03-01,2862,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1965-06-01,2922,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1965-09-01,2974,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1965-12-01,3027,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1966-03-01,3083,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1966-06-01,3149,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1966-09-01,3220,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1966-12-01,3293,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1967-03-01,3379,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1967-06-01,3465,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1967-09-01,3536,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1967-12-01,3601,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1968-03-01,3664,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1968-06-01,3748,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1968-09-01,3861,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1968-12-01,3984,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1969-03-01,4103,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1969-06-01,4214,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1969-09-01,4326,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1969-12-01,4467,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1970-03-01,4603,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1970-06-01,4726,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1970-09-01,4880,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1970-12-01,5087,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1971-03-01,5320,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1971-06-01,5502,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1971-09-01,5614,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1971-12-01,5718,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1972-03-01,5851,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1972-06-01,6002,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1972-09-01,6159,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1972-12-01,6350,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1973-03-01,6612,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1973-06-01,6932,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1973-09-01,7290,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1973-12-01,7659,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1974-03-01,8149,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1974-06-01,8822,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1974-09-01,9557,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1974-12-01,10140,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1975-03-01,10492,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1975-06-01,10760,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1975-09-01,11116,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1975-12-01,11554,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1976-03-01,12026,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1976-06-01,12468,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1976-09-01,12851,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1976-12-01,13202,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1977-03-01,13527,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1977-06-01,13839,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1977-09-01,14161,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1977-12-01,14487,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1978-03-01,14808,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1978-06-01,15042,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1978-09-01,15264,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1978-12-01,15557,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1979-03-01,15914,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1979-06-01,16297,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1979-09-01,16717,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1979-12-01,17196,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1980-03-01,17762,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1980-06-01,18372,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1980-09-01,19065,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1980-12-01,19845,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1981-03-01,20634,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1981-06-01,21347,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1981-09-01,22052,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1981-12-01,22865,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1982-03-01,23894,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1982-06-01,24986,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1982-09-01,25817,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1982-12-01,26093,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1983-03-01,25971,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1983-06-01,25887,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1983-09-01,26240,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1983-12-01,27057,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1984-03-01,27931,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1984-06-01,28815,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1984-09-01,29504,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1984-12-01,29990,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1985-03-01,30448,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1985-06-01,31055,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1985-09-01,31922,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1985-12-01,32898,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1986-03-01,33814,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1986-06-01,34588,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1986-09-01,35180,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1986-12-01,35728,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1987-03-01,36442,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1987-06-01,37349,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1987-09-01,38346,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1987-12-01,39297,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1988-03-01,40103,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1988-06-01,40984,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1988-09-01,42179,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1988-12-01,43668,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1989-03-01,45301,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1989-06-01,46784,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1989-09-01,48014,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1989-12-01,49279,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1990-03-01,50567,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1990-06-01,51610,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1990-09-01,52127,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1990-12-01,52061,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1991-03-01,51732,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1991-06-01,51579,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1991-09-01,51736,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1991-12-01,52124,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1992-03-01,52666,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1992-06-01,53299,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1992-09-01,53918,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1992-12-01,54477,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1993-03-01,54839,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1993-06-01,55049,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1993-09-01,55389,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1993-12-01,56262,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1994-03-01,57471,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1994-06-01,58500,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1994-09-01,59205,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1994-12-01,59907,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1995-03-01,60902,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1995-06-01,62159,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1995-09-01,63365,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1995-12-01,64478,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1996-03-01,65527,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1996-06-01,66609,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1996-09-01,67727,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1996-12-01,68893,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1997-03-01,69886,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1997-06-01,70682,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1997-09-01,71317,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1997-12-01,71830,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1998-03-01,72680,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1998-06-01,74052,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1998-09-01,75396,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1998-12-01,76519,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1999-03-01,77248,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1999-06-01,77978,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1999-09-01,79138,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-1999-12-01,80533,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2000-03-01,82005,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2000-06-01,83350,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2000-09-01,84576,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2000-12-01,85960,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2001-03-01,87344,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2001-06-01,88564,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2001-09-01,89628,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2001-12-01,90636,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2002-03-01,91890,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2002-06-01,93288,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2002-09-01,94630,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2002-12-01,95988,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2003-03-01,97441,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2003-06-01,99006,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2003-09-01,100698,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2003-12-01,102427,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2004-03-01,104270,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2004-06-01,106247,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2004-09-01,108316,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2004-12-01,110335,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2005-03-01,112275,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2005-06-01,114114,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2005-09-01,116053,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2005-12-01,118098,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2006-03-01,120018,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2006-06-01,122179,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2006-09-01,125015,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2006-12-01,128491,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2007-03-01,132179,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2007-06-01,135284,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2007-09-01,137746,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2007-12-01,140338,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2008-03-01,143225,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2008-06-01,145948,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2008-09-01,147573,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2008-12-01,147756,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2009-03-01,147355,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2009-06-01,147589,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2009-09-01,148870,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2009-12-01,151309,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2010-03-01,154548,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2010-06-01,158209,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2010-09-01,162018,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2010-12-01,165600,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2011-03-01,168912,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2011-06-01,171827,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2011-09-01,174563,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2011-12-01,177436,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2012-03-01,179897,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2012-06-01,181597,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2012-09-01,182689,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2012-12-01,183774,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2013-03-01,185186,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2013-06-01,186666,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2013-09-01,188449,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2013-12-01,190271,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2014-03-01,192039,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2014-06-01,193576,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2014-09-01,194922,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2014-12-01,195930,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2015-03-01,197081,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2015-06-01,198592,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2015-09-01,200482,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2015-12-01,202271,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2016-03-01,203869,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2016-06-01,205136,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2016-09-01,206034,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2016-12-01,207008,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2017-03-01,208586,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2017-06-01,211001,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2017-09-01,214095,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2017-12-01,217070,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2018-03-01,219801,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2018-06-01,222338,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2018-09-01,225013,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2018-12-01,228160,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
-2019-03-01,231485,Compensation of Employees,A2303556W,Income,$ Millions,Quarter
+1959-09-01,1855,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1959-12-01,1894,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1960-03-01,1969,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1960-06-01,2030,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1960-09-01,2081,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1960-12-01,2113,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1961-03-01,2097,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1961-06-01,2097,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1961-09-01,2125,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1961-12-01,2133,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1962-03-01,2193,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1962-06-01,2242,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1962-09-01,2232,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1962-12-01,2257,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1963-03-01,2329,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1963-06-01,2358,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1963-09-01,2422,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1963-12-01,2510,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1964-03-01,2513,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1964-06-01,2594,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1964-09-01,2681,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1964-12-01,2807,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1965-03-01,2848,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1965-06-01,2922,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1965-09-01,2991,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1965-12-01,3000,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1966-03-01,3101,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1966-06-01,3141,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1966-09-01,3222,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1966-12-01,3292,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1967-03-01,3375,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1967-06-01,3463,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1967-09-01,3552,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1967-12-01,3599,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1968-03-01,3638,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1968-06-01,3791,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1968-09-01,3805,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1968-12-01,4021,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1969-03-01,4105,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1969-06-01,4205,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1969-09-01,4328,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1969-12-01,4450,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1970-03-01,4627,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1970-06-01,4743,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1970-09-01,4837,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1970-12-01,5068,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1971-03-01,5365,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1971-06-01,5501,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1971-09-01,5627,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1971-12-01,5685,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1972-03-01,5852,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1972-06-01,6026,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1972-09-01,6157,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1972-12-01,6340,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1973-03-01,6584,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1973-06-01,6975,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1973-09-01,7282,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1973-12-01,7665,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1974-03-01,8161,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1974-06-01,8653,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1974-09-01,9705,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1974-12-01,10189,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1975-03-01,10494,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1975-06-01,10676,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1975-09-01,11119,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1975-12-01,11598,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1976-03-01,11967,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1976-06-01,12506,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1976-09-01,12885,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1976-12-01,13165,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1977-03-01,13490,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1977-06-01,13940,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1977-09-01,14080,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1977-12-01,14455,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1978-03-01,14904,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1978-06-01,15020,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1978-09-01,15286,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1978-12-01,15393,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1979-03-01,16141,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1979-06-01,16175,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1979-09-01,16698,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1979-12-01,17258,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1980-03-01,17743,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1980-06-01,18351,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1980-09-01,19059,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1980-12-01,19873,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1981-03-01,20576,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1981-06-01,21480,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1981-09-01,22010,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1981-12-01,22733,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1982-03-01,23946,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1982-06-01,24897,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1982-09-01,26008,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1982-12-01,26109,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1983-03-01,26119,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1983-06-01,25540,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1983-09-01,26300,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1983-12-01,26989,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1984-03-01,27880,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1984-06-01,28892,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1984-09-01,29562,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1984-12-01,30022,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1985-03-01,30308,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1985-06-01,31143,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1985-09-01,31823,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1985-12-01,32857,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1986-03-01,34040,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1986-06-01,34409,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1986-09-01,35293,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1986-12-01,35750,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1987-03-01,36310,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1987-06-01,37285,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1987-09-01,38540,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1987-12-01,39258,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1988-03-01,40027,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1988-06-01,41214,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1988-09-01,41781,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1988-12-01,43830,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1989-03-01,45360,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1989-06-01,46767,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1989-09-01,48117,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1989-12-01,49064,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1990-03-01,50538,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1990-06-01,51801,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1990-09-01,52186,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1990-12-01,51998,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1991-03-01,51812,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1991-06-01,51426,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1991-09-01,51629,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1991-12-01,52370,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1992-03-01,52526,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1992-06-01,53205,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1992-09-01,54082,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1992-12-01,54516,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1993-03-01,54653,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1993-06-01,55381,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1993-09-01,55233,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1993-12-01,55890,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1994-03-01,57600,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1994-06-01,59096,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1994-09-01,58750,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1994-12-01,59723,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1995-03-01,61314,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1995-06-01,61870,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1995-09-01,63323,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1995-12-01,64810,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1996-03-01,65357,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1996-06-01,66412,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1996-09-01,67924,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1996-12-01,69018,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1997-03-01,69439,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1997-06-01,71245,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1997-09-01,71062,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1997-12-01,71882,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1998-03-01,72611,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1998-06-01,73708,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1998-09-01,75944,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1998-12-01,76419,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1999-03-01,77067,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1999-06-01,78326,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1999-09-01,78586,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+1999-12-01,80787,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2000-03-01,82184,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2000-06-01,83142,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2000-09-01,84693,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2000-12-01,85807,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2001-03-01,87438,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2001-06-01,88648,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2001-09-01,89586,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2001-12-01,90624,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2002-03-01,91812,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2002-06-01,93223,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2002-09-01,94978,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2002-12-01,95700,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2003-03-01,97362,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2003-06-01,99308,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2003-09-01,100511,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2003-12-01,102342,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2004-03-01,104495,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2004-06-01,106105,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2004-09-01,108207,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2004-12-01,110523,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2005-03-01,112397,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2005-06-01,113751,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2005-09-01,116348,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2005-12-01,117929,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2006-03-01,120287,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2006-06-01,122104,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2006-09-01,124467,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2006-12-01,128936,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2007-03-01,132013,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2007-06-01,135589,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2007-09-01,137793,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2007-12-01,139993,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2008-03-01,142827,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2008-06-01,146655,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2008-09-01,147529,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2008-12-01,147920,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2009-03-01,147384,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2009-06-01,147051,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2009-09-01,149031,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2009-12-01,151419,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2010-03-01,154215,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2010-06-01,158457,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2010-09-01,162042,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2010-12-01,165581,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2011-03-01,168909,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2011-06-01,171891,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2011-09-01,174763,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2011-12-01,176570,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2012-03-01,180657,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2012-06-01,182074,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2012-09-01,181709,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2012-12-01,184175,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2013-03-01,185198,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2013-06-01,186760,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2013-09-01,188038,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2013-12-01,190577,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2014-03-01,192016,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2014-06-01,193535,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2014-09-01,195020,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2014-12-01,196068,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2015-03-01,196718,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2015-06-01,198674,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2015-09-01,200544,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2015-12-01,202170,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2016-03-01,204181,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2016-06-01,204669,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2016-09-01,206839,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2016-12-01,206399,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2017-03-01,208489,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2017-06-01,211150,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2017-09-01,213921,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2017-12-01,217300,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2018-03-01,219952,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2018-06-01,222118,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2018-09-01,225066,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2018-12-01,227986,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
+2019-03-01,231525,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
 2019-06-01,234937,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
 2019-09-01,237228,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
 2019-12-01,240224,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
