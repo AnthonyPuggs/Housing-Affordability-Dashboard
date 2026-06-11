@@ -65,6 +65,7 @@ source(project_path("R", "precomputed_series.R"), local = TRUE)
 data_dir <- project_path("data")
 
 dashboard_data <- load_dashboard_csvs(data_dir)
+assert_dashboard_data(dashboard_data)
 list2env(dashboard_data, envir = environment())
 rm(dashboard_data)
 

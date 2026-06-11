@@ -126,6 +126,8 @@ rentalMarketPageUI <- function(id) {
 rentalMarketPageServer <- function(id, is_dark) {
   moduleServer(id, function(input, output, session) {
     output$rental_stress_state <- renderPlotly({
+      validate(need(nrow(sih_nhha) > 0,
+                    "NHHA rental stress data is unavailable - run the data pipeline."))
       yr <- input$rental_year
       selected_states <- normalise_rental_states(input$rental_states,
                                                  sih_nhha$geography)

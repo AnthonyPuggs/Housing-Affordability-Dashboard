@@ -629,16 +629,24 @@ affordabilityPageServer <- function(id, is_dark) {
     output$rent_weeks_to_save  <- renderText(paste0(number(rent_vals()$weeks_to_save_upfront, accuracy = 0.1), " weeks"))
 
     output$calc_sensitivity <- renderPlotly({
-      d <- market_entry_sensitivity_grid(
-        dwelling_price = input$calc_price,
-        gross_annual_income = input$calc_income,
-        annual_rate_pct = input$calc_rate,
-        deposit_pct = input$calc_deposit_pct,
-        term_years = input$calc_term,
-        savings_rate_pct = input$calc_savings_rate,
-        assessment_buffer_pp = input$calc_assessment_buffer,
-        annual_non_housing_expenses = input$calc_annual_expenses,
-        monthly_other_debt = input$calc_monthly_debt
+      # Same friendly input guard as the seven sibling calculator outputs:
+      # a cleared/invalid input shows the scenario helper's message instead
+      # of a raw render error.
+      d <- tryCatch(
+        market_entry_sensitivity_grid(
+          dwelling_price = input$calc_price,
+          gross_annual_income = input$calc_income,
+          annual_rate_pct = input$calc_rate,
+          deposit_pct = input$calc_deposit_pct,
+          term_years = input$calc_term,
+          savings_rate_pct = input$calc_savings_rate,
+          assessment_buffer_pp = input$calc_assessment_buffer,
+          annual_non_housing_expenses = input$calc_annual_expenses,
+          monthly_other_debt = input$calc_monthly_debt
+        ),
+        error = function(e) {
+          validate(need(FALSE, conditionMessage(e)))
+        }
       )
       validate(need(nrow(d) > 0, "No scenario sensitivity data available."))
 

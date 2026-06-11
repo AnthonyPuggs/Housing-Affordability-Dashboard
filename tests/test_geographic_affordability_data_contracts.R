@@ -153,10 +153,8 @@ if (file.exists(data_loader_path)) {
   data_loader_text <- paste(readLines(data_loader_path, warn = FALSE),
                             collapse = "\n")
   required_loader_text <- c(
-    "sih_lower_income_states = load_dashboard_csv(",
-    '"sih_lower_income_states.csv"',
-    "sih_geographic = load_dashboard_csv(",
-    '"sih_geographic_2020.csv"'
+    'sih_lower_income_states = "sih_lower_income_states.csv"',
+    'sih_geographic = "sih_geographic_2020.csv"'
   )
   missing_loader_text <- required_loader_text[
     !vapply(required_loader_text, grepl, logical(1),
