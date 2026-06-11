@@ -1,10 +1,63 @@
-# CLAUDE.md — Household Affordability Dashboard
+# CLAUDE.md — Housing Affordability Dashboard
 
 ## Project Overview
 
-Australian household affordability analysis project. Currently early-stage: contains a working macro dashboard (`app_old.R`, ~680 lines) that pulls live ABS data, plus local ABS housing microdata and methodology reference PDFs. The goal is to build a comprehensive housing affordability dashboard combining macro indicators with household-level cost burden analysis.
+Production R/Shiny dashboard for Australian housing affordability analysis, deployed to Posit Connect Cloud. It combines official ABS Survey of Income and Housing (SIH/NHHA) burden measures with modelled market-entry indicators (serviceability, deposit gap, National Housing Affordability Score), keeping the two strictly separated in labelling.
 
-**Current state:** Exploration and data assembly. No production app yet — `app_old.R` is the inherited macro dashboard to extend or replace.
+**Architecture in one line:** `pipeline/` stages fetch/parse source data into committed `data/*.csv` → `app.R` + `R/` page modules read only those CSVs at runtime (no live API calls in the app).
+
+## Repository Layout
+
+| Path | Role |
+|------|------|
+| `app.R` | Shiny entrypoint: UI shell (`bslib::page_navbar`), theme CSS/JS, server wiring for 8 page modules |
+| `plot_setup.R` | Compatibility entrypoint sourcing data loading, formatting, theme and precomputed-series helpers |
+| `R/` | ~36 modules: page modules (`*_module.R`), chart builders, indicator registry, score, helpers, release checklist |
+| `pipeline/` | Data pipeline stages `00_config` → `01_process_sih` → `02/02b_fetch_abs` → `03_fetch_rba` → `04_derive_indicators` → `05_driver` (runner) → `06_validate_outputs` → `07_write_data_vintage` |
+| `data/` | Committed pipeline outputs the app reads (`abs_timeseries.csv`, `rba_rates.csv`, `affordability_indices.csv`, `sih_*.csv`, `data_vintage.csv`). `data/rba_*_raw.*` are gitignored download caches, not outputs |
+| `tests/` | 56 standalone base-R test scripts (`test_*.R`), each with a small `check()` harness; run with `Rscript tests/test_X.R` from the repo root |
+| `resources/` | ABS SIH workbooks + methodology PDFs (see below); inputs to stage 01, never read by the app |
+| `docs/` | Reviews, roadmap (`docs/roadmap.md`), UI smoke checklist |
+| `app_old.R` | Legacy pre-pipeline macro dashboard. Not part of the app; archival candidate (roadmap Track 3) |
+
+## Key Conventions
+
+- **Dependencies via renv**: `renv.lock` pins packages; `.Rprofile` auto-activates. Use `Rscript -e "renv::restore()"`, never ad-hoc `install.packages()` for project dependencies.
+- **Indicator registry is the source of truth**: `R/indicator_registry.R` defines formula text, units, interpretation direction, official/stylised class and public caveats for every derived indicator. The Methodology page renders it. Update the registry whenever a derivation changes.
+- **Schema contracts**: time series use `date | value | series | series_id | category | unit | frequency`; derived indices use `date | value | indicator | geography | unit | frequency`; SIH outputs use `survey_year | value | metric | tenure | breakdown_var | breakdown_val | geography | stat_type`. Preserve these when adding sources.
+- **Official vs stylised separation**: SIH/NHHA estimates are official pass-through cells; serviceability/deposit/score outputs are stylised scenarios and must always be labelled as such (never as official ABS measures or lender assessments).
+- **Fail-loud selection**: stage 04 selects required series via `get_series_exact()`; prefer exact series IDs/names with loud errors over regex fallbacks when adding pipeline series.
+
+## Commands
+
+```bash
+# Run the dashboard (reads committed data/*.csv; no network needed)
+Rscript -e "shiny::runApp('.')"
+
+# Refresh all data (network: ABS via readabs/SDMX, RBA CSV endpoints)
+Rscript pipeline/05_driver.R
+
+# Run one test / the full suite (from repo root)
+Rscript tests/test_pipeline_outputs.R
+# PowerShell: foreach ($f in Get-ChildItem tests -Filter "test_*.R") { Rscript "tests/$($f.Name)" }
+
+# Release-readiness checklist (data, methodology, hygiene, deployment checks)
+Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
+```
+
+## CI / Automation
+
+- `.github/workflows/ci.yml` — push (main) + PR: runs all 56 test scripts plus the release checklist.
+- `.github/workflows/data-refresh.yml` — scheduled weekdays 07:00 AEST (`cron: '0 21 * * 0-4'` UTC; Actions schedules are UTC-only — do not add a `timezone:` key). Runs the pipeline, refresh contract tests, then commits `data/*.csv` only when something other than `data_vintage.csv` changed.
+- Byte-literal contract tests pin exact source strings (workflow text, module text, README text). When changing pinned code or docs, update the corresponding `tests/test_*.R` contract in the same commit.
+
+## Deployment (Posit Connect Cloud)
+
+Git-backed deployment driven by `manifest.json` + `.rscignore`. Rules:
+
+- After adding/removing files that `app.R` sources, or after `renv::snapshot()`, regenerate the manifest: `Rscript -e "rsconnect::writeManifest(appDir = '.')"` and commit it.
+- `.rscignore` keeps tests/docs/resources/legacy scripts and the gitignored RBA caches out of the bundle.
+- The release checklist asserts every sourced file appears in the manifest and no `.rscignore` path leaks in — CI fails if the manifest goes stale.
 
 ## Domain Expertise
 
@@ -12,15 +65,15 @@ When working on this project, apply expertise in:
 
 - **Property economics** — housing tenure (owners, mortgagees, renters), dwelling types, housing supply/demand dynamics in Australia
 - **Microeconometrics (housing)** — household survey analysis (ABS SIH), income distribution by tenure, housing cost ratios by quintile, equivalised disposable income
-- **Macroeconometrics** — price indices (CPI housing components, RPPI), time series decomposition, interest rate transmission to mortgage costs
+- **Macroeconometrics** — price indices (CPI housing components, mean dwelling prices), time series alignment, interest rate transmission to mortgage costs
 - **Affordability indicators** — housing cost-to-income ratios (30/40 rule), deposit-to-income ratios, mortgage serviceability, rental stress thresholds
-- **Australian institutional context** — ABS catalogue numbering (e.g. 4130.0 Housing Occupancy and Costs), SIH methodology, NHHA (National Housing and Homelessness Agreement) definitions
+- **Australian institutional context** — ABS catalogue numbering (4130.0 Housing Occupancy and Costs, 6432.0 dwelling prices, 6401.0 CPI, 5601.0 lending), SIH methodology, NHHA definitions. Note: ABS cancelled SIH 2023-24 (renter under-representation), so SIH 2019-20 stays the latest cross-section until SIH 2025-26 (~2027).
 
 ## Resources Directory
 
 ### `resources/ABS_data/housing_occupancy_and_costs_SIH/`
 
-14 Excel workbooks from ABS Cat. 4130.0 (Housing Occupancy and Costs, 2019-20), based on the Survey of Income and Housing (SIH):
+14 Excel workbooks from ABS Cat. 4130.0 (Housing Occupancy and Costs, 2019-20), based on the Survey of Income and Housing (SIH). Stage `01_process_sih.R` parses these into `data/sih_*.csv`:
 
 | File | Contents |
 |------|----------|
@@ -33,7 +86,7 @@ When working on this project, apply expertise in:
 | 7. Housing utilisation | Bedrooms needed vs available, overcrowding |
 | 8. Lower income households, state and territory | Affordability for bottom 40% by state |
 | 9. Recent home buyer households | Purchase price, deposit, loan characteristics |
-| 10. Residential property ownership | Property values, equity, multiple ownership |
+| 10. Residential property ownership | Property *other than the own home* (excluding selected dwelling) — cannot source owner-occupied dwelling values |
 | 11. Greater capital city statistical areas | Capital city vs rest-of-state breakdowns |
 | 12. Housing occupancy costs, states and territories | State-level housing cost comparisons |
 | 13. Rental affordability, lower income renters (NHHA) | NHHA-basis rental stress indicators |
@@ -46,76 +99,26 @@ When working on this project, apply expertise in:
 - **housing_afford_indic_methods_NZ.pdf** — NZ methodology for housing affordability indicators (useful comparative framework)
 - **household-living-costs-price-indexes-backgrd_NZ.pdf** — NZ background on household living cost price indexes
 
-**Rule:** Always consult these PDFs before implementing affordability calculations — they define the exact indicator methodologies.
-
-## Technical Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Dashboard | R / Shiny with `bslib` (Bootstrap 5) |
-| Visualization | `ggplot2` + `plotly` |
-| ABS data access | `readabs` (live API to ABS.Stat) |
-| Data wrangling | `dplyr`, `tidyr`, `purrr`, `stringr` |
-| Formatting | `scales` |
-| Future additions | Python, SQL, Excel as needed |
-
-### Commands
-
-```bash
-# Run the existing macro dashboard
-Rscript -e "shiny::runApp('app_old.R')"
-
-# Install R dependencies
-Rscript -e "install.packages(c('shiny', 'bslib', 'ggplot2', 'plotly', 'readabs', 'dplyr', 'tidyr', 'purrr', 'stringr', 'scales', 'watcher'))"
-```
-
-## Architecture of `app_old.R`
-
-Single-file Shiny app (UI + server). Key components:
-
-### Data Layer (lines 1-253)
-- `safe_read()` — error-tolerant wrapper for ABS data fetching
-- `normalize_abs()` — standardises any ABS tibble to schema: `date | value | series | series_id | category | unit | frequency`
-- `select_series()` — regex-matches series names from ABS tables and normalises
-- `infer_lag()` / `infer_lag_from_dates()` — detects data frequency for YoY calculations
-- `get_macro_data()` — master fetch function pulling GDP (5206.0), CPI, labour force (6202.0), wages (AWE), cash rate (1350.0), plus custom series IDs; derives CPI inflation YoY and real cash rate
-
-### Transform & Plot (lines 255-384)
-- `transform_series()` — applies levels/YoY/period/index transforms with frequency-aware lagging
-- `plot_macro()` — builds ggplot with chart type dispatch (line/area/bar/facet/seasonal) and dark mode support
-
-### UI (lines 386-552)
-- `bslib::page_navbar` with two tabs: Dashboard (sidebar + plotly chart) and Latest Snapshot (value boxes)
-- Dark/light theme toggle with localStorage persistence
-- Sidebar: refresh button, custom series ID inputs, category/series filters, date range, transform and chart type selectors
-
-### Server (lines 554-678)
-- Reactive data flow: `load_data()` → `macro_data()` reactiveVal → `filtered()` → `transformed()` → `renderPlotly`
-- Value boxes show latest GDP, CPI, unemployment, cash rate
-
-### ABS Integration Pattern
-The `readabs` package is the sole data source. Pattern: `read_abs(cat_no, tables)` → pipe through `select_series()` → `normalize_abs()` → `bind_rows()` into unified long-format tibble. This pattern should be extended for housing-specific ABS catalogues.
+**Rule:** Always consult these PDFs and the relevant workbooks before implementing or changing affordability calculations — they define the exact indicator methodologies. Cross-reference workbook definitions (especially files 4, 5, 8, 13) with the ABS statistical guide.
 
 ## Analytical Methodology
 
 Key affordability concepts (per ABS and NZ reference documents):
 
 - **Housing cost burden** — housing costs as % of gross/disposable household income
-- **30/40 rule** — households in the bottom 40% of income distribution paying >30% of income on housing are in "housing stress"
-- **Rental affordability (NHHA)** — lower-income renter households paying >30% of gross income on rent
-- **Deposit gap** — median dwelling price vs median household income (years to save a deposit)
-- **Mortgage serviceability** — repayments as % of income at prevailing interest rates
-- **Equivalised disposable income** — income adjusted for household size/composition using modified OECD scale
-
-When building indicators, cross-reference workbook definitions (especially files 4, 5, 8, 13) with the ABS statistical guide PDF.
+- **30/40 rule** — households in the bottom 40% of equivalised income distribution paying >30% of income on housing are in "housing stress"
+- **Rental affordability (NHHA)** — lower-income renter households paying >30% of gross income on rent (excludes Rent Assistance from income)
+- **Deposit gap** — years to save a 20% deposit on the national mean dwelling price at an assumed savings rate (stylised; assumptions disclosed in the registry)
+- **Mortgage serviceability** — repayments as % of income at prevailing interest rates (AWE individual-earnings proxy; not household income)
+- **Equivalised disposable income** — ABS-applied (modified OECD scale); the dashboard passes SIH cells through and computes no local equivalisation
 
 ## Rules
 
 - Always use **Context7 MCP** for library/API documentation and code generation without being explicitly asked
-- Consult `resources/` PDFs before implementing any affordability metric — do not rely on general knowledge alone
-- Consult `resources/ABS_data/` workbooks for variable definitions, category breakdowns, and historical benchmarks
-- Preserve the `normalize_abs()` schema pattern (`date | value | series | series_id | category | unit | frequency`) when adding new data sources
-- Australian data context: use ABS catalogue numbers, Australian dollar amounts, Australian fiscal year conventions (July-June) where relevant
+- Consult `resources/` PDFs and `resources/ABS_data/` workbooks before implementing any affordability metric — do not rely on general knowledge alone
+- Preserve the schema contracts above when adding new data sources
+- Australian data context: ABS catalogue numbers, Australian dollars, Australian fiscal year (July–June) where relevant
+- After changing module/workflow/README text, run the matching contract tests — many assert byte-literal strings
 
 ## graphify
 
