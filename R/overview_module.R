@@ -304,14 +304,19 @@ overviewPageServer <- function(id, is_dark) {
       max(score_dates)
     }
     selected_score_date <- reactiveVal(latest_score_date)
-    session$userData$plotlyShinyEventIDs <- unique(c(
-      session$userData$plotlyShinyEventIDs,
-      "plotly_click-overview_afford_score"
-    ))
 
+    # The score trend chart registers this event via plotly::event_register()
+    # in its renderPlotly; before that first render there is nothing to click,
+    # so an unregistered-source warning here is benign. tryCatch keeps a future
+    # plotly API change from crashing the page (review SHINY-06).
     score_click <- reactive({
-      event_data("plotly_click", source = "overview_afford_score",
-                 priority = "event")
+      tryCatch(
+        suppressWarnings(
+          event_data("plotly_click", source = "overview_afford_score",
+                     priority = "event")
+        ),
+        error = function(e) NULL
+      )
     })
 
     observeEvent(score_click(), {
