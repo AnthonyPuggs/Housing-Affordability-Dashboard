@@ -30,7 +30,16 @@ appFiles snippet in docs/deploying.md, not bare writeManifest().
 - [x] **1e. align_quarterly + RSE sentence (STAT-06/07):** complete-quarter rule in `R/derivation_helpers.R:11-26` (monthly inputs need 3 obs/quarter) + test. Methodology sentence in `R/methodology_module.R` (~171): RSE > 50% flagged not suppressed; no error propagation on derived indices. Update method-text contract test.
 - [x] **1f. Deploy discipline (TEST-08):** bump `DESCRIPTION` 0.1.0 → 0.2.0; create `NEWS.md`; `docs/deploying.md` procedure (manifest regen → checklist → push → tag vX.Y.Z); tag the deployed state.
 
-## Batch 2 — CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) — [ ]
+## Batch 2 — CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) — [x] DONE 2026-06-12 (branch `track3-batch2-css-www`, stacked on batch 1)
+
+Implementation notes: app.R 911 → 194 lines; extraction was programmatic
+with boundary assertions. Six contract tests that slurped app.R for CSS/JS
+fragments now read www/dashboard.css|js. `.tooltip-inner` override keeps
+the 28rem tooltip width; the left-aligned icon variant is gone. The
+shinytest2 smoke test skips locally (chromote cannot start Edge on this
+machine — "attempt to apply non-function"; pre-existing, CI runs it with
+real Chrome); end-to-end verified instead by booting the app and asserting
+both assets are served with expected content.
 
 - Move inline CSS (`app.R:100-816`, ~717 lines) → `www/dashboard.css`; the two JS blocks (`app.R:817-854` navbar collapse, `866-875` splash removal) → `www/dashboard.js`; link via `tags$link`/`tags$script`. Keep R-interpolated CSS inline if any (check first).
 - Replace CSS pseudo-element tooltips (`content: attr(data-tooltip)`, app.R ~421-470) with `bslib::tooltip()` on `policy_info_icon()` (`R/ui_style_system.R:29-37`) — fixes WCAG 1.4.13 dismissibility. Keep `aria-label`. Update `tests/test_ui_style_system.R:99-100`.

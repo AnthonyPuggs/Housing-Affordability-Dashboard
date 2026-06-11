@@ -1,16 +1,16 @@
 # Graph Report - Housing-Affordability-Dashboard  (2026-06-12)
 
 ## Corpus Check
-- 134 files · ~197,914 words
+- 135 files · ~196,624 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 922 nodes · 1423 edges · 95 communities (62 shown, 33 thin omitted)
+- 923 nodes · 1423 edges · 96 communities (63 shown, 33 thin omitted)
 - Extraction: 88% EXTRACTED · 11% INFERRED · 1% AMBIGUOUS · INFERRED: 156 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `66bd763b`
+- Built from commit: `1409eb0d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -155,7 +155,7 @@
 - **National Affordability Score v1 Components (40/35/25)** — national_affordability_score, mortgage_serviceability, rental_entry_affordability, deposit_barrier [INFERRED 0.95]
 - **30/40 Housing Stress Rule Concepts** — thirty_forty_rule, equivalised_disposable_income, housing_cost_burden, nhha_rental_affordability [INFERRED 0.85]
 
-## Communities (95 total, 33 thin omitted)
+## Communities (96 total, 33 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.18
@@ -315,7 +315,7 @@ Nodes (23): Affordability, Complete UI Review - 21 May 2026, Evidence Base, Find
 
 ### Community 58 - "Community 58"
 Cohesion: 0.25
-Nodes (7): Batch 1 — Quick wins (S items) — [ ], Batch 2 — CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) — [ ], Batch 3 — SIH header-anchored parser rewrite (PIPE-12, priority) — [ ], Batch 4 — Refresh-workflow hardening (TEST-06/07, PIPE-08) — [ ], Batch 5 — Polish (opportunistic) — [ ], Track 3 — Hygiene: Implementation Plan, Verification (every batch)
+Nodes (7): Batch 1 — Quick wins (S items) — [x] DONE 2026-06-12 (branch `track3-batch1-quick-wins`), Batch 2 — CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) — [x] DONE 2026-06-12 (branch `track3-batch2-css-www`, stacked on batch 1), Batch 3 — SIH header-anchored parser rewrite (PIPE-12, priority) — [ ], Batch 4 — Refresh-workflow hardening (TEST-06/07, PIPE-08) — [ ], Batch 5 — Polish (opportunistic) — [ ], Track 3 — Hygiene: Implementation Plan, Verification (every batch)
 
 ### Community 59 - "Community 59"
 Cohesion: 0.33

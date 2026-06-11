@@ -1774,6 +1774,16 @@
       "norm_label": "vcs.manage.ignores"
     },
     {
+      "label": "dashboard.js",
+      "file_type": "code",
+      "source_file": "www/dashboard.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "www_dashboard",
+      "community": 94,
+      "norm_label": "dashboard.js"
+    },
+    {
       "label": "CHART_BUILDER_WORKFLOW.md",
       "file_type": "document",
       "source_file": "CHART_BUILDER_WORKFLOW.md",
@@ -3204,30 +3214,30 @@
       "norm_label": "track 3 \u2014 hygiene: implementation plan"
     },
     {
-      "label": "Batch 1 \u2014 Quick wins (S items) \u2014 [ ]",
+      "label": "Batch 1 \u2014 Quick wins (S items) \u2014 [x] DONE 2026-06-12 (branch `track3-batch1-quick-wins`)",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "docs_track3_plan_batch_1_quick_wins_s_items",
+      "id": "docs_track3_plan_batch_1_quick_wins_s_items_x_done_2026_06_12_branch_track3_batch1_quick_wins",
       "community": 58,
-      "norm_label": "batch 1 \u2014 quick wins (s items) \u2014 [ ]"
+      "norm_label": "batch 1 \u2014 quick wins (s items) \u2014 [x] done 2026-06-12 (branch `track3-batch1-quick-wins`)"
     },
     {
-      "label": "Batch 2 \u2014 CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) \u2014 [ ]",
+      "label": "Batch 2 \u2014 CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) \u2014 [x] DONE 2026-06-12 (branch `track3-batch2-css-www`, stacked on batch 1)",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L24",
+      "source_location": "L33",
       "_origin": "ast",
-      "id": "docs_track3_plan_batch_2_css_js_to_www_real_tooltips_shiny_08_ux_12",
+      "id": "docs_track3_plan_batch_2_css_js_to_www_real_tooltips_shiny_08_ux_12_x_done_2026_06_12_branch_track3_batch2_css_www_stacked_on_batch_1",
       "community": 58,
-      "norm_label": "batch 2 \u2014 css/js to `www/` + real tooltips (shiny-08, ux-12) \u2014 [ ]"
+      "norm_label": "batch 2 \u2014 css/js to `www/` + real tooltips (shiny-08, ux-12) \u2014 [x] done 2026-06-12 (branch `track3-batch2-css-www`, stacked on batch 1)"
     },
     {
       "label": "Batch 3 \u2014 SIH header-anchored parser rewrite (PIPE-12, priority) \u2014 [ ]",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L30",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "docs_track3_plan_batch_3_sih_header_anchored_parser_rewrite_pipe_12_priority",
       "community": 58,
@@ -3237,7 +3247,7 @@
       "label": "Batch 4 \u2014 Refresh-workflow hardening (TEST-06/07, PIPE-08) \u2014 [ ]",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L58",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08",
       "community": 58,
@@ -3247,7 +3257,7 @@
       "label": "Batch 5 \u2014 Polish (opportunistic) \u2014 [ ]",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L62",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "docs_track3_plan_batch_5_polish_opportunistic",
       "community": 58,
@@ -3257,7 +3267,7 @@
       "label": "Verification (every batch)",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L70",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "docs_track3_plan_verification_every_batch",
       "community": 58,
@@ -16733,9 +16743,9 @@
       "source_file": "NEWS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "news",
-      "target": "news_housingaffordabilitydashboard_news",
-      "confidence_score": 1.0
+      "target": "news_housingaffordabilitydashboard_news"
     },
     {
       "relation": "contains",
@@ -16743,9 +16753,9 @@
       "source_file": "NEWS.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "news_housingaffordabilitydashboard_news",
-      "target": "news_0_1_0_baseline",
-      "confidence_score": 1.0
+      "target": "news_0_1_0_baseline"
     },
     {
       "relation": "contains",
@@ -16753,9 +16763,9 @@
       "source_file": "NEWS.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "news_housingaffordabilitydashboard_news",
-      "target": "news_0_2_0_2026_06_11_roadmap_track_1",
-      "confidence_score": 1.0
+      "target": "news_0_2_0_2026_06_11_roadmap_track_1"
     },
     {
       "relation": "contains",
@@ -16763,9 +16773,9 @@
       "source_file": "NEWS.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "news_housingaffordabilitydashboard_news",
-      "target": "news_0_3_0_2026_06_12_roadmap_track_2",
-      "confidence_score": 1.0
+      "target": "news_0_3_0_2026_06_12_roadmap_track_2"
     },
     {
       "relation": "contains",
@@ -16773,9 +16783,9 @@
       "source_file": "NEWS.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "news_housingaffordabilitydashboard_news",
-      "target": "news_0_4_0_in_development_track_3_hygiene",
-      "confidence_score": 1.0
+      "target": "news_0_4_0_in_development_track_3_hygiene"
     },
     {
       "relation": "contains",
@@ -16953,9 +16963,9 @@
       "source_file": "archive/README_old.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "archive_readme_old",
-      "target": "archive_readme_old_australian_housing_affordability_dashboard",
-      "confidence_score": 1.0
+      "target": "archive_readme_old_australian_housing_affordability_dashboard"
     },
     {
       "relation": "contains",
@@ -16963,9 +16973,9 @@
       "source_file": "archive/README_old.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "archive_readme_old_australian_housing_affordability_dashboard",
-      "target": "archive_readme_old_data_model",
-      "confidence_score": 1.0
+      "target": "archive_readme_old_data_model"
     },
     {
       "relation": "contains",
@@ -16973,9 +16983,9 @@
       "source_file": "archive/README_old.md",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "archive_readme_old_australian_housing_affordability_dashboard",
-      "target": "archive_readme_old_methodology_metadata",
-      "confidence_score": 1.0
+      "target": "archive_readme_old_methodology_metadata"
     },
     {
       "relation": "contains",
@@ -16983,9 +16993,9 @@
       "source_file": "archive/README_old.md",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "archive_readme_old_australian_housing_affordability_dashboard",
-      "target": "archive_readme_old_notes",
-      "confidence_score": 1.0
+      "target": "archive_readme_old_notes"
     },
     {
       "relation": "contains",
@@ -16993,9 +17003,9 @@
       "source_file": "archive/README_old.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "archive_readme_old_australian_housing_affordability_dashboard",
-      "target": "archive_readme_old_refresh_the_data",
-      "confidence_score": 1.0
+      "target": "archive_readme_old_refresh_the_data"
     },
     {
       "relation": "contains",
@@ -17003,9 +17013,9 @@
       "source_file": "archive/README_old.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "archive_readme_old_australian_housing_affordability_dashboard",
-      "target": "archive_readme_old_run_the_app",
-      "confidence_score": 1.0
+      "target": "archive_readme_old_run_the_app"
     },
     {
       "relation": "contains",
@@ -17013,9 +17023,9 @@
       "source_file": "archive/README_old.md",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "archive_readme_old_australian_housing_affordability_dashboard",
-      "target": "archive_readme_old_verification",
-      "confidence_score": 1.0
+      "target": "archive_readme_old_verification"
     },
     {
       "relation": "contains",
@@ -17143,9 +17153,9 @@
       "source_file": "docs/deploying.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_deploying",
-      "target": "docs_deploying_deploying_to_posit_connect_cloud",
-      "confidence_score": 1.0
+      "target": "docs_deploying_deploying_to_posit_connect_cloud"
     },
     {
       "relation": "contains",
@@ -17153,9 +17163,9 @@
       "source_file": "docs/deploying.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_deploying_deploying_to_posit_connect_cloud",
-      "target": "docs_deploying_notes",
-      "confidence_score": 1.0
+      "target": "docs_deploying_notes"
     },
     {
       "relation": "contains",
@@ -17163,9 +17173,9 @@
       "source_file": "docs/deploying.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_deploying_deploying_to_posit_connect_cloud",
-      "target": "docs_deploying_procedure",
-      "confidence_score": 1.0
+      "target": "docs_deploying_procedure"
     },
     {
       "relation": "contains",
@@ -17813,9 +17823,9 @@
       "source_file": "docs/track3_plan.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_track3_plan",
-      "target": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "confidence_score": 1.0
+      "target": "docs_track3_plan_track_3_hygiene_implementation_plan"
     },
     {
       "relation": "contains",
@@ -17824,17 +17834,17 @@
       "source_location": "L15",
       "weight": 1.0,
       "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "target": "docs_track3_plan_batch_1_quick_wins_s_items",
+      "target": "docs_track3_plan_batch_1_quick_wins_s_items_x_done_2026_06_12_branch_track3_batch1_quick_wins",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L24",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "target": "docs_track3_plan_batch_2_css_js_to_www_real_tooltips_shiny_08_ux_12",
+      "target": "docs_track3_plan_batch_2_css_js_to_www_real_tooltips_shiny_08_ux_12_x_done_2026_06_12_branch_track3_batch2_css_www_stacked_on_batch_1",
       "confidence_score": 1.0
     },
     {
@@ -17843,9 +17853,9 @@
       "source_file": "docs/track3_plan.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "target": "docs_track3_plan_batch_3_sih_header_anchored_parser_rewrite_pipe_12_priority",
-      "confidence_score": 1.0
+      "target": "docs_track3_plan_batch_3_sih_header_anchored_parser_rewrite_pipe_12_priority"
     },
     {
       "relation": "contains",
@@ -17853,9 +17863,9 @@
       "source_file": "docs/track3_plan.md",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "target": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08",
-      "confidence_score": 1.0
+      "target": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08"
     },
     {
       "relation": "contains",
@@ -17863,9 +17873,9 @@
       "source_file": "docs/track3_plan.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "target": "docs_track3_plan_batch_5_polish_opportunistic",
-      "confidence_score": 1.0
+      "target": "docs_track3_plan_batch_5_polish_opportunistic"
     },
     {
       "relation": "contains",
@@ -17873,9 +17883,9 @@
       "source_file": "docs/track3_plan.md",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "target": "docs_track3_plan_verification_every_batch",
-      "confidence_score": 1.0
+      "target": "docs_track3_plan_verification_every_batch"
     },
     {
       "relation": "contains",
@@ -25847,5 +25857,5 @@
       "source_file": "docs/national_affordability_score_methodology.md"
     }
   ],
-  "built_at_commit": "66bd763b633b39be22b5bf7d06f03e26257c4aca"
+  "built_at_commit": "1409eb0d8dd9de22b4281e6c4c7d7e91ce83b9fd"
 }
