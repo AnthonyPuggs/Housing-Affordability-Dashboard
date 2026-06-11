@@ -26,37 +26,37 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,7.692307692307687,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2025-04-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2025-10-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
-2011-07-01,9.053036144406727,Deposit Gap (Years),National,Years,Quarter
-2011-10-01,9.106976808846634,Deposit Gap (Years),National,Years,Quarter
-2012-01-01,8.84249004685971,Deposit Gap (Years),National,Years,Quarter
-2012-04-01,8.839849567507512,Deposit Gap (Years),National,Years,Quarter
-2012-10-01,8.4870096290954,Deposit Gap (Years),National,Years,Quarter
-2013-04-01,8.42264200541797,Deposit Gap (Years),National,Years,Quarter
-2013-10-01,8.710226027540395,Deposit Gap (Years),National,Years,Quarter
-2014-04-01,8.740122557994365,Deposit Gap (Years),National,Years,Quarter
-2014-10-01,8.809636461444285,Deposit Gap (Years),National,Years,Quarter
-2015-04-01,8.777656139905824,Deposit Gap (Years),National,Years,Quarter
-2015-10-01,8.869273660770206,Deposit Gap (Years),National,Years,Quarter
-2016-04-01,8.816044878532812,Deposit Gap (Years),National,Years,Quarter
-2016-10-01,8.919660903313565,Deposit Gap (Years),National,Years,Quarter
-2017-04-01,8.944779276803626,Deposit Gap (Years),National,Years,Quarter
-2017-10-01,9.03951210497673,Deposit Gap (Years),National,Years,Quarter
-2018-04-01,8.940040548236098,Deposit Gap (Years),National,Years,Quarter
-2018-10-01,9.027962270766512,Deposit Gap (Years),National,Years,Quarter
-2019-04-01,8.769680839972912,Deposit Gap (Years),National,Years,Quarter
-2019-10-01,8.951115547664987,Deposit Gap (Years),National,Years,Quarter
-2020-04-01,8.602362882075818,Deposit Gap (Years),National,Years,Quarter
-2020-10-01,9.270010730257374,Deposit Gap (Years),National,Years,Quarter
-2021-04-01,9.869366065848052,Deposit Gap (Years),National,Years,Quarter
-2021-10-01,11.173128969954176,Deposit Gap (Years),National,Years,Quarter
-2022-04-01,11.610157012892484,Deposit Gap (Years),National,Years,Quarter
-2022-10-01,11.563921694689501,Deposit Gap (Years),National,Years,Quarter
-2023-04-01,11.913243096249442,Deposit Gap (Years),National,Years,Quarter
-2023-10-01,12.339973359093435,Deposit Gap (Years),National,Years,Quarter
-2024-04-01,12.890431754491345,Deposit Gap (Years),National,Years,Quarter
-2024-10-01,13.546384397807286,Deposit Gap (Years),National,Years,Quarter
-2025-04-01,13.612499913344855,Deposit Gap (Years),National,Years,Quarter
-2025-10-01,14.43625393897483,Deposit Gap (Years),National,Years,Quarter
+2011-07-01,7.358937554601225,Deposit Gap (Years),National,Years,Quarter
+2011-10-01,7.402784279052027,Deposit Gap (Years),National,Years,Quarter
+2012-01-01,7.187791039829963,Deposit Gap (Years),National,Years,Quarter
+2012-04-01,7.185644674526975,Deposit Gap (Years),National,Years,Quarter
+2012-10-01,6.89883182719859,Deposit Gap (Years),National,Years,Quarter
+2013-04-01,6.846509344925841,Deposit Gap (Years),National,Years,Quarter
+2013-10-01,7.080277643951965,Deposit Gap (Years),National,Years,Quarter
+2014-04-01,7.104579623663593,Deposit Gap (Years),National,Years,Quarter
+2014-10-01,7.161085360137492,Deposit Gap (Years),National,Years,Quarter
+2015-04-01,7.135089530073012,Deposit Gap (Years),National,Years,Quarter
+2015-10-01,7.209562624424337,Deposit Gap (Years),National,Years,Quarter
+2016-04-01,7.1662945673499765,Deposit Gap (Years),National,Years,Quarter
+2016-10-01,7.2505208803630605,Deposit Gap (Years),National,Years,Quarter
+2017-04-01,7.270938841700894,Deposit Gap (Years),National,Years,Quarter
+2017-10-01,7.347944274549779,Deposit Gap (Years),National,Years,Quarter
+2018-04-01,7.267086873470524,Deposit Gap (Years),National,Years,Quarter
+2018-10-01,7.338555765836987,Deposit Gap (Years),National,Years,Quarter
+2019-04-01,7.128606651484068,Deposit Gap (Years),National,Years,Quarter
+2019-10-01,7.276089403441067,Deposit Gap (Years),National,Years,Quarter
+2020-04-01,6.992598975795195,Deposit Gap (Years),National,Years,Quarter
+2020-10-01,7.535309591864862,Deposit Gap (Years),National,Years,Quarter
+2021-04-01,8.022507302917182,Deposit Gap (Years),National,Years,Quarter
+2021-10-01,9.08229648792449,Deposit Gap (Years),National,Years,Quarter
+2022-04-01,9.43754328317556,Deposit Gap (Years),National,Years,Quarter
+2022-10-01,9.39996000017021,Deposit Gap (Years),National,Years,Quarter
+2023-04-01,9.68391273597737,Deposit Gap (Years),National,Years,Quarter
+2023-10-01,10.03078877920047,Deposit Gap (Years),National,Years,Quarter
+2024-04-01,10.478239655737836,Deposit Gap (Years),National,Years,Quarter
+2024-10-01,11.01144359571326,Deposit Gap (Years),National,Years,Quarter
+2025-04-01,11.065186886082408,Deposit Gap (Years),National,Years,Quarter
+2025-10-01,11.73479146274232,Deposit Gap (Years),National,Years,Quarter
 2012-10-01,26.923076923076927,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2013-04-01,30.76923076923077,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2013-10-01,46.15384615384615,Mortgage Serviceability Component Score,National,Score (0-100),Quarter

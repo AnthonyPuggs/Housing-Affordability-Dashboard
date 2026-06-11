@@ -226,25 +226,17 @@ if (nrow(cpi_rents) > 0 && nrow(wpi) > 0) {
 # ==============================================================================
 cat("  Computing Deposit Gap...\n")
 
-SAVINGS_RATE <- 0.15  # assumed household savings rate
+SAVINGS_RATE <- 0.15  # assumed share of gross income saved (AWE proxy)
 
 if (nrow(rppi) > 0 && nrow(awe) > 0) {
-  # Use SIH 2019-20 median dwelling price as base, scale by RPPI
-  # SIH File 10 median dwelling value was ~$575,000 in 2019-20 (approx)
-  SIH_BASE_PRICE <- 575000
-  SIH_BASE_DATE  <- as.Date("2020-06-01")
-
-  # Find RPPI value closest to base date
-  rppi_base <- rppi %>%
-    mutate(dist = abs(as.numeric(date - SIH_BASE_DATE))) %>%
-    arrange(dist) %>%
-    slice(1) %>%
-    pull(value)
-
-  deposit_data <- align_quarterly(rppi, awe, "rppi", "awe") %>%
+  # The "RPPI" source series is the ABS 6432.0 national mean price of
+  # residential dwellings in $'000s, so the dollar level is used directly.
+  # (A previous version spliced a hard-coded $575,000 anchor mis-cited to
+  # SIH File 10 onto this series' growth; File 10 covers property other than
+  # the own home and cannot source an owner-occupied dwelling value.)
+  deposit_data <- align_quarterly(rppi, awe, "price_k", "awe") %>%
     mutate(
-      # Scale dwelling price by RPPI movement from base
-      dwelling_price = SIH_BASE_PRICE * (rppi / rppi_base),
+      dwelling_price = price_k * 1000,
       deposit_needed = dwelling_price * 0.20,
       annual_income  = awe * 52,
       annual_savings = annual_income * SAVINGS_RATE,
