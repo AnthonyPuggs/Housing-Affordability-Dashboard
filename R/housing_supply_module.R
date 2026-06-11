@@ -75,7 +75,7 @@ housingSupplyPageUI <- function(id) {
       policy_kpi_box(
         title = "Houses Share",
         value = textOutput(ns("vb_houses_share")),
-        subtitle = p(class = "kpi-subtitle", "% of total approvals"),
+        subtitle = p(class = "kpi-subtitle", "% of total approvals (national)"),
         change = uiOutput(ns("vb_houses_share_change")),
         accent = "purple"
       )
