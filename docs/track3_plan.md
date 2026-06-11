@@ -12,14 +12,23 @@
 
 ---
 
-## Batch 1 — Quick wins (S items) — [ ]
+## Batch 1 — Quick wins (S items) — [x] DONE 2026-06-12 (branch `track3-batch1-quick-wins`)
 
-- [ ] **1a. Archive legacy files (SHINY-09):** move `app_old.R`, `README_old.md`, `_check_cpi.R`, `save_plots.R`, `plots/` → `archive/` (git mv); delete empty `project_plan.md`. Update `tests/test_public_release_hygiene.R:57-93` patterns, `.rscignore`, `README.md:293`, `plot_setup.R:4` comment. Regenerate manifest.
-- [ ] **1b. Plotly private-state fix (SHINY-06):** `R/overview_module.R:304-309` — replace `session$userData$plotlyShinyEventIDs` mutation with `plotly::event_register()` on the chart object + guarded `event_data()` reads. Verify score-chart click-to-filter.
-- [ ] **1c. Houses Share KPI (SHINY-07):** retitle subtitle to "% of total approvals (national)" (`R/housing_supply_module.R:76-81`) — KPI is national-only and ignores page filters; label must match data.
-- [ ] **1d. SDMX pinning + price-index honesty (PIPE-09/11):** extract SDMX endpoint URLs (`pipeline/02_fetch_abs_timeseries.R` ~138, ~272, ~407-410) to constants in `pipeline/00_config.R`; pin dataflow versions; assert expected series labels post-fetch. Fixed named base quarter for the mean-price index (currently `first(value)`, line 53); rename `"RPPI"` label (line 77) honestly — it is 6432.0 mean dwelling price, not the discontinued RPPI. Chase consumers + pinned tests.
-- [ ] **1e. align_quarterly + RSE sentence (STAT-06/07):** complete-quarter rule in `R/derivation_helpers.R:11-26` (monthly inputs need 3 obs/quarter) + test. Methodology sentence in `R/methodology_module.R` (~171): RSE > 50% flagged not suppressed; no error propagation on derived indices. Update method-text contract test.
-- [ ] **1f. Deploy discipline (TEST-08):** bump `DESCRIPTION` 0.1.0 → 0.2.0; create `NEWS.md`; `docs/deploying.md` procedure (manifest regen → checklist → push → tag vX.Y.Z); tag the deployed state.
+Implementation notes: dwelling price index values unchanged (base 2011-09 =
+first published quarter); the national price series is now
+`Mean Dwelling Price ; Australia ;` and Table 2 medians `Median Price ...`;
+the complete-quarter rule dropped exactly one derived row (Real Mortgage
+Rate 2004-Q2, partial F5 start quarter); a pre-existing remote tag v0.2.0 =
+Track 1, so versioning is 0.3.0 = Track 2 (deployed, tagged) and 0.4.0 =
+Track 3 in development; manifest regeneration MUST use the filtered
+appFiles snippet in docs/deploying.md, not bare writeManifest().
+
+- [x] **1a. Archive legacy files (SHINY-09):** move `app_old.R`, `README_old.md`, `_check_cpi.R`, `save_plots.R`, `plots/` → `archive/` (git mv); delete empty `project_plan.md`. Update `tests/test_public_release_hygiene.R:57-93` patterns, `.rscignore`, `README.md:293`, `plot_setup.R:4` comment. Regenerate manifest.
+- [x] **1b. Plotly private-state fix (SHINY-06):** `R/overview_module.R:304-309` — replace `session$userData$plotlyShinyEventIDs` mutation with `plotly::event_register()` on the chart object + guarded `event_data()` reads. Verify score-chart click-to-filter.
+- [x] **1c. Houses Share KPI (SHINY-07):** retitle subtitle to "% of total approvals (national)" (`R/housing_supply_module.R:76-81`) — KPI is national-only and ignores page filters; label must match data.
+- [x] **1d. SDMX pinning + price-index honesty (PIPE-09/11):** extract SDMX endpoint URLs (`pipeline/02_fetch_abs_timeseries.R` ~138, ~272, ~407-410) to constants in `pipeline/00_config.R`; pin dataflow versions; assert expected series labels post-fetch. Fixed named base quarter for the mean-price index (currently `first(value)`, line 53); rename `"RPPI"` label (line 77) honestly — it is 6432.0 mean dwelling price, not the discontinued RPPI. Chase consumers + pinned tests.
+- [x] **1e. align_quarterly + RSE sentence (STAT-06/07):** complete-quarter rule in `R/derivation_helpers.R:11-26` (monthly inputs need 3 obs/quarter) + test. Methodology sentence in `R/methodology_module.R` (~171): RSE > 50% flagged not suppressed; no error propagation on derived indices. Update method-text contract test.
+- [x] **1f. Deploy discipline (TEST-08):** bump `DESCRIPTION` 0.1.0 → 0.2.0; create `NEWS.md`; `docs/deploying.md` procedure (manifest regen → checklist → push → tag vX.Y.Z); tag the deployed state.
 
 ## Batch 2 — CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) — [ ]
 
