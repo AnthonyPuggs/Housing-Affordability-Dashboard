@@ -1,16 +1,16 @@
 # Graph Report - Housing-Affordability-Dashboard  (2026-06-11)
 
 ## Corpus Check
-- 126 files · ~185,675 words
+- 132 files · ~192,644 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 908 nodes · 1412 edges · 106 communities (71 shown, 35 thin omitted)
+- 911 nodes · 1412 edges · 96 communities (61 shown, 35 thin omitted)
 - Extraction: 88% EXTRACTED · 11% INFERRED · 1% AMBIGUOUS · INFERRED: 156 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5b149604`
+- Built from commit: `18e198ed`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -100,20 +100,10 @@
 - [[_COMMUNITY_Community 87|Community 87]]
 - [[_COMMUNITY_Community 88|Community 88]]
 - [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
 - [[_COMMUNITY_Community 91|Community 91]]
 - [[_COMMUNITY_Community 92|Community 92]]
 - [[_COMMUNITY_Community 93|Community 93]]
-- [[_COMMUNITY_Community 94|Community 94]]
-- [[_COMMUNITY_Community 97|Community 97]]
-- [[_COMMUNITY_Community 98|Community 98]]
-- [[_COMMUNITY_Community 99|Community 99]]
-- [[_COMMUNITY_Community 100|Community 100]]
-- [[_COMMUNITY_Community 101|Community 101]]
-- [[_COMMUNITY_Community 102|Community 102]]
-- [[_COMMUNITY_Community 103|Community 103]]
-- [[_COMMUNITY_Community 104|Community 104]]
-- [[_COMMUNITY_Community 106|Community 106]]
-- [[_COMMUNITY_Community 107|Community 107]]
 - [[_COMMUNITY_Community 108|Community 108]]
 
 ## God Nodes (most connected - your core abstractions)
@@ -165,11 +155,11 @@
 - **National Affordability Score v1 Components (40/35/25)** — national_affordability_score, mortgage_serviceability, rental_entry_affordability, deposit_barrier [INFERRED 0.95]
 - **30/40 Housing Stress Rule Concepts** — thirty_forty_rule, equivalised_disposable_income, housing_cost_burden, nhha_rental_affordability [INFERRED 0.85]
 
-## Communities (106 total, 35 thin omitted)
+## Communities (96 total, 35 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.05
-Nodes (56): source_note, approval_filtered_rows, available_supply_states, contextual_approval_series_components, largest_selected_approval, latest_capital_price_extreme, selected_approvals_latest, selected_approvals_yoy_change (+48 more)
+Cohesion: 0.18
+Nodes (18): source_note, feature_metadata, feature_metadata_registry, feature_source_note, marketContextPageUI, methodologyPageUI, overviewPageUI, priceTrendsPageUI (+10 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.09
@@ -340,8 +330,8 @@ Cohesion: 0.13
 Nodes (14): bioconductor.version, external.libraries, ignored.packages, package.dependency.fields, ppm.enabled, ppm.ignored.urls, r.version, snapshot.dev (+6 more)
 
 ### Community 80 - "Community 80"
-Cohesion: 0.67
-Nodes (3): Repository, Source, askpass
+Cohesion: 0.19
+Nodes (14): latest_capital_price_extreme, fmt_pct, latest_change, latest_val, repel_labels, marketContextPageServer, official_burden_summary, official_pct_row (+6 more)
 
 ### Community 81 - "Community 81"
 Cohesion: 0.14
@@ -352,12 +342,12 @@ Cohesion: 0.15
 Nodes (12): 1. Executive summary, 2. Prior-findings ledger (status of internal review backlogs), 3.1 Economics / methodology (ECON), 3.2 Statistics (STAT), 3.3 Data pipeline (PIPE), 3.4 R/Shiny engineering (SHINY), 3.5 UX / accessibility (UX) — delta-only, 3.6 Testing / CI / release (TEST) (+4 more)
 
 ### Community 83 - "Community 83"
-Cohesion: 0.29
-Nodes (7): Repository, Source, packages, bit, Rcpp, Repository, Source
+Cohesion: 0.04
+Nodes (49): Repository, Source, Repository, Source, Repository, Source, Repository, Source (+41 more)
 
 ### Community 85 - "Community 85"
-Cohesion: 0.20
-Nodes (9): locale, metadata, appmode, content_category, has_parameters, primary_html, primary_rmd, platform (+1 more)
+Cohesion: 0.15
+Nodes (12): environment, r, locale, metadata, appmode, content_category, has_parameters, primary_html (+4 more)
 
 ### Community 86 - "Community 86"
 Cohesion: 0.22
@@ -368,12 +358,16 @@ Cohesion: 0.25
 Nodes (7): Australian Housing Affordability Dashboard, Data Model, Methodology Metadata, Notes, Refresh The Data, Run The App, Verification
 
 ### Community 88 - "Community 88"
-Cohesion: 0.67
-Nodes (3): R6, Repository, Source
+Cohesion: 0.24
+Nodes (11): approval_filtered_rows, available_supply_states, contextual_approval_series_components, largest_selected_approval, selected_approvals_latest, selected_approvals_yoy_change, fmt_number, housingSupplyPageServer (+3 more)
 
 ### Community 89 - "Community 89"
-Cohesion: 0.67
-Nodes (3): Repository, Source, bit64
+Cohesion: 0.29
+Nodes (7): extract_city, load_dashboard_csv, load_dashboard_csvs, precompute_dashboard_series, rent_cpi_city_common_range, rent_cpi_coverage_summary, rent_cpi_default_city_selection
+
+### Community 90 - "Community 90"
+Cohesion: 0.40
+Nodes (6): label_tenure, rental_cost_measure_source_note, rental_demographic_measure_data, rental_filter_renter_rows, normalise_rental_states, rentalMarketPageServer
 
 ### Community 91 - "Community 91"
 Cohesion: 0.33
@@ -382,50 +376,6 @@ Nodes (5): Current V1 Diagnostics, Main Critiques, National Housing Affordabilit
 ### Community 92 - "Community 92"
 Cohesion: 0.33
 Nodes (5): Desktop Pass, Start The App, Static Guard, Theme And Mobile Pass, UI Smoke Checklist
-
-### Community 94 - "Community 94"
-Cohesion: 0.67
-Nodes (3): Repository, Source, base64enc
-
-### Community 97 - "Community 97"
-Cohesion: 0.67
-Nodes (3): Repository, Source, bslib
-
-### Community 98 - "Community 98"
-Cohesion: 0.67
-Nodes (3): Repository, Source, cachem
-
-### Community 99 - "Community 99"
-Cohesion: 0.67
-Nodes (3): Repository, Source, cellranger
-
-### Community 100 - "Community 100"
-Cohesion: 0.67
-Nodes (3): Repository, Source, cli
-
-### Community 101 - "Community 101"
-Cohesion: 0.67
-Nodes (3): Repository, Source, clipr
-
-### Community 102 - "Community 102"
-Cohesion: 0.67
-Nodes (3): Repository, Source, commonmark
-
-### Community 103 - "Community 103"
-Cohesion: 0.67
-Nodes (3): Repository, Source, cpp11
-
-### Community 104 - "Community 104"
-Cohesion: 0.67
-Nodes (3): Repository, Source, crayon
-
-### Community 106 - "Community 106"
-Cohesion: 0.67
-Nodes (3): RColorBrewer, Repository, Source
-
-### Community 107 - "Community 107"
-Cohesion: 0.67
-Nodes (3): S7, Repository, Source
 
 ## Ambiguous Edges - Review These
 - `External Libraries Configuration` → `Bioconductor Package Sources`  [AMBIGUOUS]
@@ -454,7 +404,7 @@ Nodes (3): S7, Repository, Source
   plots/rental_costs_demo.png · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **342 isolated node(s):** `PreToolUse`, `version`, `tasks`, `version`, `locale` (+337 more)
+- **343 isolated node(s):** `PreToolUse`, `version`, `tasks`, `version`, `locale` (+338 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
