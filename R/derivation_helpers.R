@@ -1,0 +1,158 @@
+# Pure derivation helpers for pipeline/04_derive_indicators.R.
+#
+# Extracted so the formulas behind every derived indicator are unit-testable
+# against hand-computed values without running the pipeline (review TEST-10).
+# The functions return the same frames the stage-04 blocks built inline;
+# stage 04 wraps them with indicator_output() registry metadata.
+
+# --- Alignment and indexing -----------------------------------------------------
+
+# Align two date/value series to common quarterly dates (mean within quarter).
+align_quarterly <- function(df1, df2, name1 = "v1", name2 = "v2") {
+  df1 <- df1 %>%
+    mutate(qtr = floor_date(date, "quarter")) %>%
+    group_by(qtr) %>%
+    summarise(!!name1 := mean(value, na.rm = TRUE), .groups = "drop") %>%
+    rename(date = qtr)
+
+  df2 <- df2 %>%
+    mutate(qtr = floor_date(date, "quarter")) %>%
+    group_by(qtr) %>%
+    summarise(!!name2 := mean(value, na.rm = TRUE), .groups = "drop") %>%
+    rename(date = qtr)
+
+  inner_join(df1, df2, by = "date") %>%
+    arrange(date)
+}
+
+# Index a series to base_value at a reference position.
+index_to_base <- function(values, base_idx = 1, base_value = 100) {
+  base <- values[base_idx]
+  if (is.na(base) || base == 0) return(rep(NA_real_, length(values)))
+  values / base * base_value
+}
+
+# Quarterly mean of a (typically monthly) date/value series.
+quarterly_mean <- function(df, value_name = "value") {
+  df %>%
+    mutate(qtr = floor_date(date, "quarter")) %>%
+    group_by(qtr) %>%
+    summarise(!!value_name := mean(value, na.rm = TRUE), .groups = "drop") %>%
+    rename(date = qtr)
+}
+
+# --- Loud series selection -------------------------------------------------------
+
+get_series_exact <- function(df, series_name, min_rows = 1,
+                             col = "series", dataset = "input data") {
+  if (nrow(df) == 0) {
+    stop(dataset, " is empty; cannot select required series '", series_name, "'.")
+  }
+  if (!col %in% names(df)) {
+    stop(dataset, " has no '", col, "' column; cannot select '", series_name, "'.")
+  }
+
+  matched <- df %>%
+    filter(.data[[col]] == series_name) %>%
+    select(date, value, all_of(col)) %>%
+    arrange(date)
+
+  if (nrow(matched) == 0) {
+    stop(dataset, " is missing required series '", series_name, "'.")
+  }
+  if (length(unique(matched[[col]])) != 1) {
+    stop(dataset, " selected multiple source series for '", series_name, "'.")
+  }
+  if (anyDuplicated(matched$date) > 0) {
+    stop(dataset, " has duplicate dates for required series '", series_name, "'.")
+  }
+  if (nrow(matched) < min_rows) {
+    stop(
+      dataset, " series '", series_name, "' has ", nrow(matched),
+      " observations; expected at least ", min_rows, "."
+    )
+  }
+
+  matched %>%
+    select(date, value)
+}
+
+# --- Indicator derivations --------------------------------------------------------
+
+# Price-to-Income Ratio: indexed price level / indexed WPI x 100.
+compute_price_to_income <- function(rppi, wpi) {
+  align_quarterly(rppi, wpi, "rppi", "wpi") %>%
+    mutate(
+      rppi_idx = index_to_base(rppi),
+      wpi_idx  = index_to_base(wpi),
+      value    = rppi_idx / wpi_idx * 100
+    )
+}
+
+# Mortgage Serviceability Index v2: indexed 30-year annuity P&I repayment
+# burden at lvr x mean dwelling price (in $'000s), deflated by WPI.
+compute_mortgage_serviceability <- function(price_k, wpi, new_loan_rate,
+                                            lvr = 0.80, term_years = 30) {
+  price_wpi <- align_quarterly(price_k, wpi, "price_k", "wpi")
+  rate_qtr <- quarterly_mean(new_loan_rate, "rate")
+
+  price_wpi %>%
+    inner_join(rate_qtr, by = "date") %>%
+    mutate(
+      loan = lvr * price_k * 1000,
+      monthly_rate = rate / 100 / 12,
+      n_payments = term_years * 12,
+      monthly_pmt = ifelse(
+        monthly_rate == 0,
+        loan / n_payments,
+        loan * monthly_rate / (1 - (1 + monthly_rate)^(-n_payments))
+      ),
+      burden = monthly_pmt / wpi,
+      value = index_to_base(burden)
+    )
+}
+
+# Rental Affordability Index: indexed CPI rents / indexed WPI x 100.
+compute_rental_affordability <- function(cpi_rents, wpi) {
+  align_quarterly(cpi_rents, wpi, "rents", "wpi") %>%
+    mutate(
+      rents_idx = index_to_base(rents),
+      wpi_idx   = index_to_base(wpi),
+      value     = rents_idx / wpi_idx * 100
+    )
+}
+
+# Deposit Gap: years to save a deposit_share deposit on the mean dwelling
+# price (in $'000s) at savings_rate of gross AWE-proxy income.
+compute_deposit_gap <- function(price_k, awe, savings_rate = 0.15,
+                                deposit_share = 0.20) {
+  align_quarterly(price_k, awe, "price_k", "awe") %>%
+    mutate(
+      dwelling_price = price_k * 1000,
+      deposit_needed = dwelling_price * deposit_share,
+      annual_income  = awe * 52,
+      annual_savings = annual_income * savings_rate,
+      value = deposit_needed / annual_savings
+    ) %>%
+    filter(!is.na(value) & is.finite(value))
+}
+
+# Real YoY growth: series deflated by CPI, four-quarter percentage change.
+compute_real_growth_yoy <- function(series, cpi_all) {
+  align_quarterly(series, cpi_all, "numerator", "cpi") %>%
+    mutate(
+      real_level = numerator / cpi * 100,
+      value = 100 * (real_level / lag(real_level, 4) - 1)
+    ) %>%
+    filter(!is.na(value))
+}
+
+# Real Mortgage Rate: quarterly nominal rate minus quarterly CPI inflation.
+compute_real_mortgage_rate <- function(mortgage_rate, cpi_inflation) {
+  mr_qtr <- quarterly_mean(mortgage_rate, "nominal_rate")
+  infl_qtr <- quarterly_mean(cpi_inflation, "inflation")
+
+  inner_join(mr_qtr, infl_qtr, by = "date") %>%
+    mutate(value = nominal_rate - inflation) %>%
+    filter(!is.na(value))
+}

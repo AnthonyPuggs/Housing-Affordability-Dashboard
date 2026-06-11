@@ -62,7 +62,12 @@ source(project_path("R", "rental_market_helpers.R"), local = TRUE)
 source(project_path("R", "dashboard_theme.R"), local = TRUE)
 source(project_path("R", "precomputed_series.R"), local = TRUE)
 
-data_dir <- project_path("data")
+# Tests point this at the frozen fixture set in tests/fixtures/data so code
+# tests cannot be broken by a scheduled data refresh (review TEST-04).
+data_dir <- Sys.getenv("HOUSING_DASHBOARD_DATA_DIR", unset = "")
+if (!nzchar(data_dir)) {
+  data_dir <- project_path("data")
+}
 
 dashboard_data <- load_dashboard_csvs(data_dir)
 assert_dashboard_data(dashboard_data)

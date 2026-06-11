@@ -15,14 +15,14 @@ Production R/Shiny dashboard for Australian housing affordability analysis, depl
 | `R/` | ~36 modules: page modules (`*_module.R`), chart builders, indicator registry, score, helpers, release checklist |
 | `pipeline/` | Data pipeline stages `00_config` → `01_process_sih` → `02/02b_fetch_abs` → `03_fetch_rba` → `04_derive_indicators` → `05_driver` (runner) → `06_validate_outputs` → `07_write_data_vintage` |
 | `data/` | Committed pipeline outputs the app reads (`abs_timeseries.csv`, `rba_rates.csv`, `affordability_indices.csv`, `sih_*.csv`, `data_vintage.csv`). `data/rba_*_raw.*` are gitignored download caches, not outputs |
-| `tests/` | 56 standalone base-R test scripts (`test_*.R`), each with a small `check()` harness; run with `Rscript tests/test_X.R` from the repo root |
+| `tests/` | testthat suite (`test_*.R` + shared `helper-contracts.R` harness); run with `testthat::test_dir("tests")` or any single file standalone via `Rscript tests/test_X.R` from the repo root. `tests/fixtures/data/` holds frozen fixture CSVs for unit/module tests (regenerate with `Rscript tests/fixtures/generate_fixtures.R`); `tests/test_app_smoke.R` is a `shinytest2::AppDriver` smoke test over all nav panels (skips without Chrome/Edge) |
 | `resources/` | ABS SIH workbooks + methodology PDFs (see below); inputs to stage 01, never read by the app |
 | `docs/` | Reviews, roadmap (`docs/roadmap.md`), UI smoke checklist |
 | `app_old.R` | Legacy pre-pipeline macro dashboard. Not part of the app; archival candidate (roadmap Track 3) |
 
 ## Key Conventions
 
-- **Dependencies via renv**: `renv.lock` pins packages; `.Rprofile` auto-activates. Use `Rscript -e "renv::restore()"`, never ad-hoc `install.packages()` for project dependencies.
+- **Dependencies via renv**: `renv.lock` pins packages; `.Rprofile` auto-activates. Use `Rscript -e "renv::restore()"`, never ad-hoc `install.packages()` for project dependencies. Snapshotting is explicit (driven by `DESCRIPTION`): runtime packages go in `Imports`, dev/test packages (testthat, shinytest2, chromote, withr) in `Suggests` (picked up via the `snapshot.dev` renv setting).
 - **Indicator registry is the source of truth**: `R/indicator_registry.R` defines formula text, units, interpretation direction, official/stylised class and public caveats for every derived indicator. The Methodology page renders it. Update the registry whenever a derivation changes.
 - **Schema contracts**: time series use `date | value | series | series_id | category | unit | frequency`; derived indices use `date | value | indicator | geography | unit | frequency`; SIH outputs use `survey_year | value | metric | tenure | breakdown_var | breakdown_val | geography | stat_type`. Preserve these when adding sources.
 - **Official vs stylised separation**: SIH/NHHA estimates are official pass-through cells; serviceability/deposit/score outputs are stylised scenarios and must always be labelled as such (never as official ABS measures or lender assessments).
@@ -39,9 +39,9 @@ Rscript -e "shiny::runApp('.')"
 # Refresh all data (network: ABS via readabs/SDMX, RBA CSV endpoints)
 Rscript pipeline/05_driver.R
 
-# Run one test / the full suite (from repo root)
+# Run the full test suite / one test (from repo root)
+Rscript -e "testthat::test_dir('tests', stop_on_failure = TRUE)"
 Rscript tests/test_pipeline_outputs.R
-# PowerShell: foreach ($f in Get-ChildItem tests -Filter "test_*.R") { Rscript "tests/$($f.Name)" }
 
 # Release-readiness checklist (data, methodology, hygiene, deployment checks)
 Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
@@ -49,7 +49,7 @@ Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
 
 ## CI / Automation
 
-- `.github/workflows/ci.yml` — push (main) + PR: runs all 56 test scripts plus the release checklist.
+- `.github/workflows/ci.yml` — push (main) + PR: runs `testthat::test_dir("tests")` plus the release checklist. Unit/module tests read `tests/fixtures/data/`, so a scheduled data refresh cannot fail code tests; tests that read `data/` directly are live-data contract tests by design.
 - `.github/workflows/data-refresh.yml` — scheduled weekdays 07:00 AEST (`cron: '0 21 * * 0-4'` UTC; Actions schedules are UTC-only — do not add a `timezone:` key). Runs the pipeline, refresh contract tests, then commits `data/*.csv` only when something other than `data_vintage.csv` changed.
 - Byte-literal contract tests pin exact source strings (workflow text, module text, README text). When changing pinned code or docs, update the corresponding `tests/test_*.R` contract in the same commit.
 

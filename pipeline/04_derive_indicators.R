@@ -25,6 +25,10 @@ if (!exists("indicator_registry", mode = "function")) {
 if (!exists("calculate_national_affordability_score", mode = "function")) {
   source(project_path("R", "national_affordability_score.R"))
 }
+if (!exists("compute_price_to_income", mode = "function")) {
+  # Pure derivation formulas, unit-tested in tests/test_derivation_helpers.R.
+  source(project_path("R", "derivation_helpers.R"))
+}
 
 # --- Load pipeline CSVs ------------------------------------------------------
 abs_file <- file.path(DATA_DIR, "abs_timeseries.csv")
@@ -45,41 +49,6 @@ rba_ts <- if (file.exists(rba_file)) {
   tibble()
 }
 
-# --- Helper: extract a required source series exactly -------------------------
-get_series_exact <- function(df, series_name, min_rows = 1,
-                             col = "series", dataset = "input data") {
-  if (nrow(df) == 0) {
-    stop(dataset, " is empty; cannot select required series '", series_name, "'.")
-  }
-  if (!col %in% names(df)) {
-    stop(dataset, " has no '", col, "' column; cannot select '", series_name, "'.")
-  }
-
-  matched <- df %>%
-    filter(.data[[col]] == series_name) %>%
-    select(date, value, all_of(col)) %>%
-    arrange(date)
-
-  if (nrow(matched) == 0) {
-    stop(dataset, " is missing required series '", series_name, "'.")
-  }
-  if (length(unique(matched[[col]])) != 1) {
-    stop(dataset, " selected multiple source series for '", series_name, "'.")
-  }
-  if (anyDuplicated(matched$date) > 0) {
-    stop(dataset, " has duplicate dates for required series '", series_name, "'.")
-  }
-  if (nrow(matched) < min_rows) {
-    stop(
-      dataset, " series '", series_name, "' has ", nrow(matched),
-      " observations; expected at least ", min_rows, "."
-    )
-  }
-
-  matched %>%
-    select(date, value)
-}
-
 indicator_output <- function(df, indicator_name) {
   metadata <- indicator_registry_output_metadata(indicator_name)
   df %>%
@@ -90,32 +59,6 @@ indicator_output <- function(df, indicator_name) {
       unit = metadata$unit,
       frequency = metadata$frequency
     )
-}
-
-# --- Helper: align two series to common quarterly dates -----------------------
-align_quarterly <- function(df1, df2, name1 = "v1", name2 = "v2") {
-  # Ensure both are quarterly by rounding to quarter-end
-  df1 <- df1 %>%
-    mutate(qtr = floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(!!name1 := mean(value, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
-
-  df2 <- df2 %>%
-    mutate(qtr = floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(!!name2 := mean(value, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
-
-  inner_join(df1, df2, by = "date") %>%
-    arrange(date)
-}
-
-# --- Helper: index a series to base=100 at a reference date -------------------
-index_to_base <- function(values, base_idx = 1, base_value = 100) {
-  base <- values[base_idx]
-  if (is.na(base) || base == 0) return(rep(NA_real_, length(values)))
-  values / base * base_value
 }
 
 # --- Extract key series -------------------------------------------------------
@@ -172,12 +115,7 @@ all_indicators <- list()
 cat("  Computing Price-to-Income Ratio...\n")
 
 if (nrow(rppi) > 0 && nrow(wpi) > 0) {
-  pti <- align_quarterly(rppi, wpi, "rppi", "wpi") %>%
-    mutate(
-      rppi_idx = index_to_base(rppi),
-      wpi_idx  = index_to_base(wpi),
-      value    = rppi_idx / wpi_idx * 100
-    )
+  pti <- compute_price_to_income(rppi, wpi)
 
   all_indicators$price_to_income <- indicator_output(pti, "Price-to-Income Ratio")
   cat("    ", nrow(pti), "observations\n")
@@ -190,33 +128,12 @@ cat("  Computing Mortgage Serviceability Index...\n")
 
 if (nrow(rppi) > 0 && nrow(wpi) > 0 && nrow(new_loan_rate) > 0) {
   # v2 (affordability_indices_v2): indexed annuity principal-and-interest
-  # repayment burden. A 30-year monthly annuity payment on an 80% LVR loan
+  # repayment burden - a 30-year monthly annuity payment on an 80% LVR loan
   # against the national mean dwelling price, at the spliced F6 new-loan
   # owner-occupier rate, deflated by WPI as the income-growth proxy.
   # (v1 was interest-only price×rate/WPI, which overstated rate swings and
   # contradicted the methodology doc's own P&I definition - review ECON-02.)
-  price_wpi <- align_quarterly(rppi, wpi, "price_k", "wpi")
-
-  rate_qtr <- new_loan_rate %>%
-    mutate(qtr = floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(rate = mean(value, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
-
-  msi <- price_wpi %>%
-    inner_join(rate_qtr, by = "date") %>%
-    mutate(
-      loan = 0.80 * price_k * 1000,
-      monthly_rate = rate / 100 / 12,
-      n_payments = 30 * 12,
-      monthly_pmt = ifelse(
-        monthly_rate == 0,
-        loan / n_payments,
-        loan * monthly_rate / (1 - (1 + monthly_rate)^(-n_payments))
-      ),
-      burden = monthly_pmt / wpi,
-      value = index_to_base(burden)
-    )
+  msi <- compute_mortgage_serviceability(rppi, wpi, new_loan_rate)
 
   all_indicators$mortgage_serviceability <- indicator_output(msi, "Mortgage Serviceability Index")
   cat("    ", nrow(msi), "observations\n")
@@ -228,12 +145,7 @@ if (nrow(rppi) > 0 && nrow(wpi) > 0 && nrow(new_loan_rate) > 0) {
 cat("  Computing Rental Affordability Index...\n")
 
 if (nrow(cpi_rents) > 0 && nrow(wpi) > 0) {
-  rai <- align_quarterly(cpi_rents, wpi, "rents", "wpi") %>%
-    mutate(
-      rents_idx = index_to_base(rents),
-      wpi_idx   = index_to_base(wpi),
-      value     = rents_idx / wpi_idx * 100
-    )
+  rai <- compute_rental_affordability(cpi_rents, wpi)
 
   all_indicators$rental_affordability <- indicator_output(rai, "Rental Affordability Index")
   cat("    ", nrow(rai), "observations\n")
@@ -252,15 +164,7 @@ if (nrow(rppi) > 0 && nrow(awe) > 0) {
   # (A previous version spliced a hard-coded $575,000 anchor mis-cited to
   # SIH File 10 onto this series' growth; File 10 covers property other than
   # the own home and cannot source an owner-occupied dwelling value.)
-  deposit_data <- align_quarterly(rppi, awe, "price_k", "awe") %>%
-    mutate(
-      dwelling_price = price_k * 1000,
-      deposit_needed = dwelling_price * 0.20,
-      annual_income  = awe * 52,
-      annual_savings = annual_income * SAVINGS_RATE,
-      value = deposit_needed / annual_savings
-    ) %>%
-    filter(!is.na(value) & is.finite(value))
+  deposit_data <- compute_deposit_gap(rppi, awe, savings_rate = SAVINGS_RATE)
 
   all_indicators$deposit_gap <- indicator_output(deposit_data, "Deposit Gap (Years)")
   cat("    ", nrow(deposit_data), "observations\n")
@@ -272,12 +176,7 @@ if (nrow(rppi) > 0 && nrow(awe) > 0) {
 cat("  Computing Real House Price Growth...\n")
 
 if (nrow(rppi) > 0 && nrow(cpi_all) > 0) {
-  real_hp <- align_quarterly(rppi, cpi_all, "rppi", "cpi") %>%
-    mutate(
-      real_rppi = rppi / cpi * 100,
-      value = 100 * (real_rppi / lag(real_rppi, 4) - 1)
-    ) %>%
-    filter(!is.na(value))
+  real_hp <- compute_real_growth_yoy(rppi, cpi_all)
 
   all_indicators$real_house_price_growth <- indicator_output(real_hp, "Real House Price Growth YoY")
   cat("    ", nrow(real_hp), "observations\n")
@@ -289,12 +188,7 @@ if (nrow(rppi) > 0 && nrow(cpi_all) > 0) {
 cat("  Computing Real Wage Growth...\n")
 
 if (nrow(wpi) > 0 && nrow(cpi_all) > 0) {
-  real_wg <- align_quarterly(wpi, cpi_all, "wpi", "cpi") %>%
-    mutate(
-      real_wpi = wpi / cpi * 100,
-      value = 100 * (real_wpi / lag(real_wpi, 4) - 1)
-    ) %>%
-    filter(!is.na(value))
+  real_wg <- compute_real_growth_yoy(wpi, cpi_all)
 
   all_indicators$real_wage_growth <- indicator_output(real_wg, "Real Wage Growth YoY")
   cat("    ", nrow(real_wg), "observations\n")
@@ -306,21 +200,7 @@ if (nrow(wpi) > 0 && nrow(cpi_all) > 0) {
 cat("  Computing Real Mortgage Rate...\n")
 
 if (nrow(mortgage_rate) > 0 && nrow(cpi_infl) > 0) {
-  mr_qtr <- mortgage_rate %>%
-    mutate(qtr = floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(nominal_rate = mean(value, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
-
-  infl_qtr <- cpi_infl %>%
-    mutate(qtr = floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(inflation = mean(value, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
-
-  real_mr <- inner_join(mr_qtr, infl_qtr, by = "date") %>%
-    mutate(value = nominal_rate - inflation) %>%
-    filter(!is.na(value))
+  real_mr <- compute_real_mortgage_rate(mortgage_rate, cpi_infl)
 
   all_indicators$real_mortgage_rate <- indicator_output(real_mr, "Real Mortgage Rate")
   cat("    ", nrow(real_mr), "observations\n")

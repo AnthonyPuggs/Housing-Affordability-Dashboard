@@ -10,9 +10,15 @@ if (!exists("project_root", mode = "function") ||
   source(file.path("R", "project_paths.R"))
 }
 if (!exists("pipeline_external_sources", mode = "function")) {
-  pipeline_contracts_path <- file.path("R", "pipeline_contracts.R")
+  # Resolve via project_path() so the guard works regardless of the caller's
+  # working directory (testthat::test_dir runs from tests/).
+  pipeline_contracts_path <- if (exists("project_path", mode = "function")) {
+    project_path("R", "pipeline_contracts.R")
+  } else {
+    file.path("R", "pipeline_contracts.R")
+  }
   if (file.exists(pipeline_contracts_path)) {
-    source(pipeline_contracts_path)
+    source(pipeline_contracts_path, local = TRUE)
   }
 }
 

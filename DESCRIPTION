@@ -24,3 +24,8 @@ Imports:
     stringr,
     tidyr,
     watcher
+Suggests:
+    chromote,
+    shinytest2,
+    testthat,
+    withr

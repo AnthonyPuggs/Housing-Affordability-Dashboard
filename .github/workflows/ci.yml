@@ -29,19 +29,7 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
 
       - name: Run full test suite
-        run: |
-          fail=0
-          for f in tests/test_*.R; do
-            echo "::group::${f}"
-            if Rscript "$f"; then
-              echo "PASS: ${f}"
-            else
-              fail=1
-              echo "::error file=${f}::Test script failed: ${f}"
-            fi
-            echo "::endgroup::"
-          done
-          exit $fail
+        run: Rscript -e "testthat::test_dir('tests', stop_on_failure = TRUE)"
 
       - name: Validate release checklist
         run: Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"

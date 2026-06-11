@@ -38,6 +38,7 @@ jobs:
           Rscript tests/test_data_vintage.R
           Rscript tests/test_abs_labour_api_contracts.R
           Rscript tests/test_pipeline_driver_stage_gates.R
+          Rscript tests/test_pipeline_outputs.R
           Rscript tests/test_provenance_report.R
           Rscript tests/test_ui_smoke_contracts.R
           Rscript tests/test_data_refresh_workflow.R
