@@ -212,6 +212,29 @@ if (nrow(cpi_city_raw) > 0) {
       length(unique(cpi_rents_cities$series)), "cities\n")
 }
 
+# Monthly CPI indicator rents, kept at MONTHLY frequency (roadmap Track 2.6:
+# a timelier rent signal than the quarterly-averaged series above). Selected
+# by exact series ID: A130400542R is the seasonally adjusted monthly rents
+# index. The ABS labels it "Australia", but the monthly CPI indicator measures
+# the weighted average of the eight capital cities - label it honestly.
+if (nrow(cpi_groups) > 0) {
+  cpi_rents_monthly <- cpi_groups %>%
+    filter(series_id == "A130400542R") %>%
+    filter(!is.na(value)) %>%
+    mutate(series = "CPI Rents Monthly ; Weighted average of eight capital cities ;") %>%
+    select(-any_of("unit")) %>%
+    normalize_abs(category = "Rental Prices", units = "Index",
+                  freq_hint = "Month")
+  assert_selection_nonempty(
+    cpi_rents_monthly,
+    "monthly CPI indicator rents (6401.0 Table 7 series A130400542R)"
+  )
+  all_series$cpi_rents_monthly <- cpi_rents_monthly
+  cat("    Monthly CPI indicator rents:", nrow(cpi_rents_monthly), "obs (",
+      as.character(min(cpi_rents_monthly$date)), "to",
+      as.character(max(cpi_rents_monthly$date)), ")\n")
+}
+
 # Also add national from Table 7 (monthly, converted to quarterly) for city-format
 if (nrow(cpi_groups) > 0) {
   cpi_rents_national_monthly <- cpi_groups %>%
@@ -481,6 +504,52 @@ if (nrow(rppi_type_raw) > 0) {
                   freq_hint = "Quarter")
   all_series$rppi_units <- rppi_units
   cat("    RPPI Attached Dwellings (median price):", nrow(rppi_units), "obs\n")
+}
+
+# ==============================================================================
+# 8. First home buyer lending — ABS 5601.0 Lending Indicators Table 24
+# ==============================================================================
+# Timely official evidence on actual FHB borrowers (roadmap Track 2.6):
+# new owner-occupier first home buyer loan commitments, Australia, seasonally
+# adjusted. ABS moved Lending Indicators to a quarterly cycle in 2025, so the
+# series is quarterly back to 2002. Selected by exact series ID:
+#   A130268484W - Total Australia, Number, Seasonally Adjusted
+#   A130268483V - Total Australia, Value ($ millions), Seasonally Adjusted
+cat("  Fetching FHB lending (5601.0 Table 24)...\n")
+
+fhb_raw <- safe_read(
+  read_abs(cat_no = "5601.0", tables = "24"),
+  "Lending Indicators 5601.0 Table 24",
+  required = TRUE
+)
+
+if (nrow(fhb_raw) > 0) {
+  fhb_count <- fhb_raw %>%
+    filter(series_id == "A130268484W") %>%
+    select(-any_of("unit")) %>%
+    normalize_abs(label = "FHB New Loan Commitments (Number)",
+                  category = "Housing Finance", units = "Number",
+                  freq_hint = "Quarter")
+  assert_selection_nonempty(
+    fhb_count,
+    "FHB new loan commitment counts (5601.0 Table 24 series A130268484W, Australia, seasonally adjusted)"
+  )
+  all_series$fhb_count <- fhb_count
+
+  fhb_value <- fhb_raw %>%
+    filter(series_id == "A130268483V") %>%
+    select(-any_of("unit")) %>%
+    normalize_abs(label = "FHB New Loan Commitments (Value)",
+                  category = "Housing Finance", units = "$ Millions",
+                  freq_hint = "Quarter")
+  assert_selection_nonempty(
+    fhb_value,
+    "FHB new loan commitment values (5601.0 Table 24 series A130268483V, Australia, seasonally adjusted)"
+  )
+  all_series$fhb_value <- fhb_value
+
+  cat("    FHB commitments:", nrow(fhb_count), "count obs,",
+      nrow(fhb_value), "value obs\n")
 }
 
 # ==============================================================================

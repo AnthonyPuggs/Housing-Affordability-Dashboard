@@ -117,4 +117,34 @@ test_that("derivation_helpers unit checks (hand-computed)", {
   rmr <- compute_real_mortgage_rate(rate_m, infl_q)
   check(nrow(rmr) == 1 && isTRUE(all.equal(rmr$value, 3.5, tolerance = 1e-10)),
         "Real mortgage rate must be the nominal quarterly mean minus inflation")
+
+  # --- FHB average loan size ----------------------------------------------------------
+  # $9,000M of commitments across 18,000 loans -> $500,000 per loan.
+  fhb_value <- data.frame(date = q("2025-01-01", "2025-04-01"),
+                          value = c(9000, 10500))
+  fhb_number <- data.frame(date = q("2025-01-01", "2025-04-01"),
+                           value = c(18000, 20000))
+  avg_loan <- compute_fhb_average_loan_size(fhb_value, fhb_number)
+  check(isTRUE(all.equal(avg_loan$value, c(500000, 525000), tolerance = 1e-10)),
+        "FHB average loan size must be commitment dollars over loan count")
+  zero_number <- data.frame(date = q("2025-01-01"), value = 0)
+  check(nrow(compute_fhb_average_loan_size(fhb_value[1, ], zero_number)) == 0,
+        "FHB average loan size must drop quarters with a zero loan count")
+
+  # --- Monthly YoY growth ----------------------------------------------------------------
+  # 110 vs 100 twelve months earlier -> exactly 10 per cent.
+  monthly_dates <- seq(as.Date("2024-01-01"), as.Date("2025-02-01"), by = "month")
+  monthly_idx <- data.frame(
+    date = monthly_dates,
+    value = c(rep(100, 12), 110, 112.2)
+  )
+  yoy <- compute_monthly_yoy_growth(monthly_idx)
+  check(nrow(yoy) == 2 &&
+          isTRUE(all.equal(yoy$value, c(10, 12.2), tolerance = 1e-10)),
+        "Monthly YoY growth must be the exact 12-months-earlier percentage change")
+  # A gap at t-12 must produce no growth observation, not a mislabelled one.
+  gapped <- monthly_idx[-2, , drop = FALSE]
+  yoy_gap <- compute_monthly_yoy_growth(gapped)
+  check(!as.Date("2025-02-01") %in% yoy_gap$date,
+        "Monthly YoY growth must skip observations whose t-12 month is missing")
 })

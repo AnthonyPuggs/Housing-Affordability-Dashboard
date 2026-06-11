@@ -2,8 +2,10 @@
 #
 # Official ABS SIH File 9 evidence on recent home buyer households (2019-20):
 # dwelling values, mortgages, equity, housing costs and household profiles by
-# buyer type. Everything on this page is an official survey estimate, kept
-# separate from the dashboard's modelled market-entry indicators.
+# buyer type, plus timely official ABS 5601.0 first home buyer lending
+# aggregates. Everything on this page is official ABS evidence (survey
+# estimates or administrative lending aggregates), kept separate from the
+# dashboard's modelled market-entry indicators.
 
 if (!exists("normalise_recent_buyers", mode = "function", inherits = TRUE)) {
   recent_buyers_helper_path <- if (exists("project_path", mode = "function", inherits = TRUE)) {
@@ -27,7 +29,7 @@ recentBuyersPageUI <- function(id) {
       class = "recent-buyers-page",
       policy_page_header(
         "Recent Buyers",
-        "Official SIH File 9 evidence on recent home buyers: dwelling values, mortgages, equity and household profiles by buyer type."
+        "Official SIH File 9 evidence on recent home buyers: dwelling values, mortgages, equity and household profiles by buyer type, alongside timely ABS lending aggregates on new first home buyer loans."
       ),
       layout_sidebar(
         sidebar = sidebar(
@@ -59,6 +61,17 @@ recentBuyersPageUI <- function(id) {
           note = policy_source_note("Share of recent buyer households in each band (total dwellings). First-home and changeover buyer profiles are official SIH File 9 proportions. ", sih_sampling_error_note),
           div(class = "chart-wide recent-buyers-chart",
               plotlyOutput(ns("recent_buyers_profile_chart"), height = "100%",
+                           width = "100%"))
+        ),
+        policy_chart_card(
+          "First Home Buyer Lending (Timely Official Aggregates)",
+          note = policy_source_note("ABS 5601.0 Lending Indicators Table 24: new owner-occupier first home buyer loan commitments, Australia, seasonally adjusted, quarterly. Official lending aggregates describing a flow of new commitments - not the SIH household stock above, and not a modelled scenario."),
+          radioButtons(ns("fhb_lending_measure"), NULL,
+                       choices = c("New loan commitments (number)" = "count",
+                                   "Average loan size ($)" = "avg_loan_size"),
+                       selected = "count", inline = TRUE),
+          div(class = "chart-wide recent-buyers-chart",
+              plotlyOutput(ns("fhb_lending_chart"), height = "100%",
                            width = "100%"))
         )
       )
@@ -167,5 +180,28 @@ recentBuyersPageServer <- function(id, is_dark) {
                          hovermode = "closest")
     }) %>%
       bindCache(input$recent_buyers_profile, is_dark())
+
+    output$fhb_lending_chart <- renderPlotly({
+      req(input$fhb_lending_measure)
+      indicator_name <- if (identical(input$fhb_lending_measure,
+                                      "avg_loan_size")) {
+        "FHB Average Loan Size"
+      } else {
+        "FHB New Loan Commitments"
+      }
+      d <- if (exists("afford_idx", inherits = TRUE)) {
+        afford_idx %>% filter(indicator == indicator_name)
+      } else {
+        data.frame()
+      }
+      validate(need(nrow(d) > 0,
+                    "FHB lending data is unavailable - run the data pipeline."))
+
+      p <- build_fhb_lending_plot(d, measure = input$fhb_lending_measure,
+                                  dark = is_dark())
+
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"))
+    }) %>%
+      bindCache(input$fhb_lending_measure, is_dark())
   })
 }

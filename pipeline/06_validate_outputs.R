@@ -138,15 +138,33 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
     )
   }
 
-  # Range sanity: every rba_rates series is an interest rate or rate change
-  # in per cent; values outside (-25, 50) indicate a parsing/unit failure.
-  if ("value" %in% names(rba_rates) && nrow(rba_rates) > 0) {
-    bad_rates <- sum(!is.finite(rba_rates$value) |
-                       rba_rates$value < -25 | rba_rates$value > 50)
+  # Range sanity. Interest-rate categories must sit inside (-25, 50) per cent;
+  # the Household Finances category carries E2 ratios of debt to annualised
+  # disposable income, which run far above 50 per cent, so it gets its own
+  # plausibility band instead of being exempted silently.
+  if (all(c("value", "category") %in% names(rba_rates)) &&
+      nrow(rba_rates) > 0) {
+    rate_values <- rba_rates$value[rba_rates$category != "Household Finances"]
+    bad_rates <- sum(!is.finite(rate_values) |
+                       rate_values < -25 | rate_values > 50)
     check(
       bad_rates == 0,
       paste("rba_rates.csv has", bad_rates,
-            "values outside the plausible (-25, 50) per cent range")
+            "rate values outside the plausible (-25, 50) per cent range")
+    )
+
+    dti_values <- rba_rates$value[rba_rates$category == "Household Finances"]
+    check(
+      length(dti_values) > 0,
+      "rba_rates.csv has no Household Finances (RBA E2 debt-to-income) rows"
+    )
+    bad_dti <- sum(!is.finite(dti_values) |
+                     dti_values < 20 | dti_values > 350)
+    check(
+      bad_dti == 0,
+      paste("rba_rates.csv has", bad_dti,
+            "household debt-to-income values outside the plausible (20, 350)",
+            "per cent range")
     )
   }
 
@@ -214,6 +232,19 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
       all(score_values >= 0 & score_values <= 100),
       "Score indicators have values outside the 0-100 range"
     )
+
+    indicator_range_gate <- function(indicator, lower, upper) {
+      values <- afford_idx$value[afford_idx$indicator == indicator]
+      check(
+        all(is.finite(values) & values > lower & values < upper),
+        paste0(indicator, " has values outside the plausible (", lower,
+               ", ", upper, ") range")
+      )
+    }
+    indicator_range_gate("FHB New Loan Commitments", 5000, 120000)
+    indicator_range_gate("FHB Average Loan Size", 50000, 2000000)
+    indicator_range_gate("Rent CPI Monthly Growth YoY", -10, 25)
+    indicator_range_gate("Household Debt to Income Ratio", 20, 350)
   }
 
   # SIH outputs that previously had structure-only stage-gate checks.

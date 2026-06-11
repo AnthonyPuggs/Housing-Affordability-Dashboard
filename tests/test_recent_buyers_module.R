@@ -64,7 +64,12 @@ test_that("recent_buyers_module contracts", {
       "recent_buyers-recent_buyers_metric",
       "recent_buyers-recent_buyers_dwelling",
       "recent_buyers-recent_buyers_profile",
-      "recent_buyers-recent_buyers_summary"
+      "recent_buyers-recent_buyers_summary",
+      "First Home Buyer Lending (Timely Official Aggregates)",
+      "ABS 5601.0 Lending Indicators Table 24",
+      "not a modelled scenario",
+      "recent_buyers-fhb_lending_chart",
+      "recent_buyers-fhb_lending_measure"
     )
     missing_ui_text <- required_ui_text[
       !vapply(required_ui_text, grepl, logical(1), module_ui, fixed = TRUE)
@@ -93,6 +98,9 @@ test_that("recent_buyers_module contracts", {
       "output$recent_buyers_summary <- renderUI",
       "bindCache(input$recent_buyers_metric, input$recent_buyers_dwelling,",
       "bindCache(input$recent_buyers_profile, is_dark())",
+      "output$fhb_lending_chart <- renderPlotly",
+      "build_fhb_lending_plot(",
+      "bindCache(input$fhb_lending_measure, is_dark())",
       # Quality machinery wired (File 9 has no published metadata yet, so the
       # markers stay dormant; the join degrades to a not-available hover note).
       "join_sih_quality(",

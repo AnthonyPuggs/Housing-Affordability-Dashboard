@@ -67,7 +67,10 @@ test_that("rental_market_module contracts", {
       "rental_market-rental_stress_state",
       "rental_market-rental_stress_trend",
       "rental_market-rental_afford_index",
-      "rental_market-rental_costs_demo"
+      "rental_market-rental_costs_demo",
+      "Rent Inflation (Monthly CPI Indicator)",
+      "not advertised or new-lease rents",
+      "rental_market-rental_monthly_growth"
     )
     missing_ui_text <- required_ui_text[
       !vapply(required_ui_text, grepl, logical(1), module_ui, fixed = TRUE)
@@ -96,6 +99,7 @@ test_that("rental_market_module contracts", {
       "output$rental_stress_state <- renderPlotly",
       "output$rental_stress_trend <- renderPlotly",
       "output$rental_afford_index <- renderPlotly",
+      "output$rental_monthly_growth <- renderPlotly",
       "output$rental_costs_demo <- renderPlotly",
       "bindCache(input$rental_year, input$rental_states, is_dark())",
       "bindCache(input$rental_states, is_dark())",
@@ -111,6 +115,7 @@ test_that("rental_market_module contracts", {
       "build_rental_stress_state_plot(",
       "build_rental_stress_trend_plot(",
       "build_rental_affordability_index_plot(",
+      "build_monthly_rents_growth_plot(",
       "build_rental_costs_demographic_plot(",
       "tooltip = c(\"x\", \"y\", \"text\")",
       "tooltip = c(\"fill\", \"text\")"

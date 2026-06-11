@@ -57,6 +57,347 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,13.015175936524253,Deposit Gap (Years),National,Years,Quarter
 2025-04-01,13.138155376961349,Deposit Gap (Years),National,Years,Quarter
 2025-10-01,13.611207994709533,Deposit Gap (Years),National,Years,Quarter
+2002-09-01,168029.6791552856,FHB Average Loan Size,National,AUD,Quarter
+2002-12-01,175205.71676050237,FHB Average Loan Size,National,AUD,Quarter
+2003-03-01,181482.4481273653,FHB Average Loan Size,National,AUD,Quarter
+2003-06-01,189530.66976869045,FHB Average Loan Size,National,AUD,Quarter
+2003-09-01,201961.1379108246,FHB Average Loan Size,National,AUD,Quarter
+2003-12-01,206355.51142005957,FHB Average Loan Size,National,AUD,Quarter
+2004-03-01,210550.81033727553,FHB Average Loan Size,National,AUD,Quarter
+2004-06-01,222396.85658153243,FHB Average Loan Size,National,AUD,Quarter
+2004-09-01,225339.17858790956,FHB Average Loan Size,National,AUD,Quarter
+2004-12-01,230546.75118858955,FHB Average Loan Size,National,AUD,Quarter
+2005-03-01,231464.4976553098,FHB Average Loan Size,National,AUD,Quarter
+2005-06-01,230469.85510570783,FHB Average Loan Size,National,AUD,Quarter
+2005-09-01,234869.53325983093,FHB Average Loan Size,National,AUD,Quarter
+2005-12-01,238122.00998707965,FHB Average Loan Size,National,AUD,Quarter
+2006-03-01,244920.7184683203,FHB Average Loan Size,National,AUD,Quarter
+2006-06-01,243886.66360233765,FHB Average Loan Size,National,AUD,Quarter
+2006-09-01,244283.9993140113,FHB Average Loan Size,National,AUD,Quarter
+2006-12-01,248312.14836424254,FHB Average Loan Size,National,AUD,Quarter
+2007-03-01,254692.39145229346,FHB Average Loan Size,National,AUD,Quarter
+2007-06-01,259914.3986669716,FHB Average Loan Size,National,AUD,Quarter
+2007-09-01,264694.08224674023,FHB Average Loan Size,National,AUD,Quarter
+2007-12-01,256955.06157044618,FHB Average Loan Size,National,AUD,Quarter
+2008-03-01,255312.01382886776,FHB Average Loan Size,National,AUD,Quarter
+2008-06-01,262838.2393724496,FHB Average Loan Size,National,AUD,Quarter
+2008-09-01,275925.1447635848,FHB Average Loan Size,National,AUD,Quarter
+2008-12-01,295455.5849586723,FHB Average Loan Size,National,AUD,Quarter
+2009-03-01,308733.91708363115,FHB Average Loan Size,National,AUD,Quarter
+2009-06-01,304375.8459766864,FHB Average Loan Size,National,AUD,Quarter
+2009-09-01,303427.02336606843,FHB Average Loan Size,National,AUD,Quarter
+2009-12-01,310808.8575393155,FHB Average Loan Size,National,AUD,Quarter
+2010-03-01,317478.0876494024,FHB Average Loan Size,National,AUD,Quarter
+2010-06-01,316969.69696969696,FHB Average Loan Size,National,AUD,Quarter
+2010-09-01,318667.7185543119,FHB Average Loan Size,National,AUD,Quarter
+2010-12-01,313813.25873007945,FHB Average Loan Size,National,AUD,Quarter
+2011-03-01,314463.76365594706,FHB Average Loan Size,National,AUD,Quarter
+2011-06-01,316262.8560126582,FHB Average Loan Size,National,AUD,Quarter
+2011-09-01,317925.11034122726,FHB Average Loan Size,National,AUD,Quarter
+2011-12-01,308962.57386736706,FHB Average Loan Size,National,AUD,Quarter
+2012-03-01,312060.7949451394,FHB Average Loan Size,National,AUD,Quarter
+2012-06-01,314961.0505230358,FHB Average Loan Size,National,AUD,Quarter
+2012-09-01,318985.9581266291,FHB Average Loan Size,National,AUD,Quarter
+2012-12-01,321547.8969289212,FHB Average Loan Size,National,AUD,Quarter
+2013-03-01,325202.8466524636,FHB Average Loan Size,National,AUD,Quarter
+2013-06-01,320240.7187658925,FHB Average Loan Size,National,AUD,Quarter
+2013-09-01,322402.9984241237,FHB Average Loan Size,National,AUD,Quarter
+2013-12-01,329457.36434108525,FHB Average Loan Size,National,AUD,Quarter
+2014-03-01,338470.990959361,FHB Average Loan Size,National,AUD,Quarter
+2014-06-01,341366.0198090799,FHB Average Loan Size,National,AUD,Quarter
+2014-09-01,336684.62531724473,FHB Average Loan Size,National,AUD,Quarter
+2014-12-01,336261.59764652635,FHB Average Loan Size,National,AUD,Quarter
+2015-03-01,341249.1357455635,FHB Average Loan Size,National,AUD,Quarter
+2015-06-01,350023.8004569688,FHB Average Loan Size,National,AUD,Quarter
+2015-09-01,354791.4967128941,FHB Average Loan Size,National,AUD,Quarter
+2015-12-01,358578.72596153844,FHB Average Loan Size,National,AUD,Quarter
+2016-03-01,348103.0744974379,FHB Average Loan Size,National,AUD,Quarter
+2016-06-01,345640.64040565287,FHB Average Loan Size,National,AUD,Quarter
+2016-09-01,351735.3308364544,FHB Average Loan Size,National,AUD,Quarter
+2016-12-01,352328.8355822089,FHB Average Loan Size,National,AUD,Quarter
+2017-03-01,348539.49829728046,FHB Average Loan Size,National,AUD,Quarter
+2017-06-01,347738.4372972472,FHB Average Loan Size,National,AUD,Quarter
+2017-09-01,350440.29454186594,FHB Average Loan Size,National,AUD,Quarter
+2017-12-01,358927.63207334484,FHB Average Loan Size,National,AUD,Quarter
+2018-03-01,365356.71100362757,FHB Average Loan Size,National,AUD,Quarter
+2018-06-01,378825.19950890116,FHB Average Loan Size,National,AUD,Quarter
+2018-09-01,373401.7912291538,FHB Average Loan Size,National,AUD,Quarter
+2018-12-01,372047.5305149139,FHB Average Loan Size,National,AUD,Quarter
+2019-03-01,370588.4846943102,FHB Average Loan Size,National,AUD,Quarter
+2019-06-01,383019.49124545755,FHB Average Loan Size,National,AUD,Quarter
+2019-09-01,404878.50189492456,FHB Average Loan Size,National,AUD,Quarter
+2019-12-01,414206.6356024244,FHB Average Loan Size,National,AUD,Quarter
+2020-03-01,419842.33536438434,FHB Average Loan Size,National,AUD,Quarter
+2020-06-01,427444.06930582866,FHB Average Loan Size,National,AUD,Quarter
+2020-09-01,404017.39818109927,FHB Average Loan Size,National,AUD,Quarter
+2020-12-01,417966.5246357024,FHB Average Loan Size,National,AUD,Quarter
+2021-03-01,422183.062091842,FHB Average Loan Size,National,AUD,Quarter
+2021-06-01,451108.77438953146,FHB Average Loan Size,National,AUD,Quarter
+2021-09-01,460342.4657534247,FHB Average Loan Size,National,AUD,Quarter
+2021-12-01,472819.738454087,FHB Average Loan Size,National,AUD,Quarter
+2022-03-01,470895.87943304825,FHB Average Loan Size,National,AUD,Quarter
+2022-06-01,485915.0814776342,FHB Average Loan Size,National,AUD,Quarter
+2022-09-01,485061.50531656126,FHB Average Loan Size,National,AUD,Quarter
+2022-12-01,487236.81687440077,FHB Average Loan Size,National,AUD,Quarter
+2023-03-01,476544.0457383585,FHB Average Loan Size,National,AUD,Quarter
+2023-06-01,505216.3031819807,FHB Average Loan Size,National,AUD,Quarter
+2023-09-01,502958.71134975005,FHB Average Loan Size,National,AUD,Quarter
+2023-12-01,513828.2586383852,FHB Average Loan Size,National,AUD,Quarter
+2024-03-01,505182.32819074334,FHB Average Loan Size,National,AUD,Quarter
+2024-06-01,543156.5926718374,FHB Average Loan Size,National,AUD,Quarter
+2024-09-01,540887.9061064807,FHB Average Loan Size,National,AUD,Quarter
+2024-12-01,542208.1060553753,FHB Average Loan Size,National,AUD,Quarter
+2025-03-01,527404.9644159001,FHB Average Loan Size,National,AUD,Quarter
+2025-06-01,568815.4082154423,FHB Average Loan Size,National,AUD,Quarter
+2025-09-01,561786.0151642797,FHB Average Loan Size,National,AUD,Quarter
+2025-12-01,607996.2013295346,FHB Average Loan Size,National,AUD,Quarter
+2026-03-01,592371.2840183857,FHB Average Loan Size,National,AUD,Quarter
+2002-09-01,24529,FHB New Loan Commitments,National,Number per quarter,Quarter
+2002-12-01,23090,FHB New Loan Commitments,National,Number per quarter,Quarter
+2003-03-01,22989,FHB New Loan Commitments,National,Number per quarter,Quarter
+2003-06-01,22351,FHB New Loan Commitments,National,Number per quarter,Quarter
+2003-09-01,22181,FHB New Loan Commitments,National,Number per quarter,Quarter
+2003-12-01,21147,FHB New Loan Commitments,National,Number per quarter,Quarter
+2004-03-01,18264,FHB New Loan Commitments,National,Number per quarter,Quarter
+2004-06-01,19342,FHB New Loan Commitments,National,Number per quarter,Quarter
+2004-09-01,21670,FHB New Loan Commitments,National,Number per quarter,Quarter
+2004-12-01,22716,FHB New Loan Commitments,National,Number per quarter,Quarter
+2005-03-01,24097,FHB New Loan Commitments,National,Number per quarter,Quarter
+2005-06-01,26157,FHB New Loan Commitments,National,Number per quarter,Quarter
+2005-09-01,27210,FHB New Loan Commitments,National,Number per quarter,Quarter
+2005-12-01,28637,FHB New Loan Commitments,National,Number per quarter,Quarter
+2006-03-01,30398,FHB New Loan Commitments,National,Number per quarter,Quarter
+2006-06-01,30458,FHB New Loan Commitments,National,Number per quarter,Quarter
+2006-09-01,29155,FHB New Loan Commitments,National,Number per quarter,Quarter
+2006-12-01,28794,FHB New Loan Commitments,National,Number per quarter,Quarter
+2007-03-01,29388,FHB New Loan Commitments,National,Number per quarter,Quarter
+2007-06-01,30607,FHB New Loan Commitments,National,Number per quarter,Quarter
+2007-09-01,30907,FHB New Loan Commitments,National,Number per quarter,Quarter
+2007-12-01,31265,FHB New Loan Commitments,National,Number per quarter,Quarter
+2008-03-01,28925,FHB New Loan Commitments,National,Number per quarter,Quarter
+2008-06-01,25241,FHB New Loan Commitments,National,Number per quarter,Quarter
+2008-09-01,26077,FHB New Loan Commitments,National,Number per quarter,Quarter
+2008-12-01,30609,FHB New Loan Commitments,National,Number per quarter,Quarter
+2009-03-01,44768,FHB New Loan Commitments,National,Number per quarter,Quarter
+2009-06-01,49499,FHB New Loan Commitments,National,Number per quarter,Quarter
+2009-09-01,44295,FHB New Loan Commitments,National,Number per quarter,Quarter
+2009-12-01,34592,FHB New Loan Commitments,National,Number per quarter,Quarter
+2010-03-01,25100,FHB New Loan Commitments,National,Number per quarter,Quarter
+2010-06-01,20955,FHB New Loan Commitments,National,Number per quarter,Quarter
+2010-09-01,20281,FHB New Loan Commitments,National,Number per quarter,Quarter
+2010-12-01,20017,FHB New Loan Commitments,National,Number per quarter,Quarter
+2011-03-01,19497,FHB New Loan Commitments,National,Number per quarter,Quarter
+2011-06-01,20224,FHB New Loan Commitments,National,Number per quarter,Quarter
+2011-09-01,21071,FHB New Loan Commitments,National,Number per quarter,Quarter
+2011-12-01,24368,FHB New Loan Commitments,National,Number per quarter,Quarter
+2012-03-01,23423,FHB New Loan Commitments,National,Number per quarter,Quarter
+2012-06-01,22465,FHB New Loan Commitments,National,Number per quarter,Quarter
+2012-09-01,23786,FHB New Loan Commitments,National,Number per quarter,Quarter
+2012-12-01,21849,FHB New Loan Commitments,National,Number per quarter,Quarter
+2013-03-01,22061,FHB New Loan Commitments,National,Number per quarter,Quarter
+2013-06-01,23596,FHB New Loan Commitments,National,Number per quarter,Quarter
+2013-09-01,23479,FHB New Loan Commitments,National,Number per quarter,Quarter
+2013-12-01,22962,FHB New Loan Commitments,National,Number per quarter,Quarter
+2014-03-01,22786,FHB New Loan Commitments,National,Number per quarter,Quarter
+2014-06-01,22313,FHB New Loan Commitments,National,Number per quarter,Quarter
+2014-09-01,22459,FHB New Loan Commitments,National,Number per quarter,Quarter
+2014-12-01,22095,FHB New Loan Commitments,National,Number per quarter,Quarter
+2015-03-01,21695,FHB New Loan Commitments,National,Number per quarter,Quarter
+2015-06-01,21008,FHB New Loan Commitments,National,Number per quarter,Quarter
+2015-09-01,20839,FHB New Loan Commitments,National,Number per quarter,Quarter
+2015-12-01,19968,FHB New Loan Commitments,National,Number per quarter,Quarter
+2016-03-01,20296,FHB New Loan Commitments,National,Number per quarter,Quarter
+2016-06-01,21299,FHB New Loan Commitments,National,Number per quarter,Quarter
+2016-09-01,20025,FHB New Loan Commitments,National,Number per quarter,Quarter
+2016-12-01,20010,FHB New Loan Commitments,National,Number per quarter,Quarter
+2017-03-01,20849,FHB New Loan Commitments,National,Number per quarter,Quarter
+2017-06-01,21578,FHB New Loan Commitments,National,Number per quarter,Quarter
+2017-09-01,26346,FHB New Loan Commitments,National,Number per quarter,Quarter
+2017-12-01,26614,FHB New Loan Commitments,National,Number per quarter,Quarter
+2018-03-01,26464,FHB New Loan Commitments,National,Number per quarter,Quarter
+2018-06-01,26064,FHB New Loan Commitments,National,Number per quarter,Quarter
+2018-09-01,25904,FHB New Loan Commitments,National,Number per quarter,Quarter
+2018-12-01,24742,FHB New Loan Commitments,National,Number per quarter,Quarter
+2019-03-01,23586,FHB New Loan Commitments,National,Number per quarter,Quarter
+2019-06-01,24216,FHB New Loan Commitments,National,Number per quarter,Quarter
+2019-09-01,26914,FHB New Loan Commitments,National,Number per quarter,Quarter
+2019-12-01,28543,FHB New Loan Commitments,National,Number per quarter,Quarter
+2020-03-01,29049,FHB New Loan Commitments,National,Number per quarter,Quarter
+2020-06-01,26953,FHB New Loan Commitments,National,Number per quarter,Quarter
+2020-09-01,37935,FHB New Loan Commitments,National,Number per quarter,Quarter
+2020-12-01,42479,FHB New Loan Commitments,National,Number per quarter,Quarter
+2021-03-01,48235,FHB New Loan Commitments,National,Number per quarter,Quarter
+2021-06-01,42795,FHB New Loan Commitments,National,Number per quarter,Quarter
+2021-09-01,37960,FHB New Loan Commitments,National,Number per quarter,Quarter
+2021-12-01,35099,FHB New Loan Commitments,National,Number per quarter,Quarter
+2022-03-01,33442,FHB New Loan Commitments,National,Number per quarter,Quarter
+2022-06-01,30806,FHB New Loan Commitments,National,Number per quarter,Quarter
+2022-09-01,28778,FHB New Loan Commitments,National,Number per quarter,Quarter
+2022-12-01,26075,FHB New Loan Commitments,National,Number per quarter,Quarter
+2023-03-01,26586,FHB New Loan Commitments,National,Number per quarter,Quarter
+2023-06-01,27970,FHB New Loan Commitments,National,Number per quarter,Quarter
+2023-09-01,27005,FHB New Loan Commitments,National,Number per quarter,Quarter
+2023-12-01,29230,FHB New Loan Commitments,National,Number per quarter,Quarter
+2024-03-01,28520,FHB New Loan Commitments,National,Number per quarter,Quarter
+2024-06-01,29912,FHB New Loan Commitments,National,Number per quarter,Quarter
+2024-09-01,29395,FHB New Loan Commitments,National,Number per quarter,Quarter
+2024-12-01,28966,FHB New Loan Commitments,National,Number per quarter,Quarter
+2025-03-01,28805,FHB New Loan Commitments,National,Number per quarter,Quarter
+2025-06-01,29335,FHB New Loan Commitments,National,Number per quarter,Quarter
+2025-09-01,29675,FHB New Loan Commitments,National,Number per quarter,Quarter
+2025-12-01,31590,FHB New Loan Commitments,National,Number per quarter,Quarter
+2026-03-01,30241,FHB New Loan Commitments,National,Number per quarter,Quarter
+1988-06-30,63.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1988-09-30,63.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1988-12-31,65.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1989-03-31,67.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1989-06-30,68.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1989-09-30,67.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1989-12-31,67.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1990-03-31,67.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1990-06-30,69,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1990-09-30,66.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1990-12-31,67.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1991-03-31,68.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1991-06-30,69,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1991-09-30,69.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1991-12-31,71.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1992-03-31,71.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1992-06-30,71.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1992-09-30,73,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1992-12-31,72.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1993-03-31,71.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1993-06-30,74.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1993-09-30,74.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1993-12-31,76.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1994-03-31,77,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1994-06-30,79.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1994-09-30,81.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1994-12-31,82.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1995-03-31,82.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1995-06-30,83,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1995-09-30,84,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1995-12-31,86.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1996-03-31,87.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1996-06-30,88.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1996-09-30,88.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1996-12-31,89.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1997-03-31,89.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1997-06-30,91.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1997-09-30,93.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1997-12-31,96.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1998-03-31,98.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1998-06-30,101.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1998-09-30,102.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1998-12-31,105.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1999-03-31,106.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1999-06-30,108.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1999-09-30,108.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+1999-12-31,110.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2000-03-31,110.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2000-06-30,114.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2000-09-30,113.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2000-12-31,114.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2001-03-31,115.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2001-06-30,115,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2001-09-30,116.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2001-12-31,118.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2002-03-31,119.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2002-06-30,125,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2002-09-30,130.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2002-12-31,133.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2003-03-31,137,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2003-06-30,139.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2003-09-30,141.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2003-12-31,144.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2004-03-31,146.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2004-06-30,148.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2004-09-30,150.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2004-12-31,151,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2005-03-31,151.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2005-06-30,154.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2005-09-30,154.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2005-12-31,157.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2006-03-31,158.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2006-06-30,163.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2006-09-30,164,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2006-12-31,164.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2007-03-31,163.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2007-06-30,166,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2007-09-30,164.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2007-12-31,164.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2008-03-31,163.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2008-06-30,164.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2008-09-30,162.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2008-12-31,160.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2009-03-31,159.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2009-06-30,160,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2009-09-30,162.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2009-12-31,164.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2010-03-31,164.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2010-06-30,166.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2010-09-30,165,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2010-12-31,164.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2011-03-31,163.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2011-06-30,163.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2011-09-30,161.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2011-12-31,160.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2012-03-31,160.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2012-06-30,161.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2012-09-30,162,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2012-12-31,162.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2013-03-31,162.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2013-06-30,165.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2013-09-30,165,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2013-12-31,166.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2014-03-31,166.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2014-06-30,167.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2014-09-30,167.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2014-12-31,168.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2015-03-31,169.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2015-06-30,171.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2015-09-30,172.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2015-12-31,174.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2016-03-31,175.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2016-06-30,178.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2016-09-30,180.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2016-12-31,181.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2017-03-31,182.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2017-06-30,184.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2017-09-30,185.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2017-12-31,186.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2018-03-31,187.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2018-06-30,187.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2018-09-30,186.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2018-12-31,187.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2019-03-31,187.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2019-06-30,186.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2019-09-30,185.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2019-12-31,186,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2020-03-31,186.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2020-06-30,183.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2020-09-30,180.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2020-12-31,180.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2021-03-31,179.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2021-06-30,182.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2021-09-30,183.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2021-12-31,184.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2022-03-31,185,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2022-06-30,185,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2022-09-30,184.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2022-12-31,183.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2023-03-31,183.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2023-06-30,183,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2023-09-30,182.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2023-12-31,181.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2024-03-31,180.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2024-06-30,180.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2024-09-30,179.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2024-12-31,178.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2025-03-31,177.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2025-06-30,177.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2025-09-30,176.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2025-12-31,177,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2012-10-01,73.07692307692308,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2013-04-01,88.46153846153845,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2013-10-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
@@ -483,6 +824,40 @@ date,value,indicator,geography,unit,frequency
 2025-07-01,0.0559439713964327,Real Wage Growth YoY,National,Per cent,Quarter
 2025-10-01,-0.29466254859449315,Real Wage Growth YoY,National,Per cent,Quarter
 2026-01-01,-0.7619974988305578,Real Wage Growth YoY,National,Per cent,Quarter
+2023-07-01,7.596917890681443,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-08-01,7.809318481255256,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-09-01,7.499107249137005,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-10-01,6.631989596879073,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-11-01,7.139485485012997,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-12-01,7.4078422164827185,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-01-01,7.467911318553089,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-02-01,7.527255857109716,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-03-01,7.721606648199453,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-04-01,7.489693082913429,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-05-01,7.388042736985678,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-06-01,7.0800450958286465,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-07-01,6.903882734698441,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-08-01,6.732585268303515,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-09-01,6.654855497730039,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-10-01,6.751662971175176,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-11-01,6.608657341116864,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-12-01,6.175538310197837,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-01-01,5.830618892508155,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-02-01,5.5118110236220375,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-03-01,5.185899496410595,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-04-01,4.943532921372262,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-05-01,4.530059271803566,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-06-01,4.211412929037683,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-07-01,3.9145907473309594,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-08-01,3.6744040803580846,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-09-01,3.7894518272425293,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-10-01,4.195658946931147,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-11-01,4.039673519991727,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-12-01,3.942763022441831,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-01-01,3.878116343490312,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-02-01,3.762011858515657,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-03-01,3.656921666496893,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-04-01,3.5126903553299504,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 1997-07-01,100,Rental Affordability Index,National,Index (base=100),Quarter
 1997-10-01,100.03004776630004,Rental Affordability Index,National,Index (base=100),Quarter
 1998-01-01,99.72941124231049,Rental Affordability Index,National,Index (base=100),Quarter

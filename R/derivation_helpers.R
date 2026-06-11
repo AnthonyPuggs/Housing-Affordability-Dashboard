@@ -156,3 +156,33 @@ compute_real_mortgage_rate <- function(mortgage_rate, cpi_inflation) {
     mutate(value = nominal_rate - inflation) %>%
     filter(!is.na(value))
 }
+
+# FHB Average Loan Size: commitment value ($ millions) over commitment count,
+# joined on exactly matching dates (both series come from the same ABS 5601.0
+# table, so a date mismatch means a source problem, not an alignment choice).
+compute_fhb_average_loan_size <- function(value_millions, number) {
+  inner_join(
+    value_millions %>% rename(value_m = value),
+    number %>% rename(n_loans = value),
+    by = "date"
+  ) %>%
+    filter(is.finite(n_loans) & n_loans > 0) %>%
+    mutate(value = value_m * 1e6 / n_loans) %>%
+    arrange(date)
+}
+
+# Year-ended percentage change of a monthly series. Requires the observation
+# exactly 12 months earlier (no nearest-neighbour fallback), so a gap in the
+# source produces a missing growth value rather than a mislabelled one.
+compute_monthly_yoy_growth <- function(df) {
+  d <- df %>%
+    arrange(date) %>%
+    mutate(month_key = format(date, "%Y-%m"))
+  prior <- d %>%
+    mutate(month_key = format(date %m+% months(12), "%Y-%m")) %>%
+    select(month_key, prior_value = value)
+  d %>%
+    inner_join(prior, by = "month_key") %>%
+    filter(is.finite(prior_value) & prior_value != 0) %>%
+    transmute(date, value = 100 * (value / prior_value - 1))
+}

@@ -74,11 +74,15 @@ test_that("indicator_registry contracts", {
       "CPI All Groups",
       "CPI Inflation YoY",
       "AWE (AWOTE, Persons)",
-      "CPI Rents ; Weighted average of eight capital cities ;"
+      "CPI Rents ; Weighted average of eight capital cities ;",
+      "FHB New Loan Commitments (Number)",
+      "FHB New Loan Commitments (Value)",
+      "CPI Rents Monthly ; Weighted average of eight capital cities ;"
     )
     required_rba_sources <- c(
       "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier",
-      "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions"
+      "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions",
+      "Household debt to income"
     )
     check(identical(sort(indicator_registry_required_abs_sources()), sort(required_abs_sources)),
           "ABS source constants do not match required source labels")
@@ -105,6 +109,7 @@ test_that("indicator_registry contracts", {
           "Every registry row must declare interpretation_direction")
     allowed_measure_classes <- c(
       "official_survey",
+      "official_aggregate",
       "derived_index",
       "stylised_scenario",
       "context_series"
@@ -123,8 +128,9 @@ test_that("indicator_registry contracts", {
             paste("Every registry row must declare", column))
     }
     check(all(registry$official_measure ==
-                (registry$measure_class == "official_survey")),
-          "official_measure must match official_survey measure_class")
+                (registry$measure_class %in%
+                   c("official_survey", "official_aggregate"))),
+          "official_measure must match official survey/aggregate measure_class")
     check(all(registry$stylised_scenario ==
                 (registry$measure_class == "stylised_scenario")),
           "stylised_scenario must match stylised_scenario measure_class")
@@ -176,6 +182,40 @@ test_that("indicator_registry contracts", {
       check(length(missing_score_formula_text) == 0,
             paste("Score registry formulas missing text:",
                   paste(missing_score_formula_text, collapse = "; ")))
+    }
+
+    timely_registry <- registry[
+      registry$concept_group == "timely_market_context", , drop = FALSE
+    ]
+    check(identical(sort(timely_registry$indicator), sort(c(
+      "FHB New Loan Commitments",
+      "FHB Average Loan Size",
+      "Rent CPI Monthly Growth YoY",
+      "Household Debt to Income Ratio"
+    ))), "Registry must contain the four timely market-context indicators")
+    if (nrow(timely_registry) == 4) {
+      official_rows <- timely_registry[
+        timely_registry$indicator %in% c("FHB New Loan Commitments",
+                                         "Household Debt to Income Ratio"), ]
+      check(all(official_rows$measure_class == "official_aggregate") &&
+              all(official_rows$official_measure),
+            "FHB count and household DTI must be official_aggregate pass-throughs")
+      derived_rows <- timely_registry[
+        timely_registry$indicator %in% c("FHB Average Loan Size",
+                                         "Rent CPI Monthly Growth YoY"), ]
+      check(all(derived_rows$measure_class == "context_series") &&
+              all(!derived_rows$official_measure),
+            "Derived timely context rows must be context_series, not official")
+      check(all(!timely_registry$stylised_scenario),
+            "Timely market-context rows must not be stylised scenarios")
+      check(all(timely_registry$methodology_version ==
+                  "timely_market_context_v1"),
+            "Timely market-context rows must use timely_market_context_v1")
+      rent_monthly <- timely_registry[
+        timely_registry$indicator == "Rent CPI Monthly Growth YoY", ]
+      check(identical(rent_monthly$geography, "Eight capital cities") &&
+              identical(rent_monthly$frequency, "Month"),
+            "Monthly rent growth must be labelled eight-capital-city, monthly")
     }
 
     minimum_expectations <- c(

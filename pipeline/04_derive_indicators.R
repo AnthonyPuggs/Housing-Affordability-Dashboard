@@ -207,6 +207,55 @@ if (nrow(mortgage_rate) > 0 && nrow(cpi_infl) > 0) {
 }
 
 # ==============================================================================
+# 8. Timely market-entry context (roadmap Track 2.6)
+# ==============================================================================
+# Official ABS 5601.0 FHB lending aggregates, the monthly CPI rents signal and
+# the RBA E2 household debt-to-income ratio. Pass-throughs and simple
+# derivations only - registry rows document each formula and caveat.
+cat("  Computing timely market-entry context indicators...\n")
+
+fhb_count_ts <- get_series_exact(abs_ts, INDICATOR_SOURCE_FHB_COUNT,
+                                 min_rows = 80,
+                                 dataset = "abs_timeseries.csv")
+fhb_value_ts <- get_series_exact(abs_ts, INDICATOR_SOURCE_FHB_VALUE,
+                                 min_rows = 80,
+                                 dataset = "abs_timeseries.csv")
+cpi_rents_monthly_ts <- get_series_exact(abs_ts,
+                                         INDICATOR_SOURCE_CPI_RENTS_MONTHLY,
+                                         min_rows = 36,
+                                         dataset = "abs_timeseries.csv")
+
+all_indicators$fhb_count <- indicator_output(
+  fhb_count_ts, "FHB New Loan Commitments"
+)
+cat("    FHB New Loan Commitments:", nrow(fhb_count_ts), "observations\n")
+
+fhb_avg_loan <- compute_fhb_average_loan_size(fhb_value_ts, fhb_count_ts)
+all_indicators$fhb_average_loan_size <- indicator_output(
+  fhb_avg_loan, "FHB Average Loan Size"
+)
+cat("    FHB Average Loan Size:", nrow(fhb_avg_loan), "observations\n")
+
+rents_monthly_yoy <- compute_monthly_yoy_growth(cpi_rents_monthly_ts)
+all_indicators$rent_cpi_monthly_yoy <- indicator_output(
+  rents_monthly_yoy, "Rent CPI Monthly Growth YoY"
+)
+cat("    Rent CPI Monthly Growth YoY:", nrow(rents_monthly_yoy),
+    "observations\n")
+
+if (nrow(rba_ts) > 0) {
+  household_dti <- get_series_exact(rba_ts,
+                                    INDICATOR_SOURCE_RBA_HOUSEHOLD_DTI,
+                                    min_rows = 100,
+                                    dataset = "rba_rates.csv")
+  all_indicators$household_dti <- indicator_output(
+    household_dti, "Household Debt to Income Ratio"
+  )
+  cat("    Household Debt to Income Ratio:", nrow(household_dti),
+      "observations\n")
+}
+
+# ==============================================================================
 # Combine and write
 # ==============================================================================
 base_affordability_indices <- bind_rows(all_indicators) %>%

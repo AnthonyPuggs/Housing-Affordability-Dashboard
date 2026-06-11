@@ -107,6 +107,12 @@ rentalMarketPageUI <- function(id) {
                   plotlyOutput(ns("rental_afford_index"), height = "100%", width = "100%"))
             ),
             policy_chart_card(
+              "Rent Inflation (Monthly CPI Indicator)",
+              note = "Year-ended growth in the seasonally adjusted monthly CPI rents index, weighted average of the eight capital cities. A stock-of-rents price signal including existing tenancies - not advertised or new-lease rents; rest-of-state areas are not covered.",
+              div(class = "chart-wide rental-market-chart rental-market-chart-wide",
+                  plotlyOutput(ns("rental_monthly_growth"), height = "100%", width = "100%"))
+            ),
+            policy_chart_card(
               "Rental Costs and Burden by Demographics (2019-20)",
               note = policy_source_note(
                 "ABS Survey of Income and Housing. Use the measure selector to separate nominal weekly rent from rent-to-gross-income burden. ",
@@ -227,6 +233,19 @@ rentalMarketPageServer <- function(id, is_dark) {
       validate(need(nrow(d) > 0, "No rental affordability index data."))
 
       p <- build_rental_affordability_index_plot(d, dark = is_dark())
+
+      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"),
+                         margin = rental_plot_margins$index)
+    }) %>%
+      bindCache(is_dark())
+
+    output$rental_monthly_growth <- renderPlotly({
+      d <- afford_idx %>%
+        filter(indicator == "Rent CPI Monthly Growth YoY")
+      validate(need(nrow(d) > 0,
+                    "Monthly rent CPI data is unavailable - run the data pipeline."))
+
+      p <- build_monthly_rents_growth_plot(d, dark = is_dark())
 
       dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y"),
                          margin = rental_plot_margins$index)

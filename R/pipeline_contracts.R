@@ -67,17 +67,19 @@ pipeline_external_sources <- function() {
       "abs-sdmx-lf-unemployment",
       "abs-sdmx-lf-underemployment",
       "abs-sdmx-lf-underutilisation",
+      "abs-5601-table-24",
       "abs-3101-table-1",
       "abs-3101-table-2",
       "abs-8731-table-1",
       "abs-8731-table-2",
       "rba-f1",
       "rba-f5",
-      "rba-f6"
+      "rba-f6",
+      "rba-e2"
     ),
     provider = c(
-      rep("ABS", 18),
-      rep("RBA", 3)
+      rep("ABS", 19),
+      rep("RBA", 4)
     ),
     source_type = c(
       rep("readabs catalogue table", 4),
@@ -85,8 +87,8 @@ pipeline_external_sources <- function() {
       rep("readabs catalogue table", 2),
       rep("readabs catalogue table", 2),
       rep("ABS SDMX LF endpoint", 4),
-      rep("readabs catalogue table", 4),
-      rep("RBA statistical table CSV/XLSX", 3)
+      rep("readabs catalogue table", 5),
+      rep("RBA statistical table CSV/XLSX", 4)
     ),
     source_reference = c(
       "ABS 6432.0 Table 1",
@@ -103,23 +105,25 @@ pipeline_external_sources <- function() {
       "ABS 6202.0 SDMX LF/M13.3.1599.20.AUS.M",
       "ABS 6202.0 SDMX LF_UNDER/M23.3.1599.20.AUS.M",
       "ABS 6202.0 SDMX LF_UNDER/M24.3.1599.20.AUS.M",
+      "ABS 5601.0 Table 24",
       "ABS 3101.0 Table 1",
       "ABS 3101.0 Table 2",
       "ABS 8731.0 Table 1",
       "ABS 8731.0 Table 2",
       "RBA F1",
       "RBA F5",
-      "RBA F6"
+      "RBA F6",
+      "RBA E2"
     ),
     consuming_script = c(
-      rep("pipeline/02_fetch_abs_timeseries.R", 14),
+      rep("pipeline/02_fetch_abs_timeseries.R", 15),
       rep("pipeline/02b_fetch_abs_supply.R", 4),
-      rep("pipeline/03_fetch_rba.R", 3)
+      rep("pipeline/03_fetch_rba.R", 4)
     ),
     output_file = c(
-      rep("data/abs_timeseries.csv", 14),
+      rep("data/abs_timeseries.csv", 15),
       rep("data/abs_supply_demand.csv", 4),
-      rep("data/rba_rates.csv", 3)
+      rep("data/rba_rates.csv", 4)
     ),
     stringsAsFactors = FALSE
   )

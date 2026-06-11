@@ -174,9 +174,9 @@ Pipeline runs use per-stage output gates from `R/pipeline_contracts.R` before co
 Main dashboard CSVs live in `data/`:
 
 - `abs_timeseries.csv`: long-format ABS macro, CPI, price, labour and supply series using `date | value | series | series_id | category | unit | frequency`.
-- `rba_rates.csv`: long-format RBA cash and mortgage-rate inputs using the same time-series schema.
+- `rba_rates.csv`: long-format RBA cash-rate, mortgage-rate and household debt-to-income (E2) inputs using the same time-series schema.
 - `rba_*_raw.csv`: normalised RBA source-cache artefacts kept rectangular for reproducible parsing; `rba_rates.csv` is the dashboard-ready RBA output. The raw caches are gitignored download artefacts created by pipeline runs, not committed outputs.
-- `affordability_indices.csv`: derived cost-pressure indicators and the National Housing Affordability Score using `date | value | indicator | geography | unit | frequency`.
+- `affordability_indices.csv`: derived cost-pressure indicators, the National Housing Affordability Score and timely official market-entry context (ABS 5601.0 first home buyer lending, the monthly CPI rents signal and the RBA E2 household debt-to-income ratio) using `date | value | indicator | geography | unit | frequency`.
 - `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental-stress measures.
 - `sih_estimate_quality.csv`: SIH sampling-error metadata for selected workbook tables, including 95% margin of error values and relative standard error flags. Users should interpret with caution when estimates have RSE from 25% to 50%; estimates above 50% are too unreliable for general use.
 - SIH estimate outputs are guarded by workbook benchmark checks in `R/sih_benchmarks.R`, covering key rows from ABS SIH Files 4, 5, 8 and 13 so sampling-error sections do not contaminate the main estimate CSVs.

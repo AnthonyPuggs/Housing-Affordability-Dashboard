@@ -14,6 +14,11 @@ INDICATOR_SOURCE_CPI_INFLATION_YOY <- "CPI Inflation YoY"
 INDICATOR_SOURCE_AWE <- "AWE (AWOTE, Persons)"
 INDICATOR_SOURCE_RBA_MORTGAGE_RATE <- "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier"
 INDICATOR_SOURCE_RBA_NEW_LOAN_RATE <- "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions"
+# Timely market-entry context sources (roadmap Track 2.6).
+INDICATOR_SOURCE_FHB_COUNT <- "FHB New Loan Commitments (Number)"
+INDICATOR_SOURCE_FHB_VALUE <- "FHB New Loan Commitments (Value)"
+INDICATOR_SOURCE_CPI_RENTS_MONTHLY <- "CPI Rents Monthly ; Weighted average of eight capital cities ;"
+INDICATOR_SOURCE_RBA_HOUSEHOLD_DTI <- "Household debt to income"
 
 # Fixed estimation window for the F5-to-F6 splice wedge. Fixed (not growing)
 # so the spliced history does not mutate as new observations arrive; changing
@@ -87,7 +92,11 @@ indicator_source_series_constants <- function() {
     cpi_inflation_yoy = INDICATOR_SOURCE_CPI_INFLATION_YOY,
     awe = INDICATOR_SOURCE_AWE,
     rba_mortgage_rate = INDICATOR_SOURCE_RBA_MORTGAGE_RATE,
-    rba_new_loan_rate = INDICATOR_SOURCE_RBA_NEW_LOAN_RATE
+    rba_new_loan_rate = INDICATOR_SOURCE_RBA_NEW_LOAN_RATE,
+    fhb_count = INDICATOR_SOURCE_FHB_COUNT,
+    fhb_value = INDICATOR_SOURCE_FHB_VALUE,
+    cpi_rents_monthly = INDICATOR_SOURCE_CPI_RENTS_MONTHLY,
+    rba_household_dti = INDICATOR_SOURCE_RBA_HOUSEHOLD_DTI
   )
 }
 
@@ -108,7 +117,11 @@ indicator_registry <- function() {
       "National Housing Affordability Score",
       "Mortgage Serviceability Component Score",
       "Rental Entry Component Score",
-      "Deposit Barrier Component Score"
+      "Deposit Barrier Component Score",
+      "FHB New Loan Commitments",
+      "FHB Average Loan Size",
+      "Rent CPI Monthly Growth YoY",
+      "Household Debt to Income Ratio"
     ),
     chart_label = c(
       "Price-to-Income Cost Pressure",
@@ -121,7 +134,11 @@ indicator_registry <- function() {
       "National Housing Affordability Score",
       "Mortgage Serviceability Component",
       "Rental Entry Component",
-      "Deposit Barrier Component"
+      "Deposit Barrier Component",
+      "FHB New Loan Commitments",
+      "FHB Average Loan Size",
+      "Rent CPI Growth (Monthly, 8 Capitals)",
+      "Household Debt to Income"
     ),
     unit = c(
       "Index (base=100)",
@@ -131,10 +148,14 @@ indicator_registry <- function() {
       "Per cent",
       "Per cent",
       "Per cent",
-      rep("Score (0-100)", 4)
+      rep("Score (0-100)", 4),
+      "Number per quarter",
+      "AUD",
+      "Per cent",
+      "Per cent of annual disposable income"
     ),
-    geography = rep("National", 11),
-    frequency = rep("Quarter", 11),
+    geography = c(rep("National", 13), "Eight capital cities", "National"),
+    frequency = c(rep("Quarter", 13), "Month", "Quarter"),
     concept_group = c(
       "cost_pressure",
       "cost_pressure",
@@ -143,7 +164,8 @@ indicator_registry <- function() {
       "real_growth",
       "real_growth",
       "interest_rate_context",
-      rep("market_entry_composite", 4)
+      rep("market_entry_composite", 4),
+      rep("timely_market_context", 4)
     ),
     interpretation_direction = c(
       "higher_less_affordable",
@@ -153,7 +175,11 @@ indicator_registry <- function() {
       "higher_less_affordable",
       "higher_more_affordable",
       "higher_less_affordable",
-      rep("higher_more_affordable", 4)
+      rep("higher_more_affordable", 4),
+      "higher_more_affordable",
+      "higher_less_affordable",
+      "higher_less_affordable",
+      "higher_less_affordable"
     ),
     formula = c(
       "Indexed RPPI divided by indexed WPI, multiplied by 100.",
@@ -166,7 +192,11 @@ indicator_registry <- function() {
       "Weighted market-entry composite score on a 0-100 historical percentile scale: 40 per cent mortgage serviceability component, 35 per cent rental entry component and 25 per cent deposit barrier component. Higher = more affordable. Not an official ABS/NHHA statistic or lender assessment.",
       "Winsorised historical percentile score for the Mortgage Serviceability Index burden input. Higher = more affordable. Used at 40 per cent weight in the National Housing Affordability Score. Not an official ABS/NHHA statistic or lender assessment.",
       "Winsorised historical percentile score for the Rental Affordability Index burden input. Higher = more affordable. Used at 35 per cent weight in the National Housing Affordability Score. Not an official ABS/NHHA statistic or lender assessment.",
-      "Winsorised historical percentile score for the Deposit Gap (Years) burden input. Higher = more affordable. Used at 25 per cent weight in the National Housing Affordability Score. Not an official ABS/NHHA statistic or lender assessment."
+      "Winsorised historical percentile score for the Deposit Gap (Years) burden input. Higher = more affordable. Used at 25 per cent weight in the National Housing Affordability Score. Not an official ABS/NHHA statistic or lender assessment.",
+      "Pass-through of the ABS 5601.0 Lending Indicators count of new owner-occupier first home buyer loan commitments (Australia, seasonally adjusted, quarterly).",
+      "ABS 5601.0 first home buyer owner-occupier new loan commitment values (seasonally adjusted, $ millions) divided by the matching commitment counts, expressed in dollars per loan.",
+      "Year-ended percentage change in the seasonally adjusted monthly CPI rents index for the weighted average of the eight capital cities; each observation requires the index value exactly 12 months earlier.",
+      "Pass-through of the RBA E2 ratio of total household debt to annualised household disposable income (per cent)."
     ),
     source_files = c(
       "abs_timeseries.csv",
@@ -176,7 +206,11 @@ indicator_registry <- function() {
       "abs_timeseries.csv",
       "abs_timeseries.csv",
       "abs_timeseries.csv | rba_rates.csv",
-      rep("affordability_indices.csv", 4)
+      rep("affordability_indices.csv", 4),
+      "abs_timeseries.csv",
+      "abs_timeseries.csv",
+      "abs_timeseries.csv",
+      "rba_rates.csv"
     ),
     source_series = c(
       join_sources(INDICATOR_SOURCE_RPPI, INDICATOR_SOURCE_WPI),
@@ -197,11 +231,16 @@ indicator_registry <- function() {
                    "Deposit Gap (Years)"),
       "Mortgage Serviceability Index",
       "Rental Affordability Index",
-      "Deposit Gap (Years)"
+      "Deposit Gap (Years)",
+      INDICATOR_SOURCE_FHB_COUNT,
+      join_sources(INDICATOR_SOURCE_FHB_VALUE, INDICATOR_SOURCE_FHB_COUNT),
+      INDICATOR_SOURCE_CPI_RENTS_MONTHLY,
+      INDICATOR_SOURCE_RBA_HOUSEHOLD_DTI
     ),
-    official_measure = rep(FALSE, 11),
+    official_measure = c(rep(FALSE, 11), TRUE, FALSE, FALSE, TRUE),
     stylised_scenario = c(FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE,
-                          TRUE, TRUE, TRUE, TRUE),
+                          TRUE, TRUE, TRUE, TRUE,
+                          FALSE, FALSE, FALSE, FALSE),
     measure_class = c(
       "derived_index",
       "derived_index",
@@ -210,13 +249,18 @@ indicator_registry <- function() {
       "context_series",
       "context_series",
       "context_series",
-      rep("stylised_scenario", 4)
+      rep("stylised_scenario", 4),
+      "official_aggregate",
+      "context_series",
+      "context_series",
+      "official_aggregate"
     ),
     methodology_version = c(
       "affordability_indices_v1",
       "affordability_indices_v2",
       rep("affordability_indices_v1", 5),
-      rep("national_affordability_score_v2", 4)
+      rep("national_affordability_score_v2", 4),
+      rep("timely_market_context_v1", 4)
     ),
     primary_source = c(
       "ABS 6432.0 mean dwelling prices and ABS WPI",
@@ -229,7 +273,11 @@ indicator_registry <- function() {
       "Dashboard affordability_indices.csv component scores",
       "Dashboard Mortgage Serviceability Index component",
       "Dashboard Rental Affordability Index component",
-      "Dashboard Deposit Gap component"
+      "Dashboard Deposit Gap component",
+      "ABS 5601.0 Lending Indicators Table 24 (first home buyers, owner occupiers)",
+      "ABS 5601.0 Lending Indicators Table 24 (first home buyers, owner occupiers)",
+      "ABS monthly CPI indicator rents (6401.0 Table 7, series A130400542R)",
+      "RBA Statistical Table E2 Household Finances - Selected Ratios (series BHFDDIT)"
     ),
     quality_note = c(
       "Derived dashboard index from public ABS time series; no SIH sampling-error interval applies.",
@@ -242,9 +290,13 @@ indicator_registry <- function() {
       "Stylised composite score with sensitivity diagnostics; not an official ABS/NHHA statistic or lender assessment.",
       "Stylised component score; no SIH sampling-error interval applies.",
       "Stylised component score; CPI rents may understate new-lease stress.",
-      "Stylised component score using fixed deposit assumptions."
+      "Stylised component score using fixed deposit assumptions.",
+      "Official ABS administrative lending aggregate passed through unchanged; counts new loan commitments, not the number of first home buyers in the population.",
+      "Derived as a simple quotient of two official ABS aggregates; an average commitment size, not a borrowing-capacity or lender approval measure.",
+      "Derived year-ended growth from the official monthly CPI rents index; a stock-of-rents price signal including existing tenancies, available only from July 2022.",
+      "Official RBA/ABS aggregate ratio passed through unchanged; an economy-wide income-security context measure, not a household-level distribution."
     ),
-    vintage_dataset = rep("affordability_indices", 11),
+    vintage_dataset = rep("affordability_indices", 15),
     public_caveat = c(
       "Cost-pressure index, higher = less affordable.",
       "Modelled principal-and-interest repayment-burden index (80 per cent LVR, 30-year term, actual new-loan rates; pre-2019 rates are level-adjusted F5 history), higher = less affordable.",
@@ -256,10 +308,15 @@ indicator_registry <- function() {
       "Historical-relative market-entry score, not an official ABS/NHHA statistic or lender assessment.",
       "Historical-relative component score, not a standalone affordability threshold.",
       "Historical-relative component score; CPI rents may lag advertised rents.",
-      "Historical-relative component score using fixed upfront deposit assumptions."
+      "Historical-relative component score using fixed upfront deposit assumptions.",
+      "Official ABS lending aggregate: new owner-occupier first home buyer loan commitments per quarter, seasonally adjusted; a flow of new lending, not the number of first home buyers in the population.",
+      "Average new FHB loan commitment size derived from official ABS 5601.0 values and counts; reflects loans actually committed, not a lender assessment of borrowing capacity.",
+      "Monthly rent inflation signal from eight-capital-city CPI rents (stock of rents, not advertised or new-lease rents; rest-of-state areas not covered).",
+      "Official RBA aggregate debt-to-income context: economy-wide household debt relative to annualised disposable income, not an individual borrower or lender serviceability measure."
     ),
     minimum_rows = c(40L, 50L, 80L, 30L, 50L, 80L, 50L,
-                     20L, 20L, 20L, 20L),
+                     20L, 20L, 20L, 20L,
+                     80L, 80L, 24L, 100L),
     stringsAsFactors = FALSE
   )
 }
@@ -271,14 +328,18 @@ indicator_registry_required_abs_sources <- function() {
     INDICATOR_SOURCE_CPI_ALL_GROUPS,
     INDICATOR_SOURCE_CPI_INFLATION_YOY,
     INDICATOR_SOURCE_AWE,
-    INDICATOR_SOURCE_CPI_RENTS_NATIONAL
+    INDICATOR_SOURCE_CPI_RENTS_NATIONAL,
+    INDICATOR_SOURCE_FHB_COUNT,
+    INDICATOR_SOURCE_FHB_VALUE,
+    INDICATOR_SOURCE_CPI_RENTS_MONTHLY
   ))
 }
 
 indicator_registry_required_rba_sources <- function() {
   unname(c(
     INDICATOR_SOURCE_RBA_MORTGAGE_RATE,
-    INDICATOR_SOURCE_RBA_NEW_LOAN_RATE
+    INDICATOR_SOURCE_RBA_NEW_LOAN_RATE,
+    INDICATOR_SOURCE_RBA_HOUSEHOLD_DTI
   ))
 }
 

@@ -7,10 +7,10 @@ marketContextPageUI <- function(id) {
     "Market Context",
     policy_page_header(
       "Labour & Demographics",
-      "Analysing the state of the Australian market through rates, labour spare capacity and population demand."
+      "Analysing the state of the Australian market through rates, labour spare capacity, household balance sheets and population demand."
     ),
     layout_column_wrap(
-      width = 1/3,
+      width = 1/4,
       fill = FALSE,
       policy_kpi_box(
         title = "Unemployment Rate",
@@ -32,6 +32,14 @@ marketContextPageUI <- function(id) {
         subtitle = p(class = "kpi-subtitle", "Trend estimate"),
         change = uiOutput(ns("vb_underutilisation_change")),
         accent = "navy"
+      ),
+      policy_kpi_box(
+        title = "Household Debt to Income",
+        value = textOutput(ns("vb_household_dti")),
+        subtitle = p(class = "kpi-subtitle",
+                     "RBA E2, debt to annual disposable income"),
+        change = uiOutput(ns("vb_household_dti_change")),
+        accent = "purple"
       )
     ),
     sliderInput(ns("context_dates"), "Date Range",
@@ -105,6 +113,19 @@ marketContextPageServer <- function(id, is_dark) {
       label <- paste0(direction, " ", sprintf("%+.0f%%", pct), " YoY")
       css_class <- kpi_change_class(pct, favourable = "neutral")
       tags$p(class = paste("kpi-subtitle", css_class), label)
+    })
+
+    output$vb_household_dti <- renderText({
+      v <- latest_val(rba_rates, "series", "Household debt to income")
+      fmt_pct(v, 1)
+    })
+    output$vb_household_dti_change <- renderUI({
+      ch <- latest_change(rba_rates, "series", "Household debt to income",
+                          periods_back = 4, period_label = "YoY",
+                          change_type = "percentage_points")
+      diff_val <- ch$change
+      css_class <- kpi_change_class(diff_val, favourable = "decrease")
+      tags$p(class = paste("kpi-subtitle", css_class), ch$label)
     })
 
     output$vb_underutilisation <- renderText({

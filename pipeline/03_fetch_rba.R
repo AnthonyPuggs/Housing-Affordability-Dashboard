@@ -8,6 +8,7 @@
 #   F1 — Interest Rates (cash rate)
 #   F5 — Indicator Lending Rates (mortgage rates)
 #   F6 — Housing Lending Rates
+#   E2 — Household Finances: Selected Ratios (debt-to-income context)
 #
 # Schema: date | value | series | series_id | category | unit | frequency
 # ==============================================================================
@@ -203,6 +204,7 @@ classify_rba_category <- function(series_name, table_id) {
     tid == "F1" ~ "Interest Rates",
     tid == "F5" ~ "Mortgage Rates",
     tid == "F6" ~ "Housing Finance",
+    tid == "E2" ~ "Household Finances",
     str_detect(series_name, regex("cash rate", ignore_case = TRUE)) ~ "Interest Rates",
     str_detect(series_name, regex("mortgage|housing|lending", ignore_case = TRUE)) ~ "Mortgage Rates",
     TRUE ~ "RBA"
@@ -300,6 +302,39 @@ if (!is.null(f6_file) && file.exists(f6_file)) {
     all_rba$f6 <- housing_finance
     cat("    F6:", nrow(housing_finance), "obs,",
         length(unique(housing_finance$series)), "series\n")
+  }
+}
+
+# ==============================================================================
+# E2 — Household Finances: Selected Ratios (debt-to-income context)
+# ==============================================================================
+# Roadmap Track 2.6: official household debt-to-income context. Selected by
+# exact series ID: BHFDDIT is the ratio of total household debt to annualised
+# household disposable income (per cent, quarterly). These are ratios, not
+# interest rates - the validation range gate treats the Household Finances
+# category separately.
+cat("  Fetching RBA E2 (Household Finances)...\n")
+
+e2_file <- tryCatch(fetch_rba_table("e2"), error = function(e) {
+  stop("Required source failed for RBA E2: ", conditionMessage(e),
+       call. = FALSE)
+})
+
+if (!is.null(e2_file) && file.exists(e2_file)) {
+  e2_data <- parse_rba_file(e2_file, "E2")
+
+  if (nrow(e2_data) > 0) {
+    household_dti <- e2_data %>%
+      filter(series_id == "BHFDDIT")
+
+    assert_selection_nonempty(
+      household_dti,
+      "RBA E2 household debt to income ratio (series BHFDDIT)"
+    )
+
+    all_rba$e2 <- household_dti
+    cat("    E2:", nrow(household_dti), "obs,",
+        length(unique(household_dti$series)), "series\n")
   }
 }
 

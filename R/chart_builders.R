@@ -733,3 +733,45 @@ build_cost_burden_heatmap_plot <- function(data, dark = FALSE) {
     theme_afford(dark) +
     theme(axis.text.x = element_text(angle = 30, hjust = 1))
 }
+
+# Timely market-entry context charts (roadmap Track 2.6) ------------------------
+
+# FHB lending: official ABS 5601.0 quarterly first home buyer owner-occupier
+# commitments, as either the count of new loans or the derived average loan
+# size. Pass-through official aggregates, not modelled scenarios.
+build_fhb_lending_plot <- function(data,
+                                   measure = c("count", "avg_loan_size"),
+                                   dark = FALSE) {
+  measure <- match.arg(measure)
+  y_label <- if (identical(measure, "count")) {
+    "New FHB loan commitments per quarter (SA)"
+  } else {
+    "Average new FHB loan size ($'000)"
+  }
+  y_labels <- if (identical(measure, "count")) {
+    label_number(big.mark = ",")
+  } else {
+    label_number(scale = 1e-3, big.mark = ",")
+  }
+
+  ggplot(data, aes(x = date, y = value)) +
+    geom_line(linewidth = 1, color = semantic_colour("categorical_navy")) +
+    scale_x_date(date_labels = "%Y", date_breaks = "4 years") +
+    scale_y_continuous(labels = y_labels) +
+    labs(x = NULL, y = y_label) +
+    theme_afford(dark)
+}
+
+# Monthly rent CPI growth: year-ended percentage change in the seasonally
+# adjusted eight-capital-city monthly rents index.
+build_monthly_rents_growth_plot <- function(data, dark = FALSE) {
+  ggplot(data, aes(x = date, y = value)) +
+    geom_hline(yintercept = 0, linewidth = 0.4,
+               color = semantic_colour(if (dark) "reference_dark" else "reference"),
+               linetype = "dashed") +
+    geom_line(linewidth = 1, color = semantic_colour("worse")) +
+    scale_x_date(date_labels = "%b %Y") +
+    scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
+    labs(x = NULL, y = "Rent CPI, year-ended growth") +
+    theme_afford(dark)
+}

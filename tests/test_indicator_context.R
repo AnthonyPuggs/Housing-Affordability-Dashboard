@@ -70,7 +70,7 @@ test_that("indicator_context contracts", {
       check(nrow(context) == nrow(indicator_registry()),
             "indicator_context_table() must return one row per registry indicator")
       check(all(context$measure_class %in%
-                  c("official_survey", "derived_index",
+                  c("official_survey", "official_aggregate", "derived_index",
                     "stylised_scenario", "context_series")),
             "indicator_context_table() returned an unsupported measure_class")
       check(all(!is.na(context$period_max) & nzchar(context$period_max)),
@@ -103,6 +103,8 @@ test_that("indicator_context contracts", {
             "Quality summary must include stylised_scenario rows")
       check(any(summary$measure_class == "derived_index"),
             "Quality summary must include derived_index rows")
+      check(any(summary$measure_class == "official_aggregate"),
+            "Quality summary must include official_aggregate rows")
     }
   }
 })

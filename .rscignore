@@ -28,6 +28,8 @@ CHART_BUILDER_WORKFLOW.md
 data/rba_f1_raw.csv
 data/rba_f5_raw.csv
 data/rba_f6_raw.csv
+data/rba_e2_raw.csv
 data/rba_f1_raw.xlsx
 data/rba_f5_raw.xlsx
 data/rba_f6_raw.xlsx
+data/rba_e2_raw.xlsx

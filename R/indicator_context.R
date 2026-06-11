@@ -27,6 +27,7 @@ if (!exists("read_data_vintage", mode = "function", inherits = TRUE)) {
 indicator_measure_class_label <- function(measure_class) {
   labels <- c(
     official_survey = "Official survey",
+    official_aggregate = "Official aggregate",
     derived_index = "Derived index",
     stylised_scenario = "Stylised scenario",
     context_series = "Context series"
@@ -149,6 +150,7 @@ indicator_quality_coverage_summary <- function(data_dir = project_path("data"),
   summary <- do.call(rbind, rows)
   summary[order(match(summary$measure_class, c(
     "official_survey",
+    "official_aggregate",
     "derived_index",
     "stylised_scenario",
     "context_series"
