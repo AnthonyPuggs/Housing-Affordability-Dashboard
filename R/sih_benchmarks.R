@@ -45,7 +45,14 @@ sih_workbook_benchmarks <- function() {
       "sih_lower_income_states.csv",
       "sih_nhha_rental_stress.csv",
       "sih_nhha_rental_stress.csv",
-      "sih_nhha_rental_stress.csv"
+      "sih_nhha_rental_stress.csv",
+      "sih_timeseries_national.csv",
+      "sih_costs_2020.csv",
+      "sih_age_tenure_2020.csv",
+      "sih_recent_buyers_2020.csv",
+      "sih_geographic_2020.csv",
+      "sih_state_timeseries.csv",
+      "sih_estimate_quality.csv"
     ),
     source_file = c(
       "4. Housing costs as a proportion of income.xlsx",
@@ -57,7 +64,14 @@ sih_workbook_benchmarks <- function() {
       "8. Lower income households, state and territory.xlsx",
       "13. Rental affordability, lower income renter households, national housing and homelessness agreement basis.xlsx",
       "13. Rental affordability, lower income renter households, national housing and homelessness agreement basis.xlsx",
-      "13. Rental affordability, lower income renter households, national housing and homelessness agreement basis.xlsx"
+      "13. Rental affordability, lower income renter households, national housing and homelessness agreement basis.xlsx",
+      "1. Housing occupancy and costs, Australia, 1994–95 to 2019–20.xlsx",
+      "3. Housing costs.xlsx",
+      "6. Age of household reference person.xlsx",
+      "9. Recent home buyer households.xlsx",
+      "11. Greater capital city statistical areas, states and territories.xlsx",
+      "12. Housing occupancy costs, states and territories.xlsx",
+      "5. Housing costs as a proportion of income ranges.xlsx"
     ),
     source_table = c(
       "Table 4.1",
@@ -69,9 +83,16 @@ sih_workbook_benchmarks <- function() {
       "Table 8.1",
       "Table 13.1",
       "Table 13.1",
-      "Table 13.1"
+      "Table 13.1",
+      "Table 1.1",
+      "Table 3.1",
+      "Table 6.1",
+      "Table 9.1",
+      "Table 11.1",
+      "Table 12.1",
+      "Table 5.1"
     ),
-    survey_year = rep("2019-20", 10),
+    survey_year = rep("2019-20", 17),
     metric = c(
       "cost_income_ratio",
       "cost_income_ratio",
@@ -82,7 +103,14 @@ sih_workbook_benchmarks <- function() {
       "households_000",
       "pct_rental_stress_over_30",
       "number_rental_stress_over_30",
-      "number_lower_income_renter_households"
+      "number_lower_income_renter_households",
+      "mean_weekly_cost_real",
+      "weekly_housing_cost",
+      "households_000",
+      "Mean value of dwelling",
+      "median_weekly_cost",
+      "mean_weekly_cost_real",
+      "pct_over_30"
     ),
     tenure = c(
       "owner_mortgage",
@@ -94,7 +122,14 @@ sih_workbook_benchmarks <- function() {
       "renter_total",
       "renter_lower_income",
       "renter_lower_income",
-      "renter_lower_income"
+      "renter_lower_income",
+      "all",
+      "all",
+      "all",
+      "owner_mortgage",
+      "all",
+      "all",
+      "owner_mortgage"
     ),
     breakdown_var = c(
       "family_type",
@@ -106,7 +141,14 @@ sih_workbook_benchmarks <- function() {
       "lower_income_state",
       "nhha_location",
       "nhha_location",
-      "nhha_location"
+      "nhha_location",
+      "tenure",
+      "family_type",
+      "number_of_employed_persons_in_household_by_age_group",
+      "buyer_all_recent_total",
+      "renter",
+      "tenure",
+      "owner"
     ),
     breakdown_val = c(
       "Couple family with dependent children",
@@ -118,7 +160,14 @@ sih_workbook_benchmarks <- function() {
       "Total renters",
       "Total",
       "Total",
-      "Total"
+      "Total",
+      "Total",
+      "Total",
+      "Estimated number of households | all households",
+      "Mean value of dwelling",
+      "Total",
+      "Total",
+      "Owner with a mortgage"
     ),
     geography = c(
       "National",
@@ -130,7 +179,14 @@ sih_workbook_benchmarks <- function() {
       "New South Wales",
       "Aust.",
       "Aust.",
-      "Aust."
+      "Aust.",
+      "National",
+      "National",
+      "National",
+      "National",
+      "Total GCC",
+      "New South Wales",
+      "National"
     ),
     stat_type = c(
       "mean",
@@ -142,8 +198,16 @@ sih_workbook_benchmarks <- function() {
       "lower_income",
       "proportion",
       "count",
-      "count"
+      "count",
+      "mean",
+      "mean",
+      "count_000",
+      "count",
+      "median",
+      "mean",
+      "all_households"
     ),
+    value_column = c(rep("value", 16), "quality_value"),
     expected_value = c(
       15.2,
       15.9,
@@ -154,9 +218,17 @@ sih_workbook_benchmarks <- function() {
       415.2,
       42.0,
       618846,
-      1473599
+      1473599,
+      317,
+      317,
+      9732.4,
+      701.4,
+      327,
+      356,
+      1.4
     ),
-    tolerance = c(1e-9, 1e-9, 1e-9, 1e-3, 1e-9, 1e-9, 1e-9, 1e-9, 1e-9, 1e-9),
+    tolerance = c(1e-9, 1e-9, 1e-9, 1e-3, 1e-9, 1e-9, 1e-9, 1e-9, 1e-9, 1e-9,
+                  1e-9, 1e-9, 1e-9, 1e-9, 1e-9, 1e-9, 1e-9),
     benchmark_note = c(
       "File 4 Table 4.1 estimate block, owner with a mortgage, couple family with dependent children.",
       "File 4 Table 4.2 estimate block, owner with a mortgage, couple family with dependent children.",
@@ -167,7 +239,14 @@ sih_workbook_benchmarks <- function() {
       "File 8 Table 8.1 estimate block, NSW lower-income total renters, household count in thousands.",
       "File 13 Table 13.1 estimate block, Australia total NHHA lower-income rental stress proportion.",
       "File 13 Table 13.1 estimate block, Australia total NHHA stressed lower-income renter household count.",
-      "File 13 Table 13.1 estimate block, Australia total NHHA lower-income renter household denominator."
+      "File 13 Table 13.1 estimate block, Australia total NHHA lower-income renter household denominator.",
+      "File 1 Table 1.1 estimate block, all-tenure total mean weekly housing cost (2019-20 dollars), workbook cell R15xC18.",
+      "File 3 Table 3.1 estimate block, family-composition total mean weekly housing cost, workbook cell R19xC10.",
+      "File 6 Table 6.1 estimate block, estimated number of households (all households column), workbook cell R61xC10.",
+      "File 9 Table 9.1 estimate block, mean value of dwelling for all recent buyers (total dwellings), workbook cell R68xC13.",
+      "File 11 Table 11.1 estimate block, total-GCC all-tenure median weekly housing cost, workbook cell R18xC11.",
+      "File 12 Table 12.1 estimate block, NSW all-tenure total mean weekly housing cost (2019-20 dollars), workbook cell R15xC18.",
+      "File 5 Table 5.1 MOE block, 95% margin of error for owner-with-mortgage stress over 30 per cent, workbook cell R87xC7."
     ),
     stringsAsFactors = FALSE,
     check.names = FALSE
@@ -192,6 +271,7 @@ validate_sih_workbook_benchmarks <- function(data_dir = project_path("data"),
     "breakdown_val",
     "geography",
     "stat_type",
+    "value_column",
     "expected_value",
     "tolerance",
     "benchmark_note"
@@ -232,7 +312,9 @@ validate_sih_workbook_benchmarks <- function(data_dir = project_path("data"),
     }
     output <- get(output_file, envir = cached_outputs, inherits = FALSE)
 
-    missing_output_columns <- setdiff(c(key_columns, "value"), names(output))
+    value_column <- benchmark$value_column[[1]]
+    missing_output_columns <- setdiff(c(key_columns, value_column),
+                                      names(output))
     if (length(missing_output_columns) > 0) {
       add_failure(paste(output_file, "is missing benchmark columns:",
                         paste(missing_output_columns, collapse = ", ")))
@@ -263,7 +345,7 @@ validate_sih_workbook_benchmarks <- function(data_dir = project_path("data"),
       next
     }
 
-    actual <- suppressWarnings(as.numeric(matched$value[[1]]))
+    actual <- suppressWarnings(as.numeric(matched[[value_column]][[1]]))
     expected <- as.numeric(benchmark$expected_value[[1]])
     tolerance <- as.numeric(benchmark$tolerance[[1]])
 

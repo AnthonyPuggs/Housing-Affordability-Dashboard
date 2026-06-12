@@ -45,7 +45,40 @@ both assets are served with expected content.
 - Replace CSS pseudo-element tooltips (`content: attr(data-tooltip)`, app.R ~421-470) with `bslib::tooltip()` on `policy_info_icon()` (`R/ui_style_system.R:29-37`) — fixes WCAG 1.4.13 dismissibility. Keep `aria-label`. Update `tests/test_ui_style_system.R:99-100`.
 - Regenerate manifest; confirm `.rscignore` doesn't exclude `www/`; UI smoke both themes.
 
-## Batch 3 — SIH header-anchored parser rewrite (PIPE-12, priority) — [ ]
+## Batch 3 — SIH header-anchored parser rewrite (PIPE-12, priority) — [x] DONE 2026-06-12 (branch `track3-batch3-sih-parser`)
+
+**Implementation notes (2026-06-12):** shipped in 8 commits exactly per the
+phasing below; Files 3/4/5/6/8/13 + all 3 quality parsers verified
+byte-identical, `distinct()` at the quality combine confirmed a no-op and
+removed. Deviations and findings beyond the plan:
+
+- **File 11 state tables were mislabelled, not just duplicated:** Tables
+  11.4–11.6 are state/territory layouts (ESTIMATES at r6, 9 data columns);
+  the positional parser applied the GCC column names and invented
+  `pct_households_dwelling`/`mean_weekly_cost`/`mean_cost_income_ratio`
+  metrics, so e.g. NSW's median cost-to-income ratio shipped as
+  "Gr. Sydney mean weekly cost". Fixed: state tables now emit their true
+  medians/proportions under full state names; the Geographic page's two
+  "Mean" capital/rest-of-state choices were removed (File 11 publishes no
+  means) and the data contract test re-pinned.
+- **In-parser dup assertions caught genuine estimate-block collisions** the
+  ratchet had hidden: bare "Total" rows recurring under multiple sections.
+  File 9 qualifies them as `Total | <section>` (72 rows); Files 1/12
+  qualify only colliding keys via subsection (`Total | One family
+  households` etc.), leaving non-colliding keys in legacy form.
+- **Survey-year footnote leak fixed:** Table 12.2-style year headers
+  ("2007–08 (a)") had contaminated 540 `sih_state_timeseries` rows; year
+  anchoring normalises to "2007-08".
+- **Two suppressed-estimate artifacts removed:** WA 2009-10
+  multiple-family and ACT 1999-00 three-or-more-employed rows in the state
+  series were RSE values shipped as estimates (the estimate cell itself
+  was suppressed).
+- File 12 metric/state are title-anchored (not the positional
+  3-tables-per-state cycle) — the "stretch goal" held for all 24 sheets.
+- `classify_tenure()`'s `"all"` fallback is retained where it is
+  semantically correct (rows under non-tenure breakdown sections); layout
+  drift is instead caught by header anchoring, block bounding, and the
+  per-engine zero-duplicate assertions.
 
 **Root cause (confirmed):** the four ratcheted outputs (`sih_timeseries_national` 1,936 dups, `sih_state_timeseries` 15,337, `sih_recent_buyers_2020` 216, `sih_geographic_2020` 2,858; gate at `pipeline/06_validate_outputs.R:250-291`) are exactly the four parsers that never call `estimate_block_rows()` — they parse RSE/MOE blocks as estimates. The six clean files already block-bound, so expected diffs are fully predictable.
 
