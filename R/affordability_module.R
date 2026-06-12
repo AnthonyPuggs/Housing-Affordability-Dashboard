@@ -268,6 +268,9 @@ affordabilityPageUI <- function(id) {
       nav_panel(
         "Calculator",
         layout_sidebar(
+          # Lands on the layout's .main content area; dashboard.css restores
+          # scrolling + natural card heights there (same fix as the Indices tab).
+          class = "affordability-calculator-page",
           sidebar = sidebar(
             width = 320, open = "desktop",
             source_note(stylised_scenario_note),

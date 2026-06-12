@@ -348,6 +348,10 @@ build_geo_state_trend_plot <- function(data, metric_label, axis_label,
                    color = geography, group = geography)) +
     geom_line(linewidth = 0.9, alpha = 0.9) +
     geom_point(size = 1.6, alpha = 0.85) +
+    # First year only ("1994-95" -> "1994"), as on the stress heatmap: full
+    # fiscal-year ticks rotated 45 degrees reach into the legend band below.
+    # Hover text still shows the full survey year.
+    scale_x_discrete(labels = function(x) sub("-.*", "", x)) +
     scale_y_continuous(labels = value_labels) +
     labs(x = NULL, y = axis_label, color = NULL, title = metric_label) +
     theme_afford(dark) +

@@ -167,6 +167,7 @@ test_that("ui_smoke_contracts contracts", {
     ".data-vintage-badge",
     "data_vintage_badge(",
     "affordability-indices-page",
+    "affordability-calculator-page",
     "policy_page_header(",
     "policy_kpi_box(",
     "policy_chart_card("

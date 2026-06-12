@@ -605,6 +605,17 @@ html[data-bs-theme='dark'] .methodology-table-wrap td {
   flex: 0 0 auto;
   width: 100%;
 }
+/* Calculator tab: same scroll fix as the Indices tab above, but the class is
+   passed to layout_sidebar() so it lands directly on the .main content area. */
+.bslib-sidebar-layout > .main.affordability-calculator-page {
+  overflow-y: auto;
+  align-content: flex-start;
+}
+.affordability-calculator-page .policy-card,
+.affordability-calculator-page .shiny-panel-conditional {
+  flex: 0 0 auto;
+  width: 100%;
+}
 
 /* KPI change indicator colors (theme-aware, WCAG AA on card bg) */
 .kpi-change-better { color: var(--kpi-better) !important; font-weight: 600; }

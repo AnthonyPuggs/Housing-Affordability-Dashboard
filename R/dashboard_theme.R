@@ -19,7 +19,11 @@ theme_afford <- function(dark = FALSE) {
       axis.text.y = element_text(color = axis_col),
       axis.title = element_text(color = axis_col),
       legend.text = element_text(color = axis_col),
-      plot.title = element_text(color = strip_col, face = "bold"),
+      # rel(0.95) keeps long dynamic titles (e.g. "Households paying more than
+      # 30% of income") inside a ~500px card column; ggplot's default rel(1.2)
+      # renders ~20px bold in Plotly and clips on multi-column pages.
+      plot.title = element_text(color = strip_col, face = "bold",
+                                size = rel(0.95)),
       plot.subtitle = element_text(color = axis_col),
       plot.margin = margin(8, 10, 8, 10),
       strip.text = element_text(face = "bold", color = strip_col)
@@ -70,10 +74,13 @@ plotly_layout <- function(p, dark = FALSE, hovermode = "x",
 
   # Default to the long-history year ticks; an explicit date_axis spec (e.g.
   # from date_axis_config()) overrides format/density for shorter series.
+  # No tickangle here: ggplotly already emits the angle each chart's ggplot
+  # theme asked for (0 unless set), and forcing 0 silently overrode builders
+  # that rotate crowded categorical labels (e.g. SIH survey-year axes).
   tickformat <- if (is.null(date_axis)) "%Y" else date_axis$tickformat
   dtick <- if (is.null(date_axis)) "M60" else date_axis$dtick
   xax <- list(gridcolor = grid, title = "",
-              tickformat = tickformat, dtick = dtick, tickangle = 0)
+              tickformat = tickformat, dtick = dtick)
   yax <- list(gridcolor = grid)
 
   layout_args <- list(
@@ -88,6 +95,14 @@ plotly_layout <- function(p, dark = FALSE, hovermode = "x",
     xaxis = xax,
     yaxis = yax
   )
+
+  # ggplotly pins titles to the plot area's left edge (xref = "paper"), so wide
+  # categorical y-axis labels shove long titles off the right of the card on
+  # multi-column pages. Anchor them to the card (container) edge instead.
+  if (isTRUE(nzchar(p$x$layout$title$text))) {
+    layout_args$title <- list(x = 0, xref = "container", xanchor = "left",
+                              pad = list(l = 8))
+  }
   for (i in 2:9) {
     layout_args[[paste0("xaxis", i)]] <- xax
     layout_args[[paste0("yaxis", i)]] <- yax
