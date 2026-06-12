@@ -247,27 +247,22 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
     indicator_range_gate("Household Debt to Income Ratio", 20, 350)
   }
 
-  # SIH outputs that previously had structure-only stage-gate checks.
-  #
-  # KNOWN PARSER ARTIFACT (Track 3 / review PIPE-12): the positional SIH
-  # parser emits duplicate key rows for these four files (overlapping panel
-  # parses; e.g. a cost-to-income panel lands under a dollar-cost metric, and
-  # some cells are emitted more than once). The app works around it with
-  # keep-largest-estimate slices (geo_keep_largest_estimate). Until the
-  # header-anchored parser rewrite, this gate RATCHETS: duplicate counts may
-  # shrink but must never exceed the measured 2026-06 baseline, so a parser
-  # regression fails loudly instead of growing silently.
-  sih_duplicate_baseline <- c(
-    "sih_timeseries_national.csv" = 1936L,
-    "sih_state_timeseries.csv" = 15337L,
-    "sih_recent_buyers_2020.csv" = 216L,
-    "sih_geographic_2020.csv" = 2858L
+  # SIH duplicate-key gate (Track 3 / PIPE-12): the header-anchored parser
+  # bounds every estimate read to the ESTIMATES block and asserts a
+  # zero-duplicate key inside each engine, so every SIH output must arrive
+  # here duplicate-free. (This replaces the 2026-06 ratchet that tolerated
+  # the positional parser's RSE/MOE artifact rows.)
+  sih_zero_duplicate_files <- c(
+    "sih_timeseries_national.csv",
+    "sih_state_timeseries.csv",
+    "sih_recent_buyers_2020.csv",
+    "sih_geographic_2020.csv"
   )
   sih_key_columns <- c(
     "survey_year", "metric", "tenure", "breakdown_var", "breakdown_val",
     "geography", "stat_type"
   )
-  for (sih_file in names(sih_duplicate_baseline)) {
+  for (sih_file in sih_zero_duplicate_files) {
     sih_df <- read_required_csv(sih_file)
     required_columns(
       sih_df, sih_file,
@@ -276,12 +271,9 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
     )
     if (all(sih_key_columns %in% names(sih_df)) && nrow(sih_df) > 0) {
       dup_sih <- duplicate_count(sih_df, sih_key_columns)
-      baseline <- sih_duplicate_baseline[[sih_file]]
       check(
-        !is.na(dup_sih) && dup_sih <= baseline,
-        paste0(sih_file, " has ", dup_sih,
-               " duplicate key rows, above the known parser-artifact baseline of ",
-               baseline, " - a parser change has made duplication worse")
+        !is.na(dup_sih) && dup_sih == 0,
+        paste(sih_file, "has", dup_sih, "duplicate SIH estimate key rows")
       )
       check(
         all(is.finite(sih_df$value)),

@@ -165,8 +165,9 @@ recent_buyers_profile_dimension_label <- function(dimension) {
 }
 
 # Proportion-of-households profile rows by buyer type (dwelling type = total).
-# Like normalise_recent_buyers(), keeps the first row per key as a workaround
-# for the known SIH parser duplicate-row artifact (see pipeline ratchet gate).
+# Like normalise_recent_buyers(), keeps the first row per key as a defensive
+# normalisation; the header-anchored SIH parser ships duplicate-free data and
+# the pipeline gate enforces it, so the slice is a no-op on healthy data.
 normalise_recent_buyers_profile <- function(data) {
   if (!is.data.frame(data) || nrow(data) == 0) {
     return(data.frame())

@@ -77,16 +77,6 @@ geo_selected_regions <- function(selected, regions) {
   selected
 }
 
-geo_keep_largest_estimate <- function(df, key_cols) {
-  if (nrow(df) == 0) {
-    return(df)
-  }
-
-  df %>%
-    arrange(across(all_of(key_cols)), desc(value)) %>%
-    distinct(across(all_of(key_cols)), .keep_all = TRUE)
-}
-
 geo_sih_note <- function(extra = NULL) {
   source_note(
     "ABS Survey of Income and Housing. These are geography-aligned SIH survey measures; not modelled market-entry indexes. ",
@@ -210,9 +200,6 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
           metric == input$geo_state_metric,
           tenure == input$geo_state_tenure,
           geography %in% state_geographies()
-        ) %>%
-        geo_keep_largest_estimate(
-          c("survey_year", "metric", "tenure", "geography")
         )
 
       year_levels <- unique(sih_state_ts$survey_year)
@@ -266,9 +253,6 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
           metric == input$geo_lower_metric,
           tenure == input$geo_lower_tenure,
           geography %in% selected_states
-        ) %>%
-        geo_keep_largest_estimate(
-          c("survey_year", "metric", "tenure", "geography")
         )
 
       nat <- sih_lower_income_states %>%
@@ -276,9 +260,6 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
           metric == input$geo_lower_metric,
           tenure == input$geo_lower_tenure,
           geography == "Australia"
-        ) %>%
-        geo_keep_largest_estimate(
-          c("survey_year", "metric", "tenure", "geography")
         )
 
       validate(need(nrow(d) > 0, "No lower-income state data for the selected options."))
@@ -330,9 +311,6 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
           metric == input$geo_gcc_metric,
           tenure == input$geo_gcc_tenure,
           geography %in% selected_regions
-        ) %>%
-        geo_keep_largest_estimate(
-          c("survey_year", "metric", "tenure", "geography")
         )
 
       validate(need(nrow(d) > 0, "No capital/rest-of-state data for the selected options."))
