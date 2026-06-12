@@ -668,55 +668,41 @@ if (nrow(f4_result) > 0) {
 # ==============================================================================
 cat("  Processing File 5: Housing stress bands...\n")
 
-#' Parse stress-band table (Files 5)
-#' Layout: Col A = label, Cols B-F = stress bands (%), Col G = >30% summary,
-#'         Col H = household count ('000)
+#' Parse stress-band table (File 5)
+#' Stress-band columns are anchored to the ratio-range header band above the
+#' ESTIMATES marker; rows run down column A with demographic section headers.
 parse_stress_bands <- function(file, sheet, population_label) {
-  band_cols <- c("pct_25_or_less", "pct_25_to_30", "pct_30_to_50",
-                 "pct_over_50", "pct_total", "pct_over_30", "households_000")
+  band_spec <- list(
+    sih_col("pct_25_or_less", "^25 % or less$"),
+    sih_col("pct_25_to_30",   "^More than 25% to 30%$"),
+    sih_col("pct_30_to_50",   "^More than 30% to 50%$"),
+    sih_col("pct_over_50",    "^More than 50%$"),
+    sih_col("pct_total",      "^Total$"),
+    sih_col("pct_over_30",    "^More than 30%$"),
+    sih_col("households_000", "^All households$")
+  )
 
-  raw <- read_excel(file, sheet = sheet, skip = 6,
-                    col_names = FALSE, col_types = "text")
-  raw <- estimate_block_rows(raw)
-
-  results <- list()
-  current_section <- NA_character_
-
-  for (i in seq_len(nrow(raw))) {
-    row <- raw[i, ]
-    label <- str_trim(as.character(row[[1]]))
-
-    if (is.na(label) || label == "" || label == "NA") next
-    if (str_detect(label, "^(ESTIMATES|RELATIVE|Source|Proportion|Exclud|NA)")) next
-
-    vals <- as.character(row[2:min(8, ncol(raw))])
-    has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
-
-    if (!has_data) {
-      current_section <- label
-      next
-    }
-
-    numeric_vals <- as_numeric_clean(vals)
-
-    for (j in seq_along(band_cols)) {
-      if (j > length(numeric_vals)) next
-      if (!is.na(numeric_vals[j])) {
-        results[[length(results) + 1]] <- tibble(
-          survey_year   = "2019-20",
-          value         = numeric_vals[j],
-          metric        = band_cols[j],
-          tenure        = classify_tenure(label),
-          breakdown_var = ifelse(is.na(current_section), "tenure", simplify_section(current_section)),
-          breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
-          geography     = "National",
-          stat_type     = population_label
-        )
-      }
-    }
+  emit <- function(label, unit, section, values) {
+    vals <- values[!is.na(values)]
+    if (length(vals) == 0) return(NULL)
+    tibble(
+      survey_year   = "2019-20",
+      value         = unname(vals),
+      metric        = names(vals),
+      tenure        = classify_tenure(label),
+      breakdown_var = ifelse(is.na(section), "tenure", simplify_section(section)),
+      breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
+      geography     = "National",
+      stat_type     = population_label
+    )
   }
 
-  bind_rows(results)
+  sih_parse_columns_down(
+    file, sheet,
+    column_spec = band_spec,
+    emit = emit,
+    label_skip_pattern = "^(ESTIMATES|RELATIVE|Source|Proportion|Exclud|NA)"
+  )
 }
 
 f5_result <- tryCatch({
@@ -738,73 +724,58 @@ if (nrow(f5_result) > 0) {
 cat("  Processing File 6: Age-tenure breakdown...\n")
 
 f6_result <- tryCatch({
-  age_groups <- c("15_to_24", "25_to_34", "35_to_44", "45_to_54",
-                  "55_to_64", "65_to_74", "75_and_over", "all_households")
+  age_spec <- list(
+    sih_col("15_to_24",       "^15 to 24$"),
+    sih_col("25_to_34",       "^25 to 34$"),
+    sih_col("35_to_44",       "^35 to 44$"),
+    sih_col("45_to_54",       "^45 to 54$"),
+    sih_col("55_to_64",       "^55 to 64$"),
+    sih_col("65_to_74",       "^65 to 74$"),
+    sih_col("75_and_over",    "^75 and over$"),
+    sih_col("all_households", "^All households$")
+  )
 
-  raw <- read_excel(sih_files$f6, sheet = "Table 6.1", skip = 6,
-                    col_names = FALSE, col_types = "text")
-  raw <- estimate_block_rows(raw)
-
-  results <- list()
-  current_section <- NA_character_
-
-  for (i in seq_len(nrow(raw))) {
-    row <- raw[i, ]
-    label <- str_trim(as.character(row[[1]]))
-    unit_val <- str_trim(as.character(row[[2]]))
-
-    if (is.na(label) || label == "" || label == "NA") next
-    if (str_detect(label, "^(ESTIMATES|RELATIVE|Source|Proportion|Exclud)")) next
-
-    vals <- as.character(row[3:min(10, ncol(raw))])
-    has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
-
-    if (!has_data) {
-      current_section <- label
-      next
-    }
-
-    numeric_vals <- as_numeric_clean(vals)
+  emit_age_tenure <- function(label, unit, section, values) {
+    vals <- values[!is.na(values)]
+    if (length(vals) == 0) return(NULL)
     row_label <- str_trim(str_remove(label, "\\s*\\([a-z]\\)$"))
-    section_key <- ifelse(is.na(current_section), "overall",
-                          simplify_section(current_section))
+    section_key <- ifelse(is.na(section), "overall", simplify_section(section))
     row_metric <- case_when(
-      !is.na(unit_val) && unit_val == "$" ~ "weekly_housing_cost",
-      !is.na(unit_val) && unit_val == "'000" ~ "households_000",
-      !is.na(unit_val) && unit_val == "no." &&
+      !is.na(unit) && unit == "$" ~ "weekly_housing_cost",
+      !is.na(unit) && unit == "'000" ~ "households_000",
+      !is.na(unit) && unit == "no." &&
         str_detect(label, regex("bedrooms", ignore_case = TRUE)) ~ "average_bedrooms",
-      !is.na(unit_val) && unit_val == "no." &&
+      !is.na(unit) && unit == "no." &&
         str_detect(label, regex("persons", ignore_case = TRUE)) ~ "average_persons",
-      !is.na(unit_val) && unit_val == "no." ~ "households_in_sample",
+      !is.na(unit) && unit == "no." ~ "households_in_sample",
       TRUE ~ "pct_households"
     )
     row_stat_type <- case_when(
-      !is.na(unit_val) && unit_val == "%" ~ "proportion",
-      !is.na(unit_val) && unit_val == "$" ~ "dollars",
-      !is.na(unit_val) && unit_val == "'000" ~ "count_000",
-      !is.na(unit_val) && unit_val == "no." ~ "count",
+      !is.na(unit) && unit == "%" ~ "proportion",
+      !is.na(unit) && unit == "$" ~ "dollars",
+      !is.na(unit) && unit == "'000" ~ "count_000",
+      !is.na(unit) && unit == "no." ~ "count",
       TRUE ~ "value"
     )
-
-    for (j in seq_along(age_groups)) {
-      if (j > length(numeric_vals)) next
-      if (!is.na(numeric_vals[j])) {
-        age_label <- str_replace_all(age_groups[j], "_", " ")
-        results[[length(results) + 1]] <- tibble(
-          survey_year   = "2019-20",
-          value         = numeric_vals[j],
-          metric        = row_metric,
-          tenure        = classify_tenure(label),
-          breakdown_var = paste0(section_key, "_by_age_group"),
-          breakdown_val = paste(row_label, age_label, sep = " | "),
-          geography     = "National",
-          stat_type     = row_stat_type
-        )
-      }
-    }
+    tibble(
+      survey_year   = "2019-20",
+      value         = unname(vals),
+      metric        = row_metric,
+      tenure        = classify_tenure(label),
+      breakdown_var = paste0(section_key, "_by_age_group"),
+      breakdown_val = paste(row_label, str_replace_all(names(vals), "_", " "),
+                            sep = " | "),
+      geography     = "National",
+      stat_type     = row_stat_type
+    )
   }
 
-  bind_rows(results)
+  sih_parse_columns_down(
+    sih_files$f6, "Table 6.1",
+    column_spec = age_spec,
+    emit = emit_age_tenure,
+    label_skip_pattern = "^(ESTIMATES|RELATIVE|Source|Proportion|Exclud)"
+  )
 }, error = function(e) {
   pipeline_problem("Error processing File 6: ", conditionMessage(e))
   tibble()
