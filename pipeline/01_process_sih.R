@@ -878,65 +878,60 @@ if (nrow(f8_result) > 0) {
 cat("  Processing File 9: Recent home buyers...\n")
 
 f9_result <- tryCatch({
-  # Cols: A=label, B=unit, C-E = First home buyer (New/Established/Total),
-  #       F=spacer, G-I = Changeover (New/Established/Total),
-  #       J=spacer, K-M = All recent (New/Established/Total)
-  buyer_cols <- c("first_home_new", "first_home_established", "first_home_total",
-                  "spacer1",
-                  "changeover_new", "changeover_established", "changeover_total",
-                  "spacer2",
-                  "all_recent_new", "all_recent_established", "all_recent_total")
+  # Buyer-type groups (merged headers, forward-filled) x dwelling-type leaf
+  # headers, anchored above the ESTIMATES marker. Block bounding keeps the
+  # MOE/RSE sub-blocks out of the estimates.
+  buyer_spec <- list(
+    sih_col("first_home_new",         "^New$",         group = "^First home buyer$"),
+    sih_col("first_home_established", "^Established$", group = "^First home buyer$"),
+    sih_col("first_home_total",       "^Total$",       group = "^First home buyer$"),
+    sih_col("changeover_new",         "^New$",         group = "^Changeover buyer$"),
+    sih_col("changeover_established", "^Established$", group = "^Changeover buyer$"),
+    sih_col("changeover_total",       "^Total$",       group = "^Changeover buyer$"),
+    sih_col("all_recent_new",         "^New$",         group = "^All recent home buyer households$"),
+    sih_col("all_recent_established", "^Established$", group = "^All recent home buyer households$"),
+    sih_col("all_recent_total",       "^Total$",       group = "^All recent home buyer households$")
+  )
 
-  raw <- read_excel(sih_files$f9, sheet = "Table 9.1", skip = 6,
-                    col_names = FALSE, col_types = "text")
-
-  results <- list()
-  current_section <- NA_character_
-
-  for (i in seq_len(nrow(raw))) {
-    row <- raw[i, ]
-    label <- str_trim(as.character(row[[1]]))
-    unit_val <- str_trim(as.character(row[[2]]))
-
-    if (is.na(label) || label == "" || label == "NA") next
-    if (str_detect(label, "^(ESTIMATES|RELATIVE|Source|Exclud)")) next
-
-    vals <- as.character(row[3:min(13, ncol(raw))])
-    has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
-
-    if (!has_data) {
-      current_section <- label
-      next
+  emit_recent_buyers <- function(label, unit, section, values) {
+    vals <- values[!is.na(values)]
+    if (length(vals) == 0) return(NULL)
+    # Split buyer column into buyer_type and dwelling_type
+    parts <- str_split(names(vals), "_(?=new|established|total)", n = 2)
+    buyer_type <- vapply(parts, function(p) p[[1]], character(1))
+    dwelling_type <- vapply(parts, function(p) {
+      if (length(p) > 1) p[[2]] else "total"
+    }, character(1))
+    row_metric <- ifelse(is.na(section), label,
+                         str_trim(str_remove(label, "\\s*\\([a-z]\\)$")))
+    # Bare "Total" rows recur under several proportion sections (tenure,
+    # family, age, ...) with otherwise identical keys; qualify them with
+    # their section so each section total stays a distinct observation.
+    if (!is.na(section) && identical(row_metric, "Total")) {
+      row_metric <- paste(row_metric,
+                          str_trim(str_remove(section, "\\s*\\([a-z]\\)$")),
+                          sep = " | ")
     }
-
-    numeric_vals <- as_numeric_clean(vals)
-
-    for (j in seq_along(buyer_cols)) {
-      bname <- buyer_cols[j]
-      if (str_detect(bname, "^spacer") || j > length(numeric_vals)) next
-      if (!is.na(numeric_vals[j])) {
-        # Split buyer column into buyer_type and dwelling_type
-        parts <- str_split(bname, "_(?=new|established|total)", n = 2)[[1]]
-        buyer_type <- parts[1]
-        dwelling_type <- if (length(parts) > 1) parts[2] else "total"
-
-        results[[length(results) + 1]] <- tibble(
-          survey_year   = "2019-20",
-          value         = numeric_vals[j],
-          metric        = ifelse(is.na(current_section), label,
-                                 str_trim(str_remove(label, "\\s*\\([a-z]\\)$"))),
-          tenure        = "owner_mortgage",
-          breakdown_var = paste0("buyer_", buyer_type, "_", dwelling_type),
-          breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
-          geography     = "National",
-          stat_type     = ifelse(!is.na(unit_val) && unit_val == "%", "proportion",
-                                ifelse(!is.na(unit_val) && unit_val == "$", "dollars", "count"))
-        )
-      }
-    }
+    tibble(
+      survey_year   = "2019-20",
+      value         = unname(vals),
+      metric        = row_metric,
+      tenure        = "owner_mortgage",
+      breakdown_var = paste0("buyer_", buyer_type, "_", dwelling_type),
+      breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
+      geography     = "National",
+      stat_type     = ifelse(!is.na(unit) && unit == "%", "proportion",
+                             ifelse(!is.na(unit) && unit == "$", "dollars", "count"))
+    )
   }
 
-  bind_rows(results)
+  sih_parse_columns_down(
+    sih_files$f9, "Table 9.1",
+    column_spec = buyer_spec,
+    emit = emit_recent_buyers,
+    label_skip_pattern = "^(ESTIMATES|RELATIVE|Source|Exclud)",
+    group_offset = 2L
+  )
 }, error = function(e) {
   pipeline_problem("Error processing File 9: ", conditionMessage(e))
   tibble()
