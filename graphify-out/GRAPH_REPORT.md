@@ -1,7 +1,7 @@
 # Graph Report - Housing-Affordability-Dashboard  (2026-06-12)
 
 ## Corpus Check
-- 136 files · ~199,825 words
+- 137 files · ~203,146 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `af893129`
+- Built from commit: `8d01b074`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -315,7 +315,7 @@ Nodes (23): Affordability, Complete UI Review - 21 May 2026, Evidence Base, Find
 
 ### Community 58 - "Community 58"
 Cohesion: 0.25
-Nodes (7): Batch 1 — Quick wins (S items) — [x] DONE 2026-06-12 (branch `track3-batch1-quick-wins`), Batch 2 — CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) — [x] DONE 2026-06-12 (branch `track3-batch2-css-www`, stacked on batch 1), Batch 3 — SIH header-anchored parser rewrite (PIPE-12, priority) — [x] DONE 2026-06-12 (branch `track3-batch3-sih-parser`), Batch 4 — Refresh-workflow hardening (TEST-06/07, PIPE-08) — [x] DONE 2026-06-12, Batch 5 — Polish (opportunistic) — [ ], Track 3 — Hygiene: Implementation Plan, Verification (every batch)
+Nodes (7): Batch 1 — Quick wins (S items) — [x] DONE 2026-06-12 (branch `track3-batch1-quick-wins`), Batch 2 — CSS/JS to `www/` + real tooltips (SHINY-08, UX-12) — [x] DONE 2026-06-12 (branch `track3-batch2-css-www`, stacked on batch 1), Batch 3 — SIH header-anchored parser rewrite (PIPE-12, priority) — [x] DONE 2026-06-12 (branch `track3-batch3-sih-parser`), Batch 4 — Refresh-workflow hardening (TEST-06/07, PIPE-08) — [x] DONE 2026-06-12, Batch 5 — Polish (opportunistic) — [x] DONE 2026-06-12 (3 commits), Track 3 — Hygiene: Implementation Plan, Verification (every batch)
 
 ### Community 59 - "Community 59"
 Cohesion: 0.33

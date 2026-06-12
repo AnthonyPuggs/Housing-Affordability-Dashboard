@@ -39,6 +39,31 @@ mortgage_monthly_payment <- function(loan_amount, annual_rate_pct,
   loan_amount * monthly_rate / (1 - (1 + monthly_rate)^(-n_payments))
 }
 
+# Inverse of mortgage_monthly_payment(): the largest loan an annuity repayment
+# of monthly_payment supports at annual_rate_pct over term_years.
+mortgage_max_loan <- function(monthly_payment, annual_rate_pct, term_years) {
+  monthly_payment <- scenario_scalar(
+    monthly_payment,
+    "monthly_payment",
+    non_negative = TRUE
+  )
+  annual_rate_pct <- scenario_scalar(
+    annual_rate_pct,
+    "annual_rate_pct",
+    non_negative = TRUE
+  )
+  term_years <- scenario_scalar(term_years, "term_years", positive = TRUE)
+
+  n_payments <- term_years * 12
+  monthly_rate <- annual_rate_pct / 100 / 12
+
+  if (monthly_rate == 0) {
+    return(monthly_payment * n_payments)
+  }
+
+  monthly_payment * (1 - (1 + monthly_rate)^(-n_payments)) / monthly_rate
+}
+
 market_entry_scenario <- function(dwelling_price, gross_annual_income,
                                   annual_rate_pct, deposit_pct = 20,
                                   term_years = 30, savings_rate_pct = 15,
@@ -144,6 +169,83 @@ market_entry_scenario <- function(dwelling_price, gross_annual_income,
       deposit / (gross_annual_income * savings_rate_pct / 100),
     total_nominal_interest = monthly_nominal_repayment * n_payments -
       loan_amount,
+    stringsAsFactors = FALSE
+  )
+}
+
+# Stylised serviceability-constrained borrowing capacity: the inverse of the
+# market-entry scenario. Given income, it returns the largest loan whose
+# repayment at the ASSESSED rate (rate + buffer) stays within a flat share of
+# gross income (less any other-debt repayments), and the dwelling price that
+# loan reaches at the chosen deposit. This is a flat repayment-to-income rule,
+# NOT a lender HEM/DTI/net-surplus model, credit decision or approval, and not
+# an official ABS measure.
+borrowing_capacity_scenario <- function(gross_annual_income, annual_rate_pct,
+                                        assessment_buffer_pp = 3,
+                                        deposit_pct = 20, term_years = 30,
+                                        target_repayment_ratio_pct = 30,
+                                        monthly_other_debt = 0) {
+  gross_annual_income <- scenario_scalar(
+    gross_annual_income,
+    "gross_annual_income",
+    positive = TRUE
+  )
+  annual_rate_pct <- scenario_scalar(
+    annual_rate_pct,
+    "annual_rate_pct",
+    non_negative = TRUE
+  )
+  assessment_buffer_pp <- scenario_scalar(
+    assessment_buffer_pp,
+    "assessment_buffer_pp",
+    non_negative = TRUE
+  )
+  deposit_pct <- scenario_scalar(deposit_pct, "deposit_pct", positive = TRUE)
+  term_years <- scenario_scalar(term_years, "term_years", positive = TRUE)
+  target_repayment_ratio_pct <- scenario_scalar(
+    target_repayment_ratio_pct,
+    "target_repayment_ratio_pct",
+    positive = TRUE
+  )
+  monthly_other_debt <- scenario_scalar(
+    monthly_other_debt,
+    "monthly_other_debt",
+    non_negative = TRUE
+  )
+
+  if (deposit_pct >= 100) {
+    stop("deposit_pct must be less than 100.", call. = FALSE)
+  }
+
+  assessment_rate_pct <- annual_rate_pct + assessment_buffer_pp
+  # Flat repayment-to-income cap, net of existing debt commitments. Other debt
+  # can exhaust the cap, leaving no capacity; clamp at zero rather than error.
+  max_monthly_repayment <- max(
+    0,
+    target_repayment_ratio_pct / 100 * gross_annual_income / 12 -
+      monthly_other_debt
+  )
+  max_loan <- mortgage_max_loan(
+    max_monthly_repayment,
+    assessment_rate_pct,
+    term_years
+  )
+  implied_max_price <- max_loan / (1 - deposit_pct / 100)
+  required_deposit <- implied_max_price - max_loan
+
+  data.frame(
+    gross_annual_income = gross_annual_income,
+    annual_rate_pct = annual_rate_pct,
+    assessment_buffer_pp = assessment_buffer_pp,
+    assessment_rate_pct = assessment_rate_pct,
+    deposit_pct = deposit_pct,
+    term_years = term_years,
+    target_repayment_ratio_pct = target_repayment_ratio_pct,
+    monthly_other_debt = monthly_other_debt,
+    max_monthly_repayment = max_monthly_repayment,
+    max_loan = max_loan,
+    implied_max_price = implied_max_price,
+    required_deposit = required_deposit,
     stringsAsFactors = FALSE
   )
 }

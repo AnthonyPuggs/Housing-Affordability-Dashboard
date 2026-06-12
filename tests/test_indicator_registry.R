@@ -246,7 +246,8 @@ test_that("indicator_registry contracts", {
       required_scenario_note_text <- c(
         "R/market_entry_scenarios.R",
         "app-only market-entry scenarios",
-        "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment"
+        "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment",
+        "not a lender HEM/DTI/net-surplus model, credit decision or approval"
       )
       missing_scenario_note_text <- required_scenario_note_text[
         !vapply(required_scenario_note_text, grepl, logical(1),

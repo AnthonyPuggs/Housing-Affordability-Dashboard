@@ -85,7 +85,11 @@ test_that("affordability_module contracts", {
       "affordability-rent_upfront_cash",
       "affordability-rent_years_to_save",
       "affordability-calc_assessed_ratio",
-      "affordability-calc_total_interest"
+      "affordability-calc_total_interest",
+      "affordability-calc_serviceability_threshold",
+      "affordability-borrow_max_loan",
+      "affordability-borrow_max_price",
+      "affordability-borrow_deposit_needed"
     )
     missing_ui_text <- required_ui_text[
       !vapply(required_ui_text, grepl, logical(1), module_ui, fixed = TRUE)
@@ -131,6 +135,10 @@ test_that("affordability_module contracts", {
       "renter_entry_scenario(",
       "renter_entry_scenario_presets(",
       "output$calc_assessed_ratio",
+      'sliderInput(ns("calc_serviceability_threshold")',
+      'textOutput(ns("borrow_max_loan")',
+      "borrowing_capacity_scenario(",
+      "output$borrow_max_loan",
       "deposit_pct = input$serviceability_deposit_pct",
       "term_years = input$serviceability_term",
       "bindCache(input$afford_indices, input$afford_dates, is_dark())",

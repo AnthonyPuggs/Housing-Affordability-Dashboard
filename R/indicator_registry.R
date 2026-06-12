@@ -422,6 +422,7 @@ market_entry_scenario_methodology_note <- function() {
   c(
     "Saved affordability_indices.csv rows remain proxy cost-pressure indexes documented by R/indicator_registry.R.",
     "R/market_entry_scenarios.R defines app-only market-entry scenarios for the Affordability calculator and serviceability sensitivity chart.",
-    "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment."
+    "Assessment buffer and expense inputs are sensitivity assumptions, not a lender assessment.",
+    "The calculator's borrowing-capacity outputs invert the repayment maths: the largest loan whose repayment at the assessed rate (rate + buffer) stays within the chosen share of gross income, less any other debt, and the dwelling price it reaches at the selected deposit. This is a flat repayment-to-income rule, not a lender HEM/DTI/net-surplus model, credit decision or approval."
   )
 }

@@ -294,6 +294,9 @@ affordabilityPageUI <- function(id) {
               sliderInput(ns("calc_assessment_buffer"),
                           "Assessment buffer (pp)",
                           min = 0, max = 5, value = 3, step = 0.25),
+              sliderInput(ns("calc_serviceability_threshold"),
+                          "Max repayment share of income (%)",
+                          min = 20, max = 45, value = 30, step = 1),
               sliderInput(ns("calc_deposit_pct"), "Deposit (%)",
                           min = 5, max = 40, value = 20, step = 1),
               sliderInput(ns("calc_term"), "Loan Term (years)",
@@ -369,6 +372,23 @@ affordabilityPageUI <- function(id) {
               "Scenario Sensitivity",
               note = "Stylised sensitivity chart. Higher values mean a larger expense-adjusted repayment burden; it is not an official ABS/NHHA measure or lender assessment.",
               plotlyOutput(ns("calc_sensitivity"), height = "360px")
+            ),
+            policy_card(
+              "Borrowing capacity (stylised)",
+              note = "Illustrative serviceability-constrained borrowing capacity: the largest loan whose repayment at the assessed rate (rate + buffer) stays within the chosen share of gross income, less any other debt, and the dwelling price it reaches at the selected deposit. A flat repayment-to-income rule, not a lender's HEM/DTI/net-surplus model, credit decision or approval - and not an official ABS measure.",
+              layout_column_wrap(
+                width = 1/3,
+                fill = FALSE,
+                policy_kpi_box("Max Loan (assessed rate)",
+                               textOutput(ns("borrow_max_loan")),
+                               accent = "navy", data_class = "stylised"),
+                policy_kpi_box("Implied Max Dwelling Price",
+                               textOutput(ns("borrow_max_price")),
+                               accent = "blue", data_class = "stylised"),
+                policy_kpi_box("Deposit Needed at That Price",
+                               textOutput(ns("borrow_deposit_needed")),
+                               accent = "teal", data_class = "stylised")
+              )
             )
           ),
           conditionalPanel(
@@ -518,6 +538,27 @@ affordabilityPageServer <- function(id, is_dark) {
     output$calc_lvr            <- renderText(fmt_pct(calc_vals()$lvr_pct, 1))
     output$calc_total_interest <- renderText(fmt_dollar(calc_vals()$total_nominal_interest))
     output$calc_deposit_amt    <- renderText(fmt_dollar(calc_vals()$deposit))
+
+    borrow_vals <- reactive({
+      tryCatch(
+        borrowing_capacity_scenario(
+          gross_annual_income = input$calc_income,
+          annual_rate_pct = input$calc_rate,
+          assessment_buffer_pp = input$calc_assessment_buffer,
+          deposit_pct = input$calc_deposit_pct,
+          term_years = input$calc_term,
+          target_repayment_ratio_pct = input$calc_serviceability_threshold,
+          monthly_other_debt = input$calc_monthly_debt
+        ),
+        error = function(e) {
+          validate(need(FALSE, conditionMessage(e)))
+        }
+      )
+    })
+
+    output$borrow_max_loan       <- renderText(fmt_dollar(borrow_vals()$max_loan))
+    output$borrow_max_price      <- renderText(fmt_dollar(borrow_vals()$implied_max_price))
+    output$borrow_deposit_needed <- renderText(fmt_dollar(borrow_vals()$required_deposit))
 
     rent_vals <- reactive({
       tryCatch(
