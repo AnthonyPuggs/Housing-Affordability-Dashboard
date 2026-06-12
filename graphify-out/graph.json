@@ -3244,20 +3244,20 @@
       "norm_label": "batch 3 \u2014 sih header-anchored parser rewrite (pipe-12, priority) \u2014 [x] done 2026-06-12 (branch `track3-batch3-sih-parser`)"
     },
     {
-      "label": "Batch 4 \u2014 Refresh-workflow hardening (TEST-06/07, PIPE-08) \u2014 [ ]",
+      "label": "Batch 4 \u2014 Refresh-workflow hardening (TEST-06/07, PIPE-08) \u2014 [x] DONE 2026-06-12",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
       "source_location": "L109",
       "_origin": "ast",
-      "id": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08",
+      "id": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08_x_done_2026_06_12",
       "community": 58,
-      "norm_label": "batch 4 \u2014 refresh-workflow hardening (test-06/07, pipe-08) \u2014 [ ]"
+      "norm_label": "batch 4 \u2014 refresh-workflow hardening (test-06/07, pipe-08) \u2014 [x] done 2026-06-12"
     },
     {
       "label": "Batch 5 \u2014 Polish (opportunistic) \u2014 [ ]",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L113",
+      "source_location": "L121",
       "_origin": "ast",
       "id": "docs_track3_plan_batch_5_polish_opportunistic",
       "community": 58,
@@ -3267,7 +3267,7 @@
       "label": "Verification (every batch)",
       "file_type": "document",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L121",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "docs_track3_plan_verification_every_batch",
       "community": 58,
@@ -17853,19 +17853,19 @@
       "source_file": "docs/track3_plan.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "target": "docs_track3_plan_batch_3_sih_header_anchored_parser_rewrite_pipe_12_priority_x_done_2026_06_12_branch_track3_batch3_sih_parser",
-      "confidence_score": 1.0
+      "target": "docs_track3_plan_batch_3_sih_header_anchored_parser_rewrite_pipe_12_priority_x_done_2026_06_12_branch_track3_batch3_sih_parser"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/track3_plan.md",
-      "source_location": "L58",
+      "source_location": "L109",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_track3_plan_track_3_hygiene_implementation_plan",
-      "target": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08"
+      "target": "docs_track3_plan_batch_4_refresh_workflow_hardening_test_06_07_pipe_08_x_done_2026_06_12",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -25857,5 +25857,5 @@
       "source_file": "docs/national_affordability_score_methodology.md"
     }
   ],
-  "built_at_commit": "9c381b6d47fa432b0af23792c898e1961d51982b"
+  "built_at_commit": "af893129a8470237c52edc0c8b5f30163f311006"
 }

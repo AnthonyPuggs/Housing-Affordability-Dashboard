@@ -9,10 +9,14 @@ on:
 
 permissions:
   contents: write
+  issues: write
+  pull-requests: write
 
 concurrency:
+  # Queue refreshes instead of cancelling: a half-written push or a parser that
+  # is mid-run must finish, not be killed by the next scheduled trigger.
   group: data-refresh-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   refresh:
@@ -20,15 +24,15 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
 
       - name: Set up R
-        uses: r-lib/actions/setup-r@v2
+        uses: r-lib/actions/setup-r@a51a8012b0aab7c32ef9d19bf54da93f3254335e # v2
         with:
           use-public-rspm: true
 
       - name: Restore renv library
-        uses: r-lib/actions/setup-renv@v2
+        uses: r-lib/actions/setup-renv@a51a8012b0aab7c32ef9d19bf54da93f3254335e # v2
 
       - name: Refresh dashboard data
         run: Rscript pipeline/05_driver.R
@@ -45,16 +49,72 @@ jobs:
           Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
 
       - name: Commit refreshed dashboard data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Total changed lines (insertions + deletions) across data CSVs above
+          # which a refresh is treated as a large revision and routed to a PR
+          # for human review rather than pushed straight to main. A routine
+          # weekly append touches only a handful of rows; a mass rewrite (ABS
+          # re-benchmark, series rename, parser change) blows past this.
+          DATA_DIFF_THRESHOLD: '200'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # data_vintage.csv embeds run timestamps, so it changes every run;
           # excluding it from the change gate stops daily no-op commits. It is
           # still committed alongside real data changes.
-          if [ -n "$(git status --porcelain -- 'data/*.csv' ':(exclude)data/data_vintage.csv')" ]; then
-            git add -- 'data/*.csv'
-            git commit -m "data: refresh dashboard inputs"
+          if [ -z "$(git status --porcelain -- 'data/*.csv' ':(exclude)data/data_vintage.csv')" ]; then
+            echo "No dashboard data changes to commit."
+            exit 0
+          fi
+
+          # Size the revision from the unstaged working-tree diff (excluding the
+          # timestamp-only vintage file). numstat prints added<TAB>deleted per
+          # file; binary files print '-', which awk coerces to 0.
+          changed_lines=$(git diff --numstat -- 'data/*.csv' ':(exclude)data/data_vintage.csv' \
+            | awk '{ added += $1; deleted += $2 } END { print added + deleted + 0 }')
+          echo "Changed data lines (excl. vintage): ${changed_lines} (threshold ${DATA_DIFF_THRESHOLD})"
+
+          git add -- 'data/*.csv'
+          git commit -m "data: refresh dashboard inputs"
+
+          if [ "${changed_lines}" -le "${DATA_DIFF_THRESHOLD}" ]; then
+            # Routine refresh: rebase onto any commit that landed on the branch
+            # while this run was working, then push.
+            git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
           else
-            echo "No dashboard data changes to commit."
+            # Large revision: open a PR for review instead of pushing a mass
+            # rewrite straight to main.
+            branch="data-refresh/$(date -u +%Y%m%d-%H%M%S)"
+            git push origin "HEAD:${branch}"
+            gh pr create \
+              --base "${GITHUB_REF_NAME}" \
+              --head "${branch}" \
+              --title "data: large dashboard refresh (${changed_lines} changed lines)" \
+              --body "Automated data refresh changed ${changed_lines} lines, exceeding the ${DATA_DIFF_THRESHOLD}-line review threshold. Inspect the data diff before merging."
+          fi
+
+      - name: Report refresh failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          run_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          # Ensure the tracking label exists (no-op if it already does).
+          gh label create data-refresh-failure \
+            --color B60205 \
+            --description "Scheduled dashboard data refresh failed" 2>/dev/null || true
+          # Comment on the existing open failure issue if there is one, so
+          # repeated failures thread instead of spamming new issues.
+          existing=$(gh issue list --state open --label data-refresh-failure \
+            --json number --jq '.[0].number')
+          if [ -n "${existing}" ]; then
+            gh issue comment "${existing}" \
+              --body "Scheduled data refresh failed again: ${run_url}"
+          else
+            gh issue create \
+              --title "Scheduled data refresh failed" \
+              --label data-refresh-failure \
+              --body "The scheduled dashboard data refresh workflow failed. Run log: ${run_url}"
           fi

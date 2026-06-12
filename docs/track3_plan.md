@@ -106,9 +106,17 @@ removed. Deviations and findings beyond the plan:
 
 **Commit phasing:** (1) engine + Files 3/4, (2) Files 5/6, (3) File 11, (4) File 9, (5) Files 1/12, (6) Files 8/13 + quality parsers, (7) ratchet deletion + fixtures + workaround removal, (8) benchmark expansion.
 
-## Batch 4 — Refresh-workflow hardening (TEST-06/07, PIPE-08) — [ ]
+## Batch 4 — Refresh-workflow hardening (TEST-06/07, PIPE-08) — [x] DONE 2026-06-12
 
 `.github/workflows/data-refresh.yml`: `git pull --rebase` before push; `cancel-in-progress: false` (queue); `if: failure()` step opening/commenting a GitHub issue; diff-threshold guard (`git diff --numstat -- data/`) → open PR instead of direct push for large revisions; pin actions to commit SHAs (with version comments) in both workflows. Same commit: update `tests/test_data_refresh_workflow.R` — natural moment to convert it to structural YAML parsing (TEST-09 start).
+
+**Implementation notes (2026-06-12):**
+- Actions pinned to SHAs (resolved via the GitHub git-refs API): `actions/checkout@df4cb1c…` (v6), `r-lib/actions/setup-r` + `setup-renv@a51a8012…` (v2 — same r-lib/actions monorepo SHA, different subpaths). Pinned in **both** workflows.
+- `permissions` gained `issues: write` (failure issue) and `pull-requests: write` (large-revision PR).
+- Diff-threshold guard: `DATA_DIFF_THRESHOLD: '200'` env. `git diff --numstat` (unstaged, excluding `data_vintage.csv`) summed via awk → `≤` threshold pushes to main after `git pull --rebase origin $GITHUB_REF_NAME`; `>` threshold pushes a `data-refresh/<utc-timestamp>` branch and `gh pr create`s for review. 200 chosen because a routine weekly append touches a handful of rows; a mass rewrite (ABS re-benchmark / series rename / parser change) blows past it.
+- `if: failure()` step ensures a `data-refresh-failure` label (`gh label create … || true`), then comments the existing open issue if one exists (threads repeat failures) else opens a new one — both with the run-log URL.
+- Test rewritten to `yaml::read_yaml()` structural assertions (triggers/permissions/concurrency/SHA-pinned `uses`/`if: failure()` step), plus substring checks on the concatenated `run:` shell text (rebase/numstat/`gh pr create`/`gh issue`) which is inherently unstructured. Gotcha: the YAML key `on:` resolves to boolean `true`, so the yaml package stores triggers under name `"TRUE"` — `workflow_triggers()` helper fetches by either spelling. Added a second `test_that` asserting `ci.yml` actions are SHA-pinned with version comments.
+- Verification: new test green (16 + 3); release checklist exit 0; both YAMLs parse. Full suite has one **pre-existing** failure (`test_server_reactives.R:122`, plotly `event_register`) confirmed to reproduce on the clean pre-batch state — unrelated to this batch.
 
 ## Batch 5 — Polish (opportunistic) — [ ]
 
