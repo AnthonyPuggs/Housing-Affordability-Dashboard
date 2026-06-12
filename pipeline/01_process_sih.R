@@ -11,6 +11,10 @@
 
 cat("--- Processing SIH workbooks ---\n")
 
+# Header-anchored layout engine (read_sheet_raw, anchor_columns,
+# find_block_bounds, sih_parse_columns_down, sih_assert*).
+source(project_path("pipeline", "sih_layouts.R"))
+
 # --- File paths ---------------------------------------------------------------
 sih_files <- list(
   f1  = list.files(SIH_DIR, pattern = "^1\\.", full.names = TRUE),
@@ -588,59 +592,40 @@ if (nrow(f1_result) > 0) {
 cat("  Processing File 3: Housing costs...\n")
 
 #' Parse a cross-sectional table with tenure columns (Files 3, 4)
-#' Layout: Col A = label, Col B = unit, Cols C-E = Owner subtypes,
-#'         Col F = spacer, Cols G-I = Renter subtypes, Col J = All households
+#' Columns are anchored to the tenure header band above the ESTIMATES marker;
+#' rows run down column A with demographic section headers.
 parse_tenure_crosstab <- function(file, sheet, metric, stat_type) {
-  tenure_cols <- c("owner_outright", "owner_mortgage", "owner_total",
-                   "spacer",
-                   "renter_social", "renter_private", "renter_total",
-                   "all")
+  tenure_spec <- list(
+    sih_col("owner_outright", "^Owner without a mortgage"),
+    sih_col("owner_mortgage", "^Owner with a mortgage"),
+    sih_col("owner_total",    "^Total owners"),
+    sih_col("renter_social",  "^State or territory housing"),
+    sih_col("renter_private", "^Private landlord"),
+    sih_col("renter_total",   "^Total renters"),
+    sih_col("all",            "^All households")
+  )
 
-  raw <- read_excel(file, sheet = sheet, skip = 6,
-                    col_names = FALSE, col_types = "text")
-  raw <- estimate_block_rows(raw)
-
-  results <- list()
-  current_section <- NA_character_
-
-  for (i in seq_len(nrow(raw))) {
-    row <- raw[i, ]
-    label <- str_trim(as.character(row[[1]]))
-    unit_val <- str_trim(as.character(row[[2]]))
-
-    if (is.na(label) || label == "" || label == "NA") next
-    if (str_detect(label, "^(ESTIMATES|RELATIVE|Source|Mean|Median|Proportion|Exclud)")) next
-
-    # Get values from cols 3-10
-    vals <- as.character(row[3:min(10, ncol(raw))])
-    has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
-
-    if (!has_data) {
-      current_section <- label
-      next
-    }
-
-    numeric_vals <- as_numeric_clean(vals)
-
-    for (j in seq_along(tenure_cols)) {
-      tname <- tenure_cols[j]
-      if (tname == "spacer" || j > length(numeric_vals)) next
-      if (!is.na(numeric_vals[j])) {
-        results[[length(results) + 1]] <- tibble(
-          survey_year   = "2019-20",
-          value         = numeric_vals[j],
-          metric        = metric,
-          tenure        = tname,
-          breakdown_var = ifelse(is.na(current_section), "overall", simplify_section(current_section)),
-          breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
-          geography     = "National",
-          stat_type     = stat_type
-        )
-      }
-    }
+  emit <- function(label, unit, section, values) {
+    vals <- values[!is.na(values)]
+    if (length(vals) == 0) return(NULL)
+    tibble(
+      survey_year   = "2019-20",
+      value         = unname(vals),
+      metric        = metric,
+      tenure        = names(vals),
+      breakdown_var = ifelse(is.na(section), "overall", simplify_section(section)),
+      breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
+      geography     = "National",
+      stat_type     = stat_type
+    )
   }
 
-  bind_rows(results)
+  sih_parse_columns_down(
+    file, sheet,
+    column_spec = tenure_spec,
+    emit = emit,
+    label_skip_pattern = "^(ESTIMATES|RELATIVE|Source|Mean|Median|Proportion|Exclud)"
+  )
 }
 
 f3_result <- tryCatch({
