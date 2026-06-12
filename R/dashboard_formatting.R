@@ -139,25 +139,31 @@ extract_city <- function(s) {
              str_trim())
 }
 
+# Colour-blind-safe city palette (UX-02). Replaces the old ColorBrewer Set1
+# (Sydney red vs Brisbane green were the classic red-green confusion pair) with
+# the Okabe-Ito qualitative palette — the same colour-blind-safe family the
+# semantic chart colours use — plus neutral grey for the eighth capital. The
+# national reference series is black (light mode) and a light tone in dark mode.
 city_colours <- c(
-  "Sydney" = "#e41a1c",
-  "Melbourne" = "#377eb8",
-  "Brisbane" = "#4daf4a",
-  "Adelaide" = "#984ea3",
-  "Perth" = "#ff7f00",
-  "Hobart" = "#a65628",
-  "Darwin" = "#f781bf",
-  "Canberra" = "#999999",
+  "Sydney" = "#0072B2",     # Okabe-Ito blue
+  "Melbourne" = "#E69F00",  # Okabe-Ito orange
+  "Brisbane" = "#009E73",   # Okabe-Ito bluish green
+  "Adelaide" = "#CC79A7",   # Okabe-Ito reddish purple
+  "Perth" = "#D55E00",      # Okabe-Ito vermillion
+  "Hobart" = "#56B4E9",     # Okabe-Ito sky blue
+  "Darwin" = "#F0E442",     # Okabe-Ito yellow
+  "Canberra" = "#999999",   # neutral grey (8th, achromatic so CB-distinct)
   "Weighted average of eight capital cities" = "#000000",
+  "National Avg" = "#000000",
   # State/territory series (all-dwellings mean-price indexes) reuse their
   # capital's hue so the palette stays stable across dwelling-type views.
-  "New South Wales" = "#e41a1c",
-  "Victoria" = "#377eb8",
-  "Queensland" = "#4daf4a",
-  "South Australia" = "#984ea3",
-  "Western Australia" = "#ff7f00",
-  "Tasmania" = "#a65628",
-  "Northern Territory" = "#f781bf",
+  "New South Wales" = "#0072B2",
+  "Victoria" = "#E69F00",
+  "Queensland" = "#009E73",
+  "South Australia" = "#CC79A7",
+  "Western Australia" = "#D55E00",
+  "Tasmania" = "#56B4E9",
+  "Northern Territory" = "#F0E442",
   "Australian Capital Territory" = "#999999",
   "Australia" = "#000000"
 )
@@ -169,6 +175,7 @@ city_palette <- function(dark = FALSE) {
   colours <- city_colours
   if (isTRUE(dark)) {
     colours[["Weighted average of eight capital cities"]] <- "#E8EEF7"
+    colours[["National Avg"]] <- "#E8EEF7"
     colours[["Australia"]] <- "#E8EEF7"
   }
   colours

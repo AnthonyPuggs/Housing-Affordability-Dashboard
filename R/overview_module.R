@@ -615,11 +615,10 @@ overviewPageServer <- function(id, is_dark) {
         input$overview_price_transform
       )
 
-      price_colours <- c(
-        "Sydney" = "#2196F3", "Melbourne" = "#7B1FA2", "Brisbane" = "#FF5722",
-        "Adelaide" = "#984ea3", "Perth" = "#ff7f00", "Hobart" = "#a65628",
-        "Darwin" = "#f781bf", "Canberra" = "#999999", "National Avg" = "#4CAF50"
-      )
+      # Single colour-blind-safe source of city colours (UX-02), shared with the
+      # Price Trends and Rental Market charts. "National Avg" is also drawn as a
+      # dashed line, so it reads distinctly from the capitals.
+      price_colours <- city_palette(is_dark())
 
       p <- build_overview_median_prices_plot(
         d,

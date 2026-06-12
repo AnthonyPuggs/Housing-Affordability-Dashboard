@@ -350,6 +350,41 @@ html[data-bs-theme='dark'] .irs--shiny .irs-grid-text {
 .policy-kpi-teal { border-left-color: #1F9D8C !important; }
 .policy-kpi-navy { border-left-color: #17415F !important; }
 .policy-kpi-purple { border-left-color: #7B5AA6 !important; }
+/* Official-vs-stylised KPI badge (UX-08): a small pill on the KPI title that
+   marks whether the figure is an official ABS/NHHA cell or a stylised scenario. */
+.policy-kpi-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.04rem 0.42rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.policy-kpi-badge-official {
+  color: #0a4f78;
+  background-color: rgba(0, 114, 178, 0.14);
+  border-color: rgba(0, 114, 178, 0.45);
+}
+.policy-kpi-badge-stylised {
+  color: #8a5a00;
+  background-color: rgba(230, 159, 0, 0.18);
+  border-color: rgba(230, 159, 0, 0.55);
+}
+html[data-bs-theme='dark'] .policy-kpi-badge-official {
+  color: #9ed2f0;
+  background-color: rgba(86, 180, 233, 0.18);
+  border-color: rgba(86, 180, 233, 0.5);
+}
+html[data-bs-theme='dark'] .policy-kpi-badge-stylised {
+  color: #f4c46a;
+  background-color: rgba(230, 159, 0, 0.22);
+  border-color: rgba(230, 159, 0, 0.55);
+}
 .value-box .value-box-value { font-size: 1.55rem; font-weight: 750; }
 .value-box .value-box-title { font-size: 0.82rem; opacity: 0.9; font-weight: 700; }
 .kpi-subtitle { font-size: 0.76rem; color: var(--app-muted); margin-top: 2px; margin-bottom: 0; }

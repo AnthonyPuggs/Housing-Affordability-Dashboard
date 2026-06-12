@@ -31,7 +31,8 @@ test_that("visual_semantics contracts", {
       "stress_band_palette",
       "burden_gradient_colours",
       "cost_pressure_palette",
-      "rental_stress_gradient_colours"
+      "rental_stress_gradient_colours",
+      "tile_contrast_text_colour"
     )
     missing_functions <- required_functions[
       !exists_in(required_functions, environment())
@@ -49,6 +50,17 @@ test_that("visual_semantics contracts", {
                   paste(missing_names, collapse = ", ")))
       check(all(grepl("^#[0-9A-Fa-f]{6}$", colours[required_names])),
             "Required semantic colours must be six-digit hex colours")
+    }
+
+    if (exists("tile_contrast_text_colour", mode = "function")) {
+      # Diverging burden fill (blue low -> orange mid -> vermillion high): the
+      # dark ends must get light ink and the light mid dark ink (UX-11).
+      txt <- tile_contrast_text_colour(c(8, 25, 45, NA),
+                                       "#0072B2", "#E69F00", "#D55E00",
+                                       midpoint = 25)
+      check(identical(txt, c("#FFFFFF", "#172033", "#FFFFFF", "#172033")),
+            paste("tile_contrast_text_colour() must light-ink dark tiles and",
+                  "dark-ink light tiles; got", paste(txt, collapse = ", ")))
     }
 
     if (exists("kpi_change_class", mode = "function")) {

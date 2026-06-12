@@ -42,17 +42,45 @@ policy_info_icon <- function(label, tooltip, class = NULL) {
   )
 }
 
+# Official-vs-stylised marker (UX-08): the dashboard's core credibility rule is
+# that official ABS/NHHA pass-through cells and stylised modelled scenarios must
+# never read as the same thing. data_class adds a small labelled badge and a
+# screen-reader description so the distinction is carried on the KPI itself, not
+# only in surrounding prose. Default "none" leaves existing KPIs unchanged.
 policy_kpi_box <- function(title, value, subtitle = NULL, change = NULL,
                            accent = c("blue", "teal", "navy", "purple"),
+                           data_class = c("none", "official", "stylised"),
                            class = NULL) {
   accent <- match.arg(accent)
+  data_class <- match.arg(data_class)
+
+  title_tag <- if (identical(data_class, "none")) {
+    title
+  } else {
+    aria <- if (identical(data_class, "official")) {
+      "Official ABS or NHHA measure"
+    } else {
+      "Stylised modelled scenario, not an official ABS measure or lender assessment"
+    }
+    tagList(
+      tags$span(title),
+      tags$span(
+        if (identical(data_class, "official")) "Official" else "Stylised",
+        class = paste0("policy-kpi-badge policy-kpi-badge-", data_class),
+        `aria-label` = aria
+      )
+    )
+  }
+
   value_box(
-    title = title,
+    title = title_tag,
     value = value,
     if (!is.null(subtitle)) subtitle,
     if (!is.null(change)) change,
-    class = policy_compact_class("policy-kpi", paste0("policy-kpi-", accent),
-                                 class),
+    class = policy_compact_class(
+      "policy-kpi", paste0("policy-kpi-", accent),
+      if (!identical(data_class, "none")) paste0("policy-kpi-", data_class),
+      class),
     fill = FALSE
   )
 }

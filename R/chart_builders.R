@@ -721,14 +721,27 @@ build_distributional_stress_plot <- function(data, dark = FALSE) {
 
 build_cost_burden_heatmap_plot <- function(data, dark = FALSE) {
   burden_cols <- burden_gradient_colours()
+  midpoint <- 25
+
+  # Port of the rental-stress heatmap's contrast-aware labels (UX-11): fixed
+  # black text is unreadable on the dark ends of the diverging fill (blue lows
+  # and vermillion highs). Reproduce scale_fill_gradient2()'s diverging
+  # interpolation around the midpoint, then pick each tile's label colour from
+  # the fill's relative luminance (white on dark tiles, ink on light).
+  data$tile_text_colour <- tile_contrast_text_colour(
+    data$value, burden_cols[["low"]], burden_cols[["mid"]],
+    burden_cols[["high"]], midpoint = midpoint
+  )
 
   ggplot(data, aes(x = tenure_label, y = breakdown_val, fill = value)) +
     geom_tile(color = "white", linewidth = 0.5) +
-    geom_text(aes(label = round(value, 1)), size = 3.5) +
+    geom_text(aes(label = round(value, 1), color = tile_text_colour),
+              size = 3.5, show.legend = FALSE) +
+    scale_color_identity() +
     scale_fill_gradient2(low = burden_cols[["low"]],
                          mid = burden_cols[["mid"]],
                          high = burden_cols[["high"]],
-                         midpoint = 25, name = "Cost/Income %") +
+                         midpoint = midpoint, name = "Cost/Income %") +
     labs(x = NULL, y = NULL) +
     theme_afford(dark) +
     theme(axis.text.x = element_text(angle = 30, hjust = 1))

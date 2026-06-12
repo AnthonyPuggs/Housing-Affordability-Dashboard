@@ -105,6 +105,28 @@ test_that("ui_style_system contracts", {
           "policy_info_icon() must expose tooltip text through an accessible label")
     check(grepl("tabindex=\"0\"", info_icon_html, fixed = TRUE),
           "policy_info_icon() must be keyboard focusable")
+
+    # Official-vs-stylised KPI marker (UX-08).
+    stylised_kpi_html <- paste(as.character(
+      policy_kpi_box("Years to Save Deposit", "12", data_class = "stylised")
+    ), collapse = "\n")
+    check(grepl("policy-kpi-badge-stylised", stylised_kpi_html, fixed = TRUE),
+          "policy_kpi_box(data_class='stylised') must render the stylised badge")
+    check(grepl(">Stylised<", stylised_kpi_html, fixed = TRUE),
+          "stylised KPI badge must be labelled 'Stylised'")
+    check(grepl("aria-label=\"Stylised modelled scenario",
+                stylised_kpi_html, fixed = TRUE),
+          "stylised KPI badge must carry an accessible description")
+    official_kpi_html <- paste(as.character(
+      policy_kpi_box("Rental stress", "30%", data_class = "official")
+    ), collapse = "\n")
+    check(grepl("policy-kpi-badge-official", official_kpi_html, fixed = TRUE),
+          "policy_kpi_box(data_class='official') must render the official badge")
+    plain_kpi_html <- paste(as.character(
+      policy_kpi_box("Plain KPI", "1")
+    ), collapse = "\n")
+    check(!grepl("policy-kpi-badge", plain_kpi_html, fixed = TRUE),
+          "policy_kpi_box() default must not render a data-class badge")
   }
 
   app_text <- if (file.exists(app_path)) read_text(app_path) else ""
