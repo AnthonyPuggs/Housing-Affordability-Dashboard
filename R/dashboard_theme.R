@@ -26,15 +26,54 @@ theme_afford <- function(dark = FALSE) {
     )
 }
 
+# Shared Plotly modebar policy (UX-07): the same toolbar on every chart. Drop
+# the Plotly logo and the selection/auto-scale/spike tools that do nothing
+# useful on these static time-series and bar charts, while keeping zoom, pan,
+# reset and PNG download for exploration. Interactive charts that need a
+# stricter bar (e.g. the click-to-filter score chart) re-`config()` on top.
+dashboard_modebar_buttons_removed <- function() {
+  c("select2d", "lasso2d", "autoScale2d",
+    "hoverClosestCartesian", "hoverCompareCartesian", "toggleSpikelines")
+}
+
+# Conditional date-axis spec (UX-06): pick tick density and label format from
+# the span the data actually covers, so a few-year monthly series is not forced
+# onto the five-year/year-label ticks tuned for multi-decade series. Returns a
+# list(tickformat, dtick) for use as `date_axis` in plotly_layout(); callers
+# that omit it keep the long-history default (year labels every five years).
+# Note: for ggplotly charts the ggplot scale_x_date() controls the rendered
+# tick text (Plotly emits explicit array ticks); this spec sets the Plotly-level
+# x-axis format used by native plot_ly date axes and date hover formatting.
+date_axis_config <- function(dates) {
+  dates <- suppressWarnings(as.Date(dates))
+  dates <- dates[!is.na(dates)]
+  if (length(dates) < 2) {
+    return(list(tickformat = "%Y", dtick = "M60"))
+  }
+  span_years <- as.numeric(max(dates) - min(dates)) / 365.25
+  if (span_years <= 3) {
+    list(tickformat = "%b %Y", dtick = "M3")
+  } else if (span_years <= 12) {
+    list(tickformat = "%Y", dtick = "M12")
+  } else {
+    list(tickformat = "%Y", dtick = "M60")
+  }
+}
+
 plotly_layout <- function(p, dark = FALSE, hovermode = "x",
                           force_markers = TRUE,
-                          disable_hovertemplate = TRUE) {
+                          disable_hovertemplate = TRUE,
+                          date_axis = NULL) {
   bg <- if (dark) "#111B2E" else "#FFFFFF"
   fg <- if (dark) "#E3EBF4" else "#374151"
   grid <- if (dark) "#253A56" else "#E5EAF1"
 
+  # Default to the long-history year ticks; an explicit date_axis spec (e.g.
+  # from date_axis_config()) overrides format/density for shorter series.
+  tickformat <- if (is.null(date_axis)) "%Y" else date_axis$tickformat
+  dtick <- if (is.null(date_axis)) "M60" else date_axis$dtick
   xax <- list(gridcolor = grid, title = "",
-              tickformat = "%Y", dtick = "M60", tickangle = 0)
+              tickformat = tickformat, dtick = dtick, tickangle = 0)
   yax <- list(gridcolor = grid)
 
   layout_args <- list(
@@ -62,7 +101,11 @@ plotly_layout <- function(p, dark = FALSE, hovermode = "x",
     }
   }
 
-  result <- result %>% plotly::config(responsive = TRUE)
+  result <- result %>% plotly::config(
+    responsive = TRUE,
+    displaylogo = FALSE,
+    modeBarButtonsToRemove = dashboard_modebar_buttons_removed()
+  )
   result$x$layout$hovermode <- hovermode
   result
 }

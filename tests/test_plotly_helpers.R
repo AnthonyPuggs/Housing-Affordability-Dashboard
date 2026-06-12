@@ -67,6 +67,41 @@ test_that("plotly_helpers contracts", {
           "dashboard_ggplotly() must preserve the default Plotly hovermode")
     check(identical(hover_fig$x$layout$hovermode, "closest"),
           "dashboard_ggplotly() must forward a custom Plotly hovermode")
+
+    # Shared modebar policy (UX-07): every chart hides the Plotly logo and the
+    # noisy selection/auto-scale tools via the central plotly_layout() hook.
+    check(exists("dashboard_modebar_buttons_removed", mode = "function"),
+          "dashboard_modebar_buttons_removed() must be defined")
+    check(isFALSE(light_fig$x$config$displaylogo),
+          "charts must hide the Plotly logo (displaylogo = FALSE)")
+    removed <- light_fig$x$config$modeBarButtonsToRemove
+    check(all(c("select2d", "lasso2d", "autoScale2d") %in% removed),
+          "charts must remove the selection/auto-scale modebar tools")
+
+    # Conditional date axis (UX-06): date_axis_config() scales tick density to
+    # the data span. Tested as a pure span->spec helper; the spec is plumbed
+    # through dashboard_ggplotly()/plotly_layout() (for native Plotly date axes
+    # and hover formatting — ggplot's own scale_x_date governs ggplotly tick
+    # text), and forwarding it must still yield a valid widget.
+    check(exists("date_axis_config", mode = "function"),
+          "date_axis_config() must be defined")
+    short_axis <- date_axis_config(as.Date(c("2021-01-01", "2023-06-01")))
+    check(identical(short_axis$tickformat, "%b %Y") &&
+            identical(short_axis$dtick, "M3"),
+          "a <=3 year span must use month-year ticks every quarter")
+    mid_axis <- date_axis_config(as.Date(c("2016-01-01", "2024-01-01")))
+    check(identical(mid_axis$tickformat, "%Y") &&
+            identical(mid_axis$dtick, "M12"),
+          "a 3-12 year span must use yearly ticks")
+    long_axis <- date_axis_config(as.Date(c("1995-01-01", "2024-01-01")))
+    check(identical(long_axis$dtick, "M60"),
+          "a multi-decade span must keep five-year ticks")
+    check(identical(date_axis_config(as.Date("2020-01-01"))$dtick, "M60"),
+          "a single/empty date span must fall back to the long-history default")
+    dated_fig <- dashboard_ggplotly(p, dark = FALSE, tooltip = c("x", "y"),
+                                    date_axis = short_axis)
+    check(inherits(dated_fig, "plotly"),
+          "dashboard_ggplotly() must accept a conditional date axis spec")
   }
 
   if (file.exists(description_path)) {
