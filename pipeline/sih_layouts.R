@@ -25,6 +25,11 @@
 SIH_ESTIMATE_KEY <- c("survey_year", "metric", "tenure", "breakdown_var",
                       "breakdown_val", "geography", "stat_type")
 
+# 10-column logical key for sampling-error metadata (quality) rows.
+SIH_QUALITY_KEY <- c("source_file", "source_table", "survey_year", "metric",
+                     "tenure", "breakdown_var", "breakdown_val", "geography",
+                     "stat_type", "quality_measure")
+
 # Rows that end an ESTIMATES block: sampling-error sub-blocks and footnote
 # furniture. Mirrors the retired estimate_block_rows() stop set.
 SIH_ESTIMATE_STOP_PATTERN <- paste0(
@@ -68,15 +73,21 @@ require_label_row <- function(raw, pattern, file, sheet, what) {
 
 # First/last data-row indices of a labelled block. Defaults bound the
 # ESTIMATES block; quality parsers swap the patterns to bound MOE/RSE blocks.
+# A NULL stop_pattern runs the block to the end of the sheet.
 find_block_bounds <- function(raw, file, sheet,
                               start_pattern = "^ESTIMATES",
                               stop_pattern = SIH_ESTIMATE_STOP_PATTERN,
                               what = "ESTIMATES block") {
   labels <- sih_label_column(raw)
   start <- require_label_row(raw, start_pattern, file, sheet, what)
-  stops <- which(seq_along(labels) > start &
-                   str_detect(labels, regex(stop_pattern, ignore_case = TRUE)))
-  last <- if (length(stops) > 0) stops[[1L]] - 1L else nrow(raw)
+  last <- nrow(raw)
+  if (!is.null(stop_pattern)) {
+    stops <- which(seq_along(labels) > start &
+                     str_detect(labels, regex(stop_pattern, ignore_case = TRUE)))
+    if (length(stops) > 0) {
+      last <- stops[[1L]] - 1L
+    }
+  }
   sih_assert(last >= start + 1L, file, sheet, paste0(what, " contains no rows"))
   c(first = start + 1L, last = last)
 }
@@ -228,6 +239,70 @@ sih_parse_years_across <- function(file, sheet, emit,
   }
 
   out <- post_process(bind_rows(results))
+  sih_assert(nrow(out) > 0, file, sheet, "no estimate rows parsed")
+  sih_assert_no_duplicates(out, file, sheet, key_cols)
+  out
+}
+
+# ------------------------------------------------------------------------------
+# Engine: state-sectioned cross-section sheets (File 8)
+# ------------------------------------------------------------------------------
+# Like columns-down, but label-only rows naming a state/territory switch the
+# geography context (and reset the breakdown section) instead of becoming a
+# section header. `state_map` maps header abbreviations to output names;
+# `state_pattern` is the legacy fallback match for unmapped abbreviations.
+sih_parse_state_sections <- function(file, sheet, column_spec, emit,
+                                     label_skip_pattern,
+                                     state_map,
+                                     state_pattern,
+                                     header_offsets = c(1L, 2L),
+                                     key_cols = SIH_ESTIMATE_KEY) {
+  raw <- read_sheet_raw(file, sheet)
+  est_row <- require_label_row(raw, "^ESTIMATES", file, sheet,
+                               "ESTIMATES block marker")
+  header_rows <- est_row - header_offsets
+  sih_assert(all(header_rows >= 1L), file, sheet,
+             "header band sits above the top of the sheet")
+  cols <- anchor_columns(raw, header_rows, column_spec, file, sheet)
+
+  bounds <- find_block_bounds(raw, file, sheet)
+  block <- raw[bounds[["first"]]:bounds[["last"]], , drop = FALSE]
+
+  results <- list()
+  current_state <- NA_character_
+  current_section <- NA_character_
+
+  for (i in seq_len(nrow(block))) {
+    row <- block[i, ]
+    label <- str_trim(as.character(row[[1]]))
+
+    if (is.na(label) || label == "" || label == "NA") next
+    if (str_detect(label, label_skip_pattern)) next
+
+    values <- as_numeric_clean(
+      vapply(cols, function(k) as.character(row[[k]]), character(1))
+    )
+    names(values) <- names(cols)
+
+    if (all(is.na(values))) {
+      if (label %in% names(state_map) || str_detect(label, state_pattern)) {
+        current_state <- unname(state_map[label])
+        if (is.na(current_state)) current_state <- label
+        current_section <- NA_character_
+      } else {
+        current_section <- label
+      }
+      next
+    }
+
+    emitted <- emit(label = label, section = current_section,
+                    state = current_state, values = values)
+    if (!is.null(emitted) && nrow(emitted) > 0) {
+      results[[length(results) + 1L]] <- emitted
+    }
+  }
+
+  out <- bind_rows(results)
   sih_assert(nrow(out) > 0, file, sheet, "no estimate rows parsed")
   sih_assert_no_duplicates(out, file, sheet, key_cols)
   out
