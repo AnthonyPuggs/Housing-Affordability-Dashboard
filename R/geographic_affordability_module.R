@@ -24,11 +24,11 @@ geo_lower_metric_choices <- c(
   "Median weekly housing cost" = "median_weekly_cost"
 )
 
+# File 11 publishes medians only (Tables 11.1/11.4 weekly cost, 11.2/11.5
+# cost-to-income ratio); there are no mean tables to offer here.
 geo_gcc_metric_choices <- c(
   "Median cost-to-income ratio" = "median_cost_income_ratio",
-  "Median weekly housing cost" = "median_weekly_cost",
-  "Mean cost-to-income ratio" = "mean_cost_income_ratio",
-  "Mean weekly housing cost" = "mean_weekly_cost"
+  "Median weekly housing cost" = "median_weekly_cost"
 )
 
 geo_tenure_choices <- c(
@@ -43,15 +43,13 @@ geo_metric_label <- function(metric) {
          mean_weekly_cost_real = "Real weekly housing cost",
          pct_over_30 = "Households paying more than 30% of income",
          median_cost_income_ratio = "Median cost-to-income ratio",
-         mean_cost_income_ratio = "Mean cost-to-income ratio",
          median_weekly_cost = "Median weekly housing cost",
-         mean_weekly_cost = "Mean weekly housing cost",
          metric)
 }
 
 geo_axis_label <- function(metric) {
   if (metric %in% c("cost_income_ratio", "pct_over_30",
-                    "median_cost_income_ratio", "mean_cost_income_ratio")) {
+                    "median_cost_income_ratio")) {
     return("% of gross income")
   }
   "Weekly housing cost ($)"
@@ -59,7 +57,7 @@ geo_axis_label <- function(metric) {
 
 geo_value_labels <- function(metric) {
   if (metric %in% c("cost_income_ratio", "pct_over_30",
-                    "median_cost_income_ratio", "mean_cost_income_ratio")) {
+                    "median_cost_income_ratio")) {
     return(label_percent(scale = 1, accuracy = 1))
   }
   label_dollar(prefix = "$", accuracy = 1)
@@ -299,8 +297,7 @@ geographicAffordabilityPageServer <- function(id, is_dark) {
             "<br>Survey year: ", survey_year,
             "<br>", geo_metric_label(input$geo_lower_metric), ": ",
             if (input$geo_lower_metric %in% c("pct_over_30",
-                                              "median_cost_income_ratio",
-                                              "mean_cost_income_ratio")) {
+                                              "median_cost_income_ratio")) {
               paste0(number(value, accuracy = 0.1), "%")
             } else {
               dollar(value, accuracy = 1)

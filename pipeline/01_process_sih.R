@@ -952,77 +952,90 @@ if (nrow(f9_result) > 0) {
 cat("  Processing File 11: Geographic breakdowns...\n")
 
 f11_result <- tryCatch({
-  # Column layout: A=label, B=unit,
-  # C-K = GCC areas (Sydney, Melbourne, Brisbane, Adelaide, Perth, Hobart, Darwin, ACT, Total GCC)
-  # L = spacer
-  # M-S = Rest of state (NSW, Vic, Qld, SA, WA, Tas, Total rest)
-  geo_cols <- c("Gr. Sydney", "Gr. Melbourne", "Gr. Brisbane", "Gr. Adelaide",
-                "Gr. Perth", "Gr. Hobart", "Gr. Darwin", "ACT", "Total GCC",
-                "spacer",
-                "Rest of NSW", "Rest of Vic.", "Rest of Qld", "Rest of SA",
-                "Rest of WA", "Rest of Tas.", "Total rest of state")
-
-  sheets_11 <- excel_sheets(sih_files$f11)
-  data_sheets <- sheets_11[str_detect(sheets_11, "Table")]
-
-  # Table metrics mapping
-  table_metrics <- c(
-    "Table 11.1" = "median_weekly_cost",
-    "Table 11.2" = "median_cost_income_ratio",
-    "Table 11.3" = "pct_households_tenure",
-    "Table 11.4" = "pct_households_dwelling",
-    "Table 11.5" = "mean_weekly_cost",
-    "Table 11.6" = "mean_cost_income_ratio"
+  # File 11 holds two distinct layouts: Tables 11.1-11.3 break down greater
+  # capital city areas vs rest of state; Tables 11.4-11.6 break down states
+  # and territories. Each trio is median weekly cost / median cost-to-income
+  # ratio / household proportions. (The legacy positional parser applied the
+  # GCC columns and made-up mean_* metric names to the state tables, so state
+  # medians shipped as GCC means; header anchoring makes that impossible.)
+  gcc_spec <- list(
+    sih_col("Gr. Sydney",          "^Greater Sydney$"),
+    sih_col("Gr. Melbourne",       "^Greater Melbourne$"),
+    sih_col("Gr. Brisbane",        "^Greater Brisbane$"),
+    sih_col("Gr. Adelaide",        "^Greater Adelaide$"),
+    sih_col("Gr. Perth",           "^Greater Perth$"),
+    sih_col("Gr. Hobart",          "^Greater Hobart$"),
+    sih_col("Gr. Darwin",          "^Greater Darwin$"),
+    sih_col("ACT",                 "^ACT$"),
+    sih_col("Total GCC",           "^Total greater capital city areas$"),
+    sih_col("Rest of NSW",         "^Rest of NSW$"),
+    sih_col("Rest of Vic.",        "^Rest of Vic\\.$"),
+    sih_col("Rest of Qld",         "^Rest of Qld$"),
+    sih_col("Rest of SA",          "^Rest of SA$"),
+    sih_col("Rest of WA",          "^Rest of WA$"),
+    sih_col("Rest of Tas.",        "^Rest of Tas\\.$"),
+    sih_col("Total rest of state", "^Total rest of state$")
+  )
+  state_spec <- list(
+    sih_col("New South Wales",              "^NSW$"),
+    sih_col("Victoria",                     "^Vic\\.$"),
+    sih_col("Queensland",                   "^Qld$"),
+    sih_col("South Australia",              "^SA$"),
+    sih_col("Western Australia",            "^WA$"),
+    sih_col("Tasmania",                     "^Tas\\.$"),
+    sih_col("Northern Territory",           "^NT$"),
+    sih_col("Australian Capital Territory", "^ACT$"),
+    sih_col("Australia",                    "^Total Australia$")
   )
 
-  map_dfr(data_sheets, function(sheet_name) {
-    metric <- table_metrics[sheet_name]
-    if (is.na(metric)) metric <- sheet_name
+  f11_layouts <- list(
+    "Table 11.1" = list(spec = gcc_spec, metric = "median_weekly_cost",
+                        stat_type = "median"),
+    "Table 11.2" = list(spec = gcc_spec, metric = "median_cost_income_ratio",
+                        stat_type = "median"),
+    "Table 11.3" = list(spec = gcc_spec, metric = "pct_households_tenure",
+                        stat_type = "mean"),
+    "Table 11.4" = list(spec = state_spec, metric = "median_weekly_cost",
+                        stat_type = "median"),
+    "Table 11.5" = list(spec = state_spec, metric = "median_cost_income_ratio",
+                        stat_type = "median"),
+    "Table 11.6" = list(spec = state_spec, metric = "pct_households_tenure",
+                        stat_type = "mean")
+  )
 
-    raw <- read_excel(sih_files$f11, sheet = sheet_name, skip = 6,
-                      col_names = FALSE, col_types = "text")
+  sheets_11 <- excel_sheets(sih_files$f11)
+  found_tables_11 <- sheets_11[str_detect(sheets_11, "Table")]
+  if (!setequal(found_tables_11, names(f11_layouts))) {
+    stop("File 11 table sheets changed - expected ",
+         paste(names(f11_layouts), collapse = ", "), " but found ",
+         paste(found_tables_11, collapse = ", "), call. = FALSE)
+  }
 
-    results <- list()
-    current_section <- NA_character_
+  map_dfr(names(f11_layouts), function(sheet_name) {
+    layout <- f11_layouts[[sheet_name]]
 
-    for (i in seq_len(nrow(raw))) {
-      row <- raw[i, ]
-      label <- str_trim(as.character(row[[1]]))
-      unit_val <- str_trim(as.character(row[[2]]))
-
-      if (is.na(label) || label == "" || label == "NA") next
-      if (str_detect(label, "^(ESTIMATES|RELATIVE|Source|Exclud|Median|Mean|Proportion)")) next
-
-      vals <- as.character(row[3:min(19, ncol(raw))])
-      has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
-
-      if (!has_data) {
-        current_section <- label
-        next
-      }
-
-      numeric_vals <- as_numeric_clean(vals)
-
-      for (j in seq_along(geo_cols)) {
-        gname <- geo_cols[j]
-        if (gname == "spacer" || j > length(numeric_vals)) next
-        if (!is.na(numeric_vals[j])) {
-          results[[length(results) + 1]] <- tibble(
-            survey_year   = "2019-20",
-            value         = numeric_vals[j],
-            metric        = metric,
-            tenure        = classify_tenure(label),
-            breakdown_var = ifelse(is.na(current_section), "tenure",
-                                   simplify_section(current_section)),
-            breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
-            geography     = gname,
-            stat_type     = ifelse(str_detect(metric, "median"), "median", "mean")
-          )
-        }
-      }
+    emit <- function(label, unit, section, values) {
+      vals <- values[!is.na(values)]
+      if (length(vals) == 0) return(NULL)
+      tibble(
+        survey_year   = "2019-20",
+        value         = unname(vals),
+        metric        = layout$metric,
+        tenure        = classify_tenure(label),
+        breakdown_var = ifelse(is.na(section), "tenure",
+                               simplify_section(section)),
+        breakdown_val = str_trim(str_remove(label, "\\s*\\([a-z]\\)$")),
+        geography     = names(vals),
+        stat_type     = layout$stat_type
+      )
     }
 
-    bind_rows(results)
+    sih_parse_columns_down(
+      sih_files$f11, sheet_name,
+      column_spec = layout$spec,
+      emit = emit,
+      label_skip_pattern = "^(ESTIMATES|RELATIVE|Source|Exclud|Median|Mean|Proportion)"
+    )
   })
 }, error = function(e) {
   pipeline_problem("Error processing File 11: ", conditionMessage(e))

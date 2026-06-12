@@ -107,19 +107,24 @@ test_that("geographic_affordability_data_contracts contracts", {
 
   if (nrow(geographic) > 0) {
     check(all(c("median_cost_income_ratio", "median_weekly_cost",
-                "mean_cost_income_ratio", "mean_weekly_cost") %in%
+                "pct_households_tenure") %in%
                 unique(geographic$metric)),
           "sih_geographic_2020.csv missing capital/rest-of-state metrics")
+    check(!any(c("mean_cost_income_ratio", "mean_weekly_cost",
+                 "pct_households_dwelling") %in%
+                 unique(geographic$metric)),
+          "sih_geographic_2020.csv must not carry the retired mislabelled File 11 state-table metrics")
     check(all(c("Gr. Sydney", "Rest of NSW", "Total GCC",
                 "Total rest of state") %in% unique(geographic$geography)),
           "sih_geographic_2020.csv missing expected geographic breakdowns")
+    check(all(c("New South Wales", "Northern Territory", "Australia") %in%
+                unique(geographic$geography)),
+          "sih_geographic_2020.csv missing state/territory geographies from Tables 11.4-11.6")
 
     geographic_page <- geographic[
       geographic$breakdown_var %in% c("owner", "renter") &
         geographic$metric %in% c("median_cost_income_ratio",
-                                 "median_weekly_cost",
-                                 "mean_cost_income_ratio",
-                                 "mean_weekly_cost") &
+                                 "median_weekly_cost") &
         geographic$tenure %in% c("renter_total", "owner_mortgage", "all"),
     ]
     geographic_page <- page_estimate_slice(geographic_page, c("survey_year",
