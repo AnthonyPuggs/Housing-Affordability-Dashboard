@@ -146,6 +146,94 @@ sih_assert_no_duplicates <- function(df, file, sheet,
 }
 
 # ------------------------------------------------------------------------------
+# Engine: years-across time-series sheets (Files 1, 12)
+# ------------------------------------------------------------------------------
+# Layout family: survey-year headers sit in the row directly above the
+# ESTIMATES marker; label rows run down column A with a unit column B.
+# Major section headers (no numeric data, no unit, matching section_pattern)
+# set breakdown context; unit-bearing no-data rows are ignored.
+#
+# `emit(label, unit, section, subsection, years, values)` maps one data row
+# to output rows; `years` / `values` are the non-missing cells in sheet
+# order, with year labels normalised to "YYYY-YY" (en-dash to hyphen,
+# footnote markers stripped). Header rows that do not match section_pattern
+# are tracked as the current subsection (reset on each new section).
+# `post_process(out)` runs on the bound sheet result before the duplicate
+# assertion, so callers can disambiguate colliding keys (e.g. repeated
+# subsection totals) with full-sheet context.
+sih_parse_years_across <- function(file, sheet, emit,
+                                   label_skip_pattern,
+                                   section_pattern,
+                                   min_year_cols = 10L,
+                                   key_cols = SIH_ESTIMATE_KEY,
+                                   post_process = identity) {
+  raw <- read_sheet_raw(file, sheet)
+  est_row <- require_label_row(raw, "^ESTIMATES", file, sheet,
+                               "ESTIMATES block marker")
+  header_row <- est_row - 1L
+  sih_assert(header_row >= 1L, file, sheet,
+             "year header row sits above the top of the sheet")
+
+  header <- sih_normalise_header(as.character(raw[header_row, ]))
+  year_cols <- which(!is.na(header) & str_detect(header, "\\d{4}"))
+  sih_assert(length(year_cols) >= min_year_cols, file, sheet,
+             paste0("only ", length(year_cols),
+                    " survey-year columns anchored (expected at least ",
+                    min_year_cols, ")"))
+  years <- str_replace_all(header[year_cols], "–", "-")
+  sih_assert(all(str_detect(years, "^\\d{4}-\\d{2}$")), file, sheet,
+             paste0("year headers do not normalise to YYYY-YY: ",
+                    paste(years[!str_detect(years, "^\\d{4}-\\d{2}$")],
+                          collapse = ", ")))
+
+  bounds <- find_block_bounds(raw, file, sheet)
+  block <- raw[bounds[["first"]]:bounds[["last"]], , drop = FALSE]
+
+  results <- list()
+  current_section <- NA_character_
+  current_subsection <- NA_character_
+
+  for (i in seq_len(nrow(block))) {
+    row <- block[i, ]
+    label <- str_trim(as.character(row[[1]]))
+    unit_val <- str_trim(as.character(row[[2]]))
+
+    if (is.na(label) || label == "" || label == "NA") next
+    if (str_detect(label, label_skip_pattern)) next
+
+    values <- as_numeric_clean(
+      vapply(year_cols, function(k) as.character(row[[k]]), character(1))
+    )
+
+    if (all(is.na(values))) {
+      if (is.na(unit_val) || unit_val == "" || unit_val == "NA") {
+        if (str_detect(label, section_pattern)) {
+          current_section <- label
+          current_subsection <- NA_character_
+        } else {
+          current_subsection <- label
+        }
+      }
+      next
+    }
+
+    keep <- !is.na(values)
+    emitted <- emit(label = label, unit = unit_val,
+                    section = current_section,
+                    subsection = current_subsection,
+                    years = years[keep], values = values[keep])
+    if (!is.null(emitted) && nrow(emitted) > 0) {
+      results[[length(results) + 1L]] <- emitted
+    }
+  }
+
+  out <- post_process(bind_rows(results))
+  sih_assert(nrow(out) > 0, file, sheet, "no estimate rows parsed")
+  sih_assert_no_duplicates(out, file, sheet, key_cols)
+  out
+}
+
+# ------------------------------------------------------------------------------
 # Engine: columns-down cross-section sheets (Files 3, 4, 5, 6, 9, 11)
 # ------------------------------------------------------------------------------
 # Layout family: a header band directly above the ESTIMATES marker names the

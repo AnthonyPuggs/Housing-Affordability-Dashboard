@@ -42,89 +42,54 @@ SURVEY_YEARS <- c("1994-95", "1995-96", "1996-97", "1997-98", "1999-00",
                   "2019-20")
 
 # --- Generic parser for File 1 / File 12 time-series tables -------------------
-#' Parse a time-series SIH table (years across columns)
-#'
-#' @param file Path to Excel file
-#' @param sheet Sheet name
-#' @param metric Name of the metric being measured
-#' @param unit_expected Expected unit ($ or %)
-#' @param geography Geography label
-#' @return Long-format tibble
-parse_timeseries_table <- function(file, sheet, metric, unit_expected = NULL,
+#' Parse a time-series SIH table (years across columns, Files 1 and 12)
+#' Survey-year columns are anchored to the year header band above the
+#' ESTIMATES marker (en-dashes and footnote markers normalised away) and
+#' block bounding keeps the RSE/MOE sub-blocks out of the estimates.
+parse_timeseries_table <- function(file, sheet, metric,
                                    geography = "National") {
-  # Read raw — skip first 4 rows (ABS branding), keeping row 5 (year headers)
-  raw <- read_excel(file, sheet = sheet, skip = 4,
-                    col_names = FALSE, col_types = "text")
-
-  # Row 1 of raw = row 5 of Excel (year labels in cols 3+)
-  # Extract year labels from first row
-  year_row <- as.character(raw[1, ])
-  year_cols <- which(!is.na(year_row) & str_detect(year_row, "\\d{4}"))
-
-  if (length(year_cols) == 0) {
-    warning("No year columns found in ", sheet, " of ", basename(file))
-    return(tibble())
+  emit <- function(label, unit, section, subsection, years, values) {
+    tibble(
+      survey_year   = years,
+      value         = values,
+      metric        = metric,
+      tenure        = classify_tenure(label),
+      breakdown_var = ifelse(is.na(section), "tenure", simplify_section(section)),
+      breakdown_val = str_trim(str_remove(label, "\\([a-z]\\)$")),
+      geography     = geography,
+      stat_type     = ifelse(str_detect(metric, "[Mm]edian"), "median", "mean"),
+      .subsection   = subsection
+    )
   }
 
-  # Normalize en-dashes to hyphens in year labels
-  years <- str_replace_all(year_row[year_cols], "\u2013", "-")
-
-  # Data starts after ESTIMATES marker and section headers
-  # Col A (1) = label, Col B (2) = unit, Cols 3+ = data
-  data_raw <- raw[-1, ]  # Remove year header row
-
-  # Build result by iterating rows
-  results <- list()
-  current_section <- NA_character_
-  current_subsection <- NA_character_
-
-  for (i in seq_len(nrow(data_raw))) {
-    row <- data_raw[i, ]
-    label <- str_trim(as.character(row[[1]]))
-    unit_val <- str_trim(as.character(row[[2]]))
-
-    if (is.na(label) || label == "" || label == "NA") next
-    if (str_detect(label, "^(ESTIMATES|RELATIVE STANDARD ERRORS|Source|Exclud)")) next
-
-    # Extract numeric values from year columns
-    vals <- as.character(row[year_cols])
-    has_data <- any(!is.na(suppressWarnings(as.numeric(clean_abs_values(vals)))))
-
-    if (!has_data) {
-      # This is a section/subsection header
-      if (is.na(unit_val) || unit_val == "" || unit_val == "NA") {
-        # Check if this looks like a major section
-        if (str_detect(label, "(Tenure|Family|Gross|Equivalised|Main source|Government|Age|Weekly|Housing)")) {
-          current_section <- label
-          current_subsection <- NA_character_
-        } else {
-          current_subsection <- label
-        }
-      }
-      next
-    }
-
-    # This is a data row
-    numeric_vals <- as_numeric_clean(vals)
-
-    for (j in seq_along(years)) {
-      if (!is.na(numeric_vals[j])) {
-        results[[length(results) + 1]] <- tibble(
-          survey_year   = years[j],
-          value         = numeric_vals[j],
-          metric        = metric,
-          tenure        = classify_tenure(label),
-          breakdown_var = ifelse(is.na(current_section), "tenure", simplify_section(current_section)),
-          breakdown_val = str_trim(str_remove(label, "\\([a-z]\\)$")),
-          geography     = geography,
-          stat_type     = ifelse(str_detect(metric, "[Mm]edian"), "median", "mean")
-        )
-      }
-    }
+  # Footnote-stripped labels can collide within a section (e.g. "Total (c)"
+  # under "One family households" and "Total (d)" under "Non-family
+  # households" both become "Total" under family_type). Qualify only the
+  # colliding keys with their subsection so every section total stays a
+  # distinct observation and untouched keys keep their legacy form.
+  disambiguate_subsection_totals <- function(out) {
+    if (nrow(out) == 0) return(out)
+    keys <- out[intersect(SIH_ESTIMATE_KEY, names(out))]
+    dup <- duplicated(keys) | duplicated(keys, fromLast = TRUE)
+    fixable <- dup & !is.na(out$.subsection)
+    out$breakdown_val[fixable] <- paste(
+      out$breakdown_val[fixable],
+      str_trim(str_remove(out$.subsection[fixable], "\\s*\\([a-z]\\)$")),
+      sep = " | "
+    )
+    out$.subsection <- NULL
+    out
   }
 
-  bind_rows(results)
+  sih_parse_years_across(
+    file, sheet,
+    emit = emit,
+    label_skip_pattern = "^(ESTIMATES|RELATIVE STANDARD ERRORS|Source|Exclud)",
+    section_pattern = "(Tenure|Family|Gross|Equivalised|Main source|Government|Age|Weekly|Housing)",
+    post_process = disambiguate_subsection_totals
+  )
 }
+
 
 # --- Tenure classifier --------------------------------------------------------
 classify_tenure <- function(label) {
@@ -1050,24 +1015,40 @@ f12_result <- tryCatch({
   sheets_12 <- excel_sheets(sih_files$f12)
   data_sheets <- sheets_12[str_detect(sheets_12, "Table")]
 
-  # Each state has 3 tables: costs (mean real $), cost/income ratio, household proportions
-  # Pattern: Tables 12.1-12.3 = NSW, 12.4-12.6 = VIC, etc.
-  state_order <- c("New South Wales", "Victoria", "Queensland",
-                   "South Australia", "Western Australia", "Tasmania",
-                   "Northern Territory", "Australian Capital Territory")
-  metric_cycle <- c("mean_weekly_cost_real", "cost_income_ratio", "pct_households")
+  # Each sheet title names its metric and state (e.g. "Table 12.1 MEAN WEEKLY
+  # HOUSING COSTS, Selected household characteristics, New South Wales, ...").
+  # Anchor both from the title instead of assuming the 3-tables-per-state
+  # sheet cycle, so a reordered workbook cannot mislabel a state's series.
+  f12_metric_patterns <- c(
+    "MEAN WEEKLY HOUSING COSTS" = "mean_weekly_cost_real",
+    "HOUSING COSTS AS A PROPORTION OF GROSS HOUSEHOLD INCOME" = "cost_income_ratio",
+    "HOUSEHOLD ESTIMATES" = "pct_households"
+  )
+  f12_states <- c("New South Wales", "Victoria", "Queensland",
+                  "South Australia", "Western Australia", "Tasmania",
+                  "Northern Territory", "Australian Capital Territory")
 
-  map_dfr(seq_along(data_sheets), function(idx) {
-    sheet_name <- data_sheets[idx]
-    state_idx <- ((idx - 1) %/% 3) + 1
-    metric_idx <- ((idx - 1) %% 3) + 1
-
-    state <- if (state_idx <= length(state_order)) state_order[state_idx] else "Unknown"
-    metric <- metric_cycle[metric_idx]
+  map_dfr(data_sheets, function(sheet_name) {
+    raw <- read_sheet_raw(sih_files$f12, sheet_name)
+    title_row <- require_label_row(raw, "^Table \\d", sih_files$f12,
+                                   sheet_name, "table title")
+    title <- str_squish(as.character(raw[title_row, 1]))
+    metric_hits <- f12_metric_patterns[
+      vapply(names(f12_metric_patterns), function(p) {
+        str_detect(title, fixed(p))
+      }, logical(1))
+    ]
+    state_hits <- f12_states[
+      vapply(f12_states, function(s) str_detect(title, fixed(s)), logical(1))
+    ]
+    sih_assert(length(metric_hits) == 1, sih_files$f12, sheet_name,
+               paste0("table title must name exactly one metric: ", title))
+    sih_assert(length(state_hits) == 1, sih_files$f12, sheet_name,
+               paste0("table title must name exactly one state: ", title))
 
     parse_timeseries_table(
       sih_files$f12, sheet_name,
-      metric = metric, geography = state
+      metric = unname(metric_hits), geography = state_hits
     )
   })
 }, error = function(e) {
