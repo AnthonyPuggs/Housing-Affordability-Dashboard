@@ -1,20 +1,20 @@
 dataset,file,rows,period_min,period_max,modified_utc,refreshed_at_utc,source_group
-abs_supply_demand,data/abs_supply_demand.csv,6690,1981-06-01,2026-04-01,2026-06-15 22:55:33 UTC,2026-06-15 22:55:37 UTC,ABS live time series
-abs_timeseries,data/abs_timeseries.csv,7547,1948-07-01,2026-04-01,2026-06-15 22:55:23 UTC,2026-06-15 22:55:37 UTC,ABS live time series
-affordability_indices,data/affordability_indices.csv,1000,1988-06-30,2026-04-01,2026-06-15 22:55:36 UTC,2026-06-15 22:55:37 UTC,Derived dashboard indicators
-rba_e2_raw,data/rba_e2_raw.csv,206,,,2026-06-15 22:55:35 UTC,2026-06-15 22:55:37 UTC,RBA live tables
-rba_f1_raw,data/rba_f1_raw.csv,3915,,,2026-06-15 22:55:34 UTC,2026-06-15 22:55:37 UTC,RBA live tables
-rba_f5_raw,data/rba_f5_raw.csv,816,,,2026-06-15 22:55:35 UTC,2026-06-15 22:55:37 UTC,RBA live tables
-rba_f6_raw,data/rba_f6_raw.csv,89,,,2026-06-15 22:55:35 UTC,2026-06-15 22:55:37 UTC,RBA live tables
-rba_rates,data/rba_rates.csv,20559,1959-01-31,2026-06-12,2026-06-15 22:55:36 UTC,2026-06-15 22:55:37 UTC,RBA live tables
-sih_age_tenure_2020,data/sih_age_tenure_2020.csv,360,2019-20,2019-20,2026-06-15 22:54:05 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_cost_ratios_2020,data/sih_cost_ratios_2020.csv,462,2019-20,2019-20,2026-06-15 22:54:04 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_costs_2020,data/sih_costs_2020.csv,476,2019-20,2019-20,2026-06-15 22:54:04 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_estimate_quality,data/sih_estimate_quality.csv,1652,2007-08,2019-20,2026-06-15 22:54:31 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_geographic_2020,data/sih_geographic_2020.csv,2975,2019-20,2019-20,2026-06-15 22:54:09 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_lower_income_states,data/sih_lower_income_states.csv,567,2019-20,2019-20,2026-06-15 22:54:06 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_nhha_rental_stress,data/sih_nhha_rental_stress.csv,546,2007-08,2019-20,2026-06-15 22:54:23 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_recent_buyers_2020,data/sih_recent_buyers_2020.csv,513,2019-20,2019-20,2026-06-15 22:54:06 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_state_timeseries,data/sih_state_timeseries.csv,14974,1994-95,2019-20,2026-06-15 22:54:23 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_stress_bands_2020,data/sih_stress_bands_2020.csv,686,2019-20,2019-20,2026-06-15 22:54:05 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
-sih_timeseries_national,data/sih_timeseries_national.csv,1872,1994-95,2019-20,2026-06-15 22:54:03 UTC,2026-06-15 22:55:37 UTC,Static ABS SIH workbook outputs
+abs_supply_demand,data/abs_supply_demand.csv,6690,1981-06-01,2026-04-01,2026-06-16 22:48:45 UTC,2026-06-16 22:48:49 UTC,ABS live time series
+abs_timeseries,data/abs_timeseries.csv,7547,1948-07-01,2026-04-01,2026-06-16 22:48:31 UTC,2026-06-16 22:48:49 UTC,ABS live time series
+affordability_indices,data/affordability_indices.csv,1000,1988-06-30,2026-04-01,2026-06-16 22:48:48 UTC,2026-06-16 22:48:49 UTC,Derived dashboard indicators
+rba_e2_raw,data/rba_e2_raw.csv,206,,,2026-06-16 22:48:47 UTC,2026-06-16 22:48:49 UTC,RBA live tables
+rba_f1_raw,data/rba_f1_raw.csv,3916,,,2026-06-16 22:48:46 UTC,2026-06-16 22:48:49 UTC,RBA live tables
+rba_f5_raw,data/rba_f5_raw.csv,816,,,2026-06-16 22:48:46 UTC,2026-06-16 22:48:49 UTC,RBA live tables
+rba_f6_raw,data/rba_f6_raw.csv,89,,,2026-06-16 22:48:47 UTC,2026-06-16 22:48:49 UTC,RBA live tables
+rba_rates,data/rba_rates.csv,20563,1959-01-31,2026-06-15,2026-06-16 22:48:47 UTC,2026-06-16 22:48:49 UTC,RBA live tables
+sih_age_tenure_2020,data/sih_age_tenure_2020.csv,360,2019-20,2019-20,2026-06-16 22:46:56 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_cost_ratios_2020,data/sih_cost_ratios_2020.csv,462,2019-20,2019-20,2026-06-16 22:46:55 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_costs_2020,data/sih_costs_2020.csv,476,2019-20,2019-20,2026-06-16 22:46:55 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_estimate_quality,data/sih_estimate_quality.csv,1652,2007-08,2019-20,2026-06-16 22:47:22 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_geographic_2020,data/sih_geographic_2020.csv,2975,2019-20,2019-20,2026-06-16 22:46:59 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_lower_income_states,data/sih_lower_income_states.csv,567,2019-20,2019-20,2026-06-16 22:46:57 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_nhha_rental_stress,data/sih_nhha_rental_stress.csv,546,2007-08,2019-20,2026-06-16 22:47:14 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_recent_buyers_2020,data/sih_recent_buyers_2020.csv,513,2019-20,2019-20,2026-06-16 22:46:57 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_state_timeseries,data/sih_state_timeseries.csv,14974,1994-95,2019-20,2026-06-16 22:47:14 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_stress_bands_2020,data/sih_stress_bands_2020.csv,686,2019-20,2019-20,2026-06-16 22:46:56 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
+sih_timeseries_national,data/sih_timeseries_national.csv,1872,1994-95,2019-20,2026-06-16 22:46:54 UTC,2026-06-16 22:48:49 UTC,Static ABS SIH workbook outputs
