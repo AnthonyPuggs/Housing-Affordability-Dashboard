@@ -6329,10 +6329,11 @@ date,value,series,series_id,category,unit,frequency
 2024-03-01,27113.5,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
 2024-06-01,27194.3,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
 2024-09-01,27301.1,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
-2024-12-01,27388.1,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
-2025-03-01,27531.4,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
-2025-06-01,27613.7,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
-2025-09-01,27724.7,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
+2024-12-01,27388.5,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
+2025-03-01,27529.8,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
+2025-06-01,27611,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
+2025-09-01,27722.4,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
+2025-12-01,27801,Estimated Resident Population (ERP) ;  Australia ;,A2133251W,Population,000,Quarter
 1981-06-01,33.6,Natural Increase ;  Australia ;,A2133252X,Population,000,Quarter
 1981-09-01,29.6,Natural Increase ;  Australia ;,A2133252X,Population,000,Quarter
 1981-12-01,29.3,Natural Increase ;  Australia ;,A2133252X,Population,000,Quarter
@@ -6511,6 +6512,7 @@ date,value,series,series_id,category,unit,frequency
 2025-03-01,34.2,Natural Increase ;  Australia ;,A2133252X,Population,000,Quarter
 2025-06-01,32.1,Natural Increase ;  Australia ;,A2133252X,Population,000,Quarter
 2025-09-01,23.3,Natural Increase ;  Australia ;,A2133252X,Population,000,Quarter
+2025-12-01,22,Natural Increase ;  Australia ;,A2133252X,Population,000,Quarter
 1981-06-01,25.6,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
 1981-09-01,34.1,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
 1981-12-01,34.5,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
@@ -6685,7 +6687,8 @@ date,value,series,series_id,category,unit,frequency
 2024-03-01,128.7,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
 2024-06-01,55.8,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
 2024-09-01,81.6,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
-2024-12-01,63.9,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
-2025-03-01,109.1,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
-2025-06-01,50.1,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
-2025-09-01,87.8,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
+2024-12-01,64.3,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
+2025-03-01,107.1,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
+2025-06-01,49.2,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
+2025-09-01,88.1,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
+2025-12-01,56.6,Net Overseas Migration ;  Australia ;,A2133254C,Population,000,Quarter
