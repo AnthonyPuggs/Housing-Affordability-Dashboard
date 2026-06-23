@@ -7506,6 +7506,7 @@ date,value,series,series_id,category,unit,frequency
 2026-06-17,4.35,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
 2026-06-18,4.35,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
 2026-06-19,4.35,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
+2026-06-22,4.35,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
 2011-11-02,-0.25,Change in the Cash Rate Target,FIRMMCCRT,Interest Rates,Per cent,Quarter
 2011-12-07,-0.25,Change in the Cash Rate Target,FIRMMCCRT,Interest Rates,Per cent,Quarter
 2012-05-02,-0.5,Change in the Cash Rate Target,FIRMMCCRT,Interest Rates,Per cent,Quarter
@@ -10557,6 +10558,7 @@ date,value,series,series_id,category,unit,frequency
 2026-06-17,4.35,Highest Interbank Overnight Cash Rate,FIRMMCRIH,Interest Rates,Per cent,Day
 2026-06-18,4.35,Highest Interbank Overnight Cash Rate,FIRMMCRIH,Interest Rates,Per cent,Day
 2026-06-19,4.35,Highest Interbank Overnight Cash Rate,FIRMMCRIH,Interest Rates,Per cent,Day
+2026-06-22,4.35,Highest Interbank Overnight Cash Rate,FIRMMCRIH,Interest Rates,Per cent,Day
 2011-01-04,4.75,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2011-01-05,4.75,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2011-01-06,4.75,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
@@ -14469,6 +14471,7 @@ date,value,series,series_id,category,unit,frequency
 2026-06-17,4.35,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2026-06-18,4.35,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2026-06-19,4.35,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
+2026-06-22,4.35,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2013-05-20,2.75,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2013-05-21,2.75,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2013-05-22,2.75,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
@@ -17483,6 +17486,7 @@ date,value,series,series_id,category,unit,frequency
 2026-06-17,4.35,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2026-06-18,4.35,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2026-06-19,4.35,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
+2026-06-22,4.35,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2015-08-31,5.05,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
 2015-09-30,4.85,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
 2015-10-31,4.82,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
