@@ -374,7 +374,7 @@ date,value,indicator,geography,unit,frequency
 2019-06-30,186.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2019-09-30,185.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2019-12-31,186,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
-2020-03-31,186.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2020-03-31,186.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2020-06-30,183.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2020-09-30,180.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2020-12-31,180.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
@@ -391,13 +391,14 @@ date,value,indicator,geography,unit,frequency
 2023-09-30,182.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2023-12-31,181.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2024-03-31,180.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
-2024-06-30,180.8,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
-2024-09-30,179.1,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
-2024-12-31,178.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
-2025-03-31,177.3,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
-2025-06-30,177.4,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
-2025-09-30,176.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
-2025-12-31,177,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2024-06-30,180.9,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2024-09-30,179.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2024-12-31,178.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2025-03-31,177.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2025-06-30,177.6,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2025-09-30,176.5,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2025-12-31,177.2,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
+2026-03-31,177.7,Household Debt to Income Ratio,National,Per cent of annual disposable income,Quarter
 2012-10-01,73.07692307692308,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2013-04-01,88.46153846153845,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2013-10-01,98.07692307692307,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
@@ -823,40 +824,41 @@ date,value,indicator,geography,unit,frequency
 2025-07-01,0.0559439713964327,Real Wage Growth YoY,National,Per cent,Quarter
 2025-10-01,-0.29466254859449315,Real Wage Growth YoY,National,Per cent,Quarter
 2026-01-01,-0.7619974988305578,Real Wage Growth YoY,National,Per cent,Quarter
-2023-07-01,7.596917890681443,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2023-08-01,7.809318481255256,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2023-09-01,7.499107249137005,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2023-10-01,6.631989596879073,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2023-11-01,7.139485485012997,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2023-12-01,7.4078422164827185,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-01-01,7.467911318553089,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-02-01,7.527255857109716,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-03-01,7.721606648199453,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-04-01,7.489693082913429,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-05-01,7.388042736985678,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-06-01,7.0800450958286465,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-07-01,6.903882734698441,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-08-01,6.732585268303515,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-09-01,6.654855497730039,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-10-01,6.751662971175176,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-11-01,6.608657341116864,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-12-01,6.175538310197837,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-01-01,5.830618892508155,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-02-01,5.5118110236220375,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-03-01,5.185899496410595,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-04-01,4.943532921372262,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-05-01,4.530059271803566,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-06-01,4.211412929037683,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-07-01,3.9145907473309594,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-08-01,3.6744040803580846,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-09-01,3.7894518272425293,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-10-01,4.195658946931147,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-11-01,4.039673519991727,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-07-01,7.598747591522148,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-08-01,7.811189648975669,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-09-01,7.499999999999996,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-10-01,6.6201678685423815,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-11-01,7.127684682558422,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-12-01,7.406972649372001,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-01-01,7.479579929988334,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-02-01,7.5255102040816535,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-03-01,7.718933887158186,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-04-01,7.486263736263754,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-05-01,7.389722601182358,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-06-01,7.069568158755213,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-07-01,6.905428091773924,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-08-01,6.734081564618299,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-09-01,6.655592469545968,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-10-01,6.7524115755627,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-11-01,6.609385327164574,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-12-01,6.1639344262295115,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-01-01,5.8299858864401255,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-02-01,5.499838240051758,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-03-01,5.184233076263922,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-04-01,4.941427050053249,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-05-01,4.5310184204954584,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-06-01,4.212299915754003,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-07-01,3.9154103852596434,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-08-01,3.6647579385736595,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-09-01,3.779462153462787,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-10-01,4.206481096800996,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-11-01,4.040090927877649,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2025-12-01,3.942763022441831,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2026-01-01,3.878116343490312,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2026-02-01,3.762011858515657,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2026-03-01,3.656921666496893,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2026-04-01,3.5126903553299504,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-01-01,3.8674599917931873,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-02-01,3.771849126034965,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-03-01,3.6558044806517254,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-04-01,3.511264461132524,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-05-01,3.5547903585173346,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 1997-07-01,100,Rental Affordability Index,National,Index (base=100),Quarter
 1997-10-01,100.03004776630004,Rental Affordability Index,National,Index (base=100),Quarter
 1998-01-01,99.72941124231049,Rental Affordability Index,National,Index (base=100),Quarter
