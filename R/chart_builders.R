@@ -132,23 +132,31 @@ build_context_rates_plot <- function(data, dark = FALSE) {
 build_context_labour_plot <- function(data, dark = FALSE) {
   labour_fills <- c(
     "Unemployment Rate" = "#2196F3",
-    "Underemployment Rate" = "#AB47BC",
-    "Labour Underutilisation Rate" = "#78909C"
+    "Underemployment Rate" = "#AB47BC"
   )
+  labour_line <- c("Labour Underutilisation Rate" = "#78909C")
 
-  data <- data %>%
+  # Underutilisation = unemployment + underemployment (ABS definition), so it
+  # is drawn as a line tracing the top of the stacked component bands.
+  # Stacking it as a third band would double-count it against the y axis.
+  components <- data %>%
+    filter(series %in% names(labour_fills)) %>%
     mutate(series = factor(
       series,
-      levels = c("Labour Underutilisation Rate", "Underemployment Rate",
-                 "Unemployment Rate")
+      levels = c("Underemployment Rate", "Unemployment Rate")
     ))
+  aggregate <- data %>%
+    filter(series %in% names(labour_line))
 
-  ggplot(data, aes(x = date, y = value, fill = series)) +
-    geom_area(alpha = 0.6, linewidth = 0.5, colour = "white") +
+  ggplot(mapping = aes(x = date, y = value)) +
+    geom_area(data = components, aes(fill = series),
+              alpha = 0.6, linewidth = 0.5, colour = "white") +
+    geom_line(data = aggregate, aes(color = series), linewidth = 1) +
     scale_fill_manual(values = labour_fills) +
+    scale_color_manual(values = labour_line) +
     scale_x_date(date_labels = "%Y", date_breaks = "5 years") +
     scale_y_continuous(labels = label_percent(scale = 1, accuracy = 0.1)) +
-    labs(x = NULL, y = NULL, fill = NULL) +
+    labs(x = NULL, y = NULL, fill = NULL, color = NULL) +
     theme_afford(dark)
 }
 

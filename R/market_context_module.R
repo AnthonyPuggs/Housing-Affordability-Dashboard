@@ -172,7 +172,10 @@ marketContextPageServer <- function(id, is_dark) {
 
       p <- build_context_labour_plot(d, is_dark())
 
-      dashboard_ggplotly(p, dark = is_dark(), tooltip = c("x", "y", "fill"))
+      dashboard_ggplotly(p, dark = is_dark(),
+                         tooltip = c("x", "y", "fill", "color")) %>%
+        plotly_area_hover_points() %>%
+        plotly_clean_trace_names()
     }) %>%
       bindCache(input$context_dates, is_dark())
 
