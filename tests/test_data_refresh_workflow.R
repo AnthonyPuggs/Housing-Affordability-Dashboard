@@ -111,6 +111,7 @@ test_that("data_refresh_workflow structural contracts", {
     "git pull --rebase",     # rebase onto any concurrent main advance before push
     "git diff --numstat",    # size the revision for the diff-threshold guard
     "gh pr create",          # large revisions route to a PR instead of direct push
+    "gh pr merge",           # the PR is auto-merged as an audit trail, not a manual gate
     "gh issue"               # failure path opens/comments an issue
   )
   missing_run <- required_run[
