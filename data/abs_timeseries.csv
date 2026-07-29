@@ -104,6 +104,7 @@ date,value,series,series_id,category,unit,frequency
 2026-03-01,102.11,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
 2026-04-01,102.84,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
 2026-05-01,103.74,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
+2026-06-01,104.13,CPI New Dwelling Purchase,A130400605L,House Prices,Index Numbers,Month
 2011-09-01,100,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
 2011-12-01,99.20537897310513,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
 2012-03-01,99.5517522412388,Dwelling Price Index ;  Australia ;,A83728647F,House Prices,Index,Quarter
@@ -6821,6 +6822,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.73,CPI All Groups,NA,Prices,Index,Quarter
 2025-10-01,100.32,CPI All Groups,NA,Prices,Index,Quarter
 2026-01-01,101.7,CPI All Groups,NA,Prices,Index,Quarter
+2026-04-01,102.31,CPI All Groups,NA,Prices,Index,Quarter
 1949-07-01,8.880308880308885,CPI Inflation YoY,NA,Prices,Per cent,Quarter
 1949-10-01,8.745247148288971,CPI Inflation YoY,NA,Prices,Per cent,Quarter
 1950-01-01,7.011070110701101,CPI Inflation YoY,NA,Prices,Per cent,Quarter
@@ -7128,53 +7130,55 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,3.2187952804802356,CPI Inflation YoY,NA,Prices,Per cent,Quarter
 2025-10-01,3.625658506352636,CPI Inflation YoY,NA,Prices,Per cent,Quarter
 2026-01-01,4.094165813715445,CPI Inflation YoY,NA,Prices,Per cent,Quarter
+2026-04-01,3.9418876358833677,CPI Inflation YoY,NA,Prices,Per cent,Quarter
 2022-07-01,83.04,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2022-08-01,83.47,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2022-09-01,84,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2022-10-01,84.59,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2022-11-01,84.74,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2022-12-01,85.19,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-08-01,83.43,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-09-01,84.01,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-10-01,84.6,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-11-01,84.76,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2022-12-01,85.18,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2023-01-01,85.7,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-02-01,86.24,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-02-01,86.23,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2023-03-01,86.67,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-04-01,87.36,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-05-01,87.96,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-04-01,87.35,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-05-01,87.97,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2023-06-01,88.69,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2023-07-01,89.35,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-08-01,89.99,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-09-01,90.3,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-10-01,90.19,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-11-01,90.78,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2023-12-01,91.5,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-08-01,89.96,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-09-01,90.31,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-10-01,90.21,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-11-01,90.8,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2023-12-01,91.49,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-01-01,92.11,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-02-01,92.73,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-02-01,92.72,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-03-01,93.36,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-04-01,93.9,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-05-01,94.46,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-04-01,93.89,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-05-01,94.47,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-06-01,94.96,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-07-01,95.52,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-08-01,96.05,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-09-01,96.31,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-10-01,96.28,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2024-11-01,96.78,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-07-01,95.53,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-08-01,96.03,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-09-01,96.32,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-10-01,96.29,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2024-11-01,96.79,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2024-12-01,97.14,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-01-01,97.48,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-02-01,97.83,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-03-01,98.2,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-04-01,98.54,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-05-01,98.74,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-06-01,98.96,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-05-01,98.75,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-06-01,98.95,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-07-01,99.26,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-08-01,99.57,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-09-01,99.95,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2025-10-01,100.33,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-08-01,99.56,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-09-01,99.97,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2025-10-01,100.34,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-11-01,100.69,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2025-12-01,100.97,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2026-01-01,101.25,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2026-02-01,101.52,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
-2026-03-01,101.79,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2026-01-01,101.26,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2026-02-01,101.53,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2026-03-01,101.78,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2026-04-01,102,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2026-05-01,102.25,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
+2026-06-01,102.48,CPI Rents,A130400542R,Rental Prices,Index Numbers,Month
 2022-07-01,84.29333333333334,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
 2022-10-01,85.43333333333334,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
 2023-01-01,86.92666666666666,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
@@ -7190,6 +7194,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.74333333333334,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.61666666666666,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
 2026-01-01,101.79333333333334,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
+2026-04-01,102.67,CPI Rents ; Adelaide ;,NA,Rental Prices,Index,Quarter
 2022-07-01,81.32,CPI Rents ; Brisbane ;,NA,Rental Prices,Index,Quarter
 2022-10-01,82.78,CPI Rents ; Brisbane ;,NA,Rental Prices,Index,Quarter
 2023-01-01,84.78666666666666,CPI Rents ; Brisbane ;,NA,Rental Prices,Index,Quarter
@@ -7205,6 +7210,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.62666666666667,CPI Rents ; Brisbane ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.61,CPI Rents ; Brisbane ;,NA,Rental Prices,Index,Quarter
 2026-01-01,101.86666666666666,CPI Rents ; Brisbane ;,NA,Rental Prices,Index,Quarter
+2026-04-01,102.94333333333333,CPI Rents ; Brisbane ;,NA,Rental Prices,Index,Quarter
 2022-07-01,95.34,CPI Rents ; Canberra ;,NA,Rental Prices,Index,Quarter
 2022-10-01,96.36666666666667,CPI Rents ; Canberra ;,NA,Rental Prices,Index,Quarter
 2023-01-01,97.38,CPI Rents ; Canberra ;,NA,Rental Prices,Index,Quarter
@@ -7220,6 +7226,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.96000000000001,CPI Rents ; Canberra ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.25333333333333,CPI Rents ; Canberra ;,NA,Rental Prices,Index,Quarter
 2026-01-01,100.67666666666666,CPI Rents ; Canberra ;,NA,Rental Prices,Index,Quarter
+2026-04-01,101.01333333333334,CPI Rents ; Canberra ;,NA,Rental Prices,Index,Quarter
 2022-07-01,89.27333333333333,CPI Rents ; Darwin ;,NA,Rental Prices,Index,Quarter
 2022-10-01,90.42,CPI Rents ; Darwin ;,NA,Rental Prices,Index,Quarter
 2023-01-01,91.7,CPI Rents ; Darwin ;,NA,Rental Prices,Index,Quarter
@@ -7235,6 +7242,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.65,CPI Rents ; Darwin ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.58,CPI Rents ; Darwin ;,NA,Rental Prices,Index,Quarter
 2026-01-01,102.10666666666667,CPI Rents ; Darwin ;,NA,Rental Prices,Index,Quarter
+2026-04-01,103.83333333333333,CPI Rents ; Darwin ;,NA,Rental Prices,Index,Quarter
 2022-07-01,99.89666666666666,CPI Rents ; Hobart ;,NA,Rental Prices,Index,Quarter
 2022-10-01,100.38,CPI Rents ; Hobart ;,NA,Rental Prices,Index,Quarter
 2023-01-01,101.10000000000001,CPI Rents ; Hobart ;,NA,Rental Prices,Index,Quarter
@@ -7250,6 +7258,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.95,CPI Rents ; Hobart ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.47333333333333,CPI Rents ; Hobart ;,NA,Rental Prices,Index,Quarter
 2026-01-01,101.34,CPI Rents ; Hobart ;,NA,Rental Prices,Index,Quarter
+2026-04-01,102.04666666666667,CPI Rents ; Hobart ;,NA,Rental Prices,Index,Quarter
 2022-07-01,85.36333333333333,CPI Rents ; Melbourne ;,NA,Rental Prices,Index,Quarter
 2022-10-01,86.07333333333334,CPI Rents ; Melbourne ;,NA,Rental Prices,Index,Quarter
 2023-01-01,87.16333333333333,CPI Rents ; Melbourne ;,NA,Rental Prices,Index,Quarter
@@ -7265,6 +7274,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.78666666666666,CPI Rents ; Melbourne ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.37666666666667,CPI Rents ; Melbourne ;,NA,Rental Prices,Index,Quarter
 2026-01-01,101.05666666666667,CPI Rents ; Melbourne ;,NA,Rental Prices,Index,Quarter
+2026-04-01,101.53333333333333,CPI Rents ; Melbourne ;,NA,Rental Prices,Index,Quarter
 2022-07-01,78.00666666666666,CPI Rents ; Perth ;,NA,Rental Prices,Index,Quarter
 2022-10-01,79.25,CPI Rents ; Perth ;,NA,Rental Prices,Index,Quarter
 2023-01-01,80.72333333333333,CPI Rents ; Perth ;,NA,Rental Prices,Index,Quarter
@@ -7280,6 +7290,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.57,CPI Rents ; Perth ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.83,CPI Rents ; Perth ;,NA,Rental Prices,Index,Quarter
 2026-01-01,102.07666666666667,CPI Rents ; Perth ;,NA,Rental Prices,Index,Quarter
+2026-04-01,103.29333333333334,CPI Rents ; Perth ;,NA,Rental Prices,Index,Quarter
 2022-07-01,83.02666666666667,CPI Rents ; Sydney ;,NA,Rental Prices,Index,Quarter
 2022-10-01,84.25666666666667,CPI Rents ; Sydney ;,NA,Rental Prices,Index,Quarter
 2023-01-01,85.72666666666666,CPI Rents ; Sydney ;,NA,Rental Prices,Index,Quarter
@@ -7295,6 +7306,7 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.76666666666667,CPI Rents ; Sydney ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.54333333333334,CPI Rents ; Sydney ;,NA,Rental Prices,Index,Quarter
 2026-01-01,101.42666666666666,CPI Rents ; Sydney ;,NA,Rental Prices,Index,Quarter
+2026-04-01,102.31333333333333,CPI Rents ; Sydney ;,NA,Rental Prices,Index,Quarter
 1972-07-01,7.07,CPI Rents ; Weighted average of eight capital cities ;,NA,Rental Prices,Index,Quarter
 1972-10-01,7.18,CPI Rents ; Weighted average of eight capital cities ;,NA,Rental Prices,Index,Quarter
 1973-01-01,7.29,CPI Rents ; Weighted average of eight capital cities ;,NA,Rental Prices,Index,Quarter
@@ -7510,50 +7522,52 @@ date,value,series,series_id,category,unit,frequency
 2025-07-01,99.74,CPI Rents ; Weighted average of eight capital cities ;,NA,Rental Prices,Index,Quarter
 2025-10-01,100.53,CPI Rents ; Weighted average of eight capital cities ;,NA,Rental Prices,Index,Quarter
 2026-01-01,101.46,CPI Rents ; Weighted average of eight capital cities ;,NA,Rental Prices,Index,Quarter
+2026-04-01,102.29,CPI Rents ; Weighted average of eight capital cities ;,NA,Rental Prices,Index,Quarter
 2022-07-01,83.04,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2022-08-01,83.47,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2022-09-01,84,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2022-10-01,84.59,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2022-11-01,84.74,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2022-12-01,85.19,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2022-08-01,83.43,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2022-09-01,84.01,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2022-10-01,84.6,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2022-11-01,84.76,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2022-12-01,85.18,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2023-01-01,85.7,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2023-02-01,86.24,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2023-02-01,86.23,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2023-03-01,86.67,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2023-04-01,87.36,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2023-05-01,87.96,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2023-04-01,87.35,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2023-05-01,87.97,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2023-06-01,88.69,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2023-07-01,89.35,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2023-08-01,89.99,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2023-09-01,90.3,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2023-10-01,90.19,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2023-11-01,90.78,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2023-12-01,91.5,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2023-08-01,89.96,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2023-09-01,90.31,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2023-10-01,90.21,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2023-11-01,90.8,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2023-12-01,91.49,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2024-01-01,92.11,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2024-02-01,92.73,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2024-02-01,92.72,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2024-03-01,93.36,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2024-04-01,93.9,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2024-05-01,94.46,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2024-04-01,93.89,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2024-05-01,94.47,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2024-06-01,94.96,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2024-07-01,95.52,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2024-08-01,96.05,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2024-09-01,96.31,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2024-10-01,96.28,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2024-11-01,96.78,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2024-07-01,95.53,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2024-08-01,96.03,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2024-09-01,96.32,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2024-10-01,96.29,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2024-11-01,96.79,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2024-12-01,97.14,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2025-01-01,97.48,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2025-02-01,97.83,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2025-03-01,98.2,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2025-04-01,98.54,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2025-05-01,98.74,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2025-06-01,98.96,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2025-05-01,98.75,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2025-06-01,98.95,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2025-07-01,99.26,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2025-08-01,99.57,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2025-09-01,99.95,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2025-10-01,100.33,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2025-08-01,99.56,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2025-09-01,99.97,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2025-10-01,100.34,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2025-11-01,100.69,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2025-12-01,100.97,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2026-01-01,101.25,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2026-02-01,101.52,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
-2026-03-01,101.79,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2026-01-01,101.26,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2026-02-01,101.53,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2026-03-01,101.78,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2026-04-01,102,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
 2026-05-01,102.25,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
+2026-06-01,102.48,CPI Rents Monthly ; Weighted average of eight capital cities ;,A130400542R,Rental Prices,Index,Month
