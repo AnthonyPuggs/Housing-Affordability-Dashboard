@@ -3805,6 +3805,7 @@ date,value,series,series_id,category,unit,frequency
 2024-11-15,1975.8,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 2025-05-15,2010,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 2025-11-15,2051.1,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
+2026-05-15,2083.7,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 1959-09-01,1855,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
 1959-12-01,1894,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
 1960-03-01,1969,Compensation of Employees,A2303359K,Income,$ Millions,Quarter
