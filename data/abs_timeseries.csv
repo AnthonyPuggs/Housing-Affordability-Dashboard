@@ -3497,7 +3497,7 @@ date,value,series,series_id,category,unit,frequency
 2007-12-01,31265,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2008-03-01,28925,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2008-06-01,25241,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2008-09-01,26077,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2008-09-01,26078,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2008-12-01,30609,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2009-03-01,44768,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2009-06-01,49499,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
@@ -3507,67 +3507,68 @@ date,value,series,series_id,category,unit,frequency
 2010-06-01,20955,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2010-09-01,20281,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2010-12-01,20017,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2011-03-01,19497,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2011-03-01,19496,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2011-06-01,20224,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2011-09-01,21071,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2011-09-01,21072,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2011-12-01,24368,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2012-03-01,23423,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2012-06-01,22465,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2012-09-01,23786,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2012-03-01,23422,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2012-06-01,22464,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2012-09-01,23788,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2012-12-01,21849,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2013-03-01,22061,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2013-06-01,23596,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2013-09-01,23479,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2013-06-01,23595,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2013-09-01,23482,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2013-12-01,22962,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2014-03-01,22786,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2014-06-01,22313,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2014-09-01,22459,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2014-03-01,22784,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2014-06-01,22311,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2014-09-01,22464,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2014-12-01,22095,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2015-03-01,21695,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2015-06-01,21008,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2015-09-01,20839,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2015-03-01,21691,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2015-06-01,21006,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2015-09-01,20846,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2015-12-01,19968,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2016-03-01,20296,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2016-06-01,21299,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2016-09-01,20025,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2016-12-01,20010,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2017-03-01,20849,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2017-06-01,21578,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2017-09-01,26346,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2017-12-01,26614,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2018-03-01,26464,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2018-06-01,26064,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2018-09-01,25904,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2018-12-01,24742,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2019-03-01,23586,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2019-06-01,24216,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2019-09-01,26914,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2016-03-01,20289,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2016-06-01,21297,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2016-09-01,20035,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2016-12-01,20015,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2017-03-01,20829,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2017-06-01,21576,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2017-09-01,26372,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2017-12-01,26620,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2018-03-01,26420,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2018-06-01,26063,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2018-09-01,25947,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2018-12-01,24750,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2019-03-01,23524,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2019-06-01,24218,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2019-09-01,26987,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2019-12-01,28543,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2020-03-01,29049,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2020-06-01,26953,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2020-09-01,37935,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2020-12-01,42479,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2021-03-01,48235,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2021-06-01,42795,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2021-09-01,37960,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2021-12-01,35099,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2022-03-01,33442,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2022-06-01,30806,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2022-09-01,28778,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2022-12-01,26075,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2023-03-01,26586,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2023-06-01,27970,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2023-09-01,27005,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2023-12-01,29230,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2024-03-01,28520,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2024-06-01,29912,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2024-09-01,29395,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2024-12-01,28966,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2025-03-01,28805,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2025-06-01,29335,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2025-09-01,29675,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2025-12-01,31590,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
-2026-03-01,30241,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2020-03-01,28963,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2020-06-01,26919,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2020-09-01,38158,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2020-12-01,42403,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2021-03-01,48103,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2021-06-01,42685,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2021-09-01,38302,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2021-12-01,34965,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2022-03-01,33371,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2022-06-01,30691,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2022-09-01,29118,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2022-12-01,25918,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2023-03-01,26551,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2023-06-01,27867,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2023-09-01,27336,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2023-12-01,29030,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2024-03-01,28484,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2024-06-01,29821,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2024-09-01,29769,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2024-12-01,28734,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2025-03-01,28757,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2025-06-01,29305,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2025-09-01,30013,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2025-12-01,31337,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2026-03-01,30210,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
+2026-06-01,29319,FHB New Loan Commitments (Number),A130268484W,Housing Finance,Number,Quarter
 2002-09-01,4121.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 2002-12-01,4045.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 2003-03-01,4172.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
@@ -3598,71 +3599,72 @@ date,value,series,series_id,category,unit,frequency
 2009-06-01,15066.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 2009-09-01,13440.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 2009-12-01,10751.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2010-03-01,7968.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2010-03-01,7968.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 2010-06-01,6642.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2010-09-01,6462.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2010-09-01,6462.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 2010-12-01,6281.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 2011-03-01,6131.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2011-06-01,6396.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2011-09-01,6699,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2011-06-01,6396.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2011-09-01,6698.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 2011-12-01,7528.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2012-03-01,7309.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2012-06-01,7075.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2012-09-01,7587.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2012-12-01,7025.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2013-03-01,7174.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2013-06-01,7556.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2013-09-01,7569.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2013-12-01,7565,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2014-03-01,7712.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2014-06-01,7616.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2014-09-01,7561.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2014-12-01,7429.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2015-03-01,7403.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2015-06-01,7353.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2015-09-01,7393.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2015-12-01,7160.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2016-03-01,7065.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2016-06-01,7361.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2016-09-01,7043.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2016-12-01,7050.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2017-03-01,7266.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2017-06-01,7503.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2017-09-01,9232.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2017-12-01,9552.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2018-03-01,9668.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2018-06-01,9873.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2018-09-01,9672.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2018-12-01,9205.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2019-03-01,8740.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2019-06-01,9275.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2019-09-01,10896.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2019-12-01,11822.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2020-03-01,12196,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2020-06-01,11520.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2020-09-01,15326.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2020-12-01,17754.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2021-03-01,20364,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2021-06-01,19305.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2021-09-01,17474.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2021-12-01,16595.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2022-03-01,15747.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2022-06-01,14969.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2022-09-01,13959.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2022-12-01,12704.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2023-03-01,12669.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2023-06-01,14130.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2023-09-01,13582.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2023-12-01,15019.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2024-03-01,14407.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2024-06-01,16246.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2024-09-01,15899.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2024-12-01,15705.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2025-03-01,15191.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2025-06-01,16686.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2025-09-01,16671,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2025-12-01,19206.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
-2026-03-01,17913.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2012-03-01,7309.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2012-06-01,7075.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2012-09-01,7587.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2012-12-01,7025.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2013-03-01,7174.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2013-06-01,7556.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2013-09-01,7569.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2013-12-01,7564.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2014-03-01,7713.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2014-06-01,7617.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2014-09-01,7560.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2014-12-01,7428.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2015-03-01,7404.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2015-06-01,7354.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2015-09-01,7391.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2015-12-01,7158.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2016-03-01,7067.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2016-06-01,7365.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2016-09-01,7039.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2016-12-01,7047,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2017-03-01,7272.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2017-06-01,7510.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2017-09-01,9218.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2017-12-01,9546.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2018-03-01,9684.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2018-06-01,9888.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2018-09-01,9644.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2018-12-01,9198,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2019-03-01,8766,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2019-06-01,9294.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2019-09-01,10845.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2019-12-01,11811,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2020-03-01,12248.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2020-06-01,11557.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2020-09-01,15221.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2020-12-01,17718.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2021-03-01,20506.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2021-06-01,19394.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2021-09-01,17291.5,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2021-12-01,16553.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2022-03-01,15916,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2022-06-01,15042.1,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2022-09-01,13758.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2022-12-01,12681.8,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2023-03-01,12854.4,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2023-06-01,14184.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2023-09-01,13339.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2023-12-01,15017,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2024-03-01,14663.3,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2024-06-01,16284,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2024-09-01,15575.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2024-12-01,15724.6,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2025-03-01,15499.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2025-06-01,16705.9,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2025-09-01,16294.7,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2025-12-01,19254,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2026-03-01,18337.2,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
+2026-06-01,18383,FHB New Loan Commitments (Value),A130268483V,Housing Finance,$ Millions,Quarter
 1983-11-15,345.2,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 1984-02-15,353.5,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
 1984-05-15,365.3,"AWE (AWOTE, Persons)",NA,Income,AUD,Quarter
