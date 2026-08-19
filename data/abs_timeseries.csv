@@ -4190,6 +4190,7 @@ date,value,series,series_id,category,unit,frequency
 2025-09-01,157.6,WPI,A2603039T,Income,Index Numbers,Quarter
 2025-12-01,158.7,WPI,A2603039T,Income,Index Numbers,Quarter
 2026-03-01,159.6,WPI,A2603039T,Income,Index Numbers,Quarter
+2026-06-01,160.3,WPI,A2603039T,Income,Index Numbers,Quarter
 1978-02-01,9.1960395,Labour Underutilisation Rate,ABS:LF_UNDER/M24.3.1599.20.AUS.M,Labour Market,Per cent,Month
 1978-03-01,8.7339671,Labour Underutilisation Rate,ABS:LF_UNDER/M24.3.1599.20.AUS.M,Labour Market,Per cent,Month
 1978-04-01,8.8566802,Labour Underutilisation Rate,ABS:LF_UNDER/M24.3.1599.20.AUS.M,Labour Market,Per cent,Month
