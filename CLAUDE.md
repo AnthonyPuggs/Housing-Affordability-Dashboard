@@ -50,7 +50,7 @@ Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
 ## CI / Automation
 
 - `.github/workflows/ci.yml` — push (main) + PR: runs `testthat::test_dir("tests")` plus the release checklist. Unit/module tests read `tests/fixtures/data/`, so a scheduled data refresh cannot fail code tests; tests that read `data/` directly are live-data contract tests by design.
-- `.github/workflows/data-refresh.yml` — scheduled weekdays 07:00 AEST (`cron: '0 21 * * 0-4'` UTC; Actions schedules are UTC-only — do not add a `timezone:` key). Runs the pipeline, refresh contract tests, then commits `data/*.csv` only when something other than `data_vintage.csv` changed.
+- `.github/workflows/data-refresh.yml` — scheduled weekdays 07:00 AEST (`cron: '0 21 * * 0-4'` UTC; Actions schedules are UTC-only — do not add a `timezone:` key). Runs the pipeline, then the full testthat suite plus the release checklist (the only full-suite check of refreshed data, since GITHUB_TOKEN pushes/merges never trigger `ci.yml`), then commits `data/*.csv` only when something other than `data_vintage.csv` changed.
 - Byte-literal contract tests pin exact source strings (workflow text, module text, README text). When changing pinned code or docs, update the corresponding `tests/test_*.R` contract in the same commit.
 
 ## Deployment (Posit Connect Cloud)

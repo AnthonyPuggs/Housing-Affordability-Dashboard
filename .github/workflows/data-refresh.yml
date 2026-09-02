@@ -37,15 +37,14 @@ jobs:
       - name: Refresh dashboard data
         run: Rscript pipeline/05_driver.R
 
-      - name: Run refresh contract tests
+      # The full suite runs here, before anything is pushed, because pushes and
+      # merges made with GITHUB_TOKEN never trigger ci.yml: this step is the only
+      # place the refreshed data is tested against the whole suite (live-data
+      # contract tests, fixture-based unit/module tests and the app smoke test)
+      # rather than the refresh-specific subset. A failure blocks the push.
+      - name: Run full test suite
         run: |
-          Rscript tests/test_data_vintage.R
-          Rscript tests/test_abs_labour_api_contracts.R
-          Rscript tests/test_pipeline_driver_stage_gates.R
-          Rscript tests/test_pipeline_outputs.R
-          Rscript tests/test_provenance_report.R
-          Rscript tests/test_ui_smoke_contracts.R
-          Rscript tests/test_data_refresh_workflow.R
+          Rscript -e "testthat::test_dir('tests', stop_on_failure = TRUE)"
           Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
 
       - name: Commit refreshed dashboard data
@@ -86,9 +85,9 @@ jobs:
           else
             # Large revision: route through a PR so the mass rewrite is
             # captured as a single reviewable diff, then merge it in the same
-            # run — the refresh contract tests and release checklist above
-            # already validated the data, so the PR is an audit trail, not a
-            # manual gate. Checks-gated auto-merge is not an option here:
+            # run — the full test suite and release checklist above already
+            # validated the data, so the PR is an audit trail, not a manual
+            # gate. Checks-gated auto-merge is not an option here:
             # events created with GITHUB_TOKEN never trigger other workflows,
             # so a required-status gate would wait on CI runs that never start.
             branch="data-refresh/$(date -u +%Y%m%d-%H%M%S)"
@@ -97,7 +96,7 @@ jobs:
               --base "${GITHUB_REF_NAME}" \
               --head "${branch}" \
               --title "data: large dashboard refresh (${changed_lines} changed lines)" \
-              --body "Automated data refresh changed ${changed_lines} lines, exceeding the ${DATA_DIFF_THRESHOLD}-line audit threshold. Refresh contract tests and the release checklist passed in this run; merging automatically. The diff is retained here for after-the-fact review."
+              --body "Automated data refresh changed ${changed_lines} lines, exceeding the ${DATA_DIFF_THRESHOLD}-line audit threshold. The full test suite and the release checklist passed in this run; merging automatically. The diff is retained here for after-the-fact review."
             # GitHub computes PR mergeability asynchronously, so the merge can
             # transiently fail right after creation; retry briefly before
             # failing loud (which leaves the PR open and files a failure issue).

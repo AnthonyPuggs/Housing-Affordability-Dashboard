@@ -5,8 +5,9 @@
 # with yaml::read_yaml() and asserted on its structure (triggers, permissions,
 # concurrency, SHA-pinned actions, a failure-reporting step) rather than pinned
 # byte-for-byte. Free-text shell inside `run:` blocks is inherently unstructured,
-# so the commands that implement the hardening (rebase, diff-threshold, PR/issue
-# routing) are still matched as substrings of the concatenated run text.
+# so the commands that implement the hardening (full-suite gate, rebase,
+# diff-threshold, PR/issue routing) are still matched as substrings of the
+# concatenated run text.
 if (!exists("contracts_harness_loaded", mode = "function")) {
   source(file.path(if (basename(getwd()) == "tests") "." else "tests",
                    "helper-contracts.R"))
@@ -100,12 +101,10 @@ test_that("data_refresh_workflow structural contracts", {
   )
   required_run <- c(
     "Rscript pipeline/05_driver.R",
-    "Rscript tests/test_data_vintage.R",
-    "Rscript tests/test_abs_labour_api_contracts.R",
-    "Rscript tests/test_pipeline_driver_stage_gates.R",
-    "Rscript tests/test_pipeline_outputs.R",
-    "Rscript tests/test_provenance_report.R",
-    "Rscript tests/test_ui_smoke_contracts.R",
+    # The whole suite must run before the push: GITHUB_TOKEN pushes/merges never
+    # trigger ci.yml, so this is the only full-suite check of refreshed data.
+    "testthat::test_dir('tests', stop_on_failure = TRUE)",
+    "validate_release_checklist()",
     "':(exclude)data/data_vintage.csv'",
     "data: refresh dashboard inputs",
     "git pull --rebase",     # rebase onto any concurrent main advance before push
