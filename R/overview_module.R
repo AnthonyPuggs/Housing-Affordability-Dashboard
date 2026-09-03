@@ -105,6 +105,16 @@ overview_parse_score_click_date <- function(event_x, available_dates) {
   if (is.null(event_x) || length(event_x) == 0) {
     return(NULL)
   }
+  # Under hovermode "x" a click reports the nearest point on every trace
+  # within hover distance, so near the right-hand end of the chart
+  # event_data()$x is a vector: the score line plus the selection rule, the
+  # latest-point marker and the end of the dashed 50 line all sit within a
+  # few pixels of the last quarter. plotly.js sorts hover points by distance
+  # from the cursor, so the first element is the point the user clicked and
+  # the rest are decoration traces. Taking it here also keeps the scalar
+  # `&&` conditions below valid (R >= 4.3 errors on a length > 1 condition,
+  # which is what disconnected the session on a latest-point click).
+  event_x <- event_x[[1]]
 
   parsed <- tryCatch(
     suppressWarnings(as.Date(event_x)),

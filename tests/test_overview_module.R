@@ -66,6 +66,39 @@ test_that("overview_module contracts", {
             "Score-date click guard must ignore missing click dates")
     }
 
+    # A real plotly click under hovermode "x" reports the nearest point on
+    # every trace within hover distance (score line, selection rule, latest
+    # marker, dashed 50 line), so event_data()$x arrives as a vector near the
+    # right-hand end of the chart. Plotly sorts those points by distance from
+    # the cursor, so the first is the one the user clicked. The parser must
+    # take it rather than erroring in `&&` on a length > 1 condition.
+    if (exists("overview_parse_score_click_date", mode = "function")) {
+      score_dates <- as.Date(c("2024-10-01", "2025-04-01", "2025-10-01"))
+      multi_numeric <- as.numeric(as.Date(c("2025-04-01", "2025-10-01",
+                                            "2025-10-01")))
+      parsed_multi <- tryCatch(
+        overview_parse_score_click_date(multi_numeric, score_dates),
+        error = function(e) e
+      )
+      check(!inherits(parsed_multi, "error"),
+            paste("Score-date click parser must not error on multi-point events:",
+                  if (inherits(parsed_multi, "error")) conditionMessage(parsed_multi)))
+      check(identical(parsed_multi, as.Date("2025-04-01")),
+            "Score-date click parser must use the closest (first) point of a multi-point event")
+      parsed_chr <- tryCatch(
+        overview_parse_score_click_date(c("2025-10-01", "2025-10-01", "2026-05-15"),
+                                        score_dates),
+        error = function(e) e
+      )
+      check(identical(parsed_chr, as.Date("2025-10-01")),
+            "Score-date click parser must handle multi-point character dates")
+      check(identical(overview_parse_score_click_date(20362, score_dates),
+                      as.Date("2025-10-01")),
+            "Score-date click parser must still parse a single numeric day count")
+      check(is.null(overview_parse_score_click_date(numeric(0), score_dates)),
+            "Score-date click parser must return NULL for an empty event")
+    }
+
     module_ui <- paste(as.character(overviewPageUI("overview")),
                        collapse = "\n")
     required_ui_text <- c(
