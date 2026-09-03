@@ -13,80 +13,93 @@
 
 </div>
 
-> **Australian housing affordability is contested terrain — and the data behind it is easy to misread.**
-> This dashboard brings official ABS, SIH and RBA-derived measures together in one interactive
-> R / Shiny interface, with a discipline that runs through every page: **observed survey burden and
-> modelled market-entry scenarios are never blurred together.**
+An R/Shiny dashboard for Australian housing affordability. It puts the official ABS survey
+measures of housing costs next to a set of modelled market-entry indicators, and it keeps the two
+visibly apart on every page. That separation is the main design rule of the project: a number is
+either something the ABS observed in a household survey, or something this dashboard computed from
+public series under stated assumptions, and the labels never let you confuse one for the other.
 
-It pairs a headline **National Market-Entry Affordability Score** — a relative, historical-window
-index — with the official Survey of Income and Housing burden measures that sit beside it, each
-clearly labelled for what it is.
-
-**[▶ Open the live dashboard](https://anthonypuggs-housing-affordability-dashboard.share.connect.posit.cloud/)** &nbsp;·&nbsp; [Methodology](#methodology--provenance) &nbsp;·&nbsp; [Run it locally](#run-it)
+**[Open the live dashboard](https://anthonypuggs-housing-affordability-dashboard.share.connect.posit.cloud/)** &nbsp;·&nbsp; [Methodology](#methodology-and-provenance) &nbsp;·&nbsp; [Run it locally](#run-it)
 
 ---
 
-## The core distinction
+## Two kinds of number
 
-Two kinds of number, never mixed:
-
-| | Official · SIH / NHHA | Modelled · stylised |
+| | Official (SIH / NHHA) | Modelled (stylised) |
 | --- | --- | --- |
-| **What it is** | ABS Survey of Income and Housing measures of *observed* household housing costs, gross-income cost ratios and lower-income renter stress. | Serviceability, deposit-gap and calculator outputs built on *fixed assumptions* for a stylised household. |
-| **How it's used** | Treated as official survey burden/stress measures, with relative-standard-error and 95% margin-of-error metadata surfaced as reliability markers (`†`). | Useful for scenarios — but **not** official ABS measures or lender assessments, and always labelled as such. |
+| What it is | ABS Survey of Income and Housing estimates of observed household housing costs, cost-to-income ratios and lower-income renter stress. | Serviceability, deposit-gap and calculator outputs for a stylised household under fixed assumptions. |
+| How the app treats it | Passed through as official survey burden and stress measures, with relative standard error and 95% margin-of-error metadata shown as reliability markers (`†`). | Useful for scenarios, but not official ABS measures or lender assessments. The app says so wherever they appear. |
 
-> The **National Market-Entry Affordability Score** is a modelled, relative index — higher means
-> easier market entry versus 2012–2025 history, *not* the share of households who can afford housing.
+The headline National Market-Entry Affordability Score belongs to the second column. It is a
+relative index scored against 2012 to 2025 history, so a higher value means market entry is easier
+than it has been, not that more households can afford housing.
+
+One thing worth knowing up front: the ABS cancelled the 2023-24 Survey of Income and Housing
+because renter households were under-represented in the sample. The latest survey cross-section
+is therefore still 2019-20, and it will stay that way until SIH 2025-26 is released, probably in
+2027. The market-entry indicators exist partly to give the dashboard something timelier to say in
+the meantime.
 
 ---
 
-## The dashboard
-
-Nine focused pages:
+## The pages
 
 | # | Page | What it shows |
 | :-: | --- | --- |
-| 1 | **Overview** | Headline affordability score, component contributions and an official SIH burden snapshot. |
-| 2 | **Price Trends** | Capital-city dwelling price indexes and ABS rent CPI movements. |
-| 3 | **Affordability** | Official SIH burden bands, market-entry scenarios and a serviceability calculator. |
-| 4 | **Recent Buyers** | Official SIH File 9 evidence: dwelling values, mortgages, equity and household profiles of recent buyers. |
-| 5 | **Geographic Affordability** | SIH-only, geography-aligned cost-to-income comparisons across states and capitals. |
-| 6 | **Market Context** | Labour spare capacity, residential mortgage rates and population-demand drivers. |
-| 7 | **Housing Supply** | Building approvals by state, type and sector, plus construction-cost pressure. |
-| 8 | **Rental Market** | NHHA rental stress, rental cost pressure and SIH rental-cost estimates. |
-| 9 | **Methodology** | Registry-backed indicator formulas, source series and interpretation caveats. |
+| 1 | Overview | The headline score, its component contributions and a snapshot of official SIH burden. |
+| 2 | Price Trends | Capital-city dwelling price indexes and ABS rent CPI. |
+| 3 | Affordability | Official SIH burden bands, market-entry scenarios and a serviceability calculator. |
+| 4 | Recent Buyers | SIH File 9: dwelling values, mortgages, equity and household profiles of recent buyers. |
+| 5 | Geographic Affordability | SIH-only cost-to-income comparisons across states and capital cities. |
+| 6 | Market Context | Labour spare capacity, mortgage rates and population growth. |
+| 7 | Housing Supply | Building approvals by state, type and sector, plus construction cost pressure. |
+| 8 | Rental Market | NHHA rental stress, rent price pressure and SIH rental cost estimates. |
+| 9 | Methodology | Formulas, source series and caveats for every derived indicator, generated from the registry. |
 
 ### The score
 
-Version 1 of the composite combines three component scores at fixed weights:
+The current score is version 2. It combines three component scores at fixed weights:
 
-| Component | Weight | Captures |
+| Component | Weight | What it captures |
 | --- | :-: | --- |
-| **Mortgage serviceability** | `40%` | Monthly repayment burden |
-| **Rental entry** | `35%` | Rent pressure relative to wages |
-| **Deposit barrier** | `25%` | Upfront saving barrier |
+| Mortgage serviceability | 40% | Indexed repayment burden on a 30-year principal-and-interest loan at actual RBA new-loan rates |
+| Rental entry | 35% | Rent pressure relative to wages |
+| Deposit barrier | 25% | Time needed to save a deposit |
 
-It's a historical-relative monitoring index, not a lender assessment. Official SIH/NHHA stress
-measures stay separate throughout — they describe observed household burden, not modelled
-market-entry conditions.
+Each component is normalised against a frozen 2012 to 2025 reference window, so new data does not
+shift the meaning of past scores. The weights are unchanged from version 1. The rental component
+uses public index-style inputs, which means it can understate stress in new leases. On the Overview
+page you can click any historical date on the chart and the headline and component display update
+to that point, with the weights held fixed.
+
+Official SIH and NHHA stress measures are never folded into the score, because they answer a
+different question: they describe the housing burden households actually reported, while the score
+describes modelled conditions for entering the market. The dashboard shows both, side by side,
+with their labels intact.
 
 ---
 
 ## Where the data comes from
 
-- **ABS** — prices, CPI, labour and supply series, plus the Survey of Income and Housing (SIH / NHHA).
-- **RBA** — cash and mortgage-rate inputs from the F-series tables.
-- **Derived** — affordability indices and the National Market-Entry Affordability Score.
+- ABS: dwelling prices, CPI, labour market and building approval series, plus the Survey of Income and Housing (SIH and NHHA tables).
+- RBA: cash rate and mortgage-rate inputs from the F-series tables, and household debt-to-income from table E2.
+- Derived: affordability indices and the National Market-Entry Affordability Score, computed by the pipeline in this repository.
 
-Built with **R**, **Shiny** and **bslib** (Bootstrap 5, native dark/light mode), charts rendered
-with **Plotly**, using local system fonts only — no third-party font fetches at launch.
+A scheduled GitHub Actions job refreshes the ABS and RBA inputs on weekday mornings (Brisbane
+time), runs the full test suite against the new data, and commits the updated CSVs only when
+something other than the vintage timestamp has changed. Large revisions go through an automatically
+merged pull request so the diff is kept for later review.
+
+The app is built with R, Shiny and bslib on Bootstrap 5, with charts in Plotly. It uses local
+system font stacks rather than hosted web fonts, so nothing is fetched from a third party at
+launch.
 
 ---
 
 ## Run it
 
-The package set is pinned with [`renv`](https://rstudio.github.io/renv/) for reproducible runs. The
-app reads saved CSVs from `data/`, so it launches without refreshing live ABS/RBA inputs:
+Packages are pinned with [`renv`](https://rstudio.github.io/renv/). The app reads the committed
+CSVs in `data/`, so it starts without any network access:
 
 ```bash
 Rscript -e "renv::restore()"      # restore the pinned packages
@@ -94,12 +107,12 @@ Rscript -e "shiny::runApp('.')"   # launch the dashboard
 ```
 
 <details>
-<summary>No <code>renv</code>? Install the runtime packages manually</summary>
+<summary>No <code>renv</code>? Install the runtime packages by hand</summary>
 
 ```r
-install.packages("renv")   # recommended
+install.packages("renv")   # the easier option
 
-# or install the direct runtime + pipeline packages:
+# or install the direct runtime and pipeline packages:
 install.packages(c(
   "shiny", "bslib", "ggplot2", "plotly", "dplyr", "tidyr", "purrr",
   "stringr", "scales", "readr", "readxl", "readabs", "lubridate",
@@ -110,8 +123,9 @@ install.packages(c(
 
 ### Refresh the data
 
-Run the full pipeline from the repository root. It parses local ABS SIH workbooks, retrieves public
-ABS/RBA series, derives the indicators and validates every output against per-stage contracts:
+The pipeline parses the local ABS SIH workbooks, downloads the public ABS and RBA series, derives
+the indicators and checks every output against its stage contract. Run it from the repository
+root:
 
 ```bash
 Rscript pipeline/05_driver.R
@@ -119,8 +133,8 @@ Rscript pipeline/05_driver.R
 
 ### Verify
 
-A testthat suite covers the pipeline, every page module, methodology text and visual
-semantics. Before publishing, run the suite and the release-readiness checklist:
+The testthat suite covers the pipeline, every page module, the methodology text and the visual
+semantics. Before publishing, run it together with the release checklist:
 
 ```bash
 Rscript -e "testthat::test_dir('tests', stop_on_failure = TRUE)"
@@ -129,108 +143,85 @@ Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
 
 ---
 
-## Methodology & provenance
+## Methodology and provenance
 
-The provenance chain is explicit and auditable:
+Every number on the dashboard can be traced back through the same chain:
 
 ```
 pipeline/05_driver.R  →  06_validate_outputs.R  →  data/*.csv  →  R/indicator_registry.R  →  dashboard labels
 ```
 
-`R/indicator_registry.R` is the single source of truth for derived indicator formulas, source
-series, units and interpretation direction — and the in-app **Methodology** page is generated from
-it, alongside a downloadable methodology summary and a data-source audit.
+`R/indicator_registry.R` is the source of truth for derived indicator formulas, source series, units, interpretation direction and caveats. The in-app Methodology page is generated from it, and so is the downloadable methodology summary. The registry documents what the pipeline currently computes; it does not turn a stylised market-entry measure into an official ABS statistic.
 
-#### Key caveats
+Caveats that apply throughout:
 
-- AWE is individual earnings, not household disposable income; WPI is a wage price index, not an income-distribution measure.
-- CPI rents and CPI new-dwelling indexes are price indexes, not household burden measures.
-- Assessment-buffer, deposit, LVR and loan-term inputs are sensitivity assumptions, not a lender assessment.
-- KPI colours encode economic *interpretation* (better / worse / neutral), not raw up/down movement.
-- SIH estimates are survey estimates — interpret with caution where relative standard error is high.
+- Average weekly earnings (AWE) is individual earnings, not household disposable income. The wage price index (WPI) measures wage prices, not the income distribution.
+- CPI rents and CPI new-dwelling indexes are price indexes, not measures of household burden.
+- Assessment buffer, deposit, LVR, loan term and expense inputs are sensitivity assumptions, not a lender assessment.
+- KPI colours encode economic interpretation (better, worse or neutral), not raw up or down movement.
+- SIH figures are survey estimates. Where the relative standard error is high, interpret with caution.
 
 ---
 
-## Technical documentation
+## Technical notes
 
 ### Dependencies
 
-`renv.lock` pins package versions for reproducible dashboard, pipeline and test runs. In plain terms, renv.lock pins package versions so another machine can restore the same R package set. The project activation file `.Rprofile` loads `renv` automatically when R starts from the repository root.
+renv.lock pins package versions so another machine can restore the same package set for the dashboard, the pipeline and the tests. The `.Rprofile` in the repository root activates renv automatically when R starts there.
 
-### UI system and theming
+### UI and theming
 
-The dashboard uses bslib-native dark/light mode through Bootstrap 5. It uses local system font stacks rather than Google-hosted fonts, avoiding third-party font fetches during launch or deployment.
+The interface uses bslib-native dark/light mode through Bootstrap 5, with local system font stacks in place of Google-hosted fonts.
 
-The Shiny interface uses a public-policy report UI system in `R/ui_style_system.R`. Page headers, calmer KPI tiles, chart cards and source notes are helper-backed so modules share the same hierarchy, spacing and local/system-font treatment.
+Page headers, KPI tiles, chart cards and source notes come from a shared public-policy report UI system in `R/ui_style_system.R`, so every module gets the same hierarchy, spacing and typography without re-implementing it.
 
-KPI colours encode economic interpretation as better, worse or neutral/contextual rather than raw up/down movement. `R/visual_semantics.R` centralises these classes and chart palettes so affordability-worsening increases are not shown as favourable.
+KPI colours encode economic interpretation as better, worse or neutral/contextual rather than raw up/down movement. `R/visual_semantics.R` holds those classes and the chart palettes, which is what stops a rise in an affordability-worsening measure from being coloured as good news.
 
 ### Pipeline gates
 
-Pipeline runs use per-stage output gates from `R/pipeline_contracts.R` before continuing to the next stage. The same helper records the fixed external-source manifest for ABS catalogue/table calls, ABS SDMX CPI endpoints and RBA F-series tables.
+Each pipeline stage has to pass per-stage output gates from `R/pipeline_contracts.R` before the next stage runs. The same file records the fixed external-source manifest: the ABS catalogue and table calls, the ABS SDMX CPI endpoints and the RBA F-series tables the pipeline is allowed to touch.
 
 ### Data model
 
-Main dashboard CSVs live in `data/`:
+The dashboard reads these files from `data/`:
 
-- `abs_timeseries.csv`: long-format ABS macro, CPI, price, labour and supply series using `date | value | series | series_id | category | unit | frequency`.
-- `rba_rates.csv`: long-format RBA cash-rate, mortgage-rate and household debt-to-income (E2) inputs using the same time-series schema.
-- `rba_*_raw.csv`: normalised RBA source-cache artefacts kept rectangular for reproducible parsing; `rba_rates.csv` is the dashboard-ready RBA output. The raw caches are gitignored download artefacts created by pipeline runs, not committed outputs.
-- `affordability_indices.csv`: derived cost-pressure indicators, the National Housing Affordability Score and timely official market-entry context (ABS 5601.0 first home buyer lending, the monthly CPI rents signal and the RBA E2 household debt-to-income ratio) using `date | value | indicator | geography | unit | frequency`.
-- `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental-stress measures.
-- `sih_estimate_quality.csv`: SIH sampling-error metadata for selected workbook tables, including 95% margin of error values and relative standard error flags. Users should interpret with caution when estimates have RSE from 25% to 50%; estimates above 50% are too unreliable for general use.
-- SIH estimate outputs are guarded by workbook benchmark checks in `R/sih_benchmarks.R`, covering key rows from ABS SIH Files 4, 5, 8 and 13 so sampling-error sections do not contaminate the main estimate CSVs.
+- `abs_timeseries.csv`: long-format ABS macro, CPI, price, labour and supply series, using `date | value | series | series_id | category | unit | frequency`.
+- `rba_rates.csv`: RBA cash rate, mortgage rates and household debt-to-income (E2) in the same time-series schema.
+- `rba_*_raw.csv`: normalised RBA download caches, kept rectangular so parsing is reproducible. These are gitignored artefacts of a pipeline run, not committed outputs. `rba_rates.csv` is the dashboard-ready RBA file.
+- `affordability_indices.csv`: derived cost-pressure indicators, the National Housing Affordability Score, and timely official market-entry context (ABS 5601.0 first home buyer lending, the monthly CPI rents signal and the RBA E2 debt-to-income ratio), using `date | value | indicator | geography | unit | frequency`.
+- `sih_*.csv`: parsed ABS Survey of Income and Housing tables for official housing cost, burden and NHHA rental stress measures.
+- `sih_estimate_quality.csv`: sampling-error metadata for selected SIH tables, including 95% margin of error values and relative standard error flags. Estimates with an RSE between 25% and 50% should be interpreted with caution; above 50% the ABS considers them too unreliable for general use.
 
-Official SIH/NHHA measures should be interpreted separately from modelled market-entry indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments.
+SIH outputs are checked against workbook benchmark rows in `R/sih_benchmarks.R` (key cells from Files 4, 5, 8 and 13), which keeps the sampling-error sections of the workbooks from leaking into the main estimate CSVs.
 
-The National Housing Affordability Score is a modelled national market-entry composite, not an official ABS/NHHA statistic or lender assessment. The Overview page labels it as the National Market-Entry Affordability Score: a front-page market-entry interpretation layer over the existing v2 composite, not a new data series. Version 2 combines mortgage serviceability, rental entry and deposit barrier component scores using fixed 40/35/25 weights (unchanged from v1), where higher values mean more affordable relative to a frozen 2012-2025 reference window; the v2 mortgage input is an indexed 30-year principal-and-interest repayment burden at actual RBA F6 new-loan rates (F5-spliced history). The score is not the share of households who can afford housing, and the rental-entry component may understate new-lease stress because the score uses public index-style inputs. The Overview chart lets users click historical score dates to update the headline score and component contribution display without changing the fixed headline weights.
+Official SIH and NHHA measures are interpreted separately from the modelled indicators. Mortgage serviceability, deposit-gap and calculator outputs are stylised scenarios, not official ABS measures or lender assessments. The National Housing Affordability Score is the underlying v2 composite; the Overview page presents it as the National Market-Entry Affordability Score, which is a labelling layer over the same series rather than a new one.
 
-`R/market_entry_scenarios.R` centralises app-only market-entry scenario calculations for mortgage repayments, assessed-rate sensitivity, deposit saving time and expense-adjusted serviceability ratios. Assessment buffer, deposit, implied LVR, loan-term and expense inputs are sensitivity assumptions, not a lender assessment. The serviceability chart uses AWE individual earnings as the income proxy; savings-rate assumptions remain calculator-only because they affect deposit saving time rather than repayment serviceability.
+`R/market_entry_scenarios.R` holds the app-only scenario calculations: mortgage repayments, assessed-rate sensitivity, deposit saving time and expense-adjusted serviceability ratios. The serviceability chart uses AWE individual earnings as its income proxy. Savings-rate assumptions live in the calculator only, since they affect saving time rather than repayment serviceability.
 
-### Methodology metadata
+### Modules and helpers
 
-`R/indicator_registry.R` is the source of truth for derived indicator formulas, source series, units, interpretation direction and caveats. The registry documents the current formulas used by the pipeline and dashboard; it does not make stylised market-entry measures official ABS measures or lender assessments.
+The page modules are `R/overview_module.R`, `R/price_trends_module.R`, `R/affordability_module.R`, `R/recent_buyers_module.R`, `R/geographic_affordability_module.R`, `R/market_context_module.R`, `R/housing_supply_module.R`, `R/rental_market_module.R` and `R/methodology_module.R`. Each one owns its page's inputs, validation, caching, SIH quality joins and Plotly conversion.
 
-`R/pipeline_contracts.R` documents the pipeline stage contracts and fixed external-source manifest. It keeps the release surface explicit: each data-producing stage has required CSV outputs, and ABS/RBA source surfaces are listed separately from the saved dashboard data.
+`R/chart_builders.R` holds the ggplot builders the modules call, so charts can be tested outside Shiny. `plot_setup.R` is a thin compatibility entrypoint over the CSV loading, formatting, theme and precomputed-series helpers; it keeps the old global object names available to the modules. `CHART_BUILDER_WORKFLOW.md` walks through the practical chart-editing loop.
 
-The Shiny app includes a Methodology page backed by this registry. It shows the formula, source series, interpretation direction and official/stylised status for each derived affordability indicator.
+A few page-specific notes:
 
-`R/methodology_module.R`, `R/affordability_module.R`, `R/recent_buyers_module.R`, `R/rental_market_module.R`, `R/housing_supply_module.R`, `R/price_trends_module.R`, `R/geographic_affordability_module.R`, `R/market_context_module.R` and `R/overview_module.R` are the Shiny page modules. They keep the registry-backed methodology/provenance page, Affordability page, Recent Buyers page, Rental Market page, Housing Supply page, Price Trends page, Geographic Affordability page, Market Context page and Overview page isolated while broader component-level refactors remain incremental.
-
-`plot_setup.R` is a thin compatibility entrypoint over focused support modules for CSV loading, dashboard formatting, theme helpers and app-ready precomputed series. It keeps the existing global object names available to page modules while reducing the setup file's direct responsibility.
-
-`R/chart_builders.R` is the page-level chart-construction helper surface. It keeps ggplot builders testable outside Shiny while modules retain input handling, validation, caching, SIH quality joins, Plotly conversion and deliberately Plotly-specific post-processing such as right-side annotations.
-
-For the practical chart-editing workflow, see `CHART_BUILDER_WORKFLOW.md`.
-
-For release smoke testing of the live Shiny interface, see
-`docs/ui_smoke_checklist.md`. The project combines static UI smoke contracts,
-the Codex in-app browser checklist, and one automated `shinytest2::AppDriver`
-smoke test (`tests/test_app_smoke.R`) that boots the app on frozen fixture data
-and visits every nav panel under headless Chrome (it skips gracefully where no
-Chromium-based browser is available).
-
-The Housing Supply page keeps Building Approvals readable by filtering the ABS approval series with state, building-type and sector controls; the default view compares total-sector total approvals for New South Wales and Victoria.
-
-The Geographic Affordability page is an SIH-only, geography-aligned view. It compares state, lower-income state and greater-capital-city/rest-of-state SIH estimates where the housing-cost numerator and income or household denominator are measured within the same geography; it does not construct state or capital-city market-entry indexes from national wage, mean dwelling price, AWE, WPI or CPI-rent proxies.
-
-Survey charts that have matching SIH estimate-quality metadata display compact reliability markers (`†`) and include relative standard error or margin-of-error details in Plotly hover text. Where available, visible error bars and interval hover text use 95% margin-of-error metadata from `data/sih_estimate_quality.csv`.
-
-The Methodology page also provides an on-demand Markdown download generated by `R/provenance_report.R`. The download combines the registry-backed methodology table with saved `data/*.csv` inventory metadata, without writing a persistent report into the repository.
+- The Geographic Affordability page only shows SIH estimates where the housing-cost numerator and the income or household denominator were measured in the same geography (states, lower-income households by state, and greater capital city versus rest of state). It does not build state or city market-entry indexes from national wage, price or CPI-rent proxies.
+- The Housing Supply page filters the ABS approvals series by state, building type and sector. The default view compares total approvals for New South Wales and Victoria.
+- Survey charts with matching estimate-quality metadata show a `†` reliability marker and put the relative standard error or margin of error in the hover text. Where 95% margin-of-error metadata exists, error bars are drawn from `data/sih_estimate_quality.csv`.
+- The Methodology page offers a Markdown download built by `R/provenance_report.R`. It combines the registry table with an inventory of the saved `data/*.csv` files and does not write anything into the repository.
 
 ### Testing
 
-The test suite runs on testthat. `tests/helper-contracts.R` provides the shared
-harness; unit and module tests that boot the app data layer read frozen fixtures
-from `tests/fixtures/data` (regenerate deliberately with
-`Rscript tests/fixtures/generate_fixtures.R`), so scheduled data refreshes cannot
-break code tests. Run everything from the repository root with:
+The suite runs on testthat. `tests/helper-contracts.R` is the shared harness. Unit and module tests that boot the app data layer read frozen fixtures from `tests/fixtures/data` (regenerate them deliberately with `Rscript tests/fixtures/generate_fixtures.R`), so a scheduled data refresh cannot break a code test. Run everything from the repository root with:
 
 ```bash
 Rscript -e "testthat::test_dir('tests', stop_on_failure = TRUE)"
 ```
 
-Every test file also still runs standalone. Useful checks from the repository root are:
+For release smoke testing of the live interface, see `docs/ui_smoke_checklist.md`. The project combines static UI smoke contracts, that manual browser checklist, and one automated `shinytest2::AppDriver` test (`tests/test_app_smoke.R`) that boots the app on fixture data and visits every nav panel under headless Chrome. It skips, rather than fails, when no Chromium-based browser is available.
+
+Every test file also runs standalone. Useful checks from the repository root:
 
 ```bash
 Rscript tests/test_pipeline_outputs.R
@@ -279,9 +270,9 @@ Before publishing, run the release-readiness checklist:
 Rscript -e "source('R/release_checklist.R'); validate_release_checklist()"
 ```
 
-Release checklist warnings can be acceptable for known data vintage, while failures block public release until fixed.
+Checklist warnings can be acceptable for known data vintage. Checklist failures block public release until fixed.
 
-For a quick source check:
+For a quick check that the app still sources cleanly:
 
 ```bash
 Rscript -e "source('plot_setup.R'); source('app.R'); cat('APP_SOURCE_OK\n')"
@@ -289,9 +280,7 @@ Rscript -e "source('plot_setup.R'); source('app.R'); cat('APP_SOURCE_OK\n')"
 
 ### Notes
 
-- `pipeline/05_driver.R` is the canonical data-refresh entrypoint.
-- Legacy and manual-support scripts (`app_old.R`, `_check_cpi.R`, `save_plots.R`, exported `plots/`) live under `archive/` and are not part of the production app launch path.
-- `HOUSING_DASHBOARD_ROOT` can be set to the repository path when launching scripts from unusual working directories.
+`pipeline/05_driver.R` is the only supported data-refresh entrypoint. Older scripts (`app_old.R`, `_check_cpi.R`, `save_plots.R` and the exported `plots/`) live under `archive/` and are not part of the app. If you launch scripts from an unusual working directory, set `HOUSING_DASHBOARD_ROOT` to the repository path.
 
 ---
 
@@ -299,7 +288,7 @@ Rscript -e "source('plot_setup.R'); source('app.R'); cat('APP_SOURCE_OK\n')"
 <sub>
 
 [Live dashboard](https://anthonypuggs-housing-affordability-dashboard.share.connect.posit.cloud/) &nbsp;·&nbsp;
-Data: ABS · SIH · RBA &nbsp;·&nbsp; Built in R with Shiny & Plotly &nbsp;·&nbsp; Brisbane, Australia
+Data: ABS · SIH · RBA &nbsp;·&nbsp; Built in R with Shiny and Plotly &nbsp;·&nbsp; Brisbane, Australia
 
 </sub>
 </div>
