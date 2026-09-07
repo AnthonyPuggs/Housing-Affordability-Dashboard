@@ -151,7 +151,7 @@ date,value,series,series_id,category,unit,frequency
 2025-09-30,176.5,Household debt to income,BHFDDIT,Household Finances,Per cent,Quarter
 2025-12-31,177.2,Household debt to income,BHFDDIT,Household Finances,Per cent,Quarter
 2026-03-31,177.7,Household debt to income,BHFDDIT,Household Finances,Per cent,Quarter
-2019-07-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
+2019-07-31,3.88,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
@@ -235,7 +235,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.2,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
-2019-07-31,4,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions,FLRHIFTA,Housing Finance,Per cent per annum,Month
+2019-07-31,3.96,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
@@ -319,7 +320,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.1,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
 2026-05-31,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
 2026-06-30,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
-2019-07-31,4,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
+2026-07-31,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions,FLRHIFTL,Housing Finance,Per cent per annum,Month
+2019-07-31,3.96,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
@@ -403,7 +405,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.5,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
 2026-05-31,6.7,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
 2026-06-30,6.7,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
-2019-07-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.7,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHILB,Housing Finance,Per cent per annum,Month
+2019-07-31,3.88,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
@@ -483,11 +486,12 @@ date,value,series,series_id,category,unit,frequency
 2025-12-31,5.6,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
 2026-01-31,5.6,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
 2026-02-28,5.9,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
-2026-03-31,6,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
+2026-03-31,6.1,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
 2026-04-30,6.1,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
-2019-07-31,4.2,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%,FLRHILA,Housing Finance,Per cent per annum,Month
+2019-07-31,4.16,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
 2019-08-31,4.1,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
 2019-09-30,4.1,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
 2019-10-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
@@ -567,11 +571,12 @@ date,value,series,series_id,category,unit,frequency
 2025-12-31,5.8,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
 2026-01-31,5.8,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
 2026-02-28,6,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
-2026-03-31,6.1,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
+2026-03-31,6.2,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
 2026-04-30,6.2,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
 2026-05-31,6.5,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
 2026-06-30,6.5,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
-2019-07-31,3.8,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
+2026-07-31,6.5,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only,FLRHIFI,Housing Finance,Per cent per annum,Month
+2019-07-31,3.79,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
 2019-08-31,3.8,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
 2019-09-30,3.7,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
 2019-10-31,3.6,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
@@ -655,7 +660,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.1,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
 2026-05-31,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
 2026-06-30,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
-2019-07-31,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
+2026-07-31,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest,FLRHIFP,Housing Finance,Per cent per annum,Month
+2019-07-31,3.92,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
@@ -739,7 +745,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.2,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
-2019-07-31,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",FLRHIVB,Housing Finance,Per cent per annum,Month
+2019-07-31,3.92,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
@@ -823,7 +830,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.1,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
-2019-07-31,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",FLRHIVC,Housing Finance,Per cent per annum,Month
+2019-07-31,3.87,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
@@ -907,7 +915,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.2,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
-2019-07-31,4.2,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",FLRHIVA,Housing Finance,Per cent per annum,Month
+2019-07-31,4.15,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
 2019-08-31,4.2,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
 2019-10-31,3.8,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
@@ -991,7 +1000,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.6,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
 2026-05-31,7,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
 2026-06-30,7.1,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
-2019-07-31,3.8,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
+2026-07-31,7,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",FLRHIFFB,Housing Finance,Per cent per annum,Month
+2019-07-31,3.81,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.7,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.7,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.5,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
@@ -1075,6 +1085,7 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.1,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.3,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,"Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",FLRHIFFA,Housing Finance,Per cent per annum,Month
 2019-07-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; All institutions,FLRHIFVA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; All institutions,FLRHIFVA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; All institutions,FLRHIFVA,Housing Finance,Per cent per annum,Month
@@ -1159,6 +1170,7 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.2,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; All institutions,FLRHIFVA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; All institutions,FLRHIFVA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; All institutions,FLRHIFVA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; All institutions,FLRHIFVA,Housing Finance,Per cent per annum,Month
 2019-07-31,4,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; Large institutions,FLRHIFVL,Housing Finance,Per cent per annum,Month
 2019-08-31,4,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; Large institutions,FLRHIFVL,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; Large institutions,FLRHIFVL,Housing Finance,Per cent per annum,Month
@@ -1243,7 +1255,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.1,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; Large institutions,FLRHIFVL,Housing Finance,Per cent per annum,Month
 2026-05-31,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; Large institutions,FLRHIFVL,Housing Finance,Per cent per annum,Month
 2026-06-30,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; Large institutions,FLRHIFVL,Housing Finance,Per cent per annum,Month
-2019-07-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.3,Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; Large institutions,FLRHIFVL,Housing Finance,Per cent per annum,Month
+2019-07-31,3.49,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.3,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
@@ -1327,7 +1340,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
-2019-07-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions,FLRHOFTA,Housing Finance,Per cent per annum,Month
+2019-07-31,3.52,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
 2019-09-30,3.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
 2019-10-31,3.3,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
@@ -1411,7 +1425,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
-2019-07-31,3.6,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions,FLRHOFTL,Housing Finance,Per cent per annum,Month
+2019-07-31,3.56,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
 2019-09-30,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
 2019-10-31,3.3,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
@@ -1495,7 +1510,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.1,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
 2026-05-31,6.3,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
-2019-07-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.3,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%,FLRHOLB,Housing Finance,Per cent per annum,Month
+2019-07-31,3.47,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.3,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
@@ -1579,6 +1595,7 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%,FLRHOLA,Housing Finance,Per cent per annum,Month
 2019-07-31,4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
 2019-08-31,4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
 2019-09-30,4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
@@ -1659,11 +1676,12 @@ date,value,series,series_id,category,unit,frequency
 2025-12-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
 2026-01-31,6.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
 2026-02-28,6.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
-2026-03-31,6.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
+2026-03-31,6.6,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
 2026-04-30,6.7,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
 2026-05-31,6.9,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
 2026-06-30,7,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
-2019-07-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
+2026-07-31,7,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only,FLRHOFI,Housing Finance,Per cent per annum,Month
+2019-07-31,3.52,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
 2019-08-31,3.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
 2019-09-30,3.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
 2019-10-31,3.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
@@ -1743,11 +1761,12 @@ date,value,series,series_id,category,unit,frequency
 2025-12-31,5.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
 2026-01-31,5.4,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
 2026-02-28,5.7,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
-2026-03-31,5.8,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
+2026-03-31,5.9,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
 2026-04-30,5.9,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
-2019-07-31,3.5,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest,FLRHOFP,Housing Finance,Per cent per annum,Month
+2019-07-31,3.47,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
 2019-09-30,3.4,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
 2019-10-31,3.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
@@ -1831,7 +1850,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
-2019-07-31,3.5,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",FLRHOVB,Housing Finance,Per cent per annum,Month
+2019-07-31,3.52,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
 2019-09-30,3.5,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
 2019-10-31,3.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
@@ -1915,7 +1935,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.1,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
 2026-05-31,6.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
 2026-06-30,6.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
-2019-07-31,3.5,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",FLRHOVC,Housing Finance,Per cent per annum,Month
+2019-07-31,3.49,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.4,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
@@ -1999,7 +2020,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
-2019-07-31,3.8,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",FLRHOVA,Housing Finance,Per cent per annum,Month
+2019-07-31,3.76,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
 2019-08-31,3.6,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
 2019-09-30,3.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
 2019-10-31,3.1,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
@@ -2083,7 +2105,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
 2026-05-31,6.5,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
 2026-06-30,6.8,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
-2019-07-31,3.4,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.9,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOFFB,Housing Finance,Per cent per annum,Month
+2019-07-31,3.43,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
 2019-10-31,3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
@@ -2167,6 +2190,7 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,5.9,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.1,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.3,"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOFFA,Housing Finance,Per cent per annum,Month
 2019-07-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions,FLRHOFVA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions,FLRHOFVA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions,FLRHOFVA,Housing Finance,Per cent per annum,Month
@@ -2251,7 +2275,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions,FLRHOFVA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions,FLRHOFVA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.3,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions,FLRHOFVA,Housing Finance,Per cent per annum,Month
-2019-07-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions,FLRHOFVA,Housing Finance,Per cent per annum,Month
+2019-07-31,3.53,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
 2019-08-31,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
 2019-09-30,3.5,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
 2019-10-31,3.3,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
@@ -2335,7 +2360,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
-2019-07-31,4.3,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions,FLRHOFVL,Housing Finance,Per cent per annum,Month
+2019-07-31,4.31,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
 2019-08-31,4.3,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
 2019-09-30,4.3,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
 2019-10-31,4.1,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
@@ -2415,11 +2441,12 @@ date,value,series,series_id,category,unit,frequency
 2025-12-31,5.7,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
 2026-01-31,5.7,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
 2026-02-28,6,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
-2026-03-31,6.1,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
+2026-03-31,6.2,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
 2026-04-30,6.2,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
-2019-07-31,4.3,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions,FLRHIOTA,Housing Finance,Per cent per annum,Month
+2019-07-31,4.31,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
 2019-08-31,4.3,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
 2019-09-30,4.3,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
 2019-10-31,4.1,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
@@ -2503,7 +2530,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.2,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
-2019-07-31,4.5,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions,FLRHIOTL,Housing Finance,Per cent per annum,Month
+2019-07-31,4.49,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
 2019-08-31,4.5,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
 2019-09-30,4.5,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
 2019-10-31,4.3,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
@@ -2583,11 +2611,12 @@ date,value,series,series_id,category,unit,frequency
 2025-12-31,5.9,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
 2026-01-31,5.9,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
 2026-02-28,6.1,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
-2026-03-31,6.2,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
+2026-03-31,6.3,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
 2026-04-30,6.3,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
 2026-05-31,6.6,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
 2026-06-30,6.6,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
-2019-07-31,4.2,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
+2026-07-31,6.6,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only,FLRHIOI,Housing Finance,Per cent per annum,Month
+2019-07-31,4.15,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
 2019-08-31,4.1,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
 2019-09-30,4.1,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
 2019-10-31,3.9,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
@@ -2671,7 +2700,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.2,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
 2026-05-31,6.4,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
 2026-06-30,6.4,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
-2019-07-31,4.7,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
+2026-07-31,6.4,Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest,FLRHIOP,Housing Finance,Per cent per annum,Month
+2019-07-31,4.69,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
 2019-08-31,4.6,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
 2019-09-30,4.7,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
 2019-10-31,4.5,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
@@ -2755,7 +2785,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.5,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
 2026-05-31,6.5,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
 2026-06-30,6.5,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
-2019-07-31,4.2,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.5,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHIOFB,Housing Finance,Per cent per annum,Month
+2019-07-31,4.17,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
 2019-08-31,4.2,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
 2019-09-30,4.1,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
 2019-10-31,4.1,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
@@ -2839,7 +2870,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,5.5,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
 2026-05-31,5.6,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
 2026-06-30,5.7,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
-2019-07-31,4.4,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
+2026-07-31,5.7,"Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHIOFA,Housing Finance,Per cent per annum,Month
+2019-07-31,4.35,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
 2019-08-31,4.3,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
 2019-09-30,4.3,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
 2019-10-31,4.1,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
@@ -2923,7 +2955,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.2,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.5,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.5,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
-2019-07-31,4.4,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
+2026-07-31,6.5,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions,FLRHIOVA,Housing Finance,Per cent per annum,Month
+2019-07-31,4.36,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
 2019-08-31,4.3,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
 2019-09-30,4.3,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
 2019-10-31,4,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
@@ -3007,7 +3040,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.2,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
 2026-05-31,6.5,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
 2026-06-30,6.5,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
-2019-07-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.5,Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions,FLRHIOVL,Housing Finance,Per cent per annum,Month
+2019-07-31,3.84,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
@@ -3091,7 +3125,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
-2019-07-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions,FLRHOOTA,Housing Finance,Per cent per annum,Month
+2019-07-31,3.83,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
 2019-08-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
 2019-09-30,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
 2019-10-31,3.7,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
@@ -3175,7 +3210,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
-2019-07-31,4.3,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions,FLRHOOTL,Housing Finance,Per cent per annum,Month
+2019-07-31,4.31,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
 2019-08-31,4.4,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
 2019-09-30,4.3,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
 2019-10-31,4.3,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
@@ -3255,11 +3291,12 @@ date,value,series,series_id,category,unit,frequency
 2025-12-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
 2026-01-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
 2026-02-28,6.4,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
-2026-03-31,6.5,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
+2026-03-31,6.6,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
 2026-04-30,6.6,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
 2026-05-31,6.9,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
 2026-06-30,6.9,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
-2019-07-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
+2026-07-31,6.9,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only,FLRHOOI,Housing Finance,Per cent per annum,Month
+2019-07-31,3.77,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
 2019-08-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
 2019-09-30,3.7,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
 2019-10-31,3.6,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
@@ -3343,7 +3380,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
-2019-07-31,4.4,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest,FLRHOOP,Housing Finance,Per cent per annum,Month
+2019-07-31,4.35,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
 2019-08-31,4.3,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
 2019-09-30,4.3,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
 2019-10-31,4.2,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
@@ -3427,7 +3465,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6.1,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
 2026-05-31,6.1,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
 2026-06-30,6.1,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
-2019-07-31,3.9,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",FLRHOOFB,Housing Finance,Per cent per annum,Month
+2019-07-31,3.94,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.9,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.9,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.9,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
@@ -3511,7 +3550,8 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,5.5,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
 2026-05-31,5.5,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
 2026-06-30,5.6,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
-2019-07-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
+2026-07-31,5.6,"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",FLRHOOFA,Housing Finance,Per cent per annum,Month
+2019-07-31,3.81,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2019-08-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2019-09-30,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2019-10-31,3.6,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
@@ -3591,10 +3631,11 @@ date,value,series,series_id,category,unit,frequency
 2025-12-31,5.5,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2026-01-31,5.5,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2026-02-28,5.8,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
-2026-03-31,5.9,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
+2026-03-31,6,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2026-04-30,6,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2026-06-30,6.3,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions,FLRHOOVA,Housing Finance,Per cent per annum,Month
 2019-07-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions,FLRHOOVL,Housing Finance,Per cent per annum,Month
 2019-08-31,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions,FLRHOOVL,Housing Finance,Per cent per annum,Month
 2019-09-30,3.8,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions,FLRHOOVL,Housing Finance,Per cent per annum,Month
@@ -3679,6 +3720,7 @@ date,value,series,series_id,category,unit,frequency
 2026-04-30,6,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions,FLRHOOVL,Housing Finance,Per cent per annum,Month
 2026-05-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions,FLRHOOVL,Housing Finance,Per cent per annum,Month
 2026-06-30,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions,FLRHOOVL,Housing Finance,Per cent per annum,Month
+2026-07-31,6.2,Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions,FLRHOOVL,Housing Finance,Per cent per annum,Month
 2011-01-04,4.75,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
 2011-01-05,4.75,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
 2011-01-06,4.75,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
@@ -7645,6 +7687,7 @@ date,value,series,series_id,category,unit,frequency
 2026-09-01,4.35,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
 2026-09-02,4.35,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
 2026-09-03,4.35,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
+2026-09-04,4.35,Cash Rate Target,FIRMMCRTD,Interest Rates,Per cent,Day
 2011-11-02,-0.25,Change in the Cash Rate Target,FIRMMCCRT,Interest Rates,Per cent,Quarter
 2011-12-07,-0.25,Change in the Cash Rate Target,FIRMMCCRT,Interest Rates,Per cent,Quarter
 2012-05-02,-0.5,Change in the Cash Rate Target,FIRMMCCRT,Interest Rates,Per cent,Quarter
@@ -10750,6 +10793,7 @@ date,value,series,series_id,category,unit,frequency
 2026-09-01,4.35,Highest Interbank Overnight Cash Rate,FIRMMCRIH,Interest Rates,Per cent,Day
 2026-09-02,4.35,Highest Interbank Overnight Cash Rate,FIRMMCRIH,Interest Rates,Per cent,Day
 2026-09-03,4.36,Highest Interbank Overnight Cash Rate,FIRMMCRIH,Interest Rates,Per cent,Day
+2026-09-04,4.35,Highest Interbank Overnight Cash Rate,FIRMMCRIH,Interest Rates,Per cent,Day
 2011-01-04,4.75,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2011-01-05,4.75,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2011-01-06,4.75,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
@@ -14716,6 +14760,7 @@ date,value,series,series_id,category,unit,frequency
 2026-09-01,4.35,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2026-09-02,4.35,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2026-09-03,4.35,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
+2026-09-04,4.35,Interbank Overnight Cash Rate,FIRMMCRID,Interest Rates,Per cent,Day
 2013-05-20,2.75,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2013-05-21,2.75,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2013-05-22,2.75,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
@@ -17784,6 +17829,7 @@ date,value,series,series_id,category,unit,frequency
 2026-09-01,4.35,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2026-09-02,4.35,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2026-09-03,4.35,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
+2026-09-04,4.35,Lowest Interbank Overnight Cash Rate,FIRMMCRIL,Interest Rates,Per cent,Day
 2015-08-31,5.05,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
 2015-09-30,4.85,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
 2015-10-31,4.82,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
@@ -17916,6 +17962,7 @@ date,value,series,series_id,category,unit,frequency
 2026-05-31,6.83,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
 2026-06-30,6.82,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
 2026-07-31,6.82,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
+2026-08-31,6.82,Lending rates; Housing loans; Banks; 3-year fixed; Investor,FILRHL3YFI,Mortgage Rates,Per cent per annum,Month
 1990-09-30,15.5,Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier,FILRHL3YF,Mortgage Rates,Per cent per annum,Month
 1990-10-31,15.13,Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier,FILRHL3YF,Mortgage Rates,Per cent per annum,Month
 1990-11-30,14.58,Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier,FILRHL3YF,Mortgage Rates,Per cent per annum,Month
@@ -18347,6 +18394,7 @@ date,value,series,series_id,category,unit,frequency
 2026-05-31,6.73,Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier,FILRHL3YF,Mortgage Rates,Per cent per annum,Month
 2026-06-30,6.74,Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier,FILRHL3YF,Mortgage Rates,Per cent per annum,Month
 2026-07-31,6.74,Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier,FILRHL3YF,Mortgage Rates,Per cent per annum,Month
+2026-08-31,6.74,Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier,FILRHL3YF,Mortgage Rates,Per cent per annum,Month
 2015-08-31,4.94,Lending rates; Housing loans; Banks; Variable; Discounted; Investor,FILRHLBVDI,Mortgage Rates,Per cent per annum,Month
 2015-09-30,4.94,Lending rates; Housing loans; Banks; Variable; Discounted; Investor,FILRHLBVDI,Mortgage Rates,Per cent per annum,Month
 2015-10-31,4.94,Lending rates; Housing loans; Banks; Variable; Discounted; Investor,FILRHLBVDI,Mortgage Rates,Per cent per annum,Month
@@ -18479,6 +18527,7 @@ date,value,series,series_id,category,unit,frequency
 2026-05-31,7.13,Lending rates; Housing loans; Banks; Variable; Discounted; Investor,FILRHLBVDI,Mortgage Rates,Per cent per annum,Month
 2026-06-30,7.13,Lending rates; Housing loans; Banks; Variable; Discounted; Investor,FILRHLBVDI,Mortgage Rates,Per cent per annum,Month
 2026-07-31,7.13,Lending rates; Housing loans; Banks; Variable; Discounted; Investor,FILRHLBVDI,Mortgage Rates,Per cent per annum,Month
+2026-08-31,7.13,Lending rates; Housing loans; Banks; Variable; Discounted; Investor,FILRHLBVDI,Mortgage Rates,Per cent per annum,Month
 2004-06-30,6.59,Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier,FILRHLBVD,Mortgage Rates,Per cent per annum,Month
 2004-07-31,6.59,Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier,FILRHLBVD,Mortgage Rates,Per cent per annum,Month
 2004-08-31,6.59,Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier,FILRHLBVD,Mortgage Rates,Per cent per annum,Month
@@ -18745,6 +18794,7 @@ date,value,series,series_id,category,unit,frequency
 2026-05-31,6.8,Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier,FILRHLBVD,Mortgage Rates,Per cent per annum,Month
 2026-06-30,6.8,Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier,FILRHLBVD,Mortgage Rates,Per cent per annum,Month
 2026-07-31,6.8,Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier,FILRHLBVD,Mortgage Rates,Per cent per annum,Month
+2026-08-31,6.8,Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier,FILRHLBVD,Mortgage Rates,Per cent per annum,Month
 2017-04-30,5.88,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor,FILRHLBVDO,Mortgage Rates,Per cent per annum,Month
 2017-05-31,5.94,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor,FILRHLBVDO,Mortgage Rates,Per cent per annum,Month
 2017-06-30,6.19,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor,FILRHLBVDO,Mortgage Rates,Per cent per annum,Month
@@ -18857,6 +18907,7 @@ date,value,series,series_id,category,unit,frequency
 2026-05-31,9.59,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor,FILRHLBVDO,Mortgage Rates,Per cent per annum,Month
 2026-06-30,9.59,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor,FILRHLBVDO,Mortgage Rates,Per cent per annum,Month
 2026-07-31,9.59,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor,FILRHLBVDO,Mortgage Rates,Per cent per annum,Month
+2026-08-31,9.59,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor,FILRHLBVDO,Mortgage Rates,Per cent per annum,Month
 2015-08-31,5.72,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier,FILRHLBVO,Mortgage Rates,Per cent per annum,Month
 2015-09-30,5.72,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier,FILRHLBVO,Mortgage Rates,Per cent per annum,Month
 2015-10-31,5.72,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier,FILRHLBVO,Mortgage Rates,Per cent per annum,Month
@@ -18989,6 +19040,7 @@ date,value,series,series_id,category,unit,frequency
 2026-05-31,9.29,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier,FILRHLBVO,Mortgage Rates,Per cent per annum,Month
 2026-06-30,9.29,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier,FILRHLBVO,Mortgage Rates,Per cent per annum,Month
 2026-07-31,9.29,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier,FILRHLBVO,Mortgage Rates,Per cent per annum,Month
+2026-08-31,9.29,Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier,FILRHLBVO,Mortgage Rates,Per cent per annum,Month
 2015-08-31,5.73,Lending rates; Housing loans; Banks; Variable; Standard; Investor,FILRHLBVSI,Mortgage Rates,Per cent per annum,Month
 2015-09-30,5.73,Lending rates; Housing loans; Banks; Variable; Standard; Investor,FILRHLBVSI,Mortgage Rates,Per cent per annum,Month
 2015-10-31,5.73,Lending rates; Housing loans; Banks; Variable; Standard; Investor,FILRHLBVSI,Mortgage Rates,Per cent per annum,Month
@@ -19121,6 +19173,7 @@ date,value,series,series_id,category,unit,frequency
 2026-05-31,9.35,Lending rates; Housing loans; Banks; Variable; Standard; Investor,FILRHLBVSI,Mortgage Rates,Per cent per annum,Month
 2026-06-30,9.35,Lending rates; Housing loans; Banks; Variable; Standard; Investor,FILRHLBVSI,Mortgage Rates,Per cent per annum,Month
 2026-07-31,9.35,Lending rates; Housing loans; Banks; Variable; Standard; Investor,FILRHLBVSI,Mortgage Rates,Per cent per annum,Month
+2026-08-31,9.35,Lending rates; Housing loans; Banks; Variable; Standard; Investor,FILRHLBVSI,Mortgage Rates,Per cent per annum,Month
 1959-01-31,5,Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier,FILRHLBVS,Mortgage Rates,Per cent per annum,Month
 1959-02-28,5,Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier,FILRHLBVS,Mortgage Rates,Per cent per annum,Month
 1959-03-31,5,Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier,FILRHLBVS,Mortgage Rates,Per cent per annum,Month
@@ -19932,6 +19985,7 @@ date,value,series,series_id,category,unit,frequency
 2026-05-31,8.77,Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier,FILRHLBVS,Mortgage Rates,Per cent per annum,Month
 2026-06-30,8.77,Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier,FILRHLBVS,Mortgage Rates,Per cent per annum,Month
 2026-07-31,8.77,Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier,FILRHLBVS,Mortgage Rates,Per cent per annum,Month
+2026-08-31,8.77,Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier,FILRHLBVS,Mortgage Rates,Per cent per annum,Month
 1998-09-30,5.9,Lending rates; Housing loans; Mortgage managers; Variable; Basic,FILRHLMMB,Mortgage Rates,Per cent per annum,Month
 1998-10-31,5.9,Lending rates; Housing loans; Mortgage managers; Variable; Basic,FILRHLMMB,Mortgage Rates,Per cent per annum,Month
 1998-11-30,5.85,Lending rates; Housing loans; Mortgage managers; Variable; Basic,FILRHLMMB,Mortgage Rates,Per cent per annum,Month
