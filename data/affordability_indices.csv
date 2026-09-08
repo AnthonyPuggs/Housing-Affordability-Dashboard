@@ -26,6 +26,7 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,19.23076923076923,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2025-04-01,11.538461538461542,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2025-10-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
+2026-04-01,1.9230769230769273,Deposit Barrier Component Score,National,Score (0-100),Quarter
 2011-07-01,9.507150702285552,Deposit Gap (Years),National,Years,Quarter
 2011-10-01,9.379171650976925,Deposit Gap (Years),National,Years,Quarter
 2012-01-01,9.305656338264228,Deposit Gap (Years),National,Years,Quarter
@@ -56,7 +57,8 @@ date,value,indicator,geography,unit,frequency
 2024-04-01,13.093800241559418,Deposit Gap (Years),National,Years,Quarter
 2024-10-01,13.015175936524253,Deposit Gap (Years),National,Years,Quarter
 2025-04-01,13.138155376961349,Deposit Gap (Years),National,Years,Quarter
-2025-10-01,13.611207994709533,Deposit Gap (Years),National,Years,Quarter
+2025-10-01,13.666212876392782,Deposit Gap (Years),National,Years,Quarter
+2026-04-01,13.541001399138368,Deposit Gap (Years),National,Years,Quarter
 2002-09-01,168029.6791552856,FHB Average Loan Size,National,AUD,Quarter
 2002-12-01,175205.71676050237,FHB Average Loan Size,National,AUD,Quarter
 2003-03-01,181482.4481273653,FHB Average Loan Size,National,AUD,Quarter
@@ -428,6 +430,7 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2025-04-01,7.692307692307687,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2025-10-01,11.538461538461542,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
+2026-04-01,1.9230769230769273,Mortgage Serviceability Component Score,National,Score (0-100),Quarter
 2011-07-01,100,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2011-10-01,95.72682900914475,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2012-01-01,94.07996341546439,Mortgage Serviceability Index,National,Index (base=100),Quarter
@@ -485,8 +488,9 @@ date,value,indicator,geography,unit,frequency
 2025-01-01,146.21841019549493,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2025-04-01,144.88475816735544,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2025-07-01,141.60028417243458,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2025-10-01,144.09385525907575,Mortgage Serviceability Index,National,Index (base=100),Quarter
-2026-01-01,149.46354697354352,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2025-10-01,144.67615959700737,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2026-01-01,149.12725062988957,Mortgage Serviceability Index,National,Index (base=100),Quarter
+2026-04-01,154.42398002488267,Mortgage Serviceability Index,National,Index (base=100),Quarter
 2012-10-01,60.48076923076923,National Housing Affordability Score,National,Score (0-100),Quarter
 2013-04-01,60.57692307692307,National Housing Affordability Score,National,Score (0-100),Quarter
 2013-10-01,65,National Housing Affordability Score,National,Score (0-100),Quarter
@@ -514,6 +518,7 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,25.769230769230766,National Housing Affordability Score,National,Score (0-100),Quarter
 2025-04-01,22.115384615384613,National Housing Affordability Score,National,Score (0-100),Quarter
 2025-10-01,22.59615384615385,National Housing Affordability Score,National,Score (0-100),Quarter
+2026-04-01,16.730769230769234,National Housing Affordability Score,National,Score (0-100),Quarter
 2011-07-01,100,Price-to-Income Ratio,National,Index (base=100),Quarter
 2011-10-01,98.30596483916945,Price-to-Income Ratio,National,Index (base=100),Quarter
 2012-01-01,97.85077805726078,Price-to-Income Ratio,National,Index (base=100),Quarter
@@ -571,8 +576,9 @@ date,value,indicator,geography,unit,frequency
 2025-01-01,145.26516380363083,Price-to-Income Ratio,National,Index (base=100),Quarter
 2025-04-01,147.59092396622958,Price-to-Income Ratio,National,Index (base=100),Quarter
 2025-07-01,148.49806231616049,Price-to-Income Ratio,National,Index (base=100),Quarter
-2025-10-01,152.78713713551787,Price-to-Income Ratio,National,Index (base=100),Quarter
-2026-01-01,155.03718291245636,Price-to-Income Ratio,National,Index (base=100),Quarter
+2025-10-01,153.40457229660925,Price-to-Income Ratio,National,Index (base=100),Quarter
+2026-01-01,154.68834576253187,Price-to-Income Ratio,National,Index (base=100),Quarter
+2026-04-01,152.87366139588516,Price-to-Income Ratio,National,Index (base=100),Quarter
 2012-07-01,-2.8091072941155204,Real House Price Growth YoY,National,Per cent,Quarter
 2012-10-01,-0.24988550742013338,Real House Price Growth YoY,National,Per cent,Quarter
 2013-01-01,0.06323906629297493,Real House Price Growth YoY,National,Per cent,Quarter
@@ -626,8 +632,9 @@ date,value,indicator,geography,unit,frequency
 2025-01-01,2.2947797258151326,Real House Price Growth YoY,National,Per cent,Quarter
 2025-04-01,2.7045599417265143,Real House Price Growth YoY,National,Per cent,Quarter
 2025-07-01,3.542004171968105,Real House Price Growth YoY,National,Per cent,Quarter
-2025-10-01,4.766679023177289,Real House Price Growth YoY,National,Per cent,Quarter
-2026-01-01,5.913764475829919,Real House Price Growth YoY,National,Per cent,Quarter
+2025-10-01,5.190056491676542,Real House Price Growth YoY,National,Per cent,Quarter
+2026-01-01,5.6754561226757705,Real House Price Growth YoY,National,Per cent,Quarter
+2026-04-01,2.7933273283453186,Real House Price Growth YoY,National,Per cent,Quarter
 2004-07-01,4.277966502821766,Real Mortgage Rate,National,Per cent,Quarter
 2004-10-01,4.036577327055417,Real Mortgage Rate,National,Per cent,Quarter
 2005-01-01,4.333153832346072,Real Mortgage Rate,National,Per cent,Quarter
@@ -1008,3 +1015,4 @@ date,value,indicator,geography,unit,frequency
 2024-10-01,57.692307692307686,Rental Entry Component Score,National,Score (0-100),Quarter
 2025-04-01,46.15384615384615,Rental Entry Component Score,National,Score (0-100),Quarter
 2025-10-01,50,Rental Entry Component Score,National,Score (0-100),Quarter
+2026-04-01,44.230769230769226,Rental Entry Component Score,National,Score (0-100),Quarter
