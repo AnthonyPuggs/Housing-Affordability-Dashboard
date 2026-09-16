@@ -203,11 +203,25 @@ is_data_row <- function(row_values) {
   any(!is.na(suppressWarnings(as.numeric(clean_abs_values(row_values)))))
 }
 
-#' Download an RBA statistical table (CSV format)
-#'
-#' @param table_id RBA table identifier (e.g. "f5", "f6", "f1")
-#' @param cache_dir Directory to cache downloaded files
-#' @return Path to the cached CSV file, or NULL on failure
+# --- Strict mode ---------------------------------------------------------------
+# Under the driver and in CI, problems that used to be downgraded to warnings
+# (parser failures, write locks) become hard errors so a failed stage cannot
+# ship stale or partial outputs behind a green gate. Standalone interactive
+# stage runs keep warnings unless CI is set.
+if (!exists("PIPELINE_STRICT")) {
+  PIPELINE_STRICT <- nzchar(Sys.getenv("CI"))
+}
+
+pipeline_problem <- function(...) {
+  message_text <- paste0(...)
+  if (isTRUE(PIPELINE_STRICT)) {
+    stop(message_text, call. = FALSE)
+  }
+  warning(message_text, call. = FALSE)
+}
+
+# --- RBA acquisition and parsing ----------------------------------------------
+
 rba_csv_parse_problem_count <- function(path) {
   if (!file.exists(path)) {
     stop("RBA CSV cache does not exist: ", path, call. = FALSE)
@@ -264,90 +278,426 @@ normalise_rba_csv_cache <- function(path) {
   invisible(path)
 }
 
-fetch_rba_table <- function(table_id, cache_dir = DATA_DIR) {
-  table_id_lower <- tolower(table_id)
-
-  # RBA CSV URL pattern: f1-data.csv, f5-data.csv, etc.
-  url <- paste0("https://www.rba.gov.au/statistics/tables/csv/",
-                table_id_lower, "-data.csv")
-
-  cache_file <- file.path(cache_dir, paste0("rba_", table_id_lower, "_raw.csv"))
-
-  if (!file.exists(cache_file) ||
-      difftime(Sys.time(), file.mtime(cache_file), units = "hours") > 24) {
-    cat("  Downloading RBA table", toupper(table_id), "from CSV endpoint...\n")
-    resp <- tryCatch(
-      GET(url, write_disk(cache_file, overwrite = TRUE)),
-      error = function(e) NULL
-    )
-    if (!is.null(resp) && !http_error(resp) && str_detect(cache_file, "\\.csv$")) {
-      # Clean the downloaded CSV: remove BOM, non-CSV title row, blank/trailing lines
-      lines <- readLines(cache_file, warn = FALSE)
-      lines[1] <- sub("^\uFEFF", "", lines[1])
-      # Remove non-CSV title row (first line with no commas)
-      if (!str_detect(lines[1], ",")) lines <- lines[-1]
-      # Remove blank lines
-      lines <- lines[nchar(trimws(lines)) > 0]
-      writeLines(lines, cache_file)
-      normalise_rba_csv_cache(cache_file)
-    }
-    if (is.null(resp) || http_error(resp)) {
-      # Try Excel as fallback with various naming patterns
-      xlsx_urls <- c(
-        paste0("https://www.rba.gov.au/statistics/tables/xls/",
-               table_id_lower, "hist.xlsx"),
-        paste0("https://www.rba.gov.au/statistics/tables/xls/",
-               str_replace(table_id_lower, "f(\\d)", "f0\\1"), "hist.xlsx"),
-        paste0("https://www.rba.gov.au/statistics/tables/xls/",
-               table_id_lower, "d.xlsx"),
-        paste0("https://www.rba.gov.au/statistics/tables/xls/",
-               str_replace(table_id_lower, "f(\\d)", "f0\\1"), "d.xlsx")
-      )
-      cache_xlsx <- file.path(cache_dir, paste0("rba_", table_id_lower, "_raw.xlsx"))
-      success <- FALSE
-      for (u in xlsx_urls) {
-        resp <- tryCatch(
-          GET(u, write_disk(cache_xlsx, overwrite = TRUE)),
-          error = function(e) NULL
-        )
-        if (!is.null(resp) && !http_error(resp)) {
-          success <- TRUE
-          cache_file <- cache_xlsx
-          break
-        }
-      }
-      if (!success) {
-        warning("Failed to download RBA table ", toupper(table_id))
-        return(NULL)
-      }
-    }
-  } else {
-    cat("  Using cached RBA table", toupper(table_id), "\n")
+rba_required_series_contract <- function(table_id) {
+  contracts <- list(
+    F1 = list(series = "Cash Rate Target", series_id = "FIRMMCRTD"),
+    F5 = list(
+      series = paste0(
+        "Lending rates; Housing loans; Banks; Variable; Discounted; ",
+        "Owner-occupier"
+      ),
+      series_id = "FILRHLBVD"
+    ),
+    F6 = list(
+      series = paste0(
+        "Lending rates; Housing credit; New loans funded in the month; ",
+        "Owner-occupied; All loans; All institutions"
+      ),
+      series_id = "FLRHOFTA"
+    ),
+    E2 = list(series = "Household debt to income", series_id = "BHFDDIT")
+  )
+  contract <- contracts[[toupper(table_id)]]
+  if (is.null(contract)) {
+    stop("Unsupported RBA table contract: ", table_id, call. = FALSE)
   }
-
-  if (str_detect(cache_file, "\\.csv$") &&
-      rba_csv_parse_problem_count(cache_file) > 0) {
-    normalise_rba_csv_cache(cache_file)
-  }
-
-  cache_file
+  contract
 }
 
-# --- Strict mode ---------------------------------------------------------------
-# Under the driver and in CI, problems that used to be downgraded to warnings
-# (parser failures, write locks) become hard errors so a failed stage cannot
-# ship stale or partial outputs behind a green gate. Standalone interactive
-# stage runs keep warnings unless CI is set.
-if (!exists("PIPELINE_STRICT")) {
-  PIPELINE_STRICT <- nzchar(Sys.getenv("CI"))
-}
-
-pipeline_problem <- function(...) {
-  message_text <- paste0(...)
-  if (isTRUE(PIPELINE_STRICT)) {
+rba_source_problem <- function(table_id, operation, detail,
+                               strict = PIPELINE_STRICT) {
+  message_text <- paste0("RBA ", toupper(table_id), " ", operation,
+                         " failed: ", detail)
+  if (isTRUE(strict)) {
     stop(message_text, call. = FALSE)
   }
   warning(message_text, call. = FALSE)
+  invisible(NULL)
+}
+
+classify_rba_category <- function(series_name, table_id) {
+  tid <- toupper(table_id)
+  case_when(
+    tid == "F1" ~ "Interest Rates",
+    tid == "F5" ~ "Mortgage Rates",
+    tid == "F6" ~ "Housing Finance",
+    tid == "E2" ~ "Household Finances",
+    str_detect(series_name, regex("cash rate", ignore_case = TRUE)) ~
+      "Interest Rates",
+    str_detect(series_name,
+               regex("mortgage|housing|lending", ignore_case = TRUE)) ~
+      "Mortgage Rates",
+    TRUE ~ "RBA"
+  )
+}
+
+infer_frequency_from_dates <- function(dates) {
+  d <- sort(unique(dates))
+  if (length(d) < 3) return("Unknown")
+  mg <- median(as.numeric(diff(d)), na.rm = TRUE)
+  if (mg <= 5) return("Day")
+  if (mg <= 40) return("Month")
+  if (mg <= 120) return("Quarter")
+  "Year"
+}
+
+parse_rba_file <- function(file, table_id, strict = PIPELINE_STRICT) {
+  fail <- function(detail) {
+    rba_source_problem(table_id, "parsing", detail, strict = strict)
+    tibble()
+  }
+
+  if (is.null(file) || length(file) != 1 || is.na(file) || !nzchar(file)) {
+    return(fail("no source file was supplied"))
+  }
+  if (!file.exists(file)) {
+    return(fail("source file does not exist"))
+  }
+  if (is.na(file.info(file)$size) || file.info(file)$size == 0) {
+    return(fail("table is empty"))
+  }
+
+  raw <- tryCatch({
+    if (str_detect(file, regex("\\.csv$", ignore_case = TRUE))) {
+      lines <- readLines(file, warn = FALSE)
+      if (length(lines) == 0) stop("table is empty")
+      lines[1] <- sub("^\uFEFF", "", lines[1])
+      title_line <- which(str_detect(lines, '^"?Title"?,'))[1]
+      if (is.na(title_line)) stop("Title metadata row is missing")
+      lines <- lines[title_line:length(lines)]
+      lines <- lines[nchar(trimws(lines)) > 0]
+      tmp <- tempfile(fileext = ".csv")
+      on.exit(unlink(tmp), add = TRUE)
+      writeLines(lines, tmp)
+      read_csv(tmp, col_names = FALSE, show_col_types = FALSE,
+               col_types = cols(.default = "c"), progress = FALSE)
+    } else if (str_detect(file, regex("\\.xlsx?$", ignore_case = TRUE))) {
+      sheets <- excel_sheets(file)
+      if (length(sheets) == 0) stop("workbook has no sheets")
+      data_sheet <- sheets[str_detect(sheets,
+                                      regex("data", ignore_case = TRUE))]
+      if (length(data_sheet) == 0) data_sheet <- sheets[1]
+      read_excel(file, sheet = data_sheet[1], col_names = FALSE,
+                 col_types = "text")
+    } else {
+      stop("unsupported file type")
+    }
+  }, error = identity)
+  if (inherits(raw, "error")) {
+    return(fail(conditionMessage(raw)))
+  }
+  if (is.null(raw) || nrow(raw) == 0 || ncol(raw) == 0) {
+    return(fail("table is empty"))
+  }
+  if (nrow(raw) < 5 || ncol(raw) < 2) {
+    return(fail("table has too few rows or columns"))
+  }
+
+  find_row <- function(label) {
+    idx <- which(str_detect(as.character(raw[[1]]),
+                            regex(paste0("^", label), ignore_case = TRUE)))
+    if (length(idx) > 0) idx[1] else NA_integer_
+  }
+  title_row <- find_row("title")
+  desc_row <- find_row("description")
+  series_id_row <- find_row("series.?id")
+  unit_row <- find_row("unit")
+  if (is.na(title_row) || is.na(series_id_row) || is.na(unit_row)) {
+    return(fail("required Title, Series ID or Units metadata is missing"))
+  }
+
+  series_names <- as.character(raw[title_row, -1])
+  series_ids <- as.character(raw[series_id_row, -1])
+  units <- as.character(raw[unit_row, -1])
+  last_meta <- max(c(title_row, desc_row, series_id_row, unit_row), na.rm = TRUE)
+
+  data_start <- NA_integer_
+  search_rows <- seq.int(last_meta + 1L,
+                         min(last_meta + 10L, nrow(raw)))
+  for (i in search_rows) {
+    date_str <- as.character(raw[[1]][i])
+    if (is.na(date_str)) next
+    test_date <- as.Date(NA)
+    for (fmt in c("%d-%b-%Y", "%d/%m/%Y", "%Y-%m-%d")) {
+      test_date <- suppressWarnings(as.Date(date_str, format = fmt))
+      if (!is.na(test_date)) break
+    }
+    if (is.na(test_date)) {
+      test_date <- suppressWarnings(
+        as.Date(as.numeric(date_str), origin = "1899-12-30")
+      )
+    }
+    if (!is.na(test_date) && test_date > as.Date("1950-01-01")) {
+      data_start <- i
+      break
+    }
+  }
+  if (is.na(data_start)) {
+    return(fail("no parseable observation dates were found"))
+  }
+
+  data_raw <- raw[data_start:nrow(raw), , drop = FALSE]
+  date_strings <- as.character(data_raw[[1]])
+  dates <- rep(as.Date(NA), length(date_strings))
+  for (fmt in c("%d-%b-%Y", "%d/%m/%Y", "%Y-%m-%d")) {
+    na_idx <- is.na(dates)
+    if (!any(na_idx)) break
+    dates[na_idx] <- suppressWarnings(
+      as.Date(date_strings[na_idx], format = fmt)
+    )
+  }
+  na_dates <- is.na(dates)
+  if (any(na_dates)) {
+    dates[na_dates] <- suppressWarnings(
+      as.Date(as.numeric(date_strings[na_dates]), origin = "1899-12-30")
+    )
+  }
+
+  results <- list()
+  for (j in seq.int(2L, ncol(data_raw))) {
+    sname <- series_names[j - 1L]
+    if (is.na(sname) || !nzchar(sname) || sname == "NA") next
+    sid <- series_ids[j - 1L]
+    unit <- units[j - 1L]
+    values <- as_numeric_clean(as.character(data_raw[[j]]))
+    valid <- !is.na(dates) & !is.na(values)
+    if (!any(valid)) next
+    results[[length(results) + 1L]] <- tibble(
+      date = dates[valid],
+      value = values[valid],
+      series = str_trim(sname),
+      series_id = ifelse(is.na(sid) || sid == "NA", NA_character_,
+                         str_trim(sid)),
+      category = classify_rba_category(sname, table_id),
+      unit = ifelse(is.na(unit) || unit == "NA", NA_character_,
+                    str_trim(unit)),
+      frequency = infer_frequency_from_dates(dates[valid])
+    )
+  }
+  parsed <- bind_rows(results)
+  if (nrow(parsed) == 0) {
+    return(fail("no parseable observations were found"))
+  }
+
+  contract <- rba_required_series_contract(table_id)
+  required <- parsed %>%
+    filter(series == contract$series, series_id == contract$series_id)
+  if (nrow(required) == 0) {
+    return(fail(paste0(
+      "required series '", contract$series, "' (", contract$series_id,
+      ") was not found"
+    )))
+  }
+  if (any(!is.finite(required$value))) {
+    return(fail(paste0(
+      "required series '", contract$series, "' (", contract$series_id,
+      ") contains non-finite observations"
+    )))
+  }
+  if (any(!is.finite(parsed$value))) {
+    return(fail("parsed output contains non-finite observations"))
+  }
+  parsed
+}
+
+prepare_rba_csv_candidate <- function(path) {
+  lines <- readLines(path, warn = FALSE)
+  if (length(lines) == 0) stop("RBA CSV candidate is empty.", call. = FALSE)
+  lines[1] <- sub("^\uFEFF", "", lines[1])
+  title_line <- which(str_detect(lines, '^"?Title"?,'))[1]
+  if (is.na(title_line)) {
+    stop("RBA CSV candidate has no Title metadata row.", call. = FALSE)
+  }
+  lines <- lines[title_line:length(lines)]
+  lines <- lines[nchar(trimws(lines)) > 0]
+  writeLines(lines, path)
+  normalise_rba_csv_cache(path)
+  invisible(path)
+}
+
+validate_rba_candidate <- function(path, table_id) {
+  parsed <- parse_rba_file(path, table_id, strict = TRUE)
+  if (nrow(parsed) == 0) {
+    stop("RBA candidate contains no observations.", call. = FALSE)
+  }
+  invisible(TRUE)
+}
+
+promote_rba_candidate <- function(candidate, destination,
+                                  rename_fun = file.rename) {
+  if (!file.exists(candidate)) {
+    stop("RBA cache promotion failed: candidate does not exist.",
+         call. = FALSE)
+  }
+  if (!file.exists(destination)) {
+    if (!isTRUE(rename_fun(candidate, destination))) {
+      stop("RBA cache promotion failed: could not install candidate.",
+           call. = FALSE)
+    }
+    return(invisible(destination))
+  }
+
+  backup <- tempfile(paste0(basename(destination), "-backup-"),
+                     tmpdir = dirname(destination),
+                     fileext = paste0(".", tools::file_ext(destination)))
+  if (!isTRUE(rename_fun(destination, backup))) {
+    stop("RBA cache promotion failed: could not preserve known-good cache.",
+         call. = FALSE)
+  }
+  installed <- isTRUE(rename_fun(candidate, destination))
+  if (!installed) {
+    restored <- isTRUE(rename_fun(backup, destination))
+    if (!restored && file.exists(backup)) {
+      restored <- isTRUE(file.copy(backup, destination, overwrite = FALSE,
+                                   copy.date = TRUE))
+    }
+    if (!restored) {
+      stop("RBA cache promotion failed and known-good cache restoration failed; ",
+           "backup remains at ", backup, call. = FALSE)
+    }
+    stop("RBA cache promotion failed; known-good cache was restored.",
+         call. = FALSE)
+  }
+  unlink(backup)
+  invisible(destination)
+}
+
+rba_fetch_dependencies <- function() {
+  list(
+    get = httr::GET,
+    write_disk = httr::write_disk,
+    http_error = httr::http_error,
+    validator = validate_rba_candidate,
+    promoter = promote_rba_candidate
+  )
+}
+
+fetch_rba_table <- function(table_id, cache_dir = DATA_DIR,
+                            dependencies = rba_fetch_dependencies(),
+                            strict = PIPELINE_STRICT) {
+  table_upper <- toupper(table_id)
+  table_lower <- tolower(table_id)
+  rba_required_series_contract(table_upper)
+  ensure_dir(cache_dir)
+
+  required_dependencies <- c("get", "write_disk", "http_error", "validator",
+                             "promoter")
+  if (!all(required_dependencies %in% names(dependencies))) {
+    stop("RBA fetch dependencies are incomplete.", call. = FALSE)
+  }
+
+  cache_files <- c(
+    csv = file.path(cache_dir, paste0("rba_", table_lower, "_raw.csv")),
+    xlsx = file.path(cache_dir, paste0("rba_", table_lower, "_raw.xlsx"))
+  )
+  valid_cache <- vapply(cache_files, function(path) {
+    if (!file.exists(path)) return(FALSE)
+    isTRUE(tryCatch({
+      dependencies$validator(path, table_upper)
+      TRUE
+    }, error = function(e) FALSE, warning = function(w) FALSE))
+  }, logical(1))
+  cache_age_hours <- rep(Inf, length(cache_files))
+  present <- file.exists(cache_files)
+  cache_age_hours[present] <- as.numeric(
+    difftime(Sys.time(), file.info(cache_files[present])$mtime,
+             units = "hours")
+  )
+  fresh_valid <- valid_cache & cache_age_hours <= 24
+  if (any(fresh_valid)) {
+    selected <- cache_files[which(fresh_valid)[1]]
+    cat("  Using cached RBA table", table_upper, "\n")
+    return(unname(selected))
+  }
+  stale_valid <- cache_files[valid_cache]
+
+  csv_url <- paste0("https://www.rba.gov.au/statistics/tables/csv/",
+                    table_lower, "-data.csv")
+  xlsx_stems <- unique(c(
+    paste0(table_lower, "hist"),
+    paste0(str_replace(table_lower, "f(\\d)", "f0\\1"), "hist"),
+    paste0(table_lower, "d"),
+    paste0(str_replace(table_lower, "f(\\d)", "f0\\1"), "d")
+  ))
+  attempts <- c(csv_url,
+                paste0("https://www.rba.gov.au/statistics/tables/xls/",
+                       xlsx_stems, ".xlsx"))
+  attempt_errors <- character()
+
+  for (url in attempts) {
+    extension <- if (grepl("/csv/", url, fixed = TRUE)) ".csv" else ".xlsx"
+    candidate <- tempfile(paste0("rba_", table_lower, "_"),
+                          tmpdir = cache_dir, fileext = extension)
+    response <- tryCatch(
+      dependencies$get(
+        url,
+        dependencies$write_disk(candidate, overwrite = TRUE)
+      ),
+      error = identity
+    )
+    if (inherits(response, "error")) {
+      attempt_errors <- c(attempt_errors, conditionMessage(response))
+      unlink(candidate)
+      next
+    }
+    if (isTRUE(dependencies$http_error(response))) {
+      status <- tryCatch(httr::status_code(response), error = function(e) {
+        if (!is.null(response$status)) response$status else NA_integer_
+      })
+      attempt_errors <- c(
+        attempt_errors,
+        paste0("HTTP request failed",
+               if (!is.na(status)) paste0(" (status ", status, ")") else "")
+      )
+      unlink(candidate)
+      next
+    }
+
+    validated <- tryCatch({
+      if (identical(extension, ".csv")) prepare_rba_csv_candidate(candidate)
+      dependencies$validator(candidate, table_upper)
+      TRUE
+    }, error = function(e) {
+      attempt_errors <<- c(attempt_errors, conditionMessage(e))
+      FALSE
+    })
+    if (!validated) {
+      unlink(candidate)
+      next
+    }
+
+    destination <- cache_files[[if (identical(extension, ".csv")) "csv"
+                                else "xlsx"]]
+    promoted <- tryCatch({
+      dependencies$promoter(candidate, destination)
+      TRUE
+    }, error = function(e) {
+      attempt_errors <<- c(attempt_errors, conditionMessage(e))
+      FALSE
+    })
+    unlink(candidate)
+    if (promoted) return(unname(destination))
+  }
+
+  details <- paste(unique(attempt_errors), collapse = "; ")
+  if (length(stale_valid) > 0) {
+    selected <- unname(stale_valid[[1]])
+    if (isTRUE(strict)) {
+      rba_source_problem(
+        table_upper,
+        "acquisition",
+        paste0(details, "; validated stale cache remains at ", selected),
+        strict = TRUE
+      )
+    }
+    warning("RBA ", table_upper, " refresh failed (", details,
+            "); using validated stale cache.", call. = FALSE)
+    return(selected)
+  }
+  rba_source_problem(table_upper, "acquisition",
+                     if (nzchar(details)) details else "all candidates failed",
+                     strict = strict)
+  NULL
 }
 
 # --- Fail-loud series selection helpers ----------------------------------------
