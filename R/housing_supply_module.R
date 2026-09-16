@@ -201,7 +201,7 @@ housingSupplyPageServer <- function(id, is_dark) {
     })
     output$vb_construction_change <- renderUI({
       ch <- latest_change(abs_ts, "series", "CPI New Dwelling Purchase",
-                          periods_back = 12, period_label = "YoY",
+                          months_back = 12L, period_label = "YoY",
                           change_type = "relative_pct")
       diff_val <- ch$change
       css_class <- kpi_change_class(diff_val, favourable = "decrease")

@@ -1,3 +1,9 @@
+if (!exists("calendar_prior_values", mode = "function")) {
+  source(if (exists("project_path", mode = "function")) {
+    project_path("R", "calendar_helpers.R")
+  } else file.path("R", "calendar_helpers.R"), local = TRUE)
+}
+
 # Pure ggplot builders for dashboard charts.
 
 price_series_transform <- function(data, transform = c("levels", "yoy", "index")) {
@@ -8,7 +14,7 @@ price_series_transform <- function(data, transform = c("levels", "yoy", "index")
     data %>%
       group_by(city) %>%
       arrange(date) %>%
-      mutate(value = 100 * (value / lag(value, 4) - 1)) %>%
+      mutate(value = calendar_growth(date, value, 12L)) %>%
       filter(!is.na(value)) %>%
       ungroup()
   } else if (identical(transform, "index")) {
@@ -60,14 +66,14 @@ rent_cpi_series_transform <- function(data, data_type = c("index", "yoy", "qoq")
     data %>%
       group_by(city) %>%
       arrange(date) %>%
-      mutate(value = 100 * (value / lag(value, 4) - 1)) %>%
+      mutate(value = calendar_growth(date, value, 12L)) %>%
       filter(!is.na(value)) %>%
       ungroup()
   } else if (identical(data_type, "qoq")) {
     data %>%
       group_by(city) %>%
       arrange(date) %>%
-      mutate(value = 100 * (value / lag(value, 1) - 1)) %>%
+      mutate(value = calendar_growth(date, value, 3L)) %>%
       filter(!is.na(value)) %>%
       ungroup()
   } else {

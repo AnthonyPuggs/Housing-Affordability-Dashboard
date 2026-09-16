@@ -83,7 +83,7 @@ marketContextPageServer <- function(id, is_dark) {
     })
     output$vb_unemp_change <- renderUI({
       ch <- latest_change(abs_ts, "series", "Unemployment Rate",
-                          periods_back = 12, period_label = "YoY",
+                          months_back = 12L, period_label = "YoY",
                           change_type = "percentage_points")
       diff_val <- ch$change
       css_class <- kpi_change_class(diff_val, favourable = "decrease")
@@ -96,7 +96,8 @@ marketContextPageServer <- function(id, is_dark) {
                !is.na(value)) %>%
         arrange(desc(date))
       if (nrow(d) < 4) return("N/A")
-      annual <- sum(d$value[1:4], na.rm = TRUE)
+      annual <- calendar_quarter_total(d$date, d$value)
+      if (!is.finite(annual)) return("N/A")
       paste0(round(annual), "k")
     })
     output$vb_nom_change <- renderUI({
@@ -105,9 +106,10 @@ marketContextPageServer <- function(id, is_dark) {
                !is.na(value)) %>%
         arrange(desc(date))
       if (nrow(d) < 8) return(tags$p(class = "kpi-subtitle", ""))
-      current_annual <- sum(d$value[1:4], na.rm = TRUE)
-      previous_annual <- sum(d$value[5:8], na.rm = TRUE)
-      if (previous_annual == 0) return(tags$p(class = "kpi-subtitle", ""))
+      current_annual <- calendar_quarter_total(d$date, d$value)
+      previous_annual <- calendar_quarter_total(
+        d$date, d$value, end_date = lubridate::add_with_rollback(max(d$date), -lubridate::years(1)))
+      if (!is.finite(current_annual) || !is.finite(previous_annual) || previous_annual == 0) return(tags$p(class = "kpi-subtitle", ""))
       pct <- (current_annual / previous_annual - 1) * 100
       direction <- if (pct >= 0) "\u2191" else "\u2193"
       label <- paste0(direction, " ", sprintf("%+.0f%%", pct), " YoY")
@@ -121,7 +123,7 @@ marketContextPageServer <- function(id, is_dark) {
     })
     output$vb_household_dti_change <- renderUI({
       ch <- latest_change(rba_rates, "series", "Household debt to income",
-                          periods_back = 4, period_label = "YoY",
+                          months_back = 12L, period_label = "YoY",
                           change_type = "percentage_points")
       diff_val <- ch$change
       css_class <- kpi_change_class(diff_val, favourable = "decrease")
@@ -134,7 +136,7 @@ marketContextPageServer <- function(id, is_dark) {
     })
     output$vb_underutilisation_change <- renderUI({
       ch <- latest_change(abs_ts, "series", "Labour Underutilisation Rate",
-                          periods_back = 12, period_label = "YoY",
+                          months_back = 12L, period_label = "YoY",
                           change_type = "percentage_points")
       diff_val <- ch$change
       css_class <- kpi_change_class(diff_val, favourable = "decrease")

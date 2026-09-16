@@ -1,3 +1,9 @@
+if (!exists("calendar_prior_values", mode = "function")) {
+  source(if (exists("project_path", mode = "function")) {
+    project_path("R", "calendar_helpers.R")
+  } else file.path("R", "calendar_helpers.R"), local = TRUE)
+}
+
 # Pure derivation helpers for pipeline/04_derive_indicators.R.
 #
 # Extracted so the formulas behind every derived indicator are unit-testable
@@ -153,7 +159,7 @@ compute_real_growth_yoy <- function(series, cpi_all) {
   align_quarterly(series, cpi_all, "numerator", "cpi") %>%
     mutate(
       real_level = numerator / cpi * 100,
-      value = 100 * (real_level / lag(real_level, 4) - 1)
+      value = calendar_growth(date, real_level, 12L)
     ) %>%
     filter(!is.na(value))
 }
