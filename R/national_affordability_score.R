@@ -355,7 +355,10 @@ national_affordability_score_sensitivity <- function(latest_contributions) {
     components
   )
   weighted_score <- function(weights) {
-    sum(scores[names(weights)] * weights, na.rm = TRUE)
+    needed <- names(weights)[weights > 0]
+    selected <- scores[needed]
+    if (any(!is.finite(selected))) return(NA_real_)
+    sum(selected * weights[needed])
   }
   leave_one_out <- function(component) {
     weights <- default_weights[names(default_weights) != component]
@@ -389,7 +392,11 @@ national_affordability_score_sensitivity <- function(latest_contributions) {
     stringsAsFactors = FALSE
   )
 
-  geometric_score <- exp(sum(default_weights * log(pmax(scores, 1e-6))))
+  geometric_score <- if (any(!is.finite(scores))) {
+    NA_real_
+  } else {
+    exp(sum(default_weights * log(pmax(scores, 1e-6))))
+  }
   sensitivity <- rbind(
     arithmetic_scores,
     data.frame(
