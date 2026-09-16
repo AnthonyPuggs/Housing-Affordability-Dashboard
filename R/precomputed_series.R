@@ -1,3 +1,9 @@
+if (!exists("complete_quarter_mean", mode = "function")) {
+  source(if (exists("project_path", mode = "function")) {
+    project_path("R", "derivation_helpers.R")
+  } else file.path("R", "derivation_helpers.R"), local = TRUE)
+}
+
 # App-ready series derived from loaded dashboard CSVs.
 
 rent_cpi_national_city <- "Weighted average of eight capital cities"
@@ -103,11 +109,8 @@ precompute_dashboard_series <- function(abs_ts, rba_rates, afford_idx) {
   # level-adjusted F5 history (helper in R/indicator_registry.R). Advertised
   # discounted rates sat ~1pp above rates actually paid since the mid-2010s.
   mortgage_rate_qtr <- rba_new_loan_rate_spliced(rba_rates) %>%
-    select(date, rate = value) %>%
-    mutate(qtr = lubridate::floor_date(date, "quarter")) %>%
-    group_by(qtr) %>%
-    summarise(rate = mean(rate, na.rm = TRUE), .groups = "drop") %>%
-    rename(date = qtr)
+    select(date, value) %>%
+    complete_quarter_mean("rate", expected_months = 3L)
 
   serviceability_ts <- rppi_national_ts %>%
     inner_join(awe_ts, by = "date") %>%

@@ -1,3 +1,9 @@
+if (!exists("calendar_prior_values", mode = "function")) {
+  source(if (exists("project_path", mode = "function")) {
+    project_path("R", "calendar_helpers.R")
+  } else file.path("R", "calendar_helpers.R"), local = TRUE)
+}
+
 # Shared dashboard formatting and labelling helpers.
 
 latest_val <- function(df, series_col, series_name, val_col = "value",
@@ -18,25 +24,28 @@ latest_date <- function(df, series_col, series_name, date_col = "date") {
 }
 
 latest_change <- function(df, series_col, series_name, val_col = "value",
-                          date_col = "date", periods_back = 4,
+                          date_col = "date", months_back = 12L,
                           period_label = NULL,
                           change_type = c("relative_pct", "percentage_points")) {
   change_type <- match.arg(change_type)
   if (is.null(period_label)) {
     period_label <- case_when(
-      periods_back %in% c(4, 12) ~ "YoY",
-      periods_back == 1 ~ "QoQ",
-      TRUE ~ paste0(periods_back, "-period")
+      months_back == 12L ~ "YoY",
+      months_back == 3L ~ "QoQ",
+      months_back == 1L ~ "MoM",
+      TRUE ~ paste0(months_back, "-month")
     )
   }
 
   d <- df %>%
     filter(.data[[series_col]] == series_name, !is.na(.data[[val_col]])) %>%
     arrange(desc(.data[[date_col]]))
-  if (nrow(d) < periods_back + 1) return(list(change = NA_real_, label = ""))
+  if (nrow(d) == 0) return(list(change = NA_real_, label = ""))
   current <- d[[val_col]][1]
-  previous <- d[[val_col]][periods_back + 1]
-  if (is.na(previous)) return(list(change = NA_real_, label = ""))
+  previous <- calendar_prior_values(
+    lubridate::floor_date(d[[date_col]], "month"), d[[val_col]], months_back
+  )[1]
+  if (!is.finite(current) || !is.finite(previous)) return(list(change = NA_real_, label = ""))
 
   if (identical(change_type, "relative_pct")) {
     if (previous == 0) return(list(change = NA_real_, label = ""))

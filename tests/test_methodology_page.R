@@ -78,7 +78,7 @@ test_that("methodology_page contracts", {
     required_app_wiring <- c(
       'source(project_path("R", "methodology_module.R"), local = TRUE)',
       'methodologyPageUI("methodology")',
-      'methodologyPageServer("methodology")'
+      'methodologyPageServer("methodology", runtime_snapshot = methodology_snapshot)'
     )
     missing_app_wiring <- required_app_wiring[
       !vapply(required_app_wiring, grepl, logical(1), app_text, fixed = TRUE)

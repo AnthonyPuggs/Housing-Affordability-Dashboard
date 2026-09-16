@@ -217,7 +217,12 @@ methodologyPageUI <- function(id) {
   )
 }
 
-methodologyPageServer <- function(id) {
+methodologyPageServer <- function(id, runtime_snapshot) {
+  if (!is.list(runtime_snapshot) || !is.data.frame(runtime_snapshot$confidence) ||
+      !is.character(runtime_snapshot$provenance) ||
+      length(runtime_snapshot$provenance) != 1L) {
+    stop("A valid Methodology runtime snapshot is required.", call. = FALSE)
+  }
   moduleServer(id, function(input, output, session) {
     score_diagnostics <- reactive({
       if (exists("national_affordability_score_diagnostics_data")) {
@@ -301,7 +306,7 @@ methodologyPageServer <- function(id) {
     }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
 
     output$release_confidence_table <- renderTable({
-      release_confidence_summary()
+      runtime_snapshot$confidence
     }, striped = TRUE, bordered = TRUE, width = "100%", rownames = FALSE)
 
     output$source_audit_table <- renderTable({
@@ -318,7 +323,7 @@ methodologyPageServer <- function(id) {
         methodology_provenance_filename(Sys.Date())
       },
       content = function(file) {
-        writeLines(methodology_provenance_report(), con = file, useBytes = TRUE)
+        write_methodology_provenance_snapshot(runtime_snapshot, file)
       },
       contentType = "text/markdown"
     )

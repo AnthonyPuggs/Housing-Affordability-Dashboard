@@ -125,6 +125,24 @@ sih_quality_empty_join <- function(estimates) {
   estimates
 }
 
+validate_sih_quality_conflicts <- function(quality) {
+  keys <- c(sih_quality_key_cols(), "quality_measure")
+  if (!nrow(quality) || !all(keys %in% names(quality))) return(invisible(TRUE))
+  payload <- intersect(c("quality_value", "quality_unit", "reliability_flag",
+                          "reliability_note"), names(quality))
+  groups <- dplyr::group_split(dplyr::group_by(quality, dplyr::across(dplyr::all_of(keys))))
+  for (group in groups) {
+    if (nrow(unique(as.data.frame(group[payload]))) > 1L) {
+      provenance <- intersect(c("source_file", "source_table"), names(group))
+      stop("Conflicting SIH quality metadata for ",
+           paste(as.character(group[1, keys]), collapse = " / "),
+           "; sources: ", paste(unlist(group[provenance]), collapse = " / "),
+           call. = FALSE)
+    }
+  }
+  invisible(TRUE)
+}
+
 join_sih_quality <- function(estimates, quality = NULL) {
   if (!is.data.frame(estimates)) {
     stop("estimates must be a data frame.", call. = FALSE)
@@ -168,6 +186,7 @@ join_sih_quality <- function(estimates, quality = NULL) {
       !all(required_quality_cols %in% names(quality))) {
     return(sih_quality_empty_join(estimates))
   }
+  validate_sih_quality_conflicts(quality)
 
   rse_quality <- quality[quality$quality_measure %in% "rse_pct",
                          c(keys, "quality_value", "reliability_flag",
