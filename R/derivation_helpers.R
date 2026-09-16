@@ -13,24 +13,36 @@ if (!exists("calendar_prior_values", mode = "function")) {
 
 # --- Alignment and indexing -----------------------------------------------------
 
-# Complete-quarter rule (review STAT-07): a quarter of a higher-frequency
-# series only enters a quarterly mean when it has as many observations as
-# the series' typical (modal) per-quarter count. Without this, the partial
-# latest quarter of a monthly input is averaged from one or two months,
-# moves the derived indicator, and then silently revises once the missing
-# months arrive. Quarterly inputs (modal count 1) pass through unchanged;
-# ties resolve to the larger count so ambiguous partials are dropped.
-complete_quarter_mean <- function(df, value_name = "value") {
+# Complete-quarter rule: known monthly sources must explicitly pass
+# expected_months = 3. Only distinct months with finite observations count.
+# Legacy quarterly/other callers may infer the typical (modal) count, with
+# ties resolved upwards; inference must not redefine a known monthly cadence.
+complete_quarter_mean <- function(df, value_name = "value", expected_months = NULL) {
+  if (nrow(df) == 0) {
+    out <- tibble(date = as.Date(character()), value = numeric())
+    names(out)[2] <- value_name
+    return(out)
+  }
   with_qtr <- df %>%
-    mutate(qtr = floor_date(date, "quarter"))
+    mutate(qtr = floor_date(date, "quarter"), month_key = format(date, "%Y-%m"))
+  if (anyNA(with_qtr$date) || anyDuplicated(with_qtr$month_key)) {
+    stop("Quarter aggregation requires non-missing dates and no duplicate month keys.", call. = FALSE)
+  }
   per_quarter <- with_qtr %>% count(qtr, name = "n_obs")
   count_freq <- table(per_quarter$n_obs)
-  modal_n <- max(as.integer(names(count_freq)[count_freq == max(count_freq)]))
+  if (is.null(expected_months)) {
+    expected_months <- max(as.integer(names(count_freq)[count_freq == max(count_freq)]))
+  }
+  if (!is.numeric(expected_months) || length(expected_months) != 1L ||
+      !is.finite(expected_months) || !expected_months %in% 1:3) {
+    stop("expected_months must be 1, 2 or 3.", call. = FALSE)
+  }
 
   with_qtr %>%
     group_by(qtr) %>%
-    filter(dplyr::n() >= modal_n) %>%
-    summarise(!!value_name := mean(value, na.rm = TRUE), .groups = "drop") %>%
+    filter(dplyr::n_distinct(month_key[is.finite(value)]) == expected_months,
+           all(is.finite(value))) %>%
+    summarise(!!value_name := mean(value), .groups = "drop") %>%
     rename(date = qtr)
 }
 
@@ -54,8 +66,8 @@ index_to_base <- function(values, base_idx = 1, base_value = 100) {
 
 # Quarterly mean of a (typically monthly) date/value series, complete
 # quarters only (see complete_quarter_mean).
-quarterly_mean <- function(df, value_name = "value") {
-  complete_quarter_mean(df, value_name)
+quarterly_mean <- function(df, value_name = "value", expected_months = NULL) {
+  complete_quarter_mean(df, value_name, expected_months)
 }
 
 # --- Loud series selection -------------------------------------------------------
@@ -111,7 +123,7 @@ compute_price_to_income <- function(rppi, wpi) {
 compute_mortgage_serviceability <- function(price_k, wpi, new_loan_rate,
                                             lvr = 0.80, term_years = 30) {
   price_wpi <- align_quarterly(price_k, wpi, "price_k", "wpi")
-  rate_qtr <- quarterly_mean(new_loan_rate, "rate")
+  rate_qtr <- quarterly_mean(new_loan_rate, "rate", expected_months = 3L)
 
   price_wpi %>%
     inner_join(rate_qtr, by = "date") %>%
@@ -166,7 +178,7 @@ compute_real_growth_yoy <- function(series, cpi_all) {
 
 # Real Mortgage Rate: quarterly nominal rate minus quarterly CPI inflation.
 compute_real_mortgage_rate <- function(mortgage_rate, cpi_inflation) {
-  mr_qtr <- quarterly_mean(mortgage_rate, "nominal_rate")
+  mr_qtr <- quarterly_mean(mortgage_rate, "nominal_rate", expected_months = 3L)
   infl_qtr <- quarterly_mean(cpi_inflation, "inflation")
 
   inner_join(mr_qtr, infl_qtr, by = "date") %>%

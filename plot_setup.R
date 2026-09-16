@@ -62,6 +62,7 @@ source(project_path("R", "feature_metadata.R"), local = TRUE)
 source(project_path("R", "contextual_kpi_helpers.R"), local = TRUE)
 source(project_path("R", "rental_market_helpers.R"), local = TRUE)
 source(project_path("R", "dashboard_theme.R"), local = TRUE)
+source(project_path("R", "derivation_helpers.R"), local = TRUE)
 source(project_path("R", "precomputed_series.R"), local = TRUE)
 
 # Tests point this at the frozen fixture set in tests/fixtures/data so code

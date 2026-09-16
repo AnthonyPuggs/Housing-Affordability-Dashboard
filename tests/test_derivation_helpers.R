@@ -100,7 +100,8 @@ test_that("derivation_helpers unit checks (hand-computed)", {
   # interest-only v1 behaviour this formula replaced).
   price <- data.frame(date = q("2024-01-01", "2024-04-01"), value = c(500, 500))
   wpi_flat <- data.frame(date = q("2024-01-01", "2024-04-01"), value = c(100, 100))
-  rate <- data.frame(date = q("2024-01-15", "2024-04-15"), value = c(3, 6))
+  rate <- data.frame(date = seq(as.Date("2024-01-15"), by = "month", length.out = 6),
+                     value = rep(c(3, 6), each = 3))
   msi <- compute_mortgage_serviceability(price, wpi_flat, rate)
   check(isTRUE(all.equal(msi$monthly_pmt, c(1686.42, 2398.20),
                          tolerance = 1e-4)),
