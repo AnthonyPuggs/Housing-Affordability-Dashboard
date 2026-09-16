@@ -65,6 +65,10 @@ source(project_path("R", "market_context_module.R"), local = TRUE)
 source(project_path("R", "overview_module.R"), local = TRUE)
 rm(.load_app_project_paths)
 
+# Immutable runtime evidence is prepared once per R process after saved data
+# are loaded, then shared by every Methodology session and download.
+methodology_snapshot <- methodology_runtime_snapshot(data_dir = data_dir)
+
 # ==============================================================================
 # UI
 # ==============================================================================
@@ -176,7 +180,7 @@ server <- function(input, output, session) {
     isTRUE(mode) || identical(mode, "dark")
   })
 
-  methodologyPageServer("methodology")
+  methodologyPageServer("methodology", runtime_snapshot = methodology_snapshot)
   affordabilityPageServer("affordability", is_dark = is_dark)
   recentBuyersPageServer("recent_buyers", is_dark = is_dark)
   rentalMarketPageServer("rental_market", is_dark = is_dark)

@@ -100,7 +100,8 @@ test_that("methodology_module contracts", {
       "source_audit_methodology_table(",
       'downloadButton(ns("provenance_download")',
       "downloadHandler",
-      "methodology_provenance_report",
+      "write_methodology_provenance_snapshot",
+      "runtime_snapshot$confidence",
       'heights_equal = "row"'
     )
     missing_module_text <- required_module_text[
@@ -116,8 +117,9 @@ test_that("methodology_module contracts", {
     required_app_text <- c(
       'source(project_path("R", "app_ui_helpers.R"), local = TRUE)',
       'source(project_path("R", "methodology_module.R"), local = TRUE)',
+      'methodology_snapshot <- methodology_runtime_snapshot(data_dir = data_dir)',
       'methodologyPageUI("methodology")',
-      'methodologyPageServer("methodology")'
+      'methodologyPageServer("methodology", runtime_snapshot = methodology_snapshot)'
     )
     missing_app_text <- required_app_text[
       !vapply(required_app_text, grepl, logical(1), app_text, fixed = TRUE)
