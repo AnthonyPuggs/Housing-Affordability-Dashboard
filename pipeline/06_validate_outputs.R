@@ -10,6 +10,9 @@ if (!exists("indicator_registry", mode = "function")) {
 if (!exists("validate_sih_workbook_benchmarks", mode = "function")) {
   source(project_path("R", "sih_benchmarks.R"))
 }
+if (!exists("validate_sih_quality_conflicts", mode = "function")) {
+  source(project_path("R", "sih_quality_helpers.R"))
+}
 
 collect_pipeline_failures <- function(data_dir = DATA_DIR) {
   failures <- character()
@@ -110,6 +113,9 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
             paste(name, "has incorrect frequency metadata"))
     }
   }
+
+  tryCatch(validate_sih_quality_conflicts(sih_quality),
+           error = function(e) add_failure(conditionMessage(e)))
 
   required_abs_series <- indicator_registry_required_abs_sources()
 
