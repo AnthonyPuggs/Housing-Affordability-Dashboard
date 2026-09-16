@@ -1,3 +1,9 @@
+if (!exists("awe_observation_frequency", mode = "function")) {
+  source(if (exists("project_path", mode = "function")) {
+    project_path("R", "indicator_registry.R")
+  } else file.path("R", "indicator_registry.R"))
+}
+
 # ==============================================================================
 # 02_fetch_abs_timeseries.R — Fetch live ABS time series for housing indicators
 # ==============================================================================
@@ -373,7 +379,8 @@ awe <- safe_read(
 ) %>%
   transmute(date, value = as.numeric(value)) %>%
   normalize_abs(label = "AWE (AWOTE, Persons)", category = "Income",
-                units = "AUD", freq_hint = "Quarter")
+                units = "AUD", freq_hint = "Quarter") %>%
+  mutate(frequency = awe_observation_frequency(date))
 all_series$awe <- awe
 cat("    AWE:", nrow(awe), "obs\n")
 

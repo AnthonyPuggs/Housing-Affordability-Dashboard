@@ -57,7 +57,7 @@ indicator_output <- function(df, indicator_name) {
       indicator = metadata$indicator,
       geography = metadata$geography,
       unit = metadata$unit,
-      frequency = metadata$frequency
+      frequency = indicator_output_frequency(indicator_name, date)
     )
 }
 

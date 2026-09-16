@@ -1,3 +1,9 @@
+if (!exists("awe_aligned_frequency", mode = "function")) {
+  source(if (exists("project_path", mode = "function")) {
+    project_path("R", "indicator_registry.R")
+  } else file.path("R", "indicator_registry.R"), local = TRUE)
+}
+
 # National Housing Affordability Score v2 helpers.
 
 NATIONAL_AFFORDABILITY_SCORE_VERSION <- "national_affordability_score_v2"
@@ -86,6 +92,7 @@ national_affordability_score_metadata_note <- function() {
     "Combines mortgage serviceability, rental entry pressure and deposit",
     "barriers using fixed weights of 40, 35 and 25 per cent (unchanged in",
     "v2). Scored against a frozen 2012-2025 reference window.",
+    "Half-yearly observations since November 2012, aligned to quarter starts.",
     "Not an official ABS/NHHA statistic or lender assessment."
   )
 }
@@ -253,7 +260,7 @@ calculate_national_affordability_score <- function(
     indicator = "National Housing Affordability Score",
     geography = "National",
     unit = "Score (0-100)",
-    frequency = "Quarter",
+    frequency = awe_aligned_frequency(wide$date),
     stringsAsFactors = FALSE
   ))
 
@@ -265,7 +272,7 @@ calculate_national_affordability_score <- function(
       indicator = output$output_indicator,
       geography = "National",
       unit = "Score (0-100)",
-      frequency = "Quarter",
+      frequency = awe_aligned_frequency(wide$date),
       stringsAsFactors = FALSE
     )
   }

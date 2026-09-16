@@ -98,6 +98,19 @@ collect_pipeline_failures <- function(data_dir = DATA_DIR) {
       "reliability_flag", "reliability_note")
   )
 
+  if (all(c("series", "date", "frequency") %in% names(abs_ts))) {
+    tryCatch(validate_awe_cadence(abs_ts[abs_ts$series == INDICATOR_SOURCE_AWE, ]),
+             error = function(e) add_failure(conditionMessage(e)))
+  }
+  if (all(c("indicator", "date", "frequency") %in% names(afford_idx))) {
+    for (name in unique(afford_idx$indicator)) {
+      if (!name %in% indicator_registry()$indicator) next
+      rows <- afford_idx[afford_idx$indicator == name, ]
+      check(all(!is.na(rows$frequency) & rows$frequency == indicator_output_frequency(name, rows$date)),
+            paste(name, "has incorrect frequency metadata"))
+    }
+  }
+
   required_abs_series <- indicator_registry_required_abs_sources()
 
   if ("series" %in% names(abs_ts)) {
