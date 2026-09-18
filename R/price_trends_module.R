@@ -173,11 +173,12 @@ priceTrendsPageServer <- function(id, is_dark) {
       d <- rppi_combined %>%
         filter(city %in% input$price_cities,
                dwelling_type == input$price_dwelling,
-               date >= input$price_dates[1],
+               (input$price_transform == "yoy" | date >= input$price_dates[1]),
                date <= input$price_dates[2])
 
       if (nrow(d) == 0) return(d)
-      price_series_transform(d, input$price_transform)
+      price_series_transform(d, input$price_transform) %>%
+        filter(date >= input$price_dates[1], date <= input$price_dates[2])
     })
 
     output$price_chart <- renderPlotly({
@@ -242,10 +243,11 @@ priceTrendsPageServer <- function(id, is_dark) {
       date_end <- min(as.Date(input$rent_cpi_dates[2]), view_range[2])
       d <- rent_cpi_combined %>%
         filter(city %in% selected_cities,
-               date >= date_start,
+               (input$rent_cpi_datatype != "index" | date >= date_start),
                date <= date_end)
       if (nrow(d) == 0) return(d)
-      rent_cpi_series_transform(d, input$rent_cpi_datatype)
+      rent_cpi_series_transform(d, input$rent_cpi_datatype) %>%
+        filter(date >= date_start, date <= date_end)
     })
 
     output$rent_cpi_chart <- renderPlotly({

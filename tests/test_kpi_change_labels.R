@@ -25,17 +25,17 @@ test_that("kpi_change_labels contracts", {
     series_df,
     "series",
     "Test Series",
-    periods_back = 12,
+    months_back = 12L,
     period_label = "YoY",
     change_type = "relative_pct"
   )
   check(
-    identical(relative_change$label, "\u2191 +10.0% YoY"),
+    identical(relative_change$label, "\u2191 +1.9% YoY"),
     paste("relative_pct label was", relative_change$label)
   )
   check(
     !grepl("QoQ", relative_change$label, fixed = TRUE),
-    "periods_back = 12 with period_label = YoY returned a QoQ label"
+    "months_back = 12L with period_label = YoY returned a QoQ label"
   )
 
   rate_df <- data.frame(
@@ -49,7 +49,7 @@ test_that("kpi_change_labels contracts", {
     rate_df,
     "series",
     "Rate Series",
-    periods_back = 1,
+    months_back = 12L,
     period_label = "YoY",
     change_type = "percentage_points"
   )
@@ -69,7 +69,7 @@ test_that("kpi_change_labels contracts", {
     short_df,
     "series",
     "Short Series",
-    periods_back = 4,
+    months_back = 12L,
     period_label = "YoY",
     change_type = "relative_pct"
   )
@@ -81,7 +81,7 @@ test_that("kpi_change_labels contracts", {
       rate_df,
       "series",
       "Rate Series",
-      periods_back = 1,
+      months_back = 12L,
       period_label = "YoY",
       change_type = "ratio"
     ),
