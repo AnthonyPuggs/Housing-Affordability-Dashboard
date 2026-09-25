@@ -1,16 +1,16 @@
-# Graph Report - Housing-Affordability-Dashboard  (2026-06-12)
+# Graph Report - Housing-Affordability-Dashboard  (2026-09-16)
 
 ## Corpus Check
-- 137 files · ~203,146 words
+- 161 files · ~223,804 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 923 nodes · 1423 edges · 96 communities (63 shown, 33 thin omitted)
-- Extraction: 88% EXTRACTED · 11% INFERRED · 1% AMBIGUOUS · INFERRED: 156 edges (avg confidence: 0.83)
+- 1016 nodes · 1500 edges · 127 communities (94 shown, 33 thin omitted)
+- Extraction: 89% EXTRACTED · 10% INFERRED · 1% AMBIGUOUS · INFERRED: 156 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8d01b074`
+- Built from commit: `da2b344f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -104,7 +104,38 @@
 - [[_COMMUNITY_Community 91|Community 91]]
 - [[_COMMUNITY_Community 92|Community 92]]
 - [[_COMMUNITY_Community 93|Community 93]]
+- [[_COMMUNITY_Community 95|Community 95]]
+- [[_COMMUNITY_Community 96|Community 96]]
+- [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 98|Community 98]]
+- [[_COMMUNITY_Community 99|Community 99]]
+- [[_COMMUNITY_Community 100|Community 100]]
+- [[_COMMUNITY_Community 101|Community 101]]
+- [[_COMMUNITY_Community 102|Community 102]]
+- [[_COMMUNITY_Community 103|Community 103]]
+- [[_COMMUNITY_Community 104|Community 104]]
+- [[_COMMUNITY_Community 105|Community 105]]
+- [[_COMMUNITY_Community 106|Community 106]]
+- [[_COMMUNITY_Community 107|Community 107]]
 - [[_COMMUNITY_Community 108|Community 108]]
+- [[_COMMUNITY_Community 109|Community 109]]
+- [[_COMMUNITY_Community 110|Community 110]]
+- [[_COMMUNITY_Community 111|Community 111]]
+- [[_COMMUNITY_Community 112|Community 112]]
+- [[_COMMUNITY_Community 113|Community 113]]
+- [[_COMMUNITY_Community 114|Community 114]]
+- [[_COMMUNITY_Community 115|Community 115]]
+- [[_COMMUNITY_Community 116|Community 116]]
+- [[_COMMUNITY_Community 117|Community 117]]
+- [[_COMMUNITY_Community 118|Community 118]]
+- [[_COMMUNITY_Community 119|Community 119]]
+- [[_COMMUNITY_Community 120|Community 120]]
+- [[_COMMUNITY_Community 121|Community 121]]
+- [[_COMMUNITY_Community 122|Community 122]]
+- [[_COMMUNITY_Community 123|Community 123]]
+- [[_COMMUNITY_Community 124|Community 124]]
+- [[_COMMUNITY_Community 125|Community 125]]
+- [[_COMMUNITY_Community 126|Community 126]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `packages` - 17 edges
@@ -155,15 +186,15 @@
 - **National Affordability Score v1 Components (40/35/25)** — national_affordability_score, mortgage_serviceability, rental_entry_affordability, deposit_barrier [INFERRED 0.95]
 - **30/40 Housing Stress Rule Concepts** — thirty_forty_rule, equivalised_disposable_income, housing_cost_burden, nhha_rental_affordability [INFERRED 0.85]
 
-## Communities (96 total, 33 thin omitted)
+## Communities (127 total, 33 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.18
 Nodes (18): source_note, feature_metadata, feature_metadata_registry, feature_source_note, marketContextPageUI, methodologyPageUI, overviewPageUI, priceTrendsPageUI (+10 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.09
-Nodes (32): affordabilityPageServer, affordabilityPageUI, distributional_stress_data, build_affordability_indices_plot, build_cost_burden_heatmap_plot, build_distributional_stress_plot, build_dwelling_price_plot, build_housing_stress_bands_plot (+24 more)
+Cohesion: 0.10
+Nodes (30): affordabilityPageServer, affordabilityPageUI, distributional_stress_data, build_affordability_indices_plot, build_cost_burden_heatmap_plot, build_distributional_stress_plot, build_dwelling_price_plot, build_housing_stress_bands_plot (+22 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.10
@@ -174,8 +205,8 @@ Cohesion: 0.13
 Nodes (26): ABS RAID/MAID Census Affordability Indicators, ABS SIH User Guide (Housing), AGENTS.md Project Guide, AHURI Residual-Income Approach Paper, NZ CHAI (Change in Housing Affordability Indicators), CLAUDE.md Project Instructions, Composite Indicator Methodology (OECD/JRC), Deposit Barrier (+18 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.12
-Nodes (23): build_national_affordability_score_plot, indicator_confidence_note, indicator_context_badges, indicator_context_table, indicator_measure_class_label, indicator_quality_coverage_summary, indicator_interpretation_label, indicator_registry (+15 more)
+Cohesion: 0.17
+Nodes (11): External Review Remediation Implementation Plan, Final verification for the remediation wave, Global constraints, Scope and execution, Task 1: Calendar-keyed changes, Task 2: Truthful AWE and derived-output cadence, Task 3: Complete, finite monthly quarters in both app and pipeline, Task 4: Validated RBA cache promotion and stage-local failures (+3 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.11
@@ -326,8 +357,8 @@ Cohesion: 0.08
 Nodes (23): 1. Mortgage serviceability input is now a principal-and-interest annuity burden (ECON-02, STAT-10), 2. Rate source: actual new-loan rates, spliced (ECON-06), 3. Frozen percentile reference window (ECON-04, STAT-04), Candidate Variable Classification, Composite-indicator guidance, Conceptual Framework, Current Repo Diagnostic, Dashboard Wording (+15 more)
 
 ### Community 67 - "Community 67"
-Cohesion: 0.11
-Nodes (17): Data model, Dependencies, Key caveats, Methodology metadata, Methodology & provenance, Notes, Pipeline gates, Refresh the data (+9 more)
+Cohesion: 0.12
+Nodes (16): Data model, Dependencies, Methodology and provenance, Modules and helpers, Notes, Pipeline gates, Refresh the data, Run it (+8 more)
 
 ### Community 78 - "Community 78"
 Cohesion: 0.13
@@ -350,12 +381,12 @@ Cohesion: 0.15
 Nodes (12): 1. Executive summary, 2. Prior-findings ledger (status of internal review backlogs), 3.1 Economics / methodology (ECON), 3.2 Statistics (STAT), 3.3 Data pipeline (PIPE), 3.4 R/Shiny engineering (SHINY), 3.5 UX / accessibility (UX) — delta-only, 3.6 Testing / CI / release (TEST) (+4 more)
 
 ### Community 83 - "Community 83"
-Cohesion: 0.04
-Nodes (49): Repository, Source, Repository, Source, Repository, Source, Repository, Source (+41 more)
+Cohesion: 0.29
+Nodes (7): Repository, Source, Repository, Source, packages, backports, cachem
 
 ### Community 85 - "Community 85"
-Cohesion: 0.15
-Nodes (12): environment, r, locale, metadata, appmode, content_category, has_parameters, primary_html (+4 more)
+Cohesion: 0.29
+Nodes (6): environment, r, locale, platform, requires, version
 
 ### Community 86 - "Community 86"
 Cohesion: 0.22
@@ -385,6 +416,130 @@ Nodes (5): Current V1 Diagnostics, Main Critiques, National Housing Affordabilit
 Cohesion: 0.33
 Nodes (5): Desktop Pass, Start The App, Static Guard, Theme And Mobile Pass, UI Smoke Checklist
 
+### Community 95 - "Community 95"
+Cohesion: 0.22
+Nodes (8): Completion checklist, Conclusion, Direct-consumer omissions found during validation, Evidence and scope, Finding register, Implementation decisions, Independent assessment of the external bug and security reviews, Source checks
+
+### Community 96 - "Community 96"
+Cohesion: 0.29
+Nodes (6): Concerns and follow-up, Decisions, Files changed, Outcome, Task 4 report — validated RBA cache promotion and stage-local failures, TDD evidence
+
+### Community 97 - "Community 97"
+Cohesion: 0.29
+Nodes (6): Evidence limits, Findings, Other bounded checks, P2 - Make the non-strict fallback regression independent of CI defaults, P2 - Reject non-finite observations in retained chart series before cache promotion, Task 4: independent RBA remediation review
+
+### Community 98 - "Community 98"
+Cohesion: 0.33
+Nodes (5): Actionable finding, Checked without an additional finding, Controller changes: independent review, Evidence limits, P2 - Apply the completeness rule to geometric sensitivity as well
+
+### Community 99 - "Community 99"
+Cohesion: 0.33
+Nodes (6): metadata, appmode, content_category, has_parameters, primary_html, primary_rmd
+
+### Community 100 - "Community 100"
+Cohesion: 0.50
+Nodes (3): Implementation and review evidence, Implementation rulings, SDD ledger — plan: docs/superpowers/plans/2026-09-16-external-review-remediation.md
+
+### Community 101 - "Community 101"
+Cohesion: 0.50
+Nodes (3): External Review Remediation Implementation Plan, Global constraints, Task 1: Calendar-keyed changes
+
+### Community 102 - "Community 102"
+Cohesion: 0.50
+Nodes (3): External Review Remediation Implementation Plan, Global constraints, Task 2: Truthful AWE and derived-output cadence
+
+### Community 103 - "Community 103"
+Cohesion: 0.50
+Nodes (3): External Review Remediation Implementation Plan, Global constraints, Task 3: Complete, finite monthly quarters in both app and pipeline
+
+### Community 104 - "Community 104"
+Cohesion: 0.50
+Nodes (3): External Review Remediation Implementation Plan, Global constraints, Task 4: Validated RBA cache promotion and stage-local failures
+
+### Community 105 - "Community 105"
+Cohesion: 0.50
+Nodes (3): External Review Remediation Implementation Plan, Global constraints, Task 5: Runtime confidence snapshot and strict repository checks
+
+### Community 106 - "Community 106"
+Cohesion: 0.50
+Nodes (3): External Review Remediation Implementation Plan, Global constraints, Task 6: Missing components in score sensitivity
+
+### Community 107 - "Community 107"
+Cohesion: 0.50
+Nodes (3): External Review Remediation Implementation Plan, Global constraints, Task 7: Unambiguous SIH quality joins
+
+### Community 109 - "Community 109"
+Cohesion: 0.67
+Nodes (3): Repository, Source, AsioHeaders
+
+### Community 110 - "Community 110"
+Cohesion: 0.67
+Nodes (3): Repository, Source, askpass
+
+### Community 111 - "Community 111"
+Cohesion: 0.25
+Nodes (7): Bounded closure recheck, Evidence limits and status, Final independent remediation review: Task 5 and prior findings, Historical finding - closed by bounded recheck, P2 - Do not treat an intentionally absent repository renv bootstrap as a runtime failure, Prior findings: source recheck, Task 5 checks without another finding
+
+### Community 112 - "Community 112"
+Cohesion: 0.67
+Nodes (3): Repository, Source, bit64
+
+### Community 113 - "Community 113"
+Cohesion: 0.67
+Nodes (3): Repository, Source, bit
+
+### Community 114 - "Community 114"
+Cohesion: 0.67
+Nodes (3): Repository, Source, brio
+
+### Community 115 - "Community 115"
+Cohesion: 0.67
+Nodes (3): Repository, Source, bslib
+
+### Community 116 - "Community 116"
+Cohesion: 0.67
+Nodes (3): Repository, Source, callr
+
+### Community 117 - "Community 117"
+Cohesion: 0.67
+Nodes (3): Repository, Source, cellranger
+
+### Community 118 - "Community 118"
+Cohesion: 0.67
+Nodes (3): Repository, Source, checkmate
+
+### Community 119 - "Community 119"
+Cohesion: 0.67
+Nodes (3): R6, Repository, Source
+
+### Community 120 - "Community 120"
+Cohesion: 0.67
+Nodes (3): RColorBrewer, Repository, Source
+
+### Community 121 - "Community 121"
+Cohesion: 0.67
+Nodes (3): Rcpp, Repository, Source
+
+### Community 122 - "Community 122"
+Cohesion: 0.67
+Nodes (3): S7, Repository, Source
+
+### Community 123 - "Community 123"
+Cohesion: 0.33
+Nodes (5): Limitations And Handoff, Outcome, Task 5 Report — Runtime Confidence Snapshot And Strict Repository Checks, TDD Evidence, Verification
+
+### Community 124 - "Community 124"
+Cohesion: 0.29
+Nodes (6): Evidence, External review remediation — implementation record, Final verification, Implemented scope, Local integration into main, Scope boundaries
+
+### Community 125 - "Community 125"
+Cohesion: 0.67
+Nodes (3): Repository, Source, base64enc
+
+### Community 126 - "Community 126"
+Cohesion: 0.11
+Nodes (25): build_national_affordability_score_plot, indicator_confidence_note, indicator_context_badges, indicator_context_table, indicator_measure_class_label, indicator_quality_coverage_summary, indicator_interpretation_label, indicator_metadata (+17 more)
+
 ## Ambiguous Edges - Review These
 - `External Libraries Configuration` → `Bioconductor Package Sources`  [AMBIGUOUS]
   renv/library/macos/R-4.5/aarch64-apple-darwin20/renv/doc/package-sources.html · relation: conceptually_related_to
@@ -412,7 +567,7 @@ Nodes (5): Desktop Pass, Start The App, Static Guard, Theme And Mobile Pass, UI 
   plots/rental_costs_demo.png · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **352 isolated node(s):** `PreToolUse`, `version`, `tasks`, `version`, `locale` (+347 more)
+- **411 isolated node(s):** `PreToolUse`, `version`, `tasks`, `version`, `locale` (+406 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 

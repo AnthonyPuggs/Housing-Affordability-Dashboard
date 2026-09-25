@@ -117,9 +117,10 @@ test_that("ui_smoke_contracts contracts", {
     )
     if (identical(server_fn, "methodologyPageServer")) {
       check(
-        grepl(sprintf('%s\\s*\\(\\s*"%s"\\s*\\)', server_fn, id),
+        grepl(sprintf('%s\\s*\\(\\s*"%s"\\s*,\\s*runtime_snapshot\\s*=\\s*methodology_snapshot\\s*\\)', server_fn, id),
               app_text, perl = TRUE),
-        sprintf("app.R must call %s(\"%s\")", server_fn, id)
+        sprintf("app.R must call %s(\"%s\", runtime_snapshot = methodology_snapshot)",
+                server_fn, id)
       )
     } else {
       check(
@@ -339,7 +340,7 @@ test_that("ui_smoke_contracts contracts", {
     "rental_plot_margins$trend",
     "dashboard_ggplotly(",
     "downloadHandler(",
-    "methodology_provenance_report("
+    "write_methodology_provenance_snapshot("
   )
   missing_runtime_contracts <- required_runtime_contracts[
     !vapply(required_runtime_contracts, grepl, logical(1),

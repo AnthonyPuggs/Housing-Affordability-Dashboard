@@ -224,7 +224,10 @@ release_rscignore_patterns <- function(repo_root) {
   patterns[nzchar(patterns) & !startsWith(patterns, "#")]
 }
 
-release_manifest_checks <- function(repo_root) {
+release_manifest_checks <- function(repo_root, data_dir,
+                                    context = c("repository", "runtime"),
+                                    git_runner = release_git_output) {
+  context <- match.arg(context)
   manifest_path <- file.path(repo_root, "manifest.json")
   regenerate <- paste(
     "Regenerate with rsconnect::writeManifest() using git-tracked files",
@@ -274,32 +277,71 @@ release_manifest_checks <- function(repo_root) {
     if (length(missing_sourced) == 0) "No action required." else regenerate
   )
 
-  tracked_data <- release_git_output(
-    c("-c", "core.quotepath=false", "ls-files", "data/*.csv"), repo_root
-  )
-  missing_data <- if (tracked_data$status == 0L) {
-    setdiff(tracked_data$output[nzchar(tracked_data$output)], manifest_files)
+  manifest_data <- if (identical(context, "repository")) {
+    git_runner(
+      c("-c", "core.quotepath=false", "ls-files", "data/*.csv"),
+      repo_root
+    )
+  } else {
+    bundled <- file.path(
+      "data",
+      list.files(data_dir, pattern = "\\.csv$", full.names = FALSE)
+    )
+    bundled <- gsub("\\\\", "/", bundled)
+    ignored <- release_rscignore_patterns(repo_root)
+    bundled <- bundled[!vapply(
+      bundled,
+      function(path) {
+        any(vapply(ignored, function(pattern) {
+          if (endsWith(pattern, "/")) {
+            startsWith(path, pattern)
+          } else {
+            identical(path, pattern) || startsWith(path, paste0(pattern, "/"))
+          }
+        }, logical(1)))
+      },
+      logical(1)
+    )]
+    list(status = 0L, output = bundled, launch_error = FALSE)
+  }
+  missing_data <- if (manifest_data$status == 0L) {
+    setdiff(manifest_data$output[nzchar(manifest_data$output)], manifest_files)
   } else {
     character()
   }
+  git_unavailable <- isTRUE(manifest_data$launch_error) ||
+    identical(manifest_data$status, 127L)
   checks[[length(checks) + 1L]] <- release_checklist_row(
     "deployment_manifest_data_files", "deployment",
-    if (tracked_data$status != 0L) {
-      "warn"
+    if (manifest_data$status != 0L) {
+      "fail"
     } else if (length(missing_data) == 0) {
       "pass"
     } else {
       "fail"
     },
-    if (tracked_data$status != 0L) {
-      "git ls-files failed, so tracked data CSVs could not be compared."
+    if (git_unavailable) {
+      "Git is unavailable, so tracked data CSVs could not be compared."
+    } else if (manifest_data$status != 0L) {
+      paste0("git ls-files failed with status ", manifest_data$status,
+             ", so tracked data CSVs could not be compared.")
     } else if (length(missing_data) == 0) {
-      "All tracked data/*.csv files are in manifest.json."
+      if (identical(context, "repository")) {
+        "All tracked data/*.csv files are in manifest.json."
+      } else {
+        "All bundled data/*.csv files are in manifest.json."
+      }
     } else {
-      paste("manifest.json is missing tracked data files:",
+      paste("manifest.json is missing data files:",
             paste(missing_data, collapse = ", "))
     },
-    if (length(missing_data) == 0) "No action required." else regenerate
+    if (manifest_data$status != 0L) {
+      "Run the repository release checklist with Git available."
+    } else if (length(missing_data) == 0) {
+      "No action required."
+    } else {
+      regenerate
+    }
   )
 
   ignore_patterns <- release_rscignore_patterns(repo_root)
@@ -332,20 +374,35 @@ release_manifest_checks <- function(repo_root) {
   checks
 }
 
-release_git_output <- function(args, repo_root) {
-  old_wd <- getwd()
-  on.exit(setwd(old_wd), add = TRUE)
-  setwd(repo_root)
-  result <- system2("git", args, stdout = TRUE, stderr = TRUE)
+release_git_output <- function(args, repo_root, system2_runner = system2) {
+  repo_root <- normalizePath(repo_root, winslash = "/", mustWork = TRUE)
+  result <- tryCatch(
+    system2_runner(
+      "git",
+      c("-C", shQuote(repo_root), args),
+      stdout = TRUE,
+      stderr = TRUE
+    ),
+    error = function(e) {
+      structure(conditionMessage(e), status = 127L)
+    }
+  )
   status <- attr(result, "status")
   if (is.null(status)) {
     status <- 0L
   }
-  list(status = status, output = result)
+  list(
+    status = as.integer(status),
+    output = as.character(result),
+    launch_error = identical(as.integer(status), 127L)
+  )
 }
 
 release_checklist <- function(repo_root = project_root(),
-                              data_dir = project_path("data")) {
+                              data_dir = project_path("data"),
+                              context = c("repository", "runtime"),
+                              git_runner = release_git_output) {
+  context <- match.arg(context)
   repo_root <- normalizePath(repo_root, winslash = "/", mustWork = TRUE)
   data_dir <- normalizePath(data_dir, winslash = "/", mustWork = TRUE)
 
@@ -448,7 +505,7 @@ release_checklist <- function(repo_root = project_root(),
       "methodology_page_wiring", "methodology", "app.R",
       c('source(project_path("R", "methodology_module.R"), local = TRUE)',
         'methodologyPageUI("methodology")',
-        'methodologyPageServer("methodology")'),
+        'methodologyPageServer("methodology", runtime_snapshot = methodology_snapshot)'),
       repo_root,
       "Restore the Methodology page wiring before public release."
     ),
@@ -472,11 +529,24 @@ release_checklist <- function(repo_root = project_root(),
       "reproducibility_rprofile", "reproducibility", ".Rprofile",
       repo_root, "Restore .Rprofile so renv activates from the repo root."
     ),
-    release_file_surface_check(
-      "reproducibility_renv_activate", "reproducibility",
-      file.path("renv", "activate.R"), repo_root,
-      "Restore renv/activate.R before public release."
-    )
+    {
+      if (identical(context, "runtime")) {
+        release_checklist_row(
+          "reproducibility_renv_activate", "reproducibility", "warn",
+          paste(
+            "Repository-managed renv/activate.R is unavailable in the",
+            "deployed runtime context."
+          ),
+          "Use the strict repository checklist in CI for this check."
+        )
+      } else {
+        release_file_surface_check(
+          "reproducibility_renv_activate", "reproducibility",
+          file.path("renv", "activate.R"), repo_root,
+          "Restore renv/activate.R before public release."
+        )
+      }
+    }
   )
 
   readme_path <- file.path(repo_root, "README.md")
@@ -505,20 +575,37 @@ release_checklist <- function(repo_root = project_root(),
     }
   ))
 
-  ignored_tracked <- release_git_output(
-    c("ls-files", "-ci", "--exclude-standard"), repo_root
-  )
+  ignored_tracked <- if (identical(context, "repository")) {
+    git_runner(c("ls-files", "-ci", "--exclude-standard"), repo_root)
+  } else {
+    NULL
+  }
   checks <- c(checks, list(
     {
-      status <- if (ignored_tracked$status == 0L &&
+      status <- if (identical(context, "runtime")) {
+        "warn"
+      } else if (ignored_tracked$status == 0L &&
                     length(ignored_tracked$output) == 0) "pass" else "fail"
-      detail <- if (identical(status, "pass")) {
+      detail <- if (identical(context, "runtime")) {
+        "Repository Git hygiene is unavailable in the deployed runtime context."
+      } else if (isTRUE(ignored_tracked$launch_error) ||
+                 identical(ignored_tracked$status, 127L)) {
+        "Git is unavailable, so tracked ignored files could not be checked."
+      } else if (ignored_tracked$status != 0L) {
+        paste0("git ls-files failed with status ", ignored_tracked$status,
+               ", so tracked ignored files could not be checked.")
+      } else if (identical(status, "pass")) {
         "No tracked files are ignored by .gitignore."
       } else {
         paste("Tracked ignored files:",
               paste(ignored_tracked$output, collapse = ", "))
       }
-      recommendation <- if (identical(status, "pass")) {
+      recommendation <- if (identical(context, "runtime")) {
+        "Use the strict repository checklist in CI for this check."
+      } else if (isTRUE(ignored_tracked$launch_error) ||
+                 ignored_tracked$status != 0L) {
+        "Run the repository release checklist with Git available."
+      } else if (identical(status, "pass")) {
         "No action required."
       } else {
         "Update .gitignore so tracked release assets are not ignored."
@@ -530,22 +617,41 @@ release_checklist <- function(repo_root = project_root(),
     }
   ))
 
-  staged <- release_git_output(c("diff", "--cached", "--name-only"), repo_root)
+  staged <- if (identical(context, "repository")) {
+    git_runner(c("diff", "--cached", "--name-only"), repo_root)
+  } else {
+    NULL
+  }
   local_artifacts <- c(
     ".DS_Store", "AGENTS.md", "quality_reports/housing_dashboard_full_review.md"
   )
-  staged_artifacts <- intersect(staged$output, local_artifacts)
+  staged_artifacts <- if (is.null(staged)) character() else {
+    intersect(staged$output, local_artifacts)
+  }
   checks <- c(checks, list(
     {
-      status <- if (staged$status == 0L &&
+      status <- if (identical(context, "runtime")) {
+        "warn"
+      } else if (staged$status == 0L &&
                     length(staged_artifacts) == 0) "pass" else "fail"
-      detail <- if (identical(status, "pass")) {
+      detail <- if (identical(context, "runtime")) {
+        "Repository staged-file hygiene is unavailable in the deployed runtime context."
+      } else if (isTRUE(staged$launch_error) || identical(staged$status, 127L)) {
+        "Git is unavailable, so staged local artefacts could not be checked."
+      } else if (staged$status != 0L) {
+        paste0("git diff failed with status ", staged$status,
+               ", so staged local artefacts could not be checked.")
+      } else if (identical(status, "pass")) {
         "No known local artefacts are staged."
       } else {
         paste("Known local artefacts are staged:",
               paste(staged_artifacts, collapse = ", "))
       }
-      recommendation <- if (identical(status, "pass")) {
+      recommendation <- if (identical(context, "runtime")) {
+        "Use the strict repository checklist in CI for this check."
+      } else if (isTRUE(staged$launch_error) || staged$status != 0L) {
+        "Run the repository release checklist with Git available."
+      } else if (identical(status, "pass")) {
         "No action required."
       } else {
         "Unstage local artefacts before committing a public-release change."
@@ -557,7 +663,15 @@ release_checklist <- function(repo_root = project_root(),
     }
   ))
 
-  checks <- c(checks, release_manifest_checks(repo_root))
+  checks <- c(
+    checks,
+    release_manifest_checks(
+      repo_root = repo_root,
+      data_dir = data_dir,
+      context = context,
+      git_runner = git_runner
+    )
+  )
 
   out <- do.call(rbind, checks)
   rownames(out) <- NULL
@@ -566,9 +680,17 @@ release_checklist <- function(repo_root = project_root(),
   out
 }
 
-validate_release_checklist <- function(fail_on = "fail") {
+validate_release_checklist <- function(fail_on = "fail",
+                                       repo_root = project_root(),
+                                       data_dir = project_path("data"),
+                                       git_runner = release_git_output) {
   fail_on <- match.arg(fail_on, c("fail", "warn"))
-  checks <- release_checklist()
+  checks <- release_checklist(
+    repo_root = repo_root,
+    data_dir = data_dir,
+    context = "repository",
+    git_runner = git_runner
+  )
   blocking_statuses <- if (identical(fail_on, "warn")) {
     c("warn", "fail")
   } else {
@@ -594,8 +716,16 @@ validate_release_checklist <- function(fail_on = "fail") {
 }
 
 release_confidence_summary <- function(repo_root = project_root(),
-                                       data_dir = project_path("data")) {
-  checks <- release_checklist(repo_root = repo_root, data_dir = data_dir)
+                                       data_dir = project_path("data"),
+                                       context = c("runtime", "repository"),
+                                       git_runner = release_git_output) {
+  context <- match.arg(context)
+  checks <- release_checklist(
+    repo_root = repo_root,
+    data_dir = data_dir,
+    context = context,
+    git_runner = git_runner
+  )
   pass_count <- sum(checks$status == "pass", na.rm = TRUE)
   warn_count <- sum(checks$status == "warn", na.rm = TRUE)
   fail_count <- sum(checks$status == "fail", na.rm = TRUE)
@@ -664,7 +794,14 @@ release_confidence_summary <- function(repo_root = project_root(),
       "warn"
     ),
     detail = c(
-      "Read-only summary from validate_release_checklist().",
+      if (identical(context, "runtime")) {
+        paste(
+          "Read-only runtime summary; repository-only Git checks are",
+          "reported unavailable here and remain enforced by CI."
+        )
+      } else {
+        "Read-only summary from the strict repository release checklist."
+      },
       "Latest saved observation across ABS live time series and RBA tables.",
       "Latest saved survey period across static ABS SIH workbook outputs.",
       manifest_detail,

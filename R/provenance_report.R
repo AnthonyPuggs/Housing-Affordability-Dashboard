@@ -163,7 +163,8 @@ methodology_provenance_filename <- function(date = Sys.Date()) {
 }
 
 methodology_provenance_report <- function(generated_at = Sys.time(),
-                                          data_dir = project_path("data")) {
+                                          data_dir = project_path("data"),
+                                          confidence_summary = NULL) {
   generated_at_utc <- format(
     as.POSIXct(generated_at, tz = "UTC"),
     "%Y-%m-%d %H:%M:%S UTC",
@@ -201,9 +202,10 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
   } else {
     data.frame()
   }
-  release_confidence <- if (exists("release_confidence_summary",
-                                   mode = "function")) {
-    release_confidence_summary(data_dir = data_dir)
+  release_confidence <- if (!is.null(confidence_summary)) {
+    confidence_summary
+  } else if (exists("release_confidence_summary", mode = "function")) {
+    release_confidence_summary(data_dir = data_dir, context = "repository")
   } else {
     data.frame()
   }
@@ -294,4 +296,31 @@ methodology_provenance_report <- function(generated_at = Sys.time(),
   )
 
   paste(lines, collapse = "\n")
+}
+
+methodology_runtime_snapshot <- function(repo_root = project_root(),
+                                         data_dir = project_path("data"),
+                                         generated_at = Sys.time(),
+                                         git_runner = release_git_output) {
+  confidence <- release_confidence_summary(
+    repo_root = repo_root,
+    data_dir = data_dir,
+    context = "runtime",
+    git_runner = git_runner
+  )
+  provenance <- methodology_provenance_report(
+    generated_at = generated_at,
+    data_dir = data_dir,
+    confidence_summary = confidence
+  )
+  list(confidence = confidence, provenance = provenance)
+}
+
+write_methodology_provenance_snapshot <- function(snapshot, file) {
+  if (!is.list(snapshot) || !is.character(snapshot$provenance) ||
+      length(snapshot$provenance) != 1L) {
+    stop("A valid Methodology runtime snapshot is required.", call. = FALSE)
+  }
+  writeLines(snapshot$provenance, con = file, useBytes = TRUE)
+  invisible(file)
 }

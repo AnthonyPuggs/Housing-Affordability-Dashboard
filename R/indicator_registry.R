@@ -15,6 +15,39 @@ INDICATOR_SOURCE_CPI_ALL_GROUPS <- "CPI All Groups"
 INDICATOR_SOURCE_CPI_RENTS_NATIONAL <- "CPI Rents ; Weighted average of eight capital cities ;"
 INDICATOR_SOURCE_CPI_INFLATION_YOY <- "CPI Inflation YoY"
 INDICATOR_SOURCE_AWE <- "AWE (AWOTE, Persons)"
+
+# ABS AWE changed from quarterly to May/November observations in November 2012.
+# Quarter-start alignment in derived indicators does not increase that cadence.
+awe_observation_frequency <- function(date) {
+  ifelse(as.Date(date) < as.Date("2012-11-01"), "Quarter", "Half-year")
+}
+
+awe_aligned_frequency <- function(date) {
+  ifelse(as.Date(date) < as.Date("2012-10-01"), "Quarter", "Half-year")
+}
+
+validate_awe_cadence <- function(data) {
+  date <- as.Date(data$date)
+  if (anyNA(date) || anyDuplicated(format(date, "%Y-%m"))) {
+    stop("AWE requires unique, non-missing observation months.", call. = FALSE)
+  }
+  post <- date >= as.Date("2012-11-01")
+  if (any(!format(date[post], "%m") %in% c("05", "11"))) {
+    stop("AWE observations after the transition must use May/November.", call. = FALSE)
+  }
+  if (anyNA(data$frequency) || any(data$frequency != awe_observation_frequency(date))) {
+    stop("AWE frequency does not match its historical observation cadence.", call. = FALSE)
+  }
+  invisible(TRUE)
+}
+
+indicator_output_frequency <- function(indicator, date) {
+  awe_dependent <- c("Deposit Gap (Years)", "National Housing Affordability Score",
+                     "Mortgage Serviceability Component Score", "Rental Entry Component Score",
+                     "Deposit Barrier Component Score")
+  if (indicator %in% awe_dependent) return(awe_aligned_frequency(date))
+  rep(indicator_registry_output_metadata(indicator)$frequency[[1]], length(date))
+}
 INDICATOR_SOURCE_RBA_MORTGAGE_RATE <- "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier"
 INDICATOR_SOURCE_RBA_NEW_LOAN_RATE <- "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions"
 # Timely market-entry context sources (roadmap Track 2.6).
@@ -158,7 +191,9 @@ indicator_registry <- function() {
       "Per cent of annual disposable income"
     ),
     geography = c(rep("National", 13), "Eight capital cities", "National"),
-    frequency = c(rep("Quarter", 13), "Month", "Quarter"),
+    frequency = c(rep("Quarter", 3), "Quarter historically; Half-year from Nov 2012",
+                  rep("Quarter", 3), rep("Quarter historically; Half-year from Nov 2012", 4),
+                  rep("Quarter", 2), "Month", "Quarter"),
     concept_group = c(
       "cost_pressure",
       "cost_pressure",

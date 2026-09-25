@@ -68,7 +68,7 @@ test_that("release_confidence_panel contracts", {
       'tableOutput(ns("quality_coverage_table"))',
       'tableOutput(ns("release_confidence_table"))',
       "indicator_quality_coverage_summary(",
-      "release_confidence_summary("
+      "runtime_snapshot$confidence"
     )
     missing_module_text <- required_module_text[
       !vapply(required_module_text, grepl, logical(1), module_text, fixed = TRUE)

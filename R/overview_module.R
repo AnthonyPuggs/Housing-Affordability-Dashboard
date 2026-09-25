@@ -524,7 +524,7 @@ overviewPageServer <- function(id, is_dark) {
     })
     output$vb_nat_price_change <- renderUI({
       ch <- latest_change(national_mean_price, "city", "National Avg",
-                          periods_back = 4, period_label = "YoY",
+                          months_back = 12L, period_label = "YoY",
                           change_type = "relative_pct")
       css_class <- kpi_change_class(ch$change, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), ch$label)
@@ -554,7 +554,7 @@ overviewPageServer <- function(id, is_dark) {
         return(tags$p(class = "kpi-subtitle", ""))
       }
       ch <- latest_change(median_house_prices, "city", d$city[1],
-                          periods_back = 4, period_label = "YoY",
+                          months_back = 12L, period_label = "YoY",
                           change_type = "relative_pct")
       css_class <- kpi_change_class(ch$change, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), ch$label)
@@ -570,16 +570,11 @@ overviewPageServer <- function(id, is_dark) {
       fmt_pct(v, 0.1)
     })
     output$vb_service_change <- renderUI({
-      if (nrow(serviceability_ts) < 5) return(tags$p(class = "kpi-subtitle", ""))
-      d <- serviceability_ts %>%
-        filter(!is.na(serviceability_pct)) %>%
-        arrange(desc(date))
-      current <- d$serviceability_pct[1]
-      previous <- d$serviceability_pct[5]
-      if (is.na(previous) || previous == 0) return(tags$p(class = "kpi-subtitle", ""))
-      diff_val <- current - previous
-      direction <- if (diff_val >= 0) "\u2191" else "\u2193"
-      label <- paste0(direction, " ", sprintf("%+.1f pp", diff_val), " YoY")
+      ch <- latest_change(transform(serviceability_ts, series = "serviceability"),
+                          "series", "serviceability", val_col = "serviceability_pct",
+                          months_back = 12L, change_type = "percentage_points")
+      diff_val <- ch$change
+      label <- ch$label
       css_class <- kpi_change_class(diff_val, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), label)
     })
@@ -593,7 +588,7 @@ overviewPageServer <- function(id, is_dark) {
     })
     output$vb_rental_change <- renderUI({
       ch <- latest_change(afford_idx, "indicator", "Rental Affordability Index",
-                          periods_back = 4, period_label = "YoY",
+                          months_back = 12L, period_label = "YoY",
                           change_type = "relative_pct")
       css_class <- kpi_change_class(ch$change, favourable = "decrease")
       tags$p(class = paste("kpi-subtitle", css_class), ch$label)

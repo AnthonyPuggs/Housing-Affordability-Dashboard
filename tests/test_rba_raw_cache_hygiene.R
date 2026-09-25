@@ -13,7 +13,10 @@ test_that("rba_raw_cache_hygiene contracts", {
 
   required_helpers <- c(
     "normalise_rba_csv_cache",
-    "rba_csv_parse_problem_count"
+    "rba_csv_parse_problem_count",
+    "parse_rba_file",
+    "validate_rba_candidate",
+    "promote_rba_candidate"
   )
   for (helper in required_helpers) {
     check(exists(helper, mode = "function"),
@@ -75,21 +78,28 @@ test_that("rba_raw_cache_hygiene contracts", {
       check(identical(problem_count, 0L),
             paste(basename(cache_file), "has", problem_count,
                   "readr parse problems"))
+      table_id <- sub("^rba_([^_]+)_raw\\.csv$", "\\1",
+                      basename(cache_file))
+      check(isTRUE(validate_rba_candidate(cache_file, table_id)),
+            paste(basename(cache_file),
+                  "does not satisfy its required-series contract"))
     }
   }
 
-  rba_stage_text <- paste(
-    readLines(file.path(repo_root, "pipeline", "03_fetch_rba.R"), warn = FALSE),
-    collapse = "\n"
-  )
-  required_stage_text <- c(
-    'source(project_path("pipeline", "00_config.R"))',
-    'normalise_rba_csv_cache(file)'
-  )
-  for (needle in required_stage_text) {
-    check(grepl(needle, rba_stage_text, fixed = TRUE),
-          paste("pipeline/03_fetch_rba.R missing required text:", needle))
-  }
+  source(file.path(repo_root, "R", "indicator_registry.R"), local = TRUE)
+  saved_rba <- suppressMessages(readr::read_csv(
+    file.path(repo_root, "data", "rba_rates.csv"),
+    show_col_types = FALSE
+  ))
+  f6_contract <- rba_required_series_contract("F6")
+  saved_f6_required <- saved_rba %>%
+    filter(
+      series == INDICATOR_SOURCE_RBA_NEW_LOAN_RATE,
+      series_id == f6_contract$series_id
+    )
+  check(nrow(saved_f6_required) > 0,
+        paste("Saved RBA input must contain the exact F6 source and series ID",
+              f6_contract$series_id))
 
   description_lines <- readLines(file.path(repo_root, "DESCRIPTION"), warn = FALSE)
   check(!any(grepl("^\\s*data\\.table\\s*,?\\s*$", description_lines)),
