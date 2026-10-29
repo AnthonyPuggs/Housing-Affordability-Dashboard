@@ -724,6 +724,7 @@ date,value,indicator,geography,unit,frequency
 2025-10-01,2.424341493647364,Real Mortgage Rate,National,Per cent,Quarter
 2026-01-01,2.205834186284555,Real Mortgage Rate,National,Per cent,Quarter
 2026-04-01,2.7747790307832987,Real Mortgage Rate,National,Per cent,Quarter
+2026-07-01,2.8794144189311077,Real Mortgage Rate,National,Per cent,Quarter
 1998-07-01,1.8772610219581987,Real Wage Growth YoY,National,Per cent,Quarter
 1998-10-01,1.5171773891768936,Real Wage Growth YoY,National,Per cent,Quarter
 1999-01-01,1.529435841462612,Real Wage Growth YoY,National,Per cent,Quarter
@@ -836,44 +837,45 @@ date,value,indicator,geography,unit,frequency
 2025-10-01,-0.29466254859449315,Real Wage Growth YoY,National,Per cent,Quarter
 2026-01-01,-0.7619974988305578,Real Wage Growth YoY,National,Per cent,Quarter
 2026-04-01,-0.7588225504362667,Real Wage Growth YoY,National,Per cent,Quarter
-2023-07-01,7.598747591522148,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-07-01,7.610789980732169,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2023-08-01,7.826920771904566,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2023-09-01,7.511010593976897,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2023-10-01,6.619385342789608,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2023-10-01,6.631205673758855,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2023-11-01,7.126843657817106,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2023-12-01,7.4078422164827185,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2024-01-01,7.479579929988334,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2024-02-01,7.526382929374931,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-03-01,7.719824601892444,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-04-01,7.486263736263754,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-03-01,7.720715522215804,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-04-01,7.498568975386388,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2024-05-01,7.388042736985678,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-06-01,7.0800450958286465,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-07-01,6.894236149972022,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-06-01,7.092118615401977,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-07-01,6.893464637421665,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2024-08-01,6.736327256558483,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2024-09-01,6.643046944198416,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-10-01,6.751662971175176,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-10-01,6.739829287218724,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2024-11-01,6.597642912214985,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2024-12-01,6.164608153896611,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2024-12-01,6.175538310197837,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2025-01-01,5.819129301921611,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2025-02-01,5.511216566005173,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-03-01,5.184788430637388,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-03-01,5.185343904006867,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2025-04-01,4.952076677316275,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2025-05-01,4.530059271803566,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2025-06-01,4.211412929037683,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-07-01,3.9158203329494157,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-08-01,3.676317433867937,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-09-01,3.7894518272425293,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-10-01,4.195658946931147,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-07-01,3.9154103852596434,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-08-01,3.6659029368881546,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-09-01,3.779069767441867,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-10-01,4.206044241354245,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2025-11-01,4.029758214507129,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2025-12-01,3.943168948831466,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2025-12-01,3.9324686020177024,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2026-01-01,3.878116343490312,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2026-02-01,3.771849126034965,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2026-03-01,3.6561768000814787,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-03-01,3.656549195355452,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2026-04-01,3.5007610350076046,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 2026-05-01,3.5540704738760587,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2026-06-01,3.5764800969892763,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2026-07-01,3.5667506297229368,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
-2026-08-01,3.586137619286789,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-06-01,3.5865831481107335,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-07-01,3.576465847269783,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-08-01,3.576451677717496,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
+2026-09-01,3.541416566626654,Rent CPI Monthly Growth YoY,Eight capital cities,Per cent,Month
 1997-07-01,100,Rental Affordability Index,National,Index (base=100),Quarter
 1997-10-01,100.03004776630004,Rental Affordability Index,National,Index (base=100),Quarter
 1998-01-01,99.72941124231049,Rental Affordability Index,National,Index (base=100),Quarter
